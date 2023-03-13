@@ -1,0 +1,16 @@
+ /* code {
+    counter-reset: line;
+  }
+
+  .code-line {
+    counter-increment: line;
+    position: relative;
+    display: block;
+    margin-left: 1.5rem;
+  }
+
+  .code-line:before {
+    content: counter(line);
+    position: absolute;
+    margin-left: -1.5rem;
+  } */
