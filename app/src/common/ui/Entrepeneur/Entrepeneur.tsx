@@ -30,7 +30,7 @@ export const Entrepeneur = {
           impact: 1000,
           action: `generate`,
           icon: `✍️`,
-          request: `ms. roxana, can you please generate an essay that covers ${ultimateEffeciencyJutsu(
+          request: `ms. roxana, can you please generate an essay that introduces me to ${ultimateEffeciencyJutsu(
             `Bitcoin, Automa & the Drug War`
           )}?`,
           response: `null`,
@@ -80,7 +80,7 @@ export const Entrepeneur = {
           icon: `🤝`,
           request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
             `Bitcoin, Automa & the Drug War`
-          )} with 10 bullet points?`,
+          )}?`,
           response: `\n\nStudy Guide for the Relationship Between Bitcoin, Automation, Universal Basic Income and the Drug War \n1. Explain how Bitcoin works and how it can be used to disrupt the traditional financial system.\n2. Discuss the potential implications of automation on the workforce, such as job displacement and increased inequality.\n3. Describe how a universal basic income could mitigate the effects of automation and provide financial stability for citizens.\n4. Analyze how a universal basic income could potentially help to reduce crime levels related to drug use.\n5. Examine the role that Bitcoin could play in providing access to economic opportunities and reducing financial inequality.\n6. Discuss the potential consequences of the increased use of Bitcoin for drug dealing and other illicit activities.\n7. Articulate the impact of Bitcoin or other digital currencies on existing laws, regulations and enforcement efforts related to drug trafficking.\n8. Explain the implications of a universal basic income for helping to reduce drug use and crime levels.\n9. Assess whether Bitcoin could be used to facilitate effective international collaboration in the war against drugs.\n10. Analyze the potential impact of automation and digital currencies on the current enforcement strategies related to the Drug War.`,
           spanish: ``,
           tooltip: ``,
@@ -155,7 +155,7 @@ export const Entrepeneur = {
           impact: 1000,
           action: `generate`,
           icon: `►`, //`✍️`
-          request: `ms. roxana, can you please generate a video that covers ${ultimateEffeciencyJutsu(
+          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
             `Bitcoin x Social Technology`
           )}?`,
           response: `null`,
@@ -205,7 +205,7 @@ export const Entrepeneur = {
           icon: `🤝`,
           request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
             `Bitcoin x Social Technology`
-          )} with 10 bullet points?`,
+          )}?`,
           response: `\n\n1. Decentralized identities use cryptography and data distribution networks to create secure, portable identities that cannot be taken away by a centralized authority\n2. Decentralized identities are becoming increasingly important due to the rise of digital rights, data privacy, and personal sovereignty\n3. Civil liberties are rights granted to citizens by the government to protect them from potential abuses of power by the state or corporations\n4. Civil liberties can be applied to digital identities as well, allowing individuals to protect their online identities from corporate or government monitoring and control\n5. Civil liberties granted by governments have the potential to apply to decentralized identities, such as the right to access digital identity services, privacy, data portability, and ownership of digital data\n6. Decentralized identities can be used to protect user data, increase data security and simplify the process of authenticating people and devices\n7. Decentralized identities can also help to improve access to services and build trust between individuals, businesses and governments\n8. As decentralized identities are becoming increasingly mainstream, issues such as data privacy, user agency and identity theft must be addressed\n9. Digital rights need to be respected and upheld as much as traditional civil liberties to ensure individuals are protected from potential abuses of power\n10. Decentralized identities, civil liberties and the experience on the internet are all mutually intertwined, and must be protected and respected for individuals to have a safe and secure browsing experience.`,
           spanish: ``,
           tooltip: ``,
@@ -281,7 +281,7 @@ export const Entrepeneur = {
           impact: 1000,
           action: `generate`,
           icon: `►`, //`✍️`
-          request: `ms. roxana, can you please generate a video that covers ${ultimateEffeciencyJutsu(
+          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
             `Tech Recession Investing`
           )}?`,
           response: `null`,
@@ -334,7 +334,7 @@ export const Entrepeneur = {
           icon: `🤝`,
           request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
             `Tech Recession Investing`
-          )} with 10 bullet points?`,
+          )}?`,
           response:
             "\n\n1. Spread Risk: During a recession, investments are generally cheaper, making it a good opportunity to diversify and spread your risk.\n\n2. Low Prices: Low stock prices can deliver better value, providing the chance to purchase higher quality companies at a discounted price.\n\n3. Interest Rates: Favorable interest rates make it easier for companies to borrow money for future growth.\n\n4. Attractive Valuations: High-quality companies may have reduced valuations making them attractive to value-conscious investors.\n\n5. Profit Buying Opportunity: If a company has strong fundamentals and its stock is undervalued you can take advantage of the buying opportunity and potentially reap great rewards later.\n\n6. Opportunity for Tax Loss Harvesting: Selling investments to realize losses can help lower your tax bill come next tax season.\n\n7. Protect Gains: If your portfolio has been performing well, a recession can be an opportunity to lock in gains while avoiding drastic losses.\n\n8. Bargains: Companies that were overvalued before the recession can be picked up on the cheap and yield strong returns in the long-term if the company is able to recover.\n\n9. Increased Liquidity: With markets down, liquidity can be a savior giving investors more cash to take advantage of promising opportunities.\n\n10. Beat inflation: If you do not plan to spend your money, investing can beat inflation by yielding returns more than what inflation is doing to the value of money.",
           spanish: ``,
@@ -411,7 +411,7 @@ export const Entrepeneur = {
           impact: 1000,
           action: `generate`,
           icon: `►`, //`✍️`
-          request: `ms. roxana, can you please generate a video that covers ${ultimateEffeciencyJutsu(
+          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
             `Tech Recession Investing x Real Estate II`
           )}?`,
           response: `null`,
@@ -464,7 +464,7 @@ export const Entrepeneur = {
           icon: `🤝`,
           request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
             `Tech Recession Investing x Real Estate II`
-          )} with 10 bullet points?`,
+          )}?`,
           response:
             "\n\n1. Learn about IRA exceptions and the different routes of using them to purchase a home. \n2. Understand the advantages and benefits of using an IRA exception to obtain financing. \n3. Explore your options for utilizing an IRA exception to obtain funds for your home. \n4. Research FHA loans, including their interest rates, fees, and qualifying criteria. \n5. Compare FHA loans with other loan types to determine what is best for you. \n6. Determine if you are eligible for an FHA loan. \n7. Learn about the process and timeline of obtaining an FHA loan. \n8. Analyze your finances and budget to determine if you can afford an FHA loan. \n9. Obtain other financial assistance for your home purchase, such as grants or family help. \n10. Calculate the costs and benefits of using an IRA exception or FHA loan to purchase your first home with $10,000.",
           spanish: ``,
@@ -541,8 +541,8 @@ export const Entrepeneur = {
           completed: false,
           impact: 1000,
           action: `generate`,
-          icon: `►`, //`✍️`
-          request: `ms. roxana, can you please generate a video that covers ${ultimateEffeciencyJutsu(
+          icon: `✍️`, //`✍️`
+          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
             `Tech Recession Investing x Real Estate III`
           )}?`,
           response: `null`,
@@ -593,7 +593,7 @@ export const Entrepeneur = {
           icon: `🤝`,
           request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
             `Tech Recession Investing x Real Estate III`
-          )} with 10 bullet points?`,
+          )}?`,
           response:
             "\n\n1. Real estate is typically seen as a safe investment since it historically provides strong returns in the long-term. \n2. It is also considered a hedge against inflation since property values tend to appreciate faster than the consumer price index.\n3. Real estate can be a great diversification tool for traditional *stocks, bonds, and cash investments. \n4. Through leasing or renting, real estate can be a great source of passive income, which is attractive for investors. \n5. Real estate investments can create large tax benefits, due to the long-term depreciation that can be claimed on investment properties.\n6. By leveraging certain amounts of borrowed capital with real estate investments, investors can utilize “leverage” for greater returns with less capital outlay.\n7. Even in times of economic uncertainty, real estate tends to remain relatively stable as a source of investment, as it is generally not correlated with the stock market.\n8. Real estate markets generally move in a cyclical manner, which can open the door to potential opportunities to capitalize on market timing.\n9. Investing in the right market, such as emerging neighborhoods can turn a small rental into a future resale opportunity with positive returns. \n10. Real estate investors can take advantage of certain business vehicles, such as a Limited Liability Corporation (LLC) to secure their investments and gain additional tax benefits.",
           spanish: ``,
@@ -670,7 +670,7 @@ export const Entrepeneur = {
           impact: 1000,
           action: `generate`,
           icon: `►`, //`✍️`
-          request: `ms. roxana, can you please generate a video that covers ${ultimateEffeciencyJutsu(
+          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
             `Learn Coding`
           )}?`,
           response: `null`,
@@ -723,7 +723,7 @@ export const Entrepeneur = {
           icon: `🤝`,
           request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
             `Learn Coding`
-          )} with 10 bullet points?`,
+          )}?`,
           response:
             "\n\n1. Computer Science can be used to analyze data to uncover patterns and create digital models of economic, political, and social disparities.\n\n2. Computer Science can be used to create algorithms and software applications to help researchers better understand the complexities of our world.\n\n3. Computer Science can be used to analyze and draw connections between different disciplines, such as mathematics, sociology, psychology, and others.\n\n4. Computer Science can be used to develop new display and visualization technologies to help researchers better understand data and uncover relationships.\n\n5. Computer Science can be used to develop machine learning models to better understand complex problems and figure out more efficient ways of solving them.\n\n6. Computer Science can be used to develop AI-enabled systems to analyze and curate data from different sources and help link seemingly unrelated phenomena.\n\n7. Computer Science can be used to create automated processes for doing research faster and more accurately.\n\n8. Computer Science can be used to create advanced information systems to aggregate and synthesize data for easier digestion.\n\n9. Computer Science can be used to develop computer models to more accurately forecast and simulate how systems work in the real world.\n\n10. Computer Science can be used to develop technologies to improve access to information and facilitate the collection, analysis, and visualization of data.",
           spanish: ``,
@@ -802,7 +802,7 @@ export const Entrepeneur = {
           impact: 1000,
           action: `generate`,
           icon: `►`, //`✍️`
-          request: `ms. roxana, can you please generate a video that covers ${ultimateEffeciencyJutsu(
+          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
             `Creating Competitive Entry Level Resumes`
           )}?`,
           response: `null`,
@@ -853,7 +853,7 @@ export const Entrepeneur = {
           icon: `🤝`,
           request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
             `Creating Competitive Entry Level Resumes`
-          )} with 10 bullet points?`,
+          )}?`,
           response:
             "\n\nStudy Guide: How to Write an Effective One-Page Resume \n\n1. Focus on your most relevant qualifications: When writing a one-page resume, you don’t have much room to include resume sections. This means you’ll have to focus on including only the most relevant qualifications. \n\n2. Use a resume format: The ideal format for a one-page resume is the reverse chronological format. This resume format is organized in a way that draws attention to your most relevant experience first. \n\n3. Be concise: When writing, try to be as concise as possible. Stick to short, condensed sentences and be sure to omit any unnecessary details. \n\n4. Use action verbs: Whenever possible, use action verbs to describe your experience in order to emphasize the results you achieved\n\n5. Fill the entire page: You want to make sure that your resume is full and packed with relevant qualifications. Make sure to fill the entire page with information. \n\n6. Avoid using pronouns: Whenever possible, try to avoid using personal pronouns like “I” and “me”.\n\n7. Highlight your skills: Since the goal of a one-page resume is to make it concise, you should try to highlight your skills at the top of your resume.\n\n8. Choose the right font: When picking the right font for your resume, make sure to choose one that is easy to read and professional. \n\n9. Use keywords effectively: When writing, make sure to use the right keywords that are related to your job field. This will ensure that your resume is picked up by any automated recruiters. \n\n10. Proofread: Once you’ve completed your resume, be sure to proofread it. This will help you make sure that there aren’t any typos or inaccuracies in your document.",
           spanish: ``,
@@ -932,8 +932,8 @@ export const Entrepeneur = {
           completed: false,
           impact: 1000,
           action: `generate`,
-          icon: `►`, //`✍️`
-          request: `ms. roxana, can you please generate a video that covers ${ultimateEffeciencyJutsu(
+          icon: `✍️`, //`✍️`
+          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
             `Options Trading Advice`
           )}?`,
           response: `null`,
@@ -986,7 +986,7 @@ export const Entrepeneur = {
           icon: `🤝`,
           request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
             `Options Trading Advice`
-          )} with 10 bullet points?`,
+          )}?`,
           response:
             "\n\n1. Invest in high-quality businesses with a well-defined competitive advantage. \n2. Focus your investments on businesses you understand.\n3. Keep investing activity to a reasonable amount that is comfortable to you.\n4. Invest in businesses with management teams that are ethical and competent.\n5. Aim for a reasonable return on your investment over the long-term.\n6. Have realistic expectations; don’t expect to beat the market all the time.\n7. Have patience and a long-term outlook; don’t succumb to market volatility.\n8. Research thoroughly to identify investing opportunities.\n9. Monitor investments regularly and look for signs of potential trouble.\n10. Employ a margin-of-safety to protect against potential losses.",
           spanish: ``,
@@ -1064,8 +1064,8 @@ export const Entrepeneur = {
           completed: false,
           impact: 1000,
           action: `generate`,
-          icon: `►`, //`✍️`
-          request: `ms. roxana, can you please generate a video that covers ${ultimateEffeciencyJutsu(
+          icon: `✍️`, //`✍️`
+          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
             `Financial Technology Investing`
           )}?`,
           response: `null`,
@@ -1118,7 +1118,7 @@ export const Entrepeneur = {
           icon: `🤝`,
           request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
             `Financial Technology Investing`
-          )} with 10 bullet points?`,
+          )}?`,
           response:
             "\n\nPros of Investing in Financial Technology:\n1. Reduces costs and inefficiencies in the current financial system.\n2. Increases financial access to unbanked and underbanked individuals.\n3. Level playing field for small businesses and entrepreneurs.\n4. Faster transactions and improved reliability.\n5. Improved customer service, with a more interactive experience.\n6. Increase in customer data security and privacy.\n7. Increased transparency and accountability.\n8. Risk management and automation of back-office operations.\n9. Increased liquidity and trading opportunities.\n10. Enhanced risk-reward opportunities.\n\nCons of Investing in Financial Technology:\n1. High upfront capital costs for new financial technology investments.\n2. Regulatory compliance issues with data privacy and security.\n3. Risk of fraud and cyber-attacks from hackers.\n4. Difficulty understanding the technology by consumers.\n5. Uncertainty about future returns.\n6. Current financial institutions may be resistant to adoption of new technologies.\n7. Talent shortages of qualified personnel to utilize and monitor the technology.\n8. Longer waiting times to settle transactions.\n9. Risk of overreliance on technology.\n10. Increase in the complexity of tracking and monitoring investments.",
           spanish: ``,
@@ -1197,7 +1197,7 @@ export const Entrepeneur = {
           impact: 1000,
           action: `generate`,
           icon: `✍️`,
-          request: `ms. roxana, can you please generate an essay that covers ${ultimateEffeciencyJutsu(
+          request: `ms. roxana, can you please generate an essay that introduces me to ${ultimateEffeciencyJutsu(
             `Social Media Investing`
           )}?`,
           response: `null`,
@@ -1248,7 +1248,7 @@ export const Entrepeneur = {
           icon: `🤝`,
           request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
             `Social Media Investing`
-          )} with 10 bullet points?`,
+          )}?`,
           response:
             "\n\n1. Immediate reward: Most social media platforms offer rewards such as badges, points, virtual currency or discounts for accomplishments or loyalty.\n\n2. Status symbols: Popular platforms like Instagram make it easy for users to ‘like’ or ‘re-share’ posts. Content that reaches a certain amount of likes can become recognizable and can be a status symbol.\n\n3. Public recognition through mentions: Platforms like Twitter allow users to mention others in posts/tweets. This form of recognition can be a great incentive for users. \n\n4. Networking: Social media allows users to make connections with people all around the globe. This can prove to be a great asset in terms of forming relationships and generating business.\n\n5. Leadership opportunities: Platforms like LinkedIn offer the chance for users to become influencers within their industries. This can create a great incentive for users.\n\n6. Competition: By creating different levels and rankings, users have greater incentive to be more active on the platform.\n\n7. Creative expression: Platforms such as YouTube allow users to explore creative ways of expressing themselves. This can be an incentive for creative users.\n\n8. Financial incentives: Many social media platforms offer additional financial incentives for reaching milestones or for sharing sponsored content.\n\n9. Exposure: Platforms such as Instagram allow users to get their content in front of a larger audience which can be beneficial and can create incentives for users.\n\n10. Learning benefits: Social media has made it easier for users to access different sources of education, which can be rewarding for learners.",
           spanish: ``,
@@ -1327,7 +1327,7 @@ export const Entrepeneur = {
           impact: 1000,
           action: `generate`,
           icon: `✍️`,
-          request: `ms. roxana, can you please generate an essay that covers ${ultimateEffeciencyJutsu(
+          request: `ms. roxana, can you please generate an essay that introduces me to ${ultimateEffeciencyJutsu(
             `Metaverse Investing`
           )}?`,
           response: `null`,
@@ -1378,7 +1378,7 @@ export const Entrepeneur = {
           icon: `🤝`,
           request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
             `Metaverse Investing`
-          )} with 10 bullet points?`,
+          )}?`,
           response:
             "\n\n1. What is the Metaverse?\n2. What is the purpose of the Metaverse? \n3. What incentives drive the development of the Metaverse?\n4. What are the technological components that make up the Metaverse?\n5. What are the economic implications of the Metaverse and its incentives?\n6. What type of user interactions and experiences are enabled by the Metaverse?\n7. What is the difference between a centralized and a decentralized Metaverse?\n8. What are the governance models and cryptographic protocols of the Metaverse?\n9. What are the implications of ownership and privacy in the Metaverse?\n10. What are the most effective strategies for monetization within the Metaverse?",
           spanish: ``,
@@ -1457,7 +1457,7 @@ export const Entrepeneur = {
     //       impact: 1000,
     //       action: `generate`,
     //       icon: `✍️`,
-    //       request: `ms. roxana, can you please generate an essay that covers ${ultimateEffeciencyJutsu(
+    //       request: `ms. roxana, can you please generate an essay that introduces me to ${ultimateEffeciencyJutsu(
     //         `Mexican-American Trade Investing`
     //       )}?`,
     //       response: `null`,
@@ -1507,7 +1507,7 @@ export const Entrepeneur = {
     //       icon: `🤝`,
     //       request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
     //         `Mexican-American Trade Investing`
-    //       )} with 10 bullet points?`,
+    //       )}?`,
     //       response: `\n\n1. Understand the fundamentals of coding and computer logic\n2. Learn the basics of programming languages such as HTML, CSS, JavaScript, and Python\n3. Familiarize yourself with the different types of data structures and algorithms\n4. Understand the principles of object-oriented programming\n5. Learn how to debug and troubleshoot code\n6. Develop an understanding of the principles of software engineering\n7. Learn how to use version control systems such as Git\n8. Understand the basics of databases and SQL\n9. Develop an understanding of web development frameworks such as React and Angular\n10. Learn how to use development tools such as IDEs and text editors`,
     //       spanish: ``,
     //       tooltip: ``,
@@ -1585,7 +1585,7 @@ export const Entrepeneur = {
     //       impact: 1000,
     //       action: `generate`,
     //       icon: `✍️`,
-    //       request: `ms. roxana, can you please generate an essay that covers ${ultimateEffeciencyJutsu(
+    //       request: `ms. roxana, can you please generate an essay that introduces me to ${ultimateEffeciencyJutsu(
     //         `Infrastructure Investing`
     //       )}?`,
     //       response: `null`,
@@ -1635,7 +1635,7 @@ export const Entrepeneur = {
     //       icon: `🤝`,
     //       request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
     //         `Infrastructure Investing`
-    //       )} with 10 bullet points?`,
+    //       )}?`,
     //       response: `\n\n1. Understand the fundamentals of coding and computer logic\n2. Learn the basics of programming languages such as HTML, CSS, JavaScript, and Python\n3. Familiarize yourself with the different types of data structures and algorithms\n4. Understand the principles of object-oriented programming\n5. Learn how to debug and troubleshoot code\n6. Develop an understanding of the principles of software engineering\n7. Learn how to use version control systems such as Git\n8. Understand the basics of databases and SQL\n9. Develop an understanding of web development frameworks such as React and Angular\n10. Learn how to use development tools such as IDEs and text editors`,
     //       spanish: ``,
     //       tooltip: ``,
@@ -1711,7 +1711,7 @@ export const Entrepeneur = {
     //       impact: 1000,
     //       action: `generate`,
     //       icon: `✍️`,
-    //       request: `ms. roxana, can you please generate an essay that covers ${ultimateEffeciencyJutsu(
+    //       request: `ms. roxana, can you please generate an essay that introduces me to ${ultimateEffeciencyJutsu(
     //         `Cloud Investing`
     //       )}?`,
     //       response: `null`,
@@ -1761,7 +1761,7 @@ export const Entrepeneur = {
     //       icon: `🤝`,
     //       request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
     //         `Cloud Investing`
-    //       )} with 10 bullet points?`,
+    //       )}?`,
     //       response: `\n\n1. Understand the fundamentals of coding and computer logic\n2. Learn the basics of programming languages such as HTML, CSS, JavaScript, and Python\n3. Familiarize yourself with the different types of data structures and algorithms\n4. Understand the principles of object-oriented programming\n5. Learn how to debug and troubleshoot code\n6. Develop an understanding of the principles of software engineering\n7. Learn how to use version control systems such as Git\n8. Understand the basics of databases and SQL\n9. Develop an understanding of web development frameworks such as React and Angular\n10. Learn how to use development tools such as IDEs and text editors`,
     //       spanish: ``,
     //       tooltip: ``,

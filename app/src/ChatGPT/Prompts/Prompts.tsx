@@ -14,8 +14,8 @@ export const Prompts = ({
   loadingMessage,
   patreonObject,
   handleSubmit,
-  chatGptResponse,
-  isSpanishActive,
+
+
 
   //pow
   displayName,
@@ -25,80 +25,9 @@ export const Prompts = ({
 }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   let promptKeys = Object.keys(patreonObject.prompts);
-
-  let promptMap = promptKeys.map((prompt) => {
-    let hasHumanTouch = patreonObject?.prompts?.[prompt]?.humanTouch;
-    let hasRobotTouch = patreonObject?.prompts?.[prompt]?.robotTouch;
-    let isSpanish = patreonObject?.prompts?.[prompt]?.spanish;
-    let isPremiumContent = patreonObject?.prompts?.[prompt]?.premiumContent;
-    let isSponsoredContent = patreonObject?.prompts?.[prompt]?.sponsoredContent;
-    let isDynamicContent = patreonObject?.prompts?.[prompt]?.dynamicContent;
-    let promptSponsor = patreonObject?.prompts?.[prompt]?.sponsor;
-
-    let isHighlighted =
-      isSpanish ||
-      hasHumanTouch ||
-      hasRobotTouch ||
-      isPremiumContent ||
-      isSponsoredContent ||
-      isDynamicContent;
-
-    let borderHighlight = isSpanish
-      ? "#30D158"
-      : hasRobotTouch
-      ? "#0C84FF"
-      : hasHumanTouch
-      ? "#f316ff" //
-      : isPremiumContent
-      ? "#F7404A"
-      : isSponsoredContent
-      ? "rgba(0, 255, 183, 0.776)"
-      : isDynamicContent
-      ? "#f7e779"
-      : "#48484a";
-
-    let tooltipMessage = isSpanish
-      ? "🌎 en español"
-      : hasRobotTouch
-      ? "😏 finessed with machine learning"
-      : hasHumanTouch
-      ? "💅 fine-tuned with human touch"
-      : isPremiumContent
-      ? "🤖 created by RO.B.E"
-      : isDynamicContent
-      ? "💫 can be media or code written in Javascript, Java, Python or other useful languages."
-      : isSponsoredContent
-      ? `📰 Sponsored by ${promptSponsor || "[no sponsor yet]"}`
-      : "#48484a";
-
-    if (isHighlighted) {
-      return renderWithTooltip(
-        <StyledPromptButton
-          style={{ display: loadingMessage ? "none" : "flex" }}
-          loadingMessage={loadingMessage}
-          onClick={(event) => {
-            if (loadingMessage) {
-            } else {
-              handleSubmit(event, patreonObject.prompts[prompt], prompt);
-            }
-          }}
-          borderHighlight={borderHighlight}
-        >
-          <a style={{ color: "white" }}>
-            {patreonObject.prompts[prompt].icon}{" "}
-            {patreonObject.prompts[prompt].action}
-          </a>
-        </StyledPromptButton>,
-        tooltipMessage,
-        "left",
-        { border: `1px solid ${borderHighlight}`, marginRight: 24 }
-      );
-    } else {
-      if (prompt === "intro") {
-        return null;
-      }
-      return (
-        <StyledPromptButton
+    let borderHighlight = "#48484a";
+  let promptMap = [
+    <StyledPromptButton
           tabindex="0"
           style={{ display: loadingMessage ? "none" : "flex" }}
           borderHighlight={borderHighlight}
@@ -106,18 +35,84 @@ export const Prompts = ({
           onClick={(event) => {
             if (loadingMessage) {
             } else {
-              handleSubmit(event, patreonObject.prompts[prompt], prompt);
+              handleSubmit(event, patreonObject.prompts['patreon'], 'patreon');
             }
           }}
         >
           <a style={{ color: "white" }}>
-            {patreonObject.prompts[prompt].icon}{" "}
-            {patreonObject.prompts[prompt].action}
+            {patreonObject.prompts['patreon'].icon}{" "}
+            {/* {patreonObject.prompts['patreon'].action} */}
+            discover
           </a>
-        </StyledPromptButton>
-      );
-    }
-  });
+    </StyledPromptButton>,
+    <StyledPromptButton
+          tabindex="0"
+          style={{ display: loadingMessage ? "none" : "flex" }}
+          borderHighlight={borderHighlight}
+          loadingMessage={loadingMessage}
+          onClick={(event) => {
+            if (loadingMessage) {
+            } else {
+              handleSubmit(event, patreonObject.prompts['guide'], 'guide');
+            }
+          }}
+        >
+          <a style={{ color: "white" }}>
+            {/* {patreonObject.prompts['guide'].icon}{" "} */}
+            📚 study
+          </a>
+    </StyledPromptButton>,
+
+    <StyledPromptButton
+          tabindex="0"
+          style={{ display: loadingMessage ? "none" : "flex" }}
+          borderHighlight={borderHighlight}
+          loadingMessage={loadingMessage}
+          onClick={(event) => {
+            if (loadingMessage) {
+            } else {
+              handleSubmit(event, patreonObject.prompts['shop'], 'shop');
+            }
+          }}
+        >
+          <a style={{ color: "white" }}>
+            {patreonObject.prompts['shop'].icon}{" "}
+            {patreonObject.prompts['shop'].action}
+          </a>
+    </StyledPromptButton>,
+
+  ];
+  // let promptMap = promptKeys.map((prompt) => {
+
+
+
+
+
+
+  //     if (prompt === "intro") {
+  //       return null;
+  //     }
+  //     return (
+  //       <StyledPromptButton
+  //         tabindex="0"
+  //         style={{ display: loadingMessage ? "none" : "flex" }}
+  //         borderHighlight={borderHighlight}
+  //         loadingMessage={loadingMessage}
+  //         onClick={(event) => {
+  //           if (loadingMessage) {
+  //           } else {
+  //             handleSubmit(event, patreonObject.prompts[prompt], prompt);
+  //           }
+  //         }}
+  //       >
+  //         <a style={{ color: "white" }}>
+  //           {patreonObject.prompts[prompt].icon}{" "}
+  //           {patreonObject.prompts[prompt].action}
+  //         </a>
+  //       </StyledPromptButton>
+  //     );
+    
+  // });
   //render with tooltips : TBD
   // let promptMap = promptKeys.map((prompt) =>
   //   renderWithTooltip(
@@ -217,48 +212,11 @@ export const Prompts = ({
         </Modal.Footer>
       </Modal>
 
-      {/* {renderWithTooltip(<div>🏦: 0</div>, "Proof of work", "left", {
-        border: "1px solid #F2D466",
-        marginBottom: "6px",
-        borderRadius: "10px",
-        backgroundColor: "#f2a900",
-      })} */}
-      {promptMap}
-      {/* Spanish is disabled atm. */}
 
-      {renderWithTooltip(
-        <div
-          style={{
-            backgroundColor: true ? "#48484A" : "black",
-            border: "2px solid #48484A",
-            cursor: true ? "not-allowed" : "grab",
-            display: loadingMessage ? "none" : "flex",
-            color: "white",
-            borderRadius: "10px",
-            textAlign: "left",
-            padding: 10,
-            width: "200px",
-            marginTop: "24px",
-            // maxWidth: "100%",
-            // minWidth: "100%",
-          }}
-          onClick={(event) => {
-            if (true) {
-            } else {
-              handleSubmit(
-                event,
-                `ms. roxana, can you please translate your response to spanish? ${chatGptResponse}`,
-                "languageToggle"
-              );
-            }
-          }}
-        >
-          &#127758; {isSpanishActive ? "in English" : "translate"}
-        </div>,
-        "🚧 under development",
-        "left",
-        { marginRight: "12px", border: "1px solid #F2D466" }
-      )}
+      {promptMap}
+
+
+
     </div>
   );
 };

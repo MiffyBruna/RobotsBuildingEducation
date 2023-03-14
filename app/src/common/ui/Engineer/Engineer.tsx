@@ -49,7 +49,7 @@ export const Engineer = {
           impact: 1000,
           action: `generate`,
           icon: `►`, //`✍️`
-          request: `ms. roxana, can you please generate a video that covers ${ultimateEffeciencyJutsu(
+          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
             `Lesson 1`
           )}?`,
           response: `null`,
@@ -100,7 +100,7 @@ export const Engineer = {
           icon: `🤝`,
           request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
             `Lesson 1`
-          )} with 10 bullet points?`,
+          )}?`,
           response: `\n\n1. Understand the fundamentals of coding and computer logic\n2. Learn the basics of programming languages such as HTML, CSS, JavaScript, and Python\n3. Familiarize yourself with the different types of data structures and algorithms\n4. Understand the principles of object-oriented programming\n5. Learn how to debug and troubleshoot code\n6. Develop an understanding of the principles of software engineering\n7. Learn how to use version control systems such as Git\n8. Understand the basics of databases and SQL\n9. Develop an understanding of web development frameworks such as React and Angular\n10. Learn how to use development tools such as IDEs and text editors`,
           spanish: ``,
           tooltip: ``,
@@ -209,7 +209,7 @@ export const Engineer = {
           impact: 1000,
           action: `generate`,
           icon: `►`, //`✍️`
-          request: `ms. roxana, can you please generate a video that covers ${ultimateEffeciencyJutsu(
+          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
             `Lesson 2`
           )}?`,
           response: `null`,
@@ -259,7 +259,7 @@ export const Engineer = {
           icon: `🤝`,
           request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
             `Lesson 2`
-          )} with 10 bullet points?`,
+          )}?`,
           response: `\n\n1. Define data sets and functions and discuss their roles in computer programming.\n2. Explain the different types of data sets and how to manipulate them in a program.\n3. Analyze different types of programming functions, including user-defined and predefined functions.\n4. Understand and use the syntax of the various programming languages to create functions and manipulate data sets.\n5. Discuss debugging techniques for functions and data sets.\n6. Define input and output parameters and explain how they are used in functions.\n7. Identify the difference between global and local variables and explain the scope of each.\n8. Construct decision structures to work with data sets and functions.\n9. Create loops to organize data sets and functions.\n10. Create programs that can generate and manipulate data sets and functions.`,
           spanish: ``,
           tooltip: ``,
@@ -335,7 +335,7 @@ export const Engineer = {
           impact: 1000,
           action: `generate`,
           icon: `►`, //`✍️`
-          request: `ms. roxana, can you please generate a video that covers ${ultimateEffeciencyJutsu(
+          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
             `Lesson 3`
           )}?`,
           response: `null`,
@@ -383,7 +383,7 @@ export const Engineer = {
           icon: `🤝`,
           request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
             `Lesson 3`
-          )} with 10 bullet points?`,
+          )}?`,
           response: `\n\n1. Understand the overall concept of Object Oriented Programming (OOP) and its components: classes, objects, methods, inheritance, encapsulation, polymorophism.\n2. Understand the concepts of Abstraction, Encapsulation and Modularity, and the role they play in achieving well-crafted software.\n3. Learn the basics of data design and strategy, such as SQL and MongoDB.\n4. Understand basic concepts of CRUD - Create, Read, Update, and Delete.\n5. Be familiar with the libraries and best practices for implementing CRUD operations with multiple languages and technologies.\n6. Understand how to properly store, retrieve and query large amounts of data.\n7. Learn how to diagnose and resolve common errors that arise from applying OOP principles into CRUD operations.\n8. Understand the role of security measures and consider their importance when implementing a CRUD application.\n9. Be familiar with software design patterns such as Model-View-Controller (MVC) and how they apply to CRUD applications.\n10. Learn how to properly test for specific requirements and assumptions when building a CRUD application.`,
           spanish: ``,
           tooltip: ``,
@@ -459,7 +459,7 @@ export const Engineer = {
           impact: 1000,
           action: `generate`,
           icon: `►`, //`✍️`
-          request: `ms. roxana, can you please generate a video that covers ${ultimateEffeciencyJutsu(
+          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
             `Lesson 4`
           )}?`,
           response: `null`,
@@ -507,7 +507,7 @@ export const Engineer = {
           icon: `🤝`,
           request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
             `Lesson 4`
-          )} with 10 bullet points?`,
+          )}?`,
           response: `\n\n1. GET - allows clients to view and request data from a server. \n2. POST - allows clients to send data to be processed to the server. \n3. HEAD - similar to GET, but only returns metadata or the response headers. \n4. PUT - allows clients to upload a file to the server. \n5. DELETE - requests the server to delete a specified resource. \n6. TRACE - echoes back to the client whatever was sent to the server. \n7. OPTIONS - used to describe the communication options for the request-response pair. \n8. CONNECT - allows the client to establish a connection with the server. \n9. PATCH - used to partially modify an existing resource. \n10. LINK - helps in establishing relationships between multiple web resource requests.`,
           spanish: ``,
           tooltip: ``,
@@ -583,7 +583,7 @@ export const Engineer = {
           impact: 1000,
           action: `generate`,
           icon: `►`, //`✍️`
-          request: `ms. roxana, can you please generate a video that covers ${ultimateEffeciencyJutsu(
+          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
             `Lesson 5`
           )}?`,
           response: `null`,
@@ -631,7 +631,7 @@ export const Engineer = {
           icon: `🤝`,
           request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
             `Lesson 5`
-          )} with 10 bullet points?`,
+          )}?`,
           response: `\n\n1. Understand what a loop is and its role in programming.\n2. Know the most common types of loops and their syntax.\n3. Become familiar with iteration and understand how it works in loops.\n4. Understand the concepts of loop control variables.\n5. Learn how to use for and while loops for different tasks.\n6. Know when and how to break out of a loop.\n7. Familiarize yourself with continue and its usage in loops.\n8. Understand nested loops and when they should be used.\n9. Learn how to use recursion as an alternative form of looping.\n10. Familiarize yourself with different debugging tools and how to use them to identify and solve errors related to looping.`,
           spanish: ``,
           tooltip: ``,
@@ -707,7 +707,7 @@ export const Engineer = {
           impact: 1000,
           action: `generate`,
           icon: `►`, //`✍️`
-          request: `ms. roxana, can you please generate a video that covers ${ultimateEffeciencyJutsu(
+          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
             `Lesson 6`
           )}?`,
           response: `null`,
@@ -755,7 +755,7 @@ export const Engineer = {
           icon: `🤝`,
           request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
             `Lesson 6`
-          )} with 10 bullet points?`,
+          )}?`,
           response: `\n\n1. Understand the syntax rules for HTML elements and structure\n2. Know the differences between HTML versions, including HTML4, XHTML and HTML5\n3. Be aware of how to structure and divide HTML code into sections for readability\n4. Become familiar with the use of HTML tags, including table, paragraph and list tags\n5. Learn the basics of using hyperlinks and internal/external links\n6. Develop an understanding of the attributes, such as styles and classes, that can be used in HTML document\n7. Comprehend the basics of displaying multimedia like video, audio and Flash content\n8. Understand the structure and arrangement of meta tags and metadata\n9. Learn how to detect and troubleshoot HTML errors and bugs\n10. Grasp the basics of using HTML forms and input fields`,
           spanish: ``,
           tooltip: ``,
@@ -832,7 +832,7 @@ export const Engineer = {
           impact: 1000,
           action: `generate`,
           icon: `►`, //`✍️`
-          request: `ms. roxana, can you please generate a video that covers ${ultimateEffeciencyJutsu(
+          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
             `Lesson 7`
           )}?`,
           response: `null`,
@@ -881,7 +881,7 @@ export const Engineer = {
           icon: `🤝`,
           request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
             `Lesson 7`
-          )} with 10 bullet points?`,
+          )}?`,
           response: `\n\n1. Understand basic concepts such as HTML elements, selectors, classes and ID attributes.\n\n2. Know the various CSS selectors and their uses, such as element selectors, class selectors and ID selectors.\n\n3. Learn how to apply text-level, block-level and box properties to elements.\n\n4. Practice using shorthand properties to control multiple CSS properties.\n\n5. Master the use of CSS positioning elements to control the flow and order of presentation.\n\n6. Understand the basics of working with forms, including styling form elements.\n\n7. Learn how to create dynamic pages in CSS by understanding hover states, dynamic page selection and page transiting.\n\n8. Familiarize yourself with browser-dependent templates and hacks to ensure consistently appearing pages.\n\n9. Understand the basics of working with layout via the float, clear and display properties.\n\n10. Research cross-browser problems such as box models, table rendering and page elements.`,
           spanish: ``,
           tooltip: ``,
@@ -958,7 +958,7 @@ export const Engineer = {
           impact: 1000,
           action: `generate`,
           icon: `►`, //`✍️`
-          request: `ms. roxana, can you please generate a video that covers ${ultimateEffeciencyJutsu(
+          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
             `Lesson 8`
           )}?`,
           response: `null`,
@@ -1006,7 +1006,7 @@ export const Engineer = {
           icon: `🤝`,
           request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
             `Lesson 8`
-          )} with 10 bullet points?`,
+          )}?`,
           response: `\n\n1. Become familiar with basic concepts, such as components, props, state, and lifecycle\n2. Understand core features, such as JSX and the Virtual DOM\n3. Learn the basics of the React architecture and how to create React applications\n4. Compare React to other frameworks, such as Angular and Vue\n5. Master the React syntax and writing efficient React components\n6. Learn the best practices when working with React and create scalable applications\n7. Become familiar with popular libraries, such as Redux, React Router, and React Transition Group\n8. Use debugging tools to identify and resolve issues\n9. Understand the best practices for security and performance optimization\n10. Utilize testing frameworks such as Mocha, Chai, and Jest to ensure code quality`,
           spanish: ``,
           tooltip: ``,
@@ -1083,7 +1083,7 @@ export const Engineer = {
           impact: 1000,
           action: `generate`,
           icon: `►`, //`✍️`
-          request: `ms. roxana, can you please generate a video that covers ${ultimateEffeciencyJutsu(
+          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
             `Lesson 9`
           )}?`,
           response: `null`,
@@ -1131,7 +1131,7 @@ export const Engineer = {
           icon: `🤝`,
           request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
             `Lesson 9`
-          )} with 10 bullet points?`,
+          )}?`,
           response: `\n\n1. OAuth is an open-source authorization protocol that allows users to securely access resources without sharing personal credentials.\n\n2. OAuth enables clients to access resources on behalf of a user without having to store or handle the user's credentials.\n\n3. OAuth uses tokens which identify the authenticated user and the scope of access permitted to the resource.\n\n4. OAuth uses an authorization server and a resource server to manage access to resources.\n\n5. OAuth provides various permission-granting options, including authorization codes, implicit grants, resource owner credentials, and client credentials.\n\n6. OAuth is used to authorize access to web services, APIs, and mobile applications.\n\n7. OAuth supports applications built on different operating systems, such as web, mobile, and desktop.\n\n8. OAuth provides support for both the client and the resource server to communicate securely over the internet.\n\n9. OAuth enables applications to access user data on other websites and in the cloud.\n\n10. OAuth is built on the concept of secure delegation and is used in many popular applications, such as Google, Amazon, and Twitter.`,
           spanish: ``,
           tooltip: ``,
@@ -1207,7 +1207,7 @@ export const Engineer = {
           impact: 1000,
           action: `generate`,
           icon: `►`, //`✍️`
-          request: `ms. roxana, can you please generate a video that covers ${ultimateEffeciencyJutsu(
+          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
             `Lesson 10`
           )}?`,
           response: `null`,
@@ -1255,7 +1255,7 @@ export const Engineer = {
           icon: `🤝`,
           request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
             `Lesson 10`
-          )} with 10 bullet points?`,
+          )}?`,
           response: `\n\n1. Understand the importance of database design and be familiar with the different ways it is used. \n2. Learn Database Theory and how to use it to organize and manage data. \n3. Understand the basics of database architecture and the different components used.\n4. Learn the role and importance of data modeling and how it relates to database design.\n5. Have an understanding of Normalization techniques used in database design.\n6. Be familiar with different database programming language syntax and tools.\n7. Learn about the different types of keys and how they can be used to maintain data integrity. \n8. Be able to create and maintain database tables, fields, and data relationships. \n9. Understand the different security measures that should be taken when designing and maintaining a database.\n10. Understand the importance of user interaction with databases, incorporating language(s) such as SQL, PL/SQL, AND T-SQL.`,
           spanish: ``,
           tooltip: ``,
@@ -1330,7 +1330,7 @@ export const Engineer = {
           impact: 1000,
           action: `generate`,
           icon: `►`, //`✍️`
-          request: `ms. roxana, can you please generate a video that covers ${ultimateEffeciencyJutsu(
+          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
             `Lesson 11`
           )}?`,
           response: `null`,
@@ -1378,7 +1378,7 @@ export const Engineer = {
           icon: `🤝`,
           request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
             `Lesson 11`
-          )} with 10 bullet points?`,
+          )}?`,
           response: `\n\n1. Understand back-end architectures including MVC, REST, and SOA \n2. Be familiar with popular server-side technologies such as Node.js, Ruby on Rails and Java\n3. Implement authentication and authorization\n4. Design and query databases such as MySQL and Postgres\n5. Understand caching mechanisms such as memcache and Redis\n6. Implement API services using web services such as SOAP and XML-RPC \n7. Utilize version control systems such as git\n8. Have a basic understanding of the command line and shell scripting\n9. Utilize DevOps strategies such as continuous integration, deployment and monitoring\n10. Know principles of security and scalability, such as potential threats and load balancing`,
           spanish: ``,
           tooltip: ``,
@@ -1455,7 +1455,7 @@ export const Engineer = {
           impact: 1000,
           action: `generate`,
           icon: `►`, //`✍️`
-          request: `ms. roxana, can you please generate a video that covers ${ultimateEffeciencyJutsu(
+          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
             `Lesson 12`
           )}?`,
           response: `null`,
@@ -1503,7 +1503,7 @@ export const Engineer = {
           icon: `🤝`,
           request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
             `Lesson 12`
-          )} with 10 bullet points?`,
+          )}?`,
           response: `\n\n1. Understand the basic concept of computer operating systems and their components, including hardware and application elements. \n2. Learn about the different types of operating systems and the advantages and disadvantages of each.\n3. Learn how to set up network environments and connect devices to the system.\n4. Learn the process of installing, configuring, and maintaining an operating system.\n5. Learn to customize settings and user options, manage system resources and modify system preferences.\n6. Become familiar with different user interfaces and understand how to interact with them.\n7. Learn how to use command line tools to diagnose and troubleshoot issues.\n8. Learn how to configure security settings, including authentication and access control.\n9. Understand how to keep an operating system patched and up-to-date with available security updates.\n10. Learn how to back up data and restore the operating system after a hardware or software failure.`,
           spanish: ``,
           tooltip: ``,
@@ -1577,7 +1577,7 @@ export const Engineer = {
           impact: 1000,
           action: `generate`,
           icon: `►`, //`✍️`
-          request: `ms. roxana, can you please generate a video that covers ${ultimateEffeciencyJutsu(
+          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
             `Lesson 13`
           )}?`,
           response: `null`,
@@ -1625,7 +1625,7 @@ export const Engineer = {
           icon: `🤝`,
           request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
             `Lesson 13`
-          )} with 10 bullet points?`,
+          )}?`,
           response: `\n\n1. Understand the concepts and fundamentals of command line interfaces (CLI)\n2. Change the directory (cd)\n3. List and view content in the current directory (ls)\n4. Create new directories (mkdir)\n5. Remove existing directories (rmdir)\n6. Create/edit files (touch/vi)\n7. Copy, move, and rename files (cp/mv/rename)\n8. Find files (find)\n9. Basic commands for system and network administration (ping/ifconfig)\n10. Download files from the internet (wget/curl)`,
           spanish: ``,
           tooltip: ``,
@@ -1702,7 +1702,7 @@ export const Engineer = {
           impact: 1000,
           action: `generate`,
           icon: `►`, //`✍️`
-          request: `ms. roxana, can you please generate a video that covers ${ultimateEffeciencyJutsu(
+          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
             `Lesson 14`
           )}?`,
           response: `null`,
@@ -1751,7 +1751,7 @@ export const Engineer = {
           icon: `🤝`,
           request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
             `Lesson 14`
-          )} with 10 bullet points?`,
+          )}?`,
           response: `\n\n1. Understand the different types of fintech APIs and their specific use cases \n2. Familiarize yourself with the various technologies used in fintech APIs including REST, SOAP, JSON, and OAUTH2 \n3. Learn how to integrate financial service APIs with third-party applications \n4. Understand how payment gateways and merchant processing APIs enable online and mobile payments \n5. Explore the security considerations around handling financial data \n6. Know the privacy and data protection aspects of financial services APIs \n7. Research the different pricing models for using fintech APIs \n8. Identify which financial services APIs can be used in particular jurisdictions \n9. Learn how to best use the APIs' documentation to create and test applications \n10. Monitor the development of new and emerging fintech APIs for opportunities.`,
           spanish: ``,
           tooltip: ``,
@@ -1824,7 +1824,7 @@ export const Engineer = {
           impact: 1000,
           action: `generate`,
           icon: `►`, //`✍️`
-          request: `ms. roxana, can you please generate a video that covers ${ultimateEffeciencyJutsu(
+          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
             `Lesson 15`
           )}?`,
           response: `null`,
@@ -1873,7 +1873,7 @@ export const Engineer = {
           icon: `🤝`,
           request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
             `Lesson 15`
-          )} with 10 bullet points?`,
+          )}?`,
           response: `\n\n1. Understand the purpose of using NoSQL and Firebase Firestore in modern development \n2. Become familiar with the different types of NoSQL databases, e.g. key-value pair, document-oriented, columnar, graph-based, etc.\n3. Understand the basics of the Firebase architecture and how it works with cloud computing\n4. Learn the basics of data modeling for NoSQL databases and how to structure data to optimize query performance\n5. Understand the scalability, security, and availability of NoSQL databases on the Firebase platform\n6. Understand the basics of client-side security and authentication features available in Firebase Firestore\n7. Become familiar with querying data in Firebase Firestore, including understanding different query types, such as data ordering, filtering, and aggregation\n8. Understand the basics of Firebase Firestore synchronization and real-time data streaming\n9. Get familiar with different features available in the Firebase console, such as monitoring and analytics\n10. Become proficient with development tools like Cloud Functions and Firebase SDKs for Android, iOS, and web development`,
           spanish: ``,
           tooltip: ``,
@@ -1950,7 +1950,7 @@ export const Engineer = {
           impact: 1000,
           action: `generate`,
           icon: `►`, //`✍️`
-          request: `ms. roxana, can you please generate a video that covers ${ultimateEffeciencyJutsu(
+          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
             `Lesson 16`
           )}?`,
           response: `null`,
@@ -2000,7 +2000,7 @@ export const Engineer = {
           icon: `🤝`,
           request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
             `Lesson 16`
-          )} with 10 bullet points?`,
+          )}?`,
           response: `\n\n1. Understand the difference between Git and Github – Git is a version control system, while Github is a cloud-based hosting service used to store and manage repositories.\n2. Learn how to create and clone a repository – the most basic step in using Git and Github.\n3. Know how to stage and commit changes – this is essential for tracking and managing changes to a repository.\n4. Gain familiarity with working with branches – branches help keep code organized and makes it easier to test possible changes before committing them to the main repository.\n5. Familiarize yourself with Cherry picking – Cherry picking allows you to choose specific commits from other branches and add them to your current branch. \n6. Understand how to use Github pull requests – If a team is working on the same project, pull requests are vital for enabling team collaboration.\n7. Be familiar with reverting a commit – Reverting a commit is useful for undoing any changes that have been made to a codebase. \n8. Become familiar with forking repositories – Forks are like separate copies of a repository, and are used to experiment without disrupting the main repository. \n9. Know how to manage merge conflicts – Merge conflicts arise when multiple people are making changes to a codebase at the same time, and they need to be managed to keep the codebase functional. \n10. Learn how to use Github Gists – Gists are short snippets of code that can be stored and shared with others.`,
           spanish: ``,
           tooltip: ``,
@@ -2191,7 +2191,7 @@ export const Engineer = {
           impact: 1000,
           action: `generate`,
           icon: `✍️`,
-          request: `ms. roxana, can you please generate an essay that covers ${ultimateEffeciencyJutsu(
+          request: `ms. roxana, can you please generate an essay that introduces me to ${ultimateEffeciencyJutsu(
             `Build For Community`
           )}?`,
           response: `null`,
@@ -2241,7 +2241,7 @@ export const Engineer = {
           icon: `🤝`,
           request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
             `Build For Community`
-          )} with 10 bullet points?`,
+          )}?`,
           response: `\n\n1. Definition of Bitcoin – what it is, key features and how it works\n2. Impact of Automation on Employment and its related implications\n3. Potential Benefits of Universal Basic Income\n4. Possibility of Bitcoin and Automation to Enhance UBI\n5. Challenges and Obstacles in Implementing Bitcoin and Automation for UBI\n6. Prospects of Bitcoin as a Potential Solution to Enhance UBI\n7. Relationship between Bitcoin, Automation and UBI in Terms of Asset Distribution\n8. Advantages of UBI in the Context of Bitcoin and Automation\n9. Regulatory Issues Surrounding the Deployment of a UBI Scheme Using Bitcoin and/or Automation\n10. The Social and Economic Implications of Bitcoin, Automation and UBI`,
           spanish: ``,
           tooltip: ``,
@@ -2313,7 +2313,7 @@ export const Engineer = {
           impact: 1000,
           action: `generate`,
           icon: `✍️`,
-          request: `ms. roxana, can you please generate an essay that covers ${ultimateEffeciencyJutsu(
+          request: `ms. roxana, can you please generate an essay that introduces me to ${ultimateEffeciencyJutsu(
             `Build For Teachers`
           )}?`,
           response: `null`,
@@ -2363,7 +2363,7 @@ export const Engineer = {
           icon: `🤝`,
           request: `ms. roxana, can you please create a study guide for app designed like ${ultimateEffeciencyJutsu(
             `Build For Teachers`
-          )} with 10 bullet points?`,
+          )}?`,
           response: `\n\n1. Understand the features and functionality of the GitHub app designed for teachers.\n2. Familiarize yourself with the user interface and navigation of the app.\n3. Become familiarized with the different ways that students can submit work via the app.\n4. Set up notifications for new assignments and due dates to ensure students stay on track.\n5. Use the gradebook feature to track student progress and share feedback easily with students.\n6. Explore options for different ways to assess student performance, such as rubrics and PDFs.\n7. Understand how to easily share resources, such as reading material, videos, and worksheets with the entire class or individual students.\n8. Utilize the messaging feature to communicate with other teachers and collaborate on projects.\n9. Familiarize yourself with the app’s security and privacy settings to ensure student data is safe and secure.\n10. Conduct research on best practices for using the app more effectively as a tool for learning.`,
           spanish: ``,
           tooltip: ``,
@@ -2437,7 +2437,7 @@ export const Engineer = {
           impact: 1000,
           action: `generate`,
           icon: `✍️`,
-          request: `ms. roxana, can you please generate an essay that covers ${ultimateEffeciencyJutsu(
+          request: `ms. roxana, can you please generate an essay that introduces me to ${ultimateEffeciencyJutsu(
             `Social Chat`
           )}?`,
           response: `null`,
@@ -2489,7 +2489,7 @@ export const Engineer = {
           icon: `🤝`,
           request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
             `Social Chat`
-          )} with 10 bullet points?`,
+          )}?`,
           response: `\n\nStudy Guide for a Chat App: \n1. Understand the concept of private chatting and why users may want to use this feature. \n2. Learn the different types of private chat features available in the app.\n3. Become familiar with the functions available in private chats.\n4. Explore the process for subscribing to someone’s private chat.\n5. Understand the benefits of subscribing to private chats.\n6. Learn about user privacy and security in private chats.\n7. Research the security policy for private chats.\n8. Examine application speed and reliability for private chats.\n9. Learn about the cost associated with private chatting. \n10. Test various private chat features and assess the user experience.`,
           spanish: ``,
           tooltip: ``,
@@ -2568,7 +2568,7 @@ export const Engineer = {
           impact: 1000,
           action: `generate`,
           icon: `►`, //`✍️`
-          request: `ms. roxana, can you please generate a video that covers ${ultimateEffeciencyJutsu(
+          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
             `Programming Languages`
           )}?`,
           response: `null`,
@@ -2618,7 +2618,7 @@ export const Engineer = {
           icon: `🤝`,
           request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
             `Programming Languages`
-          )} with 10 bullet points?`,
+          )}?`,
           response: `\n\n1. Understand the concept of syntax and context-free grammars \n2. Understand the concept of types and type systems\n3. Identify and distinguish different programming paradigms\n4. Understand the principles of denotational and operational semantics\n5. Know the process of compilation of a program \n6. Be familiar with the Pragmatics of language design\n7. Investigate the strengths and weaknesses of language features\n8. Understand how garbage collection and exception handling works\n9. Understand language modularization, abstraction and encapsulation\n10. Understand memory management, references and aliasing`,
           spanish: ``,
           tooltip: ``,
@@ -2691,7 +2691,7 @@ export const Engineer = {
           impact: 1000,
           action: `generate`,
           icon: `►`, //`✍️`
-          request: `ms. roxana, can you please generate a video that covers ${ultimateEffeciencyJutsu(
+          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
             `Recursion`
           )}?`,
           response: `null`,
@@ -2741,7 +2741,7 @@ export const Engineer = {
           icon: `🤝`,
           request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
             `Recursion`
-          )} with 10 bullet points?`,
+          )}?`,
           response: `\n\n1. Understand what recursion is and how it works. \n2. Describe the advantages and disadvantages of using recursion.\n3. Identify the base case and recursive case of a problem.\n4. Identify tail recursion and understand how it is executed.\n5. Explain the differences between linear recursion and binary recursion. \n6. Understand the relationship between recursion and iteration.\n7. Explain the concept of recursion space complexity.\n8. Design an algorithm using recursion.\n9. Understand how recursion can be used to generate relationships between data sets.\n10. Develop an understanding of how the principles of recursion can be applied in problem solving.`,
           spanish: ``,
           tooltip: ``,
@@ -2813,7 +2813,7 @@ export const Engineer = {
           impact: 1000,
           action: `generate`,
           icon: `►`, //`✍️`
-          request: `ms. roxana, can you please generate a video that covers ${ultimateEffeciencyJutsu(
+          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
             `Linked Lists`
           )}?`,
           response: `null`,
@@ -2863,7 +2863,7 @@ export const Engineer = {
           icon: `🤝`,
           request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
             `Linked Lists`
-          )} with 10 bullet points?`,
+          )}?`,
           response: `\n\n1. Understand the purpose of a linked list and its nature as a linear, dynamic data structure\n2. Recognize that a linked list is composed of nodes and each node stores a piece of data and reference to another node\n3. Understand the components of a node: data and next, and the role of the dummy node in a linked list\n4. Know the key operations of a linked list: insertion (add new element to start, node at specific location, end of linked list), deletion, search (sequential and binary search)\n5. Be able to differentiate between a singly- and a doubly-linked list\n6. Know how to iterate through a linked list to traverse and access its elements\n7. Know the difference between a linked list and an array, when to choose one over the other\n8. Understand the advantages and disadvantages of using a linked list\n9. Know common applications of linked lists such as stacks, queues and hash tables\n10. Understand the concept of memory management when creating linked list objects`,
           spanish: ``,
           tooltip: ``,
@@ -2938,7 +2938,7 @@ export const Engineer = {
           impact: 1000,
           action: `generate`,
           icon: `►`, //`✍️`
-          request: `ms. roxana, can you please generate a video that covers ${ultimateEffeciencyJutsu(
+          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
             `Link Travel`
           )}?`,
           response: `null`,
@@ -2986,7 +2986,7 @@ export const Engineer = {
           icon: `🤝`,
           request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
             `Link Travel`
-          )} with 10 bullet points?`,
+          )}?`,
           response: `\n\n1. Understand the differences between a linked list and a tree.\n2. Learn the basic components of a linked list: head node, tail node, and data node.\n3. Understand the purpose of a linked list: to store data in linear order.\n4. Understand the basic components of a tree: root, branch, and leaf.\n5. Learn about the different types of trees: binary search tree, red-black tree, AVL tree, etc.\n6. Learn about traversing trees: pre-order, post-order, and in-order traversal.\n7. Understand the steps involved in a tree traversal: analyze the current node, traverse the left subtree, traverse the right subtree.\n8. Learn how to traverse both linked lists and trees using iterative and recursive techniques.\n9. Practice coding the traversal algorithms.\n10. Understand the Big-O runtime of the traversal algorithms.`,
           spanish: ``,
           tooltip: ``,
@@ -3061,7 +3061,7 @@ export const Engineer = {
           impact: 1000,
           action: `generate`,
           icon: `►`, //`✍️`
-          request: `ms. roxana, can you please generate a video that covers ${ultimateEffeciencyJutsu(
+          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
             `Link Changing`
           )}?`,
           response: `null`,
@@ -3109,7 +3109,7 @@ export const Engineer = {
           icon: `🤝`,
           request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
             `Link Changing`
-          )} with 10 bullet points?`,
+          )}?`,
           response: `\n\n1. Understand the basic concepts behind linked lists, trees, and graphs\n2. Be familiar with the syntax and the logic that links nodes in these structures\n3. Consider the different kinds of swapping operations available for manipulating nodes (direct swap, data swap, etc.)\n4. Define the elements that need to be exchanged when swapping nodes (pointers, links, or data)\n5. Explore the implications of swapping nodes on the structure (ordering, length, balance, etc.)\n6. Identify the correct sequence of steps when swapping nodes in a linked list, tree, or graph\n7. Develop an understanding of the methods used to traverse and locate nodes within a structure\n8. Compare and contrast the advantages and disadvantages of different node swapping operations\n9. Learn practical strategies for debugging problems encountered when swapping nodes\n10. Practice coding different node swapping operations with different data structures`,
           spanish: ``,
           tooltip: ``,
@@ -3184,7 +3184,7 @@ export const Engineer = {
           impact: 1000,
           action: `generate`,
           icon: `►`, //`✍️`
-          request: `ms. roxana, can you please generate a video that covers ${ultimateEffeciencyJutsu(
+          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
             `Algorithms`
           )}?`,
           response: `null`,
@@ -3233,7 +3233,7 @@ export const Engineer = {
           icon: `🤝`,
           request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
             `Algorithms`
-          )} with 10 bullet points?`,
+          )}?`,
           response: `\n\n1. Understand the key differences between trees and graphs, including the definition of each structure and the differences of their associated algorithms.\n2. Review the various techniques and processes used to traverse a tree or graph structure, such as depth-first search (DFS), breadth-first search (BFS), and topological sorting.\n3. Learn how to implement the AVL tree data structure and its associated algorithms for balancing and searching.\n4. Grasp the concepts of minimum spanning tree (MST) algorithm, such as Prim’s or Kruskal’s algorithm, and how to compute, store and optimize the structure.\n5. Analyze and understand different graph operations, such as finding the shortest path between two vertices, connectivity and connectivity components.\n6. Comprehend Dijkstra’s Algorithm, Bellman-Ford Algorithm, A* Algorithm and Floyd-Warshell Algorithm, and when and how to use each algorithm.\n7. Grasp techniques and algorithms utilized in network flow optimization problems, including the Maximum Flow Problem and the Minimum Cost Flow Problem.\n8. Learn techniques to traverse the structure of a network flow and calculate maximum and minimum flow values.\n9. Identify Hamiltonian Path and Eulerian Path, and both components needed to solve the Traveling Salesman Problem.\n10. Analyze algorithms used to identify and sort connected components, such as Connected Component Labeling and Kosa-Karu Algorithm.`,
           spanish: ``,
           tooltip: ``,

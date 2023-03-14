@@ -23,7 +23,7 @@ export const LittleVillage = {
           impact: 1000,
           action: `generate`,
           icon: `►`, //`✍️`
-          request: `ms. roxana, can you please generate a video that covers ${ultimateEffeciencyJutsu(
+          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
             `Lesson 1`
           )}?`,
           response: `null`,
@@ -74,7 +74,7 @@ export const LittleVillage = {
           icon: `🤝`,
           request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
             `Lesson 1`
-          )} with 10 bullet points?`,
+          )}?`,
           response: `\n\n1. Understand the fundamentals of coding and computer logic\n2. Learn the basics of programming languages such as HTML, CSS, JavaScript, and Python\n3. Familiarize yourself with the different types of data structures and algorithms\n4. Understand the principles of object-oriented programming\n5. Learn how to debug and troubleshoot code\n6. Develop an understanding of the principles of software engineering\n7. Learn how to use version control systems such as Git\n8. Understand the basics of databases and SQL\n9. Develop an understanding of web development frameworks such as React and Angular\n10. Learn how to use development tools such as IDEs and text editors`,
           spanish: ``,
           tooltip: ``,

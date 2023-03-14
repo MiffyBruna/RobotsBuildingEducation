@@ -28,7 +28,7 @@ export const Creator = {
           impact: 1000,
           action: `generate`,
           icon: `✍️`, //`✍️`
-          request: `ms. roxana, can you please generate an essay that covers ${ultimateEffeciencyJutsu(
+          request: `ms. roxana, can you please generate an essay that introduces me to ${ultimateEffeciencyJutsu(
             `Creating Purpose`
           )}?`,
           response: `null`,
@@ -78,7 +78,7 @@ export const Creator = {
           icon: `🤝`,
           request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
             `Creating Purpose`
-          )} with 10 bullet points?`,
+          )}?`,
           response: `\n\n1. Brainstorm potential problems to solve. Ask questions like, “What are some current problems in the world today? What are some problems that affect the people around me?”\n\n2. Identify the root cause of each problem. Look at the big picture and determine what is causing each problem, so that you can develop an effective solution.\n\n3. Think holistically and come up with creative solutions. Try to incorporate multiple elements (ethical, legal, etc.) into one holistic solution.\n\n4. Research each problem to gain better understanding. Research a variety of sources (books, magazines, websites, etc.), so that you can gain perspective and background information.\n\n5. Define objectives and goals for each problem. Ask questions such as, “What do I want to accomplish with this project? How can I measure success?”\n\n6. Identify a team to work on the problem and its solution. Make sure the team has the skills, expertise, and access that is needed for the project.\n\n7. Develop a plan of action that covers the timeline, budget, progress, guidelines and resources.\n\n8. Implement the solution. Take the necessary steps and put the plan into action.\n\n9. Monitor progress. Establish entry and exit criteria to measure progress and determine efficacy of the solution.\n\n10. Evaluate the solution. Have the team look at the results and assess whether the solution was successful. Use the experience and results to make future improvements.`,
           spanish: ``,
           tooltip: ``,
@@ -151,7 +151,7 @@ export const Creator = {
           impact: 1000,
           action: `generate`,
           icon: `►`, //`✍️`
-          request: `ms. roxana, can you please generate a video that covers ${ultimateEffeciencyJutsu(
+          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
             `Philosophy`
           )}?`,
           response: `null`,
@@ -201,7 +201,7 @@ export const Creator = {
           icon: `🤝`,
           request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
             `Philosophy`
-          )} with 10 bullet points?`,
+          )}?`,
           response: `\n\n1. Understand the foundations of Critical Race Theory (CRT) and its uses in analyzing how racism and racial disparities influence law, education and politics.\n\n2. Gain an understanding of how machine learning algorithms utilize data and generate models to inform decision-making in various fields.\n\n3. Learn the principles of CRT-based machine learning, as well as its benefits and potential limitations.\n\n4. Become familiar with case studies where CRT-based machine learning had a positive impact on race-based decisions.\n\n5. Develop an understanding of the ethical considerations of design, implementation and use of CRT-influenced machine learning algorithms.\n\n6. Analyze whether particular historical or contemporary situations call for a CRT-based machine learning approach.\n\n7. Understand the preprocessing steps required to develop useful, valid and accurate machine learning models.\n\n8. Evaluate how to accurately label and represent data for CRT-based machine learning.\n\n9. Understand how to determine appropriate metrics for evaluating the effectiveness of CRT-based machine learning algorithms and models.\n\n10. Model legal issues arising from CRT applications of machine learning algorithms.`,
           spanish: ``,
           tooltip: ``,
@@ -275,7 +275,7 @@ export const Creator = {
           impact: 1000,
           action: `generate`,
           icon: `►`, //`✍️`
-          request: `ms. roxana, can you please generate a video that covers ${ultimateEffeciencyJutsu(
+          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
             `UI/UX`
           )}?`,
           response: `null`,
@@ -325,7 +325,7 @@ export const Creator = {
           icon: `🤝`,
           request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
             `UI/UX`
-          )} with 10 bullet points?`,
+          )}?`,
           response: `\n\n1. Understand the basics of Human Computer Interaction (HCI), User Centered Design (UCD), and UI/UX\n2. Understand the differences between the three approaches\n3. Learn the principles of UCD and the user experience\n4. Develop user research and usability testing plans\n5. Learn strategies to identify user needs and goals\n6. Identify appropriate UI/UX design approaches to meet user needs\n7. Apply the principles of HCI, UCD, and UI/UX design throughout the design process\n8. Design effective visual, auditory, and tactile interfaces\n9. Develop an understanding of accessibility and internationalization/localization design considerations\n10. Analyze real-life examples of successful HCI, UCD, and UI/UX projects.`,
           spanish: ``,
           tooltip: ``,
@@ -402,7 +402,7 @@ export const Creator = {
           impact: 1000,
           action: `generate`,
           icon: `✍️`,
-          request: `ms. roxana, can you please generate an essay that covers ${ultimateEffeciencyJutsu(
+          request: `ms. roxana, can you please generate an essay that introduces me to ${ultimateEffeciencyJutsu(
             `Content Review`
           )}?`,
           response: `null`,
@@ -452,7 +452,7 @@ export const Creator = {
           icon: `🤝`,
           request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
             `Content Review`
-          )} with 10 bullet points?`,
+          )}?`,
           response: `\n\n1. Identify your target audience and create content tailored to meet their needs.\n2. Utilize visuals such as images, videos and infographics to increase engagement.\n3. Stay up-to-date on the latest trends and use relevant hashtags to connect with a larger audience.\n4. Be mindful of the time of day when you are posting content to maximize reach.\n5. Mix up the type of content you post, from instructional and educational to fun and entertaining.\n6. Help build relationships and engage with followers by replying to comments and messages.\n7. Use analytics and insights to track progress and learn what strategies are working best.\n8. Utilize paid ads, campaigns and influencers to expand your reach.\n9. Analyze competitor content to understand what works and what you can do better.\n10. Establish an all-inclusive social media strategy and stick to it.`,
           spanish: ``,
           tooltip: ``,
@@ -527,7 +527,7 @@ export const Creator = {
           impact: 1000,
           action: `generate`,
           icon: `✍️`,
-          request: `ms. roxana, can you please generate an essay that covers ${ultimateEffeciencyJutsu(
+          request: `ms. roxana, can you please generate an essay that introduces me to ${ultimateEffeciencyJutsu(
             `Influence & Expression`
           )}?`,
           response: `null`,
@@ -577,7 +577,7 @@ export const Creator = {
           icon: `🤝`,
           request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
             `Influence & Expression`
-          )} with 10 bullet points?`,
+          )}?`,
           response: `\n\n1. Identify the major types of expressions used in social media\n2. Analyze the different ways expressions impact influence \n3. Explore the implications of expression for social media users\n4. Explain the relationships between expression and influence in social media\n5. Discover how expression in social media can be used to generate social change\n6. Compare and contrast the effects of message framing and self-expression in social media\n7. Examine the role of emotion in the expressions used on social media\n8. Assessment how the language, tone, and framing of expressions convey information and persuade audiences\n9. Investigate different strategies of effectively incorporating expressions into social media content\n10. Develop an understanding of how and why expression on social media can change opinions and become viral`,
           spanish: ``,
           tooltip: ``,
@@ -653,7 +653,7 @@ export const Creator = {
           impact: 1000,
           action: `generate`,
           icon: `✍️`,
-          request: `ms. roxana, can you please generate an essay that covers ${ultimateEffeciencyJutsu(
+          request: `ms. roxana, can you please generate an essay that introduces me to ${ultimateEffeciencyJutsu(
             `Abraham Lincoln`
           )}?`,
           response: `null`,
@@ -703,7 +703,7 @@ export const Creator = {
           icon: `🤝`,
           request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
             `Abraham Lincoln`
-          )} with 10 bullet points?`,
+          )}?`,
           response: `\n\n1. Abraham Lincoln firmly believed in the concept of divine providence.\n2. He often attributed his successes to God's will and grace.\n3. He protested against violence for fear of offending God and His purpose.\n4. Three famous quotes from Lincoln on divine providence are “I know that the Lord is always on the side of the right”, “The ways of providence are often inscrutable”, and “humbly acknowledged His divine goodness”.\n5. Lincoln believed in divine guidance allowing individual liberty while protecting the weak.\n6. He was a strong proponent of religious freedom and tolerance.\n7. Lincoln often viewed himself as a humble servant of God working to preserve the Union.\n8. He often called on God to forgive the transgressions of the people, not punish them.\n9. Lincoln viewed the Civil War as an act of divine judgment on the nation.\n10. He believed in a day of final reconciliation and peace – when God's will is fully acknowledged.`,
           spanish: ``,
           tooltip: ``,

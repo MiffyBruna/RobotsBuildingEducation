@@ -8,6 +8,9 @@ import { Prompts } from "./Prompts/Prompts";
 import { Roxana } from "./Roxana/Roxana";
 import { analytics } from "../database/firebaseResources";
 import { logEvent } from "firebase/analytics";
+import { PromptCombiner9000 } from "./Roxana/PromptCombiner9000/PromptCombiner9000";
+import { computeResponseList, computeTotalImpactFromPrompt } from "./ChatGPT.compute";
+import { Intro } from "./Roxana/PromptCombiner9000/Intro";
 
 export const ChatGPT = ({
   currentPath = "demo",
@@ -28,6 +31,8 @@ export const ChatGPT = ({
   const [isSpanishActive, setIsSpanishActive] = useState(false);
   const [loadingMessage, setLoadingMessage] = useState("");
   const [chatGptResponse, setChatGptResponse] = useState("");
+  const [chatGptResponseList, setChatGptResponseList] = useState([]);
+  const [promptSelection,setPromptSelection] = useState('');
   const [loadingStates, setLoadingStates] = useState({
     summarize: false,
     guide: false,
@@ -50,6 +55,7 @@ export const ChatGPT = ({
    */
   const [conversation, setConversation] = useState([]);
 
+  // patreon, shop, 
   useEffect(() => {
     setLoadingStates({
       summarize: false,
@@ -98,13 +104,64 @@ export const ChatGPT = ({
         },
       ],
     });
+
     let loader = Object.keys(loadingStates);
     let result = loadingStates;
-    loader.forEach((prompt) => {
-      result[prompt] = false;
-    });
-    result[promptType] = true;
-    setLoadingStates(result);
+
+
+    // discover/study
+    let discover = ['inspire',  'demonstrate', 'patreon'] // hits patreon
+    let study = ['define', 'summarize', 'ask', 'guide', 'quiz']; // hits guide
+    let shop = ['shop'];
+    setPromptSelection(promptType);
+
+  // if(promptType === 'patreon'){
+  //   setLoadingStates({
+  //     summarize: false,
+  //     guide: false,
+  //     anything: false,
+  //     define: false,
+  //     ask: false,
+  //     quiz: false,
+  //     demonstrate: true,
+  //     patreon: true,
+  //     inspire: true,
+  //     shop: false,
+  //   });
+
+  // }else if(promptType === 'guide'){
+  //   setLoadingStates({
+  //     summarize: true,
+  //     guide: true,
+  //     anything: false,
+  //     define: true,
+  //     ask: false,
+  //     quiz: true,
+  //     demonstrate: false,
+  //     patreon: false,
+  //     inspire: false,
+  //     shop: false,
+  //   });
+  // }else if(promptType==='shop'){ 
+  //   setLoadingStates({
+  //     summarize: false,
+  //     guide: false,
+  //     anything: false,
+  //     define: false,
+  //     ask: false,
+  //     quiz: false,
+  //     demonstrate: false,
+  //     patreon: false,
+  //     inspire: false,
+  //     shop: true,
+  //   });
+  // }
+    // console.log("PROMPT", promptType);
+    // loader.forEach((prompt) => {
+    //   result[prompt] = false;
+    // });
+    // result[promptType] = true;
+    // setLoadingStates(result);
     setLoadingMessage("...");
     // setLoadingMessage(`prompt ${promptType} activated`);
   };
@@ -112,6 +169,7 @@ export const ChatGPT = ({
   const handleSubmit = async (event, prompt = null, promptType = null) => {
     event.preventDefault();
 
+    // change discover/study
     setPromptMessage(prompt.request);
 
     if (promptType === "languageToggle") {
@@ -145,7 +203,32 @@ export const ChatGPT = ({
     await delay(1500);
 
     // x
+
+    // change to a function that gets multiple responsesor components discover/study
+    // setChatGptResponseList([]);
+
+
+    let result = prompt;
+    if(promptType === 'patreon'){
+      result = {
+        response: computeResponseList(patreonObject, promptType), //compute
+        impact: computeTotalImpactFromPrompt(patreonObject, promptType), // compute
+      }
+
+    }else if(promptType === 'guide'){
+      result = {
+        response: computeResponseList(patreonObject, promptType), //compute
+        impact: computeTotalImpactFromPrompt(patreonObject, promptType), // compute
+      }
+    }else if(promptType === 'shop'){
+      result = {
+        response: computeResponseList(patreonObject, promptType), //compute
+        impact: computeTotalImpactFromPrompt(patreonObject, promptType), // compute
+      }
+    }
     setChatGptResponse(prompt.response);
+    setChatGptResponseList(result?.response)
+
     // setChatGptResponse(parsedData);
 
     // update proof of work
@@ -156,36 +239,36 @@ export const ChatGPT = ({
     ) {
       //doesnt return obj, so update firebase and react seperately
       await updateDoc(userDocumentReference, {
-        impact: databaseUserDocument?.impact + prompt.impact,
+        impact: databaseUserDocument?.impact + result.impact,
       });
 
       // update global work
       await updateDoc(globalDocumentReference, {
-        total: globalImpactCounter + prompt.impact,
+        total: globalImpactCounter + result.impact,
       });
 
       //copy it to react
       let docCopy = databaseUserDocument;
-      docCopy.impact = databaseUserDocument?.impact + prompt.impact;
+      docCopy.impact = databaseUserDocument?.impact + result.impact;
       setDatabaseUserDocument(docCopy);
 
       let globalCopy = globalImpactCounter;
-      globalCopy = globalImpactCounter + prompt.impact;
+      globalCopy = globalImpactCounter + result.impact;
       setGlobalImpactCounter(globalCopy);
     } else {
       //copy it to react
-      console.log("DBUSER");
+
       let docCopy = databaseUserDocument;
-      docCopy.impact = databaseUserDocument?.impact + prompt.impact;
+      docCopy.impact = databaseUserDocument?.impact + result.impact;
       setDatabaseUserDocument(docCopy);
 
       let globalCopy = globalImpactCounter;
-      globalCopy = globalImpactCounter + prompt.impact;
+      globalCopy = globalImpactCounter + result.impact;
       setGlobalImpactCounter(globalCopy);
     }
 
     logEvent(analytics, "spend_virtual_currency", {
-      value: prompt.impact,
+      value: result.impact,
       virtual_currency_name: "Impact",
       item_name: `${currentPath}|${moduleName}|${promptType}`,
     });
@@ -193,7 +276,7 @@ export const ChatGPT = ({
     setLoadingMessage("");
   };
 
-  console.log("MODULE NAME", moduleName)
+
 
   return (
     <div
@@ -210,7 +293,7 @@ export const ChatGPT = ({
         patreonObject={patreonObject}
       />
       <br />
-
+{/* 
       <Roxana
         loadingMessage={loadingMessage}
         loadingStates={loadingStates}
@@ -218,7 +301,33 @@ export const ChatGPT = ({
         patreonObject={patreonObject}
         isDemo={isDemo}
         moduleName={moduleName}
+      /> */}
+
+
+      <Intro
+        isDemo={isDemo} 
+        moduleName={moduleName} 
+        patreonObject={patreonObject} 
+        loadingMessage={loadingMessage} 
+        chatGptResponse={chatGptResponse}
+        promptSelection={promptSelection}
       />
+      <br/>
+
+      {chatGptResponseList?.map((response) =>(
+        <PromptCombiner9000
+          loadingMessage={loadingMessage}
+          // loadingStates={loadingStates}
+          chatGptResponse={response}
+          patreonObject={patreonObject}
+          isDemo={isDemo}
+          moduleName={moduleName}
+          promptSelection={promptSelection}
+
+        />
+      ))}
+
+
       <br />
       {/* prompts */}
       <Prompts
@@ -226,8 +335,8 @@ export const ChatGPT = ({
         loadingMessage={loadingMessage}
         patreonObject={patreonObject}
         handleSubmit={handleSubmit}
-        chatGptResponse={chatGptResponse}
-        isSpanishActive={isSpanishActive}
+
+
         displayName={displayName}
         databaseUserDocument={databaseUserDocument}
         computePercentage={computePercentage}

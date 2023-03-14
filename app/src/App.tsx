@@ -296,8 +296,12 @@ function App() {
             <h2 style={{ color: "white", marginTop: 12 }}>
               {" "}
               {patreonObject?.button || ""}{" "}
+    
+
             </h2>
           ) : null}
+
+         <br/>
 
           {/* render chatbot */}
           <div style={{ width: "100%" }}>
