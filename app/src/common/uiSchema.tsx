@@ -209,3 +209,58 @@ export let getGlobalImpact = () => {
 
   return sum;
 };
+
+
+// this is a function that handles devilish things
+// configure it with arguments if you need to get each lesson and do something with it :)
+export const randomLessonGeneratorMachine444 = () => {
+
+  let schema = ui();
+
+
+  let setOfPaths = [];
+  
+  Object.entries(schema).forEach(path => {
+    setOfPaths.push(path[1]);
+  })
+
+
+
+  let setOfCollections = [];
+
+  setOfPaths.forEach(path => {
+
+    // console.log("collection entry?",     Object.entries(collection));
+
+    Object.entries(path).forEach(collection =>{
+
+      setOfCollections.push(collection[1]);
+    })
+  })
+
+
+  
+  let setOfModules = [];
+
+  setOfCollections.forEach(collection => {
+
+    Object.entries(collection).forEach(module => {
+      // module 1 = title, may need this
+      setOfModules.push(module[1]);
+    })
+  });
+
+
+
+
+  let randomResult = setOfModules[Math.floor(Math.random()*setOfModules.length)];
+
+
+  console.log("result", randomResult)
+  return randomResult
+
+
+
+
+
+}

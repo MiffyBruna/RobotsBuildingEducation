@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import isEmpty from "lodash/isEmpty";
+import { isEmpty } from "lodash";
 export const StyledNavigationContainer = styled.div`
   display: flex;
   justify-content: center;

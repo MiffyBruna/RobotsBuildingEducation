@@ -1,4 +1,6 @@
+import {isEmpty} from 'lodash';
 export const PromptMessage = ({ promptMessage, patreonObject }) => {
+   if(!isEmpty(patreonObject)){
   return (
     <div style={{ display: "flex", justifyContent: "flex-end" }}>
       <div
@@ -32,4 +34,5 @@ export const PromptMessage = ({ promptMessage, patreonObject }) => {
       </div>
     </div>
   );
+        }else{ return null}
 };

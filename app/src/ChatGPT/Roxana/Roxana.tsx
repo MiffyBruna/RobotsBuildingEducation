@@ -2,7 +2,7 @@ import React from "react";
 
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { a11yDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
-
+import { isEmpty } from "lodash";
 import Spinner from "react-bootstrap/Spinner";
 import Patreon from "../Patreon/Patreon";
 import puesFuckIt from "../../common/media/images/puesFuckIt.jpeg";
@@ -23,6 +23,8 @@ export const Roxana = ({
   isDemo,
   moduleName = "demo",
 }) => {
+
+  if(!isEmpty(patreonObject)){
   let RoxanaLoadingAnimation = () => {
     return (
       <div>
@@ -384,4 +386,6 @@ export const Roxana = ({
       </div>
     </div>
   );
+        }
+        else return null;
 };

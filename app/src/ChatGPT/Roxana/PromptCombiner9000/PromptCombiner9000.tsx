@@ -2,7 +2,7 @@ import React from "react";
 
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { a11yDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
-
+import { isEmpty } from "lodash";
 import Spinner from "react-bootstrap/Spinner";
 import Patreon from "../../Patreon/Patreon";
 import puesFuckIt from "../../../common/media/images/puesFuckIt.jpeg";
@@ -55,6 +55,7 @@ export const PromptCombiner9000 = ({
 
 
 
+  if(!isEmpty(patreonObject)){
 
   return (
     <>
@@ -67,23 +68,27 @@ export const PromptCombiner9000 = ({
         backgroundColor: loadingMessage ? "black" : "#2C2C2E",
         color: "white",
 
-        display: "flex",
+        display: loadingMessage ? 'none' : "flex",
         justifyContent: "flex-start",
         textAlign: "left",
         padding: 20,
-        maxWidth:
-          patreonObject.prompts.patreon.icon === "►" ? "617.5px" : "82.5%",
+        // maxWidth:
+        //   patreonObject.prompts.patreon.icon === "►" ? "617.5px" : "82.5%",
+        maxWidth: "90%",
+                width: 'fit-content',
 
         borderTopLeftRadius: 30,
         borderTopRightRadius: 30,
         borderBottomRightRadius: 30,
         marginTop: 24,
-        marginBottom:12
+        marginBottom:12,
         // overflow: "auto",
         // maxWidth: "80%",
         // maxWidth: 300,
         // maxWidth: loadingStates.demonstrate ? "100%" : "75%",
         // minWidth: loadingStates.demonstrate ? "100%" : "75%",
+
+        
       }}
     >
 
@@ -231,4 +236,7 @@ export const PromptCombiner9000 = ({
     
   );
 
+        }else{
+          return null;
+        }
 };

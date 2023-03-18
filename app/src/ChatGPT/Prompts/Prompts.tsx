@@ -1,7 +1,7 @@
 import { logEvent } from "firebase/analytics";
 import { useState } from "react";
 import { Button, Modal } from "react-bootstrap";
-
+import {isEmpty} from 'lodash';
 import ReactJson from "react-json-view";
 import { renderWithTooltip } from "../../common/uiSchema";
 import { analytics } from "../../database/firebaseResources";
@@ -23,6 +23,7 @@ export const Prompts = ({
   computePercentage,
   globalImpactCounter,
 }) => {
+  if(!isEmpty(patreonObject)){
   const [isModalOpen, setIsModalOpen] = useState(false);
   let promptKeys = Object.keys(patreonObject.prompts);
     let borderHighlight = "#48484a";
@@ -150,9 +151,10 @@ export const Prompts = ({
     <div
       style={{
         display: "flex",
-        justifyContent: "flex-end",
+
         alignItems: "flex-end",
         flexDirection: "column",
+
       }}
     >
       <ProofOfWork
@@ -219,4 +221,9 @@ export const Prompts = ({
 
     </div>
   );
+
+      }else{
+        return null
+      }
+
 };

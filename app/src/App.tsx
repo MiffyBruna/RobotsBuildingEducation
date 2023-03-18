@@ -8,6 +8,7 @@ import { Paths } from "./Paths/Paths";
 import {
   controlPathVisibilityMap,
   getGlobalImpact,
+  randomLessonGeneratorMachine444,
   renderWithTooltip,
 } from "./common/uiSchema";
 import { Collections } from "./Paths/Collections/Collections";
@@ -114,10 +115,16 @@ function App() {
   const handleZeroKnowledgePassword = (event) => {
     if (event.target.value === import.meta.env.VITE_PATREON_PASSCODE) {
       localStorage.setItem("patreonPasscode", event.target.value);
+      setPatreonObject({});
       setIsZeroKnowledgeUser(true);
+
       logEvent(analytics, "login", { method: "zeroKnowledge" });
     }
   };
+
+  const handleRandomDemoPressed = () => {
+    setPatreonObject(randomLessonGeneratorMachine444())
+  }
 
   useEffect(() => {
     //check local storage
@@ -210,6 +217,7 @@ function App() {
     });
 
     setProofOfWorkFromModules(getGlobalImpact());
+    setPatreonObject(isDemo ? randomLessonGeneratorMachine444() : {});
   }, []);
 
   //
@@ -220,6 +228,11 @@ function App() {
   if (typeof isSignedIn == "string") {
     return <Spinner animation="grow" variant="light" />;
   }
+
+
+
+
+  console.log("aptre", patreonObject);
 
   return (
     <div className="App">
@@ -263,6 +276,8 @@ function App() {
 
       {!isZeroKnowledgeUser ? (
         <Passcode
+          patreonObject={patreonObject}
+          handleRandomDemoPressed={handleRandomDemoPressed}
           handleZeroKnowledgePassword={handleZeroKnowledgePassword}
           userDocumentReference={userDocumentReference}
           databaseUserDocument={databaseUserDocument}
@@ -306,7 +321,7 @@ function App() {
           {/* render chatbot */}
           <div style={{ width: "100%" }}>
             <div>
-              {isEmpty(patreonObject) ? null : (
+              {isEmpty(patreonObject) && !isDemo ? null : (
                 <>
                   <ChatGPT
                     currentPath={currentPathForAnalytics}
@@ -323,6 +338,7 @@ function App() {
                     computePercentage={computePercentage}
                     isDemo={isDemo}
                     moduleName={moduleName}
+
                   />
                 </>
               )}

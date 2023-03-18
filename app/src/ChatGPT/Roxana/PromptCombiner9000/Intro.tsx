@@ -1,10 +1,13 @@
+
 import { logEvent } from "firebase/analytics";
 import { Spinner } from "react-bootstrap";
+import { isEmpty } from "lodash";
 import lionel from "../../../common/media/images/lionel.png";
 import roxanaGif from "../../../common/media/images/roxanaGif.gif";
 import { analytics } from "../../../database/firebaseResources";
 
-export const Intro = ({ isDemo,moduleName, patreonObject, loadingMessage, chatGptResponse, promptSelection}) => {
+export const Intro = ({ isDemo,moduleName, patreonObject, loadingMessage, chatGptResponse, promptSelection, shouldRenderIntro}) => {
+  if(!isEmpty(patreonObject)){
   let RoxanaLoadingAnimation = () => {
     return (
       <div>
@@ -17,10 +20,10 @@ export const Intro = ({ isDemo,moduleName, patreonObject, loadingMessage, chatGp
         </Spinner>
       </div>
     );
-  };
 
+    }
   let RoxanaIntroText = () => {
-    if (isDemo) {
+    if (isDemo && shouldRenderIntro) {
       return (
         <div>
           i'm ms. roxana, I'm built with various robots made by Apple, Tiktok
@@ -200,6 +203,7 @@ export const Intro = ({ isDemo,moduleName, patreonObject, loadingMessage, chatGp
     );
   };
 
+  console.log("log", patreonObject);
   return(
     <div
       // Gray response message by the AI
@@ -217,6 +221,7 @@ export const Intro = ({ isDemo,moduleName, patreonObject, loadingMessage, chatGp
         borderTopLeftRadius: 30,
         borderTopRightRadius: 30,
         borderBottomRightRadius: 30,
+        //  border:'1px solid #252930' 
 
         // overflow: "auto",
         // maxWidth: "80%",
@@ -225,7 +230,7 @@ export const Intro = ({ isDemo,moduleName, patreonObject, loadingMessage, chatGp
         // minWidth: loadingStates.demonstrate ? "100%" : "75%",
       }}
     >
-     <div style={{ display: "flex" }}>
+     <div style={{ display: "flex"}}>
       {loadingMessage ? (
           <RoxanaLoadingAnimation />
         ) : chatGptResponse ? (
@@ -240,4 +245,7 @@ export const Intro = ({ isDemo,moduleName, patreonObject, loadingMessage, chatGp
      </div>
      </div>
   )
+    }else{
+        }
+        return null
 }

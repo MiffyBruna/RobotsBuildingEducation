@@ -27,6 +27,7 @@ export const ChatGPT = ({
   moduleName = "demo",
   computePercentage,
 }) => {
+  const [shouldRenderIntro, setShouldRenderIntro] = useState(true);
   const [promptMessage, setPromptMessage] = useState("");
   const [isSpanishActive, setIsSpanishActive] = useState(false);
   const [loadingMessage, setLoadingMessage] = useState("");
@@ -57,6 +58,7 @@ export const ChatGPT = ({
 
   // patreon, shop, 
   useEffect(() => {
+    console.log("effecting")
     setLoadingStates({
       summarize: false,
       guide: false,
@@ -70,6 +72,9 @@ export const ChatGPT = ({
       shop: false,
     });
     setChatGptResponse("");
+    setPromptMessage("")
+    setChatGptResponseList([]);
+
   }, [patreonObject]);
 
   const handlePromptSelection = (promptType) => {
@@ -114,6 +119,7 @@ export const ChatGPT = ({
     let study = ['define', 'summarize', 'ask', 'guide', 'quiz']; // hits guide
     let shop = ['shop'];
     setPromptSelection(promptType);
+    setShouldRenderIntro(false);
 
   // if(promptType === 'patreon'){
   //   setLoadingStates({
@@ -278,6 +284,11 @@ export const ChatGPT = ({
 
 
 
+  useState(() => {
+    return () => {console.log("run clean")}
+  }, []);
+
+
   return (
     <div
       onSubmit={handleSubmit}
@@ -304,15 +315,20 @@ export const ChatGPT = ({
       /> */}
 
 
+
+
+
       <Intro
-        isDemo={isDemo} 
+        shouldRenderIntro={shouldRenderIntro}
+        isDemo={false} 
         moduleName={moduleName} 
         patreonObject={patreonObject} 
         loadingMessage={loadingMessage} 
         chatGptResponse={chatGptResponse}
         promptSelection={promptSelection}
       />
-      <br/>
+
+
 
       {chatGptResponseList?.map((response) =>(
         <PromptCombiner9000
@@ -320,7 +336,7 @@ export const ChatGPT = ({
           // loadingStates={loadingStates}
           chatGptResponse={response}
           patreonObject={patreonObject}
-          isDemo={isDemo}
+          isDemo={false}
           moduleName={moduleName}
           promptSelection={promptSelection}
 

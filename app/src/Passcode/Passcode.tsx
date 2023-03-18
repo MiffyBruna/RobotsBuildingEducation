@@ -14,8 +14,10 @@ export const Passcode = ({
   globalImpactCounter,
   setGlobalImpactCounter,
   computePercentage,
+  patreonObject,
+  handleRandomDemoPressed
 }) => {
-  let [isDemoActive, setIsDemoActive] = useState(false);
+
 
   return (
     <div>
@@ -50,19 +52,20 @@ export const Passcode = ({
       <Button
         variant="dark"
         style={{ width: "180px", height: "50px" }}
-        onClick={() => setIsDemoActive(true)}
+        onClick={() => handleRandomDemoPressed()}
       >
         <img
           src="/../../../roxana.ico"
           width="32px"
           style={{ borderRadius: "6px" }}
         />
-        &nbsp; Try Out Demo
+        &nbsp; Random Demo
       </Button>
       <br />
       <br />
-      {isDemoActive ? (
+      {patreonObject ? (
         <Demo
+
           userDocumentReference={userDocumentReference}
           databaseUserDocument={databaseUserDocument}
           setDatabaseUserDocument={setDatabaseUserDocument}
@@ -70,6 +73,8 @@ export const Passcode = ({
           globalImpactCounter={globalImpactCounter}
           setGlobalImpactCounter={setGlobalImpactCounter}
           computePercentage={computePercentage}
+          patreonObject={patreonObject}
+          isDemo={true}
         />
       ) : null}
     </div>

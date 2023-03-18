@@ -1,5 +1,9 @@
+import { useEffect, useState } from "react";
 import { ChatGPT } from "../../ChatGPT/ChatGPT";
-import { ui } from "../../common/uiSchema";
+import { randomLessonGeneratorMachine444, ui } from "../../common/uiSchema";
+
+
+
 
 export const Demo = ({
   userDocumentReference,
@@ -9,11 +13,18 @@ export const Demo = ({
   globalImpactCounter,
   setGlobalImpactCounter,
   computePercentage,
+  patreonObject
 }) => {
+
+
+
+
+    // console.log('run randomDemoGeneratorMachine444', randomLessonGeneratorMachine444());
   return (
     <div>
       <h2 style={{ color: "white", marginTop: 12 }}>
-        Lesson 1 - Coding &amp; Logic
+        {/* Lesson 1 - Coding &amp; Logic */}
+        {patreonObject.button}
       </h2>
       <ChatGPT
         // patreonObject={patreonObject}
@@ -23,7 +34,7 @@ export const Demo = ({
         // globalDocumentReference={globalDocumentReference}
         // globalImpactCounter={globalImpactCounter}
         // setGlobalImpactCounter={setGlobalImpactCounter}
-        patreonObject={ui()["Engineer"]["Crash Course"]["Lesson 1"]}
+        patreonObject={patreonObject}
         userDocumentReference={userDocumentReference}
         databaseUserDocument={databaseUserDocument}
         setDatabaseUserDocument={setDatabaseUserDocument}
