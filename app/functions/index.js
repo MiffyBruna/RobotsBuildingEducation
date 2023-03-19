@@ -23,7 +23,7 @@ app.post("/prompt", async (req, res) => {
     const response = await openai.createCompletion({
       // important for custom promps:
       // user - string - Optional -A unique identifier representing your end-user, which can help OpenAI to monitor and detect abuse.
-      model: "text-davinci-003",
+      model: "gpt-4",
       prompt: `${prompt}`,
       temperature: 1,
       best_of: 1,

@@ -64,7 +64,7 @@ function App() {
 
   const [visibilityMap, setVisibilityMap] = useState({
     Engineer: false,
-    "26th Street": false,
+    "26th Street Labs": false,
     Creator: false,
     Business: false,
   });
@@ -106,7 +106,7 @@ function App() {
     setCurrentPath("");
     setVisibilityMap({
       Engineer: false,
-      "26th Street": false,
+      "26th Street Labs": false,
       Creator: false,
       Business: false,
     });
@@ -232,8 +232,6 @@ function App() {
 
 
 
-  console.log("aptre", patreonObject);
-
   return (
     <div className="App">
       {/* <button onClick={() => dispatch({ type: "incremented_age" })}>
@@ -303,6 +301,19 @@ function App() {
             visibilityMap={visibilityMap}
             handleModuleSelection={handleModuleSelection}
             currentPath={currentPath}
+                patreonObject={patreonObject}
+                userDocumentReference={userDocumentReference}
+                databaseUserDocument={databaseUserDocument}
+                setDatabaseUserDocument={setDatabaseUserDocument}
+                globalDocumentReference={globalDocumentReference}
+                globalImpactCounter={globalImpactCounter}
+                setGlobalImpactCounter={setGlobalImpactCounter}
+                displayName={
+                  auth?.currentUser?.displayName || "Demo Robots"
+                }
+                computePercentage={computePercentage}
+                isDemo={isDemo}
+                moduleName={moduleName}
           />
 
           <br />

@@ -6,8 +6,13 @@ import realEstateTechStocks from '../../videos/realEstateTechStocks.mp4';
 import learnToCode from "../../videos/learnToCode.mp4";
 import resumeBuilding from "../../videos/resumeBuilding.mp4";
 
+
+/**
+ * [documentID]: patreonObject
+ */
 export const Entrepeneur = {
   "Understanding Business": {
+
     "Bitcoin, Automa & the Drug War": {
       documentID: ``,
       hasCode: false,

@@ -1,10 +1,11 @@
 // export const schemaUpdater = (ui) => {};
 
-import { OverlayTrigger, Tooltip } from "react-bootstrap";
+import { OverlayTrigger, Spinner, Tooltip } from "react-bootstrap";
 import { LittleVillage } from "./ui/26thStreet/LittleVillage";
 import { Creator } from "./ui/Creator/Creator";
 import { Engineer } from "./ui/Engineer/Engineer";
 import { Entrepeneur } from "./ui/Entrepeneur/Entrepeneur";
+import roxanaGif from './media/images/roxanaGif.gif';
 
 //source of truth for views
 
@@ -134,7 +135,7 @@ interface IPath {
   Engineer: ICollection;
   Creator: ICollection;
   Entrepeneur: ICollection;
-  "26th Street 🚧": ICollection;
+  "26th Street Labs": ICollection;
 }
 
 // be pro customization. Redundancy is fine if it allows for more customization.
@@ -146,8 +147,8 @@ export const ui = (): IPath => {
     Creator: Creator,
 
     Entrepeneur: Entrepeneur,
-    "26th Street 🚧": {},
-    // "26th Street 🚧": LittleVillage,
+    "26th Street Labs": LittleVillage, // get database sets
+    // "26th Street": LittleVillage,
   };
 };
 export let uiPaths = Object.keys(ui());
@@ -259,8 +260,20 @@ export const randomLessonGeneratorMachine444 = () => {
   console.log("result", randomResult)
   return randomResult
 
-
-
-
-
 }
+
+
+
+export let RoxanaLoadingAnimation = () => {
+    return (
+      <div>
+        <Spinner animation="grow" variant="info" size="sm">
+          <span className="visually-hidden">Loading...</span>
+        </Spinner>
+        <img width="150px" src={roxanaGif} />
+        <Spinner animation="grow" variant="primary" size="sm">
+          <span className="visually-hidden">Loading...</span>
+        </Spinner>
+      </div>
+    );
+  }

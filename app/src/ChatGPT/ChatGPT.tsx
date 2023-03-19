@@ -26,6 +26,7 @@ export const ChatGPT = ({
   displayName = "Demo Robots",
   moduleName = "demo",
   computePercentage,
+  isGeneratedDemo=false
 }) => {
   const [shouldRenderIntro, setShouldRenderIntro] = useState(true);
   const [promptMessage, setPromptMessage] = useState("");
@@ -339,6 +340,7 @@ export const ChatGPT = ({
           isDemo={false}
           moduleName={moduleName}
           promptSelection={promptSelection}
+          isGeneratedDemo={isGeneratedDemo}
 
         />
       ))}

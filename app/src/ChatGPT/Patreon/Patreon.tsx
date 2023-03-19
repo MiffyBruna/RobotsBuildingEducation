@@ -2,7 +2,14 @@
 
 import MarkdownRenderer from "./MarkdownRenderer/MarkdownRenderer";
 
-let Patreon = ({ patreonObject }) => {
+let Patreon = ({ patreonObject, isGeneratedDemo }) => {
+  if(isGeneratedDemo){
+    return(
+      <div>
+        {patreonObject?.prompts?.patreon?.response || ''}
+      </div>
+    )
+  }
   let determineFileView = (patreonObject) => {
     if (patreonObject.sourceType === "video") {
       return (

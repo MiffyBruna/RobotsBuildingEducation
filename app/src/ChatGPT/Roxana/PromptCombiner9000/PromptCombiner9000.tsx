@@ -22,7 +22,8 @@ export const PromptCombiner9000 = ({
   patreonObject,
   isDemo,
   moduleName = "demo",
-  promptSelection
+  promptSelection,
+  isGeneratedDemo
 }) => {
 
   console.log("MESSAGE", chatGptResponse.response)
@@ -103,12 +104,12 @@ export const PromptCombiner9000 = ({
               ?.match(/\b\d+\.\s+(.+?)(?=\s*\b\d+\. |\s*$)/g)
               ?.map((item) => {
                 return <li style={{ paddingBottom: 24 }}>{item}</li>;
-              })}
+              }) || chatGptResponse.response}
           </ul>
         ) : loadingMessage.length < 1 &&
           chatGptResponse.response &&
           chatGptResponse.type === "patreon" ? (
-          <Patreon patreonObject={patreonObject} />
+          <Patreon patreonObject={patreonObject} isGeneratedDemo={isGeneratedDemo} />
         ) : loadingMessage.length < 1 &&
           chatGptResponse.response &&
           chatGptResponse.type === "demonstrate" &&

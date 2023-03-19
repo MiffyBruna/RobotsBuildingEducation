@@ -332,7 +332,7 @@ export const ImpactWallet = ({
             variant="secondary"
             onClick={() => setIsImpactWalletOpen(false)}
           >
-            Ok Bye!
+            ok bye!
           </Button>
         </Modal.Footer>
       </Modal>

@@ -11,6 +11,7 @@ import { logEvent } from "firebase/analytics";
 import lionel from "../../common/media/images/lionel.png";
 import roxanaGif from "../../common/media/images/roxanaGif.gif";
 import './Roxana.css';
+import { RoxanaLoadingAnimation } from "../../common/uiSchema";
 
 
 
@@ -25,19 +26,7 @@ export const Roxana = ({
 }) => {
 
   if(!isEmpty(patreonObject)){
-  let RoxanaLoadingAnimation = () => {
-    return (
-      <div>
-        <Spinner animation="grow" variant="info" size="sm">
-          <span className="visually-hidden">Loading...</span>
-        </Spinner>
-        <img width="150px" src={roxanaGif} />
-        <Spinner animation="grow" variant="primary" size="sm">
-          <span className="visually-hidden">Loading...</span>
-        </Spinner>
-      </div>
-    );
-  };
+
 
   let RoxanaIntroText = () => {
     if (isDemo) {
