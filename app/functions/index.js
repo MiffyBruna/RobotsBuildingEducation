@@ -7,7 +7,8 @@ const bodyParser = require("body-parser");
 
 dotenv.config();
 const configuration = new Configuration({
-  apiKey: process.env.OPENAI_API_KEY,
+  apiKey: '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',
+  organization: 'org-DBPI2J2yWFv4MX06zS0084p2'
 });
 
 const openai = new OpenAIApi(configuration);
@@ -18,12 +19,13 @@ app.use(express.json());
 app.use(bodyParser.json());
 
 app.post("/prompt", async (req, res) => {
+  console.log("PROMPT", req);
   try {
     const prompt = req.body.prompt;
     const response = await openai.createCompletion({
       // important for custom promps:
       // user - string - Optional -A unique identifier representing your end-user, which can help OpenAI to monitor and detect abuse.
-      model: "gpt-4",
+      model: "text-davinci-003",
       prompt: `${prompt}`,
       temperature: 1,
       best_of: 1,
