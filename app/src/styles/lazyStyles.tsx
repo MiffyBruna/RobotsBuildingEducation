@@ -1,13 +1,15 @@
 import styled from "styled-components";
 import { isEmpty } from "lodash";
+import { Link } from "react-router-dom";
 export const StyledNavigationContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   justify-content: center;
   margin: auto;
-  max-width: 100%;
+  max-width: 100%; 
   min-width: 100%;
+  /* max-width: 100%; */
   transition: 0.2s all ease-in-out;
   padding: 12px;
   border-radius: 2px;
@@ -71,17 +73,49 @@ export const StyledModule = styled.button`
   }
 `;
 
-export const StyledPath = styled.button`
+export const StyledLink = styled(Link)`
   background-color: #2c2c2e;
-
+  border: 2px solid hotpink;
   /* max-width: 200px; */
   width: 20%;
   height: 125px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
+  padding: 16px;
   margin: 12px;
+  /* border-radius: 46%; */
+  color: white;
+  transition: 0.15s all ease-in-out;
+
+  cursor: ${(props) => {
+    return props.active ? "grab" : "not-allowed";
+  }};
+
+  &:hover {
+    transform: ${(props) => {
+      return props.active ? "scale(1.1)" : "";
+    }};
+
+    /* box-shadow: 0 14px 28px #340627e0, 0 10px 10px rgba(0, 0, 0, 0.22); */
+  }
+`;
+
+
+
+export const StyledPath = styled.button`
+  box-sizing: border-box;
+  background-color: #2c2c2e;
+
+  /* max-width: 200px; */
+  width: 100%;
+  height: 125px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  /* padding: 10px;
+  margin: 12px; */
   /* border-radius: 46%; */
   color: white;
   transition: 0.15s all ease-in-out;

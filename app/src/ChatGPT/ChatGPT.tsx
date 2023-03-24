@@ -22,11 +22,15 @@ export const ChatGPT = ({
   globalImpactCounter,
   setGlobalImpactCounter,
   isDemo = false,
+  usersModulesFromDB,
 
-  displayName = "Demo Robots",
+  displayName = "@DemoRobots",
   moduleName = "demo",
   computePercentage,
-  isGeneratedDemo=false
+  isGeneratedDemo=false,
+  usersModulesCollectionReference,
+  userAuthObject
+
 }) => {
   const [shouldRenderIntro, setShouldRenderIntro] = useState(true);
   const [promptMessage, setPromptMessage] = useState("");
@@ -272,6 +276,8 @@ export const ChatGPT = ({
       let globalCopy = globalImpactCounter;
       globalCopy = globalImpactCounter + result.impact;
       setGlobalImpactCounter(globalCopy);
+
+
     }
 
     logEvent(analytics, "spend_virtual_currency", {
@@ -286,10 +292,12 @@ export const ChatGPT = ({
 
 
   useState(() => {
-    return () => {console.log("run clean")}
+
   }, []);
 
 
+
+  console.log("patr name",patreonObject);
   return (
     <div
       onSubmit={handleSubmit}
@@ -353,12 +361,16 @@ export const ChatGPT = ({
         loadingMessage={loadingMessage}
         patreonObject={patreonObject}
         handleSubmit={handleSubmit}
-
+userDocumentReference={userDocumentReference}
 
         displayName={displayName}
         databaseUserDocument={databaseUserDocument}
         computePercentage={computePercentage}
         globalImpactCounter={globalImpactCounter}
+        usersModulesCollectionReference={usersModulesCollectionReference}
+        usersModulesFromDB={usersModulesFromDB}
+        userAuthObject={userAuthObject}
+
 
         //pow
       />

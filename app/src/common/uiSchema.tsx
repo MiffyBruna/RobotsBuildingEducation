@@ -140,14 +140,15 @@ interface IPath {
 
 // be pro customization. Redundancy is fine if it allows for more customization.
 // start uniform. Adjust ChatGPT settings in sandbox and adjust UX here.
-export const ui = (): IPath => {
+export const ui = (globalUserModulesFromDB = {}): IPath => {
   // can branch this further to reduce JSON size computed when invoked.
+  // console.log("TEST", globalUserModulesFromDB)
+  // console.log("global t", globalUserModulesFromDB);
   return {
     Engineer: Engineer,
     Creator: Creator,
-
     Entrepeneur: Entrepeneur,
-    "26th Street Labs": LittleVillage, // get database sets
+    "26th Street Labs": LittleVillage(globalUserModulesFromDB), // get database sets
     // "26th Street": LittleVillage,
   };
 };
@@ -214,9 +215,9 @@ export let getGlobalImpact = () => {
 
 // this is a function that handles devilish things
 // configure it with arguments if you need to get each lesson and do something with it :)
-export const randomLessonGeneratorMachine444 = () => {
+export const randomLessonGeneratorMachine444 = (globalUserModulesFromDB) => {
 
-  let schema = ui();
+  let schema = ui(globalUserModulesFromDB);
 
 
   let setOfPaths = [];
@@ -252,12 +253,14 @@ export const randomLessonGeneratorMachine444 = () => {
   });
 
 
+  console.log("set of mods", setOfModules);
+
 
 
   let randomResult = setOfModules[Math.floor(Math.random()*setOfModules.length)];
 
 
-  console.log("result", randomResult)
+  // console.log("result", randomResult)
   return randomResult
 
 }

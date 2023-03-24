@@ -1,5 +1,6 @@
+import { Link } from "react-router-dom";
 import { uiPaths } from "../common/uiSchema";
-import { StyledNavigationContainer, StyledPath } from "../styles/lazyStyles";
+import { StyledNavigationContainer, StyledPath, StyledLink } from "../styles/lazyStyles";
 
 /**
  *
@@ -12,9 +13,15 @@ export const Paths = ({ handlePathSelection }): JSX.Element => {
   // active prop will handle some styling to display restricted or blocked access
 
   let display = uiPaths.map((path) => (
-    <StyledPath path={path} id={path} active onClick={handlePathSelection}>
-      {path}
-    </StyledPath>
+   
+        <StyledLink to="/">
+          <StyledPath path={path} id={path} active onClick={handlePathSelection}>
+        
+            {path !== "Entrepeneur" ? path : "Money"}
+
+          </StyledPath>
+        </StyledLink>
+
   ));
 
   return <StyledNavigationContainer>{display}</StyledNavigationContainer>;

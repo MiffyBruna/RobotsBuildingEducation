@@ -10,6 +10,7 @@ import {
   getGlobalImpact,
   randomLessonGeneratorMachine444,
   renderWithTooltip,
+  ui
 } from "./common/uiSchema";
 import { Collections } from "./Paths/Collections/Collections";
 import { Header } from "./Header/Header";
@@ -22,9 +23,10 @@ import {
   analytics,
 } from "./database/firebaseResources";
 import { onAuthStateChanged } from "firebase/auth";
-import { doc, getDoc, setDoc } from "firebase/firestore";
+import { collection, doc, getDoc, getDocs, setDoc, updateDoc } from "firebase/firestore";
 import { Spinner } from "react-bootstrap";
 import { logEvent } from "firebase/analytics";
+import { useParams } from "react-router-dom";
 
 logEvent(analytics, "page_view", {
   page_location: "https://learn-robotsbuildingeducation.firebaseapp.com/",
@@ -40,9 +42,12 @@ export const reducer = (state, action) => {
 };
 
 function App() {
+  const [isLoadingRoute, setIsLoadingRoute] = useState(false);
+      let params = useParams();
   // const [state, dispatch] = useReducer(reducer, { age: 42 });
   const [isSignedIn, setIsSignedIn] = useState("start"); // Local signed-in state.
   const [isZeroKnowledgeUser, setIsZeroKnowledgeUser] = useState(false);
+  const [userAuthObject, setUserAuthObject] = useState({});
 
   // this is the data inside a user document
   const [databaseUserDocument, setDatabaseUserDocument] = useState({});
@@ -50,7 +55,10 @@ function App() {
   // this is a document object reference for a user collection
   const [userDocumentReference, setUserDocumentReference] = useState({});
   const [globalDocumentReference, setGlobalDocumentReference] = useState({});
-
+  const [usersModulesCollectionReference, setUsersModulesCollectionReference] = useState({})
+  const [globalModulesCollectionReference, setGlobalModulesCollectionReference] = useState({})
+  const [usersModulesFromDB,setUsersModulesFromDB] = useState([]); //setGlobalUserModulesFromDB
+ const [globalUserModulesFromDB,setGlobalUserModulesFromDB] = useState([]); 
   // used to count total global count. used to get all work done before this global counter was implemented.
   const [globalImpactCounter, setGlobalImpactCounter] = useState(0);
 
@@ -58,6 +66,7 @@ function App() {
   const [currentPath, setCurrentPath] = useState("");
   const [currentPathForAnalytics, setCurrentPathForAnalytics] = useState("");
   const [proofOfWorkFromModules, setProofOfWorkFromModules] = useState(0);
+
 
   const [isDemo, setIsDemo] = useState(true);
   const [moduleName, setModuleName] = useState("");
@@ -123,8 +132,45 @@ function App() {
   };
 
   const handleRandomDemoPressed = () => {
-    setPatreonObject(randomLessonGeneratorMachine444())
+    setPatreonObject(randomLessonGeneratorMachine444(globalUserModulesFromDB))
   }
+
+
+  let documentProcForUsersModules = async (collectionRef) => {
+        await getDocs(collectionRef).then((querySnapshot) => {
+          let modulesSet = [];
+
+          querySnapshot.forEach((doc) => {
+            if (doc.data()) {
+
+              modulesSet.push(doc.data());
+            }else{
+              console.log("gone")
+            }
+          })
+
+        setUsersModulesFromDB(modulesSet)
+        });
+  }
+
+
+  let documentProcForGlobalModules = async (collectionRef) => {
+        await getDocs(collectionRef).then((querySnapshot) => {
+          let modulesSet = [];
+
+          querySnapshot.forEach((doc) => {
+            if (doc.data()) {
+
+              modulesSet.push(doc.data());
+            }else{
+              console.log("gone")
+            }
+          })
+          setGlobalUserModulesFromDB(modulesSet)
+       
+        });
+  }
+
 
   useEffect(() => {
     //check local storage
@@ -142,35 +188,54 @@ function App() {
       // Check for user status
       //probably a better option than displayName.
       if (user?.displayName) {
+        setUserAuthObject(user)
         setIsSignedIn(true);
         setIsDemo(false);
         const docRef = doc(database, "users", user.uid);
-
         const globalImpactDocRef = doc(database, "global", "impact");
-        getDoc(docRef).then((res) => {
+        const globalModulesCollectionRef = collection(database, 'modules');
+
+
+        getDoc(docRef).then( (res) => {
           if (!res?.data()) {
             // first time user logs in. set up proof of work in their user document
             setDoc(docRef, {
               impact: 0,
+              userAuthObj: user
             })
               .then(() => {
                 return getDoc(docRef);
               })
               .then((response) => {
+
                 setDatabaseUserDocument(response.data());
               });
           } else {
+
             setDatabaseUserDocument(res.data());
           }
         });
 
         getDoc(globalImpactDocRef).then((res) => {
-          console.log("rest", res.data());
+          // console.log("rest", res.data());
           setGlobalImpactCounter(res.data().total);
         });
 
+                console.log("user doc ref", docRef);
         setUserDocumentReference(docRef);
+        const usersModulesCollectionRef = collection(docRef, "modules")
+
+        console.log("USX", usersModulesCollectionRef);
+
         setGlobalDocumentReference(globalImpactDocRef);
+        setGlobalModulesCollectionReference(globalModulesCollectionRef);
+        setUsersModulesCollectionReference(usersModulesCollectionRef);
+
+        documentProcForUsersModules(usersModulesCollectionRef);
+        documentProcForGlobalModules(globalModulesCollectionRef);
+
+
+
 
         // used to count total global count. used to get all work done before this global counter was implemented.
         // getDocs(collection(database, "users")).then((querySnapshot) => {
@@ -192,6 +257,7 @@ function App() {
             // first time user logs in. set up proof of work in their user document
             setDoc(docRef, {
               impact: 0,
+               userAuthObj: user
             })
               .then(() => {
                 return getDoc(docRef);
@@ -202,6 +268,7 @@ function App() {
               });
           } else {
             console.log("ELSA");
+
             setDatabaseUserDocument(res.data());
           }
         });
@@ -210,15 +277,73 @@ function App() {
           setGlobalImpactCounter(res.data().total)
         );
 
+        console.log("user doc ref", docRef);
         setUserDocumentReference(docRef);
         setGlobalDocumentReference(globalImpactDocRef);
         setIsDemo(true);
+        const globalModulesCollectionRef = collection(database, 'modules');
+        setGlobalModulesCollectionReference(globalModulesCollectionRef);
+        documentProcForGlobalModules(globalModulesCollectionRef);
       }
     });
 
     setProofOfWorkFromModules(getGlobalImpact());
-    setPatreonObject(isDemo ? randomLessonGeneratorMachine444() : {});
+    if(params?.moduleID){
+
+    }else if(localStorage.getItem("patreonPasscode")?.length > 0){
+
+    }else{
+      setPatreonObject(isDemo ? randomLessonGeneratorMachine444(globalUserModulesFromDB) : {});
+    }
+
+
+      // auth.signOut();
   }, []);
+
+
+  let mountDataForRoute = async (moddy) => {
+    setIsLoadingRoute(true);
+      console.log("moddy", moddy);
+      if(params?.moduleID){
+        console.log("get the data");
+        // setCurrentPath("26th Street Labs");
+        setCurrentPathForAnalytics("26th Street Labs");
+        const docRef = doc(database, "modules", moddy);
+        getDoc(docRef).then((res) => {
+            if (!res?.data()) {
+              console.log("no data")
+            }else{
+              console.log("patro", res?.data()[Object.keys(res.data())[0]]);
+              setPatreonObject(res?.data()[Object.keys(res.data())[0]]);
+              setCurrentPath("");
+              
+            }
+        })
+      }
+
+
+
+
+      // let modsObj = ui(globalUserModulesFromDB)['26th Street Labs'];
+      // console.log("god", globalUserModulesFromDB);
+      // console.log("ding", modsObj);
+      // let col = modsObj[Object.keys(modsObj)[0]];
+      // console.log("col", col);
+  }
+  useEffect(()=>{
+    if(params?.moduleID){
+      console.log("module id found", params?.moduleID);
+      mountDataForRoute(params?.moduleID);
+      setIsLoadingRoute(false);
+      //  console.log("get set", ui(globalUserModulesFromDB)['26th Street Labs']);
+      // setPatreonObject(ui(globalUserModulesFromDB)['26th Street Labs'][])
+
+      // setCurrentCollection("")
+
+    }else{
+      console.log("no data")
+    }
+  }, [params])
 
   //
 
@@ -228,6 +353,10 @@ function App() {
   if (typeof isSignedIn == "string") {
     return <Spinner animation="grow" variant="light" />;
   }
+
+
+  // console.log("run app", globalUserModulesFromDB);
+  
 
 
 
@@ -265,7 +394,7 @@ function App() {
 
       {/* {isSignedIn !== "start" && isSignedIn && isZeroKnowledgeUser ? (
         <ProofOfWork
-          displayName={auth?.currentUser?.displayName || "Demo Robots"}
+          displayName={auth?.currentUser?.displayName || "@DemoRobots"}
           databaseUserDocument={databaseUserDocument}
           computePercentage={computePercentage}
           globalImpactCounter={globalImpactCounter}
@@ -288,8 +417,8 @@ function App() {
       ) : null}
       {isZeroKnowledgeUser ? (
         <>
-          <div>
-            The Impact Wallet and content is being visually upgraded soon 😊
+        <div>
+            The Robot Network will be available soon 😊
           </div>
 
           {/* <div>My Accoun</div> */}
@@ -301,19 +430,22 @@ function App() {
             visibilityMap={visibilityMap}
             handleModuleSelection={handleModuleSelection}
             currentPath={currentPath}
-                patreonObject={patreonObject}
-                userDocumentReference={userDocumentReference}
-                databaseUserDocument={databaseUserDocument}
-                setDatabaseUserDocument={setDatabaseUserDocument}
-                globalDocumentReference={globalDocumentReference}
-                globalImpactCounter={globalImpactCounter}
-                setGlobalImpactCounter={setGlobalImpactCounter}
-                displayName={
-                  auth?.currentUser?.displayName || "Demo Robots"
-                }
-                computePercentage={computePercentage}
-                isDemo={isDemo}
-                moduleName={moduleName}
+            patreonObject={patreonObject}
+            userDocumentReference={userDocumentReference}
+            databaseUserDocument={databaseUserDocument}
+            setDatabaseUserDocument={setDatabaseUserDocument}
+            globalDocumentReference={globalDocumentReference}
+            globalImpactCounter={globalImpactCounter}
+            setGlobalImpactCounter={setGlobalImpactCounter}
+            displayName={
+              auth?.currentUser?.displayName || "@DemoRobots"
+            }
+            computePercentage={computePercentage}
+            isDemo={isDemo}
+            moduleName={moduleName}
+            globalModulesCollectionReference={globalModulesCollectionReference}
+            globalUserModulesFromDB={globalUserModulesFromDB}
+            documentProcForGlobalModules={documentProcForGlobalModules}
           />
 
           <br />
@@ -344,11 +476,16 @@ function App() {
                     globalImpactCounter={globalImpactCounter}
                     setGlobalImpactCounter={setGlobalImpactCounter}
                     displayName={
-                      auth?.currentUser?.displayName || "Demo Robots"
+                      auth?.currentUser?.displayName || "@DemoRobots"
                     }
                     computePercentage={computePercentage}
                     isDemo={isDemo}
                     moduleName={moduleName}
+                    usersModulesCollectionReference={usersModulesCollectionReference}
+                    usersModulesFromDB={usersModulesFromDB}
+                    userAuthObject={userAuthObject}
+
+
 
                   />
                 </>

@@ -6,29 +6,31 @@ import { database } from "../database/firebaseResources";
 import { ImpactWallet } from "./ImpactWallet/ImpactWallet";
 
 export const ProofOfWork = ({
+  userAuthObject,
   displayName,
   databaseUserDocument,
   computePercentage,
   globalImpactCounter,
   isModule = false,
+  usersModulesCollectionReference = null,
+  usersModulesFromDB,
 }) => {
   const [isImpactWalletOpen, setIsImpactWalletOpen] = useState(false);
-
-  if (displayName === "Demo Robots") {
-    // const globalDemoUsersRef = doc(database, "global", "demoUsers");
-    // console.log("GLOBAL", globalDemoUsersRef);
-
+  console.log("userob", userAuthObject);
+  if (displayName === "@DemoRobots") {
     return (
       <div
         style={{
           border: "1px solid #1C1C1E",
           width: "fit-content",
-          // margin: "auto",
+
           backgroundColor: "#1C1C1E",
           marginBottom: "48px",
           maxWidth: "600px",
           minWidth: "300px",
           padding: 12,
+          textAlign:'center'
+    
         }}
       >
         <p>🤖 {displayName}</p>
@@ -38,6 +40,8 @@ export const ProofOfWork = ({
           globalImpactCounter={globalImpactCounter}
           isImpactWalletOpen={isImpactWalletOpen}
           setIsImpactWalletOpen={setIsImpactWalletOpen}
+          usersModulesCollectionReference={usersModulesCollectionReference}
+          usersModulesFromDB={usersModulesFromDB}
         />
 
         {/* {
@@ -61,6 +65,7 @@ export const ProofOfWork = ({
         marginBottom: "48px",
         maxWidth: "600px",
         minWidth: "300px",
+              textAlign:'center'
       }}
     >
       <p>🤖 {displayName}</p>
@@ -70,6 +75,10 @@ export const ProofOfWork = ({
         globalImpactCounter={globalImpactCounter}
         isImpactWalletOpen={isImpactWalletOpen}
         setIsImpactWalletOpen={setIsImpactWalletOpen}
+        usersModulesCollectionReference={usersModulesCollectionReference}
+        usersModulesFromDB={usersModulesFromDB}
+        userAuthObject={userAuthObject}
+
       />
       {/* <a onClick={() => auth.signOut()}>Sign-out</a> */}
     </div>

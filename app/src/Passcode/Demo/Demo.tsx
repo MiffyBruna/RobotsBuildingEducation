@@ -16,10 +16,7 @@ export const Demo = ({
   patreonObject
 }) => {
 
-
-
-
-    // console.log('run randomDemoGeneratorMachine444', randomLessonGeneratorMachine444());
+  // console.log('run randomDemoGeneratorMachine444', randomLessonGeneratorMachine444());
   return (
     <div>
       <h2 style={{ color: "white", marginTop: 12 }}>

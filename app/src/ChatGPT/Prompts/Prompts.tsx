@@ -1,5 +1,5 @@
 import { logEvent } from "firebase/analytics";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button, Modal } from "react-bootstrap";
 import {isEmpty} from 'lodash';
 import ReactJson from "react-json-view";
@@ -14,7 +14,9 @@ export const Prompts = ({
   loadingMessage,
   patreonObject,
   handleSubmit,
-
+  userDocumentReference,
+  usersModulesCollectionReference,
+  usersModulesFromDB,
 
 
   //pow
@@ -22,7 +24,11 @@ export const Prompts = ({
   databaseUserDocument,
   computePercentage,
   globalImpactCounter,
-}) => {
+  userAuthObject
+
+}) => { 
+
+
   if(!isEmpty(patreonObject)){
   const [isModalOpen, setIsModalOpen] = useState(false);
   let promptKeys = Object.keys(patreonObject.prompts);
@@ -41,7 +47,7 @@ export const Prompts = ({
           }}
         >
           <a style={{ color: "white" }}>
-            {patreonObject.prompts['patreon'].icon}{" "}
+            {patreonObject.prompts['patreon'].icon}{" "}&nbsp;
             {/* {patreonObject.prompts['patreon'].action} */}
             discover
           </a>
@@ -60,7 +66,7 @@ export const Prompts = ({
         >
           <a style={{ color: "white" }}>
             {/* {patreonObject.prompts['guide'].icon}{" "} */}
-            📚 study
+            📚 &nbsp;study
           </a>
     </StyledPromptButton>,
 
@@ -77,7 +83,7 @@ export const Prompts = ({
           }}
         >
           <a style={{ color: "white" }}>
-            {patreonObject.prompts['shop'].icon}{" "}
+            {patreonObject.prompts['shop'].icon}{" "}&nbsp;
             {patreonObject.prompts['shop'].action}
           </a>
     </StyledPromptButton>,
@@ -158,11 +164,16 @@ export const Prompts = ({
       }}
     >
       <ProofOfWork
+        userAuthObject={userAuthObject}
         displayName={displayName}
         databaseUserDocument={databaseUserDocument}
         computePercentage={computePercentage}
         globalImpactCounter={globalImpactCounter}
+        usersModulesCollectionReference={usersModulesCollectionReference}
+        usersModulesFromDB={usersModulesFromDB}
+
       />
+      <br/>
       <Button
         variant="primary"
         onClick={() => {
@@ -180,6 +191,7 @@ export const Prompts = ({
       </Button>
 
       {/* <DiscordButton /> */}
+      <br />
       <br />
       <Modal
         centered

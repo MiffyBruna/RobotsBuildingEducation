@@ -7,8 +7,7 @@ const bodyParser = require("body-parser");
 
 dotenv.config();
 const configuration = new Configuration({
-  apiKey: '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',
-  organization: 'org-DBPI2J2yWFv4MX06zS0084p2'
+  apiKey: process.env.OPENAI_API_KEY,
 });
 
 const openai = new OpenAIApi(configuration);
@@ -19,7 +18,6 @@ app.use(express.json());
 app.use(bodyParser.json());
 
 app.post("/prompt", async (req, res) => {
-  console.log("PROMPT", req);
   try {
     const prompt = req.body.prompt;
     const response = await openai.createCompletion({

@@ -30,7 +30,7 @@ let Patreon = ({ patreonObject, isGeneratedDemo }) => {
 
     return (
       <div style={{ textAlign: "left" }}>
-        <MarkdownRenderer file={patreonObject.fileSource} />
+        <MarkdownRenderer file={patreonObject?.fileSource} patreonObject={patreonObject}/>
       </div>
     );
   };

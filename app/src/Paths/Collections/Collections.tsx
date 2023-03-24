@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button, Form, InputGroup } from "react-bootstrap";
 import { renderWithTooltip, ui, uiPaths } from "../../common/uiSchema";
 import { auth } from "../../database/firebaseResources";
@@ -25,18 +25,33 @@ export const Collections = ({
   computePercentage,
   isDemo,
   moduleName,
+  globalModulesCollectionReference,
+  globalUserModulesFromDB,
+  documentProcForGlobalModules
 
   
 }): JSX.Element | null => {
   let [isImpactGenerator7500open, setIsImpactGenerator7500open] = useState(false);
   let [hasZeroKnowledgeAccess, setHasZeroKnowledgeAccess] = useState(false);
-  let [handle]
+    useEffect(()=>{
+      if(localStorage.getItem("infiniteKnowledgePasscode") === import.meta.env.VITE_INFINITE_KNOWLEDGE_PASSCODE || localStorage.getItem("infiniteKnowledgePasscode") === import.meta.env.VITE_SHEILF){
+        setHasZeroKnowledgeAccess(true);
+      }else{
+        setHasZeroKnowledgeAccess(false);
+      }
+    }, [])
 
   if (currentPath) {
-    let path = ui()[currentPath]; // Engineer: {}
+    console.log("globals", globalUserModulesFromDB);
+    let path = ui(globalUserModulesFromDB)[currentPath]; // Engineer: {}
+ 
     let collections = Object.keys(path); // []]
+
+    console.log("Path", path);
+    console.log("mods", )
     let display = collections.map((collection) => {
-      let modules = Object.keys(path[collection]);
+    let modules = Object.keys(path[collection]);
+    console.log("mods", modules)
 
       if (modules?.length) {
         return (
@@ -53,6 +68,7 @@ export const Collections = ({
                   collection={collection}
                   module={module}
                   handleModuleSelection={handleModuleSelection}
+                  globalUserModulesFromDB={globalUserModulesFromDB}
                 />
               ))}
             </StyledCollectionContainer>
@@ -60,6 +76,15 @@ export const Collections = ({
         );
       }
     });
+
+    let handlZeroKnowledge = (event) => {
+
+      if(event.target.value === import.meta.env.VITE_INFINITE_KNOWLEDGE_PASSCODE || event.target.value === import.meta.env.VITE_SHEILF){
+        setHasZeroKnowledgeAccess(true);
+        localStorage.setItem("infiniteKnowledgePasscode", event.target.value);
+      }
+    }
+
 
 
     return (
@@ -72,18 +97,23 @@ export const Collections = ({
         }}
       >
         <br />
-              {currentPath === '26th Street Labs' !hasZeroKnowledgeAccess ? (
+              {currentPath === '26th Street Labs' && !hasZeroKnowledgeAccess ? (
+                <div>
+                  <div style={{width: 475}}>
+                <h3>access InfiniteKnowledgEngine9000</h3>
+                </div>
+                 <div style={{width: 250}}>
                 <InputGroup size="lg">
                   {/* <InputGroup.Text id="inputGroup-sizing-lg">Impact</InputGroup.Text> */}
         
                   <Form.Control
                     // aria-label="Large"
                     aria-describedby="inputGroup-sizing-sm"
-                    onChange={handleSubjectTitleChange}
+                    onChange={handlZeroKnowledge}
                   />
         
-                </InputGroup>) : null}
-        {currentPath === '26th Street Labs' && hasZeroKnowledgeAccess ? <Button onClick={() => setIsImpactGenerator7500open(true)}>Activate ImpactGenerator7500</Button> : null}
+                </InputGroup></div></div>) : null}
+        {currentPath === '26th Street Labs' && hasZeroKnowledgeAccess ? <Button onClick={() => setIsImpactGenerator7500open(true)}>Activate InfiniteKnowledgeEngine9000</Button> : null}
         {/* {renderWithTooltip(
           <Button variant="primary">🔥🌱💰💎</Button>,
           <div>
@@ -111,7 +141,7 @@ export const Collections = ({
                 globalImpactCounter={globalImpactCounter}
                 setGlobalImpactCounter={setGlobalImpactCounter}
                 displayName={
-                  auth?.currentUser?.displayName || "Demo Robots"
+                  auth?.currentUser?.displayName || "@DemoRobots"
                 }
                 computePercentage={computePercentage}
                 isDemo={isDemo}
@@ -119,6 +149,8 @@ export const Collections = ({
       
       setIsImpactGenerator7500open={setIsImpactGenerator7500open} 
       isImpactGenerator7500open={isImpactGenerator7500open}
+      globalModulesCollectionReference={globalModulesCollectionReference}
+      documentProcForGlobalModules={documentProcForGlobalModules}
       />
       </>
     );

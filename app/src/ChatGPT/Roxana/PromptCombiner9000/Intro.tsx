@@ -203,7 +203,7 @@ export const Intro = ({ isDemo,moduleName, patreonObject, loadingMessage, chatGp
     );
   };
 
-  console.log("log", patreonObject);
+
   return(
     <div
       // Gray response message by the AI

@@ -1,24 +1,74 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button, Modal, ProgressBar } from "react-bootstrap";
 import { getGlobalImpact } from "../../common/uiSchema";
 import sheilferBitcoin from "../../common/media/images/sheilferBitcoin.jpeg";
 import bitcoinReserve from "../../common/media/images/bitcoinReserve.jpeg";
 import cashAppCard from "../../common/media/images/cashAppCard.jpeg";
 import { logEvent } from "firebase/analytics";
-import { analytics } from "../../database/firebaseResources";
+import { analytics, database } from "../../database/firebaseResources";
 import { DiscordButton } from "../../ChatGPT/Prompts/DiscordButton/DiscordButton";
+import { doc, getDoc, getDocs } from "firebase/firestore";
+import { Link, useParams } from "react-router-dom";
+
+
 export const ImpactWallet = ({
   databaseUserDocument,
   computePercentage,
   globalImpactCounter,
-  isImpactWalletOpen,
+  isImpactWalletOpen, 
   setIsImpactWalletOpen,
+  usersModulesCollectionReference,
+  usersModulesFromDB,
+  userAuthObject = { uid: "demo" }
+
 }) => {
+  // console.log("USER MOD", usersModulesCollectionReference);
+  // console.log("users modules...", usersModulesFromDB)
+
+  let [databaseUserDocumentCopy, setDatabaseUserDocumentCopy] = useState(databaseUserDocument);
+  console.log("usx", userAuthObject);
+  let params = useParams();
+  console.log("params", params);
   let [borderStateForBitcoinButton, setBorderStateForBitcoinButton] = useState({
     border: "1px solid blue",
   });
   let [borderStateForLightningButton, setBorderStateForLightningButton] =
     useState({ border: "1px solid blue" });
+
+  // let mountWallet = async () => {
+  //   await getDocs(usersModulesCollectionReference).then((querySnapshot) => {
+  //         let sum = 0;
+  //         querySnapshot.forEach((doc) => {
+  //           if (doc.data()) {
+  //             console.log("MODULES", doc.data());
+  //           }
+  //         })
+  //   });
+  // }
+
+  useEffect(()=>{
+    // mountWallet();
+    if(params?.profileID && params?.profileID !== userAuthObject?.uid){
+      const docRef = doc(database, "users", params?.profileID);
+      getDoc(docRef).then((res) => {
+        if (!res?.data()) {
+          // unsafe case?
+        }else{
+          console.log("USER", res?.data());
+          setDatabaseUserDocumentCopy(res?.data());
+          setIsImpactWalletOpen(true);
+        } 
+      })
+    }
+
+
+
+ 
+
+
+
+  }, [])
+
   let copyToClipboard = (network) => {
     // Get the text field
     let addresses = {
@@ -50,6 +100,7 @@ export const ImpactWallet = ({
   return (
     <>
       <div>
+        <Link to={`/profile/${params?.profileID || userAuthObject?.uid}`}>
         <Button
           onClick={() => {
             logEvent(analytics, "select_content", {
@@ -62,7 +113,8 @@ export const ImpactWallet = ({
         >
           🏦
         </Button>
-        &nbsp; {databaseUserDocument?.impact || 0}{" "}
+        </Link>
+        &nbsp; {databaseUserDocumentCopy?.impact || 0}{" "}
         <div>
           <ProgressBar
             style={{
@@ -81,7 +133,7 @@ export const ImpactWallet = ({
           closeButton
           style={{ backgroundColor: "black", color: "white" }}
         >
-          <Modal.Title>Impact Wallet</Modal.Title>
+          <Modal.Title>Impact Wallet @{params?.profileID || userAuthObject?.uid}</Modal.Title>
         </Modal.Header>
         <Modal.Body
           onHide={() => setIsImpactWalletOpen(false)}
@@ -114,7 +166,7 @@ export const ImpactWallet = ({
             <p>
               Work Done By You
               <br />
-              {databaseUserDocument?.impact || 0} / {getGlobalImpact()}
+              {databaseUserDocumentCopy?.impact || 15200} / {getGlobalImpact()}
               <ProgressBar
                 style={{
                   backgroundColor: "black",
@@ -133,7 +185,7 @@ export const ImpactWallet = ({
               You are &nbsp;
               <b>
                 {(
-                  ((databaseUserDocument?.impact || 0) / globalImpactCounter) *
+                  ((databaseUserDocumentCopy?.impact || 0) / globalImpactCounter) *
                   100
                 ).toFixed(2)}
                 %
@@ -147,7 +199,7 @@ export const ImpactWallet = ({
                 }}
                 variant="warning"
                 now={Math.floor(
-                  ((databaseUserDocument?.impact || 0) / globalImpactCounter) *
+                  ((databaseUserDocumentCopy?.impact || 0) / globalImpactCounter) *
                     100
                 )}
               />
@@ -160,11 +212,9 @@ export const ImpactWallet = ({
                 This is an early version of Impact. For now, it will be built in
                 the spirit of it. If you don't believe you can afford a down
                 payment on a home, turn it into a game. Grind out skills you
-                enjoy that make money, save $10,000 in stocks in a "tax
-                advantaged" retirement account. You can withdraw $10,000 without
-                penalty if you use it to buy a home. With the right setup, that
-                can leverage $10,000 into $250,000 rather into a marketable
-                asset. Now can you afford it?
+                enjoy that make money, save $10,000 in stocks, bitcoin or cash. Learn about the stock market as you save. 
+                With the right setup, thatcan leverage $10,000 into $250,000 rather into a marketable
+                asset. There are good calculations you might not be considering.
               </p>
               Please sign up the following services if you don't have the
               following
@@ -324,16 +374,33 @@ export const ImpactWallet = ({
               <br />
               <br />
             </div>
+
+            <div>
+              <br/>
+              <h1>Education</h1>
+              <div>I'm working on this now so you can share your profile and courses with the world 😊</div>
+              {/* <div style={{border:'1px solid red'}}>
+                {usersModulesFromDB?.map(item =>{
+
+                  return (
+                  <div>
+                  {item[Object.keys(item)[0]]?.button}
+                  </div>
+                )})}
+              </div> */}
+            </div>
             <br />
           </div>
         </Modal.Body>
         <Modal.Footer style={{ backgroundColor: "black", color: "white" }}>
+        <Link to={`/`}>
           <Button
             variant="secondary"
             onClick={() => setIsImpactWalletOpen(false)}
           >
-            ok bye!
+   leave
           </Button>
+        </Link>
         </Modal.Footer>
       </Modal>
     </>
