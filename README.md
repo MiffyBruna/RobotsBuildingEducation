@@ -1,4 +1,9 @@
-# Welcome To RO.B.E
+TOC
+1. Welcome
+2. Projects
+3. Software Business
+
+# 1. Welcome To RO.B.E
 As is tradition, we're going to start with a draft and move quickly. 
 You're encouraged to read first and ask questions later. Zoom out and think outside of the box when reading this.
 Here are some philosophies I follow:
@@ -13,6 +18,8 @@ Here are some philosophies I follow:
 
 
 There are several products under development here. You are encouraged to build your own version of it or contribute as you see fit.
+
+# 2. Projects
 
 ## Project Appletree
 This is a product centered around the needs of educators. It is not limited to public school educators but that is the spirit of the product. Right now, it's OpenAI creating courses in the current UI. It allows people to rapidly create content and store data to their profile. Long-term, we need to allow people to customize and add human-touch or curation to their material.
@@ -34,9 +41,59 @@ This idea can be actualized further in various ways with more software engineeri
 TapDM is a social network of chats. I think there's a ton of education happening in DMs. I want people to have their 1-on-1 or small-group-chats public for following but personal for people participating.
 
 
+# 3. Software Business
+
+## Overview
+This organization is run by one person so there are some specific software choices being made. Generally speaking, software that does heavy lifting and costs the least time to implement is usually preferred. Here is an overview of software tools used so far in no order:
+
+1. React
+2. Typescript
+3. Firebase
+4. OpenAI
+5. Cash App 
+6. Apple Animoji
+7. Canva
+8. Tiktok
+9. Patreon
+10. Cloudflare
+11. Discord
+12. LinkedIn
+
+There are certainly some decisions I can make to make this business stack more "effecient". Perhaps there's a way to wire up Stripe and Discord in a way where something like Patreon and Cash App UIs are not appropriate, but I usually think a lot about why I'm choosing these things, up to the point of how it even feels to use or see recognizable things. It may not be immediately clear that something like Cash App or Patreon are tax-friendly or LinkedIn is not a generally welcoming place for first generation professionals figuring out how to network or navigate speech in the modern day.
+
+
+## Products
+Software is going through a refactor process in Q2 2023. Coding names are likely to change
+
+### Express + Firebase Functions
+This handles endpoints when API calls for live use. Currently using OpenAI's `text-davinci-003` model while developing UI/UX. Eventually this API usage will expand and update when user experiences and business finance is better understood
+
+- https://firebase.google.com/docs/functions
+- https://platform.openai.com/docs/api-reference/introduction
+
+### App
+The software is going through a refactor and is currently not in the best state of health. A lot of ideas are mostly scribbled together. It will improve after a refactor that will happen in Q2.
+
+App manages the applications UI state and initiates a lot of firebase or network connections. Routing is not implemented correctly but not critical for current product depth.
+
+### uiSchema
+The uiSchema is a JSON file that describes what content is available in the app. RO.B.E courses are mostly hard coded while content is created off the app and inserted for customization later. It's the "lab" or what future courses can look like.
+
+### InfiniteKnowledgeEngine9000 (IKE9000)
+IKE9000 is where educators or creators go to create courses. Currently it uses the uiSchema pattern in order to create courses modeled the way I'm creating them. Eventually it will increase in its ability to collaborate, edit, upgrade and cutomize content with personal touch.
+
+### ms. roxana + PromptCombiner9000
+Ms. Roxana is the AI brand. She is the robot entity that is creating a lot of education.
+
+### The Impact Wallet
+The impact wallet is where users see collective and individual effort or "work" recorded. This robot work system creates a network that produces "impact" which is the point or currency system that defines scholarships created. The Impact wallet contains financial literacy guidance and profile information and will eventually be the the location where decentralized protocols are implemented. 
+
+
+
 ## Conclusion
 
-Take some time to think about all of it. There is plenty to work on. The next update will talk more on how the current software is developed.
+Take some time to think about all of it. There is plenty to work on. Next update will go into greater detail after refactoring software.
+
 
 
 
