@@ -2,6 +2,9 @@ TOC
 1. Welcome
 2. Projects
 3. Software Business
+4. How to help
+
+
 
 # 1. Welcome To RO.B.E
 As is tradition, we're going to start with a draft and move quickly. 
@@ -89,6 +92,11 @@ Ms. Roxana is the AI brand. She is the robot entity that is creating a lot of ed
 The impact wallet is where users see collective and individual effort or "work" recorded. This robot work system creates a network that produces "impact" which is the point or currency system that defines scholarships created. The Impact wallet contains financial literacy guidance and profile information and will eventually be the the location where decentralized protocols are implemented. 
 
 
+# 4. How to help
+Keep it simple and don't overcomplicate the process
+
+- Review the issues list, ask questions as needed
+- Open up a pull request, document what, why and how.
 
 ## Conclusion
 
