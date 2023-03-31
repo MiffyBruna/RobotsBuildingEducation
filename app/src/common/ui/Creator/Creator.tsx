@@ -1,8 +1,8 @@
 import { ultimateEffeciencyJutsu } from "../ui";
 
 
-import uiux from "../../videos/uiux.mp4";
-import philosophy from "../../videos/philosophy.mp4";
+
+
 
 
 export const Creator = {
@@ -143,7 +143,7 @@ export const Creator = {
       sourceType: `video`, // may not need
       button: `Philosophy @ RO.B.E`, // may not need - `name`
       header: `Philosophy @ RO.B.E`,
-      fileSource: philosophy, // may not need
+      fileSource: 'https://res.cloudinary.com/eduprojectsil/video/upload/v1674721556/IMG_9188_iewsh4.mov', // may not need
 
       prompts: {
         patreon: {
@@ -267,7 +267,7 @@ export const Creator = {
       sourceType: `video`, // may not need
       button: `User Experiences`, // may not need - `name`
       header: `Human Computer Interaction`,
-      fileSource: uiux, // may not need
+      fileSource: 'https://res.cloudinary.com/eduprojectsil/video/upload/v1674721527/IMG_9182_ao3yio.mov', // may not need
 
       prompts: {
         patreon: {

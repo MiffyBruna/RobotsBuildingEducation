@@ -1,7 +1,6 @@
 import { isEmpty } from "@firebase/util";
 import { ultimateEffeciencyJutsu } from "../ui";
 
-import L1 from "../../videos/l1.mp4";
 import compSciLib from "../../media/images/compSciLib.jpeg";
 import metaphysicalMuse from "../../media/images/metaphysicalMuse.jpeg";
 
@@ -46,7 +45,7 @@ export const LittleVillage = (
       button: `1. Coding & Logic`, // may not need - `name`
       header: `Foundations: Coding & Logic`,
 
-      fileSource: L1,
+      fileSource: 'https://res.cloudinary.com/eduprojectsil/video/upload/v1674220062/download_4_xnineu.mp4',
       prompts: {
         patreon: {
           premiumContent: false,

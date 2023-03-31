@@ -1,27 +1,5 @@
 import { ultimateEffeciencyJutsu } from "../ui";
-import L1 from "../../videos/l1.mp4";
-import L2 from "../../videos/l2.mp4";
-import L3 from "../../videos/l3.mp4";
-import L4 from "../../videos/l4.mp4";
-import L5 from "../../videos/l5.mp4";
-import L6 from "../../videos/l6.mp4";
-import L7 from "../../videos/l7.mp4";
-import L8 from "../../videos/l8.mp4";
-import L9 from "../../videos/l9.mp4";
-import L10 from "../../videos/l10.mp4";
-import L11 from "../../videos/l11.mp4";
-import L12 from "../../videos/l12.mp4";
-import L13 from "../../videos/l13.mp4";
-import L14 from "../../videos/l14.mp4";
-import L15 from "../../videos/l15.mp4";
-import L16 from "../../videos/l16.mp4";
-import L17 from "../../videos/l17.mp4";
-import L18 from "../../videos/l18.mp4";
-import L19 from "../../videos/l19.mp4";
-import L20 from "../../videos/l20.mp4";
-import L21 from "../../videos/l21.mp4";
-import L22 from "../../videos/l22.mp4";
-import puesFuckIt from "../../media/images/puesFuckIt.jpeg";
+
 import compSciLib from "../../media/images/compSciLib.jpeg";
 import metaphysicalMuse from "../../media/images/metaphysicalMuse.jpeg";
 
@@ -41,7 +19,7 @@ export const Engineer = {
       button: `1. Coding & Logic`, // may not need - `name`
       header: `Foundations: Coding & Logic`,
 
-      fileSource: L1,
+      fileSource: 'https://res.cloudinary.com/eduprojectsil/video/upload/v1674220062/download_4_xnineu.mp4',
       prompts: {
         patreon: {
           premiumContent: false,
@@ -201,7 +179,7 @@ export const Engineer = {
       sourceType: `video`, // may not need
       button: `2. Data & Functions`, // may not need - `name`
       header: `2. Data & Functions`,
-      fileSource: L2, // may not need
+      fileSource: 'https://res.cloudinary.com/eduprojectsil/video/upload/v1674220121/download_5_q0viph.mp4', // may not need
 
       prompts: {
         patreon: {
@@ -327,7 +305,7 @@ export const Engineer = {
       sourceType: `video`, // may not need
       button: `3. Creating Objects`, // may not need - `name`
       header: `3. Creating Objects`,
-      fileSource: L3, // may not need
+      fileSource: 'https://res.cloudinary.com/eduprojectsil/video/upload/v1674220184/download_6_mzx1ss.mp4', // may not need
 
       prompts: {
         patreon: {
@@ -451,7 +429,7 @@ export const Engineer = {
       sourceType: `video`, // may not need
       button: `4. Internet Apps`, // may not need - `name`
       header: `4. Internet Apps`,
-      fileSource: L4, // may not need
+      fileSource: 'https://res.cloudinary.com/eduprojectsil/video/upload/v1674220233/download_7_l6kd1z.mp4', // may not need
 
       prompts: {
         patreon: {
@@ -576,7 +554,7 @@ export const Engineer = {
       sourceType: `video`, // may not need
       button: `5. Loops & Counting`, // may not need - `name`
       header: `5. Loops & Counting`,
-      fileSource: L5, // may not need
+      fileSource: 'https://res.cloudinary.com/eduprojectsil/video/upload/v1674220261/download_8_gww39e.mp4', // may not need
       prompts: {
         patreon: {
           completed: false,
@@ -699,7 +677,7 @@ export const Engineer = {
       sourceType: `video`, // may not need
       button: `6. HTML`, // may not need - `name`
       header: `6. HTML`,
-      fileSource: L6, // may not need
+      fileSource: 'https://res.cloudinary.com/eduprojectsil/video/upload/v1674220287/download_9_uf9kjn.mp4', // may not need
 
       prompts: {
         patreon: {
@@ -824,7 +802,7 @@ export const Engineer = {
       sourceType: `video`, // may not need
       button: `7. CSS`, // may not need - `name`
       header: `7. CSS`,
-      fileSource: L7, // may not need
+      fileSource: 'https://res.cloudinary.com/eduprojectsil/video/upload/v1674220314/download_10_epzusw.mp4', // may not need
 
       prompts: {
         patreon: {
@@ -950,7 +928,7 @@ export const Engineer = {
       sourceType: `video`, // may not need
       button: `8. React`, // may not need - `name`
       header: `8. React`,
-      fileSource: L8, // may not need
+      fileSource: 'https://res.cloudinary.com/eduprojectsil/video/upload/v1674220343/download_11_whqtek.mp4', // may not need
 
       prompts: {
         patreon: {
@@ -1075,7 +1053,7 @@ export const Engineer = {
       sourceType: `video`, // may not need
       button: `9. Creating Users`, // may not need - `name`
       header: `9. Creating Users`,
-      fileSource: L9, // may not need
+      fileSource: 'https://res.cloudinary.com/eduprojectsil/video/upload/v1674220377/download_12_adwen3.mp4', // may not need
 
       prompts: {
         patreon: {
@@ -1199,7 +1177,7 @@ export const Engineer = {
       sourceType: `video`, // may not need
       button: `10. Database Foundations`, // may not need - `name`
       header: `10. Database Foundations`,
-      fileSource: L10, // may not need
+      fileSource: 'https://res.cloudinary.com/eduprojectsil/video/upload/v1674220399/download_13_xxdhvo.mp4', // may not need
 
       prompts: {
         patreon: {
@@ -1322,7 +1300,7 @@ export const Engineer = {
       sourceType: `video`, // may not need
       button: `11. Backend Clouds`, // may not need - `name`
       header: `11. Backend Clouds`,
-      fileSource: L11, // may not need
+      fileSource: 'https://res.cloudinary.com/eduprojectsil/video/upload/v1674220422/download_14_lkehax.mp4', // may not need
 
       prompts: {
         patreon: {
@@ -1447,7 +1425,7 @@ export const Engineer = {
       sourceType: `video`, // may not need
       button: `12. Operating Systems & Machines`, // may not need - `name`
       header: `12. Operating Systems & Machines`,
-      fileSource: L12, // may not need
+      fileSource: 'https://res.cloudinary.com/eduprojectsil/video/upload/v1674220456/download_15_um5siz.mp4', // may not need
 
       prompts: {
         patreon: {
@@ -1569,7 +1547,7 @@ export const Engineer = {
       sourceType: `video`, // may not need
       button: `13. Setting Up An App`, // may not need - `name`
       header: `13. Setting Up An App`,
-      fileSource: L13, // may not need
+      fileSource: 'https://res.cloudinary.com/eduprojectsil/video/upload/v1674220489/download_16_lpne2o.mp4', // may not need
 
       prompts: {
         patreon: {
@@ -1694,7 +1672,7 @@ export const Engineer = {
       sourceType: `video`, // may not need
       button: `14. Programming Money`, // may not need - `name`
       header: `14. Programming Money`,
-      fileSource: L14, // may not need
+      fileSource: 'https://res.cloudinary.com/eduprojectsil/video/upload/v1674220538/download_17_snhdb6.mp4', // may not need
 
       prompts: {
         patreon: {
@@ -1816,7 +1794,7 @@ export const Engineer = {
       sourceType: `video`, // may not need
       button: `15. Creating Database`, // may not need - `name`
       header: `15. Creating Database`,
-      fileSource: L15, // may not need
+      fileSource: 'https://res.cloudinary.com/eduprojectsil/video/upload/v1674220555/download_18_uv5kve.mp4', // may not need
 
       prompts: {
         patreon: {
@@ -1942,7 +1920,7 @@ export const Engineer = {
       sourceType: `video`, // may not need
       button: `16. Working Together`, // may not need - `name`
       header: `16. Working Together`,
-      fileSource: L16, // may not need
+      fileSource: 'https://res.cloudinary.com/eduprojectsil/video/upload/v1674220688/download_vm66up.mp4', // may not need
 
       prompts: {
         patreon: {
@@ -2560,7 +2538,7 @@ export const Engineer = {
       sourceType: `video`, // may not need
       button: `Programming Languages`, // may not need - `name`
       header: `Programming Languages`,
-      fileSource: L17, // may not need
+      fileSource: 'https://res.cloudinary.com/eduprojectsil/video/upload/v1674725780/download_19_gintiu.mp4', // may not need
 
       prompts: {
         patreon: {
@@ -2683,7 +2661,7 @@ export const Engineer = {
       sourceType: `video`, // may not need
       button: `Recursion`, // may not need - `name`
       header: `Recursion`,
-      fileSource: L18, // may not need
+      fileSource: 'https://res.cloudinary.com/eduprojectsil/video/upload/v1674725818/download_20_bjmac7.mp4', // may not need
 
       prompts: {
         patreon: {
@@ -2805,7 +2783,7 @@ export const Engineer = {
       sourceType: `video`, // may not need
       button: `Linked Lists`, // may not need - `name`
       header: `Linked Lists`,
-      fileSource: L19, // may not need
+      fileSource: 'https://res.cloudinary.com/eduprojectsil/video/upload/v1674725865/download_21_k9d6in.mp4', // may not need
 
       prompts: {
         patreon: {
@@ -2930,7 +2908,7 @@ export const Engineer = {
       sourceType: `video`, // may not need
       button: `Link Traversal`, // may not need - `name`
       header: `Link Traversal`,
-      fileSource: L20, // may not need
+      fileSource: 'https://res.cloudinary.com/eduprojectsil/video/upload/v1674725908/download_22_rjgmqs.mp4', // may not need
 
       prompts: {
         patreon: {
@@ -3053,7 +3031,7 @@ export const Engineer = {
       sourceType: `video`, // may not need
       button: `Link Swapping`, // may not need - `name`
       header: `Link Swapping`,
-      fileSource: L21, // may not need
+      fileSource: 'https://res.cloudinary.com/eduprojectsil/video/upload/v1674725986/download_23_lbtipl.mp4', // may not need
 
       prompts: {
         patreon: {
@@ -3176,7 +3154,7 @@ export const Engineer = {
       sourceType: `video`, // may not need
       button: `Algorithms`, // may not need - `name`
       header: `Algorithms`,
-      fileSource: L22, // may not need
+      fileSource: 'https://res.cloudinary.com/eduprojectsil/video/upload/v1674726053/download_24_wkw20z.mp4', // may not need
 
       prompts: {
         patreon: {
