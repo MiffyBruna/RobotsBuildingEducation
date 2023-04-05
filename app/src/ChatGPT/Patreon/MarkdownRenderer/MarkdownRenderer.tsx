@@ -11,7 +11,7 @@ const MarkdownRenderer = ({ file, patreonObject }) => {
   }, [file]);
 
   if(isEmpty(file)){
-    return(
+    return( 
     <div>
       {patreonObject?.prompts?.patreon?.response || ''}
     </div>

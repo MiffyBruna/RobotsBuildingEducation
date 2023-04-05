@@ -6,6 +6,7 @@ import { Creator } from "./ui/Creator/Creator";
 import { Engineer } from "./ui/Engineer/Engineer";
 import { Entrepeneur } from "./ui/Entrepeneur/Entrepeneur";
 import roxanaGif from './media/images/roxanaGif.gif';
+import { BossMode } from "./ui/BossMode/BossMode";
 
 //source of truth for views
 
@@ -126,6 +127,8 @@ interface IModule {
 
     //in the future: translate. Dropdown/search + translate Module
   };
+
+  [index: string]: any;
 }
 
 interface ICollection {
@@ -135,7 +138,9 @@ interface IPath {
   Engineer: ICollection;
   Creator: ICollection;
   Entrepeneur: ICollection;
-  "26th Street Labs": ICollection;
+  "RO.₿.E": ICollection;
+  "Boss Mode": ICollection | Record<string, any>;
+
 }
 
 // be pro customization. Redundancy is fine if it allows for more customization.
@@ -148,11 +153,11 @@ export const ui = (globalUserModulesFromDB = {}): IPath => {
     Engineer: Engineer,
     Creator: Creator,
     Entrepeneur: Entrepeneur,
-    "26th Street Labs": LittleVillage(globalUserModulesFromDB), // get database sets
-    // "26th Street": LittleVillage,
+    "RO.₿.E": LittleVillage(globalUserModulesFromDB), // get database sets
+    "Boss Mode": BossMode,
   };
 };
-export let uiPaths = Object.keys(ui());
+export let uiPaths = ['Engineer', 'Creator', 'Entrepeneur', 'RO.₿.E', 'Boss Mode'];
 
 // this manages the view when selected `engineer, creator, business or 26th street`
 export let controlPathVisibilityMap = (visibilityMap, selectedPath) => {

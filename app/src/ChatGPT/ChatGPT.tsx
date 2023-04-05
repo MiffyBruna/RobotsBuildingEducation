@@ -11,6 +11,7 @@ import { logEvent } from "firebase/analytics";
 import { PromptCombiner9000 } from "./Roxana/PromptCombiner9000/PromptCombiner9000";
 import { computeResponseList, computeTotalImpactFromPrompt } from "./ChatGPT.compute";
 import { Intro } from "./Roxana/PromptCombiner9000/Intro";
+import { BossModeGPT } from "./BossModeGPT/BossModeGPT";
 
 export const ChatGPT = ({
   currentPath = "demo",
@@ -181,7 +182,7 @@ export const ChatGPT = ({
     event.preventDefault();
 
     // change discover/study
-    setPromptMessage(prompt.request);
+    setPromptMessage(prompt?.request);
 
     if (promptType === "languageToggle") {
       setIsSpanishActive(!isSpanishActive);
@@ -237,48 +238,52 @@ export const ChatGPT = ({
         impact: computeTotalImpactFromPrompt(patreonObject, promptType), // compute
       }
     }
-    setChatGptResponse(prompt.response);
+    setChatGptResponse(prompt?.response);
     setChatGptResponseList(result?.response)
 
     // setChatGptResponse(parsedData);
 
     // update proof of work
 
-    if (
-      (!isEmpty(databaseUserDocument) || !isEmpty(userDocumentReference)) &&
-      !isDemo
-    ) {
-      //doesnt return obj, so update firebase and react seperately
-      await updateDoc(userDocumentReference, {
-        impact: databaseUserDocument?.impact + result.impact,
-      });
+    // if (
+    //   (!isEmpty(databaseUserDocument) || !isEmpty(userDocumentReference)) &&
+    //   !isDemo
+    // ) {
 
-      // update global work
-      await updateDoc(globalDocumentReference, {
-        total: globalImpactCounter + result.impact,
-      });
+    //   console.log("IM running", databaseUserDocument);
+    //   console.log("X",userDocumentReference)
 
-      //copy it to react
-      let docCopy = databaseUserDocument;
-      docCopy.impact = databaseUserDocument?.impact + result.impact;
-      setDatabaseUserDocument(docCopy);
+    //   //doesnt return obj, so update firebase and react seperately
+    //   await updateDoc(userDocumentReference, {
+    //     impact: databaseUserDocument?.impact + result.impact,
+    //   });
 
-      let globalCopy = globalImpactCounter;
-      globalCopy = globalImpactCounter + result.impact;
-      setGlobalImpactCounter(globalCopy);
-    } else {
-      //copy it to react
+    //   // update global work
+    //   await updateDoc(globalDocumentReference, {
+    //     total: globalImpactCounter + result.impact,
+    //   });
 
-      let docCopy = databaseUserDocument;
-      docCopy.impact = databaseUserDocument?.impact + result.impact;
-      setDatabaseUserDocument(docCopy);
+    //   //copy it to react
+    //   let docCopy = databaseUserDocument;
+    //   docCopy.impact = databaseUserDocument?.impact + result.impact;
+    //   setDatabaseUserDocument(docCopy);
 
-      let globalCopy = globalImpactCounter;
-      globalCopy = globalImpactCounter + result.impact;
-      setGlobalImpactCounter(globalCopy);
+    //   let globalCopy = globalImpactCounter;
+    //   globalCopy = globalImpactCounter + result.impact;
+    //   setGlobalImpactCounter(globalCopy);
+    // } else {
+    //   //copy it to react
+
+    //   let docCopy = databaseUserDocument;
+    //   docCopy.impact = databaseUserDocument?.impact + result.impact;
+    //   setDatabaseUserDocument(docCopy);
+
+    //   let globalCopy = globalImpactCounter;
+    //   globalCopy = globalImpactCounter + result.impact;
+    //   setGlobalImpactCounter(globalCopy);
 
 
-    }
+    // }
 
     logEvent(analytics, "spend_virtual_currency", {
       value: result.impact,
@@ -297,7 +302,8 @@ export const ChatGPT = ({
 
 
 
-  console.log("patr name",patreonObject);
+
+  console.log("prompt selected", promptSelection);
   return (
     <div
       onSubmit={handleSubmit}
@@ -308,10 +314,13 @@ export const ChatGPT = ({
         color: "white",
       }}
     >
+    { currentPath !== 'Boss Mode' ? (
+    <div>
       <PromptMessage
         promptMessage={promptMessage}
         patreonObject={patreonObject}
       />
+
       <br />
 {/* 
       <Roxana
@@ -323,10 +332,6 @@ export const ChatGPT = ({
         moduleName={moduleName}
       /> */}
 
-
-
-
-
       <Intro
         shouldRenderIntro={shouldRenderIntro}
         isDemo={false} 
@@ -336,7 +341,6 @@ export const ChatGPT = ({
         chatGptResponse={chatGptResponse}
         promptSelection={promptSelection}
       />
-
 
 
       {chatGptResponseList?.map((response) =>(
@@ -352,6 +356,10 @@ export const ChatGPT = ({
 
         />
       ))}
+
+    </div>
+    ) : <BossModeGPT promptSelection={promptSelection} patreonObject={patreonObject} loadingMessage={loadingMessage}/>}
+
 
 
       <br />
@@ -370,6 +378,7 @@ userDocumentReference={userDocumentReference}
         usersModulesCollectionReference={usersModulesCollectionReference}
         usersModulesFromDB={usersModulesFromDB}
         userAuthObject={userAuthObject}
+        currentPath={currentPath}
 
 
         //pow

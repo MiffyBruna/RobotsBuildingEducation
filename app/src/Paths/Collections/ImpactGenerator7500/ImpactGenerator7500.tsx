@@ -52,7 +52,7 @@ export const ImpactGenerator7500 = ({
       completed: false,
       rare: false,
       tooltip: ``,
-      sourceType: `markdown`, 
+      sourceType: `ai`, 
       button: ``, 
       header: ``,
       fileSource: '', 

@@ -97,7 +97,7 @@ export const Collections = ({
         }}
       >
         <br />
-              {currentPath === '26th Street Labs' && !hasZeroKnowledgeAccess ? (
+              {currentPath === 'RO.₿.E' && !hasZeroKnowledgeAccess ? (
                 <div>
                   <div style={{width: 475}}>
                 <h3>access InfiniteKnowledgEngine9000</h3>
@@ -113,7 +113,7 @@ export const Collections = ({
                   />
         
                 </InputGroup></div></div>) : null}
-        {currentPath === '26th Street Labs' && hasZeroKnowledgeAccess ? <Button onClick={() => setIsImpactGenerator7500open(true)}>Activate InfiniteKnowledgeEngine9000</Button> : null}
+        {currentPath === 'RO.₿.E' && hasZeroKnowledgeAccess ? <Button variant="light" onClick={() => setIsImpactGenerator7500open(true)}>Activate InfiniteKnowledgeEngine9000</Button> : null}
         {/* {renderWithTooltip(
           <Button variant="primary">🔥🌱💰💎</Button>,
           <div>

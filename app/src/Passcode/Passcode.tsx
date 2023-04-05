@@ -65,7 +65,6 @@ export const Passcode = ({
       <br />
       {patreonObject ? (
         <Demo
-
           userDocumentReference={userDocumentReference}
           databaseUserDocument={databaseUserDocument}
           setDatabaseUserDocument={setDatabaseUserDocument}

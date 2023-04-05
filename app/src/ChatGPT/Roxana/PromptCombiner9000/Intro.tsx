@@ -21,7 +21,7 @@ export const Intro = ({ isDemo,moduleName, patreonObject, loadingMessage, chatGp
       </div>
     );
 
-    }
+  }
   let RoxanaIntroText = () => {
     if (isDemo && shouldRenderIntro) {
       return (
@@ -216,7 +216,7 @@ export const Intro = ({ isDemo,moduleName, patreonObject, loadingMessage, chatGp
         textAlign: "left",
         padding: 20,
         maxWidth:
-          patreonObject.prompts.patreon.icon === "►" ? "617.5px" : "82.5%",
+          patreonObject.prompts.patreon?.icon === "►" ? "617.5px" : "82.5%",
 
         borderTopLeftRadius: 30,
         borderTopRightRadius: 30,

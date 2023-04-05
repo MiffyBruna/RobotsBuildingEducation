@@ -10,6 +10,7 @@ import { StyledPromptButton } from "../../styles/lazyStyles";
 // import { DiscordButton } from "./DiscordButton/DiscordButton";
 
 export const Prompts = ({
+  currentPath,
   //roxana
   loadingMessage,
   patreonObject,
@@ -32,8 +33,44 @@ export const Prompts = ({
   if(!isEmpty(patreonObject)){
   const [isModalOpen, setIsModalOpen] = useState(false);
   let promptKeys = Object.keys(patreonObject.prompts);
-    let borderHighlight = "#48484a";
-  let promptMap = [
+  let borderHighlight = "#48484a";
+  let promptMap = currentPath === 'Boss Mode' ? [    
+    //     <StyledPromptButton
+    //       tabindex="0"
+    //       style={{ display: loadingMessage ? "none" : "flex" }}
+    //       borderHighlight={borderHighlight}
+    //       loadingMessage={loadingMessage}
+    //       onClick={(event) => {
+    //         if (loadingMessage) {
+    //         } else {
+    //           handleSubmit(event, patreonObject.prompts['patreon'], 'patreon');
+    //         }
+    //       }}
+    //     >
+    //       <a style={{ color: "white" }}>
+    //         ⚔️{" "}&nbsp;
+    //         {/* {patreonObject.prompts['patreon'].action} */}
+    //         raid
+    //       </a>
+    // </StyledPromptButton>,
+    // <StyledPromptButton
+    //       tabindex="0"
+    //       style={{ display: loadingMessage ? "none" : "flex" }}
+    //       borderHighlight={borderHighlight}
+    //       loadingMessage={loadingMessage}
+    //       onClick={(event) => {
+    //         if (loadingMessage) {
+    //         } else {
+    //           handleSubmit(event, patreonObject.prompts['shop'], 'shop');
+    //         }
+    //       }}
+    //     >
+    //       <a style={{ color: "white" }}>
+    //         {patreonObject.prompts['shop']?.icon}{" "}&nbsp;
+    //         {patreonObject.prompts['shop']?.action}
+    //       </a>
+    // </StyledPromptButton>,
+  ] : [
     <StyledPromptButton
           tabindex="0"
           style={{ display: loadingMessage ? "none" : "flex" }}
@@ -47,7 +84,7 @@ export const Prompts = ({
           }}
         >
           <a style={{ color: "white" }}>
-            {patreonObject.prompts['patreon'].icon}{" "}&nbsp;
+            {patreonObject.prompts['patreon']?.icon}{" "}&nbsp;
             {/* {patreonObject.prompts['patreon'].action} */}
             discover
           </a>
@@ -83,8 +120,8 @@ export const Prompts = ({
           }}
         >
           <a style={{ color: "white" }}>
-            {patreonObject.prompts['shop'].icon}{" "}&nbsp;
-            {patreonObject.prompts['shop'].action}
+            {patreonObject.prompts['shop']?.icon}{" "}&nbsp;
+            {patreonObject.prompts['shop']?.action}
           </a>
     </StyledPromptButton>,
 
@@ -113,7 +150,7 @@ export const Prompts = ({
   //         }}
   //       >
   //         <a style={{ color: "white" }}>
-  //           {patreonObject.prompts[prompt].icon}{" "}
+  //           {patreonObject.prompts[prompt]?.icon}{" "}
   //           {patreonObject.prompts[prompt].action}
   //         </a>
   //       </StyledPromptButton>

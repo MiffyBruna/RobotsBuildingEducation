@@ -73,7 +73,7 @@ function App() {
 
   const [visibilityMap, setVisibilityMap] = useState({
     Engineer: false,
-    "26th Street Labs": false,
+    "RO.₿.E": false,
     Creator: false,
     Business: false,
   });
@@ -115,7 +115,7 @@ function App() {
     setCurrentPath("");
     setVisibilityMap({
       Engineer: false,
-      "26th Street Labs": false,
+      "RO.₿.E": false,
       Creator: false,
       Business: false,
     });
@@ -187,7 +187,9 @@ function App() {
     onAuthStateChanged(auth, (user) => {
       // Check for user status
       //probably a better option than displayName.
+
       if (user?.displayName) {
+
         setUserAuthObject(user)
         setIsSignedIn(true);
         setIsDemo(false);
@@ -195,13 +197,17 @@ function App() {
         const globalImpactDocRef = doc(database, "global", "impact");
         const globalModulesCollectionRef = collection(database, 'modules');
 
+        console.log("UID", user?.uid);
+        console.log("DOC REF", docRef);
+        getDoc(docRef).then((res) => {
 
-        getDoc(docRef).then( (res) => {
           if (!res?.data()) {
+
             // first time user logs in. set up proof of work in their user document
+
             setDoc(docRef, {
               impact: 0,
-              userAuthObj: user
+              userAuthObj: { uid: user.uid }
             })
               .then(() => {
                 return getDoc(docRef);
@@ -214,7 +220,7 @@ function App() {
 
             setDatabaseUserDocument(res.data());
           }
-        });
+        }).catch(error => console.log("ERROR", error));
 
         getDoc(globalImpactDocRef).then((res) => {
           // console.log("rest", res.data());
@@ -249,15 +255,17 @@ function App() {
         //   setGlobalImpactCounter(sum);
         // });
       } else {
+        console.log("ELSE")
         setIsSignedIn(false);
         const docRef = doc(database, "users", "demoUsers");
         const globalImpactDocRef = doc(database, "global", "impact");
         getDoc(docRef).then((res) => {
+          console.log("hello", hello);
           if (!res?.data()) {
             // first time user logs in. set up proof of work in their user document
             setDoc(docRef, {
               impact: 0,
-               userAuthObj: user
+               userAuthObj: { uid: userAuthObject.uid }
             })
               .then(() => {
                 return getDoc(docRef);
@@ -271,7 +279,7 @@ function App() {
 
             setDatabaseUserDocument(res.data());
           }
-        });
+        }).catch(error => console.log("ERROR"));
 
         getDoc(globalImpactDocRef).then((res) =>
           setGlobalImpactCounter(res.data().total)
@@ -306,8 +314,8 @@ function App() {
       console.log("moddy", moddy);
       if(params?.moduleID){
         console.log("get the data");
-        // setCurrentPath("26th Street Labs");
-        setCurrentPathForAnalytics("26th Street Labs");
+        // setCurrentPath("RO.₿.E");
+        setCurrentPathForAnalytics("RO.₿.E");
         const docRef = doc(database, "modules", moddy);
         getDoc(docRef).then((res) => {
             if (!res?.data()) {
@@ -324,7 +332,7 @@ function App() {
 
 
 
-      // let modsObj = ui(globalUserModulesFromDB)['26th Street Labs'];
+      // let modsObj = ui(globalUserModulesFromDB)['RO.₿.E'];
       // console.log("god", globalUserModulesFromDB);
       // console.log("ding", modsObj);
       // let col = modsObj[Object.keys(modsObj)[0]];
@@ -335,8 +343,8 @@ function App() {
       console.log("module id found", params?.moduleID);
       mountDataForRoute(params?.moduleID);
       setIsLoadingRoute(false);
-      //  console.log("get set", ui(globalUserModulesFromDB)['26th Street Labs']);
-      // setPatreonObject(ui(globalUserModulesFromDB)['26th Street Labs'][])
+      //  console.log("get set", ui(globalUserModulesFromDB)['RO.₿.E']);
+      // setPatreonObject(ui(globalUserModulesFromDB)['RO.₿.E'][])
 
       // setCurrentCollection("")
 
@@ -361,6 +369,8 @@ function App() {
 
 
 
+  console.log("document from database tiktok gangnagnganagnga", databaseUserDocument);
+  console.log("brbraratatbrt", userDocumentReference);
   return (
     <div className="App">
       {/* <button onClick={() => dispatch({ type: "incremented_age" })}>
@@ -418,7 +428,7 @@ function App() {
       {isZeroKnowledgeUser ? (
         <>
         <div>
-            The Robot Network will be available soon 😊
+            Creating Boss Mode + Robot Network Update 😊
           </div>
 
           {/* <div>My Accoun</div> */}

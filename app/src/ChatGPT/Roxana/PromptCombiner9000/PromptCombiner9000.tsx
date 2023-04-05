@@ -61,7 +61,7 @@ export const PromptCombiner9000 = ({
   return (
     <>
     <div style={{ textAlign: 'left'}}>
-      {loadingMessage.length < 1 ? (    <h2 style={{marginTop:24}}>{chatGptResponse.type === 'patreon' ? 'generate' : chatGptResponse.type.toLowerCase()} {chatGptResponse.icon}</h2>): null}
+      {loadingMessage.length < 1 ? (    <h2 style={{marginTop:24}}>{chatGptResponse.type === 'patreon' ? 'generate' : chatGptResponse.type.toLowerCase()} {chatGptResponse?.icon}</h2>): null}
 
     <div
       // Gray response message by the AI
