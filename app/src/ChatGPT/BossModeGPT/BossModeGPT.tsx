@@ -109,10 +109,9 @@ export let BossModeGPT = ({
       }
     >
       <img src={roxanabrand} width={200} />
-
+      <br/><br/>
       {promptSelection === "patreon" ? (
         <div>
-          {bossModeGptHelperResponse ? (
             <div
               style={{
                 backgroundColor: "#273932",
@@ -125,7 +124,7 @@ export let BossModeGPT = ({
                 ? bossModeGptHelperResponse
                 : "Providence, in religion, is the belief that the universe is governed by the providence of God, or in some interpretations, of a group of gods. It means that God is actively involved in all aspects of the world, from the smallest details to the largest events. Abraham Lincoln was a firm believer in providence and often resorted to this concept in moments of crisis. He believed that God was a source of strength during difficult times, such as the Civil War. He was often quoted as saying “The will of God prevails.” He also believed that God was active in guiding the United States. In his Second Inaugural Address, he stated, “It may seem strange that any men should dare to ask a just God's assistance in wringing their bread from the sweat of other men's faces”, but he believed with faith and patience all difficulties will be overcome. This belief in providence has been seen in the events around the inauguration of the first African-American president, Barack Obama. Many people believe that the institution of slavery was finally overturned by the hand of providence."}
             </div>
-          ) : null}
+
 
           <div style={{ display: "flex", alignItems: "flex-end" }}>
             <InputGroup
