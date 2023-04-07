@@ -16,7 +16,7 @@ export const ProofOfWork = ({
   usersModulesFromDB,
 }) => {
   const [isImpactWalletOpen, setIsImpactWalletOpen] = useState(false);
-  console.log("userob", userAuthObject);
+
   if (displayName === "@DemoRobots") {
     return (
       <div
@@ -29,8 +29,7 @@ export const ProofOfWork = ({
           maxWidth: "600px",
           minWidth: "300px",
           padding: 12,
-          textAlign:'center'
-    
+          textAlign: "center",
         }}
       >
         <p>🤖 {displayName}</p>
@@ -65,7 +64,7 @@ export const ProofOfWork = ({
         marginBottom: "48px",
         maxWidth: "600px",
         minWidth: "300px",
-              textAlign:'center'
+        textAlign: "center",
       }}
     >
       <p>🤖 {displayName}</p>
@@ -78,7 +77,6 @@ export const ProofOfWork = ({
         usersModulesCollectionReference={usersModulesCollectionReference}
         usersModulesFromDB={usersModulesFromDB}
         userAuthObject={userAuthObject}
-
       />
       {/* <a onClick={() => auth.signOut()}>Sign-out</a> */}
     </div>

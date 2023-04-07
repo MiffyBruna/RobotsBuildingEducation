@@ -2,14 +2,16 @@ import { updateDoc } from "firebase/firestore";
 import { useState, useEffect } from "react";
 import { isEmpty } from "lodash";
 
-
 import { PromptMessage } from "./PromptMessage/PromptMessage";
 import { Prompts } from "./Prompts/Prompts";
 import { Roxana } from "./Roxana/Roxana";
 import { analytics } from "../database/firebaseResources";
 import { logEvent } from "firebase/analytics";
 import { PromptCombiner9000 } from "./Roxana/PromptCombiner9000/PromptCombiner9000";
-import { computeResponseList, computeTotalImpactFromPrompt } from "./ChatGPT.compute";
+import {
+  computeResponseList,
+  computeTotalImpactFromPrompt,
+} from "./ChatGPT.compute";
 import { Intro } from "./Roxana/PromptCombiner9000/Intro";
 import { BossModeGPT } from "./BossModeGPT/BossModeGPT";
 
@@ -28,18 +30,21 @@ export const ChatGPT = ({
   displayName = "@DemoRobots",
   moduleName = "demo",
   computePercentage,
-  isGeneratedDemo=false,
+  isGeneratedDemo = false,
   usersModulesCollectionReference,
-  userAuthObject
-
+  userAuthObject,
 }) => {
+  const [isRaidActive, setIsRaidActive] = useState(false);
+  const [bossModeGptHelperResponse, setBossModeGptHelperResponse] =
+    useState("");
+  const [bossModeGptHelperRequest, setBossModeGptHelperRequest] = useState("");
   const [shouldRenderIntro, setShouldRenderIntro] = useState(true);
   const [promptMessage, setPromptMessage] = useState("");
   const [isSpanishActive, setIsSpanishActive] = useState(false);
   const [loadingMessage, setLoadingMessage] = useState("");
   const [chatGptResponse, setChatGptResponse] = useState("");
   const [chatGptResponseList, setChatGptResponseList] = useState([]);
-  const [promptSelection,setPromptSelection] = useState('');
+  const [promptSelection, setPromptSelection] = useState("");
   const [loadingStates, setLoadingStates] = useState({
     summarize: false,
     guide: false,
@@ -51,6 +56,7 @@ export const ChatGPT = ({
     inspire: false,
     patreon: false,
     shop: false,
+    journey: false,
   });
 
   /**
@@ -62,9 +68,9 @@ export const ChatGPT = ({
    */
   const [conversation, setConversation] = useState([]);
 
-  // patreon, shop, 
+  // patreon, shop,
   useEffect(() => {
-    console.log("effecting")
+    // this is legacy code when all prompts
     setLoadingStates({
       summarize: false,
       guide: false,
@@ -76,11 +82,11 @@ export const ChatGPT = ({
       patreon: false,
       inspire: false,
       shop: false,
+      journey: false,
     });
     setChatGptResponse("");
-    setPromptMessage("")
+    setPromptMessage("");
     setChatGptResponseList([]);
-
   }, [patreonObject]);
 
   const handlePromptSelection = (promptType) => {
@@ -119,56 +125,55 @@ export const ChatGPT = ({
     let loader = Object.keys(loadingStates);
     let result = loadingStates;
 
-
     // discover/study
-    let discover = ['inspire',  'demonstrate', 'patreon'] // hits patreon
-    let study = ['define', 'summarize', 'ask', 'guide', 'quiz']; // hits guide
-    let shop = ['shop'];
+    let discover = ["inspire", "demonstrate", "patreon"]; // hits patreon
+    let study = ["define", "summarize", "ask", "guide", "quiz"]; // hits guide
+    let shop = ["shop"];
     setPromptSelection(promptType);
     setShouldRenderIntro(false);
 
-  // if(promptType === 'patreon'){
-  //   setLoadingStates({
-  //     summarize: false,
-  //     guide: false,
-  //     anything: false,
-  //     define: false,
-  //     ask: false,
-  //     quiz: false,
-  //     demonstrate: true,
-  //     patreon: true,
-  //     inspire: true,
-  //     shop: false,
-  //   });
+    // if(promptType === 'patreon'){
+    //   setLoadingStates({
+    //     summarize: false,
+    //     guide: false,
+    //     anything: false,
+    //     define: false,
+    //     ask: false,
+    //     quiz: false,
+    //     demonstrate: true,
+    //     patreon: true,
+    //     inspire: true,
+    //     shop: false,
+    //   });
 
-  // }else if(promptType === 'guide'){
-  //   setLoadingStates({
-  //     summarize: true,
-  //     guide: true,
-  //     anything: false,
-  //     define: true,
-  //     ask: false,
-  //     quiz: true,
-  //     demonstrate: false,
-  //     patreon: false,
-  //     inspire: false,
-  //     shop: false,
-  //   });
-  // }else if(promptType==='shop'){ 
-  //   setLoadingStates({
-  //     summarize: false,
-  //     guide: false,
-  //     anything: false,
-  //     define: false,
-  //     ask: false,
-  //     quiz: false,
-  //     demonstrate: false,
-  //     patreon: false,
-  //     inspire: false,
-  //     shop: true,
-  //   });
-  // }
-    // console.log("PROMPT", promptType);
+    // }else if(promptType === 'guide'){
+    //   setLoadingStates({
+    //     summarize: true,
+    //     guide: true,
+    //     anything: false,
+    //     define: true,
+    //     ask: false,
+    //     quiz: true,
+    //     demonstrate: false,
+    //     patreon: false,
+    //     inspire: false,
+    //     shop: false,
+    //   });
+    // }else if(promptType==='shop'){
+    //   setLoadingStates({
+    //     summarize: false,
+    //     guide: false,
+    //     anything: false,
+    //     define: false,
+    //     ask: false,
+    //     quiz: false,
+    //     demonstrate: false,
+    //     patreon: false,
+    //     inspire: false,
+    //     shop: true,
+    //   });
+    // }
+
     // loader.forEach((prompt) => {
     //   result[prompt] = false;
     // });
@@ -178,132 +183,209 @@ export const ChatGPT = ({
     // setLoadingMessage(`prompt ${promptType} activated`);
   };
 
-  const handleSubmit = async (event, prompt = null, promptType = null) => {
-    event.preventDefault();
+  let handleBossMode = (promptType) => {
+    // only one prompt for now, can just set it to true
+    setIsRaidActive(true);
+    handlePromptSelection(promptType);
+  };
 
-    // change discover/study
-    setPromptMessage(prompt?.request);
-
-    if (promptType === "languageToggle") {
-      setIsSpanishActive(!isSpanishActive);
-    } else {
-      handlePromptSelection(promptType);
-    }
+  let handleBossModeGptRequest = async (event) => {
+    console.log("the event", event);
+    console.log("therequest", bossModeGptHelperRequest);
 
     // this API has a $5 limit. Please configure your own setup to test in a seperate location.
-    // const response = await fetch(
-    //   "https://us-central1-learn-robotsbuildingeducation.cloudfunctions.net/app/prompt",
-    //   {
-    //     method: "POST",
-    //     headers: {
-    //       "Content-Type": "application/json",
-    //     },
-    //     body: JSON.stringify({
-    //       prompt: prompt.request,
-    //     }),
-    //   }
-    // ).catch((error) => {
-    //   console.log("error", error);
-    //   console.log("err", { error });
-    // });
-
-    // let data = await response.json();
-    // let parsedData = data.bot.trim();
-
-    // x
-    const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-    await delay(1500);
-
-    // x
-
-    // change to a function that gets multiple responsesor components discover/study
-    // setChatGptResponseList([]);
-
-
-    let result = prompt;
-    if(promptType === 'patreon'){
-      result = {
-        response: computeResponseList(patreonObject, promptType), //compute
-        impact: computeTotalImpactFromPrompt(patreonObject, promptType), // compute
+    const response = await fetch(
+      "https://us-central1-learn-robotsbuildingeducation.cloudfunctions.net/app/prompt",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          prompt: bossModeGptHelperRequest,
+        }),
       }
+    ).catch((error) => {
+      console.log("error", error);
+      console.log("err", { error });
+    });
 
-    }else if(promptType === 'guide'){
-      result = {
-        response: computeResponseList(patreonObject, promptType), //compute
-        impact: computeTotalImpactFromPrompt(patreonObject, promptType), // compute
-      }
-    }else if(promptType === 'shop'){
-      result = {
-        response: computeResponseList(patreonObject, promptType), //compute
-        impact: computeTotalImpactFromPrompt(patreonObject, promptType), // compute
-      }
+    let data = await response.json();
+    let parsedData = data.bot.trim();
+
+    console.log("parsedData", parsedData);
+    setBossModeGptHelperResponse(parsedData);
+
+    if (
+      (!isEmpty(databaseUserDocument) || !isEmpty(userDocumentReference)) &&
+      !isDemo
+    ) {
+      //doesnt return obj, so update firebase and react seperately
+      await updateDoc(userDocumentReference, {
+        impact: databaseUserDocument?.impact + 250,
+      });
+
+      // update global work
+      await updateDoc(globalDocumentReference, {
+        total: globalImpactCounter + 250,
+      });
+
+      //copy it to react
+      let docCopy = databaseUserDocument;
+      docCopy.impact = databaseUserDocument?.impact + 250;
+      setDatabaseUserDocument(docCopy);
+
+      let globalCopy = globalImpactCounter;
+      globalCopy = globalImpactCounter + 250;
+      setGlobalImpactCounter(globalCopy);
+    } else {
+      //copy it to react
+
+      let docCopy = databaseUserDocument;
+      docCopy.impact = databaseUserDocument?.impact + 250;
+      setDatabaseUserDocument(docCopy);
+
+      let globalCopy = globalImpactCounter;
+      globalCopy = globalImpactCounter + 250;
+      setGlobalImpactCounter(globalCopy);
     }
-    setChatGptResponse(prompt?.response);
-    setChatGptResponseList(result?.response)
-
-    // setChatGptResponse(parsedData);
-
-    // update proof of work
-
-    // if (
-    //   (!isEmpty(databaseUserDocument) || !isEmpty(userDocumentReference)) &&
-    //   !isDemo
-    // ) {
-
-    //   console.log("IM running", databaseUserDocument);
-    //   console.log("X",userDocumentReference)
-
-    //   //doesnt return obj, so update firebase and react seperately
-    //   await updateDoc(userDocumentReference, {
-    //     impact: databaseUserDocument?.impact + result.impact,
-    //   });
-
-    //   // update global work
-    //   await updateDoc(globalDocumentReference, {
-    //     total: globalImpactCounter + result.impact,
-    //   });
-
-    //   //copy it to react
-    //   let docCopy = databaseUserDocument;
-    //   docCopy.impact = databaseUserDocument?.impact + result.impact;
-    //   setDatabaseUserDocument(docCopy);
-
-    //   let globalCopy = globalImpactCounter;
-    //   globalCopy = globalImpactCounter + result.impact;
-    //   setGlobalImpactCounter(globalCopy);
-    // } else {
-    //   //copy it to react
-
-    //   let docCopy = databaseUserDocument;
-    //   docCopy.impact = databaseUserDocument?.impact + result.impact;
-    //   setDatabaseUserDocument(docCopy);
-
-    //   let globalCopy = globalImpactCounter;
-    //   globalCopy = globalImpactCounter + result.impact;
-    //   setGlobalImpactCounter(globalCopy);
-
-
-    // }
 
     logEvent(analytics, "spend_virtual_currency", {
-      value: result.impact,
+      value: 250,
       virtual_currency_name: "Impact",
-      item_name: `${currentPath}|${moduleName}|${promptType}`,
+      item_name: `${currentPath}|${moduleName}|${"Boss Mode Task"}`,
     });
+  };
+
+  const handleSubmit = async (
+    event,
+    prompt = null,
+    promptType = null,
+    isBossMode = false
+  ) => {
+    event.preventDefault();
+    console.log("promptType", promptType);
+    if (isBossMode) {
+      // do boss mode thing
+      handleBossMode(promptType);
+      const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+      await delay(1500);
+    } else {
+      // change discover/study
+      setPromptMessage(prompt?.request);
+
+      if (promptType === "languageToggle") {
+        setIsSpanishActive(!isSpanishActive);
+      } else {
+        handlePromptSelection(promptType);
+      }
+
+      // this API has a $5 limit. Please configure your own setup to test in a seperate location.
+      // const response = await fetch(
+      //   "https://us-central1-learn-robotsbuildingeducation.cloudfunctions.net/app/prompt",
+      //   {
+      //     method: "POST",
+      //     headers: {
+      //       "Content-Type": "application/json",
+      //     },
+      //     body: JSON.stringify({
+      //       prompt: prompt.request,
+      //     }),
+      //   }
+      // ).catch((error) => {
+      //   console.log("error", error);
+      //   console.log("err", { error });
+      // });
+
+      // let data = await response.json();
+      // let parsedData = data.bot.trim();
+
+      // x
+      const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+      await delay(1500);
+
+      // x
+
+      // change to a function that gets multiple responsesor components discover/study
+      // setChatGptResponseList([]);
+
+      let result = prompt;
+      if (promptType === "patreon") {
+        result = {
+          response: computeResponseList(patreonObject, promptType), //compute
+          impact: computeTotalImpactFromPrompt(patreonObject, promptType), // compute
+        };
+      } else if (promptType === "guide") {
+        result = {
+          response: computeResponseList(patreonObject, promptType), //compute
+          impact: computeTotalImpactFromPrompt(patreonObject, promptType), // compute
+        };
+      } else if (promptType === "shop") {
+        result = {
+          response: computeResponseList(patreonObject, promptType), //compute
+          impact: computeTotalImpactFromPrompt(patreonObject, promptType), // compute
+        };
+      }
+      setChatGptResponse(prompt?.response);
+      setChatGptResponseList(result?.response);
+
+      // setChatGptResponse(parsedData);
+
+      // update proof of work
+
+      if (
+        (!isEmpty(databaseUserDocument) || !isEmpty(userDocumentReference)) &&
+        !isDemo
+      ) {
+        //doesnt return obj, so update firebase and react seperately
+        await updateDoc(userDocumentReference, {
+          impact: databaseUserDocument?.impact + result.impact,
+        });
+
+        // update global work
+        await updateDoc(globalDocumentReference, {
+          total: globalImpactCounter + result.impact,
+        });
+
+        //copy it to react
+        let docCopy = databaseUserDocument;
+        docCopy.impact = databaseUserDocument?.impact + result.impact;
+        setDatabaseUserDocument(docCopy);
+
+        let globalCopy = globalImpactCounter;
+        globalCopy = globalImpactCounter + result.impact;
+        setGlobalImpactCounter(globalCopy);
+      } else {
+        //copy it to react
+
+        let docCopy = databaseUserDocument;
+        docCopy.impact = databaseUserDocument?.impact + result.impact;
+        setDatabaseUserDocument(docCopy);
+
+        let globalCopy = globalImpactCounter;
+        globalCopy = globalImpactCounter + result.impact;
+        setGlobalImpactCounter(globalCopy);
+      }
+
+      logEvent(analytics, "spend_virtual_currency", {
+        value: result.impact,
+        virtual_currency_name: "Impact",
+        item_name: `${currentPath}|${moduleName}|${promptType}`,
+      });
+
+      // setLoadingMessage("");
+    }
 
     setLoadingMessage("");
   };
 
+  // useEffect(() => {}, []);
 
+  // useEffect(() =>{
+  //   return () = > {}
+  // }, [])
 
-  useState(() => {
-
-  }, []);
-
-
-
-
-  console.log("prompt selected", promptSelection);
+  console.log("moduleName", moduleName);
   return (
     <div
       onSubmit={handleSubmit}
@@ -314,15 +396,15 @@ export const ChatGPT = ({
         color: "white",
       }}
     >
-    { currentPath !== 'Boss Mode' ? (
-    <div>
-      <PromptMessage
-        promptMessage={promptMessage}
-        patreonObject={patreonObject}
-      />
+      {currentPath !== "Boss Mode" ? (
+        <div>
+          <PromptMessage
+            promptMessage={promptMessage}
+            patreonObject={patreonObject}
+          />
 
-      <br />
-{/* 
+          <br />
+          {/* 
       <Roxana
         loadingMessage={loadingMessage}
         loadingStates={loadingStates}
@@ -332,35 +414,58 @@ export const ChatGPT = ({
         moduleName={moduleName}
       /> */}
 
-      <Intro
-        shouldRenderIntro={shouldRenderIntro}
-        isDemo={false} 
-        moduleName={moduleName} 
-        patreonObject={patreonObject} 
-        loadingMessage={loadingMessage} 
-        chatGptResponse={chatGptResponse}
-        promptSelection={promptSelection}
-      />
+          <Intro
+            shouldRenderIntro={shouldRenderIntro}
+            isDemo={false}
+            moduleName={moduleName}
+            patreonObject={patreonObject}
+            loadingMessage={loadingMessage}
+            chatGptResponse={chatGptResponse}
+            promptSelection={promptSelection}
+          />
 
+          {chatGptResponseList?.map((response) => (
+            <PromptCombiner9000
+              loadingMessage={loadingMessage}
+              // loadingStates={loadingStates}
+              chatGptResponse={response}
+              patreonObject={patreonObject}
+              isDemo={false}
+              moduleName={moduleName}
+              promptSelection={promptSelection}
+              isGeneratedDemo={isGeneratedDemo}
+            />
+          ))}
+        </div>
+      ) : moduleName === "Boss Mode" ? (
+        <>
+          <h4>
+            {moduleName === "Boss Mode"
+              ? `Level ${
+                  databaseUserDocument?.level ? databaseUserDocument.level : 0
+                }`
+              : ""}
+          </h4>
 
-      {chatGptResponseList?.map((response) =>(
-        <PromptCombiner9000
-          loadingMessage={loadingMessage}
-          // loadingStates={loadingStates}
-          chatGptResponse={response}
-          patreonObject={patreonObject}
-          isDemo={false}
-          moduleName={moduleName}
-          promptSelection={promptSelection}
-          isGeneratedDemo={isGeneratedDemo}
-
-        />
-      ))}
-
-    </div>
-    ) : <BossModeGPT promptSelection={promptSelection} patreonObject={patreonObject} loadingMessage={loadingMessage}/>}
-
-
+          <BossModeGPT
+            promptSelection={promptSelection}
+            patreonObject={patreonObject}
+            loadingMessage={loadingMessage}
+            isRaidActive={isRaidActive}
+            bossModeGptHelperResponse={bossModeGptHelperResponse}
+            handleBossModeGptRequest={handleBossModeGptRequest}
+            setBossModeGptHelperRequest={setBossModeGptHelperRequest}
+            userDocumentReference={userDocumentReference}
+            displayName={displayName}
+            databaseUserDocument={databaseUserDocument}
+            isDemo={isDemo}
+            setDatabaseUserDocument={setDatabaseUserDocument}
+            setGlobalImpactCounter={setGlobalImpactCounter}
+            globalImpactCounter={globalImpactCounter}
+            globalDocumentReference={globalDocumentReference}
+          />
+        </>
+      ) : null}
 
       <br />
       {/* prompts */}
@@ -369,8 +474,7 @@ export const ChatGPT = ({
         loadingMessage={loadingMessage}
         patreonObject={patreonObject}
         handleSubmit={handleSubmit}
-userDocumentReference={userDocumentReference}
-
+        userDocumentReference={userDocumentReference}
         displayName={displayName}
         databaseUserDocument={databaseUserDocument}
         computePercentage={computePercentage}
@@ -379,7 +483,7 @@ userDocumentReference={userDocumentReference}
         usersModulesFromDB={usersModulesFromDB}
         userAuthObject={userAuthObject}
         currentPath={currentPath}
-
+        isRaidActive={isRaidActive}
 
         //pow
       />

@@ -10,7 +10,7 @@ import {
   getGlobalImpact,
   randomLessonGeneratorMachine444,
   renderWithTooltip,
-  ui
+  ui,
 } from "./common/uiSchema";
 import { Collections } from "./Paths/Collections/Collections";
 import { Header } from "./Header/Header";
@@ -23,7 +23,14 @@ import {
   analytics,
 } from "./database/firebaseResources";
 import { onAuthStateChanged } from "firebase/auth";
-import { collection, doc, getDoc, getDocs, setDoc, updateDoc } from "firebase/firestore";
+import {
+  collection,
+  doc,
+  getDoc,
+  getDocs,
+  setDoc,
+  updateDoc,
+} from "firebase/firestore";
 import { Spinner } from "react-bootstrap";
 import { logEvent } from "firebase/analytics";
 import { useParams } from "react-router-dom";
@@ -43,7 +50,7 @@ export const reducer = (state, action) => {
 
 function App() {
   const [isLoadingRoute, setIsLoadingRoute] = useState(false);
-      let params = useParams();
+  let params = useParams();
   // const [state, dispatch] = useReducer(reducer, { age: 42 });
   const [isSignedIn, setIsSignedIn] = useState("start"); // Local signed-in state.
   const [isZeroKnowledgeUser, setIsZeroKnowledgeUser] = useState(false);
@@ -55,10 +62,14 @@ function App() {
   // this is a document object reference for a user collection
   const [userDocumentReference, setUserDocumentReference] = useState({});
   const [globalDocumentReference, setGlobalDocumentReference] = useState({});
-  const [usersModulesCollectionReference, setUsersModulesCollectionReference] = useState({})
-  const [globalModulesCollectionReference, setGlobalModulesCollectionReference] = useState({})
-  const [usersModulesFromDB,setUsersModulesFromDB] = useState([]); //setGlobalUserModulesFromDB
- const [globalUserModulesFromDB,setGlobalUserModulesFromDB] = useState([]); 
+  const [usersModulesCollectionReference, setUsersModulesCollectionReference] =
+    useState({});
+  const [
+    globalModulesCollectionReference,
+    setGlobalModulesCollectionReference,
+  ] = useState({});
+  const [usersModulesFromDB, setUsersModulesFromDB] = useState([]); //setGlobalUserModulesFromDB
+  const [globalUserModulesFromDB, setGlobalUserModulesFromDB] = useState([]);
   // used to count total global count. used to get all work done before this global counter was implemented.
   const [globalImpactCounter, setGlobalImpactCounter] = useState(0);
 
@@ -66,7 +77,6 @@ function App() {
   const [currentPath, setCurrentPath] = useState("");
   const [currentPathForAnalytics, setCurrentPathForAnalytics] = useState("");
   const [proofOfWorkFromModules, setProofOfWorkFromModules] = useState(0);
-
 
   const [isDemo, setIsDemo] = useState(true);
   const [moduleName, setModuleName] = useState("");
@@ -79,7 +89,6 @@ function App() {
   });
 
   const handlePathSelection = (event) => {
-    console.log("event", event.target.id);
     logEvent(analytics, "select_item", {
       item_list_id: `RO.B.E_paths|${event.target.id}`,
       item_list_name: `RO.B.E_paths|${event.target.id}`,
@@ -94,13 +103,13 @@ function App() {
     setCurrentPath(event.target.id);
     setCurrentPathForAnalytics(event.target.id);
     setPatreonObject({});
+    setModuleName('');
   };
 
   const handleModuleSelection = (module, moduleName) => {
     // can redefine this as module object rather than patreon object. low priority
     setPatreonObject(module);
 
-    console.log("Module", module);
     logEvent(analytics, "select_item", {
       item_list_id: `RO.B.E_module|${moduleName}`,
       item_list_name: `RO.B.E_module|${moduleName}`,
@@ -132,45 +141,39 @@ function App() {
   };
 
   const handleRandomDemoPressed = () => {
-    setPatreonObject(randomLessonGeneratorMachine444(globalUserModulesFromDB))
-  }
-
+    setPatreonObject(randomLessonGeneratorMachine444(globalUserModulesFromDB));
+  };
 
   let documentProcForUsersModules = async (collectionRef) => {
-        await getDocs(collectionRef).then((querySnapshot) => {
-          let modulesSet = [];
+    await getDocs(collectionRef).then((querySnapshot) => {
+      let modulesSet = [];
 
-          querySnapshot.forEach((doc) => {
-            if (doc.data()) {
+      querySnapshot.forEach((doc) => {
+        if (doc.data()) {
+          modulesSet.push(doc.data());
+        } else {
+          console.log("gone");
+        }
+      });
 
-              modulesSet.push(doc.data());
-            }else{
-              console.log("gone")
-            }
-          })
-
-        setUsersModulesFromDB(modulesSet)
-        });
-  }
-
+      setUsersModulesFromDB(modulesSet);
+    });
+  };
 
   let documentProcForGlobalModules = async (collectionRef) => {
-        await getDocs(collectionRef).then((querySnapshot) => {
-          let modulesSet = [];
+    await getDocs(collectionRef).then((querySnapshot) => {
+      let modulesSet = [];
 
-          querySnapshot.forEach((doc) => {
-            if (doc.data()) {
-
-              modulesSet.push(doc.data());
-            }else{
-              console.log("gone")
-            }
-          })
-          setGlobalUserModulesFromDB(modulesSet)
-       
-        });
-  }
-
+      querySnapshot.forEach((doc) => {
+        if (doc.data()) {
+          modulesSet.push(doc.data());
+        } else {
+          console.log("gone");
+        }
+      });
+      setGlobalUserModulesFromDB(modulesSet);
+    });
+  };
 
   useEffect(() => {
     //check local storage
@@ -189,49 +192,40 @@ function App() {
       //probably a better option than displayName.
 
       if (user?.displayName) {
-
-        setUserAuthObject(user)
+        setUserAuthObject(user);
         setIsSignedIn(true);
         setIsDemo(false);
         const docRef = doc(database, "users", user.uid);
         const globalImpactDocRef = doc(database, "global", "impact");
-        const globalModulesCollectionRef = collection(database, 'modules');
+        const globalModulesCollectionRef = collection(database, "modules");
 
-        console.log("UID", user?.uid);
-        console.log("DOC REF", docRef);
-        getDoc(docRef).then((res) => {
+        getDoc(docRef)
+          .then((res) => {
+            if (!res?.data()) {
+              // first time user logs in. set up proof of work in their user document
 
-          if (!res?.data()) {
-
-            // first time user logs in. set up proof of work in their user document
-
-            setDoc(docRef, {
-              impact: 0,
-              userAuthObj: { uid: user.uid }
-            })
-              .then(() => {
-                return getDoc(docRef);
+              setDoc(docRef, {
+                impact: 0,
+                userAuthObj: { uid: user.uid },
               })
-              .then((response) => {
-
-                setDatabaseUserDocument(response.data());
-              });
-          } else {
-
-            setDatabaseUserDocument(res.data());
-          }
-        }).catch(error => console.log("ERROR", error));
+                .then(() => {
+                  return getDoc(docRef);
+                })
+                .then((response) => {
+                  setDatabaseUserDocument(response.data());
+                });
+            } else {
+              setDatabaseUserDocument(res.data());
+            }
+          })
+          .catch((error) => console.log("ERROR", error));
 
         getDoc(globalImpactDocRef).then((res) => {
-          // console.log("rest", res.data());
           setGlobalImpactCounter(res.data().total);
         });
 
-                console.log("user doc ref", docRef);
         setUserDocumentReference(docRef);
-        const usersModulesCollectionRef = collection(docRef, "modules")
-
-        console.log("USX", usersModulesCollectionRef);
+        const usersModulesCollectionRef = collection(docRef, "modules");
 
         setGlobalDocumentReference(globalImpactDocRef);
         setGlobalModulesCollectionReference(globalModulesCollectionRef);
@@ -239,9 +233,6 @@ function App() {
 
         documentProcForUsersModules(usersModulesCollectionRef);
         documentProcForGlobalModules(globalModulesCollectionRef);
-
-
-
 
         // used to count total global count. used to get all work done before this global counter was implemented.
         // getDocs(collection(database, "users")).then((querySnapshot) => {
@@ -255,103 +246,82 @@ function App() {
         //   setGlobalImpactCounter(sum);
         // });
       } else {
-        console.log("ELSE")
         setIsSignedIn(false);
         const docRef = doc(database, "users", "demoUsers");
         const globalImpactDocRef = doc(database, "global", "impact");
-        getDoc(docRef).then((res) => {
-          console.log("hello", hello);
-          if (!res?.data()) {
-            // first time user logs in. set up proof of work in their user document
-            setDoc(docRef, {
-              impact: 0,
-               userAuthObj: { uid: userAuthObject.uid }
-            })
-              .then(() => {
-                return getDoc(docRef);
+        getDoc(docRef)
+          .then((res) => {
+            if (!res?.data()) {
+              // first time user logs in. set up proof of work in their user document
+              setDoc(docRef, {
+                impact: 0,
+                userAuthObj: { uid: userAuthObject.uid },
               })
-              .then((response) => {
-                console.log("DATA", response.data());
-                setDatabaseUserDocument(response.data());
-              });
-          } else {
-            console.log("ELSA");
+                .then(() => {
+                  return getDoc(docRef);
+                })
+                .then((response) => {
+                  setDatabaseUserDocument(response.data());
+                });
+            } else {
+              console.log("ELSE");
 
-            setDatabaseUserDocument(res.data());
-          }
-        }).catch(error => console.log("ERROR"));
+              setDatabaseUserDocument(res.data());
+            }
+          })
+          .catch((error) => console.log("ERROR"));
 
         getDoc(globalImpactDocRef).then((res) =>
           setGlobalImpactCounter(res.data().total)
         );
 
-        console.log("user doc ref", docRef);
         setUserDocumentReference(docRef);
         setGlobalDocumentReference(globalImpactDocRef);
         setIsDemo(true);
-        const globalModulesCollectionRef = collection(database, 'modules');
+        const globalModulesCollectionRef = collection(database, "modules");
         setGlobalModulesCollectionReference(globalModulesCollectionRef);
         documentProcForGlobalModules(globalModulesCollectionRef);
       }
     });
 
     setProofOfWorkFromModules(getGlobalImpact());
-    if(params?.moduleID){
-
-    }else if(localStorage.getItem("patreonPasscode")?.length > 0){
-
-    }else{
-      setPatreonObject(isDemo ? randomLessonGeneratorMachine444(globalUserModulesFromDB) : {});
+    if (params?.moduleID) {
+    } else if (localStorage.getItem("patreonPasscode")?.length > 0) {
+    } else {
+      setPatreonObject(
+        isDemo ? randomLessonGeneratorMachine444(globalUserModulesFromDB) : {}
+      );
     }
-
-
-      // auth.signOut();
   }, []);
-
 
   let mountDataForRoute = async (moddy) => {
     setIsLoadingRoute(true);
-      console.log("moddy", moddy);
-      if(params?.moduleID){
-        console.log("get the data");
-        // setCurrentPath("RO.₿.E");
-        setCurrentPathForAnalytics("RO.₿.E");
-        const docRef = doc(database, "modules", moddy);
-        getDoc(docRef).then((res) => {
-            if (!res?.data()) {
-              console.log("no data")
-            }else{
-              console.log("patro", res?.data()[Object.keys(res.data())[0]]);
-              setPatreonObject(res?.data()[Object.keys(res.data())[0]]);
-              setCurrentPath("");
-              
-            }
-        })
-      }
 
-
-
-
-      // let modsObj = ui(globalUserModulesFromDB)['RO.₿.E'];
-      // console.log("god", globalUserModulesFromDB);
-      // console.log("ding", modsObj);
-      // let col = modsObj[Object.keys(modsObj)[0]];
-      // console.log("col", col);
-  }
-  useEffect(()=>{
-    if(params?.moduleID){
-      console.log("module id found", params?.moduleID);
+    if (params?.moduleID) {
+      // setCurrentPath("RO.₿.E");
+      setCurrentPathForAnalytics("RO.₿.E");
+      const docRef = doc(database, "modules", moddy);
+      getDoc(docRef).then((res) => {
+        if (!res?.data()) {
+        } else {
+          setPatreonObject(res?.data()[Object.keys(res.data())[0]]);
+          setCurrentPath("");
+        }
+      });
+    }
+  };
+  useEffect(() => {
+    if (params?.moduleID) {
       mountDataForRoute(params?.moduleID);
       setIsLoadingRoute(false);
       //  console.log("get set", ui(globalUserModulesFromDB)['RO.₿.E']);
       // setPatreonObject(ui(globalUserModulesFromDB)['RO.₿.E'][])
 
       // setCurrentCollection("")
-
-    }else{
-      console.log("no data")
+    } else {
+      console.log("no data");
     }
-  }, [params])
+  }, [params]);
 
   //
 
@@ -362,15 +332,6 @@ function App() {
     return <Spinner animation="grow" variant="light" />;
   }
 
-
-  // console.log("run app", globalUserModulesFromDB);
-  
-
-
-
-
-  console.log("document from database tiktok gangnagnganagnga", databaseUserDocument);
-  console.log("brbraratatbrt", userDocumentReference);
   return (
     <div className="App">
       {/* <button onClick={() => dispatch({ type: "incremented_age" })}>
@@ -427,9 +388,7 @@ function App() {
       ) : null}
       {isZeroKnowledgeUser ? (
         <>
-        <div>
-            Creating Boss Mode + Robot Network Update 😊
-          </div>
+          <div>Creating Boss Mode + Robot Network Update 😊</div>
 
           {/* <div>My Accoun</div> */}
           {/* navigate */}
@@ -447,9 +406,7 @@ function App() {
             globalDocumentReference={globalDocumentReference}
             globalImpactCounter={globalImpactCounter}
             setGlobalImpactCounter={setGlobalImpactCounter}
-            displayName={
-              auth?.currentUser?.displayName || "@DemoRobots"
-            }
+            displayName={auth?.currentUser?.displayName || "@DemoRobots"}
             computePercentage={computePercentage}
             isDemo={isDemo}
             moduleName={moduleName}
@@ -464,12 +421,10 @@ function App() {
             <h2 style={{ color: "white", marginTop: 12 }}>
               {" "}
               {patreonObject?.button || ""}{" "}
-    
-
             </h2>
           ) : null}
 
-         <br/>
+          <br />
 
           {/* render chatbot */}
           <div style={{ width: "100%" }}>
@@ -491,12 +446,11 @@ function App() {
                     computePercentage={computePercentage}
                     isDemo={isDemo}
                     moduleName={moduleName}
-                    usersModulesCollectionReference={usersModulesCollectionReference}
+                    usersModulesCollectionReference={
+                      usersModulesCollectionReference
+                    }
                     usersModulesFromDB={usersModulesFromDB}
                     userAuthObject={userAuthObject}
-
-
-
                   />
                 </>
               )}

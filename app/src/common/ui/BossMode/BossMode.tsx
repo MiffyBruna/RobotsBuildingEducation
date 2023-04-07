@@ -1,6 +1,5 @@
 import { ultimateEffeciencyJutsu } from "../ui";
-import roxanaGif from '../../media/images/roxanaGif.gif';
-
+import roxanaGif from "../../media/images/roxanaGif.gif";
 
 export const BossMode = {
   "Boss Mode": {
@@ -23,7 +22,7 @@ export const BossMode = {
       prompts: {
         patreon: {
           completed: false,
-          impact: 1000,
+          impact: 250,
           action: `generate`,
           icon: `✍️`, //`✍️`
           request: `ms. roxana, can you please generate an essay that introduces me to ${ultimateEffeciencyJutsu(
@@ -33,18 +32,18 @@ export const BossMode = {
           spanish: ``,
           tooltip: ``,
         },
-        // inspire: {
-        //   completed: false,
-        //   impact: 100,
-        //   action: `inspire`,
-        //   icon: `⚡`,
-        //   request: `ms. roxana, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
-        //     `Creating Purpose`
-        //   )}?`,
-        //   response: `\n\nSure! Here's a story about a young girl named Surya Vadlamani from India. She was only 11-years-old when she founded a company called SV Robotics. Her company creates innovative robots and have won awards for their designs. What makes her story so inspiring is that she chose to focus on improving technologies in her home country, understanding the need for better robotics in India. She created a space for herself in a male-dominated field at a young age, inspiring the lives of many young girls in the process. Surya is an inspiring example of someone with a clear purpose who chose a problem she wanted to solve, and took a journey to use her skills, creativity and ambition to make real changes.`,
-        //   spanish: ``,
-        //   tooltip: ``,
-        // },
+        inspire: {
+          completed: false,
+          impact: 100,
+          action: `inspire`,
+          icon: `⚡`,
+          request: `ms. roxana, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
+            `Creating Purpose`
+          )}?`,
+          response: `\n\nSure! Here's a story about a young girl named Surya Vadlamani from India. She was only 11-years-old when she founded a company called SV Robotics. Her company creates innovative robots and have won awards for their designs. What makes her story so inspiring is that she chose to focus on improving technologies in her home country, understanding the need for better robotics in India. She created a space for herself in a male-dominated field at a young age, inspiring the lives of many young girls in the process. Surya is an inspiring example of someone with a clear purpose who chose a problem she wanted to solve, and took a journey to use her skills, creativity and ambition to make real changes.`,
+          spanish: ``,
+          tooltip: ``,
+        },
         // summarize: {
         //   completed: false,
         //   impact: 100,
@@ -126,9 +125,7 @@ export const BossMode = {
           spanish: ``,
           tooltip: ``,
         },
-
-
       },
-    }
-  }
+    },
+  },
 };

@@ -7,9 +7,9 @@ export const StyledNavigationContainer = styled.div`
   align-items: center;
   justify-content: center;
   margin: auto;
-  max-width: 100%; 
-  min-width: 100%;  
-  
+  max-width: 100%;
+  min-width: 100%;
+
   /* max-width: 100%; */
   transition: 0.2s all ease-in-out;
   padding: 12px;
@@ -68,36 +68,35 @@ export const StyledModule = styled.button`
         : "#B271D1";
     }};
 
-    text-shadow: 1px 1px 5px black;
-  background-color:
-    ${(props) => {
-      return props.patreonObject.sourceType === 'Boss Mode' ? '#255019' : props.patreonObject.rare
-        ? "#DA830D"
-        : props.patreonObject.highValue
-        ? "#F8B125"
-        : props.patreonObject.new
-        ? "#EC41FF"
-        : props.patreonObject.underConstruction
-        ? "#6A74B4"
-        : "#F099AD";
-    }};
+  text-shadow: 1px 1px 5px black;
+  background-color: ${(props) => {
+    return props.patreonObject.sourceType === "Boss Mode"
+      ? "#590f04"
+      : props.patreonObject.rare
+      ? "#DA830D"
+      : props.patreonObject.highValue
+      ? "#F8B125"
+      : props.patreonObject.new
+      ? "#EC41FF"
+      : props.patreonObject.underConstruction
+      ? "#6A74B4"
+      : "#F099AD";
+  }};
 
   cursor: grab;
   &:hover {
     transform: scale(1.1);
 
-        background: #F5BEFA;  
-
+    background: #f5befa;
   }
 `;
 
 export const StyledLink = styled(Link)`
-
-  background-color:${(props) => {
+  background-color: ${(props) => {
     return props.isBot ? "#8672B7" : "#B271D1";
   }};
 
-  border: 2px solid hotpink; 
+  border: 2px solid hotpink;
   /* max-width: 200px; */
   /* width: ${(props) => {
     return props.isBot ? "40%" : "30%";
@@ -112,42 +111,40 @@ export const StyledLink = styled(Link)`
   /* border-radius: 46%; */
   color: white;
   transition: 0.15s all ease-in-out;
-    text-shadow: 1px 1px 5px black;
-    color: #F5BEFA;
+  text-shadow: 1px 1px 5px black;
+  color: #f5befa;
 
   /* cursor: ${(props) => {
     return props.active ? "grab" : "not-allowed";
   }}; */
 
   &:hover {
-  cursor: ${(props) => {
-    return props.active ? "grab" : "not-allowed";
-  }};
-
-  &:hover {
-    transform: ${(props) => {
-      return props.active ? "scale(1.1)" : "";
+    cursor: ${(props) => {
+      return props.active ? "grab" : "not-allowed";
     }};
 
-    /* background: #B993D6;  /* fallback for old browsers */
-    /* background: -webkit-linear-gradient(to top, #8CA6DB, #B993D6);  Chrome 10-25, Safari 5.1-6 */
-    /* background: linear-gradient(to top, #8CA6DB, #B993D6);  */
-    background-color:${(props) => {
-    return props.isBot ? "#27092D" : "#FF64FF";
-  }};
-    text-shadow: 1px 1px 5px black;
-    color: white;
-    /* box-shadow: 0 14px 28px #340627e0, 0 10px 10px rgba(0, 0, 0, 0.22); */
+    &:hover {
+      transform: ${(props) => {
+        return props.active ? "scale(1.1)" : "";
+      }};
+
+      /* background: #B993D6;  /* fallback for old browsers */
+      /* background: -webkit-linear-gradient(to top, #8CA6DB, #B993D6);  Chrome 10-25, Safari 5.1-6 */
+      /* background: linear-gradient(to top, #8CA6DB, #B993D6);  */
+      background-color: ${(props) => {
+        return props.isBot ? "#27092D" : "#FF64FF";
+      }};
+      text-shadow: 1px 1px 5px black;
+      color: white;
+      /* box-shadow: 0 14px 28px #340627e0, 0 10px 10px rgba(0, 0, 0, 0.22); */
+    }
   }
-}
 `;
 //
 
-
-
 export const StyledPath = styled.button`
   box-sizing: border-box;
-  background-color: #F5BEFA;
+  background-color: #f5befa;
 
   /* max-width: 200px; */
   width: 100%;
@@ -175,8 +172,8 @@ export const StyledPath = styled.button`
     /* background: #B993D6;  /* fallback for old browsers */
     /* background: -webkit-linear-gradient(to top, #8CA6DB, #B993D6);  Chrome 10-25, Safari 5.1-6 */
     /* background: linear-gradient(to top, #8CA6DB, #B993D6);  */
-    background-color: #FF64FF;
-      box-shadow: 0 3px 6px #0b186be2, 0 6px 6px #FFF5CA;
+    background-color: #ff64ff;
+    box-shadow: 0 3px 6px #0b186be2, 0 6px 6px #fff5ca;
     /* box-shadow: 0 14px 28px #340627e0, 0 10px 10px rgba(0, 0, 0, 0.22); */
   }
 `;
@@ -208,17 +205,17 @@ export const StyledPromptButton = styled.button`
   display: flex;
   align-items: center;
   transition: 0.15s all ease-in-out;
+  -webkit-box-shadow: 0px 1px 15px -1px rgba(42, 63, 120, 1);
+  -moz-box-shadow: 0px 1px 15px -1px rgba(42, 63, 120, 1);
+  box-shadow: 0px 1px 15px -1px rgba(42, 63, 120, 1);
 
   &:hover {
     transform: scale(1.1);
   }
 `;
 
-
-
 export let prettyColorPalette = {
-  banner: '#F8B125',
-  paths: '#F5BEFA',
-  softYellowGlow: '#FFF5CA',
-
+  banner: "#F8B125",
+  paths: "#F5BEFA",
+  softYellowGlow: "#FFF5CA",
 };
