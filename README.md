@@ -1,4 +1,8 @@
+This is under development and not a priority yet.
+
 TOC
+
+
 1. Welcome
 2. Projects
 3. Software Business
