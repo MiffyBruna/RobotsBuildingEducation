@@ -15,10 +15,8 @@ export const Passcode = ({
   setGlobalImpactCounter,
   computePercentage,
   patreonObject,
-  handleRandomDemoPressed
+  handleRandomDemoPressed,
 }) => {
-
-
   return (
     <div>
       <h2>Enter Passcode</h2>
@@ -65,7 +63,6 @@ export const Passcode = ({
       <br />
       {patreonObject ? (
         <Demo
-
           userDocumentReference={userDocumentReference}
           databaseUserDocument={databaseUserDocument}
           setDatabaseUserDocument={setDatabaseUserDocument}

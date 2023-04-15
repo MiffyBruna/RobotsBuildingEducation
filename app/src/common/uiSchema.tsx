@@ -5,7 +5,8 @@ import { LittleVillage } from "./ui/26thStreet/LittleVillage";
 import { Creator } from "./ui/Creator/Creator";
 import { Engineer } from "./ui/Engineer/Engineer";
 import { Entrepeneur } from "./ui/Entrepeneur/Entrepeneur";
-import roxanaGif from './media/images/roxanaGif.gif';
+import roxanaGif from "./media/images/roxanaGif.gif";
+import { BossMode } from "./ui/BossMode/BossMode";
 
 //source of truth for views
 
@@ -126,6 +127,8 @@ interface IModule {
 
     //in the future: translate. Dropdown/search + translate Module
   };
+
+  [index: string]: any;
 }
 
 interface ICollection {
@@ -135,24 +138,33 @@ interface IPath {
   Engineer: ICollection;
   Creator: ICollection;
   Entrepeneur: ICollection;
-  "26th Street Labs": ICollection;
+  "RO.₿.E": ICollection;
+  "Boss Mode": ICollection | Record<string, any>;
+  "Raise Ur Hand": ICollection | Record<string, any>;
 }
 
 // be pro customization. Redundancy is fine if it allows for more customization.
 // start uniform. Adjust ChatGPT settings in sandbox and adjust UX here.
 export const ui = (globalUserModulesFromDB = {}): IPath => {
   // can branch this further to reduce JSON size computed when invoked.
-  // console.log("TEST", globalUserModulesFromDB)
-  // console.log("global t", globalUserModulesFromDB);
+
   return {
     Engineer: Engineer,
     Creator: Creator,
     Entrepeneur: Entrepeneur,
-    "26th Street Labs": LittleVillage(globalUserModulesFromDB), // get database sets
-    // "26th Street": LittleVillage,
+    "RO.₿.E": LittleVillage(globalUserModulesFromDB), // get database sets
+    "Boss Mode": BossMode,
+    "Raise Ur Hand": {},
   };
 };
-export let uiPaths = Object.keys(ui());
+export let uiPaths = [
+  "Engineer",
+  "Creator",
+  "Entrepeneur",
+  "RO.₿.E",
+  "Boss Mode",
+  "Raise Ur Hand",
+];
 
 // this manages the view when selected `engineer, creator, business or 26th street`
 export let controlPathVisibilityMap = (visibilityMap, selectedPath) => {
@@ -212,71 +224,50 @@ export let getGlobalImpact = () => {
   return sum;
 };
 
-
 // this is a function that handles devilish things
 // configure it with arguments if you need to get each lesson and do something with it :)
 export const randomLessonGeneratorMachine444 = (globalUserModulesFromDB) => {
-
   let schema = ui(globalUserModulesFromDB);
 
-
   let setOfPaths = [];
-  
-  Object.entries(schema).forEach(path => {
+
+  Object.entries(schema).forEach((path) => {
     setOfPaths.push(path[1]);
-  })
-
-
+  });
 
   let setOfCollections = [];
 
-  setOfPaths.forEach(path => {
-
-    // console.log("collection entry?",     Object.entries(collection));
-
-    Object.entries(path).forEach(collection =>{
-
+  setOfPaths.forEach((path) => {
+    Object.entries(path).forEach((collection) => {
       setOfCollections.push(collection[1]);
-    })
-  })
-
-
-  
-  let setOfModules = [];
-
-  setOfCollections.forEach(collection => {
-
-    Object.entries(collection).forEach(module => {
-      // module 1 = title, may need this
-      setOfModules.push(module[1]);
-    })
+    });
   });
 
+  let setOfModules = [];
 
-  console.log("set of mods", setOfModules);
+  setOfCollections.forEach((collection) => {
+    Object.entries(collection).forEach((module) => {
+      // module 1 = title, may need this
+      setOfModules.push(module[1]);
+    });
+  });
 
+  let randomResult =
+    setOfModules[Math.floor(Math.random() * setOfModules.length)];
 
-
-  let randomResult = setOfModules[Math.floor(Math.random()*setOfModules.length)];
-
-
-  // console.log("result", randomResult)
-  return randomResult
-
-}
-
-
+  return randomResult;
+};
 
 export let RoxanaLoadingAnimation = () => {
-    return (
-      <div>
-        <Spinner animation="grow" variant="info" size="sm">
-          <span className="visually-hidden">Loading...</span>
-        </Spinner>
-        <img width="150px" src={roxanaGif} />
-        <Spinner animation="grow" variant="primary" size="sm">
-          <span className="visually-hidden">Loading...</span>
-        </Spinner>
-      </div>
-    );
-  }
+  return (
+    <div>
+      <Spinner animation="grow" variant="info" size="sm">
+        <span className="visually-hidden">Loading...</span>
+      </Spinner>
+      <img width="150px" src={roxanaGif} />
+      <Spinner animation="grow" variant="primary" size="sm">
+        <span className="visually-hidden">Loading...</span>
+      </Spinner>
+    </div>
+  );
+};

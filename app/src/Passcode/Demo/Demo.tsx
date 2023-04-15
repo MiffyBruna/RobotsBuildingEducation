@@ -2,9 +2,6 @@ import { useEffect, useState } from "react";
 import { ChatGPT } from "../../ChatGPT/ChatGPT";
 import { randomLessonGeneratorMachine444, ui } from "../../common/uiSchema";
 
-
-
-
 export const Demo = ({
   userDocumentReference,
   databaseUserDocument,
@@ -13,10 +10,8 @@ export const Demo = ({
   globalImpactCounter,
   setGlobalImpactCounter,
   computePercentage,
-  patreonObject
+  patreonObject,
 }) => {
-
-  // console.log('run randomDemoGeneratorMachine444', randomLessonGeneratorMachine444());
   return (
     <div>
       <h2 style={{ color: "white", marginTop: 12 }}>

@@ -1,6 +1,10 @@
 import { Link } from "react-router-dom";
 import { uiPaths } from "../common/uiSchema";
-import { StyledNavigationContainer, StyledPath, StyledLink } from "../styles/lazyStyles";
+import {
+  StyledNavigationContainer,
+  StyledPath,
+  StyledLink,
+} from "../styles/lazyStyles";
 
 /**
  *
@@ -12,17 +16,42 @@ export const Paths = ({ handlePathSelection }): JSX.Element => {
   // no exceptions to active prop currently.
   // active prop will handle some styling to display restricted or blocked access
 
-  let display = uiPaths.map((path) => (
-   
-        <StyledLink to="/">
-          <StyledPath path={path} id={path} active onClick={handlePathSelection}>
-        
-            {path !== "Entrepeneur" ? path : "Money"}
+  const top = ["Engineer", "Creator", "Entrepeneur"];
+  const bot = ["RO.₿.E", "Raise Ur Hand", "Boss Mode"];
 
-          </StyledPath>
-        </StyledLink>
-
+  let displayTop = top.map((path) => (
+    <StyledLink
+      active
+      to="/"
+      path={path}
+      id={path}
+      onClick={handlePathSelection}
+    >
+      {path !== "Entrepeneur"
+        ? path.toLocaleLowerCase()
+        : "Dealer".toLocaleLowerCase()}
+    </StyledLink>
   ));
 
-  return <StyledNavigationContainer>{display}</StyledNavigationContainer>;
+  let displayBot = bot.map((path) => (
+    <StyledLink
+      active
+      to="/"
+      path={path}
+      id={path}
+      onClick={handlePathSelection}
+      isBot
+    >
+      {path !== "Entrepeneur"
+        ? path.toLocaleLowerCase()
+        : "Dealer".toLocaleLowerCase()}
+    </StyledLink>
+  ));
+
+  return (
+    <>
+      <StyledNavigationContainer>{displayTop}</StyledNavigationContainer>
+      <StyledNavigationContainer>{displayBot}</StyledNavigationContainer>
+    </>
+  );
 };

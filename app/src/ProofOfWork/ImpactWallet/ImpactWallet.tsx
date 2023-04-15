@@ -10,25 +10,21 @@ import { DiscordButton } from "../../ChatGPT/Prompts/DiscordButton/DiscordButton
 import { doc, getDoc, getDocs } from "firebase/firestore";
 import { Link, useParams } from "react-router-dom";
 
-
 export const ImpactWallet = ({
   databaseUserDocument,
   computePercentage,
   globalImpactCounter,
-  isImpactWalletOpen, 
+  isImpactWalletOpen,
   setIsImpactWalletOpen,
   usersModulesCollectionReference,
   usersModulesFromDB,
-  userAuthObject = { uid: "demo" }
-
+  userAuthObject = { uid: "demo" },
 }) => {
-  // console.log("USER MOD", usersModulesCollectionReference);
-  // console.log("users modules...", usersModulesFromDB)
+  let [databaseUserDocumentCopy, setDatabaseUserDocumentCopy] =
+    useState(databaseUserDocument);
 
-  let [databaseUserDocumentCopy, setDatabaseUserDocumentCopy] = useState(databaseUserDocument);
-  console.log("usx", userAuthObject);
   let params = useParams();
-  console.log("params", params);
+
   let [borderStateForBitcoinButton, setBorderStateForBitcoinButton] = useState({
     border: "1px solid blue",
   });
@@ -46,28 +42,20 @@ export const ImpactWallet = ({
   //   });
   // }
 
-  useEffect(()=>{
+  useEffect(() => {
     // mountWallet();
-    if(params?.profileID && params?.profileID !== userAuthObject?.uid){
+    if (params?.profileID && params?.profileID !== userAuthObject?.uid) {
       const docRef = doc(database, "users", params?.profileID);
       getDoc(docRef).then((res) => {
         if (!res?.data()) {
           // unsafe case?
-        }else{
-          console.log("USER", res?.data());
+        } else {
           setDatabaseUserDocumentCopy(res?.data());
           setIsImpactWalletOpen(true);
-        } 
-      })
+        }
+      });
     }
-
-
-
- 
-
-
-
-  }, [])
+  }, []);
 
   let copyToClipboard = (network) => {
     // Get the text field
@@ -101,18 +89,19 @@ export const ImpactWallet = ({
     <>
       <div>
         <Link to={`/profile/${params?.profileID || userAuthObject?.uid}`}>
-        <Button
-          onClick={() => {
-            logEvent(analytics, "select_content", {
-              content_type: "button",
-              item_id: "Impact Wallet",
-            });
-            setIsImpactWalletOpen(true);
-          }}
-          variant="secondary"
-        >
-          🏦
-        </Button>
+          <Button
+            style={{ textShadow: "2px 2px 12px black" }}
+            onClick={() => {
+              logEvent(analytics, "select_content", {
+                content_type: "button",
+                item_id: "Impact Wallet",
+              });
+              setIsImpactWalletOpen(true);
+            }}
+            variant="secondary"
+          >
+            🏦
+          </Button>
         </Link>
         &nbsp; {databaseUserDocumentCopy?.impact || 0}{" "}
         <div>
@@ -133,7 +122,9 @@ export const ImpactWallet = ({
           closeButton
           style={{ backgroundColor: "black", color: "white" }}
         >
-          <Modal.Title>Impact Wallet @{params?.profileID || userAuthObject?.uid}</Modal.Title>
+          <Modal.Title>
+            Impact Wallet @{params?.profileID || userAuthObject?.uid}
+          </Modal.Title>
         </Modal.Header>
         <Modal.Body
           onHide={() => setIsImpactWalletOpen(false)}
@@ -185,7 +176,8 @@ export const ImpactWallet = ({
               You are &nbsp;
               <b>
                 {(
-                  ((databaseUserDocumentCopy?.impact || 0) / globalImpactCounter) *
+                  ((databaseUserDocumentCopy?.impact || 0) /
+                    globalImpactCounter) *
                   100
                 ).toFixed(2)}
                 %
@@ -199,7 +191,8 @@ export const ImpactWallet = ({
                 }}
                 variant="warning"
                 now={Math.floor(
-                  ((databaseUserDocumentCopy?.impact || 0) / globalImpactCounter) *
+                  ((databaseUserDocumentCopy?.impact || 0) /
+                    globalImpactCounter) *
                     100
                 )}
               />
@@ -209,88 +202,23 @@ export const ImpactWallet = ({
             <div>
               <h1>Real Estate</h1>
               <p style={{ maxWidth: 720 }}>
-                This is an early version of Impact. For now, it will be built in
-                the spirit of it. If you don't believe you can afford a down
-                payment on a home, turn it into a game. Grind out skills you
-                enjoy that make money, save $10,000 in stocks, bitcoin or cash. Learn about the stock market as you save. 
-                With the right setup, thatcan leverage $10,000 into $250,000 rather into a marketable
-                asset. There are good calculations you might not be considering.
+                Under Development. In the meantime, expect material on
               </p>
-              Please sign up the following services if you don't have the
-              following
+
               <ul>
-                <li>A home</li>
                 <li>Credit</li>
-                <li>A retirement account</li>
+                <li>401ks</li>
+                <li>IRAs</li>
+                <li>FHA loans</li>
+                <li>Market Theory</li>
               </ul>
-              <h4>Robinhood IRA</h4>
-              <p style={{ maxWidth: 720 }}>
-                This lets you buy stocks in a retirement account. It pays for
-                itself. It makes me make $20 when you use this link.
-              </p>
-              <br />
-              <a
-                onClick={() =>
-                  logEvent(analytics, "select_promotion", {
-                    creative_name: `https://join.robinhood.com/gold_invite/sheilfz`,
-                    creative_slot: `Robinhood IRA Slot`,
-                    promotion_id: `Robots Building Education Robinhood`,
-                    promotion_name: "advertising_launch",
-                  })
-                }
-                href="https://join.robinhood.com/gold_invite/sheilfz"
-                target={"_blank"}
-                style={{
-                  width: "150px",
-                  border: "1px solid white",
-                  padding: 24,
-                  marginTop: 100,
-                  color: "white",
-                  borderRadius: "6px",
-                }}
-              >
-                Stock Market Retirement Account
-              </a>
-              <br />
-              <br />
-              <br />
-              <h4>Chime Bank</h4>
-              <p style={{ maxWidth: 720 }}>
-                Basically lets you have a debit card that builds credit. No
-                referal link here.
-              </p>
-              <br />
-              <a
-                onClick={() =>
-                  logEvent(analytics, "select_promotion", {
-                    creative_name: `https://www.chime.com/credit-builder/`,
-                    creative_slot: `Chime Credit Builder Slot`,
-                    promotion_id: `Robots Building Education Chime`,
-                    promotion_name: "advertising_launch",
-                  })
-                }
-                href="https://www.chime.com/credit-builder/"
-                target={"_blank"}
-                style={{
-                  width: "150px",
-                  border: "1px solid white",
-                  padding: 24,
-                  marginTop: 100,
-                  color: "white",
-                  borderRadius: "6px",
-                }}
-              >
-                Credit Building With Chime
-              </a>
-              <br />
-              <br />
               <br />
             </div>
             <div>
               <h1>The Bitcoin Reserve</h1>
               <div></div>
               <img src={sheilferBitcoin} width={200} height={250} />
-              <img src={bitcoinReserve} width={200} height={250} />
+
               <br />
               <br />
               <br />
@@ -348,59 +276,29 @@ export const ImpactWallet = ({
                 subscriptions. This is currently the <b>only</b> way I'm
                 monetizing on RO.B.E
               </p>
-              <br />
-              <a
-                onClick={() =>
-                  logEvent(analytics, "select_promotion", {
-                    creative_name: `https://cash.app/app/DBS4H3R`,
-                    creative_slot: `Cash App Slot`,
-                    promotion_id: `Robots Building Education Cash App`,
-                    promotion_name: "advertising_launch",
-                  })
-                }
-                href="https://cash.app/app/DBS4H3R"
-                target={"_blank"}
-                style={{
-                  width: "150px",
-                  border: "1px solid white",
-                  padding: 24,
-                  marginTop: 100,
-                  color: "white",
-                  borderRadius: "6px",
-                }}
-              >
-                Get Cash App
-              </a>
-              <br />
+
               <br />
             </div>
 
             <div>
-              <br/>
+              <br />
               <h1>Education</h1>
-              <div>I'm working on this now so you can share your profile and courses with the world 😊</div>
-              {/* <div style={{border:'1px solid red'}}>
-                {usersModulesFromDB?.map(item =>{
-
-                  return (
-                  <div>
-                  {item[Object.keys(item)[0]]?.button}
-                  </div>
-                )})}
-              </div> */}
+              <div>
+                You can now share your profile 😊 more under development!{" "}
+              </div>
             </div>
             <br />
           </div>
         </Modal.Body>
         <Modal.Footer style={{ backgroundColor: "black", color: "white" }}>
-        <Link to={`/`}>
-          <Button
-            variant="secondary"
-            onClick={() => setIsImpactWalletOpen(false)}
-          >
-   leave
-          </Button>
-        </Link>
+          <Link to={`/`}>
+            <Button
+              variant="secondary"
+              onClick={() => setIsImpactWalletOpen(false)}
+            >
+              leave
+            </Button>
+          </Link>
         </Modal.Footer>
       </Modal>
     </>

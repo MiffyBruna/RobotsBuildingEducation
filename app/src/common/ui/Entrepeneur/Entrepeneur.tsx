@@ -1,10 +1,5 @@
 import { ultimateEffeciencyJutsu } from "../ui";
 
-import bitcoin from "../../videos/bitcoin.mp4";
-import recessionStocks from "../../videos/recessionStocks.mp4";
-import realEstateTechStocks from '../../videos/realEstateTechStocks.mp4';
-import learnToCode from "../../videos/learnToCode.mp4";
-import resumeBuilding from "../../videos/resumeBuilding.mp4";
 
 
 /**
@@ -152,7 +147,7 @@ export const Entrepeneur = {
       sourceType: `video`, // may not need
       button: `Bitcoin & Social Technology`, // may not need - `name`
       header: `Bitcoin & Social Technology`,
-      fileSource: bitcoin, // may not need
+      fileSource: 'https://res.cloudinary.com/eduprojectsil/video/upload/v1674721514/IMG_9186_gfpgwa.mov', // may not need
 
       prompts: {
         patreon: {
@@ -278,7 +273,7 @@ export const Entrepeneur = {
       sourceType: `video`, // may not need
       button: `Tech Recession Investing & Real Estate I`, // may not need - `name`
       header: `Tech Recession Investing & Real Estate I`,
-      fileSource: recessionStocks, // may not need
+      fileSource: 'https://res.cloudinary.com/eduprojectsil/video/upload/v1674721518/IMG_9184_ouquv2.mov', // may not need
 
       prompts: {
         patreon: {
@@ -408,7 +403,7 @@ export const Entrepeneur = {
       sourceType: `video`, // may not need
       button: `Tech Recession Investing & Real Estate II`, // may not need - `name`
       header: `Tech Recession Investing & Real Estate II`,
-      fileSource: realEstateTechStocks, // may not need
+      fileSource: 'https://res.cloudinary.com/eduprojectsil/video/upload/v1674721555/IMG_9183_dbfoes.mov', // may not need
 
       prompts: {
         patreon: {
@@ -667,7 +662,7 @@ export const Entrepeneur = {
       sourceType: `video`, // may not need
       button: `Learn Coding`, // may not need - `name`
       header: `Learn Coding`,
-      fileSource: learnToCode, // may not need
+      fileSource: 'https://res.cloudinary.com/eduprojectsil/video/upload/v1674721517/IMG_9185_wfrmsz.mov', // may not need
 
       prompts: {
         patreon: {
@@ -799,7 +794,7 @@ export const Entrepeneur = {
       sourceType: `video`, // may not need
       button: `Creating Competitive Entry Level Resumes`, // may not need - `name`
       header: `Creating Competitive Entry Level Resumes`,
-      fileSource: resumeBuilding, // may not need
+      fileSource: 'https://res.cloudinary.com/eduprojectsil/video/upload/v1674721555/IMG_9181_mjw1zc.mov', // may not need
 
       prompts: {
         patreon: {
