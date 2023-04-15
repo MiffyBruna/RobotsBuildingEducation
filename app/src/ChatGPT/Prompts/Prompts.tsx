@@ -34,30 +34,31 @@ export const Prompts = ({
     let promptMap =
       currentPath === "Boss Mode"
         ? [
-          !isRaidActive ? (
-            <StyledPromptButton
-              tabindex="0"
-              style={{ display: loadingMessage ? "none" : "flex" }}
-              borderHighlight={borderHighlight}
-              loadingMessage={loadingMessage}
-              onClick={(event) => {
-                if (loadingMessage) {
-                } else {
-                  handleSubmit(
-                    event,
-                    patreonObject.prompts["patreon"],
-                    "patreon",
-                    true
-                  );
-                }
-              }}
-            >
-              <a style={{ color: "white" }}>
-                🦉 &nbsp;
-                {/* {patreonObject.prompts['patreon'].action} */}
-                journey
-              </a>
-            </StyledPromptButton>) :null,
+            !isRaidActive ? (
+              <StyledPromptButton
+                tabindex="0"
+                style={{ display: loadingMessage ? "none" : "flex" }}
+                borderHighlight={borderHighlight}
+                loadingMessage={loadingMessage}
+                onClick={(event) => {
+                  if (loadingMessage) {
+                  } else {
+                    handleSubmit(
+                      event,
+                      patreonObject.prompts["patreon"],
+                      "patreon",
+                      true
+                    );
+                  }
+                }}
+              >
+                <a style={{ color: "white" }}>
+                  🦉 &nbsp;
+                  {/* {patreonObject.prompts['patreon'].action} */}
+                  journey
+                </a>
+              </StyledPromptButton>
+            ) : null,
             // <StyledPromptButton
             //       tabindex="0"
             //       style={{ display: loadingMessage ? "none" : "flex" }}
@@ -203,15 +204,8 @@ export const Prompts = ({
           flexDirection: "column",
         }}
       >
-        <ProofOfWork
-          userAuthObject={userAuthObject}
-          displayName={displayName}
-          databaseUserDocument={databaseUserDocument}
-          computePercentage={computePercentage}
-          globalImpactCounter={globalImpactCounter}
-          usersModulesCollectionReference={usersModulesCollectionReference}
-          usersModulesFromDB={usersModulesFromDB}
-        />
+        {promptMap}
+        <br /> <br />
         <br />
         <Button
           variant="dark"
@@ -224,11 +218,18 @@ export const Prompts = ({
             setIsModalOpen(true);
           }}
         >
-          {patreonObject?.header === "Indocumentadofy"
-            ? "💗 Ver Roxana"
-            : "💗 View Roxana"}
+          💗 Roxana
         </Button>
-
+        <br />
+        <ProofOfWork
+          userAuthObject={userAuthObject}
+          displayName={displayName}
+          databaseUserDocument={databaseUserDocument}
+          computePercentage={computePercentage}
+          globalImpactCounter={globalImpactCounter}
+          usersModulesCollectionReference={usersModulesCollectionReference}
+          usersModulesFromDB={usersModulesFromDB}
+        />
         {/* <DiscordButton /> */}
         <br />
         <br />
@@ -264,8 +265,6 @@ export const Prompts = ({
             </Button>
           </Modal.Footer>
         </Modal>
-
-        {promptMap}
       </div>
     );
   } else {

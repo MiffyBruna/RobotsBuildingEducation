@@ -17,7 +17,7 @@ export const Paths = ({ handlePathSelection }): JSX.Element => {
   // active prop will handle some styling to display restricted or blocked access
 
   const top = ["Engineer", "Creator", "Entrepeneur"];
-  const bot = ["RO.₿.E", "Boss Mode"];
+  const bot = ["RO.₿.E", "Raise Ur Hand", "Boss Mode"];
 
   let displayTop = top.map((path) => (
     <StyledLink
@@ -27,7 +27,9 @@ export const Paths = ({ handlePathSelection }): JSX.Element => {
       id={path}
       onClick={handlePathSelection}
     >
-      {path !== "Entrepeneur" ? path : "Dealer"}
+      {path !== "Entrepeneur"
+        ? path.toLocaleLowerCase()
+        : "Dealer".toLocaleLowerCase()}
     </StyledLink>
   ));
 
@@ -40,7 +42,9 @@ export const Paths = ({ handlePathSelection }): JSX.Element => {
       onClick={handlePathSelection}
       isBot
     >
-      {path !== "Entrepeneur" ? path : "Dealer"}
+      {path !== "Entrepeneur"
+        ? path.toLocaleLowerCase()
+        : "Dealer".toLocaleLowerCase()}
     </StyledLink>
   ));
 

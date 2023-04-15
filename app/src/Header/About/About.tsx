@@ -6,7 +6,8 @@ import phillyd from "./media/phillyd.jpeg";
 import elkhanmigo from "../../common/media/images/elkhanmigo.jpg";
 import { logEvent } from "firebase/analytics";
 import { analytics } from "../../database/firebaseResources";
-export const About = () => {
+import { DiscordButton } from "../../ChatGPT/Prompts/DiscordButton/DiscordButton";
+export const About = ({ auth }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <>
@@ -22,6 +23,27 @@ export const About = () => {
       >
         Learn more
       </Button>
+
+      <br />
+      <br />
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        <DiscordButton />
+      </div>
+      {/* <br />
+      <br /> */}
+      {/* <Button
+        variant="danger"
+        onClick={() => {
+        auth.signOut();
+        }}
+      >
+        Sign Out{" 😭😭😭"}
+      </Button> */}
       <br />
       <br />
 
@@ -47,6 +69,7 @@ export const About = () => {
             <br /> Building <br />
             Education
           </h1>
+          <DiscordButton />
           <p style={{ maxWidth: "100%", width: 700 }}>
             Robots Building Education is a system that converts your learning
             into scholarships. Its goal is to inspire people to pursue the most

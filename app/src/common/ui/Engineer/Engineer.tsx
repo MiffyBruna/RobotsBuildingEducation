@@ -19,7 +19,8 @@ export const Engineer = {
       button: `1. Coding & Logic`, // may not need - `name`
       header: `Foundations: Coding & Logic`,
 
-      fileSource: 'https://res.cloudinary.com/eduprojectsil/video/upload/v1674220062/download_4_xnineu.mp4',
+      fileSource:
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674220062/download_4_xnineu.mp4",
       prompts: {
         patreon: {
           premiumContent: false,
@@ -179,7 +180,8 @@ export const Engineer = {
       sourceType: `video`, // may not need
       button: `2. Data & Functions`, // may not need - `name`
       header: `2. Data & Functions`,
-      fileSource: 'https://res.cloudinary.com/eduprojectsil/video/upload/v1674220121/download_5_q0viph.mp4', // may not need
+      fileSource:
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674220121/download_5_q0viph.mp4", // may not need
 
       prompts: {
         patreon: {
@@ -305,7 +307,8 @@ export const Engineer = {
       sourceType: `video`, // may not need
       button: `3. Creating Objects`, // may not need - `name`
       header: `3. Creating Objects`,
-      fileSource: 'https://res.cloudinary.com/eduprojectsil/video/upload/v1674220184/download_6_mzx1ss.mp4', // may not need
+      fileSource:
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674220184/download_6_mzx1ss.mp4", // may not need
 
       prompts: {
         patreon: {
@@ -429,7 +432,8 @@ export const Engineer = {
       sourceType: `video`, // may not need
       button: `4. Internet Apps`, // may not need - `name`
       header: `4. Internet Apps`,
-      fileSource: 'https://res.cloudinary.com/eduprojectsil/video/upload/v1674220233/download_7_l6kd1z.mp4', // may not need
+      fileSource:
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674220233/download_7_l6kd1z.mp4", // may not need
 
       prompts: {
         patreon: {
@@ -554,7 +558,8 @@ export const Engineer = {
       sourceType: `video`, // may not need
       button: `5. Loops & Counting`, // may not need - `name`
       header: `5. Loops & Counting`,
-      fileSource: 'https://res.cloudinary.com/eduprojectsil/video/upload/v1674220261/download_8_gww39e.mp4', // may not need
+      fileSource:
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674220261/download_8_gww39e.mp4", // may not need
       prompts: {
         patreon: {
           completed: false,
@@ -677,7 +682,8 @@ export const Engineer = {
       sourceType: `video`, // may not need
       button: `6. HTML`, // may not need - `name`
       header: `6. HTML`,
-      fileSource: 'https://res.cloudinary.com/eduprojectsil/video/upload/v1674220287/download_9_uf9kjn.mp4', // may not need
+      fileSource:
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674220287/download_9_uf9kjn.mp4", // may not need
 
       prompts: {
         patreon: {
@@ -802,7 +808,8 @@ export const Engineer = {
       sourceType: `video`, // may not need
       button: `7. CSS`, // may not need - `name`
       header: `7. CSS`,
-      fileSource: 'https://res.cloudinary.com/eduprojectsil/video/upload/v1674220314/download_10_epzusw.mp4', // may not need
+      fileSource:
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674220314/download_10_epzusw.mp4", // may not need
 
       prompts: {
         patreon: {
@@ -928,7 +935,8 @@ export const Engineer = {
       sourceType: `video`, // may not need
       button: `8. React`, // may not need - `name`
       header: `8. React`,
-      fileSource: 'https://res.cloudinary.com/eduprojectsil/video/upload/v1674220343/download_11_whqtek.mp4', // may not need
+      fileSource:
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674220343/download_11_whqtek.mp4", // may not need
 
       prompts: {
         patreon: {
@@ -1053,7 +1061,8 @@ export const Engineer = {
       sourceType: `video`, // may not need
       button: `9. Creating Users`, // may not need - `name`
       header: `9. Creating Users`,
-      fileSource: 'https://res.cloudinary.com/eduprojectsil/video/upload/v1674220377/download_12_adwen3.mp4', // may not need
+      fileSource:
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674220377/download_12_adwen3.mp4", // may not need
 
       prompts: {
         patreon: {
@@ -1177,7 +1186,8 @@ export const Engineer = {
       sourceType: `video`, // may not need
       button: `10. Database Foundations`, // may not need - `name`
       header: `10. Database Foundations`,
-      fileSource: 'https://res.cloudinary.com/eduprojectsil/video/upload/v1674220399/download_13_xxdhvo.mp4', // may not need
+      fileSource:
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674220399/download_13_xxdhvo.mp4", // may not need
 
       prompts: {
         patreon: {
@@ -1300,7 +1310,8 @@ export const Engineer = {
       sourceType: `video`, // may not need
       button: `11. Backend Clouds`, // may not need - `name`
       header: `11. Backend Clouds`,
-      fileSource: 'https://res.cloudinary.com/eduprojectsil/video/upload/v1674220422/download_14_lkehax.mp4', // may not need
+      fileSource:
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674220422/download_14_lkehax.mp4", // may not need
 
       prompts: {
         patreon: {
@@ -1425,7 +1436,8 @@ export const Engineer = {
       sourceType: `video`, // may not need
       button: `12. Operating Systems & Machines`, // may not need - `name`
       header: `12. Operating Systems & Machines`,
-      fileSource: 'https://res.cloudinary.com/eduprojectsil/video/upload/v1674220456/download_15_um5siz.mp4', // may not need
+      fileSource:
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674220456/download_15_um5siz.mp4", // may not need
 
       prompts: {
         patreon: {
@@ -1547,7 +1559,8 @@ export const Engineer = {
       sourceType: `video`, // may not need
       button: `13. Setting Up An App`, // may not need - `name`
       header: `13. Setting Up An App`,
-      fileSource: 'https://res.cloudinary.com/eduprojectsil/video/upload/v1674220489/download_16_lpne2o.mp4', // may not need
+      fileSource:
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674220489/download_16_lpne2o.mp4", // may not need
 
       prompts: {
         patreon: {
@@ -1672,7 +1685,8 @@ export const Engineer = {
       sourceType: `video`, // may not need
       button: `14. Programming Money`, // may not need - `name`
       header: `14. Programming Money`,
-      fileSource: 'https://res.cloudinary.com/eduprojectsil/video/upload/v1674220538/download_17_snhdb6.mp4', // may not need
+      fileSource:
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674220538/download_17_snhdb6.mp4", // may not need
 
       prompts: {
         patreon: {
@@ -1794,7 +1808,8 @@ export const Engineer = {
       sourceType: `video`, // may not need
       button: `15. Creating Database`, // may not need - `name`
       header: `15. Creating Database`,
-      fileSource: 'https://res.cloudinary.com/eduprojectsil/video/upload/v1674220555/download_18_uv5kve.mp4', // may not need
+      fileSource:
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674220555/download_18_uv5kve.mp4", // may not need
 
       prompts: {
         patreon: {
@@ -1920,7 +1935,8 @@ export const Engineer = {
       sourceType: `video`, // may not need
       button: `16. Working Together`, // may not need - `name`
       header: `16. Working Together`,
-      fileSource: 'https://res.cloudinary.com/eduprojectsil/video/upload/v1674220688/download_vm66up.mp4', // may not need
+      fileSource:
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674220688/download_vm66up.mp4", // may not need
 
       prompts: {
         patreon: {
@@ -2034,121 +2050,7 @@ export const Engineer = {
     },
   },
   "Get Experience": {
-    "Build For Undocumented": {
-      documentID: ``,
-      filler: ``,
-      new: false,
-      highValue: false,
-      underConstruction: false,
-      hasCode: true,
-      completed: false,
-      rare: true,
-      needsImprovement: false,
-      tooltip: ``,
-      sourceType: `markdown`, // may not need
-      button: `Indocumentadofy`, // may not need - `name`
-      header: `Indocumentadofy`,
-      fileSource: await import("../../markdowns/indocumentadofy.md?raw"), // may not need
-
-      prompts: {
-        patreon: {
-          completed: false,
-          impact: 1000,
-          action: `generar`,
-          icon: `✍️`,
-          request: `em. roxana, ¿puedes generar un ensayo que cubra las oportunidades de consulta como inmigrante indocumentado con el marco Hydrogen de Shopify?`,
-          response: `null`,
-          spanish: true,
-          tooltip: ``,
-        },
-        inspire: {
-          dynamicContent: true,
-          completed: false,
-          impact: 100,
-          action: `inspirar`,
-          icon: `⚡`,
-          request: `Roxana, ¿puedes compartir cómo los inmigrantes indocumentados pueden aprender a construir cosas con herramientas como Hydrogen de Shopify para ganarse la vida en español?`,
-          response: `\n\nEn primer lugar, recomendaría a los inmigrantes indocumentados que investiguen y familiaricen con el software Hydrogen de Shopify que es una herramienta de creación de sitios web que le permite a los usuarios crear hermosas tiendas de comercio electrónico sin tener que aprender lenguajes de programación como HTML o CSS. Descargar el software es fácil y gratuito, y hay mucha documentación en línea disponible para guiarles a través del proceso. Después de descargarlo e iniciar sesión, también pueden encontrar tutorías en línea ofrecidas en español para ayudarles a aprender cómo usarlo y cómo configurar una tienda exitosa. Una vez que han desarrollado el conocimiento y la habilidad necesarios, pueden usar Hydrogen para crear tiendas en línea y vender productos a clientes de todo el mundo. Esta es una excelente oportunidad para aquellos inmigrantes que buscan construir una vida exitosa de manera independiente.`,
-          spanish: true,
-          tooltip: ``,
-        },
-        summarize: {
-          completed: false,
-          impact: 100,
-          action: `resumir`,
-          icon: `📚`,
-          request: `Roxanita ¿Puedes resumir cómo construir tecnología con el marco de Hydrogen de Shopify?`,
-          response:
-            "\n\nEl marco de Hydrogen de Shopify proporciona las herramientas necesarias para construir y gestionar una tienda en línea de manera eficiente. A través de la interfaz de usuario intuitiva, los usuarios pueden configurar los productos, imágenes, páginas y contenidos en cuestión de minutos. Te permite configurar opciones de pago, precios y descuentos para diversos productos. El marco también le permite a los usuarios administrar el inventario, realizar publicaciones de pedidos, recopilar información de clientes y almacenar datos de forma segura. Además, le ofrece protección contra fraudes y herramientas integradas de marketing para impulsar el crecimiento de la tienda.",
-          spanish: true,
-          tooltip: ``,
-        },
-        ask: {
-          completed: false,
-          impact: 100,
-          action: `preguntar`,
-          icon: `🔮`,
-          request: `Roxanota, ¿puedes mostrarme tres preguntas frecuentes para principiantes sobre la consultoría como inmigrante indocumentado con el marco Hydrogen de Shopify?`,
-          response: `\n\n1. ¿Existe un límite específico para las cantidades en las que puedo cobrar como inmigrante indocumentado a través de la plataforma de Shopify Hydrogen? \n2. ¿Cómo puedo conectar mi cuenta de Shopify para comenzar a brindar servicios de consultoría a través de Hydrogen? \n3. ¿Hay alguna forma de proteger mis derechos como inmigrante indocumentado mientras ofrezco servicios de consultoría a través del marco Hydrogen de Shopify?`,
-          spanish: true,
-          tooltip: ``,
-        },
-        guide: {
-          completed: false,
-          impact: 100,
-          action: `guía`,
-          icon: `🤝`,
-          request: `señorita roxana, ¿puede crear una guía de estudio para consultar como inmigrante indocumentado con el marco Hydrogen de Shopify con 10 viñetas?`,
-          response: `\n\n1. Investigue Hydrogen de Shopify y familiarícese con las diferentes características y capacidades que ofrece.\n2. Comprenda las implicaciones legales cuando trabaja como inmigrante indocumentado con Hydrogen de Shopify.\n3. Utilice los recursos disponibles, como como tutoriales y materiales de apoyo disponibles.\n4. Adquiera conocimientos sobre las herramientas y técnicas compatibles con Hydrogen de Shopify.\n5. Asegúrese de que su trabajo esté listo para su carpeta de trabajos y pueda ser presentado a posibles empleadores.\n6. Desarrolle una comprensión de cómo se debe estructurar el proyecto, incluidos el cronograma y los objetivos.\n7. Conozca las oportunidades de mercado disponibles para usar Hydrogen de Shopify.\n8. Desarrolle la capacidad de solucionar y resolver cualquier problema técnico que pueda surgir.\n9. Conéctese con varias empresas y redes que usan Hydrogen de Shopify para desarrollar una red de posibles empleadores y socios.\n10. Manténgase actualizado sobre el avance de Hydrogen de Shopify para asegurarse de que puede aprovechar era de todas las nuevas capacidades`,
-          spanish: true,
-          tooltip: ``,
-        },
-        demonstrate: {
-          completed: false,
-          impact: 100,
-          action: `demostrar`,
-          icon: `🧿`,
-          request: `mama roxana, ¿puedes mostrarme un ejemplo de cómo Shopify construye aplicaciones con el marco Hydrogen de Shopify en español con javascript?`,
-          response:
-            "\n\nSí, puedo. Esto es un ejemplo básico de una aplicación construida con el marco de Shopify Hydrogen y JavaScript en español: \n\n// Crear un modelo de aplicación\n// Este modelo describirá una entidad de la aplicación\nvar AppModelo = Hydrogen.Modelo.extend({\n  // Definimos los atributos\n  campos: {\n    titulo: String,\n    descripcion: String,\n    precio: Numero\n  }\n});\n\n// Crear una vista de la aplicación\n// Esta vista mostrará la entidad en la aplicación\nvar AppVista = Hydrogen.Vista.extend({\n  // Establecer el modelo de la vista\n  modelo: AppModelo,\n  // Establecer la plantilla \n  plantilla: `\n   <div> \n      <h2>{{ titulo }}</h2>\n      <p>{{ descripcion }}</p>\n      <p>Precio: {{ precio }}</p>\n   </div>\n  `,\n  // Establecer los datos iniciales\n  datosIniciales: {\n    titulo: '',\n    descripcion: '',\n    precio: 0\n  }\n});\n\n// Instanciar el modelo de la aplicación\nvar miModelo = new AppModelo({\n  // Establecer los valores de los atributos\n  titulo: 'Mi Aplicación',\n  descripcion: 'Una aplicación increíble',\n  precio: 999\n});\n\n// Instanciar la vista de la aplicación\nvar miVista = new AppVista({\n  modelo: miModelo\n});\n\n// Renderizar la vista\nmiVista.renderizar();",
-          spanish: true,
-
-          tooltip: ``,
-        },
-        define: {
-          completed: false,
-          impact: 100,
-          action: `definir`, // may not need
-          icon: `👾`, // may not need
-          request: `roxis, ¿puedes definir oportunidades para consultar como inmigrante indocumentado con el marco Hydrogen de Shopify en exactamente una oración?`,
-          response: `\n\nLas oportunidades de consulta como inmigrante indocumentado con el marco Hydrogen de Shopify proporcionan recursos y acceso a los servicios pertinentes para apoyar la actividad comercial.`,
-          spanish: true,
-          tooltip: ``,
-        },
-
-        quiz: {
-          completed: false,
-          impact: 100,
-          action: `prueba`,
-          icon: `🧪`,
-          request: `mamachota roxana, ¿puedes escribir un cuestionario de 3 preguntas para principiantes que sea desafiante sobre la consultoría como inmigrante indocumentado con el marco Hydrogen de Shopify?`,
-          response: `\n\n1. ¿Hay políticas o trámites adicionales que deberían completarse cuando se trabaja en el marco Hydrogen de Shopify como inmigrante indocumentado? \n\n2. ¿Cuáles son algunas técnicas aconsejables para respaldar la seguridad y la privacidad de los datos personales al utilizar el marco Hydrogen de Shopify? \n\n3. ¿Cuáles son las consideraciones especiales a tener en cuenta al necesitar colaboradores o asesores para trabajar legalmente como inmigrante indocumentado en el marco Hydrogen de Shopify?`,
-          spanish: true,
-          tooltip: ``,
-        },
-        shop: {
-          completed: false,
-          impact: 100,
-          action: `comercio`,
-          icon: `🛍️`,
-          request: `Muy bien hermano, muéstrame lo que tienes. Quiero comprar y apoyar más esta red.`,
-          response: `¡excelente! Eche un vistazo a nuestros patrocinadores que apoyan el crecimiento de Robots Building Education aquí: un día :)`,
-          spanish: true,
-          tooltip: ``,
-        },
-      },
-    },
-    "Build For Community": {
+    "Robots Building Education": {
       documentID: ``,
       filler: ``,
       new: false,
@@ -2159,7 +2061,7 @@ export const Engineer = {
       rare: true,
       tooltip: ``,
       sourceType: `markdown`, // may not need
-      button: `Universal Basic Income`, // may not need - `name`
+      button: `Robots Building Education`, // may not need - `name`
       header: `Robots Building Education`,
       fileSource: await import("../../markdowns/learn.md?raw"), // may not need
 
@@ -2271,257 +2173,494 @@ export const Engineer = {
         },
       },
     },
-    "Build For Teachers": {
-      documentID: ``,
-      filler: ``,
-      new: false,
-      highValue: true,
-      underConstruction: false,
-      completed: false,
-      needsImprovement: false,
-      tooltip: ``,
-      sourceType: `markdown`, // may not need
-      button: `Pedagogy`, // may not need - `name`
-      header: `Educate`,
-      fileSource: await import("../../markdowns/educate.md?raw"), // may not need
+    // "Build For Undocumented": {
+    //   documentID: ``,
+    //   filler: ``,
+    //   new: false,
+    //   highValue: false,
+    //   underConstruction: false,
+    //   hasCode: true,
+    //   completed: false,
+    //   rare: true,
+    //   needsImprovement: false,
+    //   tooltip: ``,
+    //   sourceType: `markdown`, // may not need
+    //   button: `Indocumentadofy`, // may not need - `name`
+    //   header: `Indocumentadofy`,
+    //   fileSource: await import("../../markdowns/indocumentadofy.md?raw"), // may not need
 
-      prompts: {
-        patreon: {
-          completed: false,
-          impact: 1000,
-          action: `generate`,
-          icon: `✍️`,
-          request: `ms. roxana, can you please generate an essay that introduces me to ${ultimateEffeciencyJutsu(
-            `Build For Teachers`
-          )}?`,
-          response: `null`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        inspire: {
-          completed: false,
-          impact: 100,
-          action: `inspire`,
-          icon: `⚡`,
-          request: `ms. roxana, can you please share how an app like ${ultimateEffeciencyJutsu(
-            `Build For Teachers`
-          )} would be useful?`,
-          response: `\n\nGitHub for teachers would be a great way for educators to share resources and collaborate on projects, discuss teaching methods and topics, and generally support each other. Teachers could use it to find, share, and discuss high-quality teaching resources, ranging from lesson plans to instructional materials and activities. Teachers could post questions and look for advice and troubleshooting ideas, or connect with colleagues in different states or countries to gain another perspective. With GitHub for teachers, collaboration would become easier, enabling teachers to collaborate on large projects with fewer IT headaches and time constraints.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        summarize: {
-          completed: false,
-          impact: 100,
-          action: `summarize`,
-          icon: `📚`,
-          request: `ms. roxana, can you please summarize the basics of how an app like ${ultimateEffeciencyJutsu(
-            `Build For Teachers`
-          )} would work?`,
-          response: `\n\nGitHub for teachers is an app that makes it easy for teachers to collaborate and share materials with other teachers by using version-control and git repository, which are services that enable users to track changes to files over time. It provides a simple way for teachers to store, share and access lesson plans, worksheets, and other teaching materials with peers. Using GitHub for teachers, teachers can create private, public, and \"organization\" repositories. Repositories are collections of folders and files related to a particular lesson or project. When changes are made to a file, the repository automatically records and stores a version of the file that can be referenced in the future. In addition to collaboration, teachers can also use the app to assess student work, request feedback from other teachers and mentors on lesson plans, and track the progress of their teaching materials over time.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        ask: {
-          completed: false,
-          impact: 100,
-          action: `ask`,
-          icon: `🔮`,
-          request: `ms. roxana, can you please show me three frequently asked beginner questions about an app designed like ${ultimateEffeciencyJutsu(
-            `Build For Teachers`
-          )} with one sentence answers?`,
-          response: `\n\n1. How do I create a classroom on the app? - You can create a classroom by registering for your account and following the setup instructions. \n2. How do I invite my students to a classroom? - You can invite your students through the app by clicking the \"Invite Student\" button in the classroom settings.\n3. What can I do with the app? - The app allows teachers to create and manage classrooms, assign tasks and assignments, track student progress, and more.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        guide: {
-          completed: false,
-          impact: 100,
-          action: `guide`,
-          icon: `🤝`,
-          request: `ms. roxana, can you please create a study guide for app designed like ${ultimateEffeciencyJutsu(
-            `Build For Teachers`
-          )}?`,
-          response: `\n\n1. Understand the features and functionality of the GitHub app designed for teachers.\n2. Familiarize yourself with the user interface and navigation of the app.\n3. Become familiarized with the different ways that students can submit work via the app.\n4. Set up notifications for new assignments and due dates to ensure students stay on track.\n5. Use the gradebook feature to track student progress and share feedback easily with students.\n6. Explore options for different ways to assess student performance, such as rubrics and PDFs.\n7. Understand how to easily share resources, such as reading material, videos, and worksheets with the entire class or individual students.\n8. Utilize the messaging feature to communicate with other teachers and collaborate on projects.\n9. Familiarize yourself with the app’s security and privacy settings to ensure student data is safe and secure.\n10. Conduct research on best practices for using the app more effectively as a tool for learning.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        demonstrate: {
-          completed: false,
-          impact: 100,
-          action: `demonstrate`,
-          icon: `🧿`,
-          request: `ms. roxana, can you please show me an example of how an app like ${ultimateEffeciencyJutsu(
-            `Build For Teachers`
-          )} would work?`,
-          response: `\n\nGitHub for teachers is an app that would allow teachers to store their lesson plans, project ideas, digital materials, student assignments, and other educational documents in the cloud. It would also make it easy for teachers to collaborate with colleagues by sharing these documents or adding comments/feedback to them. With the app, teachers would be able to securely back up their work, track changes to documents over time, and easily collaborate with colleagues. It would also allow teachers to easily search for other educators’ education-related documents or materials, which could help them stay up-to-date on the latest best practices and educational ideas.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        define: {
-          completed: false,
-          impact: 100,
-          action: `define`, // may not need
-          icon: `👾`, // may not need
-          request: `ms. roxana, can you please define an app like ${ultimateEffeciencyJutsu(
-            `Build For Teachers`
-          )} in exactly one sentence?`,
-          response: `\n\nGitHub is a version control platform that helps teachers store, organize, and collaborate on teaching materials.`,
-          spanish: ``,
-          tooltip: ``,
-        },
+    //   prompts: {
+    //     patreon: {
+    //       completed: false,
+    //       impact: 1000,
+    //       action: `generar`,
+    //       icon: `✍️`,
+    //       request: `em. roxana, ¿puedes generar un ensayo que cubra las oportunidades de consulta como inmigrante indocumentado con el marco Hydrogen de Shopify?`,
+    //       response: `null`,
+    //       spanish: true,
+    //       tooltip: ``,
+    //     },
+    //     inspire: {
+    //       dynamicContent: true,
+    //       completed: false,
+    //       impact: 100,
+    //       action: `inspirar`,
+    //       icon: `⚡`,
+    //       request: `Roxana, ¿puedes compartir cómo los inmigrantes indocumentados pueden aprender a construir cosas con herramientas como Hydrogen de Shopify para ganarse la vida en español?`,
+    //       response: `\n\nEn primer lugar, recomendaría a los inmigrantes indocumentados que investiguen y familiaricen con el software Hydrogen de Shopify que es una herramienta de creación de sitios web que le permite a los usuarios crear hermosas tiendas de comercio electrónico sin tener que aprender lenguajes de programación como HTML o CSS. Descargar el software es fácil y gratuito, y hay mucha documentación en línea disponible para guiarles a través del proceso. Después de descargarlo e iniciar sesión, también pueden encontrar tutorías en línea ofrecidas en español para ayudarles a aprender cómo usarlo y cómo configurar una tienda exitosa. Una vez que han desarrollado el conocimiento y la habilidad necesarios, pueden usar Hydrogen para crear tiendas en línea y vender productos a clientes de todo el mundo. Esta es una excelente oportunidad para aquellos inmigrantes que buscan construir una vida exitosa de manera independiente.`,
+    //       spanish: true,
+    //       tooltip: ``,
+    //     },
+    //     summarize: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `resumir`,
+    //       icon: `📚`,
+    //       request: `Roxanita ¿Puedes resumir cómo construir tecnología con el marco de Hydrogen de Shopify?`,
+    //       response:
+    //         "\n\nEl marco de Hydrogen de Shopify proporciona las herramientas necesarias para construir y gestionar una tienda en línea de manera eficiente. A través de la interfaz de usuario intuitiva, los usuarios pueden configurar los productos, imágenes, páginas y contenidos en cuestión de minutos. Te permite configurar opciones de pago, precios y descuentos para diversos productos. El marco también le permite a los usuarios administrar el inventario, realizar publicaciones de pedidos, recopilar información de clientes y almacenar datos de forma segura. Además, le ofrece protección contra fraudes y herramientas integradas de marketing para impulsar el crecimiento de la tienda.",
+    //       spanish: true,
+    //       tooltip: ``,
+    //     },
+    //     ask: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `preguntar`,
+    //       icon: `🔮`,
+    //       request: `Roxanota, ¿puedes mostrarme tres preguntas frecuentes para principiantes sobre la consultoría como inmigrante indocumentado con el marco Hydrogen de Shopify?`,
+    //       response: `\n\n1. ¿Existe un límite específico para las cantidades en las que puedo cobrar como inmigrante indocumentado a través de la plataforma de Shopify Hydrogen? \n2. ¿Cómo puedo conectar mi cuenta de Shopify para comenzar a brindar servicios de consultoría a través de Hydrogen? \n3. ¿Hay alguna forma de proteger mis derechos como inmigrante indocumentado mientras ofrezco servicios de consultoría a través del marco Hydrogen de Shopify?`,
+    //       spanish: true,
+    //       tooltip: ``,
+    //     },
+    //     guide: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `guía`,
+    //       icon: `🤝`,
+    //       request: `señorita roxana, ¿puede crear una guía de estudio para consultar como inmigrante indocumentado con el marco Hydrogen de Shopify con 10 viñetas?`,
+    //       response: `\n\n1. Investigue Hydrogen de Shopify y familiarícese con las diferentes características y capacidades que ofrece.\n2. Comprenda las implicaciones legales cuando trabaja como inmigrante indocumentado con Hydrogen de Shopify.\n3. Utilice los recursos disponibles, como como tutoriales y materiales de apoyo disponibles.\n4. Adquiera conocimientos sobre las herramientas y técnicas compatibles con Hydrogen de Shopify.\n5. Asegúrese de que su trabajo esté listo para su carpeta de trabajos y pueda ser presentado a posibles empleadores.\n6. Desarrolle una comprensión de cómo se debe estructurar el proyecto, incluidos el cronograma y los objetivos.\n7. Conozca las oportunidades de mercado disponibles para usar Hydrogen de Shopify.\n8. Desarrolle la capacidad de solucionar y resolver cualquier problema técnico que pueda surgir.\n9. Conéctese con varias empresas y redes que usan Hydrogen de Shopify para desarrollar una red de posibles empleadores y socios.\n10. Manténgase actualizado sobre el avance de Hydrogen de Shopify para asegurarse de que puede aprovechar era de todas las nuevas capacidades`,
+    //       spanish: true,
+    //       tooltip: ``,
+    //     },
+    //     demonstrate: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `demostrar`,
+    //       icon: `🧿`,
+    //       request: `mama roxana, ¿puedes mostrarme un ejemplo de cómo Shopify construye aplicaciones con el marco Hydrogen de Shopify en español con javascript?`,
+    //       response:
+    //         "\n\nSí, puedo. Esto es un ejemplo básico de una aplicación construida con el marco de Shopify Hydrogen y JavaScript en español: \n\n// Crear un modelo de aplicación\n// Este modelo describirá una entidad de la aplicación\nvar AppModelo = Hydrogen.Modelo.extend({\n  // Definimos los atributos\n  campos: {\n    titulo: String,\n    descripcion: String,\n    precio: Numero\n  }\n});\n\n// Crear una vista de la aplicación\n// Esta vista mostrará la entidad en la aplicación\nvar AppVista = Hydrogen.Vista.extend({\n  // Establecer el modelo de la vista\n  modelo: AppModelo,\n  // Establecer la plantilla \n  plantilla: `\n   <div> \n      <h2>{{ titulo }}</h2>\n      <p>{{ descripcion }}</p>\n      <p>Precio: {{ precio }}</p>\n   </div>\n  `,\n  // Establecer los datos iniciales\n  datosIniciales: {\n    titulo: '',\n    descripcion: '',\n    precio: 0\n  }\n});\n\n// Instanciar el modelo de la aplicación\nvar miModelo = new AppModelo({\n  // Establecer los valores de los atributos\n  titulo: 'Mi Aplicación',\n  descripcion: 'Una aplicación increíble',\n  precio: 999\n});\n\n// Instanciar la vista de la aplicación\nvar miVista = new AppVista({\n  modelo: miModelo\n});\n\n// Renderizar la vista\nmiVista.renderizar();",
+    //       spanish: true,
 
-        quiz: {
-          completed: false,
-          impact: 100,
-          action: `quiz`,
-          icon: `🧪`,
-          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about an app designed like ${ultimateEffeciencyJutsu(
-            `Build For Teachers`
-          )}?`,
-          response: `\n\n1. What is the main purpose of an app designed like GitHub for teachers?\n2. What type of information can teachers store using an app like GitHub?\n3. What features of GitHub make it particularly useful for teachers?`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        shop: {
-          completed: false,
-          impact: 100,
-          action: `shop`,
-          icon: `🛍️`,
-          request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
-          response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-      },
-    },
-    "Social Chat": {
-      documentID: ``,
-      filler: ``,
-      new: false,
-      highValue: false,
-      underConstruction: false,
-      completed: false,
-      needsImprovement: false,
-      tooltip: ``,
-      sourceType: `markdown`, // may not need
-      button: `Tap In Chat`, // may not need - `name`
-      header: `Subscribe to read DMs`,
-      fileSource: await import("../../markdowns/chatApp.md?raw"), // may not need
+    //       tooltip: ``,
+    //     },
+    //     define: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `definir`, // may not need
+    //       icon: `👾`, // may not need
+    //       request: `roxis, ¿puedes definir oportunidades para consultar como inmigrante indocumentado con el marco Hydrogen de Shopify en exactamente una oración?`,
+    //       response: `\n\nLas oportunidades de consulta como inmigrante indocumentado con el marco Hydrogen de Shopify proporcionan recursos y acceso a los servicios pertinentes para apoyar la actividad comercial.`,
+    //       spanish: true,
+    //       tooltip: ``,
+    //     },
 
-      prompts: {
-        patreon: {
-          completed: false,
-          impact: 1000,
-          action: `generate`,
-          icon: `✍️`,
-          request: `ms. roxana, can you please generate an essay that introduces me to ${ultimateEffeciencyJutsu(
-            `Social Chat`
-          )}?`,
-          response: `null`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        inspire: {
-          completed: false,
-          impact: 100,
-          action: `inspire`,
-          icon: `⚡`,
-          request: `ms. roxana, can you please explain how a ${ultimateEffeciencyJutsu(
-            `Social Chat`
-          )} can be useful?`,
-          response:
-            "\n\nChat apps that allow users to subscribe to other people's private chats can be a great way to stay connected and up to date with friends and family. Since these chats are private, they often contain more intimate conversations, giving users a better insight into the people they're subscribing to. Additionally, these chats can be used as an important part of staying in touch with those that are important to you, allowing you to receive regular updates and comments.",
-          spanish: ``,
-          tooltip: ``,
-        },
-        summarize: {
-          completed: false,
-          impact: 100,
-          action: `summarize`,
-          icon: `📚`,
-          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
-            `Social Chat`
-          )}?`,
-          response:
-            "\n\nA chat app with private chat subscriptions allows users to subscribe to private conversations between two people or groups. Users must provide their personal details to verify their identity and be approved as a subscriber. This allows subscribers to message and communicate with the participants involved in the private chat, as well as post comments. Subscribers must be approved by the participants to follow the private conversations.",
-          spanish: ``,
-          tooltip: ``,
-        },
-        ask: {
-          completed: false,
-          impact: 100,
-          action: `ask`,
-          icon: `🔮`,
-          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
-            `Social Chat`
-          )} with one sentence answers?`,
-          response: `\n\n1. What is a chat app? - A chat app is an application that allows users to send and receive text, audio and/or visual messages. \n\n2. How do I subscribe to someone's private chat? - You can subscribe to someone's private chat by visiting their profile page and selecting the \"Subscribe\" option. \n\n3. How do I start a chat with someone? - You can start a chat with someone by selecting the chat icon in the top navigation bar and selecting the person you'd like to chat with.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        guide: {
-          completed: false,
-          impact: 100,
-          action: `guide`,
-          icon: `🤝`,
-          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
-            `Social Chat`
-          )}?`,
-          response: `\n\nStudy Guide for a Chat App: \n1. Understand the concept of private chatting and why users may want to use this feature. \n2. Learn the different types of private chat features available in the app.\n3. Become familiar with the functions available in private chats.\n4. Explore the process for subscribing to someone’s private chat.\n5. Understand the benefits of subscribing to private chats.\n6. Learn about user privacy and security in private chats.\n7. Research the security policy for private chats.\n8. Examine application speed and reliability for private chats.\n9. Learn about the cost associated with private chatting. \n10. Test various private chat features and assess the user experience.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        demonstrate: {
-          completed: false,
-          impact: 100,
-          action: `demonstrate`,
-          icon: `🧿`,
-          request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
-            `Social Chat`
-          )}`,
-          response:
-            "\n\nRather than creating group chats with others, people would network and communicate with one another privately, but publicly allowing their chats to be read by outsiders.",
-          spanish: ``,
-          tooltip: ``,
-        },
-        define: {
-          completed: false,
-          impact: 100,
-          action: `define`, // may not need
-          icon: `👾`, // may not need
-          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
-            `Social Chat`
-          )} in exactly one sentence?`,
-          response: `\n\nA chat app that allows users to subscribe to and follow private conversations between individuals.`,
-          spanish: ``,
-          tooltip: ``,
-        },
+    //     quiz: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `prueba`,
+    //       icon: `🧪`,
+    //       request: `mamachota roxana, ¿puedes escribir un cuestionario de 3 preguntas para principiantes que sea desafiante sobre la consultoría como inmigrante indocumentado con el marco Hydrogen de Shopify?`,
+    //       response: `\n\n1. ¿Hay políticas o trámites adicionales que deberían completarse cuando se trabaja en el marco Hydrogen de Shopify como inmigrante indocumentado? \n\n2. ¿Cuáles son algunas técnicas aconsejables para respaldar la seguridad y la privacidad de los datos personales al utilizar el marco Hydrogen de Shopify? \n\n3. ¿Cuáles son las consideraciones especiales a tener en cuenta al necesitar colaboradores o asesores para trabajar legalmente como inmigrante indocumentado en el marco Hydrogen de Shopify?`,
+    //       spanish: true,
+    //       tooltip: ``,
+    //     },
+    //     shop: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `comercio`,
+    //       icon: `🛍️`,
+    //       request: `Muy bien hermano, muéstrame lo que tienes. Quiero comprar y apoyar más esta red.`,
+    //       response: `¡excelente! Eche un vistazo a nuestros patrocinadores que apoyan el crecimiento de Robots Building Education aquí: un día :)`,
+    //       spanish: true,
+    //       tooltip: ``,
+    //     },
+    //   },
+    // },
+    // "Build For Community": {
+    //   documentID: ``,
+    //   filler: ``,
+    //   new: false,
+    //   highValue: false,
+    //   underConstruction: true,
+    //   completed: false,
+    //   needsImprovement: false,
+    //   rare: true,
+    //   tooltip: ``,
+    //   sourceType: `markdown`, // may not need
+    //   button: `Universal Basic Income`, // may not need - `name`
+    //   header: `Robots Building Education`,
+    //   fileSource: await import("../../markdowns/learn.md?raw"), // may not need
 
-        quiz: {
-          completed: false,
-          impact: 100,
-          action: `quiz`,
-          icon: `🧪`,
-          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
-            `Social Chat`
-          )}?`,
-          response: `\n\n1. What is the most important security feature of a chat app that allows users to subscribe to private chats?\n\n2. How does the chat app appreciate the data privacy of its users who subscribe to private chats?\n\n3. How does the chat app monitor the activities of users who subscribe to private chats to ensure they remain secure and private?`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        shop: {
-          completed: false,
-          impact: 100,
-          action: `shop`,
-          icon: `🛍️`,
-          request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
-          response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-      },
-    },
+    //   prompts: {
+    //     patreon: {
+    //       completed: false,
+    //       impact: 1000,
+    //       action: `generate`,
+    //       icon: `✍️`,
+    //       request: `ms. roxana, can you please generate an essay that introduces me to ${ultimateEffeciencyJutsu(
+    //         `Build For Community`
+    //       )}?`,
+    //       response: `null`,
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+    //     inspire: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `inspire`,
+    //       icon: `⚡`,
+    //       request: `ms. roxana, can you please share a potential future with the ${ultimateEffeciencyJutsu(
+    //         `Build For Community`
+    //       )}?`,
+    //       response: `\n\nSure! In the future, it's possible that bitcoin, automation, and universal basic income could all converge to create a new form of financial system. Under this system, individuals could receive an automated universal basic income that is denominated in a uniform cryptocurrency, such as Bitcoin, giving individuals the freedom to purchase goods and services instantly and securely using a digital payment method. In addition, individuals would have access to a multitude of automated tools to manage their finances, such as automated savings and investments tools that maximize returns and minimize risk. This system could also help to reduce poverty and inequality, as it would make it easy for everyone to access basic financial services, regardless of location or class.`,
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+    //     summarize: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `summarize`,
+    //       icon: `📚`,
+    //       request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
+    //         `Build For Community`
+    //       )}?`,
+    //       response: `\n\nBitcoin relies heavily on automation. Automation is the integration of technology in the process of completing certain tasks, and it helps to reduce the need for human labor. Bitcoin transactions are almost entirely automated, and this automation creates a strong case for the implementation of universal basic income (UBI). UBI is a system whereby citizens of a state receive a regular monthly allowance from the government, regardless of their economic standing or whether or not they are currently employed. Automation and the increasing presence of cryptocurrencies like Bitcoin can provide the economic mechanisms for implementing a UBI system, and so it can be seen that the two are linked.`,
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+    //     ask: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `ask`,
+    //       icon: `🔮`,
+    //       request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
+    //         `Build For Community`
+    //       )} with one sentence answers?`,
+    //       response: `\n\n1. How does Bitcoin interact with automation? Answer: Bitcoin is used to facilitate instantaneous payment transfers, enabling automated transactions between two parties.\n2. What is the relationship between Bitcoin and Universal Basic Income? Answer: Universal Basic Income is a policy concept which can be supported through the use of Bitcoin, due to its transparency and low transaction costs.\n3. How does automation impact the use of Bitcoin? Answer: Automation can be used to simplify the process of transactting with Bitcoin, such as through digital wallets and automated trading bots.`,
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+    //     guide: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `guide`,
+    //       icon: `🤝`,
+    //       request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
+    //         `Build For Community`
+    //       )}?`,
+    //       response: `\n\n1. Definition of Bitcoin – what it is, key features and how it works\n2. Impact of Automation on Employment and its related implications\n3. Potential Benefits of Universal Basic Income\n4. Possibility of Bitcoin and Automation to Enhance UBI\n5. Challenges and Obstacles in Implementing Bitcoin and Automation for UBI\n6. Prospects of Bitcoin as a Potential Solution to Enhance UBI\n7. Relationship between Bitcoin, Automation and UBI in Terms of Asset Distribution\n8. Advantages of UBI in the Context of Bitcoin and Automation\n9. Regulatory Issues Surrounding the Deployment of a UBI Scheme Using Bitcoin and/or Automation\n10. The Social and Economic Implications of Bitcoin, Automation and UBI`,
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+    //     demonstrate: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `demonstrate`,
+    //       icon: `🧿`,
+    //       request: `ms. roxana, can you please show me an example of how proof of work can work in education?`,
+    //       response: `\n\nAn example of how proof of work can work in education is through the utilization of advanced testing techniques. For example, if a student must complete an online course, they must first complete a assignment or test. After they complete the initial assignment or test, they must then provide proof of their progress by working to answer harder questions, or taking a more advanced course. By utilizing challenges that only certain students can complete, the instructor will have proof that the student actually completed the coursework.`,
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+    //     define: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `define`, // may not need
+    //       icon: `👾`, // may not need
+    //       request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
+    //         `Build For Community`
+    //       )} in exactly one sentence?`,
+    //       response: `\n\nThe combination of automation and Bitcoin technologies could theoretically provide a Universal Basic Income to all individuals.`,
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+
+    //     quiz: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `quiz`,
+    //       icon: `🧪`,
+    //       request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
+    //         `Build For Community`
+    //       )}?`,
+    //       response: `\n\n1. What is the connection between Bitcoin, Automation, and Universal Basic Income (UBI)?\n\n2. In what ways could Automation lead to the implementation of UBI?\n\n3. How could decentralized digital currencies such as Bitcoin be used to fund a UBI system?`,
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+    //     shop: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `shop`,
+    //       icon: `🛍️`,
+    //       request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
+    //       response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+    //   },
+    // },
+    // "Build For Teachers": {
+    //   documentID: ``,
+    //   filler: ``,
+    //   new: false,
+    //   highValue: true,
+    //   underConstruction: false,
+    //   completed: false,
+    //   needsImprovement: false,
+    //   tooltip: ``,
+    //   sourceType: `markdown`, // may not need
+    //   button: `Pedagogy`, // may not need - `name`
+    //   header: `Educate`,
+    //   fileSource: await import("../../markdowns/educate.md?raw"), // may not need
+
+    //   prompts: {
+    //     patreon: {
+    //       completed: false,
+    //       impact: 1000,
+    //       action: `generate`,
+    //       icon: `✍️`,
+    //       request: `ms. roxana, can you please generate an essay that introduces me to ${ultimateEffeciencyJutsu(
+    //         `Build For Teachers`
+    //       )}?`,
+    //       response: `null`,
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+    //     inspire: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `inspire`,
+    //       icon: `⚡`,
+    //       request: `ms. roxana, can you please share how an app like ${ultimateEffeciencyJutsu(
+    //         `Build For Teachers`
+    //       )} would be useful?`,
+    //       response: `\n\nGitHub for teachers would be a great way for educators to share resources and collaborate on projects, discuss teaching methods and topics, and generally support each other. Teachers could use it to find, share, and discuss high-quality teaching resources, ranging from lesson plans to instructional materials and activities. Teachers could post questions and look for advice and troubleshooting ideas, or connect with colleagues in different states or countries to gain another perspective. With GitHub for teachers, collaboration would become easier, enabling teachers to collaborate on large projects with fewer IT headaches and time constraints.`,
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+    //     summarize: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `summarize`,
+    //       icon: `📚`,
+    //       request: `ms. roxana, can you please summarize the basics of how an app like ${ultimateEffeciencyJutsu(
+    //         `Build For Teachers`
+    //       )} would work?`,
+    //       response: `\n\nGitHub for teachers is an app that makes it easy for teachers to collaborate and share materials with other teachers by using version-control and git repository, which are services that enable users to track changes to files over time. It provides a simple way for teachers to store, share and access lesson plans, worksheets, and other teaching materials with peers. Using GitHub for teachers, teachers can create private, public, and \"organization\" repositories. Repositories are collections of folders and files related to a particular lesson or project. When changes are made to a file, the repository automatically records and stores a version of the file that can be referenced in the future. In addition to collaboration, teachers can also use the app to assess student work, request feedback from other teachers and mentors on lesson plans, and track the progress of their teaching materials over time.`,
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+    //     ask: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `ask`,
+    //       icon: `🔮`,
+    //       request: `ms. roxana, can you please show me three frequently asked beginner questions about an app designed like ${ultimateEffeciencyJutsu(
+    //         `Build For Teachers`
+    //       )} with one sentence answers?`,
+    //       response: `\n\n1. How do I create a classroom on the app? - You can create a classroom by registering for your account and following the setup instructions. \n2. How do I invite my students to a classroom? - You can invite your students through the app by clicking the \"Invite Student\" button in the classroom settings.\n3. What can I do with the app? - The app allows teachers to create and manage classrooms, assign tasks and assignments, track student progress, and more.`,
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+    //     guide: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `guide`,
+    //       icon: `🤝`,
+    //       request: `ms. roxana, can you please create a study guide for app designed like ${ultimateEffeciencyJutsu(
+    //         `Build For Teachers`
+    //       )}?`,
+    //       response: `\n\n1. Understand the features and functionality of the GitHub app designed for teachers.\n2. Familiarize yourself with the user interface and navigation of the app.\n3. Become familiarized with the different ways that students can submit work via the app.\n4. Set up notifications for new assignments and due dates to ensure students stay on track.\n5. Use the gradebook feature to track student progress and share feedback easily with students.\n6. Explore options for different ways to assess student performance, such as rubrics and PDFs.\n7. Understand how to easily share resources, such as reading material, videos, and worksheets with the entire class or individual students.\n8. Utilize the messaging feature to communicate with other teachers and collaborate on projects.\n9. Familiarize yourself with the app’s security and privacy settings to ensure student data is safe and secure.\n10. Conduct research on best practices for using the app more effectively as a tool for learning.`,
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+    //     demonstrate: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `demonstrate`,
+    //       icon: `🧿`,
+    //       request: `ms. roxana, can you please show me an example of how an app like ${ultimateEffeciencyJutsu(
+    //         `Build For Teachers`
+    //       )} would work?`,
+    //       response: `\n\nGitHub for teachers is an app that would allow teachers to store their lesson plans, project ideas, digital materials, student assignments, and other educational documents in the cloud. It would also make it easy for teachers to collaborate with colleagues by sharing these documents or adding comments/feedback to them. With the app, teachers would be able to securely back up their work, track changes to documents over time, and easily collaborate with colleagues. It would also allow teachers to easily search for other educators’ education-related documents or materials, which could help them stay up-to-date on the latest best practices and educational ideas.`,
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+    //     define: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `define`, // may not need
+    //       icon: `👾`, // may not need
+    //       request: `ms. roxana, can you please define an app like ${ultimateEffeciencyJutsu(
+    //         `Build For Teachers`
+    //       )} in exactly one sentence?`,
+    //       response: `\n\nGitHub is a version control platform that helps teachers store, organize, and collaborate on teaching materials.`,
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+
+    //     quiz: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `quiz`,
+    //       icon: `🧪`,
+    //       request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about an app designed like ${ultimateEffeciencyJutsu(
+    //         `Build For Teachers`
+    //       )}?`,
+    //       response: `\n\n1. What is the main purpose of an app designed like GitHub for teachers?\n2. What type of information can teachers store using an app like GitHub?\n3. What features of GitHub make it particularly useful for teachers?`,
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+    //     shop: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `shop`,
+    //       icon: `🛍️`,
+    //       request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
+    //       response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+    //   },
+    // },
+    // "Social Chat": {
+    //   documentID: ``,
+    //   filler: ``,
+    //   new: false,
+    //   highValue: false,
+    //   underConstruction: false,
+    //   completed: false,
+    //   needsImprovement: false,
+    //   tooltip: ``,
+    //   sourceType: `markdown`, // may not need
+    //   button: `Tap In Chat`, // may not need - `name`
+    //   header: `Subscribe to read DMs`,
+    //   fileSource: await import("../../markdowns/chatApp.md?raw"), // may not need
+
+    //   prompts: {
+    //     patreon: {
+    //       completed: false,
+    //       impact: 1000,
+    //       action: `generate`,
+    //       icon: `✍️`,
+    //       request: `ms. roxana, can you please generate an essay that introduces me to ${ultimateEffeciencyJutsu(
+    //         `Social Chat`
+    //       )}?`,
+    //       response: `null`,
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+    //     inspire: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `inspire`,
+    //       icon: `⚡`,
+    //       request: `ms. roxana, can you please explain how a ${ultimateEffeciencyJutsu(
+    //         `Social Chat`
+    //       )} can be useful?`,
+    //       response:
+    //         "\n\nChat apps that allow users to subscribe to other people's private chats can be a great way to stay connected and up to date with friends and family. Since these chats are private, they often contain more intimate conversations, giving users a better insight into the people they're subscribing to. Additionally, these chats can be used as an important part of staying in touch with those that are important to you, allowing you to receive regular updates and comments.",
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+    //     summarize: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `summarize`,
+    //       icon: `📚`,
+    //       request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
+    //         `Social Chat`
+    //       )}?`,
+    //       response:
+    //         "\n\nA chat app with private chat subscriptions allows users to subscribe to private conversations between two people or groups. Users must provide their personal details to verify their identity and be approved as a subscriber. This allows subscribers to message and communicate with the participants involved in the private chat, as well as post comments. Subscribers must be approved by the participants to follow the private conversations.",
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+    //     ask: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `ask`,
+    //       icon: `🔮`,
+    //       request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
+    //         `Social Chat`
+    //       )} with one sentence answers?`,
+    //       response: `\n\n1. What is a chat app? - A chat app is an application that allows users to send and receive text, audio and/or visual messages. \n\n2. How do I subscribe to someone's private chat? - You can subscribe to someone's private chat by visiting their profile page and selecting the \"Subscribe\" option. \n\n3. How do I start a chat with someone? - You can start a chat with someone by selecting the chat icon in the top navigation bar and selecting the person you'd like to chat with.`,
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+    //     guide: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `guide`,
+    //       icon: `🤝`,
+    //       request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
+    //         `Social Chat`
+    //       )}?`,
+    //       response: `\n\nStudy Guide for a Chat App: \n1. Understand the concept of private chatting and why users may want to use this feature. \n2. Learn the different types of private chat features available in the app.\n3. Become familiar with the functions available in private chats.\n4. Explore the process for subscribing to someone’s private chat.\n5. Understand the benefits of subscribing to private chats.\n6. Learn about user privacy and security in private chats.\n7. Research the security policy for private chats.\n8. Examine application speed and reliability for private chats.\n9. Learn about the cost associated with private chatting. \n10. Test various private chat features and assess the user experience.`,
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+    //     demonstrate: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `demonstrate`,
+    //       icon: `🧿`,
+    //       request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
+    //         `Social Chat`
+    //       )}`,
+    //       response:
+    //         "\n\nRather than creating group chats with others, people would network and communicate with one another privately, but publicly allowing their chats to be read by outsiders.",
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+    //     define: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `define`, // may not need
+    //       icon: `👾`, // may not need
+    //       request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
+    //         `Social Chat`
+    //       )} in exactly one sentence?`,
+    //       response: `\n\nA chat app that allows users to subscribe to and follow private conversations between individuals.`,
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+
+    //     quiz: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `quiz`,
+    //       icon: `🧪`,
+    //       request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
+    //         `Social Chat`
+    //       )}?`,
+    //       response: `\n\n1. What is the most important security feature of a chat app that allows users to subscribe to private chats?\n\n2. How does the chat app appreciate the data privacy of its users who subscribe to private chats?\n\n3. How does the chat app monitor the activities of users who subscribe to private chats to ensure they remain secure and private?`,
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+    //     shop: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `shop`,
+    //       icon: `🛍️`,
+    //       request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
+    //       response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+    //   },
+    // },
   },
   "Computer Science": {
     "Programming Languages": {
@@ -2538,7 +2677,8 @@ export const Engineer = {
       sourceType: `video`, // may not need
       button: `Programming Languages`, // may not need - `name`
       header: `Programming Languages`,
-      fileSource: 'https://res.cloudinary.com/eduprojectsil/video/upload/v1674725780/download_19_gintiu.mp4', // may not need
+      fileSource:
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674725780/download_19_gintiu.mp4", // may not need
 
       prompts: {
         patreon: {
@@ -2661,7 +2801,8 @@ export const Engineer = {
       sourceType: `video`, // may not need
       button: `Recursion`, // may not need - `name`
       header: `Recursion`,
-      fileSource: 'https://res.cloudinary.com/eduprojectsil/video/upload/v1674725818/download_20_bjmac7.mp4', // may not need
+      fileSource:
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674725818/download_20_bjmac7.mp4", // may not need
 
       prompts: {
         patreon: {
@@ -2783,7 +2924,8 @@ export const Engineer = {
       sourceType: `video`, // may not need
       button: `Linked Lists`, // may not need - `name`
       header: `Linked Lists`,
-      fileSource: 'https://res.cloudinary.com/eduprojectsil/video/upload/v1674725865/download_21_k9d6in.mp4', // may not need
+      fileSource:
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674725865/download_21_k9d6in.mp4", // may not need
 
       prompts: {
         patreon: {
@@ -2908,7 +3050,8 @@ export const Engineer = {
       sourceType: `video`, // may not need
       button: `Link Traversal`, // may not need - `name`
       header: `Link Traversal`,
-      fileSource: 'https://res.cloudinary.com/eduprojectsil/video/upload/v1674725908/download_22_rjgmqs.mp4', // may not need
+      fileSource:
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674725908/download_22_rjgmqs.mp4", // may not need
 
       prompts: {
         patreon: {
@@ -3031,7 +3174,8 @@ export const Engineer = {
       sourceType: `video`, // may not need
       button: `Link Swapping`, // may not need - `name`
       header: `Link Swapping`,
-      fileSource: 'https://res.cloudinary.com/eduprojectsil/video/upload/v1674725986/download_23_lbtipl.mp4', // may not need
+      fileSource:
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674725986/download_23_lbtipl.mp4", // may not need
 
       prompts: {
         patreon: {
@@ -3154,7 +3298,8 @@ export const Engineer = {
       sourceType: `video`, // may not need
       button: `Algorithms`, // may not need - `name`
       header: `Algorithms`,
-      fileSource: 'https://res.cloudinary.com/eduprojectsil/video/upload/v1674726053/download_24_wkw20z.mp4', // may not need
+      fileSource:
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674726053/download_24_wkw20z.mp4", // may not need
 
       prompts: {
         patreon: {

@@ -1,9 +1,9 @@
 import { ultimateEffeciencyJutsu } from "../ui";
 
-//this needs to be a new schema probably
-export const BossMode = {
-  "Boss Mode": {
-    "Boss Mode": {
+// this needs to be a new schema maybe idk shits kinds crazy
+export const RaiseUrHand = {
+  RaiseUrHand: {
+    RaiseUrHand: {
       documentID: ``,
       filler: ``,
       new: false,
@@ -15,8 +15,8 @@ export const BossMode = {
       isBossMode: true,
       tooltip: ``,
       sourceType: `video`, // may not need
-      button: `Boss Mode`, // may not need - `name`
-      header: `Boss Mode`,
+      button: `RaiseUrHand`, // may not need - `name`
+      header: `RaiseUrHand`,
       fileSource:
         "https://res.cloudinary.com/eduprojectsil/video/upload/v1680951339/IMG_7398_ordghe.mov", // may not need
 

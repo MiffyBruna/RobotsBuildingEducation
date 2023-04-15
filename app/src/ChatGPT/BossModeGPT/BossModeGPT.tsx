@@ -1,8 +1,15 @@
-import { Button, FloatingLabel, Form, InputGroup, Spinner } from "react-bootstrap";
+import {
+  Button,
+  FloatingLabel,
+  Form,
+  InputGroup,
+  Spinner,
+} from "react-bootstrap";
 import roxanabrand from "../../common/media/images/roxanabrand.gif";
 import roxanaGif from "../../common/media/images/roxanaGif.gif";
 import isEmpty from "lodash/isEmpty";
 import { updateDoc } from "firebase/firestore";
+import Patreon from "../Patreon/Patreon";
 
 export let BossModeGPT = ({
   patreonObject,
@@ -41,10 +48,11 @@ export let BossModeGPT = ({
     console.log("answering...", databaseUserDocument);
     console.log(
       "result",
-      databaseUserDocument?.level ? parseInt(databaseUserDocument?.level) + 1 : 1
+      databaseUserDocument?.level
+        ? parseInt(databaseUserDocument?.level) + 1
+        : 1
     );
 
-    
     if (
       (!isEmpty(databaseUserDocument) || !isEmpty(userDocumentReference)) &&
       !isDemo
@@ -55,7 +63,9 @@ export let BossModeGPT = ({
       });
 
       await updateDoc(userDocumentReference, {
-        level: databaseUserDocument?.level ? databaseUserDocument?.level + 1 : 1,
+        level: databaseUserDocument?.level
+          ? databaseUserDocument?.level + 1
+          : 1,
       });
 
       // update global work
@@ -63,9 +73,7 @@ export let BossModeGPT = ({
         total: globalImpactCounter + 1000,
       });
 
-
-
-    //   //copy it to react
+      //   //copy it to react
       let docCopy = databaseUserDocument;
       docCopy.impact = databaseUserDocument?.impact + 1000;
       databaseUserDocument.level = databaseUserDocument?.level
@@ -92,7 +100,6 @@ export let BossModeGPT = ({
     }
   };
 
-  console.log("loading message", isEmpty(loadingMessage));
   if (loadingMessage) {
     return <RoxanaLoadingAnimation />;
   }
@@ -108,23 +115,40 @@ export let BossModeGPT = ({
         }
       }
     >
-      <img src={roxanabrand} width={200} />
-      <br/><br/>
+      <br />
+      <br />
       {promptSelection === "patreon" ? (
         <div>
+          <div
+            style={{
+              width: "100%",
+
+              display: "flex",
+              justifyContent: "center",
+            }}
+          >
             <div
               style={{
-                backgroundColor: "#273932",
-                color: "#FFF5CA",
-                padding: 24,
-                textAlign: "justify",
+                width: "400px",
+                boxShadow:
+                  "0 6x 12px rgba(255,255,255,1), 0 3px 3px rgba(255,255,255,1)",
               }}
             >
-              {bossModeGptHelperResponse
-                ? bossModeGptHelperResponse
-                : "Providence, in religion, is the belief that the universe is governed by the providence of God, or in some interpretations, of a group of gods. It means that God is actively involved in all aspects of the world, from the smallest details to the largest events. Abraham Lincoln was a firm believer in providence and often resorted to this concept in moments of crisis. He believed that God was a source of strength during difficult times, such as the Civil War. He was often quoted as saying “The will of God prevails.” He also believed that God was active in guiding the United States. In his Second Inaugural Address, he stated, “It may seem strange that any men should dare to ask a just God's assistance in wringing their bread from the sweat of other men's faces”, but he believed with faith and patience all difficulties will be overcome. This belief in providence has been seen in the events around the inauguration of the first African-American president, Barack Obama. Many people believe that the institution of slavery was finally overturned by the hand of providence."}
+              <Patreon patreonObject={patreonObject} isAutoPlay />
             </div>
-
+          </div>
+          <div
+            style={{
+              backgroundColor: "#273932",
+              color: "#FFF5CA",
+              padding: 24,
+              textAlign: "justify",
+            }}
+          >
+            {bossModeGptHelperResponse
+              ? bossModeGptHelperResponse
+              : "Providence, in religion, is the belief that the universe is governed by the providence of God, or in some interpretations, of a group of gods. It means that God is actively involved in all aspects of the world, from the smallest details to the largest events. Abraham Lincoln was a firm believer in providence and often resorted to this concept in moments of crisis. He believed that God was a source of strength during difficult times, such as the Civil War. He was often quoted as saying “The will of God prevails.” He also believed that God was active in guiding the United States. In his Second Inaugural Address, he stated, “It may seem strange that any men should dare to ask a just God's assistance in wringing their bread from the sweat of other men's faces”, but he believed with faith and patience all difficulties will be overcome. This belief in providence has been seen in the events around the inauguration of the first African-American president, Barack Obama. Many people believe that the institution of slavery was finally overturned by the hand of providence."}
+          </div>
 
           <div style={{ display: "flex", alignItems: "flex-end" }}>
             <InputGroup
@@ -154,7 +178,9 @@ export let BossModeGPT = ({
                   onChange={(event) =>
                     setBossModeGptHelperRequest(event.target.value)
                   }
-                  value={"Can you explain what providence is and how Abraham Lincoln used it?"}
+                  value={
+                    "Can you explain what providence is and how Abraham Lincoln used it?"
+                  }
                   disabled={true}
                 />
               </FloatingLabel>

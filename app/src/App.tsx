@@ -10,6 +10,7 @@ import {
   getGlobalImpact,
   randomLessonGeneratorMachine444,
   renderWithTooltip,
+  RoxanaLoadingAnimation,
   ui,
 } from "./common/uiSchema";
 import { Collections } from "./Paths/Collections/Collections";
@@ -103,7 +104,7 @@ function App() {
     setCurrentPath(event.target.id);
     setCurrentPathForAnalytics(event.target.id);
     setPatreonObject({});
-    setModuleName('');
+    setModuleName("");
   };
 
   const handleModuleSelection = (module, moduleName) => {
@@ -329,17 +330,23 @@ function App() {
     (databaseUserDocument.impact || 0) / (proofOfWorkFromModules || 77500);
 
   if (typeof isSignedIn == "string") {
-    return <Spinner animation="grow" variant="light" />;
+    return (
+      <>
+        <Spinner animation="grow" variant="light" />
+        <br />
+        <RoxanaLoadingAnimation />
+      </>
+    );
   }
 
   return (
     <div className="App">
       {/* <button onClick={() => dispatch({ type: "incremented_age" })}>
         click
-      </button>
+      </button>auth
       my age {state.age} */}
       {/*  */}
-      <Header />
+      <Header auth={auth} />
 
       {typeof isSignedIn === "string" ||
       (!isSignedIn && isZeroKnowledgeUser) ? (
@@ -388,7 +395,11 @@ function App() {
       ) : null}
       {isZeroKnowledgeUser ? (
         <>
-          <div>Creating Boss Mode + Robot Network Update 😊</div>
+          <div>
+            If you're applying to scholarship, please read the About in my
+            Patreon 😊
+          </div>
+          <div>Working on: Boss Mode, Raise Ur Hand, Engineering V3</div>
 
           {/* <div>My Accoun</div> */}
           {/* navigate */}
@@ -396,6 +407,7 @@ function App() {
           <Paths handlePathSelection={handlePathSelection} />
 
           <Collections
+            userAuthObject={userAuthObject}
             visibilityMap={visibilityMap}
             handleModuleSelection={handleModuleSelection}
             currentPath={currentPath}

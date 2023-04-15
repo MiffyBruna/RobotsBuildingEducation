@@ -70,7 +70,7 @@ export const StyledModule = styled.button`
 
   text-shadow: 1px 1px 5px black;
   background-color: ${(props) => {
-    return props.patreonObject.sourceType === "Boss Mode"
+    return props.patreonObject.header === "Boss Mode"
       ? "#590f04"
       : props.patreonObject.rare
       ? "#DA830D"

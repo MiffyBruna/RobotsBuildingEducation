@@ -131,21 +131,22 @@ export const PromptCombiner9000 = ({
                     {chatGptResponse.response}
                   </SyntaxHighlighter>
                 </div>
-              ) : loadingMessage.length < 1 &&
-                ((chatGptResponse.response &&
-                  chatGptResponse.type === "summarize") ||
-                  (chatGptResponse.response &&
-                    chatGptResponse.type === "define") ||
-                  (chatGptResponse.response &&
-                    chatGptResponse.type === "inspire") ||
-                  (chatGptResponse.response &&
-                    chatGptResponse.type === "patreon") ||
-                  (chatGptResponse.response &&
-                    chatGptResponse.type === "market") ||
-                  (chatGptResponse.response &&
-                    chatGptResponse.type === "demonstrate") ||
-                  (chatGptResponse.response &&
-                    chatGptResponse.type === "anything")) ? (
+              ) : (loadingMessage.length < 1 &&
+                  ((chatGptResponse.response &&
+                    chatGptResponse.type === "summarize") ||
+                    (chatGptResponse.response &&
+                      chatGptResponse.type === "define") ||
+                    (chatGptResponse.response &&
+                      chatGptResponse.type === "inspire") ||
+                    (chatGptResponse.response &&
+                      chatGptResponse.type === "patreon") ||
+                    (chatGptResponse.response &&
+                      chatGptResponse.type === "market") ||
+                    (chatGptResponse.response &&
+                      chatGptResponse.type === "demonstrate") ||
+                    (chatGptResponse.response &&
+                      chatGptResponse.type === "anything"))) ||
+                chatGptResponse ? (
                 <div>{chatGptResponse.response}</div>
               ) : loadingMessage.length < 1 &&
                 chatGptResponse.response &&

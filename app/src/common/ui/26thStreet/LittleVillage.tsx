@@ -4,6 +4,7 @@ import { ultimateEffeciencyJutsu } from "../ui";
 import compSciLib from "../../media/images/compSciLib.jpeg";
 import metaphysicalMuse from "../../media/images/metaphysicalMuse.jpeg";
 
+// this can be like a reddity kinda quiletty kinda ubery amazon airbnb kinda thing
 export const LittleVillage = (globalUserModulesFromDB = []) => {
   if (!isEmpty(globalUserModulesFromDB)) {
     let fill = {};
