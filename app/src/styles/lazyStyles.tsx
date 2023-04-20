@@ -98,10 +98,10 @@ export const StyledLink = styled(Link)`
 
   border: 2px solid hotpink;
   /* max-width: 200px; */
-  /* width: ${(props) => {
-    return props.isBot ? "40%" : "30%";
-  }}; */
-  width: 200px !important;
+  width: ${(props) => {
+    return props.isBot ? "300px" : "200px";
+  }};
+  /* width: 200px !important; */
   height: 125px;
   display: flex;
   justify-content: space-between;

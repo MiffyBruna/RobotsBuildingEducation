@@ -1,3 +1,4 @@
+import { collection, doc, getDocs } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { Button, FloatingLabel, Form, InputGroup } from "react-bootstrap";
 import { renderWithTooltip, ui, uiPaths } from "../../common/uiSchema";
@@ -29,6 +30,7 @@ export const Collections = ({
   globalModulesCollectionReference,
   globalUserModulesFromDB,
   documentProcForGlobalModules,
+  usersCoursesCollectionReference,
   userAuthObject,
 }): JSX.Element | null => {
   let [
@@ -62,6 +64,72 @@ export const Collections = ({
       setHasCourseAdminAccess(false);
     }
   }, []);
+
+  let mountClassroom = async () => {
+    // await getDocs(usersCoursesCollectionReference).then((querySnapshot) => {
+    //   querySnapshot.forEach((doc) => {
+    //     if (doc.data()) {
+    //       console.log(`Classroom ${doc.id}`, doc.data());
+    //     }
+    //   });
+    // });
+    // let questions = usersCoursesCollectionReference.doc(
+    //   "Mmm5paEOafcRSr5nOM5I3Ia82f43-Hellowrodl"
+    // );
+    // // Query the 'questions' subcollection within the course document
+    // questions
+    //   .collection("questions")
+    //   .get()
+    //   .then((querySnapshot) => {
+    //     // Iterate through each question document
+    //     querySnapshot.forEach((questionDoc) => {
+    //       console.log(
+    //         `Question ID: ${questionDoc.id} - Data: `,
+    //         questionDoc.data()
+    //       );
+    //     });
+    //   })
+    //   .catch((error) => {
+    //     console.error("Error fetching questions: ", error);
+    //   });
+    /**
+     * 
+     * 
+        // Replace with your own user and course document IDs
+        const userId = 'someUserId';
+        const courseId = 'someCourseId';
+
+        // Get the reference to the user's specific course
+        const courseRef = doc(db, 'users', userId, 'courses', courseId);
+
+        // Query the 'questions' subcollection within the course document
+        getDocs(collection(courseRef, 'questions')).then((querySnapshot) => {
+          // Iterate through each question document
+          querySnapshot.forEach((questionDoc) => {
+            console.log(`Question ID: ${questionDoc.id} - Data: `, questionDoc.data());
+          });
+        }).catch((error) => {
+          console.error("Error fetching questions: ", error);
+        });
+     */
+    /**
+     *
+     *
+     *
+     * I'm using Firestore. I have a collection users with a list of user documents. Each user document has a collection of courses, which is composed of a list of course documents.  Each course document has a collection of questions, which has a list of document questions,  Each question collection has a list of questions. I want to access the list of question documents, how do I do that with Firestore?
+     *
+     * Can you write that code in firestore's latest version?
+     */
+  };
+
+  useEffect(() => {
+    if (hasCourseAdminAccess) {
+      console.log("you got it bro");
+      mountClassroom();
+    } else {
+      console.log("u dont got it");
+    }
+  }, [hasCourseAdminAccess]);
 
   if (currentPath) {
     let path = ui(globalUserModulesFromDB)[currentPath]; // Engineer: {}
@@ -267,7 +335,19 @@ export const Collections = ({
               </div>
             </>
           ) : null}
-          {/* If you're a student, render this. Can teachers use this?Prob to start something maybe*/}
+          {/* Raise dat hand */}
+          {/* Raise dat hand */}
+          {/* Raise dat hand */}
+          {/* Raise dat hand */}
+          {/* Raise dat hand */}
+          {/* Raise dat hand */}
+          {/* Raise dat hand */}
+          {/* Raise dat hand */}
+          {/* Raise dat hand */}
+          {/* Raise dat hand */}
+          {/* Raise dat hand */}
+          {/* Raise dat hand */}
+          {/* Raise dat hand */}
           {currentPath === "Raise Ur Hand" && hasCourseAdminAccess ? (
             <div
               style={{
@@ -288,7 +368,6 @@ export const Collections = ({
                 Data
                 <br />
                 <InputGroup size="lg">
-                  {/* <InputGroup.Text id="inputGroup-sizing-lg">Impact</InputGroup.Text> */}
                   <FloatingLabel
                     controlId="floatingInput"
                     label="course passcode"
@@ -312,6 +391,8 @@ export const Collections = ({
               >
                 Activate InfiniteKnowledgeEngine9001
               </Button>
+
+              <div>What's good {userAuthObject.uid}</div>
             </div>
           ) : null}
         </div>

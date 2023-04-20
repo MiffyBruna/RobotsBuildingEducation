@@ -23,6 +23,16 @@ export const Passcode = ({
       <input onChange={handleZeroKnowledgePassword} type="password" />
       <br />
       <br />
+      {/* <div
+        style={{
+          border: "1px solid pink",
+          width: "fit-content",
+          textAlign: "center",
+        }}
+      >
+        If you're applying to scholarship, please read the About in my Patreon  
+        😊
+      </div> */}
       <a
         onClick={() =>
           logEvent(analytics, "select_promotion", {
@@ -47,6 +57,7 @@ export const Passcode = ({
       </a>
       <br />
       <br />
+
       <Button
         variant="dark"
         style={{ width: "180px", height: "50px" }}

@@ -32,6 +32,8 @@ export const ChatGPT = ({
   computePercentage,
   isGeneratedDemo = false,
   usersModulesCollectionReference,
+  globalReserve,
+
   userAuthObject,
 }) => {
   const [isRaidActive, setIsRaidActive] = useState(false);
@@ -402,7 +404,6 @@ export const ChatGPT = ({
             promptMessage={promptMessage}
             patreonObject={patreonObject}
           />
-
           <br />
           {/* 
       <Roxana
@@ -413,7 +414,6 @@ export const ChatGPT = ({
         isDemo={isDemo}
         moduleName={moduleName}
       /> */}
-
           <Intro
             shouldRenderIntro={shouldRenderIntro}
             isDemo={false}
@@ -423,7 +423,6 @@ export const ChatGPT = ({
             chatGptResponse={chatGptResponse}
             promptSelection={promptSelection}
           />
-
           {chatGptResponseList?.map((response) => (
             <PromptCombiner9000
               loadingMessage={loadingMessage}
@@ -484,6 +483,7 @@ export const ChatGPT = ({
         userAuthObject={userAuthObject}
         currentPath={currentPath}
         isRaidActive={isRaidActive}
+        globalReserve={globalReserve}
 
         //pow
       />

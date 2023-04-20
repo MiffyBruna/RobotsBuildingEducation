@@ -176,6 +176,7 @@ export const Roxana = ({
                   textAlign: "center",
                 }}
               >
+                <div>$3 advertisement</div>
                 <h3>{patreonObject?.prompts?.intro?.response}</h3>
                 <h4>{patreonObject?.prompts?.intro?.advertisementPitch}</h4>
                 <a
@@ -300,6 +301,7 @@ export const Roxana = ({
                 textAlign: "center",
               }}
             >
+              <div>$3 advertisement</div>
               <h3>{patreonObject?.prompts?.shop?.response}</h3>
               <h4>{patreonObject?.prompts?.shop?.advertisementPitch}</h4>
               <a
@@ -320,51 +322,53 @@ export const Roxana = ({
                 />
               </a>
             </div>
-          ) : loadingMessage.length < 1 &&
-            chatGptResponse &&
-            loadingStates.shop &&
-            isDemo ? (
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-
-                textAlign: "center",
-              }}
-            >
-              <h3>The PF Collections</h3>
-              <h5>
-                {
-                  "👕👚➡️# A journey to Street Fashion🔞 bold style for Los Chingones 🔥Frisco 415🔥"
-                }
-              </h5>
-              <a
-                onClick={() =>
-                  logEvent(analytics, "select_promotion", {
-                    creative_name: "https://thepfcollections.com/",
-                    creative_slot: "Demo Shop Slot",
-                    promotion_id: "The PF Collection",
-                    promotion_name: "advertising_launch",
-                  })
-                }
-                href="https://thepfcollections.com/"
-                target={"_blank"}
-              >
-                <img
-                  src={puesFuckIt}
-                  style={{
-                    boxShadow:
-                      "0 10px 20px rgba(0,0,0,1), 0 6px 6px rgba(0,0,0,1)",
-                    height: 150,
-                    width: 150,
-                    borderRadius: "12px",
-                    marginTop: 12,
-                  }}
-                />
-              </a>
-            </div>
           ) : (
+            // :
+            // loadingMessage.length < 1 &&
+            //   chatGptResponse &&
+            //   loadingStates.shop &&
+            //   isDemo ? (
+            //   <div
+            //     style={{
+            //       display: "flex",
+            //       flexDirection: "column",
+            //       alignItems: "center",
+
+            //       textAlign: "center",
+            //     }}
+            //   >
+            //     <h3>The PF Collections</h3>
+            //     <h5>
+            //       {
+            //         "👕👚➡️# A journey to Street Fashion🔞 bold style for Los Chingones 🔥Frisco 415🔥"
+            //       }
+            //     </h5>
+            //     <a
+            //       onClick={() =>
+            //         logEvent(analytics, "select_promotion", {
+            //           creative_name: "https://thepfcollections.com/",
+            //           creative_slot: "Demo Shop Slot",
+            //           promotion_id: "The PF Collection",
+            //           promotion_name: "advertising_launch",
+            //         })
+            //       }
+            //       href="https://thepfcollections.com/"
+            //       target={"_blank"}
+            //     >
+            //       <img
+            //         src={puesFuckIt}
+            //         style={{
+            //           boxShadow:
+            //             "0 10px 20px rgba(0,0,0,1), 0 6px 6px rgba(0,0,0,1)",
+            //           height: 150,
+            //           width: 150,
+            //           borderRadius: "12px",
+            //           marginTop: 12,
+            //         }}
+            //       />
+            //     </a>
+            //   </div>
+            // )
             ""
           )}
         </div>

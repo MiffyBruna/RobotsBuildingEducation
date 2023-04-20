@@ -140,7 +140,7 @@ interface IPath {
   Entrepeneur: ICollection;
   "RO.₿.E": ICollection;
   "Boss Mode": ICollection | Record<string, any>;
-  "Raise Ur Hand": ICollection | Record<string, any>;
+  // "Raise Ur Hand": ICollection | Record<string, any>;
 }
 
 // be pro customization. Redundancy is fine if it allows for more customization.
@@ -154,7 +154,7 @@ export const ui = (globalUserModulesFromDB = {}): IPath => {
     Entrepeneur: Entrepeneur,
     "RO.₿.E": LittleVillage(globalUserModulesFromDB), // get database sets
     "Boss Mode": BossMode,
-    "Raise Ur Hand": {},
+    // "Raise Ur Hand": {},
   };
 };
 export let uiPaths = [
@@ -163,7 +163,7 @@ export let uiPaths = [
   "Entrepeneur",
   "RO.₿.E",
   "Boss Mode",
-  "Raise Ur Hand",
+  // "Raise Ur Hand",
 ];
 
 // this manages the view when selected `engineer, creator, business or 26th street`

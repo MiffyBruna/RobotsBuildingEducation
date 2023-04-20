@@ -161,6 +161,7 @@ export const PromptCombiner9000 = ({
                     textAlign: "center",
                   }}
                 >
+                  <div>$3 advertisement</div>
                   <h3>{patreonObject?.prompts?.shop?.response}</h3>
                   <h4>{patreonObject?.prompts?.shop?.advertisementPitch}</h4>
                   <a
