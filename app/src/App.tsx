@@ -65,6 +65,10 @@ function App() {
   const [globalDocumentReference, setGlobalDocumentReference] = useState({});
   const [usersModulesCollectionReference, setUsersModulesCollectionReference] =
     useState({});
+
+  const [usersCoursesCollectionReference, setUsersCoursesCollectionReference] =
+    useState({});
+
   const [
     globalModulesCollectionReference,
     setGlobalModulesCollectionReference,
@@ -73,7 +77,7 @@ function App() {
   const [globalUserModulesFromDB, setGlobalUserModulesFromDB] = useState([]);
   // used to count total global count. used to get all work done before this global counter was implemented.
   const [globalImpactCounter, setGlobalImpactCounter] = useState(0);
-
+  const [globalReserveCounter, setGlobalReserveCounter] = useState(0);
   const [patreonObject, setPatreonObject] = useState<Record<string, any>>({});
   const [currentPath, setCurrentPath] = useState("");
   const [currentPathForAnalytics, setCurrentPathForAnalytics] = useState("");
@@ -132,7 +136,10 @@ function App() {
   };
 
   const handleZeroKnowledgePassword = (event) => {
-    if (event.target.value === import.meta.env.VITE_PATREON_PASSCODE) {
+    if (
+      event.target.value === import.meta.env.VITE_PATREON_PASSCODE ||
+      event.target.value === import.meta.env.VITE_FREE_PROMO_PASSCODE
+    ) {
       localStorage.setItem("patreonPasscode", event.target.value);
       setPatreonObject({});
       setIsZeroKnowledgeUser(true);
@@ -181,7 +188,9 @@ function App() {
 
     if (
       localStorage.getItem("patreonPasscode") ===
-      import.meta.env.VITE_PATREON_PASSCODE
+        import.meta.env.VITE_PATREON_PASSCODE ||
+      localStorage.getItem("patreonPasscode") ===
+        import.meta.env.VITE_FREE_PROMO_PASSCODE
     ) {
       setIsZeroKnowledgeUser(true);
     } else {
@@ -225,12 +234,19 @@ function App() {
           setGlobalImpactCounter(res.data().total);
         });
 
+        const globalReserveDocRef = doc(database, "global", "reserve");
+        getDoc(globalReserveDocRef).then((res) => {
+          console.log("res", res.data().amount);
+          setGlobalReserveCounter(res.data().amount);
+        });
+
         setUserDocumentReference(docRef);
         const usersModulesCollectionRef = collection(docRef, "modules");
-
+        const usersCoursesCollectionRef = collection(docRef, "courses");
         setGlobalDocumentReference(globalImpactDocRef);
         setGlobalModulesCollectionReference(globalModulesCollectionRef);
         setUsersModulesCollectionReference(usersModulesCollectionRef);
+        setUsersCoursesCollectionReference(usersCoursesCollectionRef);
 
         documentProcForUsersModules(usersModulesCollectionRef);
         documentProcForGlobalModules(globalModulesCollectionRef);
@@ -275,6 +291,12 @@ function App() {
         getDoc(globalImpactDocRef).then((res) =>
           setGlobalImpactCounter(res.data().total)
         );
+        const globalReserveDocRef = doc(database, "global", "reserve");
+
+        getDoc(globalReserveDocRef).then((res) => {
+          console.log("res", res.data());
+          setGlobalReserveCounter(res.data().amount);
+        });
 
         setUserDocumentReference(docRef);
         setGlobalDocumentReference(globalImpactDocRef);
@@ -334,6 +356,7 @@ function App() {
       <>
         <Spinner animation="grow" variant="light" />
         <br />
+        <br />
         <RoxanaLoadingAnimation />
       </>
     );
@@ -346,7 +369,7 @@ function App() {
       </button>auth
       my age {state.age} */}
       {/*  */}
-      <Header auth={auth} />
+      <Header auth={auth} globalReserveCounter={globalReserveCounter} />
 
       {typeof isSignedIn === "string" ||
       (!isSignedIn && isZeroKnowledgeUser) ? (
@@ -395,18 +418,13 @@ function App() {
       ) : null}
       {isZeroKnowledgeUser ? (
         <>
-          <div>
-            If you're applying to scholarship, please read the About in my
-            Patreon 😊
-          </div>
-          <div>Working on: Boss Mode, Raise Ur Hand, Engineering V3</div>
-
           {/* <div>My Accoun</div> */}
           {/* navigate */}
 
           <Paths handlePathSelection={handlePathSelection} />
 
           <Collections
+            usersCoursesCollectionReference={usersCoursesCollectionReference}
             userAuthObject={userAuthObject}
             visibilityMap={visibilityMap}
             handleModuleSelection={handleModuleSelection}
@@ -444,6 +462,7 @@ function App() {
               {isEmpty(patreonObject) && !isDemo ? null : (
                 <>
                   <ChatGPT
+                    globalReserve={globalReserveCounter}
                     currentPath={currentPathForAnalytics}
                     patreonObject={patreonObject}
                     userDocumentReference={userDocumentReference}

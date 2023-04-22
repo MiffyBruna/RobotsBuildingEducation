@@ -57,7 +57,9 @@ export const StyledModule = styled.button`
   transition: 0.15s all ease-in-out;
   border: 1px solid
     ${(props) => {
-      return props.patreonObject.rare
+      return props.patreonObject.isModuleDisabled
+        ? "#11220E"
+        : props.patreonObject.rare
         ? "#DA830D"
         : props.patreonObject.highValue
         ? "#F8B125"
@@ -70,7 +72,9 @@ export const StyledModule = styled.button`
 
   text-shadow: 1px 1px 5px black;
   background-color: ${(props) => {
-    return props.patreonObject.header === "Boss Mode"
+    return props.patreonObject.isModuleDisabled
+      ? "#11220E"
+      : props.patreonObject.header === "Boss Mode"
       ? "#590f04"
       : props.patreonObject.rare
       ? "#DA830D"
@@ -83,11 +87,16 @@ export const StyledModule = styled.button`
       : "#F099AD";
   }};
 
-  cursor: grab;
+  /* cursor: ${(props) => {
+    return props.patreonObject.isModuleDisabled ? "not-allowed" : "grab";
+  }}; */
+
   &:hover {
     transform: scale(1.1);
 
-    background: #f5befa;
+    background: ${(props) => {
+      return props.patreonObject.isModuleDisabled ? "#48464A" : "#f5befa";
+    }};
   }
 `;
 
@@ -98,10 +107,10 @@ export const StyledLink = styled(Link)`
 
   border: 2px solid hotpink;
   /* max-width: 200px; */
-  /* width: ${(props) => {
-    return props.isBot ? "40%" : "30%";
-  }}; */
-  width: 200px !important;
+  width: ${(props) => {
+    return props.isBot ? "300px" : "200px";
+  }};
+  /* width: 200px !important; */
   height: 125px;
   display: flex;
   justify-content: space-between;

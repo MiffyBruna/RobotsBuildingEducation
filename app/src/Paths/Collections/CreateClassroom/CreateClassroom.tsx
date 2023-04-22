@@ -24,7 +24,7 @@ export const CreateClassroom = ({
   documentProcForGlobalModules,
 }) => {
   let [currentPrompt, setCurrentPrompt] = useState("");
-  let [, setCurrentCourseCode] = useState("CS115");
+  let [currentCourseCode, setCurrentCourseCode] = useState("CS115");
   let [currentTitle, setCurrentTitle] = useState(
     "RO.B.E Tutoring Computer Science"
   );
@@ -60,10 +60,21 @@ export const CreateClassroom = ({
 
       let moduleCollectionRef = collection(userDocumentReference, "courses");
 
-      await addDoc(collection(userDocumentReference, "courses"), {
-        data: "test",
-      });
-      await addDoc(collection(database, "courses"), { data: "test" });
+      let courseDocument = {
+        passcode: userAuthObject?.uid + "-" + currentCourseCode,
+        title: currentTitle,
+      };
+
+      await setDoc(
+        doc(userDocumentReference, "courses", courseDocument.passcode),
+        courseDocument
+      );
+      await setDoc(
+        doc(database, "courses", courseDocument.passcode),
+        courseDocument
+      );
+
+      setIsCreateClassroomOpen(false);
 
       //   let storedDocument = doc(userDocumentReference, "modules", uniqueID);
       //   // let globalModules = doc(globalModulesCollectionReference,)
@@ -94,6 +105,18 @@ export const CreateClassroom = ({
       //   documentProcForGlobalModules(globalModulesCollectionReference);
       // }
     }
+  };
+
+  let mountClassroom = async () => {
+    // usersModulesCollectionReference  -> usersClassroomCollectionReference
+    // await getDocs(usersModulesCollectionReference).then((querySnapshot) => {
+    //       let sum = 0;
+    //       querySnapshot.forEach((doc) => {
+    //         if (doc.data()) {
+    //           console.log("CLASSROOMS", doc.data());
+    //         }
+    //       })
+    // });
   };
 
   return (

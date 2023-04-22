@@ -18,8 +18,10 @@ export const ImpactWallet = ({
   setIsImpactWalletOpen,
   usersModulesCollectionReference,
   usersModulesFromDB,
+  globalReserve,
   userAuthObject = { uid: "demo" },
 }) => {
+  console.log("vb", globalReserve);
   let [databaseUserDocumentCopy, setDatabaseUserDocumentCopy] =
     useState(databaseUserDocument);
 
@@ -216,6 +218,7 @@ export const ImpactWallet = ({
             </div>
             <div>
               <h1>The Bitcoin Reserve</h1>
+              <h3>{globalReserve}</h3>
               <div></div>
               <img src={sheilferBitcoin} width={200} height={250} />
 
@@ -269,7 +272,7 @@ export const ImpactWallet = ({
               </div>
               <p style={{ maxWidth: 720 }}>
                 <br />
-                10% of subscriptions are stored as Bitcoin as a reserve system
+                100% of subscriptions are stored as Bitcoin as a reserve system
                 for RO.B.E. This reserve is designed to position Robots Building
                 Education for growth. You're encouraged to send Bitcoin as
                 another way to support the growth of RO.B.E without

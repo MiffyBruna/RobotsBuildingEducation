@@ -161,7 +161,11 @@ export const Module = ({
     <StyledModule
       patreonObject={ui(globalUserModulesFromDB)[path][collection][module]}
       key={currentModule.button}
-      onClick={() => handleModuleSelection(currentModule, module)}
+      onClick={() => {
+        !currentModule?.isModuleDisabled
+          ? handleModuleSelection(currentModule, module)
+          : null;
+      }}
     >
       {currentModule.sourceType === "video" ? (
         <span>
@@ -181,9 +185,28 @@ export const Module = ({
       )}
 
       {/* Simple for now. tooltip added to module schema in the future. Use 'module.underConstruction' as a tooltip example*/}
-      {/* 3AF6FF */}
+      {/* 3AF6FF 🔒*/}
       <div>
-        {currentModule?.rare
+        {currentModule?.isModuleDisabled
+          ? renderWithTooltip(
+              <div
+                style={{
+                  // border: "1px solid #3AF6FF",
+                  borderRadius: "10px",
+                  width: "50px",
+                }}
+              >
+                🔒
+              </div>,
+              "rare value 💍",
+              "top",
+              {
+                // border: "1px solid #3AF6FF",
+                marginBottom: "6px",
+                borderRadius: "10px",
+              }
+            )
+          : currentModule?.rare
           ? renderWithTooltip(
               <div
                 style={{

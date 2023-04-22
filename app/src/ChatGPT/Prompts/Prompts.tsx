@@ -17,6 +17,7 @@ export const Prompts = ({
   handleSubmit,
   userDocumentReference,
   usersModulesCollectionReference,
+
   usersModulesFromDB,
 
   //pow
@@ -26,6 +27,7 @@ export const Prompts = ({
   globalImpactCounter,
   userAuthObject,
   isRaidActive,
+  globalReserve,
 }) => {
   if (!isEmpty(patreonObject)) {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -229,6 +231,7 @@ export const Prompts = ({
           globalImpactCounter={globalImpactCounter}
           usersModulesCollectionReference={usersModulesCollectionReference}
           usersModulesFromDB={usersModulesFromDB}
+          globalReserve={globalReserve}
         />
         {/* <DiscordButton /> */}
         <br />

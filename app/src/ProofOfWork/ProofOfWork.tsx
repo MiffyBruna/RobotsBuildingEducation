@@ -14,6 +14,7 @@ export const ProofOfWork = ({
   isModule = false,
   usersModulesCollectionReference = null,
   usersModulesFromDB,
+  globalReserve,
 }) => {
   const [isImpactWalletOpen, setIsImpactWalletOpen] = useState(false);
 
@@ -41,6 +42,7 @@ export const ProofOfWork = ({
           setIsImpactWalletOpen={setIsImpactWalletOpen}
           usersModulesCollectionReference={usersModulesCollectionReference}
           usersModulesFromDB={usersModulesFromDB}
+          globalReserve={globalReserve}
         />
 
         {/* {
@@ -77,6 +79,7 @@ export const ProofOfWork = ({
         usersModulesCollectionReference={usersModulesCollectionReference}
         usersModulesFromDB={usersModulesFromDB}
         userAuthObject={userAuthObject}
+        globalReserve={globalReserve}
       />
       {/* <a onClick={() => auth.signOut()}>Sign-out</a> */}
     </div>
