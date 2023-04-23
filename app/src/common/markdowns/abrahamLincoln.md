@@ -1,4 +1,16 @@
-From ms. roxana:
+Abraham Lincoln's views on divine providence evolved throughout his life, but he ultimately came to believe in a higher power guiding the events of human history. Although Lincoln was not a member of any specific religious denomination, he frequently referenced God and divine providence in his speeches and writings.
+
+In the early years of his political career, Lincoln's understanding of divine providence was more deistic in nature, meaning he believed in a distant God who created the universe but did not actively intervene in human affairs. However, as he faced the challenges of the Civil War and the immense suffering it caused, Lincoln's views shifted towards a more theistic perspective, in which God actively shaped the course of human events.
+
+This shift can be seen in some of his most famous speeches, such as the Gettysburg Address (1863) and his Second Inaugural Address (1865). In the Gettysburg Address, Lincoln invoked "the great task remaining before us" to ensure that "government of the people, by the people, for the people, shall not perish from the earth." In this context, divine providence is implicit in the idea that the preservation of the Union is part of a larger, divinely ordained plan.
+
+In his Second Inaugural Address, Lincoln's belief in divine providence is more explicit. He grappled with the idea that both the Union and the Confederacy prayed to the same God, and each side believed that its cause was just. Lincoln suggested that the Civil War might be God's punishment on the nation for the sin of slavery, stating, "If we shall suppose that American slavery is one of those offenses which, in the providence of God, must needs come, but which, having continued through His appointed time, He now wills to remove, and that He gives to both North and South this terrible war as the woe due to those by whom the offense came, shall we discern therein any departure from those divine attributes which the believers in a living God always ascribe to Him?"
+
+This passage reflects Lincoln's belief that God was actively involved in the events of the Civil War and that divine providence was ultimately guiding the nation towards a just resolution.
+
+Overall, Abraham Lincoln's views on divine providence evolved throughout his life, becoming more theistic as he faced the challenges of the Civil War. By the end of his life, he believed that a higher power was actively guiding human history, and he invoked this belief in some of his most famous speeches.
+
+<hr/>
 
 Abraham Lincoln is one of the most iconic figures in history thanks to his incredible leadership and commitment to the principles of freedom and democracy. Throughout his life and career, Lincoln was heavily influenced by his faith in divine providence and he often expressed this in his rhetoric and public statements.
 
@@ -34,7 +46,7 @@ Lincoln acknowledged that the Civil War was a great tragedy, but he ultimately s
 
 In his Second Inaugural Address, he suggested that the war was necessary for the nation to come to true freedom and equality: “Fondly do we hope, fervently do we pray, that this mighty scourge of war may speedily pass away.
 
-Yet, if God wills that it continue until all the wealth piled by the bondsman’s two hundred and fifty years of unrequited toil shall be sunk, and until every drop of blood drawn with the lash shall be paid by another drawn with the sword, as was said three thousand years ago, so still it must be said 'the judgments of the Lord are true and righteous altogether.’”
+"Yet, if God wills that it continue until all the wealth piled by the bondsman’s two hundred and fifty years of unrequited toil shall be sunk, and until every drop of blood drawn with the lash shall be paid by another drawn with the sword, as was said three thousand years ago, so still it must be said 'the judgments of the Lord are true and righteous altogether.’”
 
 Here, Lincoln suggests that the Civil War was necessary to allow the oppressed to receive justice, and he turns to God to make sure that justice is served. Abraham Lincoln's strong belief in divine providence played an important role in his thoughts on the Civil War.
 
