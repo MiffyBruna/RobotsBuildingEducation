@@ -221,6 +221,32 @@ export const About = ({ auth }) => {
           </p>
           <br />
           <h3 style={{ maxWidth: "100%", width: 700 }}>
+            What kind of computer do I need?
+          </h3>
+          <p style={{ maxWidth: "100%", width: 700 }}>
+            When it comes to learning, I recommend paper and pencil. RO.B.E is
+            not a software intensive program. It can be used on your mobile
+            device or any laptop. I like it on mobile phones.
+            <br /> <br />
+            If you're wondering what kind of computer you need to code, I
+            recommend a macbook pro. The reason why is because you just want to
+            solve that problem and macbook pros are good general solutions to
+            what you'll need in a number of careers. If you need something
+            specialized for gaming or some AI and you're certain about your
+            investment, then in a similar spirit, invest in the best computing
+            power you can get.
+            <br />
+            <br />
+            But what if you're in a budget? In that case, any laptop will do for
+            what's being taught here. You can even get away with doing something
+            on an ipad these days, with how some web services like Github
+            Codespaces or Codepen has improved over the years.
+            https://github.com/features/codespaces
+            <br />
+          </p>
+          <br />
+          <br />
+          <h3 style={{ maxWidth: "100%", width: 700 }}>
             Is programming hard? Do I have to be good at math?
           </h3>
           <p style={{ maxWidth: "100%", width: 700 }}>
