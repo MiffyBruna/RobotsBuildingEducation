@@ -40,22 +40,23 @@ export let ultimateEffeciencyJutsu = (key) => {
     ["Philosophy"]: "Critical Race Theory and machine learning algorithms",
     ["Bitcoin, Automa & the Drug War"]:
       "the relationship between bitcoin, automation, universal basic income and the drug war",
-    ["Bitcoin x Social Technology"]:
-      "the relationship between decentralized identities, civil liberties and our experience on the internet",
-    ["Tech Recession Investing"]: "the benefits of investing in recessions",
-    ["Tech Recession Investing x Real Estate II"]:
-      "the benefits of using IRA exceptions and FHA loans to purchase your first home with $10,000",
-    ["Tech Recession Investing x Real Estate III"]:
+    // ["Bitcoin x Social Technology"]:
+    //   "the relationship between decentralized identities, civil liberties and our experience on the internet",
+    // ["Tech Recession Investing"]: "the benefits of investing in recessions",
+    // ["Tech Recession Investing x Real Estate II"]:
+    //   "the benefits of using IRA exceptions and FHA loans to purchase your first home with $10,000",
+    ["Wealth Management"]:
       "how real estate is tied to the overall market and is a safe way to leverage money",
     ["Learn Coding"]:
       "how computer science is intersectional with any subject of interest",
     ["Creating Competitive Entry Level Resumes"]:
       "how to write and effective one-page resume",
-    ["Options Trading Advice"]: "Charlie Munger's views on focus investing",
-    ["Financial Technology Investing"]:
-      "the pros and cons of investing in financial technology",
+    ["Focus Investing"]: "Charlie Munger's views on focus investing",
+
+    // ["Financial Technology Investing"]:
+    //   "the pros and cons of investing in financial technology",
     ["Social Media Investing"]: "incentives behind social media",
-    ["Metaverse Investing"]: "incentives behind the metaverse",
+    // ["Metaverse Investing"]: "incentives behind the metaverse",
     // ["Mexican-American Trade Investing"]:
     //   "the pros and cons of investing strong Mexican-American railroads",
     // ["Infrastructure Investing"]:

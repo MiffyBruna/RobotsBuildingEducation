@@ -5,30 +5,30 @@ import { ultimateEffeciencyJutsu } from "../ui";
  */
 export const Entrepeneur = {
   "Understanding Business": {
-    Bitcoin: {
+    "Creating Competitive Entry Level Resumes": {
       documentID: ``,
       hasCode: false,
       filler: ``,
       new: false,
-      highValue: false,
+      highValue: true,
       underConstruction: false,
       completed: false,
       needsImprovement: false,
-      rare: true,
       tooltip: ``,
-      sourceType: `markdown`, // may not need
-      button: `Bitcoin`, // may not need - `name`
-      header: `Bitcoin`,
-      fileSource: await import("../../markdowns/drugWarBitcoin.md?raw"), // may not need
+      sourceType: `video`, // may not need
+      button: `Creating Competitive Entry Level Resumes`, // may not need - `name`
+      header: `Creating Competitive Entry Level Resumes`,
+      fileSource:
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674721555/IMG_9181_mjw1zc.mov", // may not need
 
       prompts: {
         patreon: {
           completed: false,
           impact: 1000,
           action: `generate`,
-          icon: `✍️`,
-          request: `ms. roxana, can you please generate an essay that introduces me to ${ultimateEffeciencyJutsu(
-            `Bitcoin, Automa & the Drug War`
+          icon: `►`, //`✍️`
+          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
+            `Creating Competitive Entry Level Resumes`
           )}?`,
           response: `null`,
           spanish: ``,
@@ -39,10 +39,9 @@ export const Entrepeneur = {
           impact: 100,
           action: `inspire`,
           icon: `⚡`,
-          request: `ms. roxana, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
-            `Bitcoin, Automa & the Drug War`
-          )}?`,
-          response: `\n\nThe idea of using Bitcoin as a foundation for Universal Basic Income (UBI) and as a way to fight the drug war has gained significant attention in recent years. This idea stems from the fact that Bitcoin is borderless, decentralized, and secure, making it an ideal medium to distribute funds to the world’s citizenry.\n\nWhen faced with the challenge of driving down drug usage, the idea of providing people with a basic income would allow a steady source of financial support to alleviate the economic pressures often associated with drug usage (e.g. poverty, lack of education, limited job options) and make drugs a less attractive option. Bitcoin provides an ideal platform to make UBI a worldwide reality and allow governments to address decades of failed policies aimed at eliminating the problem. The concept of UBI can also give people time and resources to pursue more productive activities which may otherwise have been wasted on drugs.\n\nUltimately, it is up to individual governments to decide if using Bitcoin as the foundation of universal basic income is an effective strategy for addressing the drug issue.`,
+          request: `ms. roxana, can you please share why hiring managers prefer one-page resumes and how it benefits applicants?`,
+          response:
+            "\n\nHiring managers prefer one-page resumes because they are much easier to read, scan, and review quickly. This is especially beneficial for recruiters and hiring managers who are receiving hundreds of resumes for a given position. When a resume is shorter and more concise, it highlights the strengths of the applicant and highlights the experiences in a more precise way. This allows the hiring manager to get an understanding of the applicant quickly and make a decision on whether to move forward with the candidate or not. Additionally, one-page resumes help make the applicant stand out from the rest of the crowd, since it's an opportunity to make a good first impression.",
           spanish: ``,
           tooltip: ``,
         },
@@ -52,9 +51,10 @@ export const Entrepeneur = {
           action: `summarize`,
           icon: `📚`,
           request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
-            `Bitcoin, Automa & the Drug War`
+            `Creating Competitive Entry Level Resumes`
           )}?`,
-          response: `\n\nIn brief, the relationship between bitcoin, automation and universal basic income is that automation is likely to lead to job losses or job displacement, which some economists suggest can be mitigated by offering a universal basic income as a social safety net. Bitcoin, a digital cryptocurrency, could be used to provide this universal basic income, as it is a secure, global means of transferring funds. Moreover, the Drug War has blocked citizens in certain countries from accessing these safety nets and benefits, driving them to find alternative means of income. Bitcoin, due to its decentralization, could provide an avenue for these individuals to access the benefits of a universal basic income.`,
+          response:
+            "\n\nWriting an effective one-page resume is not too different from writing a regular resume, but there are a few tips that can help. First, it's important to include only relevant information; you want to be concise and limit yourself to the essentials. This includes a professional summary that outlines your experience, qualifications, and relevant skills in three to four short sentences. It's also important to use keywords related to the job you are applying for. After the summary, list your work experience in reverse chronological order followed by your education and relevant skills. Finally, make sure to proofread your resume multiple times and have someone else look over it to ensure accuracy.",
           spanish: ``,
           tooltip: ``,
         },
@@ -64,9 +64,10 @@ export const Entrepeneur = {
           action: `ask`,
           icon: `🔮`,
           request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
-            `Bitcoin, Automa & the Drug War`
+            `Creating Competitive Entry Level Resumes`
           )} with one sentence answers?`,
-          response: `\n\n1. How is Bitcoin related to automation? - Bitcoin enables automated payments, which can help reduce overhead costs associated with manual processing.\n\n2. How is Universal Basic Income related to the drug war? - UBI could provide additional funds to those affected by the war on drugs, allowing them to support themselves without resorting to criminal activity.\n\n3. How is automation related to the drug war? - Automation of certain processes associated with the drug war can help reduce the number of labor hours needed to conduct investigations and crime prevention.`,
+          response:
+            "\n\n1. What should I include in a one-page resume? - Include your contact information, skillset, work experience, education, and relevant certifications.\n\n2. How do I showcase my best qualifications?- Highlight the qualifications that are relevant to the job you are applying for and showcase your top accomplishments.\n\n3. How should I format my one-page resume?- Use a clearly structured format and an easy-to-read font size such as Arial or Times New Roman size 10 or 11.",
           spanish: ``,
           tooltip: ``,
         },
@@ -76,21 +77,23 @@ export const Entrepeneur = {
           action: `guide`,
           icon: `🤝`,
           request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
-            `Bitcoin, Automa & the Drug War`
+            `Creating Competitive Entry Level Resumes`
           )}?`,
-          response: `\n\nStudy Guide for the Relationship Between Bitcoin, Automation, Universal Basic Income and the Drug War \n1. Explain how Bitcoin works and how it can be used to disrupt the traditional financial system.\n2. Discuss the potential implications of automation on the workforce, such as job displacement and increased inequality.\n3. Describe how a universal basic income could mitigate the effects of automation and provide financial stability for citizens.\n4. Analyze how a universal basic income could potentially help to reduce crime levels related to drug use.\n5. Examine the role that Bitcoin could play in providing access to economic opportunities and reducing financial inequality.\n6. Discuss the potential consequences of the increased use of Bitcoin for drug dealing and other illicit activities.\n7. Articulate the impact of Bitcoin or other digital currencies on existing laws, regulations and enforcement efforts related to drug trafficking.\n8. Explain the implications of a universal basic income for helping to reduce drug use and crime levels.\n9. Assess whether Bitcoin could be used to facilitate effective international collaboration in the war against drugs.\n10. Analyze the potential impact of automation and digital currencies on the current enforcement strategies related to the Drug War.`,
+          response:
+            "\n\nStudy Guide: How to Write an Effective One-Page Resume \n\n1. Focus on your most relevant qualifications: When writing a one-page resume, you don’t have much room to include resume sections. This means you’ll have to focus on including only the most relevant qualifications. \n\n2. Use a resume format: The ideal format for a one-page resume is the reverse chronological format. This resume format is organized in a way that draws attention to your most relevant experience first. \n\n3. Be concise: When writing, try to be as concise as possible. Stick to short, condensed sentences and be sure to omit any unnecessary details. \n\n4. Use action verbs: Whenever possible, use action verbs to describe your experience in order to emphasize the results you achieved\n\n5. Fill the entire page: You want to make sure that your resume is full and packed with relevant qualifications. Make sure to fill the entire page with information. \n\n6. Avoid using pronouns: Whenever possible, try to avoid using personal pronouns like “I” and “me”.\n\n7. Highlight your skills: Since the goal of a one-page resume is to make it concise, you should try to highlight your skills at the top of your resume.\n\n8. Choose the right font: When picking the right font for your resume, make sure to choose one that is easy to read and professional. \n\n9. Use keywords effectively: When writing, make sure to use the right keywords that are related to your job field. This will ensure that your resume is picked up by any automated recruiters. \n\n10. Proofread: Once you’ve completed your resume, be sure to proofread it. This will help you make sure that there aren’t any typos or inaccuracies in your document.",
           spanish: ``,
           tooltip: ``,
         },
         demonstrate: {
           completed: false,
           impact: 100,
+          humanTouch: true,
           action: `demonstrate`,
           icon: `🧿`,
           request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
-            `Bitcoin, Automa & the Drug War`
+            `Creating Competitive Entry Level Resumes`
           )}?`,
-          response: `\n\nThe relationship between bitcoin, automation, universal basic income, and the drug war is complicated, yet interconnected. \n\nBitcoin has the potential to enable financial access to populations with little financial inclusion and access. This could potentially reduce the risk of participation in the drug trade due to a better alternative source of income, with the distributed nature of the Bitcoin network providing some degree of anonymity. \n\nAutomation, particularly automation in low-wage jobs, could present an economic incentive to those working in such industries by providing a Universal Basic Income. This could potentially reduce the economic incentive of the drug trade due to a guaranteed income stream. \n\nUniversal basic income also has the potential to provide greater financial stability for individuals involved in the drug trade, reducing the associated risks of poverty and incentivizing individuals to pursue legitimate opportunities outside of the drug trade. \n\nFinally, the reduced dependence on the drug trade provided by alternatives such as Bitcoin and Universal Basic Income could present countries such as the United States with a greater opportunity to curtail the drug war, as individuals are no longer financially tied to the industry.`,
+          response: "bro watch the video. it's good.",
           spanish: ``,
           tooltip: ``,
         },
@@ -100,9 +103,10 @@ export const Entrepeneur = {
           action: `define`, // may not need
           icon: `👾`, // may not need
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
-            `Bitcoin, Automa & the Drug War`
+            `Creating Competitive Entry Level Resumes`
           )} in exactly one sentence?`,
-          response: `\n\nThe intersection of Bitcoin, automation, Universal Basic Income, and the Drug War could provide a way to reduce extreme poverty, inequality and create economic security for marginalized communities.`,
+          response:
+            "\n\nTo write an effective one-page resume, focus on highlighting your relevant skills, accomplishments, and credentials that are most relevant to the role in an easy-to-read format.",
           spanish: ``,
           tooltip: ``,
         },
@@ -113,9 +117,10 @@ export const Entrepeneur = {
           action: `quiz`,
           icon: `🧪`,
           request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
-            `Bitcoin, Automa & the Drug War`
+            `Creating Competitive Entry Level Resumes`
           )}?`,
-          response: `\n\n1. How has the drug war pushed countries to embrace digital currencies like Bitcoin?\n2. How can automation and universal basic income affect the purchasing and trading of Bitcoin?\n3. What implications does the spread of Bitcoin have for continuing the drug war?`,
+          response:
+            "\n\n1. What key components should be included in a one-page resume?\n2. When writing a one-page resume, what information should be left out?\n3. How can you ensure that your one-page resume stands out from other applicants?",
           spanish: ``,
           tooltip: ``,
         },
@@ -131,6 +136,396 @@ export const Entrepeneur = {
         },
       },
     },
+    "Focus Investing": {
+      documentID: ``,
+      hasCode: false,
+      filler: ``,
+      new: false,
+      highValue: true,
+      underConstruction: false,
+      completed: false,
+      needsImprovement: false,
+      isModuleDisabled: false,
+      tooltip: ``,
+      sourceType: `markdown`, // may not need
+      button: `Focus Investing`, // may not need - `name`
+      header: `Focus Investing`,
+      fileSource: await import("../../markdowns/focusInvesting.md?raw"), // may not need
+
+      prompts: {
+        patreon: {
+          completed: false,
+          impact: 1000,
+          action: `generate`,
+          icon: `✍️`, //`✍️`
+          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
+            `Focus Investing`
+          )}?`,
+          response: `null`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        inspire: {
+          completed: false,
+          impact: 100,
+          action: `inspire`,
+          icon: `⚡`,
+          request: `ms. roxana, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
+            `Focus Investing`
+          )}?`,
+          response:
+            "\n\nCharlie Munger once famously said, “All I want to know is where I am going to die so I’ll never go there.”\n\nCharlie Munger is a renowned investor who is Warren Buffett’s partner in Berkshire Hathaway. Munger is known for having an unrivaled focus on investing.\n\nHe emphasizes the importance of being highly selective in one’s investments. For example, Munger often suggests that it is better to have few highly successful investments than many mediocre investments. He also encourages investors to research and evaluate companies carefully before making an investment.\n\nMunger’s extreme focus on investing has helped him, and many investors, to make spectacular returns. His focus and dedication to the art of investing has made him an inspiration to a generation of investors.",
+          spanish: ``,
+          tooltip: ``,
+        },
+        summarize: {
+          completed: false,
+          impact: 100,
+          action: `summarize`,
+          icon: `📚`,
+          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
+            `Focus Investing`
+          )}?`,
+          response:
+            "\n\nCharlie Munger believes investing should be focused and supported by a deep knowledge of the business. He believes that investors should only invest in businesses with which they are familiar and can fully understand. He recommends having a stable portfolio of well-known investments to minimize risk and maximize returns. He notes that having a large number of stocks can lead to on average lower returns. Additionally, he warns of the dangers of pretending to know what one does not, so one should only invest in areas that have been fully researched. Finally, he strongly advocates caution and discourages excessive speculation or leverage.",
+          spanish: ``,
+          tooltip: ``,
+        },
+        ask: {
+          completed: false,
+          impact: 100,
+          action: `ask`,
+          icon: `🔮`,
+          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
+            `Focus Investing`
+          )} with one sentence answers?`,
+          response:
+            "\n\n1. What is focus investing according to Charlie Munger? Answer: Focus investing is an investment philosophy advocated by Charlie Munger which emphasizes the importance of selecting a few quality investments, and staying focused on those investments over a long-term period.\n\n2. What is the key to successful focus investing according to Charlie Munger? Answer: Charlie Munger believes that by researching the fundamentals of a company thoroughly and making wise investment decisions, one can become a successful investor, regardless of the chosen investing strategy.  \n\n3. What is Charlie Munger's advice on focus investing? Answer: Charlie Munger's advice on focus investing is to take the time to study in depth, find high quality investments, and buy and hold them for the long-term.",
+          spanish: ``,
+          tooltip: ``,
+        },
+        guide: {
+          completed: false,
+          impact: 100,
+          action: `guide`,
+          icon: `🤝`,
+          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
+            `Focus Investing`
+          )}?`,
+          response:
+            "\n\n1. Invest in high-quality businesses with a well-defined competitive advantage. \n2. Focus your investments on businesses you understand.\n3. Keep investing activity to a reasonable amount that is comfortable to you.\n4. Invest in businesses with management teams that are ethical and competent.\n5. Aim for a reasonable return on your investment over the long-term.\n6. Have realistic expectations; don’t expect to beat the market all the time.\n7. Have patience and a long-term outlook; don’t succumb to market volatility.\n8. Research thoroughly to identify investing opportunities.\n9. Monitor investments regularly and look for signs of potential trouble.\n10. Employ a margin-of-safety to protect against potential losses.",
+          spanish: ``,
+          tooltip: ``,
+        },
+        demonstrate: {
+          completed: false,
+          impact: 100,
+          action: `demonstrate`,
+          icon: `🧿`,
+          request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
+            `Focus Investing`
+          )}?`,
+          response:
+            '\n\nCharlie Munger is an investor and the Vice-Chairman of Berkshire Hathaway. He is a staunch advocate of "focus investing" which consists of carefully assessing a few investments, understanding their businesses and their valuations and making investments when the price is right. According to Munger, focus investing requires unconventional wisdom, self-discipline and patience. He believes that it is important to do deep research and properly understand a business before investing in it. As he puts it, “To make money through investing, you need to think independently, and to do that you need to understand the business and its economics. You need to pull out a pencil and calculate the value and margins and thereby figure out whether you want to invest in it or not. Anything less than that approach is not investing, but merely speculating.”',
+          spanish: ``,
+          tooltip: ``,
+        },
+        define: {
+          completed: false,
+          impact: 100,
+          action: `define`, // may not need
+          icon: `👾`, // may not need
+          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
+            `Focus Investing`
+          )} in exactly one sentence?`,
+          response:
+            "\n\nCharlie Munger’s view on focus investing is to thoroughly understand the fundamentals of a small number of investment opportunities and to invest in them with conviction.",
+          spanish: ``,
+          tooltip: ``,
+        },
+
+        quiz: {
+          completed: false,
+          impact: 100,
+          action: `quiz`,
+          icon: `🧪`,
+          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
+            `Focus Investing`
+          )}?`,
+          response:
+            '\n\n1. What widely accepted investment quality does Charlie Munger believe should be considered in focus investing?\n2. What is the concept of "margin of safety" and why is it important in focus investing?\n3. What insights did Charlie Munger provide on the principles of value investing which can be applied to focus investing?',
+          spanish: ``,
+          tooltip: ``,
+        },
+        shop: {
+          completed: false,
+          impact: 100,
+          action: `shop`,
+          icon: `🛍️`,
+          request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
+          response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+      },
+    },
+
+    "Wealth Management": {
+      documentID: ``,
+      hasCode: false,
+      filler: ``,
+      new: false,
+      highValue: true,
+      underConstruction: false,
+      completed: false,
+      needsImprovement: false,
+      isModuleDisabled: false,
+      tooltip: ``,
+      sourceType: `markdown`, // may not need
+      button: `Wealth Management`, // may not need - `name`
+      header: `Wealth Management`,
+      fileSource: await import("../../markdowns/wealthManagement.md?raw"),// may not need
+
+      prompts: {
+        patreon: {
+          completed: false,
+          impact: 1000,
+          action: `generate`,
+          icon: `✍️`, //`✍️`
+          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
+            `Wealth Management`
+          )}?`,
+          response: `null`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        inspire: {
+          completed: false,
+          impact: 100,
+          action: `inspire`,
+          icon: `⚡`,
+          request: `ms. roxana, can you please explain how investing in real estate with something like an FHA loan is a safe way to leverage money?`,
+          response:
+            "\n\nReal estate investment with an FHA loan is a safe way to leverage money because FHA loans are government-backed. This means that the government covers a portion of the loan, so if you are unable to make payments, the government will step in and provide assistance. Additionally, FHA loans are a type of mortgage that is widely used and accepted, so if you were to default on the loan, it would be easy to find buyers. Also, FHA loans often come with lower interest rates, which means your monthly payments would be lower. Finally, FHA loans often require a lower down payment, which allows you to leverage money without having to use too much of your own funds.",
+          spanish: ``,
+          tooltip: ``,
+        },
+        summarize: {
+          completed: false,
+          impact: 100,
+          action: `summarize`,
+          icon: `📚`,
+          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
+            `Wealth Management`
+          )}?`,
+          response:
+            "\n\nReal estate is considered a safe way of leveraging money because it is typically considered a tangible, long-term asset. It is also considered less volatile than many other investments, as real estate is typically slower to rise and fall in value. Moreover, real estate is often considered to be a good diversification to a portfolio, because it is not directly linked to the stock market. Finally, real estate is seen as a good way to leverage money because it typically offers the opportunity to leverage debt in order to enhance returns, such as via the use of mortgages and other financial instruments.",
+          spanish: ``,
+          tooltip: ``,
+        },
+        ask: {
+          completed: false,
+          impact: 100,
+          action: `ask`,
+          icon: `🔮`,
+          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
+            `Wealth Management`
+          )} with one sentence answers?`,
+          response:
+            "\n\n1. Is real estate a good investment in terms of overall market performance? Answer: Yes, because it tends to remain relatively stable no matter what the overall market is doing. \n\n2. Is real estate a safe way to leverage money? Answer: Yes, because it typically keeps its value over the long-term. \n\n3. What risks should I be aware of when investing in real estate? Answer: Volatility in the market, risks associated with tenants, unexpected repairs and maintenance and interest rate changes.",
+          spanish: ``,
+          tooltip: ``,
+        },
+        guide: {
+          completed: false,
+          impact: 100,
+          action: `guide`,
+          icon: `🤝`,
+          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
+            `Wealth Management`
+          )}?`,
+          response:
+            "\n\n1. Real estate is typically seen as a safe investment since it historically provides strong returns in the long-term. \n2. It is also considered a hedge against inflation since property values tend to appreciate faster than the consumer price index.\n3. Real estate can be a great diversification tool for traditional *stocks, bonds, and cash investments. \n4. Through leasing or renting, real estate can be a great source of passive income, which is attractive for investors. \n5. Real estate investments can create large tax benefits, due to the long-term depreciation that can be claimed on investment properties.\n6. By leveraging certain amounts of borrowed capital with real estate investments, investors can utilize “leverage” for greater returns with less capital outlay.\n7. Even in times of economic uncertainty, real estate tends to remain relatively stable as a source of investment, as it is generally not correlated with the stock market.\n8. Real estate markets generally move in a cyclical manner, which can open the door to potential opportunities to capitalize on market timing.\n9. Investing in the right market, such as emerging neighborhoods can turn a small rental into a future resale opportunity with positive returns. \n10. Real estate investors can take advantage of certain business vehicles, such as a Limited Liability Corporation (LLC) to secure their investments and gain additional tax benefits.",
+          spanish: ``,
+          tooltip: ``,
+        },
+        demonstrate: {
+          completed: false,
+          impact: 100,
+          action: `demonstrate`,
+          icon: `🧿`,
+          request: `ms. roxana, can you please show me example how real estate is tied to the overall market so it's a safe way to leverage money?`,
+          response:
+            "\n\nReal estate is linked to the broader economy in several ways. The housing market is strongly associated with mortgage lending, employment, consumer confidence, and consumer spending. When the overall economy is doing well, there is typically greater demand for real estate, driving prices higher. This creates a positive cycle of investment returns, which can be leveraged to create additional investments, or to acquire additional real estate for rental income or appreciation. Similarly, when consumer spending and employment levels are low, the housing market tends to be affected, leading to decreased prices. Despite this, real estate remains an attractive long-term investment due to its potential for capital and rental income, as well as its tangible and safe nature.",
+          spanish: ``,
+          tooltip: ``,
+        },
+        define: {
+          completed: false,
+          impact: 100,
+          action: `define`, // may not need
+          icon: `👾`, // may not need
+          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
+            `Wealth Management`
+          )} in exactly one sentence?`,
+          response:
+            "\n\nReal estate investments can provide a safe way to leverage money and create a diversified portfolio, as the property values tend to mirror the overall market trends.",
+          spanish: ``,
+          tooltip: ``,
+        },
+
+        quiz: {
+          completed: false,
+          impact: 100,
+          action: `quiz`,
+          icon: `🧪`,
+          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
+            `Wealth Management`
+          )}?`,
+          response:
+            "\n\n1. What is the relationship between real estate investing and the stock market?\n2. What are the benefits of investing in real estate rather than in the stock market?\n3. What strategies should investors use to make the most of their money when investing in real estate?",
+          spanish: ``,
+          tooltip: ``,
+        },
+        shop: {
+          completed: false,
+          impact: 100,
+          action: `shop`,
+          icon: `🛍️`,
+          request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
+          response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+      },
+    },
+
+    // Bitcoin: {
+    //   documentID: ``,
+    //   hasCode: false,
+    //   filler: ``,
+    //   new: false,
+    //   highValue: false,
+    //   underConstruction: false,
+    //   completed: false,
+    //   needsImprovement: false,
+    //   rare: true,
+    //   tooltip: ``,
+    //   sourceType: `markdown`, // may not need
+    //   button: `Bitcoin`, // may not need - `name`
+    //   header: `Bitcoin`,
+    //   fileSource: await import("../../markdowns/drugWarBitcoin.md?raw"), // may not need
+
+    //   prompts: {
+    //     patreon: {
+    //       completed: false,
+    //       impact: 1000,
+    //       action: `generate`,
+    //       icon: `✍️`,
+    //       request: `ms. roxana, can you please generate an essay that introduces me to ${ultimateEffeciencyJutsu(
+    //         `Bitcoin, Automa & the Drug War`
+    //       )}?`,
+    //       response: `null`,
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+    //     inspire: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `inspire`,
+    //       icon: `⚡`,
+    //       request: `ms. roxana, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
+    //         `Bitcoin, Automa & the Drug War`
+    //       )}?`,
+    //       response: `\n\nThe idea of using Bitcoin as a foundation for Universal Basic Income (UBI) and as a way to fight the drug war has gained significant attention in recent years. This idea stems from the fact that Bitcoin is borderless, decentralized, and secure, making it an ideal medium to distribute funds to the world’s citizenry.\n\nWhen faced with the challenge of driving down drug usage, the idea of providing people with a basic income would allow a steady source of financial support to alleviate the economic pressures often associated with drug usage (e.g. poverty, lack of education, limited job options) and make drugs a less attractive option. Bitcoin provides an ideal platform to make UBI a worldwide reality and allow governments to address decades of failed policies aimed at eliminating the problem. The concept of UBI can also give people time and resources to pursue more productive activities which may otherwise have been wasted on drugs.\n\nUltimately, it is up to individual governments to decide if using Bitcoin as the foundation of universal basic income is an effective strategy for addressing the drug issue.`,
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+    //     summarize: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `summarize`,
+    //       icon: `📚`,
+    //       request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
+    //         `Bitcoin, Automa & the Drug War`
+    //       )}?`,
+    //       response: `\n\nIn brief, the relationship between bitcoin, automation and universal basic income is that automation is likely to lead to job losses or job displacement, which some economists suggest can be mitigated by offering a universal basic income as a social safety net. Bitcoin, a digital cryptocurrency, could be used to provide this universal basic income, as it is a secure, global means of transferring funds. Moreover, the Drug War has blocked citizens in certain countries from accessing these safety nets and benefits, driving them to find alternative means of income. Bitcoin, due to its decentralization, could provide an avenue for these individuals to access the benefits of a universal basic income.`,
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+    //     ask: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `ask`,
+    //       icon: `🔮`,
+    //       request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
+    //         `Bitcoin, Automa & the Drug War`
+    //       )} with one sentence answers?`,
+    //       response: `\n\n1. How is Bitcoin related to automation? - Bitcoin enables automated payments, which can help reduce overhead costs associated with manual processing.\n\n2. How is Universal Basic Income related to the drug war? - UBI could provide additional funds to those affected by the war on drugs, allowing them to support themselves without resorting to criminal activity.\n\n3. How is automation related to the drug war? - Automation of certain processes associated with the drug war can help reduce the number of labor hours needed to conduct investigations and crime prevention.`,
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+    //     guide: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `guide`,
+    //       icon: `🤝`,
+    //       request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
+    //         `Bitcoin, Automa & the Drug War`
+    //       )}?`,
+    //       response: `\n\nStudy Guide for the Relationship Between Bitcoin, Automation, Universal Basic Income and the Drug War \n1. Explain how Bitcoin works and how it can be used to disrupt the traditional financial system.\n2. Discuss the potential implications of automation on the workforce, such as job displacement and increased inequality.\n3. Describe how a universal basic income could mitigate the effects of automation and provide financial stability for citizens.\n4. Analyze how a universal basic income could potentially help to reduce crime levels related to drug use.\n5. Examine the role that Bitcoin could play in providing access to economic opportunities and reducing financial inequality.\n6. Discuss the potential consequences of the increased use of Bitcoin for drug dealing and other illicit activities.\n7. Articulate the impact of Bitcoin or other digital currencies on existing laws, regulations and enforcement efforts related to drug trafficking.\n8. Explain the implications of a universal basic income for helping to reduce drug use and crime levels.\n9. Assess whether Bitcoin could be used to facilitate effective international collaboration in the war against drugs.\n10. Analyze the potential impact of automation and digital currencies on the current enforcement strategies related to the Drug War.`,
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+    //     demonstrate: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `demonstrate`,
+    //       icon: `🧿`,
+    //       request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
+    //         `Bitcoin, Automa & the Drug War`
+    //       )}?`,
+    //       response: `\n\nThe relationship between bitcoin, automation, universal basic income, and the drug war is complicated, yet interconnected. \n\nBitcoin has the potential to enable financial access to populations with little financial inclusion and access. This could potentially reduce the risk of participation in the drug trade due to a better alternative source of income, with the distributed nature of the Bitcoin network providing some degree of anonymity. \n\nAutomation, particularly automation in low-wage jobs, could present an economic incentive to those working in such industries by providing a Universal Basic Income. This could potentially reduce the economic incentive of the drug trade due to a guaranteed income stream. \n\nUniversal basic income also has the potential to provide greater financial stability for individuals involved in the drug trade, reducing the associated risks of poverty and incentivizing individuals to pursue legitimate opportunities outside of the drug trade. \n\nFinally, the reduced dependence on the drug trade provided by alternatives such as Bitcoin and Universal Basic Income could present countries such as the United States with a greater opportunity to curtail the drug war, as individuals are no longer financially tied to the industry.`,
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+    //     define: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `define`, // may not need
+    //       icon: `👾`, // may not need
+    //       request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
+    //         `Bitcoin, Automa & the Drug War`
+    //       )} in exactly one sentence?`,
+    //       response: `\n\nThe intersection of Bitcoin, automation, Universal Basic Income, and the Drug War could provide a way to reduce extreme poverty, inequality and create economic security for marginalized communities.`,
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+
+    //     quiz: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `quiz`,
+    //       icon: `🧪`,
+    //       request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
+    //         `Bitcoin, Automa & the Drug War`
+    //       )}?`,
+    //       response: `\n\n1. How has the drug war pushed countries to embrace digital currencies like Bitcoin?\n2. How can automation and universal basic income affect the purchasing and trading of Bitcoin?\n3. What implications does the spread of Bitcoin have for continuing the drug war?`,
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+    //     shop: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `shop`,
+    //       icon: `🛍️`,
+    //       request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
+    //       response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+    //   },
+    // },
     // "Bitcoin & The Social Network": {
     //   documentID: ``,
     //   hasCode: false,
@@ -646,138 +1041,6 @@ export const Entrepeneur = {
     //     },
     //   },
     // },
-    // "Learn Coding": {
-    //   documentID: ``,
-    //   hasCode: false,
-    //   filler: ``,
-    //   new: false,
-    //   highValue: false,
-    //   underConstruction: false,
-    //   completed: false,
-    //   needsImprovement: false,
-    //   tooltip: ``,
-    //   sourceType: `video`, // may not need
-    //   button: `Learn Coding`, // may not need - `name`
-    //   header: `Learn Coding`,
-    //   fileSource: 'https://res.cloudinary.com/eduprojectsil/video/upload/v1674721517/IMG_9185_wfrmsz.mov', // may not need
-
-    //   prompts: {
-    //     patreon: {
-    //       completed: false,
-    //       impact: 1000,
-    //       action: `generate`,
-    //       icon: `►`, //`✍️`
-    //       request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
-    //         `Learn Coding`
-    //       )}?`,
-    //       response: `null`,
-    //       spanish: ``,
-    //       tooltip: ``,
-    //     },
-    //     inspire: {
-    //       completed: false,
-    //       impact: 100,
-    //       action: `inspire`,
-    //       icon: `⚡`,
-    //       request: `ms. roxana, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
-    //         `Learn Coding`
-    //       )}?`,
-    //       response:
-    //         " \n\nOne example of computer science being intersectional with another subject is its application in education. Across the U.S., some school systems are using an AI-tutoring approach to help teach students complex concepts. This method of learning employs adaptive online courses that are personalized to each student's individual learning needs and preferences. By collecting data about student progress, educators can identify specific knowledge gaps and apply custom strategies to help students fill in those gaps. Additionally, AI tutoring enables students to take ownership of their own learning process, helping them to stay engaged, motivated, and empowered. With computer science being such an integral part of the education system in many communities, it's inspiring to see how AI tools are being used to revolutionize the way we teach and learn.",
-    //       spanish: ``,
-    //       tooltip: ``,
-    //     },
-    //     summarize: {
-    //       completed: false,
-    //       impact: 100,
-    //       action: `summarize`,
-    //       icon: `📚`,
-    //       request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
-    //         `Learn Coding`
-    //       )}?`,
-    //       response:
-    //         "\n\nComputer science is the practical application of computers and technology, and it can be used to help a variety of fields. From engineering to health sciences and even the arts, computer science can be a powerful tool when combined with other disciplines. It can help to uncover new ways of looking at data, create innovative solutions and automate processes. It can also help to connect different branches of knowledge and develop new applications utilizing data collected from various sources. By combining computer science with specialized knowledge, individuals can gain deeper insights into their subject of interest and potentially uncover new solutions previously unseen.",
-    //       spanish: ``,
-    //       tooltip: ``,
-    //     },
-    //     ask: {
-    //       completed: false,
-    //       impact: 100,
-    //       action: `ask`,
-    //       icon: `🔮`,
-    //       request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
-    //         `Learn Coding`
-    //       )} with one sentence answers?`,
-    //       response:
-    //         "\n\n1. How does computer science intersect with the healthcare field? Answer: Computer science is used for a variety of healthcare-related applications such as health IT, data analysis, and predictive analytics. \n\n2. How does computer science intersect with the arts? Answer: Computer science is used as a tool for creating interactive art and immersive experiences. \n\n3. How does computer science intersect with education? Answer: Computer science is used for educational support activities such as online learning and adaptive teaching models.",
-    //       spanish: ``,
-    //       tooltip: ``,
-    //     },
-    //     guide: {
-    //       completed: false,
-    //       impact: 100,
-    //       action: `guide`,
-    //       icon: `🤝`,
-    //       request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
-    //         `Learn Coding`
-    //       )}?`,
-    //       response:
-    //         "\n\n1. Computer Science can be used to analyze data to uncover patterns and create digital models of economic, political, and social disparities.\n\n2. Computer Science can be used to create algorithms and software applications to help researchers better understand the complexities of our world.\n\n3. Computer Science can be used to analyze and draw connections between different disciplines, such as mathematics, sociology, psychology, and others.\n\n4. Computer Science can be used to develop new display and visualization technologies to help researchers better understand data and uncover relationships.\n\n5. Computer Science can be used to develop machine learning models to better understand complex problems and figure out more efficient ways of solving them.\n\n6. Computer Science can be used to develop AI-enabled systems to analyze and curate data from different sources and help link seemingly unrelated phenomena.\n\n7. Computer Science can be used to create automated processes for doing research faster and more accurately.\n\n8. Computer Science can be used to create advanced information systems to aggregate and synthesize data for easier digestion.\n\n9. Computer Science can be used to develop computer models to more accurately forecast and simulate how systems work in the real world.\n\n10. Computer Science can be used to develop technologies to improve access to information and facilitate the collection, analysis, and visualization of data.",
-    //       spanish: ``,
-    //       tooltip: ``,
-    //     },
-    //     demonstrate: {
-    //       completed: false,
-    //       impact: 100,
-    //       action: `demonstrate`,
-    //       icon: `🧿`,
-    //       request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
-    //         `Learn Coding`
-    //       )}?`,
-    //       response:
-    //         "\n\nComputer science has applications in a wide array of fields, allowing it to intersect with almost any other subject of interest. For example, computer science intersects with biology as it is used to better analyze biological data, including that related to genetics, gene expression, and molecular interactions. Additionally, computer science overlaps with economics as it is used to develop AI programs that can be used to analyze and make decisions based on large datasets. Finally, computer science connects with the humanities through the development of automated programs that can generate a variety of art, music, and literature.",
-    //       spanish: ``,
-    //       tooltip: ``,
-    //     },
-    //     define: {
-    //       completed: false,
-    //       impact: 100,
-    //       action: `define`, // may not need
-    //       icon: `👾`, // may not need
-    //       request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
-    //         `Learn Coding`
-    //       )} in exactly one sentence?`,
-    //       response:
-    //         "\n\nComputer Science is an intersectional subject, connecting mathematics, engineering, and other disciplines to explore the applications and implications of technology for humanity.",
-    //       spanish: ``,
-    //       tooltip: ``,
-    //     },
-
-    //     quiz: {
-    //       completed: false,
-    //       impact: 100,
-    //       action: `quiz`,
-    //       icon: `🧪`,
-    //       request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
-    //         `Learn Coding`
-    //       )}?`,
-    //       response:
-    //         "\n\n1. How can computer science be used to solve problems within social justice and help mitigate systemic injustice?\n\n2. What ethical considerations should be taken into account when developing new technologies?\n\n3. What unique insights can computer science offer in understanding the intersections of environmental science, economics, and public health?",
-    //       spanish: ``,
-    //       tooltip: ``,
-    //     },
-    //     shop: {
-    //       completed: false,
-    //       impact: 100,
-    //       action: `shop`,
-    //       icon: `🛍️`,
-    //       request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
-    //       response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
-    //       spanish: ``,
-    //       tooltip: ``,
-    //     },
-    //   },
-    // },
 
     // "Options Trading Advice": {
     //   documentID: ``,
@@ -932,9 +1195,9 @@ export const Entrepeneur = {
           completed: false,
           impact: 1000,
           action: `generate`,
-          icon: `✍️`, //`✍️`
-          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
-            `Financial Technology Investing`
+          icon: `✍️`,
+          request: `ms. roxana, can you please generate an essay that introduces me to ${ultimateEffeciencyJutsu(
+            `Bitcoin, Automa & the Drug War`
           )}?`,
           response: `null`,
           spanish: ``,
@@ -946,10 +1209,9 @@ export const Entrepeneur = {
           action: `inspire`,
           icon: `⚡`,
           request: `ms. roxana, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
-            `Financial Technology Investing`
+            `Bitcoin, Automa & the Drug War`
           )}?`,
-          response:
-            "\n\nThe story of Cash App is an inspiring tale of how financial technology can be used to help people make sound investments. Cash App is a payment app that was developed by Square, Inc in 2013. It allows users to transfer money between friends and family, make payments to merchants, and even invest in stocks, ETFs, and cryptocurrencies. \n\nThe idea behind Cash App was to make it easy for people of all backgrounds to make and manage their finances, and it quickly became a popular investment tool. People on both sides of the aisle, from millennials to GenXers, love the convenience and affordability of Cash App.\n\nThe pros of investing in Cash App are that users have access to a wide range of stocks, ETFs, and cryptocurrencies, at a fraction of the cost of other financial services providers. Another plus is that the fees associated with Cash App are relatively low, making investing accessible to everyone. Moreover, Cash App users can store their money and securities in a secure manner. \n\nOn the downside, Cash App is a relatively new financial technology product and users may not be aware of all the risks associated with investing. Furthermore, Cash App doesn’t offer many tools to help people assess the performance of their investments. Some investments can also be significantly more risky than others.\n\nOverall, the pros certainly outweigh the cons when it comes to investing in Cash App. This financial technology has revolutionized investing, allowing people with virtually any budget to get access to the same financial opportunities as the wealthy. ",
+          response: `\n\nThe idea of using Bitcoin as a foundation for Universal Basic Income (UBI) and as a way to fight the drug war has gained significant attention in recent years. This idea stems from the fact that Bitcoin is borderless, decentralized, and secure, making it an ideal medium to distribute funds to the world’s citizenry.\n\nWhen faced with the challenge of driving down drug usage, the idea of providing people with a basic income would allow a steady source of financial support to alleviate the economic pressures often associated with drug usage (e.g. poverty, lack of education, limited job options) and make drugs a less attractive option. Bitcoin provides an ideal platform to make UBI a worldwide reality and allow governments to address decades of failed policies aimed at eliminating the problem. The concept of UBI can also give people time and resources to pursue more productive activities which may otherwise have been wasted on drugs.\n\nUltimately, it is up to individual governments to decide if using Bitcoin as the foundation of universal basic income is an effective strategy for addressing the drug issue.`,
           spanish: ``,
           tooltip: ``,
         },
@@ -959,10 +1221,9 @@ export const Entrepeneur = {
           action: `summarize`,
           icon: `📚`,
           request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
-            `Financial Technology Investing`
+            `Bitcoin, Automa & the Drug War`
           )}?`,
-          response:
-            " \n\nThe pros of investing in financial technology include improved access to financial services, improved customer service, more cost effective payments, improved security, and improved data accuracy. The cons of investing in financial technology include high startup and operating costs, lack of consumer trust, cybersecurity risks, potential compliance issues, and a lack of regulation.",
+          response: `\n\nIn brief, the relationship between bitcoin, automation and universal basic income is that automation is likely to lead to job losses or job displacement, which some economists suggest can be mitigated by offering a universal basic income as a social safety net. Bitcoin, a digital cryptocurrency, could be used to provide this universal basic income, as it is a secure, global means of transferring funds. Moreover, the Drug War has blocked citizens in certain countries from accessing these safety nets and benefits, driving them to find alternative means of income. Bitcoin, due to its decentralization, could provide an avenue for these individuals to access the benefits of a universal basic income.`,
           spanish: ``,
           tooltip: ``,
         },
@@ -972,10 +1233,9 @@ export const Entrepeneur = {
           action: `ask`,
           icon: `🔮`,
           request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
-            `Financial Technology Investing`
+            `Bitcoin, Automa & the Drug War`
           )} with one sentence answers?`,
-          response:
-            "\n\n1. What are the pros and cons of investing in financial technology? Pros: Improved access to and convenience of financial services, greater transparency of transactions, lower costs. Cons: Security and privacy risks, lack of regulation.\n\n2. What types of financial technology are available for investment? Blockchain technology, Automated Investment Platforms, Robo-advisors, Crowdfunding platforms, Online Lending and Insurtech.\n\n3. What is the potential upside of investing in financial technology? Potential upside includes improving customer experience, increasing efficiency of financial transactions, and creating business opportunities.",
+          response: `\n\n1. How is Bitcoin related to automation? - Bitcoin enables automated payments, which can help reduce overhead costs associated with manual processing.\n\n2. How is Universal Basic Income related to the drug war? - UBI could provide additional funds to those affected by the war on drugs, allowing them to support themselves without resorting to criminal activity.\n\n3. How is automation related to the drug war? - Automation of certain processes associated with the drug war can help reduce the number of labor hours needed to conduct investigations and crime prevention.`,
           spanish: ``,
           tooltip: ``,
         },
@@ -985,10 +1245,9 @@ export const Entrepeneur = {
           action: `guide`,
           icon: `🤝`,
           request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
-            `Financial Technology Investing`
+            `Bitcoin, Automa & the Drug War`
           )}?`,
-          response:
-            "\n\nPros of Investing in Financial Technology:\n1. Reduces costs and inefficiencies in the current financial system.\n2. Increases financial access to unbanked and underbanked individuals.\n3. Level playing field for small businesses and entrepreneurs.\n4. Faster transactions and improved reliability.\n5. Improved customer service, with a more interactive experience.\n6. Increase in customer data security and privacy.\n7. Increased transparency and accountability.\n8. Risk management and automation of back-office operations.\n9. Increased liquidity and trading opportunities.\n10. Enhanced risk-reward opportunities.\n\nCons of Investing in Financial Technology:\n1. High upfront capital costs for new financial technology investments.\n2. Regulatory compliance issues with data privacy and security.\n3. Risk of fraud and cyber-attacks from hackers.\n4. Difficulty understanding the technology by consumers.\n5. Uncertainty about future returns.\n6. Current financial institutions may be resistant to adoption of new technologies.\n7. Talent shortages of qualified personnel to utilize and monitor the technology.\n8. Longer waiting times to settle transactions.\n9. Risk of overreliance on technology.\n10. Increase in the complexity of tracking and monitoring investments.",
+          response: `\n\nStudy Guide for the Relationship Between Bitcoin, Automation, Universal Basic Income and the Drug War \n1. Explain how Bitcoin works and how it can be used to disrupt the traditional financial system.\n2. Discuss the potential implications of automation on the workforce, such as job displacement and increased inequality.\n3. Describe how a universal basic income could mitigate the effects of automation and provide financial stability for citizens.\n4. Analyze how a universal basic income could potentially help to reduce crime levels related to drug use.\n5. Examine the role that Bitcoin could play in providing access to economic opportunities and reducing financial inequality.\n6. Discuss the potential consequences of the increased use of Bitcoin for drug dealing and other illicit activities.\n7. Articulate the impact of Bitcoin or other digital currencies on existing laws, regulations and enforcement efforts related to drug trafficking.\n8. Explain the implications of a universal basic income for helping to reduce drug use and crime levels.\n9. Assess whether Bitcoin could be used to facilitate effective international collaboration in the war against drugs.\n10. Analyze the potential impact of automation and digital currencies on the current enforcement strategies related to the Drug War.`,
           spanish: ``,
           tooltip: ``,
         },
@@ -998,10 +1257,9 @@ export const Entrepeneur = {
           action: `demonstrate`,
           icon: `🧿`,
           request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
-            `Financial Technology Investing`
+            `Bitcoin, Automa & the Drug War`
           )}?`,
-          response:
-            "\n\nPros:\n\n1. High Returns: Investments in financial technology often provide investors with high returns and low levels of risk.\n\n2. Improved Efficiency: By leveraging innovative technology, investments in financial technology improve the efficiency of investments and trading processes.\n\n3. Increased Accessibility: Financial technology investments can increase accessibility and open up investment opportunities for more people.\n\nCons:\n\n1. Uncertainty: Investing in financial technology, just like any other investment, can come with direct and indirect risks that can be difficult to predict.\n\n2. Regulatory Challenges: Financial technology investments often run up against various legal and regulatory obstacles when attempting to enter new markets.\n\n3. Lack of Understanding: Many investors may be unfamiliar with financial technology investments and are unaware of the potential opportunities they present.",
+          response: `\n\nThe relationship between bitcoin, automation, universal basic income, and the drug war is complicated, yet interconnected. \n\nBitcoin has the potential to enable financial access to populations with little financial inclusion and access. This could potentially reduce the risk of participation in the drug trade due to a better alternative source of income, with the distributed nature of the Bitcoin network providing some degree of anonymity. \n\nAutomation, particularly automation in low-wage jobs, could present an economic incentive to those working in such industries by providing a Universal Basic Income. This could potentially reduce the economic incentive of the drug trade due to a guaranteed income stream. \n\nUniversal basic income also has the potential to provide greater financial stability for individuals involved in the drug trade, reducing the associated risks of poverty and incentivizing individuals to pursue legitimate opportunities outside of the drug trade. \n\nFinally, the reduced dependence on the drug trade provided by alternatives such as Bitcoin and Universal Basic Income could present countries such as the United States with a greater opportunity to curtail the drug war, as individuals are no longer financially tied to the industry.`,
           spanish: ``,
           tooltip: ``,
         },
@@ -1011,10 +1269,9 @@ export const Entrepeneur = {
           action: `define`, // may not need
           icon: `👾`, // may not need
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
-            `Financial Technology Investing`
+            `Bitcoin, Automa & the Drug War`
           )} in exactly one sentence?`,
-          response:
-            "\n\nThe pros of investing in financial technology are the potential of improved operational efficiency and cost savings; the cons are the potential risk of failure and difficulty complying with regulatory requirements.",
+          response: `\n\nThe intersection of Bitcoin, automation, Universal Basic Income, and the Drug War could provide a way to reduce extreme poverty, inequality and create economic security for marginalized communities.`,
           spanish: ``,
           tooltip: ``,
         },
@@ -1025,10 +1282,9 @@ export const Entrepeneur = {
           action: `quiz`,
           icon: `🧪`,
           request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
-            `Financial Technology Investing`
+            `Bitcoin, Automa & the Drug War`
           )}?`,
-          response:
-            "\n\n1. What is the potential upside of investing in financial technology, and what is the potential downside?\n2. What are the major risks associated with investing in financial technology?\n3. What are some of the industry trends in financial technology, and how could they impact your investments?",
+          response: `\n\n1. How has the drug war pushed countries to embrace digital currencies like Bitcoin?\n2. How can automation and universal basic income affect the purchasing and trading of Bitcoin?\n3. What implications does the spread of Bitcoin have for continuing the drug war?`,
           spanish: ``,
           tooltip: ``,
         },
@@ -1174,401 +1430,7 @@ export const Entrepeneur = {
         },
       },
     },
-    "Creating Competitive Entry Level Resumes": {
-      documentID: ``,
-      hasCode: false,
-      filler: ``,
-      new: false,
-      highValue: true,
-      underConstruction: false,
-      completed: false,
-      needsImprovement: false,
-      tooltip: ``,
-      sourceType: `video`, // may not need
-      button: `Creating Competitive Entry Level Resumes`, // may not need - `name`
-      header: `Creating Competitive Entry Level Resumes`,
-      fileSource:
-        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674721555/IMG_9181_mjw1zc.mov", // may not need
 
-      prompts: {
-        patreon: {
-          completed: false,
-          impact: 1000,
-          action: `generate`,
-          icon: `►`, //`✍️`
-          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
-            `Creating Competitive Entry Level Resumes`
-          )}?`,
-          response: `null`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        inspire: {
-          completed: false,
-          impact: 100,
-          action: `inspire`,
-          icon: `⚡`,
-          request: `ms. roxana, can you please share why hiring managers prefer one-page resumes and how it benefits applicants?`,
-          response:
-            "\n\nHiring managers prefer one-page resumes because they are much easier to read, scan, and review quickly. This is especially beneficial for recruiters and hiring managers who are receiving hundreds of resumes for a given position. When a resume is shorter and more concise, it highlights the strengths of the applicant and highlights the experiences in a more precise way. This allows the hiring manager to get an understanding of the applicant quickly and make a decision on whether to move forward with the candidate or not. Additionally, one-page resumes help make the applicant stand out from the rest of the crowd, since it's an opportunity to make a good first impression.",
-          spanish: ``,
-          tooltip: ``,
-        },
-        summarize: {
-          completed: false,
-          impact: 100,
-          action: `summarize`,
-          icon: `📚`,
-          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
-            `Creating Competitive Entry Level Resumes`
-          )}?`,
-          response:
-            "\n\nWriting an effective one-page resume is not too different from writing a regular resume, but there are a few tips that can help. First, it's important to include only relevant information; you want to be concise and limit yourself to the essentials. This includes a professional summary that outlines your experience, qualifications, and relevant skills in three to four short sentences. It's also important to use keywords related to the job you are applying for. After the summary, list your work experience in reverse chronological order followed by your education and relevant skills. Finally, make sure to proofread your resume multiple times and have someone else look over it to ensure accuracy.",
-          spanish: ``,
-          tooltip: ``,
-        },
-        ask: {
-          completed: false,
-          impact: 100,
-          action: `ask`,
-          icon: `🔮`,
-          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
-            `Creating Competitive Entry Level Resumes`
-          )} with one sentence answers?`,
-          response:
-            "\n\n1. What should I include in a one-page resume? - Include your contact information, skillset, work experience, education, and relevant certifications.\n\n2. How do I showcase my best qualifications?- Highlight the qualifications that are relevant to the job you are applying for and showcase your top accomplishments.\n\n3. How should I format my one-page resume?- Use a clearly structured format and an easy-to-read font size such as Arial or Times New Roman size 10 or 11.",
-          spanish: ``,
-          tooltip: ``,
-        },
-        guide: {
-          completed: false,
-          impact: 100,
-          action: `guide`,
-          icon: `🤝`,
-          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
-            `Creating Competitive Entry Level Resumes`
-          )}?`,
-          response:
-            "\n\nStudy Guide: How to Write an Effective One-Page Resume \n\n1. Focus on your most relevant qualifications: When writing a one-page resume, you don’t have much room to include resume sections. This means you’ll have to focus on including only the most relevant qualifications. \n\n2. Use a resume format: The ideal format for a one-page resume is the reverse chronological format. This resume format is organized in a way that draws attention to your most relevant experience first. \n\n3. Be concise: When writing, try to be as concise as possible. Stick to short, condensed sentences and be sure to omit any unnecessary details. \n\n4. Use action verbs: Whenever possible, use action verbs to describe your experience in order to emphasize the results you achieved\n\n5. Fill the entire page: You want to make sure that your resume is full and packed with relevant qualifications. Make sure to fill the entire page with information. \n\n6. Avoid using pronouns: Whenever possible, try to avoid using personal pronouns like “I” and “me”.\n\n7. Highlight your skills: Since the goal of a one-page resume is to make it concise, you should try to highlight your skills at the top of your resume.\n\n8. Choose the right font: When picking the right font for your resume, make sure to choose one that is easy to read and professional. \n\n9. Use keywords effectively: When writing, make sure to use the right keywords that are related to your job field. This will ensure that your resume is picked up by any automated recruiters. \n\n10. Proofread: Once you’ve completed your resume, be sure to proofread it. This will help you make sure that there aren’t any typos or inaccuracies in your document.",
-          spanish: ``,
-          tooltip: ``,
-        },
-        demonstrate: {
-          completed: false,
-          impact: 100,
-          humanTouch: true,
-          action: `demonstrate`,
-          icon: `🧿`,
-          request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
-            `Creating Competitive Entry Level Resumes`
-          )}?`,
-          response: "bro watch the video. it's good.",
-          spanish: ``,
-          tooltip: ``,
-        },
-        define: {
-          completed: false,
-          impact: 100,
-          action: `define`, // may not need
-          icon: `👾`, // may not need
-          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
-            `Creating Competitive Entry Level Resumes`
-          )} in exactly one sentence?`,
-          response:
-            "\n\nTo write an effective one-page resume, focus on highlighting your relevant skills, accomplishments, and credentials that are most relevant to the role in an easy-to-read format.",
-          spanish: ``,
-          tooltip: ``,
-        },
-
-        quiz: {
-          completed: false,
-          impact: 100,
-          action: `quiz`,
-          icon: `🧪`,
-          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
-            `Creating Competitive Entry Level Resumes`
-          )}?`,
-          response:
-            "\n\n1. What key components should be included in a one-page resume?\n2. When writing a one-page resume, what information should be left out?\n3. How can you ensure that your one-page resume stands out from other applicants?",
-          spanish: ``,
-          tooltip: ``,
-        },
-        shop: {
-          completed: false,
-          impact: 100,
-          action: `shop`,
-          icon: `🛍️`,
-          request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
-          response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-      },
-    },
-    "Focus Investing": {
-      documentID: ``,
-      hasCode: false,
-      filler: ``,
-      new: false,
-      highValue: true,
-      underConstruction: false,
-      completed: false,
-      needsImprovement: false,
-      isModuleDisabled: true,
-      tooltip: ``,
-      sourceType: `video`, // may not need
-      button: `Focus Investing`, // may not need - `name`
-      header: `Focus Investing`,
-      fileSource:
-        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674721555/IMG_9181_mjw1zc.mov", // may not need
-
-      prompts: {
-        patreon: {
-          completed: false,
-          impact: 1000,
-          action: `generate`,
-          icon: `►`, //`✍️`
-          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
-            `Creating Competitive Entry Level Resumes`
-          )}?`,
-          response: `null`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        inspire: {
-          completed: false,
-          impact: 100,
-          action: `inspire`,
-          icon: `⚡`,
-          request: `ms. roxana, can you please share why hiring managers prefer one-page resumes and how it benefits applicants?`,
-          response:
-            "\n\nHiring managers prefer one-page resumes because they are much easier to read, scan, and review quickly. This is especially beneficial for recruiters and hiring managers who are receiving hundreds of resumes for a given position. When a resume is shorter and more concise, it highlights the strengths of the applicant and highlights the experiences in a more precise way. This allows the hiring manager to get an understanding of the applicant quickly and make a decision on whether to move forward with the candidate or not. Additionally, one-page resumes help make the applicant stand out from the rest of the crowd, since it's an opportunity to make a good first impression.",
-          spanish: ``,
-          tooltip: ``,
-        },
-        summarize: {
-          completed: false,
-          impact: 100,
-          action: `summarize`,
-          icon: `📚`,
-          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
-            `Creating Competitive Entry Level Resumes`
-          )}?`,
-          response:
-            "\n\nWriting an effective one-page resume is not too different from writing a regular resume, but there are a few tips that can help. First, it's important to include only relevant information; you want to be concise and limit yourself to the essentials. This includes a professional summary that outlines your experience, qualifications, and relevant skills in three to four short sentences. It's also important to use keywords related to the job you are applying for. After the summary, list your work experience in reverse chronological order followed by your education and relevant skills. Finally, make sure to proofread your resume multiple times and have someone else look over it to ensure accuracy.",
-          spanish: ``,
-          tooltip: ``,
-        },
-        ask: {
-          completed: false,
-          impact: 100,
-          action: `ask`,
-          icon: `🔮`,
-          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
-            `Creating Competitive Entry Level Resumes`
-          )} with one sentence answers?`,
-          response:
-            "\n\n1. What should I include in a one-page resume? - Include your contact information, skillset, work experience, education, and relevant certifications.\n\n2. How do I showcase my best qualifications?- Highlight the qualifications that are relevant to the job you are applying for and showcase your top accomplishments.\n\n3. How should I format my one-page resume?- Use a clearly structured format and an easy-to-read font size such as Arial or Times New Roman size 10 or 11.",
-          spanish: ``,
-          tooltip: ``,
-        },
-        guide: {
-          completed: false,
-          impact: 100,
-          action: `guide`,
-          icon: `🤝`,
-          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
-            `Creating Competitive Entry Level Resumes`
-          )}?`,
-          response:
-            "\n\nStudy Guide: How to Write an Effective One-Page Resume \n\n1. Focus on your most relevant qualifications: When writing a one-page resume, you don’t have much room to include resume sections. This means you’ll have to focus on including only the most relevant qualifications. \n\n2. Use a resume format: The ideal format for a one-page resume is the reverse chronological format. This resume format is organized in a way that draws attention to your most relevant experience first. \n\n3. Be concise: When writing, try to be as concise as possible. Stick to short, condensed sentences and be sure to omit any unnecessary details. \n\n4. Use action verbs: Whenever possible, use action verbs to describe your experience in order to emphasize the results you achieved\n\n5. Fill the entire page: You want to make sure that your resume is full and packed with relevant qualifications. Make sure to fill the entire page with information. \n\n6. Avoid using pronouns: Whenever possible, try to avoid using personal pronouns like “I” and “me”.\n\n7. Highlight your skills: Since the goal of a one-page resume is to make it concise, you should try to highlight your skills at the top of your resume.\n\n8. Choose the right font: When picking the right font for your resume, make sure to choose one that is easy to read and professional. \n\n9. Use keywords effectively: When writing, make sure to use the right keywords that are related to your job field. This will ensure that your resume is picked up by any automated recruiters. \n\n10. Proofread: Once you’ve completed your resume, be sure to proofread it. This will help you make sure that there aren’t any typos or inaccuracies in your document.",
-          spanish: ``,
-          tooltip: ``,
-        },
-        demonstrate: {
-          completed: false,
-          impact: 100,
-          humanTouch: true,
-          action: `demonstrate`,
-          icon: `🧿`,
-          request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
-            `Creating Competitive Entry Level Resumes`
-          )}?`,
-          response: "bro watch the video. it's good.",
-          spanish: ``,
-          tooltip: ``,
-        },
-        define: {
-          completed: false,
-          impact: 100,
-          action: `define`, // may not need
-          icon: `👾`, // may not need
-          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
-            `Creating Competitive Entry Level Resumes`
-          )} in exactly one sentence?`,
-          response:
-            "\n\nTo write an effective one-page resume, focus on highlighting your relevant skills, accomplishments, and credentials that are most relevant to the role in an easy-to-read format.",
-          spanish: ``,
-          tooltip: ``,
-        },
-
-        quiz: {
-          completed: false,
-          impact: 100,
-          action: `quiz`,
-          icon: `🧪`,
-          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
-            `Creating Competitive Entry Level Resumes`
-          )}?`,
-          response:
-            "\n\n1. What key components should be included in a one-page resume?\n2. When writing a one-page resume, what information should be left out?\n3. How can you ensure that your one-page resume stands out from other applicants?",
-          spanish: ``,
-          tooltip: ``,
-        },
-        shop: {
-          completed: false,
-          impact: 100,
-          action: `shop`,
-          icon: `🛍️`,
-          request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
-          response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-      },
-    },
-    "Wealth Management": {
-      documentID: ``,
-      hasCode: false,
-      filler: ``,
-      new: false,
-      highValue: true,
-      underConstruction: false,
-      completed: false,
-      needsImprovement: false,
-      isModuleDisabled: true,
-      tooltip: ``,
-      sourceType: `video`, // may not need
-      button: `Wealth Management`, // may not need - `name`
-      header: `Wealth Management`,
-      fileSource:
-        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674721555/IMG_9181_mjw1zc.mov", // may not need
-
-      prompts: {
-        patreon: {
-          completed: false,
-          impact: 1000,
-          action: `generate`,
-          icon: `►`, //`✍️`
-          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
-            `Creating Competitive Entry Level Resumes`
-          )}?`,
-          response: `null`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        inspire: {
-          completed: false,
-          impact: 100,
-          action: `inspire`,
-          icon: `⚡`,
-          request: `ms. roxana, can you please share why hiring managers prefer one-page resumes and how it benefits applicants?`,
-          response:
-            "\n\nHiring managers prefer one-page resumes because they are much easier to read, scan, and review quickly. This is especially beneficial for recruiters and hiring managers who are receiving hundreds of resumes for a given position. When a resume is shorter and more concise, it highlights the strengths of the applicant and highlights the experiences in a more precise way. This allows the hiring manager to get an understanding of the applicant quickly and make a decision on whether to move forward with the candidate or not. Additionally, one-page resumes help make the applicant stand out from the rest of the crowd, since it's an opportunity to make a good first impression.",
-          spanish: ``,
-          tooltip: ``,
-        },
-        summarize: {
-          completed: false,
-          impact: 100,
-          action: `summarize`,
-          icon: `📚`,
-          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
-            `Creating Competitive Entry Level Resumes`
-          )}?`,
-          response:
-            "\n\nWriting an effective one-page resume is not too different from writing a regular resume, but there are a few tips that can help. First, it's important to include only relevant information; you want to be concise and limit yourself to the essentials. This includes a professional summary that outlines your experience, qualifications, and relevant skills in three to four short sentences. It's also important to use keywords related to the job you are applying for. After the summary, list your work experience in reverse chronological order followed by your education and relevant skills. Finally, make sure to proofread your resume multiple times and have someone else look over it to ensure accuracy.",
-          spanish: ``,
-          tooltip: ``,
-        },
-        ask: {
-          completed: false,
-          impact: 100,
-          action: `ask`,
-          icon: `🔮`,
-          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
-            `Creating Competitive Entry Level Resumes`
-          )} with one sentence answers?`,
-          response:
-            "\n\n1. What should I include in a one-page resume? - Include your contact information, skillset, work experience, education, and relevant certifications.\n\n2. How do I showcase my best qualifications?- Highlight the qualifications that are relevant to the job you are applying for and showcase your top accomplishments.\n\n3. How should I format my one-page resume?- Use a clearly structured format and an easy-to-read font size such as Arial or Times New Roman size 10 or 11.",
-          spanish: ``,
-          tooltip: ``,
-        },
-        guide: {
-          completed: false,
-          impact: 100,
-          action: `guide`,
-          icon: `🤝`,
-          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
-            `Creating Competitive Entry Level Resumes`
-          )}?`,
-          response:
-            "\n\nStudy Guide: How to Write an Effective One-Page Resume \n\n1. Focus on your most relevant qualifications: When writing a one-page resume, you don’t have much room to include resume sections. This means you’ll have to focus on including only the most relevant qualifications. \n\n2. Use a resume format: The ideal format for a one-page resume is the reverse chronological format. This resume format is organized in a way that draws attention to your most relevant experience first. \n\n3. Be concise: When writing, try to be as concise as possible. Stick to short, condensed sentences and be sure to omit any unnecessary details. \n\n4. Use action verbs: Whenever possible, use action verbs to describe your experience in order to emphasize the results you achieved\n\n5. Fill the entire page: You want to make sure that your resume is full and packed with relevant qualifications. Make sure to fill the entire page with information. \n\n6. Avoid using pronouns: Whenever possible, try to avoid using personal pronouns like “I” and “me”.\n\n7. Highlight your skills: Since the goal of a one-page resume is to make it concise, you should try to highlight your skills at the top of your resume.\n\n8. Choose the right font: When picking the right font for your resume, make sure to choose one that is easy to read and professional. \n\n9. Use keywords effectively: When writing, make sure to use the right keywords that are related to your job field. This will ensure that your resume is picked up by any automated recruiters. \n\n10. Proofread: Once you’ve completed your resume, be sure to proofread it. This will help you make sure that there aren’t any typos or inaccuracies in your document.",
-          spanish: ``,
-          tooltip: ``,
-        },
-        demonstrate: {
-          completed: false,
-          impact: 100,
-          humanTouch: true,
-          action: `demonstrate`,
-          icon: `🧿`,
-          request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
-            `Creating Competitive Entry Level Resumes`
-          )}?`,
-          response: "bro watch the video. it's good.",
-          spanish: ``,
-          tooltip: ``,
-        },
-        define: {
-          completed: false,
-          impact: 100,
-          action: `define`, // may not need
-          icon: `👾`, // may not need
-          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
-            `Creating Competitive Entry Level Resumes`
-          )} in exactly one sentence?`,
-          response:
-            "\n\nTo write an effective one-page resume, focus on highlighting your relevant skills, accomplishments, and credentials that are most relevant to the role in an easy-to-read format.",
-          spanish: ``,
-          tooltip: ``,
-        },
-
-        quiz: {
-          completed: false,
-          impact: 100,
-          action: `quiz`,
-          icon: `🧪`,
-          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
-            `Creating Competitive Entry Level Resumes`
-          )}?`,
-          response:
-            "\n\n1. What key components should be included in a one-page resume?\n2. When writing a one-page resume, what information should be left out?\n3. How can you ensure that your one-page resume stands out from other applicants?",
-          spanish: ``,
-          tooltip: ``,
-        },
-        shop: {
-          completed: false,
-          impact: 100,
-          action: `shop`,
-          icon: `🛍️`,
-          request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
-          response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-      },
-    },
     // "Metaverse Investing": {
     //   documentID: ``,
     //   hasCode: false,

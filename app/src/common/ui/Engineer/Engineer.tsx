@@ -5,6 +5,138 @@ import metaphysicalMuse from "../../media/images/metaphysicalMuse.jpeg";
 
 export const Engineer = {
   "Crash Course": {
+    "Introduction To Coding": {
+      documentID: ``,
+      hasCode: false,
+      filler: ``,
+      new: false,
+      highValue: false,
+      underConstruction: false,
+      completed: false,
+      needsImprovement: false,
+      tooltip: ``,
+      sourceType: `video`, // may not need
+      button: `Learn Coding`, // may not need - `name`
+      header: `Learn Coding`,
+      fileSource: 'https://res.cloudinary.com/eduprojectsil/video/upload/v1674721517/IMG_9185_wfrmsz.mov', // may not need
+
+      prompts: {
+        patreon: {
+          completed: false,
+          impact: 1000,
+          action: `generate`,
+          icon: `►`, //`✍️`
+          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
+            `Learn Coding`
+          )}?`,
+          response: `null`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        inspire: {
+          completed: false,
+          impact: 100,
+          action: `inspire`,
+          icon: `⚡`,
+          request: `ms. roxana, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
+            `Learn Coding`
+          )}?`,
+          response:
+            " \n\nOne example of computer science being intersectional with another subject is its application in education. Across the U.S., some school systems are using an AI-tutoring approach to help teach students complex concepts. This method of learning employs adaptive online courses that are personalized to each student's individual learning needs and preferences. By collecting data about student progress, educators can identify specific knowledge gaps and apply custom strategies to help students fill in those gaps. Additionally, AI tutoring enables students to take ownership of their own learning process, helping them to stay engaged, motivated, and empowered. With computer science being such an integral part of the education system in many communities, it's inspiring to see how AI tools are being used to revolutionize the way we teach and learn.",
+          spanish: ``,
+          tooltip: ``,
+        },
+        summarize: {
+          completed: false,
+          impact: 100,
+          action: `summarize`,
+          icon: `📚`,
+          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
+            `Learn Coding`
+          )}?`,
+          response:
+            "\n\nComputer science is the practical application of computers and technology, and it can be used to help a variety of fields. From engineering to health sciences and even the arts, computer science can be a powerful tool when combined with other disciplines. It can help to uncover new ways of looking at data, create innovative solutions and automate processes. It can also help to connect different branches of knowledge and develop new applications utilizing data collected from various sources. By combining computer science with specialized knowledge, individuals can gain deeper insights into their subject of interest and potentially uncover new solutions previously unseen.",
+          spanish: ``,
+          tooltip: ``,
+        },
+        ask: {
+          completed: false,
+          impact: 100,
+          action: `ask`,
+          icon: `🔮`,
+          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
+            `Learn Coding`
+          )} with one sentence answers?`,
+          response:
+            "\n\n1. How does computer science intersect with the healthcare field? Answer: Computer science is used for a variety of healthcare-related applications such as health IT, data analysis, and predictive analytics. \n\n2. How does computer science intersect with the arts? Answer: Computer science is used as a tool for creating interactive art and immersive experiences. \n\n3. How does computer science intersect with education? Answer: Computer science is used for educational support activities such as online learning and adaptive teaching models.",
+          spanish: ``,
+          tooltip: ``,
+        },
+        guide: {
+          completed: false,
+          impact: 100,
+          action: `guide`,
+          icon: `🤝`,
+          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
+            `Learn Coding`
+          )}?`,
+          response:
+            "\n\n1. Computer Science can be used to analyze data to uncover patterns and create digital models of economic, political, and social disparities.\n\n2. Computer Science can be used to create algorithms and software applications to help researchers better understand the complexities of our world.\n\n3. Computer Science can be used to analyze and draw connections between different disciplines, such as mathematics, sociology, psychology, and others.\n\n4. Computer Science can be used to develop new display and visualization technologies to help researchers better understand data and uncover relationships.\n\n5. Computer Science can be used to develop machine learning models to better understand complex problems and figure out more efficient ways of solving them.\n\n6. Computer Science can be used to develop AI-enabled systems to analyze and curate data from different sources and help link seemingly unrelated phenomena.\n\n7. Computer Science can be used to create automated processes for doing research faster and more accurately.\n\n8. Computer Science can be used to create advanced information systems to aggregate and synthesize data for easier digestion.\n\n9. Computer Science can be used to develop computer models to more accurately forecast and simulate how systems work in the real world.\n\n10. Computer Science can be used to develop technologies to improve access to information and facilitate the collection, analysis, and visualization of data.",
+          spanish: ``,
+          tooltip: ``,
+        },
+        demonstrate: {
+          completed: false,
+          impact: 100,
+          action: `demonstrate`,
+          icon: `🧿`,
+          request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
+            `Learn Coding`
+          )}?`,
+          response:
+            "\n\nComputer science has applications in a wide array of fields, allowing it to intersect with almost any other subject of interest. For example, computer science intersects with biology as it is used to better analyze biological data, including that related to genetics, gene expression, and molecular interactions. Additionally, computer science overlaps with economics as it is used to develop AI programs that can be used to analyze and make decisions based on large datasets. Finally, computer science connects with the humanities through the development of automated programs that can generate a variety of art, music, and literature.",
+          spanish: ``,
+          tooltip: ``,
+        },
+        define: {
+          completed: false,
+          impact: 100,
+          action: `define`, // may not need
+          icon: `👾`, // may not need
+          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
+            `Learn Coding`
+          )} in exactly one sentence?`,
+          response:
+            "\n\nComputer Science is an intersectional subject, connecting mathematics, engineering, and other disciplines to explore the applications and implications of technology for humanity.",
+          spanish: ``,
+          tooltip: ``,
+        },
+
+        quiz: {
+          completed: false,
+          impact: 100,
+          action: `quiz`,
+          icon: `🧪`,
+          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
+            `Learn Coding`
+          )}?`,
+          response:
+            "\n\n1. How can computer science be used to solve problems within social justice and help mitigate systemic injustice?\n\n2. What ethical considerations should be taken into account when developing new technologies?\n\n3. What unique insights can computer science offer in understanding the intersections of environmental science, economics, and public health?",
+          spanish: ``,
+          tooltip: ``,
+        },
+        shop: {
+          completed: false,
+          impact: 100,
+          action: `shop`,
+          icon: `🛍️`,
+          request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
+          response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+      },
+    },
     "Lesson 1": {
       documentID: `Lesson 1 - Crash Course`,
       filler: ``,
