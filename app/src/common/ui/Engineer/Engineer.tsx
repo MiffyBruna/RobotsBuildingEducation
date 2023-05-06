@@ -5,7 +5,7 @@ import metaphysicalMuse from "../../media/images/metaphysicalMuse.jpeg";
 
 export const Engineer = {
   "Crash Course": {
-    "Introduction To Coding": {
+    "Introduction To RO.B.E": {
       documentID: ``,
       hasCode: false,
       filler: ``,
@@ -16,9 +16,10 @@ export const Engineer = {
       needsImprovement: false,
       tooltip: ``,
       sourceType: `video`, // may not need
-      button: `Learn Coding`, // may not need - `name`
-      header: `Learn Coding`,
-      fileSource: 'https://res.cloudinary.com/eduprojectsil/video/upload/v1674721517/IMG_9185_wfrmsz.mov', // may not need
+      button: `Introduction To RO.B.E`, // may not need - `name`
+      header: `Introduction To RO.B.E`,
+      fileSource:
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1683183182/IMG_9320_yrjxou.mov", // may not need
 
       prompts: {
         patreon: {
@@ -41,8 +42,65 @@ export const Engineer = {
           request: `ms. roxana, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
             `Learn Coding`
           )}?`,
-          response:
-            " \n\nOne example of computer science being intersectional with another subject is its application in education. Across the U.S., some school systems are using an AI-tutoring approach to help teach students complex concepts. This method of learning employs adaptive online courses that are personalized to each student's individual learning needs and preferences. By collecting data about student progress, educators can identify specific knowledge gaps and apply custom strategies to help students fill in those gaps. Additionally, AI tutoring enables students to take ownership of their own learning process, helping them to stay engaged, motivated, and empowered. With computer science being such an integral part of the education system in many communities, it's inspiring to see how AI tools are being used to revolutionize the way we teach and learn.",
+          response: (
+            <div>
+              In the mid-2010s, a computer scientist and psychologist named Dr.
+              Rosalind Picard made a significant impact at the intersection of
+              computer science and mental well-being research. Dr. Picard, a
+              professor at the Massachusetts Institute of Technology (MIT) Media
+              Lab, recognized the potential for technology to help individuals
+              better understand and manage their emotions, leading to improved
+              mental well-being.
+              <br />
+              <br />
+              Dr. Picard's research focused on affective computing, a field she
+              pioneered that explores how computers can be designed to
+              recognize, interpret, and respond to human emotions. Affective
+              computing has applications in various domains, including mental
+              health, education, and human-computer interaction
+              <br />
+              <br />
+              One of Dr. Picard's most notable projects is the development of
+              wearable devices that can measure physiological signals associated
+              with emotional experiences. By analyzing data from these devices,
+              such as skin conductance and heart rate, Dr. Picard and her team
+              were able to develop algorithms that could infer users' emotional
+              states, providing insights into their mental well-being.
+              <br />
+              <br />
+              One of the wearable devices developed by Dr. Picard's team is the
+              Embrace smartwatch. This device, initially designed to help
+              individuals with epilepsy by detecting seizures, was found to have
+              broader applications in mental well-being. The Embrace smartwatch
+              can track various physiological markers associated with stress and
+              anxiety, enabling users to monitor their emotional well-being and
+              take steps to manage it effectively.
+              <br />
+              <br />
+              Dr. Picard's work has also contributed to the development of
+              interventions that promote mental well-being, particularly for
+              individuals with autism spectrum disorder (ASD). She and her team
+              have developed tools and techniques that help people with ASD
+              recognize and manage their emotions, leading to improvements in
+              social functioning and overall well-being.
+              <br />
+              <br />
+              Beyond her work in affective computing, Dr. Picard has been a
+              strong advocate for mental well-being within the technology
+              industry. She has spoken openly about her experiences with stress
+              and burnout, emphasizing the importance of self-care and mental
+              health support for those working in high-pressure environments.
+              <br />
+              <br />
+              Dr. Rosalind Picard's inspiring story highlights the power of the
+              intersection between computer science and mental well-being
+              research. By applying her expertise in computer science to address
+              critical challenges in understanding and managing emotions, Dr.
+              Picard has contributed to the development of innovative solutions
+              that hold the potential to improve the mental well-being of
+              countless individuals.
+            </div>
+          ),
           spanish: ``,
           tooltip: ``,
         },
@@ -54,8 +112,74 @@ export const Engineer = {
           request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
             `Learn Coding`
           )}?`,
-          response:
-            "\n\nComputer science is the practical application of computers and technology, and it can be used to help a variety of fields. From engineering to health sciences and even the arts, computer science can be a powerful tool when combined with other disciplines. It can help to uncover new ways of looking at data, create innovative solutions and automate processes. It can also help to connect different branches of knowledge and develop new applications utilizing data collected from various sources. By combining computer science with specialized knowledge, individuals can gain deeper insights into their subject of interest and potentially uncover new solutions previously unseen.",
+          response: (
+            <div>
+              The Intersectionality of Computer Science: Bridging Disciplines
+              for Innovation
+              <br />
+              <br />
+              The field of computer science has rapidly expanded beyond its
+              traditional boundaries, becoming increasingly intertwined with
+              numerous disciplines and driving innovation across a wide range of
+              fields. This intersectionality has sparked groundbreaking
+              discoveries and advancements, transforming the way we understand
+              and address complex problems.
+              <br />
+              <br />
+              One of the most prominent examples of this interdisciplinary
+              collaboration is bioinformatics, which fuses computer science,
+              biology, and statistics to analyze large-scale biological data.
+              This integration has led to a better understanding of the genetic
+              basis of diseases, the development of targeted therapies, and
+              personalized medicine.
+              <br />
+              <br />
+              Natural Language Processing (NLP), a subfield of artificial
+              intelligence, highlights another area where computer science
+              intersects with other disciplines. NLP techniques have been
+              employed in linguistics, psychology, and cognitive science to
+              study language structure, processing, and acquisition, leading to
+              applications such as machine translation, sentiment analysis, and
+              voice recognition systems.
+              <br />
+              <br />
+              In the social sciences, the advent of computational social science
+              demonstrates how computer science can help us better understand
+              human behavior and social systems. By applying techniques like
+              data mining, network analysis, and machine learning, researchers
+              can analyze large-scale social data, uncovering insights into
+              social networks, decision-making processes, and other sociological
+              phenomena.
+              <br />
+              <br />
+              The digital humanities represent another important intersection,
+              where computational methods are employed to study humanities
+              subjects such as literature, history, and art. Techniques like
+              text mining, data visualization, and network analysis provide new
+              perspectives on cultural and historical datasets, allowing for
+              novel explorations of patterns and connections within these
+              domains.
+              <br />
+              <br />
+              Environmental modeling showcases the critical role of computer
+              science in understanding and predicting the impact of human
+              activities and natural phenomena on the environment. By working
+              closely with environmental scientists, meteorologists, and
+              ecologists, computer scientists contribute to the development of
+              sophisticated models that can simulate complex systems like
+              climate, ecosystems, and hydrological cycles.
+              <br />
+              <br />
+              In conclusion, the intersectionality of computer science has
+              facilitated problem-solving and knowledge discovery across a wide
+              range of disciplines. By transcending traditional boundaries,
+              computer science has proven to be a powerful force for innovation,
+              driving advancements that have the potential to transform our
+              understanding of the world and improve the human condition.
+              <br />
+              <br />
+            </div>
+          ),
           spanish: ``,
           tooltip: ``,
         },
@@ -67,8 +191,63 @@ export const Engineer = {
           request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
             `Learn Coding`
           )} with one sentence answers?`,
-          response:
-            "\n\n1. How does computer science intersect with the healthcare field? Answer: Computer science is used for a variety of healthcare-related applications such as health IT, data analysis, and predictive analytics. \n\n2. How does computer science intersect with the arts? Answer: Computer science is used as a tool for creating interactive art and immersive experiences. \n\n3. How does computer science intersect with education? Answer: Computer science is used for educational support activities such as online learning and adaptive teaching models.",
+          response: (
+            <div>
+              Question 1: What is the intersectionality of computer science, and
+              why is it important?
+              <br />
+              <br />
+              Answer: The intersectionality of computer science refers to the
+              application of computational principles and techniques to solve
+              problems, generate insights, and drive innovation across diverse
+              disciplines and fields of study. This interdisciplinary approach
+              is important because it facilitates collaboration between experts
+              from different fields, allowing them to leverage each other's
+              knowledge and skills to address complex problems, create new
+              technologies, and advance our understanding of the world.
+              <br />
+              <br />
+              <br />
+              <br />
+              Question 2: How can someone interested in the intersectionality of
+              computer science choose a specific field to work in or research?
+              <br />
+              <br />
+              Answer: To explore the intersectionality of computer science and
+              choose a specific field to work in or research, individuals should
+              consider their interests, strengths, and goals. They can start by
+              learning about various interdisciplinary fields, such as
+              bioinformatics, computational social science, or digital
+              humanities, and identify which areas align with their passions.
+              Participating in relevant courses, attending conferences, or
+              joining online communities can also help them gain exposure to
+              these fields and decide which direction to pursue. Furthermore,
+              seeking guidance from mentors or professionals in the desired
+              field can provide valuable insights and support during the
+              decision-making process.
+              <br />
+              <br />
+              <br />
+              <br />
+              Question 3: What skills should someone develop to excel in the
+              intersectionality of computer science?
+              <br />
+              <br />
+              Answer: To excel in the intersectionality of computer science,
+              individuals should develop a strong foundation in core computer
+              science concepts, such as algorithms, data structures, and
+              programming languages. Additionally, they should gain expertise in
+              specific computational techniques relevant to their chosen field,
+              such as machine learning, network analysis, or data visualization.
+              Equally important is acquiring knowledge in the domain they plan
+              to work in, such as biology for bioinformatics or social science
+              for computational social science. Finally, cultivating strong
+              communication, collaboration, and critical thinking skills will
+              enable them to effectively engage with experts from other
+              disciplines, fostering successful interdisciplinary
+              collaborations.
+            </div>
+          ),
           spanish: ``,
           tooltip: ``,
         },
@@ -80,8 +259,151 @@ export const Engineer = {
           request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
             `Learn Coding`
           )}?`,
-          response:
-            "\n\n1. Computer Science can be used to analyze data to uncover patterns and create digital models of economic, political, and social disparities.\n\n2. Computer Science can be used to create algorithms and software applications to help researchers better understand the complexities of our world.\n\n3. Computer Science can be used to analyze and draw connections between different disciplines, such as mathematics, sociology, psychology, and others.\n\n4. Computer Science can be used to develop new display and visualization technologies to help researchers better understand data and uncover relationships.\n\n5. Computer Science can be used to develop machine learning models to better understand complex problems and figure out more efficient ways of solving them.\n\n6. Computer Science can be used to develop AI-enabled systems to analyze and curate data from different sources and help link seemingly unrelated phenomena.\n\n7. Computer Science can be used to create automated processes for doing research faster and more accurately.\n\n8. Computer Science can be used to create advanced information systems to aggregate and synthesize data for easier digestion.\n\n9. Computer Science can be used to develop computer models to more accurately forecast and simulate how systems work in the real world.\n\n10. Computer Science can be used to develop technologies to improve access to information and facilitate the collection, analysis, and visualization of data.",
+          response: (
+            <div>
+              A comprehensive study guide for understanding the
+              intersectionality of computer science can be divided into several
+              stages, taking you from beginner to expert level: <br />
+              <br />
+              <br />
+              <br />
+              Stage 1: Building a Strong Foundation in Computer Science <br />
+              <br />
+              <ol>
+                <li>
+                  Learn the fundamentals of programming languages, such as
+                  Python, Java, or C++.
+                </li>
+                <li>
+                  Gain a strong understanding of data structures and algorithms.
+                </li>
+                <li>
+                  Familiarize yourself with basic principles of software
+                  engineering and development.
+                </li>
+                <li>
+                  Learn about computer systems, including hardware, operating
+                  systems, and computer networks.
+                </li>
+              </ol>
+              <br />
+              <br />
+              Stage 2: Introduction to Interdisciplinary Fields in Computer
+              Science
+              <br />
+              <br />
+              <ol>
+                <li>
+                  Explore various interdisciplinary fields where computer
+                  science intersects with other disciplines, such as
+                  bioinformatics, natural language processing, computational
+                  social{" "}
+                </li>
+                <li>
+                  science, digital humanities, and environmental modeling.
+                </li>
+                <li>
+                  Take introductory courses or attend workshops, seminars, or
+                  webinars in the fields that interest you.
+                </li>
+                <li>
+                  Read articles, books, and research papers to gain an overview
+                  of the current state of research and applications in these
+                  interdisciplinary fields.
+                </li>
+              </ol>{" "}
+              <br />
+              <br />
+              Stage 3: Acquiring Domain-Specific Knowledge <br />
+              <br />
+              <ol>
+                <li>
+                  Gain a deeper understanding of the domain in which you plan to
+                  work, such as biology for bioinformatics or social science for
+                  computational social science.
+                </li>
+                <li>
+                  Take relevant courses or attend workshops and conferences in
+                  your chosen domain.
+                </li>
+                <li>
+                  Engage with domain-specific literature, research papers, and
+                  online resources to build a strong knowledge base.
+                </li>
+              </ol>{" "}
+              <br />
+              <br />
+              Stage 4: Developing Expertise in Relevant Computational Techniques{" "}
+              <br />
+              <br />
+              <ol>
+                <li>
+                  Learn advanced techniques such as machine learning, data
+                  mining, network analysis, or data visualization, depending on
+                  your chosen field.
+                </li>
+                <li>
+                  Acquire proficiency in specialized tools, libraries, and
+                  frameworks relevant to your area of interest.
+                </li>
+                <li>
+                  Participate in projects, internships, or research
+                  assistantships to gain practical experience in applying
+                  computational techniques in your chosen domain.
+                </li>
+              </ol>{" "}
+              <br />
+              <br />
+              Stage 5: Building a Professional Network and Engaging with the
+              Community <br />
+              <br />
+              <ol>
+                <li>
+                  Attend conferences, workshops, and seminars related to the
+                  intersectionality of computer science and your chosen domain.
+                </li>
+                <li>
+                  Join online forums, social media groups, and professional
+                  networks to connect with experts, researchers, and
+                  practitioners in your field.
+                </li>
+                <li>
+                  Present your work, share your knowledge, and contribute to
+                  discussions in your area of interest.
+                </li>
+              </ol>
+              <br />
+              <br />
+              Stage 6: Conducting Original Research and Advancing the Field{" "}
+              <br />
+              <br />
+              <ol>
+                <li>
+                  Identify research questions or challenges in the
+                  intersectionality of computer science and your chosen domain.
+                </li>
+                <li>
+                  Develop and execute research projects, collaborating with
+                  experts from different disciplines when necessary.
+                </li>
+                <li>
+                  Publish your research findings in peer-reviewed journals,
+                  conference proceedings, and other relevant outlets.
+                </li>
+                <li>
+                  Share your expertise by mentoring, teaching, or consulting in
+                  your area of specialization.
+                </li>
+              </ol>
+              <br />
+              <br />
+              By following this study guide and progressively building your
+              knowledge and skills, you can become an expert in the
+              intersectionality of computer science and contribute to advancing
+              the understanding and application of computational techniques in
+              various fields.
+            </div>
+          ),
           spanish: ``,
           tooltip: ``,
         },
@@ -93,8 +415,95 @@ export const Engineer = {
           request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
             `Learn Coding`
           )}?`,
-          response:
-            "\n\nComputer science has applications in a wide array of fields, allowing it to intersect with almost any other subject of interest. For example, computer science intersects with biology as it is used to better analyze biological data, including that related to genetics, gene expression, and molecular interactions. Additionally, computer science overlaps with economics as it is used to develop AI programs that can be used to analyze and make decisions based on large datasets. Finally, computer science connects with the humanities through the development of automated programs that can generate a variety of art, music, and literature.",
+          response: (
+            <div>
+              Intersectionality in computer science refers to the collaboration
+              between computer science and other disciplines, where the
+              principles and techniques of computer science are applied to solve
+              problems and generate insights in various fields. Here are some
+              examples of the intersectionality of computer science:
+              <ol>
+                <li>
+                  Bioinformatics:
+                  <p>
+                    Bioinformatics combines computer science, biology, and
+                    statistics to analyze and interpret complex biological data,
+                    such as genomic sequences or protein structures. This
+                    interdisciplinary approach has led to numerous breakthroughs
+                    in understanding the genetic basis of diseases and
+                    developing targeted therapies.
+                  </p>
+                </li>
+                <li>
+                  {" "}
+                  Natural Language Processing (NLP): <p></p>
+                </li>
+                <li>
+                  {" "}
+                  <p>
+                    NLP is a subfield of artificial intelligence (AI) that
+                    focuses on the interaction between computers and human
+                    languages. NLP techniques are applied in linguistics,
+                    psychology, and cognitive science to study language
+                    structure, processing, and acquisition. Applications of NLP
+                    include machine translation, sentiment analysis, and voice
+                    recognition systems.
+                  </p>
+                </li>
+
+                <li>
+                  {" "}
+                  Computational Social Science:{" "}
+                  <p>
+                    This field involves the application of computer science
+                    techniques, such as data mining, network analysis, and
+                    machine learning, to study social phenomena. Researchers in
+                    this area collaborate with sociologists, political
+                    scientists, and economists to analyze large-scale social
+                    data and generate insights into human behavior, social
+                    networks, and decision-making processes.
+                  </p>
+                </li>
+                <li>
+                  {" "}
+                  Digital Humanities:{" "}
+                  <p>
+                    Digital humanities is an interdisciplinary field that uses
+                    computational methods to study humanities subjects, such as
+                    literature, history, and art. Scholars in this field
+                    leverage techniques like text mining, data visualization,
+                    and network analysis to explore patterns and connections
+                    within cultural and historical datasets.
+                  </p>
+                </li>
+                <li>
+                  Robotics:
+                  <p>
+                    Robotics is a multidisciplinary field that brings together
+                    computer science, engineering, and mathematics to design,
+                    build, and control robots. These robots can be used in
+                    various applications, including manufacturing, healthcare,
+                    space exploration, and disaster relief.
+                  </p>
+                </li>
+                <li>
+                  Environmental Computer Science:
+                  <p>
+                    Environmental Computer Science plays a crucial role in
+                    environmental modeling, where complex systems like climate,
+                    ecosystems, and hydrological cycles are studied and
+                    simulated. Researchers in this area work closely with
+                    environmental scientists, meteorologists, and ecologists to
+                    develop sophisticated models that can predict the impact of
+                    human activities and natural phenomena on the environment.
+                  </p>
+                </li>
+              </ol>
+              These examples demonstrate how computer science intersects with
+              various disciplines, contributing to problem-solving and knowledge
+              discovery across a wide range of fields.
+            </div>
+          ),
           spanish: ``,
           tooltip: ``,
         },
@@ -107,7 +516,7 @@ export const Engineer = {
             `Learn Coding`
           )} in exactly one sentence?`,
           response:
-            "\n\nComputer Science is an intersectional subject, connecting mathematics, engineering, and other disciplines to explore the applications and implications of technology for humanity.",
+            "\n\n The intersectionality of computer science refers to the application of computational principles and techniques to solve problems, generate insights, and drive innovation across diverse disciplines and fields of study.",
           spanish: ``,
           tooltip: ``,
         },
@@ -120,8 +529,45 @@ export const Engineer = {
           request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
             `Learn Coding`
           )}?`,
-          response:
-            "\n\n1. How can computer science be used to solve problems within social justice and help mitigate systemic injustice?\n\n2. What ethical considerations should be taken into account when developing new technologies?\n\n3. What unique insights can computer science offer in understanding the intersections of environmental science, economics, and public health?",
+          response: (
+            <div>
+              Question 1: Evaluate the potential ethical implications and
+              challenges that may arise from the intersectionality of computer
+              science with other disciplines, such as AI-driven decision-making
+              in healthcare or the use of predictive analytics in criminal
+              justice.
+              <br />
+              <br />
+              Question 2: Discuss the role of interdisciplinary collaboration in
+              addressing complex problems, such as climate change or global
+              health crises, and explain how the intersectionality of computer
+              science can contribute to the development of innovative solutions
+              in these areas.
+              <br />
+              <br />
+              Question 3: Consider the potential consequences of relying heavily
+              on data-driven approaches in interdisciplinary fields, such as
+              computational social science. Discuss the limitations and biases
+              that may arise from using data-centric methodologies and suggest
+              ways to mitigate these issues.
+              <br />
+              <br />
+              Question 4: Analyze the impact of digital humanities on
+              traditional humanities research and debate the potential benefits
+              and drawbacks of incorporating computational methods in the study
+              of literature, history, and art.
+              <br />
+              <br />
+              Question 5: As AI and machine learning continue to advance and
+              intersect with various disciplines, discuss the implications of
+              the increasing automation of decision-making and knowledge
+              discovery processes. Consider the potential consequences for human
+              expertise, creativity, and the role of human judgment in these
+              fields.
+              <br />
+              <br />
+            </div>
+          ),
           spanish: ``,
           tooltip: ``,
         },
@@ -131,7 +577,89 @@ export const Engineer = {
           action: `shop`,
           icon: `🛍️`,
           request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
-          response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
+          response: (
+            <div>
+              This shopping slot is not being utilized yet. Please contact me in
+              Patreon to qualify. In the meantime, lets talk about the
+              socioeconomic state of Latinos in tech.
+              <br />
+              <br />
+              <p>
+                The underrepresentation of Latinos as founders of major tech
+                companies is a multifaceted issue that can be attributed to
+                various factors, including socioeconomic, educational, and
+                cultural barriers, as well as systemic biases and
+                discrimination. Here are some reasons that contribute to this
+                underrepresentation:
+              </p>
+              <br />
+              <ol>
+                <li>
+                  Educational barriers: Access to quality education is essential
+                  for success in the technology industry. However, Latinos may
+                  face challenges in accessing high-quality education due to
+                  factors such as socioeconomic status, underfunded schools, or
+                  living in areas with fewer educational resources. These
+                  challenges can limit their exposure to computer science and
+                  other STEM subjects, reducing the likelihood of pursuing
+                  careers in technology. <br />
+                </li>
+                <li>
+                  Socioeconomic factors: Socioeconomic status plays a
+                  significant role in shaping career opportunities and
+                  aspirations. Latinos, as a group, have historically faced
+                  economic disparities, which can impact their access to
+                  resources, networking opportunities, and the ability to take
+                  risks associated with entrepreneurship. <br />
+                </li>
+
+                <li>
+                  Lack of representation and role models: The technology
+                  industry has long been dominated by individuals from certain
+                  racial and ethnic backgrounds. The lack of Latino
+                  representation in leadership roles and as founders of major
+                  tech companies can make it challenging for aspiring Latino
+                  entrepreneurs to find role models and mentors, which is
+                  crucial for professional development and success. <br />
+                </li>
+                <li>
+                  Limited access to funding and resources: Starting a tech
+                  company often requires substantial financial investment and
+                  access to resources, such as networking opportunities,
+                  mentorship, and technical support. Latinos may face challenges
+                  in securing funding from investors due to unconscious bias,
+                  discrimination, or lack of connections within the industry.{" "}
+                  <br />
+                </li>
+                <li>
+                  Cultural factors: Cultural factors, such as family
+                  expectations and community norms, can also influence career
+                  choices and aspirations. In some cases, Latinos may face
+                  pressure to prioritize more traditional or stable career paths
+                  over the risks associated with entrepreneurship or founding a
+                  tech company. <br />
+                </li>
+                <li>
+                  Systemic biases and discrimination: The technology industry,
+                  like many other sectors, is not immune to systemic biases and
+                  discrimination that can create barriers for underrepresented
+                  groups, including Latinos. This can manifest in various forms,
+                  such as biased hiring practices, limited access to mentorship
+                  and resources, or unequal treatment within the workplace.
+                </li>
+              </ol>
+              <br />
+              <br />
+              Addressing these challenges and promoting diversity in the
+              technology industry requires concerted efforts from various
+              stakeholders, including educational institutions, policymakers,
+              investors, and tech companies themselves. By fostering inclusive
+              environments, providing equal opportunities, and breaking down
+              barriers for underrepresented groups, the tech industry can
+              benefit from the wealth of talent, perspectives, and ideas that
+              diverse founders bring to the table.
+            </div>
+          ),
           spanish: ``,
           tooltip: ``,
         },

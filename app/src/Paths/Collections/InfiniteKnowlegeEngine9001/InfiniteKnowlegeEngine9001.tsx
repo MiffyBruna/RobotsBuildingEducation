@@ -188,11 +188,11 @@ export const InfiniteKnowledgeEngine9001 = ({
   const promptGenerate = () => {
     let result = {
       patreon: {
-        request: `can you please generate a short essay on ${currentPrompt} in 15 sentences?`,
+        request: `can you please generate a short essay on ${currentPrompt} in under 15 sentences?`,
         response: "",
       },
       inspire: {
-        request: `can you please share an inspiring story about ${currentPrompt}?`,
+        request: `can you please share an short inspiring story about ${currentPrompt}?`,
         response: "",
       },
       summarize: {
@@ -200,15 +200,15 @@ export const InfiniteKnowledgeEngine9001 = ({
         response: "",
       },
       ask: {
-        request: `can you please show me three frequently asked beginner questions about ${currentPrompt} with answers?`,
+        request: `can you please show me three frequently asked beginner questions about ${currentPrompt} with one sentence answers?`,
         response: "",
       },
       guide: {
-        request: `can you please create a 10 point study study guide for ${currentPrompt}?`,
+        request: `can you please create a 10 bullet point study study guide for ${currentPrompt}?`,
         response: "",
       },
       demonstrate: {
-        request: `can you please illustrate a clear example of ${currentPrompt}?`,
+        request: `can you please illustrate a brief and clear example of ${currentPrompt}?`,
         response: "",
       },
       define: {
@@ -216,11 +216,11 @@ export const InfiniteKnowledgeEngine9001 = ({
         response: "",
       },
       quiz: {
-        request: `can you please write a 3 question quiz for beginners that's challenging about ${currentPrompt}?`,
+        request: `can you please write only a 3 question quiz for beginners that's challenging about ${currentPrompt}?`,
         response: "",
       },
       furtherReading: {
-        request: `What do you recommend someone should read to learn more about ${currentPrompt}?`,
+        request: `What books or authors do you recommend someone should read to learn more about ${currentPrompt}?`,
         response: "",
       },
     };
@@ -749,7 +749,7 @@ export const InfiniteKnowledgeEngine9001 = ({
             setIsInfiniteKnowledgeEngine9001open(false);
           }}
         >
-          leave
+          Back to app
         </Button>
       </Modal.Footer>
     </Modal>

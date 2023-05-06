@@ -11,6 +11,7 @@ import { logEvent } from "firebase/analytics";
 import lionel from "../../../common/media/images/lionel.png";
 import roxanaGif from "../../../common/media/images/roxanaGif.gif";
 import "../Roxana.css";
+import { Sketching } from "./Sketching";
 
 // This is an archived version of a set of 9 prompts.
 export const PromptCombiner9000 = ({
@@ -91,11 +92,13 @@ export const PromptCombiner9000 = ({
                 chatGptResponse.type === "ask" ||
                 chatGptResponse.type === "quiz") ? (
                 <ul style={{ listStyleType: "none", padding: 0, margin: 0 }}>
-                  {chatGptResponse.response
-                    ?.match(/\b\d+\.\s+(.+?)(?=\s*\b\d+\. |\s*$)/g)
-                    ?.map((item) => {
-                      return <li style={{ paddingBottom: 24 }}>{item}</li>;
-                    }) || chatGptResponse.response}
+                  {(typeof chatGptResponse.response === "string" &&
+                    chatGptResponse.response
+                      ?.match(/\b\d+\.\s+(.+?)(?=\s*\b\d+\. |\s*$)/g)
+                      ?.map((item) => {
+                        return <li style={{ paddingBottom: 24 }}>{item}</li>;
+                      })) ||
+                    chatGptResponse.response}
                 </ul>
               ) : loadingMessage.length < 1 &&
                 chatGptResponse.response &&
@@ -148,7 +151,8 @@ export const PromptCombiner9000 = ({
                       chatGptResponse.type === "anything"))) ||
                 chatGptResponse ? (
                 <div>{chatGptResponse.response}</div>
-              ) : loadingMessage.length < 1 &&
+              ) : // <Sketching />
+              loadingMessage.length < 1 &&
                 chatGptResponse.response &&
                 chatGptResponse.type === "shop" &&
                 !isDemo ? (

@@ -107,18 +107,6 @@ export const CreateClassroom = ({
     }
   };
 
-  let mountClassroom = async () => {
-    // usersModulesCollectionReference  -> usersClassroomCollectionReference
-    // await getDocs(usersModulesCollectionReference).then((querySnapshot) => {
-    //       let sum = 0;
-    //       querySnapshot.forEach((doc) => {
-    //         if (doc.data()) {
-    //           console.log("CLASSROOMS", doc.data());
-    //         }
-    //       })
-    // });
-  };
-
   return (
     <Modal centered show={isCreateClassroomOpen} fullscreen>
       <Modal.Header
@@ -246,7 +234,7 @@ export const CreateClassroom = ({
             setIsCreateClassroomOpen(false);
           }}
         >
-          leave
+          Back to app
         </Button>
       </Modal.Footer>
     </Modal>

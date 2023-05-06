@@ -7,7 +7,7 @@ import elkhanmigo from "../../common/media/images/elkhanmigo.jpg";
 import { logEvent } from "firebase/analytics";
 import { analytics } from "../../database/firebaseResources";
 import { DiscordButton } from "../../ChatGPT/Prompts/DiscordButton/DiscordButton";
-export const About = ({ auth }) => {
+export const LearnMore = ({ auth }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <>
@@ -26,14 +26,14 @@ export const About = ({ auth }) => {
 
       <br />
       <br />
-      <div
+      {/* <div
         style={{
           display: "flex",
           justifyContent: "center",
         }}
       >
         <DiscordButton />
-      </div>
+      </div> */}
       {/* <br />
       <br /> */}
       {/* <Button
@@ -69,7 +69,6 @@ export const About = ({ auth }) => {
             <br /> Building <br />
             Education
           </h1>
-          <DiscordButton />
           <p style={{ maxWidth: "100%", width: 700 }}>
             Robots Building Education is a system that converts your learning
             into scholarships. Its goal is to inspire people to pursue the most
@@ -90,12 +89,14 @@ export const About = ({ auth }) => {
             support.
           </p>
           <p style={{ maxWidth: "100%", width: 700 }}>
-            If you want to subscribe and support the early stages of RO.B.E or
-            learn more about what I teach, please visit &amp; explore the
-            Patreon.
+            <b>
+              If you want to support the early stages of RO.B.E or learn more
+              about what I teach, please continue to explore. Visit the Patreon
+              to subscribe and get a shareable passcode to enter the app.
+            </b>
           </p>
           <br />
-          <div style={{ width: "700px", maxWidth: "100%" }}>
+          {/* <div style={{ width: "700px", maxWidth: "100%" }}>
             <a
               onClick={() =>
                 logEvent(analytics, "select_promotion", {
@@ -118,12 +119,15 @@ export const About = ({ auth }) => {
             >
               <img
                 style={{ borderRadius: "6px" }}
-                width="48px"
+                // width="32px"
                 src="https://pbs.twimg.com/profile_images/1266950784609992705/xEe7mBx9_400x400.png"
               />
               RO.B.E
             </a>
-          </div>
+          </div> */}
+          <br />
+          <br />
+          <DiscordButton />
           <br />
           <br />
           <h2>Testimonials</h2>
@@ -162,7 +166,7 @@ export const About = ({ auth }) => {
           <i>theme: code</i>
           <p style={{ maxWidth: "100%", width: 700 }}>
             You'll find an evolving crash course that teaches you how to build
-            apps, follow by a place to dive into real experience with me and
+            apps, followed by a place to dive into real experience with me and
             additional content to further explore computer science.
           </p>
           <br />
@@ -171,9 +175,9 @@ export const About = ({ auth }) => {
           <i>theme: philosophy</i>
           <p style={{ maxWidth: "100%", width: 700 }}>
             Creating content is like creating code except you're more concerned
-            with people than machines. This is a collection I'm writing centered
-            around the power of well-rounded knowledge and the communication of
-            ideas.
+            with people than machines. This is a collection I'm working on
+            centered around the power of well-rounded knowledge and the
+            communication.
           </p>
           <br />
           <br />
@@ -356,6 +360,43 @@ export const About = ({ auth }) => {
             game for entrepeneurs, but many people also take the well-balanced
             life approach with it too. So sometimes people code becasue they
             want a more relaxed life too.
+          </p>
+          <br />
+          <br />
+          <h3 style={{ maxWidth: "100%", width: 700 }}>
+            Am I Too Old To Learn?
+          </h3>
+          <p style={{ maxWidth: "100%", width: 700 }}>
+            No. Simply put, your brain doesn't work that way. You may experience
+            some "rustyness" if you haven't done deep learning of a subject in
+            some time, but that's not too different than a college student
+            realizing that they need to learn how to learn. Maybe you already
+            know how to learn or you understand what works for you. Now suddenly
+            you have an advantage. This is a reason I suggest people spend time
+            reflecting often, you'd be surprised how much empowerment you can
+            draw from it.
+            <br />
+            <br />
+            On that note, I would even consider seeing age as an advantage
+            rather than a disadvantage. As the technology industry matures,
+            experience and execution will be valued more than innovation, speed
+            and the tradeoffs that happen with it. As one of my directors say,
+            slow is smooth and smooth is fast. This isn't to create any sense of
+            superiority or inferiority - you're just in a competitive market and
+            it's usually better to take the productive outlook.
+          </p>
+          <br />
+          <br />
+          <h3 style={{ maxWidth: "100%", width: 700 }}>
+            Hey what about cybersecurity, data analytics or these certificates?
+          </h3>
+          <p style={{ maxWidth: "100%", width: 700 }}>
+            These are subjects I'm not familiar with so I'm hesistant on
+            providing guidance at risk of misinforming someone. The only
+            certification that I feel confident recommending is a UI/UX one with
+            Nielsen Norman Group, but I would still suggest research beforehand
+            too. Reddit tends to be a good place to gather consensus but be
+            careful not to accept a few people's word as law either.
           </p>
           <br />
           <br />
