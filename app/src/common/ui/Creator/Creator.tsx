@@ -1,10 +1,5 @@
 import { ultimateEffeciencyJutsu } from "../ui";
 
-
-
-
-
-
 export const Creator = {
   "Lessons Learned & Insights": {
     "Creating Purpose": {
@@ -130,6 +125,422 @@ export const Creator = {
         },
       },
     },
+
+    "The Drug War": {
+      documentID: ``,
+      filler: ``,
+      new: false,
+      highValue: false,
+      underConstruction: true,
+      completed: false,
+      rare: true,
+      needsImprovement: false,
+      tooltip: ``,
+      sourceType: `markdown`, // may not need
+      button: `The Drug War`, // may not need - `name`
+      header: `The Drug War"`,
+      fileSource: await import("../../markdowns/creatingPurposeII.md?raw"), // may not need
+
+      prompts: {
+        patreon: {
+          completed: false,
+          impact: 1000,
+          action: `generate`,
+          icon: `✍️`, //`✍️`
+          request: `ms. roxana, can you please generate an essay that introduces me to ${ultimateEffeciencyJutsu(
+            `The Drug War`
+          )}?`,
+          response: `null`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        inspire: {
+          completed: false,
+          impact: 100,
+          action: `inspire`,
+          icon: `⚡`,
+          request: `ms. roxana, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
+            `The Drug War`
+          )}?`,
+          response: (
+            <div>
+              The Bank Secrecy Act (BSA) of 1970 is a pivotal piece of
+              legislation that has had far-reaching consequences on the U.S.
+              Drug War and the oppression of Black Americans. The BSA was
+              initially designed to combat money laundering and other financial
+              crimes by requiring financial institutions to report certain types
+              of transactions to the government. However, the law's unintended
+              consequences have been profound, particularly in the context of
+              the War on Drugs and the systemic oppression of Black Americans.
+              I. The Bank Secrecy Act and the War on Drugs The BSA as a
+              foundation for the War on Drugs: The BSA laid the groundwork for
+              the U.S. government to monitor and control financial transactions,
+              which became a powerful tool in the War on Drugs. The BSA was
+              amended several times to increase its scope and effectiveness in
+              fighting drug trafficking, money laundering, and other financial
+              crimes. These changes made it easier for law enforcement to seize
+              assets linked to drug crimes, further escalating the drug war.
+              Civil asset forfeiture: The BSA facilitated the expansion of civil
+              asset forfeiture, a controversial practice that allows law
+              enforcement agencies to seize property and assets linked to
+              illegal activities without necessarily charging the owner with a
+              crime. The use of civil asset forfeiture has disproportionately
+              affected Black and other minority communities, as they are often
+              targeted by law enforcement in the context of the War on Drugs.
+              II. The BSA and the Oppression of Black Americans Racial profiling
+              in financial transactions: The BSA requires financial institutions
+              to report suspicious transactions, which can lead to racial
+              profiling. Studies have shown that Black Americans are
+              disproportionately targeted by banks and other financial
+              institutions for additional scrutiny due to implicit bias,
+              perpetuating a cycle of discrimination and financial exclusion.
+              Racial disparities in drug enforcement: The War on Drugs,
+              intensified by the BSA, has had a disproportionately negative
+              impact on Black communities. Although drug use rates are similar
+              across races, Black individuals are more likely to be arrested,
+              convicted, and sentenced to longer prison terms for drug-related
+              offenses. This has led to a massive increase in the Black
+              incarceration rate, further exacerbating the socioeconomic
+              disparities in the United States. Erosion of civil liberties: The
+              BSA and the War on Drugs have led to an erosion of civil
+              liberties, particularly for Black Americans. Law enforcement
+              agencies have used the BSA as a pretext to conduct invasive
+              searches, seizures, and surveillance without adequate oversight or
+              accountability. This has fostered an environment of distrust
+              between law enforcement and Black communities, which has
+              contributed to the ongoing problem of systemic racism and police
+              brutality. Conclusion The Bank Secrecy Act, initially intended to
+              combat financial crimes, has had a significant impact on the U.S.
+              Drug War and the oppression of Black Americans. The legislation's
+              role in facilitating civil asset forfeiture and encouraging racial
+              profiling has deepened racial disparities in the United States. To
+              address these issues, it is crucial to reevaluate the BSA and its
+              implementation, as well as to pursue broader reforms in the
+              criminal justice system that prioritize racial equity and social
+              justice
+            </div>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
+        summarize: {
+          completed: false,
+          impact: 100,
+          action: `summarize`,
+          icon: `📚`,
+          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
+            `The Drug War`
+          )}?`,
+          response: (
+            <div>
+              The U.S. Drug War and American drug consumption have had profound
+              consequences on Latin American economies, fueling the suppression
+              and instability in the region. In particular, the insatiable
+              demand for cocaine in the United States has led to the rise of
+              powerful drug cartels in Colombia, Central America, and Mexico.
+              This essay will examine the relationship between American drug
+              consumption, the U.S. Drug War, and the economic consequences in
+              Latin America, focusing on the rise of drug cartels and their
+              impact on regional economies. I. American Drug Consumption and the
+              Rise of Cartels The demand for cocaine: The high demand for
+              cocaine in the United States has driven the growth of drug
+              production and trafficking in Latin America, particularly in
+              Colombia, where the majority of the world's cocaine is produced.
+              This demand has created an immensely lucrative market for drug
+              cartels and criminal organizations throughout the region. The
+              emergence of cartels: The vast profits derived from drug
+              trafficking have led to the rise of powerful cartels in Colombia,
+              Central America, and Mexico. These organizations have established
+              sophisticated supply chains, using violence and corruption to
+              maintain control over the drug trade. II. The U.S. Drug War and
+              Latin American Economies Suppression and instability: The U.S.
+              Drug War has focused on eradicating drug production and
+              trafficking in Latin America, but this approach has often
+              exacerbated economic suppression and instability. Military and
+              financial aid provided by the United States to combat cartels has
+              inadvertently fueled violence, leading to widespread insecurity
+              and hampering economic development. Misallocation of resources:
+              The focus on combating drug cartels has led to a misallocation of
+              resources in affected countries, with governments prioritizing
+              drug enforcement over investments in infrastructure, education,
+              and other crucial sectors. This constrains long-term economic
+              growth and development. III. The Economic Consequences of Cartels
+              in Colombia, Central America, and Mexico The drug trade as an
+              economic driver: The drug trade has become a significant economic
+              driver in countries like Colombia, Mexico, and Central American
+              nations, as cartels invest in businesses and infrastructure to
+              launder drug proceeds. However, this economic growth is often
+              unsustainable and comes at a high cost, including violence,
+              corruption, and social instability. Displacement and inequality:
+              The violence associated with drug cartels has caused significant
+              displacement and migration in affected countries, putting
+              additional strain on already struggling economies. Furthermore,
+              the wealth accumulated by cartels contributes to economic
+              inequality, as it is concentrated in the hands of a few powerful
+              individuals. Conclusion The U.S. Drug War and American drug
+              consumption have played a significant role in fueling the
+              suppression and instability of Latin American economies,
+              particularly through the rise of cartels in Colombia, Central
+              America, and Mexico. The immense demand for cocaine in the United
+              States has provided cartels with vast profits and power, which
+              they use to exert control over the drug trade and the economies of
+              their respective countries. The resulting violence, corruption,
+              and misallocation of resources have hindered economic development
+              and stability in the region. Addressing these issues requires a
+              comprehensive approach that not only tackles drug consumption and
+              trafficking but also prioritizes social, economic, and political
+              development in Latin America.
+            </div>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
+        ask: {
+          completed: false,
+          impact: 100,
+          action: `ask`,
+          icon: `🔮`,
+          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
+            `The Drug War`
+          )} with one sentence answers?`,
+          response: (
+            <div>
+              Question 1: How has the U.S. Drug War contributed to racial
+              inequality in the United States? Answer: The U.S. Drug War has
+              disproportionately targeted Black and other minority communities,
+              leading to racial disparities in arrests, convictions, and
+              sentencing for drug-related offenses. Although drug use rates are
+              similar across races, Black individuals are more likely to be
+              arrested, convicted, and sentenced to longer prison terms for
+              drug-related offenses. This has resulted in a massive increase in
+              the Black incarceration rate, which exacerbates existing social
+              and economic inequalities between racial groups. Question 2: How
+              does the U.S. Drug War contribute to economic inequality in the
+              United States? Answer: The U.S. Drug War has had several economic
+              implications that contribute to inequality. Firstly, the high
+              rates of incarceration associated with drug offenses, particularly
+              for minority populations, disrupts families and communities,
+              leading to loss of income and perpetuating cycles of poverty.
+              Secondly, individuals with drug convictions often face significant
+              barriers to employment, housing, and education, limiting their
+              ability to improve their socioeconomic status. Finally, the focus
+              on punitive measures rather than harm reduction and drug treatment
+              programs often diverts resources away from public health and
+              social services that could help address underlying causes of drug
+              addiction and poverty. Question 3: How can addressing the U.S.
+              Drug War help to reduce inequality in the United States? Answer:
+              Addressing the U.S. Drug War to reduce inequality requires a
+              comprehensive approach that includes policy changes, criminal
+              justice reform, and investments in social services. Some potential
+              steps include: Ending the criminalization of drug possession and
+              use, and instead focusing on harm reduction, prevention, and
+              treatment strategies. Reforming sentencing laws to reduce the
+              disparity in punishment for drug-related offenses, especially for
+              non-violent drug offenders. Investing in education, job training,
+              and affordable housing to improve the socioeconomic conditions of
+              communities disproportionately impacted by the Drug War. Expanding
+              access to mental health and addiction treatment services to
+              address the root causes of drug addiction and support recovery. By
+              implementing such changes, the United States can begin to address
+              the racial and economic inequalities perpetuated by the Drug War,
+              promoting a more just and equitable society.
+            </div>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
+        guide: {
+          completed: false,
+          impact: 100,
+          action: `guide`,
+          icon: `🤝`,
+          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
+            `The Drug War`
+          )}?`,
+          response: (
+            <div>
+              Title: Study Guide: Understanding the U.S. Drug War as the Main
+              Source of Inequality in the United States Introduction: This study
+              guide is designed to take you from a beginner to an expert in
+              understanding how the U.S. Drug War has contributed to racial and
+              economic inequalities in the United States. It is divided into
+              five sections, each with specific resources and recommended
+              activities to help you deepen your understanding of this complex
+              issue. Section 1: The Basics of the U.S. Drug War Objective: Gain
+              a foundational understanding of the U.S. Drug War, including its
+              origins, history, and key policies. Read "The New Jim Crow: Mass
+              Incarceration in the Age of Colorblindness" by Michelle Alexander
+              for an overview of the U.S. Drug War and its impact on racial
+              inequality. Watch the documentary "13th" directed by Ava DuVernay,
+              which explores the intersection of race, justice, and mass
+              incarceration in the United States. Research the history and key
+              legislation of the U.S. Drug War, including the Controlled
+              Substances Act, the Anti-Drug Abuse Act, and the "Three Strikes"
+              laws. Section 2: Racial Disparities in Drug Enforcement and
+              Incarceration Objective: Understand the racial disparities in drug
+              enforcement, arrests, convictions, and sentencing. Read "Race and
+              the Drug War" by the Drug Policy Alliance, which provides an
+              overview of the racial disparities in drug enforcement and
+              incarceration. Review studies on racial disparities in drug
+              arrests, convictions, and sentencing, such as the work of the
+              Sentencing Project and the Brennan Center for Justice. Analyze the
+              impact of mandatory minimum sentencing laws and racial profiling
+              on communities of color. Section 3: Economic Inequality and the
+              U.S. Drug War Objective: Investigate the economic implications of
+              the U.S. Drug War on individuals, families, and communities. Read
+              "The Economic Burden of Incarceration in the U.S." by the Prison
+              Policy Initiative, which examines the costs of incarceration for
+              families and communities. Explore research on the barriers to
+              employment, housing, and education for individuals with drug
+              convictions. Analyze the impact of the U.S. Drug War on public
+              health funding and the allocation of resources for social
+              services. Section 4: Policy Changes and Criminal Justice Reform
+              Objective: Examine policy changes and criminal justice reforms
+              aimed at reducing inequality perpetuated by the U.S. Drug War.
+              Research recent drug policy reforms, such as the legalization of
+              marijuana in various states and the decriminalization of drug
+              possession in countries like Portugal. Investigate alternative
+              approaches to drug enforcement and treatment, such as harm
+              reduction, drug courts, and diversion programs. Examine the role
+              of community-based organizations in advocating for policy changes
+              and providing support for individuals impacted by the U.S. Drug
+              War. Section 5: Becoming an Expert and Taking Action Objective:
+              Apply your knowledge and engage in actions to address the
+              inequalities perpetuated by the U.S. Drug War. Write an op-ed,
+              blog post, or research paper on a specific aspect of the U.S. Drug
+              War and its impact on inequality. Attend conferences, webinars, or
+              workshops on drug policy reform and criminal justice issues. Get
+              involved with organizations advocating for policy changes and
+              supporting communities impacted by the U.S. Drug War, such as the
+              Drug Policy Alliance, the American Civil Liberties Union, or the
+              Sentencing Project. By following this study guide and engaging
+              with the recommended resources and activities, you will gain a
+              comprehensive understanding of how the U.S. Drug War has
+              contributed to racial and economic inequalities in the United
+              States, and how you can take action to promote a more just and
+              equitable society.
+            </div>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
+        demonstrate: {
+          completed: false,
+          impact: 100,
+          action: `demonstrate`,
+          icon: `🧿`,
+          request: `ms. roxana, can you please show me an example of creating meaning out of life by creating journies with purpose?`,
+          response: (
+            <div>
+              The U.S. Drug War has played a significant role in driving
+              immigration at the Mexican border, although it is important to
+              note that it is not the sole cause. The relationship between the
+              U.S. Drug War and immigration can be demonstrated through the
+              following factors: Violence and instability: The U.S. Drug War has
+              intensified violence and instability in Mexico and other Latin
+              American countries, as drug cartels and criminal organizations
+              compete for control over drug trafficking routes. This violence
+              has led to an increase in homicides, kidnappings, and extortion,
+              which in turn, has caused many individuals and families to flee
+              their homes in search of safety. Economic disruption: The U.S.
+              Drug War has had a substantial impact on the economies of
+              countries involved in drug production and trafficking, such as
+              Mexico. As the demand for illegal drugs in the United States
+              persists, drug cartels have continued to profit, and their
+              influence has spread throughout various sectors of the economy.
+              This has led to economic disruption and a lack of job
+              opportunities for many individuals, who may then choose to migrate
+              to the United States in search of better prospects. Corruption and
+              weak governance: The immense profits generated by the drug trade
+              have fueled corruption within law enforcement, the military, and
+              political institutions in Mexico and other Latin American
+              countries. This has weakened governance and the rule of law,
+              making it increasingly difficult for individuals to trust local
+              authorities and seek protection from violence. As a result, many
+              people are compelled to leave their countries in search of
+              security and stability. Displacement and migration: The violence
+              and economic disruption caused by the U.S. Drug War have led to
+              the displacement of millions of people in Latin America. This
+              displacement often results in internal migration, with individuals
+              moving to other parts of their countries in search of safety and
+              opportunities. However, when internal migration options are
+              exhausted, many individuals choose to cross the border into the
+              United States, seeking refuge and a better life. While the U.S.
+              Drug War is a significant contributing factor to immigration at
+              the Mexican border, it is important to recognize that other
+              factors, such as political instability, climate change, and
+              poverty, also play a role in driving migration. Addressing the
+              root causes of immigration requires a comprehensive approach that
+              considers the multifaceted nature of this complex issue.
+            </div>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
+        define: {
+          completed: false,
+          impact: 100,
+          action: `define`, // may not need
+          icon: `👾`, // may not need
+          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
+            `The Drug War`
+          )} in exactly one sentence?`,
+          response: `\n\nThe U.S. Drug War perpetuates the legacy of U.S. slavery by disproportionately targeting and incarcerating Black Americans for drug-related offenses, thereby reinforcing systemic racial inequality and social control over marginalized communities.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+
+        quiz: {
+          completed: false,
+          impact: 100,
+          action: `quiz`,
+          icon: `🧪`,
+          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
+            `The Drug War`
+          )} without any answers?`,
+          response: (
+            <div>
+              Question 1: Discuss the potential benefits of the U.S. Drug War in
+              terms of public safety, crime reduction, and deterring drug use,
+              and provide examples of specific policies or programs that have
+              contributed to these outcomes. Question 2: Analyze the role of
+              international cooperation and partnerships in the U.S. Drug War,
+              and evaluate their effectiveness in curbing drug trafficking and
+              production in Latin America and other regions. Question 3: From
+              the perspective of supporting the U.S. Drug War, examine the
+              ethical implications of drug legalization or decriminalization,
+              considering the potential risks to public health, safety, and
+              social cohesion. Question 4: Assess the role of law enforcement,
+              the judicial system, and the prison system in the U.S. Drug War,
+              and propose improvements or reforms that could enhance their
+              effectiveness in combating drug-related crime and addiction.
+              Question 5: Explore the concept of "supply-side" drug control
+              strategies (e.g., eradication of drug crops, interdiction of drug
+              shipments) in the context of the U.S. Drug War, and evaluate their
+              effectiveness in reducing drug availability and consumption in the
+              United States. Note: These questions are designed to encourage
+              critical thinking and evidence-based arguments from the
+              perspective of supporting the U.S. Drug War. When answering these
+              questions, consider providing a balanced view that acknowledges
+              potential drawbacks or criticisms while defending the overall
+              stance in favor of the U.S. Drug War.
+            </div>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
+        shop: {
+          completed: false,
+          impact: 100,
+          action: `shop`,
+          icon: `🛍️`,
+          request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
+          response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+      },
+    },
     Philosophy: {
       documentID: ``,
       filler: ``,
@@ -143,7 +554,8 @@ export const Creator = {
       sourceType: `video`, // may not need
       button: `Philosophy @ RO.B.E`, // may not need - `name`
       header: `Philosophy @ RO.B.E`,
-      fileSource: 'https://res.cloudinary.com/eduprojectsil/video/upload/v1674721556/IMG_9188_iewsh4.mov', // may not need
+      fileSource:
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674721556/IMG_9188_iewsh4.mov", // may not need
 
       prompts: {
         patreon: {
@@ -267,7 +679,8 @@ export const Creator = {
       sourceType: `video`, // may not need
       button: `User Experiences`, // may not need - `name`
       header: `Human Computer Interaction`,
-      fileSource: 'https://res.cloudinary.com/eduprojectsil/video/upload/v1674721527/IMG_9182_ao3yio.mov', // may not need
+      fileSource:
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674721527/IMG_9182_ao3yio.mov", // may not need
 
       prompts: {
         patreon: {

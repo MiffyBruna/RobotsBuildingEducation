@@ -36,6 +36,8 @@ export let ultimateEffeciencyJutsu = (key) => {
       "expression and its impacts on influence in social media",
     ["Creating Purpose"]:
       "creating purpose by choosing problems to solve and journeys to take",
+    ["The Drug War"]:
+      "why the drug war has been the primary source for inequality in the United States (This is under construction 🚧🚧🚧)",
     ["Abraham Lincoln"]: "Abraham Lincoln and his views on divine providence",
     ["Philosophy"]: "Critical Race Theory and machine learning algorithms",
     ["Bitcoin, Automa & the Drug War"]:
