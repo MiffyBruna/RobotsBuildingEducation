@@ -157,9 +157,12 @@ export const ImpactWallet = ({
               that a certain amount of effort has been expended. Verifiers can
               be machines or they can be represented by people like teachers
               grading your homework! Our proof of work system creates something
-              called <b>Impact</b>. You can think of it as the result created by
-              the robots or a currency system that records learning and turns it
-              into financial impact for someone else.
+              called <b>Impact</b>.
+              <br />
+              <br />
+              You can think of impact as the result created by the robots or a
+              currency system that records learning attempted and turns it into
+              financial impact for someone else.
             </p>
             <hr />
             <h4>Scholarships Created: 5</h4>

@@ -73,7 +73,7 @@ export const LearnMore = ({ auth }) => {
             Robots Building Education is a system that converts your learning
             into scholarships. Its goal is to inspire people to pursue the most
             competitive education they can to complete their goals. In most
-            cases, that's a college degree or to build a business. Do you feel
+            cases, that's a college degree or starting a business. Do you feel
             like the school system left you behind?
             <br />
             <br />
