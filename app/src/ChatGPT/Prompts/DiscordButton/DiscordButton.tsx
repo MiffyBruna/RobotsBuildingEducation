@@ -20,6 +20,38 @@ export const DiscordButton = () => (
     }}
   >
     <a
+      onClick={() =>
+        logEvent(analytics, "select_promotion", {
+          creative_name: `https://www.patreon.com/RobotsBuildingEducation`,
+          creative_slot: `About Slot`,
+          promotion_id: `Robots Building Education`,
+          promotion_name: "advertising_launch",
+        })
+      }
+      href="https://www.patreon.com/RobotsBuildingEducation"
+      target={"_blank"}
+      style={{
+        // border: "1px solid white",
+        color: "white",
+        // padding: 24,
+        // backgroundColor: "#141518",
+
+        // color: "white",
+        // borderRadius: "6px",
+      }}
+    >
+      <Button variant="light">
+        <img
+          style={{ borderRadius: "6px" }}
+          width="36px"
+          height="32px"
+          src="https://pbs.twimg.com/profile_images/1266950784609992705/xEe7mBx9_400x400.png"
+        />
+      </Button>
+      <br />
+      Subscribe
+    </a>
+    <a
       style={{ marginRight: 48 }}
       onClick={() =>
         logEvent(analytics, "select_promotion", {
@@ -80,38 +112,6 @@ export const DiscordButton = () => (
     <a
       onClick={() =>
         logEvent(analytics, "select_promotion", {
-          creative_name: `https://www.patreon.com/RobotsBuildingEducation`,
-          creative_slot: `About Slot`,
-          promotion_id: `Robots Building Education`,
-          promotion_name: "advertising_launch",
-        })
-      }
-      href="https://www.patreon.com/RobotsBuildingEducation"
-      target={"_blank"}
-      style={{
-        // border: "1px solid white",
-        color: "white",
-        // padding: 24,
-        // backgroundColor: "#141518",
-
-        // color: "white",
-        // borderRadius: "6px",
-      }}
-    >
-      <Button variant="light">
-        <img
-          style={{ borderRadius: "6px" }}
-          width="36px"
-          height="32px"
-          src="https://pbs.twimg.com/profile_images/1266950784609992705/xEe7mBx9_400x400.png"
-        />
-      </Button>
-      <br />
-      Subscribe
-    </a>
-    {/* <a
-      onClick={() =>
-        logEvent(analytics, "select_promotion", {
           creative_name: `https://chat.openai.com`,
           creative_slot: `OpenAI Slot`,
           promotion_id: `Robots Building Education OpenAI`,
@@ -148,6 +148,6 @@ export const DiscordButton = () => (
       </Button>
       <br />
       OpenAI
-    </a> */}
+    </a>
   </div>
 );
