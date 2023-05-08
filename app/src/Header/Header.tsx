@@ -1,4 +1,4 @@
-import { About } from "./About/About";
+import { LearnMore } from "./LearnMore/LearnMore";
 // import robotsLogo from "../common/media/images/robotsLogo.png";
 import roxanabrand from "../common/media/images/roxanabrand.gif";
 import { prettyColorPalette } from "../styles/lazyStyles";
@@ -13,7 +13,7 @@ export const Header = ({ auth, globalReserveCounter }) => {
       {/* <h4>{globalReserveCounter}</h4> */}
 
       <br />
-      <About auth={auth} />
+      <LearnMore auth={auth} />
     </div>
   );
 };

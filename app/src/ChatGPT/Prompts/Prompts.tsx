@@ -249,22 +249,29 @@ export const Prompts = ({
             <Modal.Title>AI Prompt Engineering</Modal.Title>
           </Modal.Header>
           <Modal.Body style={{ backgroundColor: "black", color: "white" }}>
-            <h3>What is this?</h3>
-            <p>
-              This is for students and teachers who are curious of how the AI is
-              prompted and fine-tuned over time.
-            </p>
+            <div
+              style={{
+                width: "100%",
+                wordBreak: "break-word",
+              }}
+            >
+              <h3>What is this?</h3>
+              <p>
+                This is for students and teachers who are curious of how the AI
+                is prompted and fine-tuned over time.
+              </p>
 
-            <ReactJson
-              theme={"threezerotwofour"}
-              enableClipboard
-              src={patreonObject}
-              quotesOnKeys={false}
-            />
+              <ReactJson
+                theme={"threezerotwofour"}
+                enableClipboard
+                src={patreonObject}
+                quotesOnKeys={false}
+              />
+            </div>
           </Modal.Body>
           <Modal.Footer style={{ color: "white", backgroundColor: "black" }}>
             <Button variant="secondary" onClick={() => setIsModalOpen(false)}>
-              Thanks!
+              Back to app
             </Button>
           </Modal.Footer>
         </Modal>

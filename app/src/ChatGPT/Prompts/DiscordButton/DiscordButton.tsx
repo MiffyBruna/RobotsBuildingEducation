@@ -10,9 +10,13 @@ export const DiscordButton = () => (
   <div
     style={{
       display: "flex",
+      justifyContent: "space-evenly",
 
       padding: 12,
       backgroundColor: "rgba(0,0,0,0.8)",
+      // border: "1px solid red",
+      minWidth: 375,
+      maxWidth: "100%",
     }}
   >
     <a
@@ -27,10 +31,13 @@ export const DiscordButton = () => (
       }
       href={"https://www.linkedin.com/groups/14205495/"}
       target={"_blank"}
+      style={{ color: "white" }}
     >
       <Button variant="light">
         <img width="36px" height="32px" src={linkedInLogo} />
       </Button>
+      <br />
+      Network
     </a>
     <br />
     <br />
@@ -38,14 +45,15 @@ export const DiscordButton = () => (
       style={{ marginRight: 48 }}
       onClick={() =>
         logEvent(analytics, "select_promotion", {
-          creative_name: `https://discord.gg/GvMCSQSsqE`,
+          creative_name: `https://discord.gg/9kguaaDRmt`,
           creative_slot: `Discord Slot`,
           promotion_id: `Robots Building Education Discord`,
           promotion_name: "advertising_launch",
         })
       }
-      href={"https://discord.gg/GvMCSQSsqE"}
+      href={"https://discord.gg/9kguaaDRmt"}
       target={"_blank"}
+      style={{ color: "white" }}
     >
       <Button variant="light">
         <div
@@ -64,11 +72,44 @@ export const DiscordButton = () => (
           </svg>
         </div>
       </Button>
+      <br />
+      Contact
     </a>
     <br />
     <br />
-
     <a
+      onClick={() =>
+        logEvent(analytics, "select_promotion", {
+          creative_name: `https://www.patreon.com/RobotsBuildingEducation`,
+          creative_slot: `About Slot`,
+          promotion_id: `Robots Building Education`,
+          promotion_name: "advertising_launch",
+        })
+      }
+      href="https://www.patreon.com/RobotsBuildingEducation"
+      target={"_blank"}
+      style={{
+        // border: "1px solid white",
+        color: "white",
+        // padding: 24,
+        // backgroundColor: "#141518",
+
+        // color: "white",
+        // borderRadius: "6px",
+      }}
+    >
+      <Button variant="light">
+        <img
+          style={{ borderRadius: "6px" }}
+          width="36px"
+          height="32px"
+          src="https://pbs.twimg.com/profile_images/1266950784609992705/xEe7mBx9_400x400.png"
+        />
+      </Button>
+      <br />
+      Subscribe
+    </a>
+    {/* <a
       onClick={() =>
         logEvent(analytics, "select_promotion", {
           creative_name: `https://chat.openai.com`,
@@ -79,6 +120,7 @@ export const DiscordButton = () => (
       }
       href={"https://chat.openai.com"}
       target={"_blank"}
+      style={{ color: "white" }}
     >
       <Button variant="light">
         <svg
@@ -104,6 +146,8 @@ export const DiscordButton = () => (
           ></path>
         </svg>
       </Button>
-    </a>
+      <br />
+      OpenAI
+    </a> */}
   </div>
 );

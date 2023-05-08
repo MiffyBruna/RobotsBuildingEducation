@@ -143,16 +143,26 @@ export const ImpactWallet = ({
         >
           <DiscordButton />
 
-          <div style={{ backgroundColor: "rgba(0,0,0,0.8)" }}>
+          <div
+            style={{
+              backgroundColor: "rgba(0,0,0,0.8)",
+              padding: 24,
+              boxSizing: "border-box",
+              width: "100%",
+            }}
+          >
             <h1>Impact</h1>
             <p style={{ textAlign: "left", maxWidth: 720 }}>
               Proof of work is a system in which the worker proves to verifiers
               that a certain amount of effort has been expended. Verifiers can
               be machines or they can be represented by people like teachers
               grading your homework! Our proof of work system creates something
-              called <b>Impact</b>. You can think of it as the result created by
-              the robots or a currency system that records learning and turns it
-              into financial impact for someone else.
+              called <b>Impact</b>.
+              <br />
+              <br />
+              You can think of impact as the result created by the robots or a
+              currency system that records learning attempted and turns it into
+              financial impact for someone else.
             </p>
             <hr />
             <h4>Scholarships Created: 5</h4>
@@ -217,7 +227,7 @@ export const ImpactWallet = ({
               <br />
             </div>
             <div>
-              <h1>The Bitcoin Reserve</h1>
+              <h1>The Reserve</h1>
               <h3>{globalReserve}</h3>
               <div></div>
               <img src={sheilferBitcoin} width={200} height={250} />
@@ -270,7 +280,7 @@ export const ImpactWallet = ({
                   ⚡ Copy Lightning Address
                 </Button>
               </div>
-              <p style={{ maxWidth: 720 }}>
+              {/* <p style={{ maxWidth: 720 }}>
                 <br />
                 100% of subscriptions are stored as Bitcoin as a reserve system
                 for RO.B.E. This reserve is designed to position Robots Building
@@ -278,18 +288,18 @@ export const ImpactWallet = ({
                 another way to support the growth of RO.B.E without
                 subscriptions. This is currently the <b>only</b> way I'm
                 monetizing on RO.B.E
-              </p>
+              </p> */}
 
               <br />
             </div>
 
-            <div>
+            {/* <div>
               <br />
               <h1>Education</h1>
               <div>
                 You can now share your profile 😊 more under development!{" "}
               </div>
-            </div>
+            </div> */}
             <br />
           </div>
         </Modal.Body>
@@ -299,7 +309,7 @@ export const ImpactWallet = ({
               variant="secondary"
               onClick={() => setIsImpactWalletOpen(false)}
             >
-              leave
+              Back to app
             </Button>
           </Link>
         </Modal.Footer>

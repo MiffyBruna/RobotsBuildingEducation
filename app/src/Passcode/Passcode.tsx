@@ -3,6 +3,7 @@ import { useEffect, useState, useReducer } from "react";
 import { Demo } from "./Demo/Demo";
 import { logEvent } from "firebase/analytics";
 import { analytics } from "../database/firebaseResources";
+import { ui } from "../common/uiSchema";
 
 export const Passcode = ({
   handleZeroKnowledgePassword,
@@ -46,21 +47,21 @@ export const Passcode = ({
         href="https://www.patreon.com/RobotsBuildingEducation"
         style={{ color: "white" }}
       >
-        <Button variant="dark" style={{ width: "180px", height: "50px" }}>
+        <Button variant="dark" style={{ width: "250px", height: "50px" }}>
           <img
             style={{ borderRadius: "6px" }}
             width="32px"
             src="https://pbs.twimg.com/profile_images/1266950784609992705/xEe7mBx9_400x400.png"
           />
-          &nbsp; Get Passcode
+          &nbsp; Get Subscriber Passcode
         </Button>
       </a>
       <br />
       <br />
 
-      <Button
+      {/* <Button
         variant="dark"
-        style={{ width: "180px", height: "50px" }}
+        style={{ width: "250px", height: "50px" }}
         onClick={() => handleRandomDemoPressed()}
       >
         <img
@@ -69,7 +70,7 @@ export const Passcode = ({
           style={{ borderRadius: "6px" }}
         />
         &nbsp; Random Demo
-      </Button>
+      </Button> */}
       <br />
       <br />
       {patreonObject ? (
@@ -81,7 +82,9 @@ export const Passcode = ({
           globalImpactCounter={globalImpactCounter}
           setGlobalImpactCounter={setGlobalImpactCounter}
           computePercentage={computePercentage}
-          patreonObject={patreonObject}
+          patreonObject={
+            ui()["Engineer"]["Crash Course"]["Introduction To RO.B.E"]
+          }
           isDemo={true}
         />
       ) : null}
