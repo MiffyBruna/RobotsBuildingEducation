@@ -4,12 +4,12 @@ import compSciLib from "../../media/images/compSciLib.jpeg";
 import metaphysicalMuse from "../../media/images/metaphysicalMuse.jpeg";
 
 export const Engineer = {
-  "Crash Course": {
+  "Crash Course Version 3 (Work In Progress)": {
     "Introduction To RO.B.E": {
       documentID: ``,
-      hasCode: false,
+      hasCode: true,
       filler: ``,
-      new: false,
+      new: true,
       highValue: false,
       underConstruction: false,
       completed: false,
@@ -414,96 +414,52 @@ export const Engineer = {
           icon: `🧿`,
           request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
             `Learn Coding`
-          )}?`,
-          response: (
-            <div>
-              Intersectionality in computer science refers to the collaboration
-              between computer science and other disciplines, where the
-              principles and techniques of computer science are applied to solve
-              problems and generate insights in various fields. Here are some
-              examples of the intersectionality of computer science:
-              <ol>
-                <li>
-                  Bioinformatics:
-                  <p>
-                    Bioinformatics combines computer science, biology, and
-                    statistics to analyze and interpret complex biological data,
-                    such as genomic sequences or protein structures. This
-                    interdisciplinary approach has led to numerous breakthroughs
-                    in understanding the genetic basis of diseases and
-                    developing targeted therapies.
-                  </p>
-                </li>
-                <li>
-                  {" "}
-                  Natural Language Processing (NLP): <p></p>
-                </li>
-                <li>
-                  {" "}
-                  <p>
-                    NLP is a subfield of artificial intelligence (AI) that
-                    focuses on the interaction between computers and human
-                    languages. NLP techniques are applied in linguistics,
-                    psychology, and cognitive science to study language
-                    structure, processing, and acquisition. Applications of NLP
-                    include machine translation, sentiment analysis, and voice
-                    recognition systems.
-                  </p>
-                </li>
+          )} in javascript?`,
+          response: `
 
-                <li>
-                  {" "}
-                  Computational Social Science:{" "}
-                  <p>
-                    This field involves the application of computer science
-                    techniques, such as data mining, network analysis, and
-                    machine learning, to study social phenomena. Researchers in
-                    this area collaborate with sociologists, political
-                    scientists, and economists to analyze large-scale social
-                    data and generate insights into human behavior, social
-                    networks, and decision-making processes.
-                  </p>
-                </li>
-                <li>
-                  {" "}
-                  Digital Humanities:{" "}
-                  <p>
-                    Digital humanities is an interdisciplinary field that uses
-                    computational methods to study humanities subjects, such as
-                    literature, history, and art. Scholars in this field
-                    leverage techniques like text mining, data visualization,
-                    and network analysis to explore patterns and connections
-                    within cultural and historical datasets.
-                  </p>
-                </li>
-                <li>
-                  Robotics:
-                  <p>
-                    Robotics is a multidisciplinary field that brings together
-                    computer science, engineering, and mathematics to design,
-                    build, and control robots. These robots can be used in
-                    various applications, including manufacturing, healthcare,
-                    space exploration, and disaster relief.
-                  </p>
-                </li>
-                <li>
-                  Environmental Computer Science:
-                  <p>
-                    Environmental Computer Science plays a crucial role in
-                    environmental modeling, where complex systems like climate,
-                    ecosystems, and hydrological cycles are studied and
-                    simulated. Researchers in this area work closely with
-                    environmental scientists, meteorologists, and ecologists to
-                    develop sophisticated models that can predict the impact of
-                    human activities and natural phenomena on the environment.
-                  </p>
-                </li>
-              </ol>
-              These examples demonstrate how computer science intersects with
-              various disciplines, contributing to problem-solving and knowledge
-              discovery across a wide range of fields.
-            </div>
-          ),
+// This is ultimately all you need to understand in order to build an app with OpenAI or ChatGPT in Javascript. 
+// You might be surprised how simple it seems. That's a sign of great engineering. 
+// If this makes no sense to you, try your best to make some sense out of it. I believe in you :)
+
+const functions = require("firebase-functions");
+const express = require("express");
+const { Configuration, OpenAIApi } = require("openai");
+
+
+
+const configuration = new Configuration({ apiKey: process.env.OPENAI_API_KEY });
+
+const openai = new OpenAIApi(configuration);
+
+const app = express();
+
+
+app.post("/task", async (request, response) => {
+
+  try {
+
+    const task = request.body.task;
+
+    const answer = await openai.createChatCompletion({
+      model: "gpt-4",
+      messages: [
+        { role: "system", content: "You are a helpful assistant teaching beginners as Steve Jobs."},
+        { role: "user", content: task }
+      ],
+    });
+
+    response.status(200).send({
+      bot: answer.data.choices[0].message,
+    });
+
+  } catch (error) {
+    console.log("error", error);
+  }
+
+});
+
+exports.app = functions.https.onRequest(app);
+          `,
           spanish: ``,
           tooltip: ``,
         },
@@ -665,15 +621,541 @@ export const Engineer = {
         },
       },
     },
-    "Lesson 1": {
-      documentID: `Lesson 1 - Crash Course`,
-      filler: ``,
+
+    "Lesson 1 Coding Fundamentals": {
+      documentID: ``,
       hasCode: true,
-      new: true,
+      filler: ``,
       highValue: false,
       underConstruction: false,
       completed: false,
       needsImprovement: false,
+      new: true,
+      tooltip: ``,
+      sourceType: `video`, // may not need
+      button: `Lesson 1 Coding Fundamentals`, // may not need - `name`
+      header: `Lesson 1 Coding Fundamentals`,
+      fileSource:
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1683183182/IMG_9320_yrjxou.mov", // may not need
+
+      prompts: {
+        patreon: {
+          completed: false,
+          impact: 1000,
+          action: `generate`,
+          icon: `►`, //`✍️`
+          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
+            `Lesson 1 Coding Fundamentals`
+          )}?`,
+          response: `null`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        inspire: {
+          completed: false,
+          impact: 100,
+          action: `inspire`,
+          icon: `⚡`,
+          request: `ms. roxana, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
+            `Lesson 1 Coding Fundamentals`
+          )}?`,
+          response: (
+            <div>
+              While there are many inspiring Latina women who've made
+              significant contributions to the tech industry, not all of their
+              personal backgrounds and family details, such as their parental
+              status, are publicly available due to privacy concerns. However,
+              one notable figure who comes to mind is Laura I. Gomez, who is a
+              mother and has been vocal about her experiences raising a child
+              while navigating the tech world.
+              <br />
+              <br />
+              Laura I. Gomez is one of the few Latinas who hold leadership
+              positions in the tech industry. She was one of the early employees
+              at Twitter, where she worked on International Product. She has
+              also worked at other tech giants like Google and YouTube. Later,
+              she founded Atipica, a startup that developed a recruitment
+              software powered by AI and machine learning to help companies
+              diversify their workforce.
+              <br />
+              <br />
+              Gomez has been an advocate for diversity in tech, speaking out
+              about the challenges faced by underrepresented groups in the
+              industry. As a mother, she has also shared her experiences
+              balancing her professional life with her responsibilities as a
+              parent. Her work and advocacy have had a significant impact on the
+              tech industry's dialogue around diversity and inclusion.
+              <br />
+              <br />
+              However, it's important to note that while there are inspiring
+              figures like Laura I. Gomez, there's still a significant
+              underrepresentation of Latinas, especially Latina mothers, in the
+              tech industry. Efforts are ongoing to create more opportunities
+              and support for these individuals to enter and succeed in the tech
+              field.
+            </div>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
+        summarize: {
+          completed: false,
+          impact: 100,
+          action: `summarize`,
+          icon: `📚`,
+          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
+            `Lesson 1 Coding Fundamentals`
+          )}?`,
+          response: (
+            <div>
+              Object-Oriented Programming (OOP) is a programming paradigm that
+              uses "objects" and their interactions to design applications and
+              software. The key principles of OOP are encapsulation,
+              inheritance, polymorphism, and abstraction. Let's break down each
+              of these principles with some real-world examples:
+              <br />
+              <br />
+              Encapsulation: Encapsulation is the bundling of data and methods
+              (functions) that work on the data within one unit, called an
+              "object". This is much like a capsule, which encapsulates several
+              different medicines. For example, consider a "Car" object. A car
+              has properties (data) like color, model, and brand, and it has
+              behaviors (methods) like drive, park, and brake. All these
+              properties and behaviors are encapsulated within the "Car" object.
+              <br />
+              <br />
+              Inheritance: Inheritance allows a class to inherit the properties
+              and methods of another class. This is much like how children
+              inherit traits from their parents. For example, if we have a
+              general class called "Bird", it might have properties like wings,
+              beak, and methods like fly or eat. Now, if we have a specific bird
+              like an "Eagle", it inherits all the properties and methods of the
+              "Bird" class but can also have specific properties or methods of
+              its own, like a unique method hunt.
+              <br />
+              <br />
+              Polymorphism: Polymorphism allows one interface to be used for a
+              general class of actions. The specific action is determined by the
+              exact nature of the situation. Consider a general class "Shape"
+              with a method "draw". Now, you have different shapes like Circle,
+              Square, Triangle and so on. For each of these shapes, the "draw"
+              method will have a different implementation. But the user doesn't
+              need to know which specific shape they are dealing with, they can
+              just call the "draw" method. This is polymorphism.
+              <br />
+              <br />
+              Abstraction: Abstraction means representing the essential features
+              without including the background details. It's much like how a car
+              driver doesn't need to know the inner mechanics of the car engine
+              in order to drive the car. In OOP, a higher-level interface is
+              provided to hide the complex lower-level details. For example, a
+              "Computer" class might have methods like boot, shutDown, openApp.
+              The implementation details of these methods are hidden from the
+              user.
+              <br />
+              <br />
+              By using these principles, OOP allows for code that is easier to
+              understand, more flexible, and easier to maintain.
+            </div>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
+        ask: {
+          completed: false,
+          impact: 100,
+          action: `ask`,
+          icon: `🔮`,
+          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
+            `Lesson 1 Coding Fundamentals`
+          )} with one sentence answers?`,
+          response: (
+            <div>
+              Question 1: What is an Object in OOP?
+              <br />
+              <br />
+              A: An object is an instance of a class. It's a fundamental
+              component of OOP that encapsulates data and functions that
+              manipulate the data. Objects are the basic run-time entities in an
+              object-oriented system. They may represent a person, a place, a
+              bank account, a table of data or any item that the program has to
+              handle.
+              <br />
+              <br />
+              <br />
+              <br />
+              Question 2: What is the difference between a class and an object?
+              <br />
+              <br />
+              Answer: To explore the intersectionality of computer science and
+              choose a specific field to work in or research, individuals should
+              consider their interests, strengths, and goals. They can start by
+              learning about various interdisciplinary fields, such as
+              bioinformatics, computational social science, or digital
+              humanities, and identify which areas align with their passions.
+              Participating in relevant courses, attending conferences, or
+              joining online communities can also help them gain exposure to
+              these fields and decide which direction to pursue. Furthermore,
+              seeking guidance from mentors or professionals in the desired
+              field can provide valuable insights and support during the
+              decision-making process.
+              <br />
+              <br />
+              <br />
+              <br />
+              Question 3: What is inheritance and why is it useful in OOP?
+              <br />
+              <br />
+              Answer: To excel in the intersectionality of computer science,
+              individuals should develop a strong foundation in core computer
+              science concepts, such as algorithms, data structures, and
+              programming languages. Additionally, they should gain expertise in
+              specific computational techniques relevant to their chosen field,
+              such as machine learning, network analysis, or data visualization.
+              Equally important is acquiring knowledge in the domain they plan
+              to work in, such as biology for bioinformatics or social science
+              for computational social science. Finally, cultivating strong
+              communication, collaboration, and critical thinking skills will
+              enable them to effectively engage with experts from other
+              disciplines, fostering successful interdisciplinary
+              collaborations.
+            </div>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
+        guide: {
+          completed: false,
+          impact: 100,
+          action: `guide`,
+          icon: `🤝`,
+          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
+            `Lesson 1 Coding Fundamentals`
+          )}?`,
+          response: (
+            <div>
+              A comprehensive study guide for understanding the
+              intersectionality of computer science can be divided into several
+              stages, taking you from beginner to expert level: <br />
+              <br />
+              <br />
+              <br />
+              Stage 1: Understanding the Basics <br />
+              <br />
+              <ol>
+                <li>
+                  Introduction to OOP: Understand the basic concept of OOP and
+                  how it differs from procedural programming. Learn about the
+                  main advantages of OOP, such as code reusability and
+                  modularity.
+                </li>
+                <li>
+                  Basics of Classes and Objects: Learn what classes and objects
+                  are, and how they relate to each other. Understand the idea of
+                  a class as a blueprint for creating objects.
+                </li>
+                <li>
+                  Understanding Methods: Learn about methods (functions defined
+                  inside a class) and how they provide behavior for objects.
+                </li>
+                <li>
+                  Properties and Encapsulation: Understand the concept of
+                  properties (data members of a class) and encapsulation
+                  (bundling of data and methods within a class and data hiding).
+                </li>
+              </ol>
+              <br />
+              <br />
+              Stage 2: Intermediate Concepts
+              <br />
+              <br />
+              <ol>
+                <li>
+                  Constructors and Destructors: Learn about these special
+                  methods which are called when an object is created and
+                  destroyed, respectively.
+                </li>
+                <li>
+                  Inheritance: Understand how one class can inherit members from
+                  another class, leading to a parent-child relationship between
+                  classes.
+                </li>
+                <li>
+                  Polymorphism: Learn about the ability of an object to take
+                  many forms. The two types of polymorphism are compile-time
+                  (function and operator overloading) and runtime (virtual
+                  functions).
+                </li>
+                <li>
+                  Abstraction: Understand how to hide certain details of an
+                  object and only show the essential features.
+                </li>
+              </ol>{" "}
+              <br />
+              <br />
+              Stage 3: Advanced Concepts <br />
+              <br />
+              <ol>
+                <li>
+                  Interfaces and Multiple Inheritance: Learn how interfaces can
+                  be used to achieve full abstraction and multiple inheritance
+                  in languages that don't support it directly (like Java).
+                </li>
+                <li>
+                  Exception Handling: Understand how to handle runtime errors
+                  using try, catch, and finally blocks.
+                </li>
+                <li>
+                  Collections and Generics: Learn about collections (like arrays
+                  and lists) and generics (classes or objects that can operate
+                  on multiple data types).
+                </li>
+              </ol>{" "}
+              <br />
+              <br />
+              Stage 4: Expert Level
+              <br />
+              <br />
+              <ol>
+                <li>
+                  Design Patterns: Study common object-oriented design patterns,
+                  like Factory, Singleton, Prototype, Decorator, Observer,
+                  Publish-Subscriber and Strategy.
+                </li>
+                <li>
+                  SOLID Principles: Learn about the five principles of
+                  object-oriented design and architecture (Single
+                  responsibility, Open-closed, Liskov substitution, Interface
+                  segregation, and Dependency inversion).
+                </li>
+                <li>
+                  Unit Testing and Test-Driven Development: Understand how to
+                  write test cases for your classes and methods, and learn about
+                  the practice of writing tests before you write code.
+                </li>
+                <li>
+                  Refactoring: Learn techniques for restructuring an existing
+                  body of code, altering its internal structure without changing
+                  its external behavior.{" "}
+                </li>
+              </ol>{" "}
+              <br />
+              <br />
+              Each stage includes studying the theory, but you should also
+              practice by writing code. Implement small projects after each
+              stage to solidify the concepts you've learned. Try to read and
+              understand good quality, idiomatic code in the language you're
+              learning to see how the principles are applied.
+              <br /> <br />
+              Remember, this is a lot of material, and it takes time to become
+              proficient in OOP. Take one step at a time, and eventually, you'll
+              reach an expert level. Many employed software engineers are not so
+              don't sweat it too much! Happy learning!
+            </div>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
+        demonstrate: {
+          completed: false,
+          impact: 100,
+          action: `demonstrate`,
+          icon: `🧿`,
+          request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
+            `Lesson 1 Coding Fundamentals`
+          )} in python?`,
+          response: `
+          '''
+
+                  In Python, we can use classes and objects to model real-world entities. Let's model a simple Rihanna class. For this example, we'll assume that Rihanna has attributes like name, profession, and nationality, and methods such as sing and perform.
+
+                  In the Rihanna class above, __init__ is a special method that's called when an object is created from the class. This is also known as a constructor. The self keyword represents the instance state (or object) of the class and is used to access the class attributes.
+
+          '''
+
+
+          class Rihanna:
+              def __init__(self, name, profession, nationality):
+                  self.name = name
+                  self.profession = profession
+                  self.nationality = nationality
+
+              def sing(self, song):
+                  return f"{self.name} is singing {song}."
+
+              def perform(self, performance):
+                  return f"{self.name} is performing {performance}."
+
+
+          rihanna = Rihanna("Rihanna", "Singer", "Barbadian")
+          print(rihanna.sing("Diamonds"))
+          print(rihanna.perform("at the Grammy Awards"))
+          `,
+          spanish: ``,
+          tooltip: ``,
+        },
+        define: {
+          completed: false,
+          impact: 100,
+          action: `define`, // may not need
+          icon: `👾`, // may not need
+          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
+            `Lesson 1 Coding Fundamentals`
+          )} in exactly one sentence?`,
+          response: `Object-Oriented Programming is a programming paradigm that organizes data into objects and behavior into classes, promoting code reuse through inheritance, encapsulation of data and functions together, and enabling polymorphism to allow a single interface for a general class of actions.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+
+        quiz: {
+          completed: false,
+          impact: 100,
+          action: `quiz`,
+          icon: `🧪`,
+          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
+            `Lesson 1 Coding Fundamentals`
+          )}?`,
+          response: (
+            <div>
+              Question 1: Design Patterns - Explain a situation where you would
+              use the Singleton design pattern versus the Factory design pattern
+              in OOP. What are the advantages and potential pitfalls of each?
+              <br />
+              <br />
+              Question 2: Inheritance vs. Composition - In the context of OOP,
+              discuss the advantages and disadvantages of using inheritance
+              versus composition. Can you provide a practical example where
+              composition would be a better choice than inheritance?
+              <br />
+              <br />
+              Question 3: Polymorphism: Imagine you're designing a zoo
+              simulation with many types of animals. How would you use the
+              principle of polymorphism to design your animal classes and their
+              behaviors? Explain your reasoning.
+              <br />
+              <br />
+              Question 4: Encapsulation - Can you discuss a scenario where
+              proper use of encapsulation improves the security and robustness
+              of a software system? How does it help in maintaining the system?
+              <br />
+              <br />
+              Question 5: SOLID Principles - Explain how the SOLID principles
+              guide design in Object-Oriented Programming. Can you provide an
+              example of a design problem that violates one or more of these
+              principles and propose a solution to fix it?
+              <br />
+              <br />
+            </div>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
+        shop: {
+          completed: false,
+          impact: 100,
+          action: `shop`,
+          icon: `🛍️`,
+          request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
+          response: (
+            <div>
+              This shopping slot is not being utilized yet. Please contact me in
+              Patreon to qualify. In the meantime, lets talk about the
+              socioeconomic state of Latinos in tech.
+              <br />
+              <br />
+              <p>
+                The underrepresentation of Latinos as founders of major tech
+                companies is a multifaceted issue that can be attributed to
+                various factors, including socioeconomic, educational, and
+                cultural barriers, as well as systemic biases and
+                discrimination. Here are some reasons that contribute to this
+                underrepresentation:
+              </p>
+              <br />
+              <ol>
+                <li>
+                  Educational barriers: Access to quality education is essential
+                  for success in the technology industry. However, Latinos may
+                  face challenges in accessing high-quality education due to
+                  factors such as socioeconomic status, underfunded schools, or
+                  living in areas with fewer educational resources. These
+                  challenges can limit their exposure to computer science and
+                  other STEM subjects, reducing the likelihood of pursuing
+                  careers in technology. <br />
+                </li>
+                <li>
+                  Socioeconomic factors: Socioeconomic status plays a
+                  significant role in shaping career opportunities and
+                  aspirations. Latinos, as a group, have historically faced
+                  economic disparities, which can impact their access to
+                  resources, networking opportunities, and the ability to take
+                  risks associated with entrepreneurship. <br />
+                </li>
+
+                <li>
+                  Lack of representation and role models: The technology
+                  industry has long been dominated by individuals from certain
+                  racial and ethnic backgrounds. The lack of Latino
+                  representation in leadership roles and as founders of major
+                  tech companies can make it challenging for aspiring Latino
+                  entrepreneurs to find role models and mentors, which is
+                  crucial for professional development and success. <br />
+                </li>
+                <li>
+                  Limited access to funding and resources: Starting a tech
+                  company often requires substantial financial investment and
+                  access to resources, such as networking opportunities,
+                  mentorship, and technical support. Latinos may face challenges
+                  in securing funding from investors due to unconscious bias,
+                  discrimination, or lack of connections within the industry.{" "}
+                  <br />
+                </li>
+                <li>
+                  Cultural factors: Cultural factors, such as family
+                  expectations and community norms, can also influence career
+                  choices and aspirations. In some cases, Latinos may face
+                  pressure to prioritize more traditional or stable career paths
+                  over the risks associated with entrepreneurship or founding a
+                  tech company. <br />
+                </li>
+                <li>
+                  Systemic biases and discrimination: The technology industry,
+                  like many other sectors, is not immune to systemic biases and
+                  discrimination that can create barriers for underrepresented
+                  groups, including Latinos. This can manifest in various forms,
+                  such as biased hiring practices, limited access to mentorship
+                  and resources, or unequal treatment within the workplace.
+                </li>
+              </ol>
+              <br />
+              <br />
+              Addressing these challenges and promoting diversity in the
+              technology industry requires concerted efforts from various
+              stakeholders, including educational institutions, policymakers,
+              investors, and tech companies themselves. By fostering inclusive
+              environments, providing equal opportunities, and breaking down
+              barriers for underrepresented groups, the tech industry can
+              benefit from the wealth of talent, perspectives, and ideas that
+              diverse founders bring to the table.
+            </div>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
+      },
+    },
+  },
+  "Crash Course": {
+    "Lesson 1": {
+      documentID: `Lesson 1 - Crash Course`,
+      filler: ``,
+      hasCode: true,
+
+      highValue: false,
+      underConstruction: false,
+      completed: false,
+      needsImprovement: false,
+      new: true,
       tooltip: ``,
       sourceType: `video`, // may not need
       button: `1. Coding & Logic`, // may not need - `name`
@@ -820,11 +1302,12 @@ export const Engineer = {
       documentID: ``,
       filler: ``,
       hasCode: true,
-      new: true,
+
       highValue: false,
       underConstruction: true,
       completed: false,
       needsImprovement: false,
+      new: true,
       tooltip: ``,
       sourceType: `video`, // may not need
       button: `2. Data & Functions`, // may not need - `name`
@@ -946,12 +1429,13 @@ export const Engineer = {
       documentID: ``,
 
       filler: ``,
-      new: true,
+
       hasCode: true,
       highValue: false,
       underConstruction: true,
       completed: false,
       needsImprovement: false,
+      new: true,
       tooltip: ``,
       sourceType: `video`, // may not need
       button: `3. Creating Objects`, // may not need - `name`
@@ -1071,12 +1555,13 @@ export const Engineer = {
       documentID: ``,
 
       filler: ``,
-      new: true,
+
       hasCode: true,
       highValue: false,
       underConstruction: true,
       completed: false,
       needsImprovement: false,
+      new: true,
       tooltip: ``,
       sourceType: `video`, // may not need
       button: `4. Internet Apps`, // may not need - `name`
@@ -1197,12 +1682,13 @@ export const Engineer = {
       documentID: ``,
 
       filler: ``,
-      new: true,
+
       hasCode: true,
       highValue: false,
       underConstruction: true,
       completed: false,
       needsImprovement: false,
+      new: true,
       tooltip: ``,
       sourceType: `video`, // may not need
       button: `5. Loops & Counting`, // may not need - `name`
@@ -1321,12 +1807,13 @@ export const Engineer = {
       documentID: ``,
 
       filler: ``,
-      new: true,
+
       hasCode: true,
       highValue: false,
       underConstruction: true,
       completed: false,
       needsImprovement: false,
+      new: true,
       tooltip: ``,
       sourceType: `video`, // may not need
       button: `6. HTML`, // may not need - `name`
@@ -1447,12 +1934,13 @@ export const Engineer = {
       documentID: ``,
 
       filler: ``,
-      new: true,
+
       hasCode: true,
       highValue: false,
       underConstruction: true,
       completed: false,
       needsImprovement: false,
+      new: true,
       tooltip: ``,
       sourceType: `video`, // may not need
       button: `7. CSS`, // may not need - `name`
@@ -1573,13 +2061,14 @@ export const Engineer = {
       documentID: ``,
 
       filler: ``,
-      new: false,
+
       hasCode: true,
 
       highValue: false,
       underConstruction: false,
       completed: false,
       needsImprovement: false,
+      new: true,
       tooltip: ``,
       sourceType: `video`, // may not need
       button: `8. React`, // may not need - `name`
@@ -1700,12 +2189,13 @@ export const Engineer = {
       documentID: ``,
 
       filler: ``,
-      new: false,
+
       highValue: false,
       hasCode: true,
       underConstruction: false,
       completed: false,
       needsImprovement: false,
+      new: true,
       tooltip: ``,
       sourceType: `video`, // may not need
       button: `9. Creating Users`, // may not need - `name`
@@ -1825,12 +2315,13 @@ export const Engineer = {
       documentID: ``,
 
       filler: ``,
-      new: false,
+
       highValue: false,
       hasCode: true,
       underConstruction: false,
       completed: false,
       needsImprovement: false,
+      new: true,
       tooltip: ``,
       sourceType: `video`, // may not need
       button: `10. Database Foundations`, // may not need - `name`
@@ -1949,12 +2440,13 @@ export const Engineer = {
       documentID: ``,
 
       filler: ``,
-      new: false,
-      highValue: true,
+
+      highValue: false,
       hasCode: true,
       underConstruction: true,
       completed: false,
       needsImprovement: false,
+      new: true,
       tooltip: ``,
       sourceType: `video`, // may not need
       button: `11. Backend Clouds`, // may not need - `name`
@@ -2074,13 +2566,14 @@ export const Engineer = {
       documentID: ``,
 
       filler: ``,
-      new: false,
-      highValue: true,
+
+      highValue: false,
       hasCode: true,
       underConstruction: true,
       rare: false,
       completed: false,
       needsImprovement: false,
+      new: true,
       tooltip: ``,
       sourceType: `video`, // may not need
       button: `12. Operating Systems & Machines`, // may not need - `name`
@@ -2198,12 +2691,14 @@ export const Engineer = {
     "Lesson 13": {
       documentID: ``,
       filler: ``,
-      new: false,
+
       highValue: false,
       hasCode: true,
       underConstruction: false,
       completed: false,
+
       needsImprovement: false,
+      new: true,
       tooltip: ``,
       sourceType: `video`, // may not need
       button: `13. Setting Up An App`, // may not need - `name`
@@ -2323,13 +2818,14 @@ export const Engineer = {
     "Lesson 14": {
       documentID: ``,
       filler: ``,
-      new: false,
-      highValue: true,
+
+      highValue: false,
       hasCode: true,
       underConstruction: false,
       completed: false,
       rare: false,
       needsImprovement: false,
+      new: true,
       tooltip: ``,
       sourceType: `video`, // may not need
       button: `14. Programming Money`, // may not need - `name`
@@ -2447,12 +2943,13 @@ export const Engineer = {
     "Lesson 15": {
       documentID: ``,
       filler: ``,
-      new: false,
+
       highValue: false,
       underConstruction: false,
       hasCode: true,
       completed: false,
       needsImprovement: false,
+      new: true,
       tooltip: ``,
       sourceType: `video`, // may not need
       button: `15. Creating Database`, // may not need - `name`
@@ -2573,13 +3070,14 @@ export const Engineer = {
     "Lesson 16": {
       documentID: ``,
       filler: ``,
-      new: false,
+
       hasCode: true,
-      highValue: true,
+      highValue: false,
       rare: false,
       underConstruction: false,
       completed: false,
       needsImprovement: false,
+      new: true,
       tooltip: ``,
       sourceType: `video`, // may not need
       button: `16. Working Together`, // may not need - `name`
@@ -2702,12 +3200,12 @@ export const Engineer = {
     "Robots Building Education": {
       documentID: ``,
       filler: ``,
-      new: false,
+      new: true,
       highValue: false,
       underConstruction: true,
       completed: false,
       needsImprovement: false,
-      rare: true,
+      rare: false,
       tooltip: ``,
       sourceType: `markdown`, // may not need
       button: `Robots Building Education`, // may not need - `name`
@@ -2825,7 +3323,7 @@ export const Engineer = {
     // "Build For Undocumented": {
     //   documentID: ``,
     //   filler: ``,
-    //   new: false,
+    //   new: true,
     //   highValue: false,
     //   underConstruction: false,
     //   hasCode: true,
@@ -2939,7 +3437,7 @@ export const Engineer = {
     // "Build For Community": {
     //   documentID: ``,
     //   filler: ``,
-    //   new: false,
+    //   new: true,
     //   highValue: false,
     //   underConstruction: true,
     //   completed: false,
@@ -3062,8 +3560,8 @@ export const Engineer = {
     // "Build For Teachers": {
     //   documentID: ``,
     //   filler: ``,
-    //   new: false,
-    //   highValue: true,
+    //   new: true,
+    //   highValue: false,
     //   underConstruction: false,
     //   completed: false,
     //   needsImprovement: false,
@@ -3186,7 +3684,7 @@ export const Engineer = {
     // "Social Chat": {
     //   documentID: ``,
     //   filler: ``,
-    //   new: false,
+    //   new: true,
     //   highValue: false,
     //   underConstruction: false,
     //   completed: false,
@@ -3315,13 +3813,14 @@ export const Engineer = {
     "Programming Languages": {
       documentID: ``,
       filler: ``,
-      new: false,
+
       hasCode: false,
-      highValue: true,
+      highValue: false,
       underConstruction: false,
       completed: false,
       rare: false,
       needsImprovement: false,
+      new: true,
       tooltip: ``,
       sourceType: `video`, // may not need
       button: `Programming Languages`, // may not need - `name`
@@ -3440,12 +3939,13 @@ export const Engineer = {
     Recursion: {
       documentID: ``,
       filler: ``,
-      new: false,
+
       highValue: false,
       hasCode: true,
       underConstruction: false,
       completed: false,
       needsImprovement: false,
+      new: true,
       tooltip: ``,
       sourceType: `video`, // may not need
       button: `Recursion`, // may not need - `name`
@@ -3564,8 +4064,8 @@ export const Engineer = {
       documentID: ``,
       filler: ``,
       hasCode: true,
-      new: false,
-      highValue: true,
+      new: true,
+      highValue: false,
       underConstruction: false,
       completed: false,
       needsImprovement: false,
@@ -3689,9 +4189,9 @@ export const Engineer = {
     "Link Traversal": {
       documentID: ``,
       filler: ``,
-      new: false,
+      new: true,
       hasCode: true,
-      highValue: true,
+      highValue: false,
       underConstruction: false,
       completed: false,
       needsImprovement: false,
@@ -3813,7 +4313,7 @@ export const Engineer = {
     "Link Swapping": {
       documentID: ``,
       filler: ``,
-      new: false,
+      new: true,
       hasCode: true,
       highValue: false,
       underConstruction: false,
@@ -3937,12 +4437,13 @@ export const Engineer = {
     Algorithms: {
       documentID: ``,
       filler: ``,
-      new: false,
+
       hasCode: true,
-      highValue: true,
+      highValue: false,
       underConstruction: false,
       completed: false,
       needsImprovement: false,
+      new: true,
       tooltip: ``,
       sourceType: `video`, // may not need
       button: `Algorithms`, // may not need - `name`

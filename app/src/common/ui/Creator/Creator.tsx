@@ -1,7 +1,7 @@
 import { ultimateEffeciencyJutsu } from "../ui";
 
 export const Creator = {
-  "Lessons Learned & Insights": {
+  "Communication Science": {
     "Creating Purpose": {
       documentID: ``,
       filler: ``,

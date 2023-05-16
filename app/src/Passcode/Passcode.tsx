@@ -86,6 +86,7 @@ export const Passcode = ({
             ui()["Engineer"]["Crash Course"]["Introduction To RO.B.E"]
           }
           isDemo={true}
+          demoName={"Demo: Introduction To RO.B.E"}
         />
       ) : null}
     </div>

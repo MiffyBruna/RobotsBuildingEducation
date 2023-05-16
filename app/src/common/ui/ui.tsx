@@ -37,7 +37,7 @@ export let ultimateEffeciencyJutsu = (key) => {
     ["Creating Purpose"]:
       "creating purpose by choosing problems to solve and journeys to take",
     ["The Drug War"]:
-      "why the drug war has been the primary source for inequality in the United States (This is under construction 🚧🚧🚧)",
+      "why the drug war has been the primary source for inequality in the United States (This is under construction 🚧🚧🚧) ",
     ["Abraham Lincoln"]: "Abraham Lincoln and his views on divine providence",
     ["Philosophy"]: "Critical Race Theory and machine learning algorithms",
     ["Bitcoin, Automa & the Drug War"]:
@@ -66,6 +66,9 @@ export let ultimateEffeciencyJutsu = (key) => {
     // ["Cloud Investing"]:
     //   "the pros and cons of investing in cloud software like Cloudflare",
     ["Little Village"]: "Little Village, Chicago",
+
+    ["Lesson 1 Coding Fundamentals"]:
+      "the fundamentals of object oriented programming",
   };
   return map[key] || "null";
 };

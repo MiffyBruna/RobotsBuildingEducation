@@ -12,7 +12,8 @@ export const LearnMore = ({ auth }) => {
   return (
     <>
       <Button
-        variant="light"
+        variant="success"
+        style={{ color: "white", textShadow: "0px 0px 4px black" }}
         onClick={() => {
           logEvent(analytics, "select_content", {
             content_type: "button",
@@ -21,11 +22,9 @@ export const LearnMore = ({ auth }) => {
           setIsModalOpen(true);
         }}
       >
-        Learn more
+        Learn more & FAQs
       </Button>
 
-      <br />
-      <br />
       {/* <div
         style={{
           display: "flex",

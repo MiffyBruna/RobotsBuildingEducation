@@ -372,7 +372,19 @@ function App() {
       </button>auth
       my age {state.age} */}
       {/*  */}
-      <Header auth={auth} globalReserveCounter={globalReserveCounter} />
+      <Header
+        auth={auth}
+        globalReserveCounter={globalReserveCounter}
+        patreonObject={patreonObject}
+        handleRandomDemoPressed={handleRandomDemoPressed}
+        userDocumentReference={userDocumentReference}
+        databaseUserDocument={databaseUserDocument}
+        setDatabaseUserDocument={setDatabaseUserDocument}
+        globalDocumentReference={globalDocumentReference}
+        globalImpactCounter={globalImpactCounter}
+        setGlobalImpactCounter={setGlobalImpactCounter}
+        computePercentage={computePercentage}
+      />
 
       {typeof isSignedIn === "string" ||
       (!isSignedIn && isZeroKnowledgeUser) ? (
