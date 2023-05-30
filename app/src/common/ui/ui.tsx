@@ -69,6 +69,8 @@ export let ultimateEffeciencyJutsu = (key) => {
 
     ["Lesson 1 Coding Fundamentals"]:
       "the fundamentals of object oriented programming",
+
+    ["Lesson 2 Frontend Event-Driven Programming"]: 'the fundamentals of event-driven programming with React JS'
   };
   return map[key] || "null";
 };

@@ -636,7 +636,7 @@ exports.app = functions.https.onRequest(app);
       button: `Lesson 1 Coding Fundamentals`, // may not need - `name`
       header: `Lesson 1 Coding Fundamentals`,
       fileSource:
-        "https://res.cloudinary.com/eduprojectsil/video/upload/v1683183182/IMG_9320_yrjxou.mov", // may not need
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1684131257/IMG_0104_n7djon.mov", // may not need
 
       prompts: {
         patreon: {
@@ -965,31 +965,36 @@ exports.app = functions.https.onRequest(app);
             `Lesson 1 Coding Fundamentals`
           )} in python?`,
           response: `
-          '''
+'''
 
-                  In Python, we can use classes and objects to model real-world entities. Let's model a simple Rihanna class. For this example, we'll assume that Rihanna has attributes like name, profession, and nationality, and methods such as sing and perform.
+In Python, we can use classes and objects to model real-world entities. Let's model a simple Rihanna class. 
+For this example, we'll assume that Rihanna has attributes like name, profession, and nationality, 
+and methods such as sing and perform.
 
-                  In the Rihanna class above, __init__ is a special method that's called when an object is created from the class. This is also known as a constructor. The self keyword represents the instance state (or object) of the class and is used to access the class attributes.
+In the Rihanna class above, __init__ is a special method that's called 
+when an object is created from the class. This is also known as a constructor. 
+The self keyword represents the instance state (or object) of the class and is used to 
+access the class attributes.
 
-          '''
-
-
-          class Rihanna:
-              def __init__(self, name, profession, nationality):
-                  self.name = name
-                  self.profession = profession
-                  self.nationality = nationality
-
-              def sing(self, song):
-                  return f"{self.name} is singing {song}."
-
-              def perform(self, performance):
-                  return f"{self.name} is performing {performance}."
+'''
 
 
-          rihanna = Rihanna("Rihanna", "Singer", "Barbadian")
-          print(rihanna.sing("Diamonds"))
-          print(rihanna.perform("at the Grammy Awards"))
+class Rihanna:
+    def __init__(self, name, profession, nationality):
+        self.name = name
+        self.profession = profession
+        self.nationality = nationality
+
+    def sing(self, song):
+        return f"{self.name} is singing {song}."
+
+    def perform(self, performance):
+        return f"{self.name} is performing {performance}."
+
+
+rihanna = Rihanna("Rihanna", "Singer", "Barbadian")
+print(rihanna.sing("Diamonds"))
+print(rihanna.perform("at the Grammy Awards"))
           `,
           spanish: ``,
           tooltip: ``,
@@ -1045,6 +1050,570 @@ exports.app = functions.https.onRequest(app);
               principles and propose a solution to fix it?
               <br />
               <br />
+            </div>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
+        shop: {
+          completed: false,
+          impact: 100,
+          action: `shop`,
+          icon: `🛍️`,
+          request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
+          response: (
+            <div>
+              This shopping slot is not being utilized yet. Please contact me in
+              Patreon to qualify. In the meantime, lets talk about the
+              socioeconomic state of Latinos in tech.
+              <br />
+              <br />
+              <p>
+                The underrepresentation of Latinos as founders of major tech
+                companies is a multifaceted issue that can be attributed to
+                various factors, including socioeconomic, educational, and
+                cultural barriers, as well as systemic biases and
+                discrimination. Here are some reasons that contribute to this
+                underrepresentation:
+              </p>
+              <br />
+              <ol>
+                <li>
+                  Educational barriers: Access to quality education is essential
+                  for success in the technology industry. However, Latinos may
+                  face challenges in accessing high-quality education due to
+                  factors such as socioeconomic status, underfunded schools, or
+                  living in areas with fewer educational resources. These
+                  challenges can limit their exposure to computer science and
+                  other STEM subjects, reducing the likelihood of pursuing
+                  careers in technology. <br />
+                </li>
+                <li>
+                  Socioeconomic factors: Socioeconomic status plays a
+                  significant role in shaping career opportunities and
+                  aspirations. Latinos, as a group, have historically faced
+                  economic disparities, which can impact their access to
+                  resources, networking opportunities, and the ability to take
+                  risks associated with entrepreneurship. <br />
+                </li>
+
+                <li>
+                  Lack of representation and role models: The technology
+                  industry has long been dominated by individuals from certain
+                  racial and ethnic backgrounds. The lack of Latino
+                  representation in leadership roles and as founders of major
+                  tech companies can make it challenging for aspiring Latino
+                  entrepreneurs to find role models and mentors, which is
+                  crucial for professional development and success. <br />
+                </li>
+                <li>
+                  Limited access to funding and resources: Starting a tech
+                  company often requires substantial financial investment and
+                  access to resources, such as networking opportunities,
+                  mentorship, and technical support. Latinos may face challenges
+                  in securing funding from investors due to unconscious bias,
+                  discrimination, or lack of connections within the industry.{" "}
+                  <br />
+                </li>
+                <li>
+                  Cultural factors: Cultural factors, such as family
+                  expectations and community norms, can also influence career
+                  choices and aspirations. In some cases, Latinos may face
+                  pressure to prioritize more traditional or stable career paths
+                  over the risks associated with entrepreneurship or founding a
+                  tech company. <br />
+                </li>
+                <li>
+                  Systemic biases and discrimination: The technology industry,
+                  like many other sectors, is not immune to systemic biases and
+                  discrimination that can create barriers for underrepresented
+                  groups, including Latinos. This can manifest in various forms,
+                  such as biased hiring practices, limited access to mentorship
+                  and resources, or unequal treatment within the workplace.
+                </li>
+              </ol>
+              <br />
+              <br />
+              Addressing these challenges and promoting diversity in the
+              technology industry requires concerted efforts from various
+              stakeholders, including educational institutions, policymakers,
+              investors, and tech companies themselves. By fostering inclusive
+              environments, providing equal opportunities, and breaking down
+              barriers for underrepresented groups, the tech industry can
+              benefit from the wealth of talent, perspectives, and ideas that
+              diverse founders bring to the table.
+            </div>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
+      },
+    },
+    "Lesson 2 Frontend Programming": {
+      documentID: ``,
+      hasCode: true,
+      filler: ``,
+      highValue: false,
+      underConstruction: false,
+      completed: false,
+      needsImprovement: false,
+      new: true,
+      tooltip: ``,
+      sourceType: `video`, // may not need
+      button: `Lesson 2 Frontend Programming`, // may not need - `name`
+      header: `Lesson 2 Frontend Programming`,
+      fileSource:
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1684131257/IMG_0104_n7djon.mov", // may not need
+
+      prompts: {
+        patreon: {
+          completed: false,
+          impact: 1000,
+          action: `generate`,
+          icon: `►`, //`✍️`
+          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
+            `Lesson 2 Frontend Event-Driven Programming`
+          )}?`,
+          response: `null`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        inspire: {
+          completed: false,
+          impact: 100,
+          action: `inspire`,
+          icon: `⚡`,
+          request: `ms. roxana, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
+            `Lesson 1 Coding Fundamentals`
+          )}?`,
+          response: (
+            <div>
+              Let's talk about the story of Facebook and their decision to use
+              and develop React.
+              <br />
+              <br />
+              Back in the early 2010s, Facebook was facing some major challenges
+              with their codebase. Their user interface had become increasingly
+              complex due to the sheer amount of features they were adding, and
+              their existing coding structure was becoming difficult to manage.
+              The Facebook Ads org, in particular, was struggling with a
+              challenging bug due to a lack of data consistency across different
+              parts of their app.
+              <br />
+              <br />
+              This is when Jordan Walke, a software engineer at Facebook,
+              started experimenting with a new way of building user interfaces
+              based on components. The basic idea was to encapsulate parts of
+              the interface as components that manage their own state and then
+              combine these components to create complex UIs.
+              <br />
+              <br />
+              React.js was born from this experimentation and was first deployed
+              in the Facebook's newsfeed in 2011. It proved to be a massive
+              success, making code easier to understand, debug, and scale.
+              Facebook then deployed React in Instagram in 2012.
+              <br />
+              <br />
+              In 2013, Facebook decided to open source React. The reception was
+              initially mixed. Some people were excited about the potential of
+              this new library, while others were skeptical about its unusual
+              approach, particularly its use of a virtual DOM and JSX.
+              <br />
+              <br />
+              However, the React team stayed focused and continued to improve
+              and promote React. Facebook hosted the first ever React conference
+              in 2015, inviting developers to learn about the library and share
+              their experiences. The team also focused on making React more
+              accessible and easier to learn, creating comprehensive
+              documentation and even an interactive tutorial.
+              <br />
+              <br />
+              Fast forward to today, and React has become one of the most
+              popular JavaScript libraries, used by companies big and small all
+              over the world to build their user interfaces.
+              <br />
+              <br />
+              The story of React is a true Silicon Valley story. It's about
+              innovation, experimentation, and not being afraid to break from
+              the norm. It's about facing challenges head on, and coming up with
+              creative solutions. It's about the power of open source, and the
+              incredible things that can be achieved when a community of
+              developers come together.
+              <br />
+              <br />
+              Hopefully, this story inspires you to start your own journey into
+              learning React. Just remember, every expert was once a beginner.
+              You're only one line of code away from starting your next big
+              adventure.
+            </div>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
+        summarize: {
+          completed: false,
+          impact: 100,
+          action: `summarize`,
+          icon: `📚`,
+          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
+            `Lesson 2 Frontend Event-Driven Programming`
+          )}?`,
+          response: (
+            <div>
+              Let's dive into the core foundations of React and event-driven
+              programming.
+              <br />
+              <br />
+              React is a popular JavaScript library, maintained by Facebook, for
+              constructing user interfaces (UIs), particularly for single-page
+              applications. It allows developers to build reusable UI components
+              and makes the process of building complex user interfaces more
+              manageable.
+              <br />
+              <br />
+              The foundational concept in React is the idea of components. These
+              are self-contained elements of the UI, which can be as small as a
+              button or as large as an entire page. A React application is
+              typically built from many of these components, each responsible
+              for rendering a small, reusable piece of HTML. Components are
+              designed to be reusable and can manage their own state, which is a
+              key feature that helps to minimize the complexity of code and
+              increase readability and maintainability.
+              <br />
+              <br />
+              In terms of architecture, React follows a unidirectional data flow
+              model. This means that data in a React application flows downward
+              from parent components to child components through properties
+              known as "props". State, which is a component's internal data, can
+              be passed down from parent to child via props, but it can't be
+              passed up from a child to a parent. This predictable data flow
+              greatly simplifies how a program works and makes it easier to
+              debug and understand.
+              <br />
+              <br />
+              React also employs a virtual DOM (Document Object Model) to
+              improve performance. When changes are made to the state of a
+              component, React first updates the virtual DOM, then it diffs the
+              virtual DOM against the actual DOM, and finally it updates the
+              real DOM for only the objects that changed. This selective
+              rendering improves efficiency and speed of complex or large-scale
+              applications.
+              <br />
+              <br />
+              React operates within the broader context of event-driven
+              programming, which is a paradigm that revolves around actions
+              performed by the user or the system (like clicks, key presses, or
+              data fetches). In an event-driven application, code is structured
+              around what should happen when certain events occur.
+              <br />
+              <br />
+              In a React application, user interactions or system events (like
+              successful API calls) will often result in state changes, causing
+              components to re-render. For example, clicking a "like" button
+              might trigger an event handler function that updates the state of
+              a "like count" component.
+              <br />
+              <br />
+              In conclusion, React and event-driven programming are powerful
+              tools that work in unison to enable the creation of dynamic,
+              complex, and efficient web applications. They allow for the
+              encapsulation of code into reusable components, the efficient
+              handling and rendering of state changes, and the structuring of
+              code around user and system events. Their adoption has empowered
+              developers to create more interactive, performant, and
+              user-friendly web applications.
+            </div>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
+        ask: {
+          completed: false,
+          impact: 100,
+          action: `ask`,
+          icon: `🔮`,
+          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
+            `Lesson 2 Frontend Event-Driven Programming`
+          )} with one sentence answers?`,
+          response: (
+            <div>
+              Here are three frequently asked questions by beginners about React
+              and event-driven programming, along with expert answers:
+              <br />
+              <br />
+              Question 1: What is JSX and why do we use it in React?
+              <br />
+              <br />
+              Answer: JSX, or JavaScript XML, is a syntax extension for
+              JavaScript. It allows you to write HTML-like code in your
+              JavaScript, which makes your code more readable and writeable. In
+              the context of React, JSX is used to define the structure and
+              appearance of React components. React then takes this JSX and
+              converts it into regular JavaScript objects behind the scenes
+              using a process called 'transpilation'. While you can write React
+              code without JSX, using JSX is more intuitive, especially if you
+              come from an HTML background.
+              <br />
+              <br />
+              <br />
+              <br />
+              Question 2: How does state differ from props in React?
+              <br />
+              <br />
+              Answer: Both 'state' and 'props' are plain JavaScript objects.
+              While both of them hold information that influences the output of
+              render, they are different in their functionality with respect to
+              component. Props (short for 'properties') are immutable and are
+              used to pass data from parent components to child components. It's
+              similar to function arguments. State, on the other hand, is
+              managed within the component and can be changed within the
+              component (mutable). It's similar to variables declared within a
+              function, and is used when a component needs to keep track of
+              information between renderings.
+              <br />
+              <br />
+              <br />
+              <br />
+              Question 3: What is event-driven programming and how is it used in
+              React?
+              <br />
+              <br />
+              Answer: Event-driven programming is a paradigm that involves
+              designing your program to respond to user interactions or system
+              events. These could be anything from button clicks to data
+              arriving from an API request. In the context of React,
+              event-driven programming often involves creating functions that
+              respond to user interactions, like clicks or key presses, and
+              updating the state of your components in response to these events.
+              This could involve showing or hiding a component, updating a value
+              in your state, making an API call, and so forth. Events are used
+              to create an interactive, responsive experience for the user.
+            </div>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
+        guide: {
+          completed: false,
+          impact: 100,
+          action: `guide`,
+          icon: `🤝`,
+          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
+            `Lesson 1 Coding Fundamentals`
+          )}?`,
+          response: (
+            <div>
+              Here's a detailed roadmap to go from a beginner learner to a professionally employed Frontend Software Engineer focusing on React.
+              <ol>
+                <li><b>Basic Frontend Technologies</b>
+                  <ul>
+                    <li>Understand the basics of HTML, CSS, and JavaScript.</li>
+                    <li>Understand the DOM (Document Object Model).</li>
+                    <li>Familiarize yourself with responsive design and CSS frameworks like Bootstrap or Tailwind CSS.</li>
+                    <li>Learn about web accessibility and why it's important.</li>
+                  </ul>
+                </li>
+                <li><b>Advanced JavaScript</b>
+                  <ul>
+                    <li>Dive deeper into JavaScript concepts: ES6 features, async/await, promises, and functional programming concepts.</li>
+                    <li>Learn about fetching data from APIs using JavaScript.</li>
+                  </ul>
+                </li>
+                <li><b>Version Control with Git</b>
+                  <ul>
+                    <li>Understand the basics of Git and GitHub.</li>
+                    <li>Learn to work with repositories, branches, commits, and pull requests.</li>
+                  </ul>
+                </li>
+       
+                <li><b> Introduction to React</b>
+                  <ul>
+                    <li>Understand what React is and why it's useful.</li>
+                    <li>Learn JSX, components, props, and state.</li>
+                    <li>Understand the component lifecycle.</li>
+                    <li>Familiarize yourself with hooks, especially useState and useEffect.</li>
+                    <li>Build a few small projects to solidify these concepts.</li>
+                  </ul>
+                </li>
+                <li><b>State Management</b>
+                  <ul>
+                   <li>Understand why state management tools like Redux is needed.</li>
+                    <li>Learn to use either Redux with React.</li>
+                  </ul>
+                </li>
+                <li><b>Routing in React</b>
+                  <ul>
+                    <li>Learn to use React Router for navigating between different parts of your application.</li>
+                  </ul>
+                </li>
+                <li><b>Working with Forms in React</b>
+                  <ul>
+                    <li>Learn how to handle form inputs and validation in React.</li>
+                  </ul>
+                </li>
+                <li><b>Styling in React</b>
+                  <ul>
+                    <li>Understand how to use CSS in JS libraries like styled-component.</li>
+                    <li>Explore different design systems, like Google's Material UI or Microsoft's Fluent UI.</li>
+                  </ul>
+                </li>
+                <li><b>Testing</b>
+                  <ul>
+                    <li>Learn about testing libraries like Jest and React Testing Library.</li>
+                    <li>Understand different types of testing: unit testing, integration testing, and end-to-end testing.</li>
+                  </ul>
+                </li>
+                <li><b>Real-world Project</b>
+                  <ul>
+                    <li>Build a larger project that combines everything you've learned. This could be a web application with multiple pages, API calls, and advanced features.</li>
+                    <li>This will solidify your knowledge and give you something to show to potential employers.</li>
+                  </ul>
+                </li>
+                <li><b>Advanced Topics</b>
+                  <ul>
+                  <li>Study different toolchains like create-react-app, vercel or Gatsby</li>
+                  <li>Learn about server-side rendering with Next.js.</li>
+                  <li>Understand static site generation.</li>
+                  <li>Learn about TypeScript and consider using it in your projects.</li>
+                  </ul>
+                </li>
+                <li><b>Soft Skills</b>
+                  <ul>
+                    <li>Improve your problem-solving skills: practice algorithms and data structures.</li>
+                    <li>Develop your understanding of system design principles.</li>
+                    <li>Improve your problem-solving skills: practice algorithms and data structures.</li>
+                  </ul>
+                </li>
+                <li><b>Job Search</b>
+                  <ul>
+                    <li>Polish your resume and LinkedIn profile.</li>
+                    <li>Build a portfolio website to showcase your projects.</li>
+                    <li>Start applying for jobs and preparing for interviews.</li>
+                    <li>Practice coding interviews and get feedback.</li>
+                  </ul>
+                </li>
+              </ol>
+              <br/> <br/>
+
+              This journey might take a few months to over a year, depending on your dedication, prior experience, and the amount of time you can dedicate to learning each day. The key is consistency and persistence. Remember, everyone learns at their own pace, so don't rush - make sure you understand the basics before moving onto more advanced topics. Happy learning!
+            </div>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
+        demonstrate: {
+          completed: false,
+          impact: 100,
+          action: `demonstrate`,
+          icon: `🧿`,
+          request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
+            `Lesson 2 Frontend Event-Driven Programming`
+          )} in javascript?`,
+          response: `
+/*
+
+ In order to log in a user with Firebase in a React application, you'd have to install Firebase in your project first. If you haven't done this, you can add Firebase by running npm install firebase or yarn add firebase in your terminal.
+
+In this example, we have a LoginForm component that maintains its own local state for the user's email and password, as well as any error messages. The handleChange function updates this state when the user types into the form inputs, and the handleSubmit function is called when the user submits the form.
+
+In the handleSubmit function, we call Firebase's signInWithEmailAndPassword method, passing the email and password the user entered. If there's an error - for instance, if the user entered an incorrect password - we catch it and update our component's state with the error message.
+
+This is a very basic example and a real-world application would likely involve more complexities such as form validation, handling loading states, and more. But it should serve as a good starting point. Remember, you should have already initialized Firebase in your project for this to work, and the email-password authentication method should be enabled on your Firebase project's authentication settings.
+*/
+
+
+import React, { useState } from 'react';
+import firebase from 'firebase/app';
+import 'firebase/auth';
+
+const LoginForm = () => {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [error, setError] = useState(null);
+
+    const handleChange = (event) => {
+        const { name, value } = event.target;
+        if (name === 'email') {
+            setEmail(value);
+        } else if (name === 'password') {
+            setPassword(value);
+        }
+    };
+
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+
+        try {
+            await firebase.auth().signInWithEmailAndPassword(email, password);
+        } catch (error) {
+            setError(error.message);
+        }
+    };
+
+    return (
+        <form onSubmit={handleSubmit}>
+            <input
+                type='email'
+                name='email'
+                placeholder='Email'
+                value={email}
+                onChange={handleChange}
+                required
+            />
+            <input
+                type='password'
+                name='password'
+                placeholder='Password'
+                value={password}
+                onChange={handleChange}
+                required
+            />
+            {error && <p>{error}</p>}
+            <button type='submit'>Log in</button>
+        </form>
+    );
+};
+
+export default LoginForm;
+
+          `,
+          spanish: ``,
+          tooltip: ``,
+        },
+        define: {
+          completed: false,
+          impact: 100,
+          action: `define`, // may not need
+          icon: `👾`, // may not need
+          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
+            `Lesson 2 Frontend Event-Driven Programming`
+          )} in exactly one sentence?`,
+          response: `React is a JavaScript library for building user interfaces that uses event-driven programming to create interactive web applications by allowing components to update and render efficiently in response to user actions or changes in data.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+
+        quiz: {
+          completed: false,
+          impact: 100,
+          action: `quiz`,
+          icon: `🧪`,
+          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
+            `Lesson 2 Frontend Event-Driven Programming`
+          )}?`,
+          response: (
+            <div>
+React Components: Explain the difference between a functional component and a class component in React. In what scenarios might you prefer to use one over the other?
+            <br/><br/>
+State Management: In React, we manage state at the component level and sometimes use global state management tools like Redux or the Context API. What are the benefits of managing state globally, and what are the potential drawbacks?
+            <br/><br/>
+Event-Driven Programming: Explain how event-driven programming works in the context of a React application. Give an example of how a user action triggers an event which causes a change in the state of a component.
+            <br/><br/>
+Virtual DOM: One of React's key features is its virtual DOM. Explain what the virtual DOM is and how it improves performance.
+            <br/><br/>
+CSS in JS: CSS-in-JS is a popular styling technique in modern frontend development, and there are libraries such as styled-components that implement this in React. Discuss the advantages and potential disadvantages of using CSS-in-JS compared to traditional CSS stylesheets in a React application.
+            <br/><br/>
+Remember, these are open-ended questions. They are designed to test not only your knowledge of facts but also your understanding of these concepts and your ability to articulate that understanding. Good luck!
             </div>
           ),
           spanish: ``,
