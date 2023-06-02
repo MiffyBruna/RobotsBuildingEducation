@@ -16,7 +16,7 @@ export const AuthComponent = (StyledFirebaseAuth as any).default
   : StyledFirebaseAuth;
 
 export const firebaseConfig = {
-  apiKey: "AIzaSyByci0j0u36PaK_2RNpOoC2QHq_Yi2pVhY",
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
   authDomain: "learn-robotsbuildingeducation.firebaseapp.com",
   projectId: "learn-robotsbuildingeducation",
   storageBucket: "learn-robotsbuildingeducation.appspot.com",
