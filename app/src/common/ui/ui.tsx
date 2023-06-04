@@ -61,7 +61,7 @@ export let ultimateEffeciencyJutsu = (key) => {
     // ["Metaverse Investing"]: "incentives behind the metaverse",
     // ["Mexican-American Trade Investing"]:
     //   "the pros and cons of investing strong Mexican-American railroads",
-    // ["Infrastructure Investing"]:
+    // ["Infrastructure Investing"]:P
     //   "the pros and cons of investing in AEC technology",
     // ["Cloud Investing"]:
     //   "the pros and cons of investing in cloud software like Cloudflare",
@@ -70,7 +70,10 @@ export let ultimateEffeciencyJutsu = (key) => {
     ["Lesson 1 Coding Fundamentals"]:
       "the fundamentals of object oriented programming",
 
-    ["Lesson 2 Frontend Event-Driven Programming"]: 'the fundamentals of event-driven programming with React JS'
+    ["Lesson 2 Frontend Event-Driven Programming"]:
+      "the fundamentals of event-driven programming with React JS",
+    ["SEO: Search Engine Optimization"]:
+      "understanding search engine optimization",
   };
   return map[key] || "null";
 };

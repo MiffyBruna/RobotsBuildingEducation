@@ -919,6 +919,564 @@ export const Creator = {
         },
       },
     },
+    "SEO: Search Engine Optimization": {
+      documentID: ``,
+      filler: ``,
+      new: false,
+      highValue: false,
+      rare: true,
+      underConstruction: true,
+      completed: false,
+      needsImprovement: false,
+      hasCode: true,
+      tooltip: ``,
+      sourceType: `markdown`, // may not need
+      button: `SEO: Search Engine Optimization`, // may not need - `name`
+      header: `SEO: Search Engine Optimization`,
+      fileSource: await import("../../markdowns/seo.md?raw"), // may not need
+
+      prompts: {
+        patreon: {
+          completed: false,
+          impact: 1000,
+          action: `generate`,
+          icon: `✍️`,
+          request: `ms. roxana, can you please generate an essay that introduces me to ${ultimateEffeciencyJutsu(
+            `SEO: Search Engine Optimization`
+          )}?`,
+          response: `null`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        inspire: {
+          completed: false,
+          impact: 100,
+          action: `inspire`,
+          icon: `⚡`,
+          request: `ms. roxana, can you please share an inspiring story about Kanye West, ${ultimateEffeciencyJutsu(
+            `SEO: Search Engine Optimization`
+          )}?`,
+          response: (
+            <div>
+              Title: "A Digital Leap: The SEO Success Story of El Pollo Loco"
+              <br />
+              <br />
+              El Pollo Loco, one of the most recognized names in the Mexican
+              fast-food industry in the United States, has harnessed the power
+              of SEO to extend its reach, engage with customers, and grow its
+              business in remarkable ways.
+              <br />
+              <br />
+              In the mid-2000s, El Pollo Loco, although already a successful
+              chain with hundreds of stores, faced the challenge of increasing
+              competition and changing customer behaviors, including a shift
+              towards online ordering. Recognizing the need to embrace digital
+              marketing, the company embarked on a comprehensive SEO strategy to
+              improve its online presence and drive more traffic to its website.
+              <br />
+              <br />
+              Working with a top digital marketing agency, El Pollo Loco began
+              optimizing its website for search engines. They focused on both
+              the technical aspects, such as improving page loading speed,
+              ensuring mobile compatibility, and establishing a logical,
+              easy-to-navigate site structure, as well as on-page elements like
+              keywords and meta descriptions.
+              <br />
+              <br />
+              A key part of their SEO strategy was local SEO. El Pollo Loco's
+              marketing team optimized the company's online presence for each of
+              its locations, focusing on local keywords, and improving its
+              visibility on online maps and directories. This allowed each of
+              their branches to rank highly in localized search results, making
+              it easier for customers to find their nearest El Pollo Loco
+              restaurant.
+              <br />
+              <br />
+              Additionally, they launched a blog on their website, sharing
+              content about Mexican cuisine, cooking tips, and company news, all
+              of which were carefully optimized for relevant keywords.
+              <br />
+              <br />
+              The results of these efforts were dramatic. Website traffic
+              increased significantly, as did online orders. They found that
+              customers were not only coming to their site via searches for "El
+              Pollo Loco," but also through broader search terms like "Mexican
+              food near me," "best chicken tacos," and more.
+              <br />
+              <br />
+              By 2019, El Pollo Loco's digital sales had grown to account for a
+              significant portion of their overall revenue. Their SEO success
+              story showcases the potential of SEO in amplifying a business's
+              digital presence, driving sales, and ultimately improving
+              bottom-line results. Today, El Pollo Loco remains committed to
+              their SEO strategy, consistently optimizing their website to stay
+              ahead in a competitive market.
+            </div>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
+        summarize: {
+          completed: false,
+          impact: 100,
+          action: `summarize`,
+          icon: `📚`,
+          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
+            `SEO: Search Engine Optimization`
+          )}?`,
+          response: (
+            <div>
+              Title: "The Art and Science of Search Engine Optimization"
+              <br />
+              <br />
+              Search Engine Optimization (SEO) is the strategic process of
+              improving a website's visibility in search engine results. In
+              today's digital age, SEO has become crucial for businesses and
+              organizations to reach a wider audience, increase organic website
+              traffic, and enhance user engagement.
+              <br />
+              <br />
+              At its core, SEO is about understanding how search engines work
+              and how users interact with them. It's about optimizing a
+              website's content and design to make it both search
+              engine-friendly and user-friendly. This dual focus is essential
+              since search engines aim to provide users with the most relevant
+              and high-quality results.
+              <br />
+              <br />
+              SEO is divided into two main categories: On-page SEO and off-page
+              SEO.
+              <br />
+              <br />
+              On-page SEO involves optimizing elements within a website. This
+              includes keyword optimization, where you ensure your content
+              includes relevant keywords that users might use when searching for
+              the products, services, or information you offer. Other aspects
+              include improving site architecture to make it easy for search
+              engines to crawl and index your pages, and enhancing user
+              experience factors like page load speed, mobile-friendliness, and
+              intuitive navigation.
+              <br />
+              <br />
+              Off-page SEO, on the other hand, focuses on increasing your site's
+              credibility and authority through links from other reputable
+              sites, known as backlinks. Google and other search engines view
+              these backlinks as votes of confidence, which can boost your
+              site's search ranking. Social media marketing, guest blogging, and
+              influencer marketing are some tactics used to earn high-quality
+              backlinks.
+              <br />
+              <br />
+              Local SEO is another significant aspect, especially for businesses
+              with a physical location or those serving a specific geographical
+              area. This involves optimizing your online presence to attract
+              local customers, primarily through local search results. Elements
+              of local SEO include managing your Google My Business listing,
+              gathering positive customer reviews, and ensuring your name,
+              address, and phone number (NAP) are consistent across all online
+              platforms.
+              <br />
+              <br />
+              Importantly, SEO is an ongoing process. Search engine algorithms
+              constantly evolve, and user behavior changes over time. As such,
+              businesses must continually monitor their SEO performance, adjust
+              their strategies, and stay updated on the latest SEO trends and
+              best practices. In conclusion, SEO is not just a technical task
+              but a vital marketing strategy. It enables businesses to reach
+              their target audience organically, build brand credibility, and
+              achieve sustainable growth. Despite the effort it requires, the
+              benefits of a well-executed SEO strategy are well worth the
+              investment.
+            </div>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
+        ask: {
+          completed: false,
+          impact: 100,
+          action: `ask`,
+          icon: `🔮`,
+          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
+            `SEO: Search Engine Optimization`
+          )} with one sentence answers?`,
+          response: (
+            <div>
+              <ol>
+                <li>
+                  <div>
+                    <b>
+                      Question 1: What are keywords, and why are they important
+                      in SEO?
+                    </b>
+                    <br />
+                    <br />
+                    Answer: Keywords are words or phrases that users enter into
+                    search engines when looking for information, products, or
+                    services. In SEO, keywords are crucial because they form the
+                    connection between what people are searching for and the
+                    content you provide to fill that need.
+                    <br />
+                    <br />
+                    Your goal in ranking on search engines is to drive organic
+                    traffic to your site from the search engine result pages
+                    (SERPs), and the keywords you choose to target (i.e., aim to
+                    rank for) will determine the kind of traffic you get. If you
+                    choose the right keywords, well-aligned with your product or
+                    service, you'll bring high-quality traffic to your site,
+                    likely to engage or convert (e.g., make a purchase, sign up
+                    for a newsletter).
+                    <br />
+                    <br />
+                    Keyword research involves identifying popular, relevant
+                    search terms with a balanced level of competition. The
+                    process often includes using SEO tools to discover keywords,
+                    analyzing the competition, and keyword mapping (assigning
+                    the identified keywords to specific pages on your site).
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <b>
+                      Question 2: What is link building, and how does it affect
+                      SEO?
+                    </b>
+                    <br />
+                    <br />
+                    Answer: Link building is the process of acquiring hyperlinks
+                    from other websites to your own. A hyperlink (usually just
+                    called a link) is a way for users to navigate between pages
+                    on the internet.
+                    <br />
+                    <br />
+                    Link building is crucial for SEO because, when it comes to
+                    ranking web pages, search engines not only look at the
+                    content of a page but also consider the number of links
+                    pointing to that page from external websites and the quality
+                    of those external websites. Essentially, the more
+                    high-quality websites that link to your website, the more
+                    likely you are to rank well in search results.
+                    <br />
+                    <br />
+                    But, it's important to note that not all links are valued
+                    the same. Links from relevant and reputable websites tend to
+                    carry more weight. This is where a sound link-building
+                    strategy comes into play. The strategy might involve content
+                    creation, public relations, and outreach efforts aimed at
+                    getting other websites to link to yours.
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <b>Question 3: What is the role of content in SEO?</b>
+                    <br />
+                    <br />
+                    Answer: Content plays a pivotal role in SEO. Search engines
+                    aim to provide users with the most relevant and high-quality
+                    content in response to their queries. Therefore, creating
+                    engaging, valuable content that answers your audience's
+                    questions is key to SEO success.
+                    <br />
+                    <br />
+                    When creating content for SEO, it's essential to:
+                    <ul>
+                      <li>
+                        Ensure it is unique and stands out from similar content
+                        on the web.
+                      </li>
+                      <li>
+                        Make it relevant and useful to your audience by
+                        addressing their needs and questions.
+                      </li>
+                      <li>
+                        Incorporate the right keywords naturally and
+                        contextually.
+                      </li>
+                      <li>
+                        Structure it properly using headers, subheaders, and
+                        meta tags.
+                      </li>
+                      Also, consider that content isn't just about text. It
+                      includes images, videos, infographics, charts, etc.
+                      Diversifying your content types can engage users more
+                      effectively and contribute positively to your SEO efforts.
+                    </ul>
+                    <br />
+                    <br />
+                    Also, consider that content isn't just about text. It
+                    includes images, videos, infographics, charts, etc.
+                    Diversifying your content types can engage users more
+                    effectively and contribute positively to your SEO efforts.
+                    <br />
+                    <br />
+                    Remember, the ultimate goal is to satisfy your audience's
+                    informational needs, keep them on your site longer, and
+                    ideally convert them into customers or subscribers. That's
+                    where the dual nature of SEO comes in: optimizing for both
+                    search engines and your human audience.
+                  </div>
+                </li>
+              </ol>
+            </div>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
+        guide: {
+          completed: false,
+          impact: 100,
+          action: `guide`,
+          icon: `🤝`,
+          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
+            `SEO: Search Engine Optimization`
+          )}?`,
+          response: (
+            <div>
+              here is an expert-level study guide and roadmap to transition from
+              a beginner to an expert in SEO:
+              <ol>
+                <li>
+                  <b>Understanding SEO Basics:</b>
+                  <p>
+                    Start with a solid foundation in SEO basics. You need to
+                    understand what SEO is, why it's important, and the
+                    difference between organic and paid search results.
+                    Familiarize yourself with common SEO terminology and the
+                    principles of how search engines work. Resources: Moz's
+                    "Beginner's Guide to SEO," Google's "Search Engine
+                    Optimization (SEO) Starter Guide."
+                  </p>
+                </li>
+                <li>
+                  <b>Keyword Research:</b>
+                  <p>
+                    The next step is understanding keywords: what they are, why
+                    they're important, and how to find the ones that are most
+                    relevant to your business. You'll learn about long-tail
+                    keywords, keyword difficulty, search intent, and keyword
+                    optimization. Resources: SEMrush's "Keyword Research Guide",
+                    Moz's "Keyword Explorer".
+                  </p>
+                </li>
+                <li>
+                  <b>On-Page SEO:</b>
+                  <p>
+                    This involves optimizing individual webpages for specific
+                    keywords to improve their search engine rankings. Key
+                    aspects include title tags, meta descriptions, headers, URL
+                    structure, and keyword usage within the content. Also, learn
+                    about image optimization and the importance of good user
+                    experience (UX). Resources: HubSpot's "On-Page SEO Guide",
+                    Google's "On-Page SEO Guide".
+                  </p>
+                </li>
+
+                <li>
+                  <b>Technical SEO:</b>
+                  <p>
+                    Here, you'll delve into more advanced topics like website
+                    architecture, mobile optimization, site speed, structured
+                    data, XML sitemaps, and canonical URLs. You'll also learn
+                    about robots.txt files, HTTPS, and other aspects that affect
+                    how search engines crawl and index your website. Resources:
+                    Google's "Technical SEO Guide", Moz's "Technical SEO Guide".
+                  </p>
+                </li>
+                <li>
+                  <b>Off-Page SEO:</b>
+                  <p>
+                    Understand the importance of off-page elements in your SEO
+                    strategy, primarily focusing on the practice of link
+                    building. Learn about the value of backlinks, how to earn
+                    them, and the importance of link quality over quantity.
+                    Resources: Ahrefs' "Guide to Link Building", Moz's
+                    "Beginner's Guide to Link Building".
+                  </p>
+                </li>
+                <li>
+                  <b>Local SEO:</b>
+                  <p>
+                    If you're a local business or have a physical location,
+                    local SEO is crucial. You'll learn about Google My Business,
+                    local citations, online reviews, local keyword optimization,
+                    and other factors that help you rank in local search
+                    results. Resources: Moz's "Local SEO Guide", Search Engine
+                    Journal's "Local SEO Guide".
+                  </p>
+                </li>
+                <li>
+                  <b>Content Marketing and SEO:</b>
+                  <p>
+                    Understanding the symbiotic relationship between content
+                    marketing and SEO is crucial. Learn how to create content
+                    that not only serves your users but also attracts backlinks
+                    and improves your search visibility. Resources: HubSpot's
+                    "SEO Content Writing Guide", Moz's "Guide to Content
+                    Marketing and SEO".
+                  </p>
+                </li>
+                <li>
+                  <b>SEO Analytics and Reporting:</b>
+                  <p>
+                    Learn how to measure your SEO success. Familiarize yourself
+                    with important metrics like organic traffic, bounce rate,
+                    conversion rate, and keyword rankings. Become proficient in
+                    using Google Analytics, Google Search Console, and other SEO
+                    analytics tools. Resources: Google's "Analytics Academy",
+                    Moz's "Guide to SEO Metrics".
+                  </p>
+                </li>
+                <li>
+                  <b>Algorithm Updates and SEO Best Practices:</b>
+                  <p>
+                    Stay up-to-date with the latest search algorithm updates and
+                    understand how they can impact your SEO efforts. Following
+                    SEO best practices will help ensure your website remains
+                    compliant with search engine guidelines. Resources: Google's
+                    "Search Central Blog", Search Engine Journal's "SEO Guide".
+                  </p>
+                </li>
+                <li>
+                  <b>Advanced SEO Techniques and Strategies:</b>
+                  <p>
+                    As you move towards the expert level, dive deeper into
+                    advanced SEO topics such as Schema markup, SEO for
+                    JavaScript-powered websites, Progressive Web Apps (PWA),
+                    voice search optimization, and AI in SEO.
+                    <br />
+                    <br />
+                    Resources: Google's "Advanced SEO Guides", Moz's
+                  </p>
+                </li>
+              </ol>
+            </div>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
+        demonstrate: {
+          completed: false,
+          impact: 100,
+          action: `demonstrate`,
+          icon: `🧿`,
+          request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
+            `SEO: Search Engine Optimization`
+          )} in html`,
+          response: `
+Let's consider an example of a hypothetical blog post about organic gardening. Here's a glimpse of how the HTML might look with SEO optimizations:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Top 10 Organic Gardening Tips for Beginners | Your Gardening Blog</title>
+  <meta name="description" content="Learn the top 10 organic gardening tips for beginners. Start your organic garden today and grow your own healthy, fresh food.">
+  <meta name="keywords" content="Organic Gardening, Gardening Tips, Beginner Gardening, Organic Vegetables">
+  <link rel="canonical" href="https://www.yourgardeningblog.com/organic-gardening-tips" />
+</head>
+<body>
+  <header>
+    <h1>Top 10 Organic Gardening Tips for Beginners</h1>
+  </header>
+  <article>
+    <h2>Getting Started with Organic Gardening</h2>
+    <p>Organic gardening is a rewarding hobby...</p>
+    <!-- Content continues... -->
+    <h2>Our Top 10 Organic Gardening Tips</h2>
+    <p>Here are our top 10 tips for new organic gardeners...</p>
+    <!-- Content continues... -->
+  </article>
+  <footer>
+    <!-- Footer content -->
+  </footer>
+</body>
+</html>
+- The <title> tag includes the main keyword (Organic Gardening Tips) and secondary keyword (Beginners), and it aligns with the content of the article.
+
+- The description meta tag provides a concise, engaging summary of the page content, which can help in click-through rates from search results.
+
+- The keywords meta tag includes relevant keywords about the page. However, note that Google officially announced in 2009 that they don’t use the keywords meta tag in web ranking, but some other search engines might still use it.
+
+- The canonical link helps prevent duplicate content issues by specifying the "canonical URL", the "preferred" version of a web page.
+
+- The <h1> and <h2> tags are used appropriately for headings and subheadings, and they include relevant keywords.
+
+- The <p> (paragraph) tags contain the main content of the page, which should be well-written and naturally include the page's target keywords.
+
+Remember, this is just a glimpse of what SEO in code might look like. Effective SEO involves much more than just optimizing your HTML. It also includes things like website performance, mobile optimization, structured data, backlinks, user engagement, and more.
+
+`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        define: {
+          completed: false,
+          impact: 100,
+          action: `define`, // may not need
+          icon: `👾`, // may not need
+          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
+            `SEO: Search Engine Optimization`
+          )} in exactly one sentence?`,
+          response: `\n\nSearch Engine Optimization (SEO) is the practice of enhancing a website's visibility and ranking in search engine results through various strategies, including keyword optimization, quality content creation, and link building.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+
+        quiz: {
+          completed: false,
+          impact: 100,
+          action: `quiz`,
+          icon: `🧪`,
+          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
+            `SEO: Search Engine Optimization`
+          )}?`,
+          response: (
+            <div>
+              <ol>
+                <li>
+                  <b>
+                    What is the difference between organic and paid search
+                    results?
+                  </b>
+                </li>
+                <li>
+                  <b>
+                    What is a 'long-tail keyword' and why is it important in
+                    SEO?
+                  </b>
+                </li>
+                <li>
+                  <b>
+                    Explain the term 'link building' in the context of SEO and
+                    why it matters.
+                  </b>
+                </li>
+                <li>
+                  <b>What is 'local SEO' and who needs it?</b>
+                </li>
+                <li>
+                  <b>
+                    Why is it important to regularly monitor and adjust your SEO
+                    strategy?
+                  </b>
+                </li>
+              </ol>
+            </div>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
+        shop: {
+          completed: false,
+          impact: 100,
+          action: `shop`,
+          icon: `🛍️`,
+          request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
+          response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+      },
+    },
     "Influence & Expression": {
       documentID: ``,
       filler: ``,

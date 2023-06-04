@@ -427,7 +427,7 @@ const { Configuration, OpenAIApi } = require("openai");
 
 
 
-const configuration = new Configuration({ apiKey: process.env.OPENAI_API_KEY });
+const configuration = new Configuration({ apiKey: OPENAI_API_KEY });
 
 const openai = new OpenAIApi(configuration);
 
@@ -1403,99 +1403,182 @@ print(rihanna.perform("at the Grammy Awards"))
           )}?`,
           response: (
             <div>
-              Here's a detailed roadmap to go from a beginner learner to a professionally employed Frontend Software Engineer focusing on React.
+              Here's a detailed roadmap to go from a beginner learner to a
+              professionally employed Frontend Software Engineer focusing on
+              React.
               <ol>
-                <li><b>Basic Frontend Technologies</b>
+                <li>
+                  <b>Basic Frontend Technologies</b>
                   <ul>
                     <li>Understand the basics of HTML, CSS, and JavaScript.</li>
                     <li>Understand the DOM (Document Object Model).</li>
-                    <li>Familiarize yourself with responsive design and CSS frameworks like Bootstrap or Tailwind CSS.</li>
-                    <li>Learn about web accessibility and why it's important.</li>
+                    <li>
+                      Familiarize yourself with responsive design and CSS
+                      frameworks like Bootstrap or Tailwind CSS.
+                    </li>
+                    <li>
+                      Learn about web accessibility and why it's important.
+                    </li>
                   </ul>
                 </li>
-                <li><b>Advanced JavaScript</b>
+                <li>
+                  <b>Advanced JavaScript</b>
                   <ul>
-                    <li>Dive deeper into JavaScript concepts: ES6 features, async/await, promises, and functional programming concepts.</li>
-                    <li>Learn about fetching data from APIs using JavaScript.</li>
+                    <li>
+                      Dive deeper into JavaScript concepts: ES6 features,
+                      async/await, promises, and functional programming
+                      concepts.
+                    </li>
+                    <li>
+                      Learn about fetching data from APIs using JavaScript.
+                    </li>
                   </ul>
                 </li>
-                <li><b>Version Control with Git</b>
+                <li>
+                  <b>Version Control with Git</b>
                   <ul>
                     <li>Understand the basics of Git and GitHub.</li>
-                    <li>Learn to work with repositories, branches, commits, and pull requests.</li>
+                    <li>
+                      Learn to work with repositories, branches, commits, and
+                      pull requests.
+                    </li>
                   </ul>
                 </li>
-       
-                <li><b> Introduction to React</b>
+
+                <li>
+                  <b> Introduction to React</b>
                   <ul>
                     <li>Understand what React is and why it's useful.</li>
                     <li>Learn JSX, components, props, and state.</li>
                     <li>Understand the component lifecycle.</li>
-                    <li>Familiarize yourself with hooks, especially useState and useEffect.</li>
-                    <li>Build a few small projects to solidify these concepts.</li>
+                    <li>
+                      Familiarize yourself with hooks, especially useState and
+                      useEffect.
+                    </li>
+                    <li>
+                      Build a few small projects to solidify these concepts.
+                    </li>
                   </ul>
                 </li>
-                <li><b>State Management</b>
+                <li>
+                  <b>State Management</b>
                   <ul>
-                   <li>Understand why state management tools like Redux is needed.</li>
+                    <li>
+                      Understand why state management tools like Redux is
+                      needed.
+                    </li>
                     <li>Learn to use either Redux with React.</li>
                   </ul>
                 </li>
-                <li><b>Routing in React</b>
+                <li>
+                  <b>Routing in React</b>
                   <ul>
-                    <li>Learn to use React Router for navigating between different parts of your application.</li>
+                    <li>
+                      Learn to use React Router for navigating between different
+                      parts of your application.
+                    </li>
                   </ul>
                 </li>
-                <li><b>Working with Forms in React</b>
+                <li>
+                  <b>Working with Forms in React</b>
                   <ul>
-                    <li>Learn how to handle form inputs and validation in React.</li>
+                    <li>
+                      Learn how to handle form inputs and validation in React.
+                    </li>
                   </ul>
                 </li>
-                <li><b>Styling in React</b>
+                <li>
+                  <b>Styling in React</b>
                   <ul>
-                    <li>Understand how to use CSS in JS libraries like styled-component.</li>
-                    <li>Explore different design systems, like Google's Material UI or Microsoft's Fluent UI.</li>
+                    <li>
+                      Understand how to use CSS in JS libraries like
+                      styled-component.
+                    </li>
+                    <li>
+                      Explore different design systems, like Google's Material
+                      UI or Microsoft's Fluent UI.
+                    </li>
                   </ul>
                 </li>
-                <li><b>Testing</b>
+                <li>
+                  <b>Testing</b>
                   <ul>
-                    <li>Learn about testing libraries like Jest and React Testing Library.</li>
-                    <li>Understand different types of testing: unit testing, integration testing, and end-to-end testing.</li>
+                    <li>
+                      Learn about testing libraries like Jest and React Testing
+                      Library.
+                    </li>
+                    <li>
+                      Understand different types of testing: unit testing,
+                      integration testing, and end-to-end testing.
+                    </li>
                   </ul>
                 </li>
-                <li><b>Real-world Project</b>
+                <li>
+                  <b>Real-world Project</b>
                   <ul>
-                    <li>Build a larger project that combines everything you've learned. This could be a web application with multiple pages, API calls, and advanced features.</li>
-                    <li>This will solidify your knowledge and give you something to show to potential employers.</li>
+                    <li>
+                      Build a larger project that combines everything you've
+                      learned. This could be a web application with multiple
+                      pages, API calls, and advanced features.
+                    </li>
+                    <li>
+                      This will solidify your knowledge and give you something
+                      to show to potential employers.
+                    </li>
                   </ul>
                 </li>
-                <li><b>Advanced Topics</b>
+                <li>
+                  <b>Advanced Topics</b>
                   <ul>
-                  <li>Study different toolchains like create-react-app, vercel or Gatsby</li>
-                  <li>Learn about server-side rendering with Next.js.</li>
-                  <li>Understand static site generation.</li>
-                  <li>Learn about TypeScript and consider using it in your projects.</li>
+                    <li>
+                      Study different toolchains like create-react-app, vercel
+                      or Gatsby
+                    </li>
+                    <li>Learn about server-side rendering with Next.js.</li>
+                    <li>Understand static site generation.</li>
+                    <li>
+                      Learn about TypeScript and consider using it in your
+                      projects.
+                    </li>
                   </ul>
                 </li>
-                <li><b>Soft Skills</b>
+                <li>
+                  <b>Soft Skills</b>
                   <ul>
-                    <li>Improve your problem-solving skills: practice algorithms and data structures.</li>
-                    <li>Develop your understanding of system design principles.</li>
-                    <li>Improve your problem-solving skills: practice algorithms and data structures.</li>
+                    <li>
+                      Improve your problem-solving skills: practice algorithms
+                      and data structures.
+                    </li>
+                    <li>
+                      Develop your understanding of system design principles.
+                    </li>
+                    <li>
+                      Improve your problem-solving skills: practice algorithms
+                      and data structures.
+                    </li>
                   </ul>
                 </li>
-                <li><b>Job Search</b>
+                <li>
+                  <b>Job Search</b>
                   <ul>
                     <li>Polish your resume and LinkedIn profile.</li>
-                    <li>Build a portfolio website to showcase your projects.</li>
-                    <li>Start applying for jobs and preparing for interviews.</li>
+                    <li>
+                      Build a portfolio website to showcase your projects.
+                    </li>
+                    <li>
+                      Start applying for jobs and preparing for interviews.
+                    </li>
                     <li>Practice coding interviews and get feedback.</li>
                   </ul>
                 </li>
               </ol>
-              <br/> <br/>
-
-              This journey might take a few months to over a year, depending on your dedication, prior experience, and the amount of time you can dedicate to learning each day. The key is consistency and persistence. Remember, everyone learns at their own pace, so don't rush - make sure you understand the basics before moving onto more advanced topics. Happy learning!
+              <br /> <br />
+              This journey might take a few months to over a year, depending on
+              your dedication, prior experience, and the amount of time you can
+              dedicate to learning each day. The key is consistency and
+              persistence. Remember, everyone learns at their own pace, so don't
+              rush - make sure you understand the basics before moving onto more
+              advanced topics. Happy learning!
             </div>
           ),
           spanish: ``,
@@ -1603,17 +1686,38 @@ export default LoginForm;
           )}?`,
           response: (
             <div>
-React Components: Explain the difference between a functional component and a class component in React. In what scenarios might you prefer to use one over the other?
-            <br/><br/>
-State Management: In React, we manage state at the component level and sometimes use global state management tools like Redux or the Context API. What are the benefits of managing state globally, and what are the potential drawbacks?
-            <br/><br/>
-Event-Driven Programming: Explain how event-driven programming works in the context of a React application. Give an example of how a user action triggers an event which causes a change in the state of a component.
-            <br/><br/>
-Virtual DOM: One of React's key features is its virtual DOM. Explain what the virtual DOM is and how it improves performance.
-            <br/><br/>
-CSS in JS: CSS-in-JS is a popular styling technique in modern frontend development, and there are libraries such as styled-components that implement this in React. Discuss the advantages and potential disadvantages of using CSS-in-JS compared to traditional CSS stylesheets in a React application.
-            <br/><br/>
-Remember, these are open-ended questions. They are designed to test not only your knowledge of facts but also your understanding of these concepts and your ability to articulate that understanding. Good luck!
+              React Components: Explain the difference between a functional
+              component and a class component in React. In what scenarios might
+              you prefer to use one over the other?
+              <br />
+              <br />
+              State Management: In React, we manage state at the component level
+              and sometimes use global state management tools like Redux or the
+              Context API. What are the benefits of managing state globally, and
+              what are the potential drawbacks?
+              <br />
+              <br />
+              Event-Driven Programming: Explain how event-driven programming
+              works in the context of a React application. Give an example of
+              how a user action triggers an event which causes a change in the
+              state of a component.
+              <br />
+              <br />
+              Virtual DOM: One of React's key features is its virtual DOM.
+              Explain what the virtual DOM is and how it improves performance.
+              <br />
+              <br />
+              CSS in JS: CSS-in-JS is a popular styling technique in modern
+              frontend development, and there are libraries such as
+              styled-components that implement this in React. Discuss the
+              advantages and potential disadvantages of using CSS-in-JS compared
+              to traditional CSS stylesheets in a React application.
+              <br />
+              <br />
+              Remember, these are open-ended questions. They are designed to
+              test not only your knowledge of facts but also your understanding
+              of these concepts and your ability to articulate that
+              understanding. Good luck!
             </div>
           ),
           spanish: ``,
