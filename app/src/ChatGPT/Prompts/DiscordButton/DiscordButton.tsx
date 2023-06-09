@@ -5,6 +5,7 @@ import { Button } from "react-bootstrap";
 import ReactDOM from "react-dom";
 import { analytics } from "../../../database/firebaseResources";
 import linkedInLogo from "../../../common/media/images/linkedInLogo.png";
+import patreonLogos from "../../../common/media/images/patreonLogos.png";
 
 export const DiscordButton = () => (
   <div
@@ -43,9 +44,9 @@ export const DiscordButton = () => (
       <Button variant="light">
         <img
           style={{ borderRadius: "6px" }}
-          width="36px"
+          width="32px"
           height="32px"
-          src="https://pbs.twimg.com/profile_images/1266950784609992705/xEe7mBx9_400x400.png"
+          src={patreonLogos}
         />
       </Button>
       <br />
