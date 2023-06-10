@@ -376,7 +376,6 @@ function App() {
         auth={auth}
         globalReserveCounter={globalReserveCounter}
         patreonObject={patreonObject}
-        handleRandomDemoPressed={handleRandomDemoPressed}
         userDocumentReference={userDocumentReference}
         databaseUserDocument={databaseUserDocument}
         setDatabaseUserDocument={setDatabaseUserDocument}

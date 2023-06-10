@@ -6,16 +6,11 @@ const MarkdownRenderer = ({ file, patreonObject }) => {
   const [markdown, setMarkdown] = useState("");
 
   useEffect(() => {
-
     setMarkdown(file?.default);
   }, [file]);
 
-  if(isEmpty(file)){
-    return( 
-    <div>
-      {patreonObject?.prompts?.patreon?.response || ''}
-    </div>
-    )
+  if (isEmpty(file)) {
+    return <div>{patreonObject?.prompts?.patreon?.response || ""}</div>;
   }
   return (
     <div

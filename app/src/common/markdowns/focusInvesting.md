@@ -9,32 +9,32 @@ So here goes nothing. 3 years of a lot of painstaking effort, stated clearly.
 
 ## The Stock Portfolio
 
-<img width="311" alt="Screen Shot 2023-04-21 at 1 12 20 AM" src="https://user-images.githubusercontent.com/65219666/233803430-b4d93024-a20b-47e9-a87e-cb7317e38098.png">
+<img width="100%" alt="Screen Shot 2023-04-21 at 1 12 20 AM" src="https://user-images.githubusercontent.com/65219666/233803430-b4d93024-a20b-47e9-a87e-cb7317e38098.png">
 
 I'm not going to go into all of the details of the things I learned. There are so many rules and regulations that define how I choose things.
 In short, it helps to think of the market and businesses in terms of economic pipelines. There is a pipeline for everything, from the production of silk to music label regulations.They're pipelines of economic activity. Which pipelines look good to invest in?
 
 Here is one thing I attribute a lot in the game of stock picking. Stewardship. Focusing on those things will help you address bias over the long term in the stock market.
 
-1. Berkshire Hathaway (20%)
-   Berkshire Hathaway is an empire investment. I view Berkshire as actively invested American cash, so it's the first stock that I would trade in or sell. I invest in Berkshire because it's not an investment that I try to beat the market with, it's an investment of an organization and model that I trust.
+Berkshire Hathaway (20%)
+Berkshire Hathaway is an empire investment. I view Berkshire as actively invested American cash, so it's the first stock that I would trade in or sell. I invest in Berkshire because it's not an investment that I try to beat the market with, it's an investment of an organization and model that I trust.
 
-   They make money via highly profitable business across sectors like insurance, railroad, industrials, banking and consumer staples. They invest that money back into stocks.
+They make money via highly profitable business across sectors like insurance, railroad, industrials, banking and consumer staples. They invest that money back into stocks.
 
-2. Apple (30%)
-   Apple sells personal devices and extends them with services. Their products are ultimately centered around personal, private and self-investing technology. Similar to Berkshire Hathaway, they're invested in as a trusted place to store wealth.
+Apple (30%)
+Apple sells personal devices and extends them with services. Their products are ultimately centered around personal, private and self-investing technology. Similar to Berkshire Hathaway, they're invested in as a trusted place to store wealth.
 
-   Many investors tend to understand Apple's walled garden approach. I don't focus on that. They're in the business of creating private devices for consumers. This causes their products to center around privacy. I believe long term, consumers will value privacy-centric technology over social ones like Google and Meta.
+Many investors tend to understand Apple's walled garden approach. I don't focus on that. They're in the business of creating private devices for consumers. This causes their products to center around privacy. I believe long term, consumers will value privacy-centric technology over social ones like Google and Meta.
 
-3. Pinterest (20%)
-   Pinterest is a social network and search engine built around shopping, ideas and planning for the future. Women largely use it as a productivity tool. I believe that the value of their brand, reputation and economic incentives will result in creating one of the strongest advertisement networks.
+Pinterest (20%)
+Pinterest is a social network and search engine built around shopping, ideas and planning for the future. Women largely use it as a productivity tool. I believe that the value of their brand, reputation and economic incentives will result in creating one of the strongest advertisement networks.
 
-   In fact, it would not be surprising to see if more iPhone users allow Pinterest to collect their data over other less trusted networks like Instagram and Tiktok. Why? I recommend to think of social networks, ranging from Instagram to Amazon's Prime network, on a spectrum. The spectrum is defined by intention and entertainment.
+In fact, it would not be surprising to see if more iPhone users allow Pinterest to collect their data over other less trusted networks like Instagram and Tiktok. Why? I recommend to think of social networks, ranging from Instagram to Amazon's Prime network, on a spectrum. The spectrum is defined by intention and entertainment.
 
-   Which networks are best at driving revenue? Which networks have designed an environment that's most productive for advertisements? Which network has the most influence over consumer awareness? How can that all change? When you think about networks from that perspective, you get to observe a lot of different constraints and advantages that some have over others.
+Which networks are best at driving revenue? Which networks have designed an environment that's most productive for advertisements? Which network has the most influence over consumer awareness? How can that all change? When you think about networks from that perspective, you get to observe a lot of different constraints and advantages that some have over others.
 
-4. Block (30%)
-   Block invests into primarily small businesses and individuals and reinvests their money into Bitcoin research. I believe there is a future of banking and that programmable money is a clear facet of life and I believe that Block is positioned to be a good steward of that future. There's also reality, where large banks like Chase and Bank of America are likely to persist and flourish too. I'm not much a zero-sum thinker when it comes to the competitive environment. I believe that it's likely that all major banking players are more likely to succeed than to fail.
+Block (30%)
+Block invests into primarily small businesses and individuals and reinvests their money into Bitcoin research. I believe there is a future of banking and that programmable money is a clear facet of life and I believe that Block is positioned to be a good steward of that future. There's also reality, where large banks like Chase and Bank of America are likely to persist and flourish too. I'm not much a zero-sum thinker when it comes to the competitive environment. I believe that it's likely that all major banking players are more likely to succeed than to fail.
 
 That being said, the nature of banking is how well an organization manages deposits and risks. Block is a company that does a few things very well and manages its risk by offering safer financial services. It then offsets this risk by investing into Bitcoin research rather than depending on crypto's success to succeed as a company. It's still a classical financial services company.
 
@@ -55,33 +55,33 @@ My hope is that I help some of you become incredible investors.
 
 Charlie Munger, the Vice Chairman of Berkshire Hathaway and a successful investor, has a unique investment philosophy that emphasizes patience, discipline, and long-term thinking. Here's a summary of how Charlie Munger invests:
 
-1. Value investing: Munger follows a value investing approach, which involves identifying undervalued companies with strong fundamentals, competitive advantages, and potential for long-term growth. He looks for companies trading at a discount to their intrinsic value, providing a margin of safety.
+Value investing: Munger follows a value investing approach, which involves identifying undervalued companies with strong fundamentals, competitive advantages, and potential for long-term growth. He looks for companies trading at a discount to their intrinsic value, providing a margin of safety.
 
-2. Focus on quality: Munger believes in investing in high-quality businesses with strong management teams, sustainable competitive advantages (or "moats"), and a history of profitability. He prefers companies with easy-to-understand business models and a clear path to long-term success.
+Focus on quality: Munger believes in investing in high-quality businesses with strong management teams, sustainable competitive advantages (or "moats"), and a history of profitability. He prefers companies with easy-to-understand business models and a clear path to long-term success.
 
-3. Concentrated portfolio: Unlike many investors who diversify their investments across a large number of companies, Munger prefers to hold a concentrated portfolio of a few high-quality businesses. This approach is based on the idea that a few great investments can produce significant returns over time.
+Concentrated portfolio: Unlike many investors who diversify their investments across a large number of companies, Munger prefers to hold a concentrated portfolio of a few high-quality businesses. This approach is based on the idea that a few great investments can produce significant returns over time.
 
-4. Long-term orientation: Munger is a patient investor with a long-term investment horizon. He often holds his investments for many years or even decades, allowing the power of compounding to work in his favor. This approach reduces the impact of short-term market fluctuations and helps to minimize transaction costs.
+Long-term orientation: Munger is a patient investor with a long-term investment horizon. He often holds his investments for many years or even decades, allowing the power of compounding to work in his favor. This approach reduces the impact of short-term market fluctuations and helps to minimize transaction costs.
 
-5. Margin of safety: Munger emphasizes the importance of incorporating a margin of safety into investment decisions. This means purchasing stocks at a significant discount to their intrinsic value to account for potential errors in valuation or unforeseen negative events.
+Margin of safety: Munger emphasizes the importance of incorporating a margin of safety into investment decisions. This means purchasing stocks at a significant discount to their intrinsic value to account for potential errors in valuation or unforeseen negative events.
 
-6. Avoiding common pitfalls: Munger is keenly aware of the cognitive biases and psychological tendencies that can lead to poor investment decisions. He works to minimize these influences by staying rational, disciplined, and humble.
+Avoiding common pitfalls: Munger is keenly aware of the cognitive biases and psychological tendencies that can lead to poor investment decisions. He works to minimize these influences by staying rational, disciplined, and humble.
 
-7. Learning from multiple disciplines: Munger is an advocate of learning from various disciplines, such as psychology, economics, and history, to inform investment decisions. By developing a "latticework" of mental models, Munger believes investors can better understand the factors that impact businesses and markets.
+Learning from multiple disciplines: Munger is an advocate of learning from various disciplines, such as psychology, economics, and history, to inform investment decisions. By developing a "latticework" of mental models, Munger believes investors can better understand the factors that impact businesses and markets.
 
 In summary, Charlie Munger's investment approach is characterized by value investing, focusing on high-quality businesses, maintaining a concentrated portfolio, adopting a long-term perspective, incorporating a margin of safety, avoiding common cognitive biases, and learning from multiple disciplines. This disciplined and patient approach has contributed to Munger's long-term success as an investor.
 
 Charlie Munger has extensively discussed the role of cognitive biases in decision-making, particularly in the context of investing. Munger believes that understanding and recognizing these biases can help individuals make better decisions in both their personal and professional lives. Here is a summary of Munger's views on biases:
 
-1. Importance of mental models: Munger advocates for the use of mental models, which are frameworks or simplified representations of complex concepts, to help individuals understand and navigate the world. These mental models can help people identify biases and improve decision-making.
+Importance of mental models: Munger advocates for the use of mental models, which are frameworks or simplified representations of complex concepts, to help individuals understand and navigate the world. These mental models can help people identify biases and improve decision-making.
 
-2. Latticework of mental models: Munger suggests that individuals should develop a "latticework" of mental models from various disciplines, including psychology, economics, and history. This interdisciplinary approach can help individuals recognize cognitive biases and make more informed decisions.
+Latticework of mental models: Munger suggests that individuals should develop a "latticework" of mental models from various disciplines, including psychology, economics, and history. This interdisciplinary approach can help individuals recognize cognitive biases and make more informed decisions.
 
-3. sychological tendencies: Munger has identified several psychological tendencies that contribute to cognitive biases, such as confirmation bias, availability bias, overconfidence, and anchoring. He believes that being aware of these tendencies can help individuals avoid pitfalls in decision-making.
+sychological tendencies: Munger has identified several psychological tendencies that contribute to cognitive biases, such as confirmation bias, availability bias, overconfidence, and anchoring. He believes that being aware of these tendencies can help individuals avoid pitfalls in decision-making.
 
-4. Influence of incentives: Munger emphasizes the importance of understanding incentives and how they can bias decision-making. He suggests that individuals should carefully consider the incentives that may be driving their own actions or the actions of others.
+Influence of incentives: Munger emphasizes the importance of understanding incentives and how they can bias decision-making. He suggests that individuals should carefully consider the incentives that may be driving their own actions or the actions of others.
 
-5. Reducing bias through rationality: Munger argues that cultivating rationality and consistently seeking to improve one's understanding of the world can help reduce the influence of cognitive biases. He encourages individuals to remain open-minded, humble, and adaptable in the face of new information.
+Reducing bias through rationality: Munger argues that cultivating rationality and consistently seeking to improve one's understanding of the world can help reduce the influence of cognitive biases. He encourages individuals to remain open-minded, humble, and adaptable in the face of new information.
 
 In summary, Charlie Munger's views on bias emphasize the importance of developing a comprehensive understanding of cognitive biases and psychological tendencies, cultivating rationality, and creating a latticework of mental models to improve decision-making. Recognizing and mitigating the influence of these biases can lead to better personal and professional outcomes.
 
@@ -115,19 +115,19 @@ In summary, Warren Buffett's investment approach is based on value investing pri
 
 Cathie Wood, the founder, CEO, and CIO of ARK Invest, has a distinct investment approach that emphasizes disruptive innovation and long-term growth. Her investment strategy contrasts with traditional value investing followed by Warren Buffett and Charlie Munger. Here's a summary of how Cathie Wood invests:
 
-1. Focus on disruptive innovation: Wood's investment philosophy revolves around identifying and investing in disruptive technologies and companies that have the potential to transform industries and create significant long-term growth. Examples of such technologies include artificial intelligence, electric vehicles, genomic sequencing, and blockchain.
+Focus on disruptive innovation: Wood's investment philosophy revolves around identifying and investing in disruptive technologies and companies that have the potential to transform industries and create significant long-term growth. Examples of such technologies include artificial intelligence, electric vehicles, genomic sequencing, and blockchain.
 
-2. Thematic investing: ARK Invest's actively managed funds are organized around specific themes or areas of innovation. This thematic approach allows Wood and her team to concentrate on sectors with high growth potential and identify companies that are leading the charge in those sectors.
+Thematic investing: ARK Invest's actively managed funds are organized around specific themes or areas of innovation. This thematic approach allows Wood and her team to concentrate on sectors with high growth potential and identify companies that are leading the charge in those sectors.
 
-3. Long-term orientation: Like Buffett and Munger, Wood is also a long-term investor. However, she focuses on companies with high growth potential rather than undervalued, stable businesses. This long-term perspective allows her to invest in companies that may be volatile in the short term but have the potential for substantial returns over time.
+Long-term orientation: Like Buffett and Munger, Wood is also a long-term investor. However, she focuses on companies with high growth potential rather than undervalued, stable businesses. This long-term perspective allows her to invest in companies that may be volatile in the short term but have the potential for substantial returns over time.
 
-4. High-conviction positions: Wood's investment approach is characterized by high-conviction positions in a relatively small number of companies. This concentrated strategy enables her to maximize returns from her best ideas while maintaining a deep understanding of each company in her portfolio.
+High-conviction positions: Wood's investment approach is characterized by high-conviction positions in a relatively small number of companies. This concentrated strategy enables her to maximize returns from her best ideas while maintaining a deep understanding of each company in her portfolio.
 
-5. Active management: ARK Invest's funds are actively managed, meaning that Wood and her team continuously analyze and adjust their portfolios based on new information and market conditions. This active management approach allows them to capitalize on opportunities and manage risks more effectively than passive investment strategies.
+Active management: ARK Invest's funds are actively managed, meaning that Wood and her team continuously analyze and adjust their portfolios based on new information and market conditions. This active management approach allows them to capitalize on opportunities and manage risks more effectively than passive investment strategies.
 
-6. Transparency and research: Wood places a strong emphasis on transparency and research. ARK Invest regularly shares its investment ideas, research, and even its trades with the public, fostering an open and collaborative investment environment.
+Transparency and research: Wood places a strong emphasis on transparency and research. ARK Invest regularly shares its investment ideas, research, and even its trades with the public, fostering an open and collaborative investment environment.
 
-7. Adapting to market changes: Wood is known for her ability to adapt to changing market conditions and pivot her investment strategy when necessary. This flexibility allows her to respond to new opportunities and challenges in the rapidly evolving world of disruptive innovation.
+Adapting to market changes: Wood is known for her ability to adapt to changing market conditions and pivot her investment strategy when necessary. This flexibility allows her to respond to new opportunities and challenges in the rapidly evolving world of disruptive innovation.
 
 In summary, Cathie Wood's investment approach is centered around identifying and investing in disruptive innovation and high-growth companies, adopting a thematic and long-term orientation, taking high-conviction positions, actively managing her portfolios, emphasizing transparency and research, and adapting to market changes. This distinctive investment strategy has contributed to her success in recent years, particularly in the technology sector.
 
