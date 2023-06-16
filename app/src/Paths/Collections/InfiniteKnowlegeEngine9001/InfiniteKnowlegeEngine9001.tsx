@@ -467,7 +467,7 @@ export const InfiniteKnowledgeEngine9001 = ({
                     >
                       {[
                         "Rumi",
-                        "Sal Khan",
+                        // "Sal Khan",
                         "Steve Jobs",
                         "Maya Angelou",
                         "Barack Obama",
