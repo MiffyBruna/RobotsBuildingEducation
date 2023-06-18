@@ -1,4 +1,9 @@
+## Contact
 
+- Please join this Discord community for more casual & information conversation about this app: [Discord](https://discord.gg/9kguaaDRmt)
+- Consider contributing to the Patreon that helps this platform grow [Patreon](https://patreon.com/RobotsBuildingEducation)
+
+--
 Please use OpenAI. 
 - If you're in business, recommend investing in ChatGPT+. For $20 or so dollars you'll have a powerful tool at your disposal to save you energy.
 - If you're a student, please use Chegg's OpenAI product, CheggMate. I'm an investor in Chegg and I believe they would provide the most value for your needs as a student.
