@@ -20,13 +20,13 @@ Here are some philosophies I follow:
 
 ---
 
-#2.  Current Project: Refactor
+# 2.  Current Project: Refactor
 
 Right now the code is a mess, in part so that I have an excuse to build something quicker and in part so that I can make valuable starter material. Refactoring, to put it simply, means to make code neater and easier to work with. It's a great way to understand and define code. As a software engineer I suggest to do it when you know that it will provide operational value long-term.
 
 So that's it for now, that's all the instruction. Please read the issues section and the pull request section to understand more. At this point in time, I'm assuming that you've watched the material I've created about Github in the app and you've learned a thing or two on Google, Youtube or ChatGPT.
 
-## Cut to the chase
+## too long; didn't read
 The current project that I'm directing is a revision of the code. The goal of the new revision is to make the code more "forkable" which is a process that allows engineers or entrepeneurs to copy the code to their own Github profile. So in a nutshell, we want to make this codebase feel like an easy to use template.
 
 Please visit the issues, pull requests & contact me on Discord or Patreon
