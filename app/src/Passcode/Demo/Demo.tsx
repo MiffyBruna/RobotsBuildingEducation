@@ -11,12 +11,13 @@ export const Demo = ({
   setGlobalImpactCounter,
   computePercentage,
   patreonObject,
+  demoName = "",
 }) => {
   return (
     <div>
       <h2 style={{ color: "white", marginTop: 12 }}>
         {/* Lesson 1 - Coding &amp; Logic */}
-        {patreonObject.button}
+        {demoName ? demoName : patreonObject.button}
       </h2>
       <ChatGPT
         // patreonObject={patreonObject}

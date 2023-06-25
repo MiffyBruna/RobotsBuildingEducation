@@ -38,7 +38,7 @@ Here are some philosophies I follow:
 
 ---
 
-## Current Project: Refactor
+#2.  Current Project: Refactor
 
 Right now the code is a mess, in part so that I have an excuse to build something quicker and in part so that I can make valuable starter material. Refactoring, to put it simply, means to make code neater and easier to work with. It's a great way to understand and define code. As a software engineer I suggest to do it when you know that it will provide operational value long-term.
 
@@ -51,5 +51,47 @@ Refactoring code:
 Refactoring is a disciplined technique for restructuring an existing body of code, 
 altering its internal structure without changing its external behavior.
 ```
+
+
+## Coding Principles
+
+
+### Think about computing and work
+
+1. Think about the amount of computing happening to achieve a task. Can less computing be used? In general, we want less computing over the "convenience" of code.
+
+ ```
+         <Demo
+            patreonObject={
+              ui()["Engineer"]["Crash Course"]["Introduction To RO.B.E"]
+            }
+        />
+ 
+ ```
+ 
+ We have a property here called `patreonObject` and it's defined by the **result** of `ui()[...path to demo lesson]`. If you examine the contents of `ui()`, you'll that it's this:
+
+```
+  export const ui = (globalUserModulesFromDB = {}): IPath => {
+    // can branch this further to reduce JSON size computed when invoked.
+
+    return {
+      Engineer: Engineer,
+      Creator: Creator,
+      Entrepeneur: Entrepeneur,
+      "RO.₿.E": LittleVillage(globalUserModulesFromDB), // get database sets
+      "Boss Mode": BossMode,
+      // "Raise Ur Hand": {},
+    };
+  };
+```
+
+You'll note that the developer wrote a comment saying that they can "branch [this code] further" meaning that developers will create an argument so that the software is only every rendering certain modules and paths rather than **all of the data**.
+
+
+This is what I mean by "think about computing and work". In the grand scheme of things, it's not that big of a deal, but thinking in this way will generally create more fruitful software no different than how good soil creates better agriculture.
+
+
+
 
 

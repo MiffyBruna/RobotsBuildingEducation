@@ -138,7 +138,8 @@ function App() {
   const handleZeroKnowledgePassword = (event) => {
     if (
       event.target.value === import.meta.env.VITE_PATREON_PASSCODE ||
-      event.target.value === import.meta.env.VITE_FREE_PROMO_PASSCODE
+      event.target.value === import.meta.env.VITE_FREE_PROMO_PASSCODE ||
+      event.target.value === import.meta.env.VITE_FOREVER_FREE
     ) {
       localStorage.setItem("patreonPasscode", event.target.value);
       setPatreonObject({});
@@ -190,7 +191,9 @@ function App() {
       localStorage.getItem("patreonPasscode") ===
         import.meta.env.VITE_PATREON_PASSCODE ||
       localStorage.getItem("patreonPasscode") ===
-        import.meta.env.VITE_FREE_PROMO_PASSCODE
+        import.meta.env.VITE_FREE_PROMO_PASSCODE ||
+      localStorage.getItem("patreonPasscode") ===
+        import.meta.env.VITE_FOREVER_FREE
     ) {
       setIsZeroKnowledgeUser(true);
     } else {
@@ -369,7 +372,18 @@ function App() {
       </button>auth
       my age {state.age} */}
       {/*  */}
-      <Header auth={auth} globalReserveCounter={globalReserveCounter} />
+      <Header
+        auth={auth}
+        globalReserveCounter={globalReserveCounter}
+        patreonObject={patreonObject}
+        userDocumentReference={userDocumentReference}
+        databaseUserDocument={databaseUserDocument}
+        setDatabaseUserDocument={setDatabaseUserDocument}
+        globalDocumentReference={globalDocumentReference}
+        globalImpactCounter={globalImpactCounter}
+        setGlobalImpactCounter={setGlobalImpactCounter}
+        computePercentage={computePercentage}
+      />
 
       {typeof isSignedIn === "string" ||
       (!isSignedIn && isZeroKnowledgeUser) ? (

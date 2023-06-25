@@ -36,6 +36,8 @@ export let ultimateEffeciencyJutsu = (key) => {
       "expression and its impacts on influence in social media",
     ["Creating Purpose"]:
       "creating purpose by choosing problems to solve and journeys to take",
+    ["The Drug War"]:
+      "why the drug war has been the primary source for inequality in the United States (This is under construction 🚧🚧🚧) ",
     ["Abraham Lincoln"]: "Abraham Lincoln and his views on divine providence",
     ["Philosophy"]: "Critical Race Theory and machine learning algorithms",
     ["Bitcoin, Automa & the Drug War"]:
@@ -59,11 +61,19 @@ export let ultimateEffeciencyJutsu = (key) => {
     // ["Metaverse Investing"]: "incentives behind the metaverse",
     // ["Mexican-American Trade Investing"]:
     //   "the pros and cons of investing strong Mexican-American railroads",
-    // ["Infrastructure Investing"]:
+    // ["Infrastructure Investing"]:P
     //   "the pros and cons of investing in AEC technology",
     // ["Cloud Investing"]:
     //   "the pros and cons of investing in cloud software like Cloudflare",
     ["Little Village"]: "Little Village, Chicago",
+
+    ["Lesson 1 Coding Fundamentals"]:
+      "the fundamentals of object oriented programming",
+
+    ["Lesson 2 Frontend Event-Driven Programming"]:
+      "the fundamentals of event-driven programming with React JS",
+    ["SEO: Search Engine Optimization"]:
+      "understanding search engine optimization",
   };
   return map[key] || "null";
 };

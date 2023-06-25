@@ -88,9 +88,16 @@ export const PromptCombiner9000 = ({
             <div style={{ display: "flex" }}>
               {loadingMessage.length < 1 &&
               chatGptResponse.response &&
-              (chatGptResponse.type === "guide" ||
-                chatGptResponse.type === "ask" ||
-                chatGptResponse.type === "quiz") ? (
+              chatGptResponse.type === "patreon" ? (
+                <Patreon
+                  patreonObject={patreonObject}
+                  isGeneratedDemo={isGeneratedDemo}
+                />
+              ) : loadingMessage.length < 1 &&
+                chatGptResponse.response &&
+                (chatGptResponse.type === "guide" ||
+                  chatGptResponse.type === "ask" ||
+                  chatGptResponse.type === "quiz") ? (
                 <ul style={{ listStyleType: "none", padding: 0, margin: 0 }}>
                   {(typeof chatGptResponse.response === "string" &&
                     chatGptResponse.response
@@ -100,13 +107,6 @@ export const PromptCombiner9000 = ({
                       })) ||
                     chatGptResponse.response}
                 </ul>
-              ) : loadingMessage.length < 1 &&
-                chatGptResponse.response &&
-                chatGptResponse.type === "patreon" ? (
-                <Patreon
-                  patreonObject={patreonObject}
-                  isGeneratedDemo={isGeneratedDemo}
-                />
               ) : loadingMessage.length < 1 &&
                 chatGptResponse.response &&
                 chatGptResponse.type === "demonstrate" &&

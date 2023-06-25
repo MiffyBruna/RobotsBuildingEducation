@@ -230,7 +230,7 @@ export const ImpactWallet = ({
               <h1>The Reserve</h1>
               <h3>{globalReserve}</h3>
               <div></div>
-              <img src={sheilferBitcoin} width={200} height={250} />
+              <img src={sheilferBitcoin} width={300} height={350} />
 
               <br />
               <br />

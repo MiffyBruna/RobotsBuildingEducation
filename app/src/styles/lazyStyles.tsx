@@ -64,7 +64,7 @@ export const StyledModule = styled.button`
         : props.patreonObject.highValue
         ? "#F8B125"
         : props.patreonObject.new
-        ? "#EC41FF"
+        ? "#f9c4ff"
         : props.patreonObject.underConstruction
         ? "#6A74B4"
         : "#B271D1";
@@ -81,7 +81,7 @@ export const StyledModule = styled.button`
       : props.patreonObject.highValue
       ? "#F8B125"
       : props.patreonObject.new
-      ? "#EC41FF"
+      ? "#f6a3ff"
       : props.patreonObject.underConstruction
       ? "#6A74B4"
       : "#F099AD";

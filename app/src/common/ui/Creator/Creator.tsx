@@ -1,18 +1,13 @@
 import { ultimateEffeciencyJutsu } from "../ui";
 
-
-
-
-
-
 export const Creator = {
-  "Lessons Learned & Insights": {
+  "Communication Science": {
     "Creating Purpose": {
       documentID: ``,
       filler: ``,
       new: false,
       highValue: false,
-      underConstruction: true,
+      underConstruction: false,
       completed: false,
       rare: true,
       needsImprovement: false,
@@ -130,6 +125,422 @@ export const Creator = {
         },
       },
     },
+
+    "The Drug War": {
+      documentID: ``,
+      filler: ``,
+      new: false,
+      highValue: false,
+      underConstruction: true,
+      completed: false,
+      rare: true,
+      needsImprovement: false,
+      tooltip: ``,
+      sourceType: `markdown`, // may not need
+      button: `The Drug War`, // may not need - `name`
+      header: `The Drug War"`,
+      fileSource: await import("../../markdowns/creatingPurposeII.md?raw"), // may not need
+
+      prompts: {
+        patreon: {
+          completed: false,
+          impact: 1000,
+          action: `generate`,
+          icon: `✍️`, //`✍️`
+          request: `ms. roxana, can you please generate an essay that introduces me to ${ultimateEffeciencyJutsu(
+            `The Drug War`
+          )}?`,
+          response: `null`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        inspire: {
+          completed: false,
+          impact: 100,
+          action: `inspire`,
+          icon: `⚡`,
+          request: `ms. roxana, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
+            `The Drug War`
+          )}?`,
+          response: (
+            <div>
+              The Bank Secrecy Act (BSA) of 1970 is a pivotal piece of
+              legislation that has had far-reaching consequences on the U.S.
+              Drug War and the oppression of Black Americans. The BSA was
+              initially designed to combat money laundering and other financial
+              crimes by requiring financial institutions to report certain types
+              of transactions to the government. However, the law's unintended
+              consequences have been profound, particularly in the context of
+              the War on Drugs and the systemic oppression of Black Americans.
+              I. The Bank Secrecy Act and the War on Drugs The BSA as a
+              foundation for the War on Drugs: The BSA laid the groundwork for
+              the U.S. government to monitor and control financial transactions,
+              which became a powerful tool in the War on Drugs. The BSA was
+              amended several times to increase its scope and effectiveness in
+              fighting drug trafficking, money laundering, and other financial
+              crimes. These changes made it easier for law enforcement to seize
+              assets linked to drug crimes, further escalating the drug war.
+              Civil asset forfeiture: The BSA facilitated the expansion of civil
+              asset forfeiture, a controversial practice that allows law
+              enforcement agencies to seize property and assets linked to
+              illegal activities without necessarily charging the owner with a
+              crime. The use of civil asset forfeiture has disproportionately
+              affected Black and other minority communities, as they are often
+              targeted by law enforcement in the context of the War on Drugs.
+              II. The BSA and the Oppression of Black Americans Racial profiling
+              in financial transactions: The BSA requires financial institutions
+              to report suspicious transactions, which can lead to racial
+              profiling. Studies have shown that Black Americans are
+              disproportionately targeted by banks and other financial
+              institutions for additional scrutiny due to implicit bias,
+              perpetuating a cycle of discrimination and financial exclusion.
+              Racial disparities in drug enforcement: The War on Drugs,
+              intensified by the BSA, has had a disproportionately negative
+              impact on Black communities. Although drug use rates are similar
+              across races, Black individuals are more likely to be arrested,
+              convicted, and sentenced to longer prison terms for drug-related
+              offenses. This has led to a massive increase in the Black
+              incarceration rate, further exacerbating the socioeconomic
+              disparities in the United States. Erosion of civil liberties: The
+              BSA and the War on Drugs have led to an erosion of civil
+              liberties, particularly for Black Americans. Law enforcement
+              agencies have used the BSA as a pretext to conduct invasive
+              searches, seizures, and surveillance without adequate oversight or
+              accountability. This has fostered an environment of distrust
+              between law enforcement and Black communities, which has
+              contributed to the ongoing problem of systemic racism and police
+              brutality. Conclusion The Bank Secrecy Act, initially intended to
+              combat financial crimes, has had a significant impact on the U.S.
+              Drug War and the oppression of Black Americans. The legislation's
+              role in facilitating civil asset forfeiture and encouraging racial
+              profiling has deepened racial disparities in the United States. To
+              address these issues, it is crucial to reevaluate the BSA and its
+              implementation, as well as to pursue broader reforms in the
+              criminal justice system that prioritize racial equity and social
+              justice
+            </div>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
+        summarize: {
+          completed: false,
+          impact: 100,
+          action: `summarize`,
+          icon: `📚`,
+          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
+            `The Drug War`
+          )}?`,
+          response: (
+            <div>
+              The U.S. Drug War and American drug consumption have had profound
+              consequences on Latin American economies, fueling the suppression
+              and instability in the region. In particular, the insatiable
+              demand for cocaine in the United States has led to the rise of
+              powerful drug cartels in Colombia, Central America, and Mexico.
+              This essay will examine the relationship between American drug
+              consumption, the U.S. Drug War, and the economic consequences in
+              Latin America, focusing on the rise of drug cartels and their
+              impact on regional economies. I. American Drug Consumption and the
+              Rise of Cartels The demand for cocaine: The high demand for
+              cocaine in the United States has driven the growth of drug
+              production and trafficking in Latin America, particularly in
+              Colombia, where the majority of the world's cocaine is produced.
+              This demand has created an immensely lucrative market for drug
+              cartels and criminal organizations throughout the region. The
+              emergence of cartels: The vast profits derived from drug
+              trafficking have led to the rise of powerful cartels in Colombia,
+              Central America, and Mexico. These organizations have established
+              sophisticated supply chains, using violence and corruption to
+              maintain control over the drug trade. II. The U.S. Drug War and
+              Latin American Economies Suppression and instability: The U.S.
+              Drug War has focused on eradicating drug production and
+              trafficking in Latin America, but this approach has often
+              exacerbated economic suppression and instability. Military and
+              financial aid provided by the United States to combat cartels has
+              inadvertently fueled violence, leading to widespread insecurity
+              and hampering economic development. Misallocation of resources:
+              The focus on combating drug cartels has led to a misallocation of
+              resources in affected countries, with governments prioritizing
+              drug enforcement over investments in infrastructure, education,
+              and other crucial sectors. This constrains long-term economic
+              growth and development. III. The Economic Consequences of Cartels
+              in Colombia, Central America, and Mexico The drug trade as an
+              economic driver: The drug trade has become a significant economic
+              driver in countries like Colombia, Mexico, and Central American
+              nations, as cartels invest in businesses and infrastructure to
+              launder drug proceeds. However, this economic growth is often
+              unsustainable and comes at a high cost, including violence,
+              corruption, and social instability. Displacement and inequality:
+              The violence associated with drug cartels has caused significant
+              displacement and migration in affected countries, putting
+              additional strain on already struggling economies. Furthermore,
+              the wealth accumulated by cartels contributes to economic
+              inequality, as it is concentrated in the hands of a few powerful
+              individuals. Conclusion The U.S. Drug War and American drug
+              consumption have played a significant role in fueling the
+              suppression and instability of Latin American economies,
+              particularly through the rise of cartels in Colombia, Central
+              America, and Mexico. The immense demand for cocaine in the United
+              States has provided cartels with vast profits and power, which
+              they use to exert control over the drug trade and the economies of
+              their respective countries. The resulting violence, corruption,
+              and misallocation of resources have hindered economic development
+              and stability in the region. Addressing these issues requires a
+              comprehensive approach that not only tackles drug consumption and
+              trafficking but also prioritizes social, economic, and political
+              development in Latin America.
+            </div>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
+        ask: {
+          completed: false,
+          impact: 100,
+          action: `ask`,
+          icon: `🔮`,
+          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
+            `The Drug War`
+          )} with one sentence answers?`,
+          response: (
+            <div>
+              Question 1: How has the U.S. Drug War contributed to racial
+              inequality in the United States? Answer: The U.S. Drug War has
+              disproportionately targeted Black and other minority communities,
+              leading to racial disparities in arrests, convictions, and
+              sentencing for drug-related offenses. Although drug use rates are
+              similar across races, Black individuals are more likely to be
+              arrested, convicted, and sentenced to longer prison terms for
+              drug-related offenses. This has resulted in a massive increase in
+              the Black incarceration rate, which exacerbates existing social
+              and economic inequalities between racial groups. Question 2: How
+              does the U.S. Drug War contribute to economic inequality in the
+              United States? Answer: The U.S. Drug War has had several economic
+              implications that contribute to inequality. Firstly, the high
+              rates of incarceration associated with drug offenses, particularly
+              for minority populations, disrupts families and communities,
+              leading to loss of income and perpetuating cycles of poverty.
+              Secondly, individuals with drug convictions often face significant
+              barriers to employment, housing, and education, limiting their
+              ability to improve their socioeconomic status. Finally, the focus
+              on punitive measures rather than harm reduction and drug treatment
+              programs often diverts resources away from public health and
+              social services that could help address underlying causes of drug
+              addiction and poverty. Question 3: How can addressing the U.S.
+              Drug War help to reduce inequality in the United States? Answer:
+              Addressing the U.S. Drug War to reduce inequality requires a
+              comprehensive approach that includes policy changes, criminal
+              justice reform, and investments in social services. Some potential
+              steps include: Ending the criminalization of drug possession and
+              use, and instead focusing on harm reduction, prevention, and
+              treatment strategies. Reforming sentencing laws to reduce the
+              disparity in punishment for drug-related offenses, especially for
+              non-violent drug offenders. Investing in education, job training,
+              and affordable housing to improve the socioeconomic conditions of
+              communities disproportionately impacted by the Drug War. Expanding
+              access to mental health and addiction treatment services to
+              address the root causes of drug addiction and support recovery. By
+              implementing such changes, the United States can begin to address
+              the racial and economic inequalities perpetuated by the Drug War,
+              promoting a more just and equitable society.
+            </div>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
+        guide: {
+          completed: false,
+          impact: 100,
+          action: `guide`,
+          icon: `🤝`,
+          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
+            `The Drug War`
+          )}?`,
+          response: (
+            <div>
+              Title: Study Guide: Understanding the U.S. Drug War as the Main
+              Source of Inequality in the United States Introduction: This study
+              guide is designed to take you from a beginner to an expert in
+              understanding how the U.S. Drug War has contributed to racial and
+              economic inequalities in the United States. It is divided into
+              five sections, each with specific resources and recommended
+              activities to help you deepen your understanding of this complex
+              issue. Section 1: The Basics of the U.S. Drug War Objective: Gain
+              a foundational understanding of the U.S. Drug War, including its
+              origins, history, and key policies. Read "The New Jim Crow: Mass
+              Incarceration in the Age of Colorblindness" by Michelle Alexander
+              for an overview of the U.S. Drug War and its impact on racial
+              inequality. Watch the documentary "13th" directed by Ava DuVernay,
+              which explores the intersection of race, justice, and mass
+              incarceration in the United States. Research the history and key
+              legislation of the U.S. Drug War, including the Controlled
+              Substances Act, the Anti-Drug Abuse Act, and the "Three Strikes"
+              laws. Section 2: Racial Disparities in Drug Enforcement and
+              Incarceration Objective: Understand the racial disparities in drug
+              enforcement, arrests, convictions, and sentencing. Read "Race and
+              the Drug War" by the Drug Policy Alliance, which provides an
+              overview of the racial disparities in drug enforcement and
+              incarceration. Review studies on racial disparities in drug
+              arrests, convictions, and sentencing, such as the work of the
+              Sentencing Project and the Brennan Center for Justice. Analyze the
+              impact of mandatory minimum sentencing laws and racial profiling
+              on communities of color. Section 3: Economic Inequality and the
+              U.S. Drug War Objective: Investigate the economic implications of
+              the U.S. Drug War on individuals, families, and communities. Read
+              "The Economic Burden of Incarceration in the U.S." by the Prison
+              Policy Initiative, which examines the costs of incarceration for
+              families and communities. Explore research on the barriers to
+              employment, housing, and education for individuals with drug
+              convictions. Analyze the impact of the U.S. Drug War on public
+              health funding and the allocation of resources for social
+              services. Section 4: Policy Changes and Criminal Justice Reform
+              Objective: Examine policy changes and criminal justice reforms
+              aimed at reducing inequality perpetuated by the U.S. Drug War.
+              Research recent drug policy reforms, such as the legalization of
+              marijuana in various states and the decriminalization of drug
+              possession in countries like Portugal. Investigate alternative
+              approaches to drug enforcement and treatment, such as harm
+              reduction, drug courts, and diversion programs. Examine the role
+              of community-based organizations in advocating for policy changes
+              and providing support for individuals impacted by the U.S. Drug
+              War. Section 5: Becoming an Expert and Taking Action Objective:
+              Apply your knowledge and engage in actions to address the
+              inequalities perpetuated by the U.S. Drug War. Write an op-ed,
+              blog post, or research paper on a specific aspect of the U.S. Drug
+              War and its impact on inequality. Attend conferences, webinars, or
+              workshops on drug policy reform and criminal justice issues. Get
+              involved with organizations advocating for policy changes and
+              supporting communities impacted by the U.S. Drug War, such as the
+              Drug Policy Alliance, the American Civil Liberties Union, or the
+              Sentencing Project. By following this study guide and engaging
+              with the recommended resources and activities, you will gain a
+              comprehensive understanding of how the U.S. Drug War has
+              contributed to racial and economic inequalities in the United
+              States, and how you can take action to promote a more just and
+              equitable society.
+            </div>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
+        demonstrate: {
+          completed: false,
+          impact: 100,
+          action: `demonstrate`,
+          icon: `🧿`,
+          request: `ms. roxana, can you please show me an example of creating meaning out of life by creating journies with purpose?`,
+          response: (
+            <div>
+              The U.S. Drug War has played a significant role in driving
+              immigration at the Mexican border, although it is important to
+              note that it is not the sole cause. The relationship between the
+              U.S. Drug War and immigration can be demonstrated through the
+              following factors: Violence and instability: The U.S. Drug War has
+              intensified violence and instability in Mexico and other Latin
+              American countries, as drug cartels and criminal organizations
+              compete for control over drug trafficking routes. This violence
+              has led to an increase in homicides, kidnappings, and extortion,
+              which in turn, has caused many individuals and families to flee
+              their homes in search of safety. Economic disruption: The U.S.
+              Drug War has had a substantial impact on the economies of
+              countries involved in drug production and trafficking, such as
+              Mexico. As the demand for illegal drugs in the United States
+              persists, drug cartels have continued to profit, and their
+              influence has spread throughout various sectors of the economy.
+              This has led to economic disruption and a lack of job
+              opportunities for many individuals, who may then choose to migrate
+              to the United States in search of better prospects. Corruption and
+              weak governance: The immense profits generated by the drug trade
+              have fueled corruption within law enforcement, the military, and
+              political institutions in Mexico and other Latin American
+              countries. This has weakened governance and the rule of law,
+              making it increasingly difficult for individuals to trust local
+              authorities and seek protection from violence. As a result, many
+              people are compelled to leave their countries in search of
+              security and stability. Displacement and migration: The violence
+              and economic disruption caused by the U.S. Drug War have led to
+              the displacement of millions of people in Latin America. This
+              displacement often results in internal migration, with individuals
+              moving to other parts of their countries in search of safety and
+              opportunities. However, when internal migration options are
+              exhausted, many individuals choose to cross the border into the
+              United States, seeking refuge and a better life. While the U.S.
+              Drug War is a significant contributing factor to immigration at
+              the Mexican border, it is important to recognize that other
+              factors, such as political instability, climate change, and
+              poverty, also play a role in driving migration. Addressing the
+              root causes of immigration requires a comprehensive approach that
+              considers the multifaceted nature of this complex issue.
+            </div>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
+        define: {
+          completed: false,
+          impact: 100,
+          action: `define`, // may not need
+          icon: `👾`, // may not need
+          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
+            `The Drug War`
+          )} in exactly one sentence?`,
+          response: `\n\nThe U.S. Drug War perpetuates the legacy of U.S. slavery by disproportionately targeting and incarcerating Black Americans for drug-related offenses, thereby reinforcing systemic racial inequality and social control over marginalized communities.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+
+        quiz: {
+          completed: false,
+          impact: 100,
+          action: `quiz`,
+          icon: `🧪`,
+          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
+            `The Drug War`
+          )} without any answers?`,
+          response: (
+            <div>
+              Question 1: Discuss the potential benefits of the U.S. Drug War in
+              terms of public safety, crime reduction, and deterring drug use,
+              and provide examples of specific policies or programs that have
+              contributed to these outcomes. Question 2: Analyze the role of
+              international cooperation and partnerships in the U.S. Drug War,
+              and evaluate their effectiveness in curbing drug trafficking and
+              production in Latin America and other regions. Question 3: From
+              the perspective of supporting the U.S. Drug War, examine the
+              ethical implications of drug legalization or decriminalization,
+              considering the potential risks to public health, safety, and
+              social cohesion. Question 4: Assess the role of law enforcement,
+              the judicial system, and the prison system in the U.S. Drug War,
+              and propose improvements or reforms that could enhance their
+              effectiveness in combating drug-related crime and addiction.
+              Question 5: Explore the concept of "supply-side" drug control
+              strategies (e.g., eradication of drug crops, interdiction of drug
+              shipments) in the context of the U.S. Drug War, and evaluate their
+              effectiveness in reducing drug availability and consumption in the
+              United States. Note: These questions are designed to encourage
+              critical thinking and evidence-based arguments from the
+              perspective of supporting the U.S. Drug War. When answering these
+              questions, consider providing a balanced view that acknowledges
+              potential drawbacks or criticisms while defending the overall
+              stance in favor of the U.S. Drug War.
+            </div>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
+        shop: {
+          completed: false,
+          impact: 100,
+          action: `shop`,
+          icon: `🛍️`,
+          request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
+          response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+      },
+    },
     Philosophy: {
       documentID: ``,
       filler: ``,
@@ -143,7 +554,8 @@ export const Creator = {
       sourceType: `video`, // may not need
       button: `Philosophy @ RO.B.E`, // may not need - `name`
       header: `Philosophy @ RO.B.E`,
-      fileSource: 'https://res.cloudinary.com/eduprojectsil/video/upload/v1674721556/IMG_9188_iewsh4.mov', // may not need
+      fileSource:
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674721556/IMG_9188_iewsh4.mov", // may not need
 
       prompts: {
         patreon: {
@@ -259,15 +671,17 @@ export const Creator = {
       documentID: ``,
       filler: ``,
       new: false,
-      highValue: true,
-      underConstruction: true,
+      highValue: false,
+      underConstruction: false,
       completed: false,
+      rare: true,
       needsImprovement: false,
       tooltip: ``,
       sourceType: `video`, // may not need
       button: `User Experiences`, // may not need - `name`
       header: `Human Computer Interaction`,
-      fileSource: 'https://res.cloudinary.com/eduprojectsil/video/upload/v1674721527/IMG_9182_ao3yio.mov', // may not need
+      fileSource:
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674721527/IMG_9182_ao3yio.mov", // may not need
 
       prompts: {
         patreon: {
@@ -491,6 +905,564 @@ export const Creator = {
             `Content Review`
           )} without any answers?`,
           response: `\n\n1. What is the value of an active, engaged social media community?\n2. How can you use targeted content to build relationships and create a lasting brand impression?\n3. How can you maximize the reach, visibility and engagement of your content?`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        shop: {
+          completed: false,
+          impact: 100,
+          action: `shop`,
+          icon: `🛍️`,
+          request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
+          response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+      },
+    },
+    "SEO: Search Engine Optimization": {
+      documentID: ``,
+      filler: ``,
+      new: false,
+      highValue: false,
+      rare: true,
+      underConstruction: true,
+      completed: false,
+      needsImprovement: false,
+      hasCode: true,
+      tooltip: ``,
+      sourceType: `markdown`, // may not need
+      button: `SEO: Search Engine Optimization`, // may not need - `name`
+      header: `SEO: Search Engine Optimization`,
+      fileSource: await import("../../markdowns/seo.md?raw"), // may not need
+
+      prompts: {
+        patreon: {
+          completed: false,
+          impact: 1000,
+          action: `generate`,
+          icon: `✍️`,
+          request: `ms. roxana, can you please generate an essay that introduces me to ${ultimateEffeciencyJutsu(
+            `SEO: Search Engine Optimization`
+          )}?`,
+          response: `null`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        inspire: {
+          completed: false,
+          impact: 100,
+          action: `inspire`,
+          icon: `⚡`,
+          request: `ms. roxana, can you please share an inspiring story about Kanye West, ${ultimateEffeciencyJutsu(
+            `SEO: Search Engine Optimization`
+          )}?`,
+          response: (
+            <div>
+              Title: "A Digital Leap: The SEO Success Story of El Pollo Loco"
+              <br />
+              <br />
+              El Pollo Loco, one of the most recognized names in the Mexican
+              fast-food industry in the United States, has harnessed the power
+              of SEO to extend its reach, engage with customers, and grow its
+              business in remarkable ways.
+              <br />
+              <br />
+              In the mid-2000s, El Pollo Loco, although already a successful
+              chain with hundreds of stores, faced the challenge of increasing
+              competition and changing customer behaviors, including a shift
+              towards online ordering. Recognizing the need to embrace digital
+              marketing, the company embarked on a comprehensive SEO strategy to
+              improve its online presence and drive more traffic to its website.
+              <br />
+              <br />
+              Working with a top digital marketing agency, El Pollo Loco began
+              optimizing its website for search engines. They focused on both
+              the technical aspects, such as improving page loading speed,
+              ensuring mobile compatibility, and establishing a logical,
+              easy-to-navigate site structure, as well as on-page elements like
+              keywords and meta descriptions.
+              <br />
+              <br />
+              A key part of their SEO strategy was local SEO. El Pollo Loco's
+              marketing team optimized the company's online presence for each of
+              its locations, focusing on local keywords, and improving its
+              visibility on online maps and directories. This allowed each of
+              their branches to rank highly in localized search results, making
+              it easier for customers to find their nearest El Pollo Loco
+              restaurant.
+              <br />
+              <br />
+              Additionally, they launched a blog on their website, sharing
+              content about Mexican cuisine, cooking tips, and company news, all
+              of which were carefully optimized for relevant keywords.
+              <br />
+              <br />
+              The results of these efforts were dramatic. Website traffic
+              increased significantly, as did online orders. They found that
+              customers were not only coming to their site via searches for "El
+              Pollo Loco," but also through broader search terms like "Mexican
+              food near me," "best chicken tacos," and more.
+              <br />
+              <br />
+              By 2019, El Pollo Loco's digital sales had grown to account for a
+              significant portion of their overall revenue. Their SEO success
+              story showcases the potential of SEO in amplifying a business's
+              digital presence, driving sales, and ultimately improving
+              bottom-line results. Today, El Pollo Loco remains committed to
+              their SEO strategy, consistently optimizing their website to stay
+              ahead in a competitive market.
+            </div>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
+        summarize: {
+          completed: false,
+          impact: 100,
+          action: `summarize`,
+          icon: `📚`,
+          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
+            `SEO: Search Engine Optimization`
+          )}?`,
+          response: (
+            <div>
+              Title: "The Art and Science of Search Engine Optimization"
+              <br />
+              <br />
+              Search Engine Optimization (SEO) is the strategic process of
+              improving a website's visibility in search engine results. In
+              today's digital age, SEO has become crucial for businesses and
+              organizations to reach a wider audience, increase organic website
+              traffic, and enhance user engagement.
+              <br />
+              <br />
+              At its core, SEO is about understanding how search engines work
+              and how users interact with them. It's about optimizing a
+              website's content and design to make it both search
+              engine-friendly and user-friendly. This dual focus is essential
+              since search engines aim to provide users with the most relevant
+              and high-quality results.
+              <br />
+              <br />
+              SEO is divided into two main categories: On-page SEO and off-page
+              SEO.
+              <br />
+              <br />
+              On-page SEO involves optimizing elements within a website. This
+              includes keyword optimization, where you ensure your content
+              includes relevant keywords that users might use when searching for
+              the products, services, or information you offer. Other aspects
+              include improving site architecture to make it easy for search
+              engines to crawl and index your pages, and enhancing user
+              experience factors like page load speed, mobile-friendliness, and
+              intuitive navigation.
+              <br />
+              <br />
+              Off-page SEO, on the other hand, focuses on increasing your site's
+              credibility and authority through links from other reputable
+              sites, known as backlinks. Google and other search engines view
+              these backlinks as votes of confidence, which can boost your
+              site's search ranking. Social media marketing, guest blogging, and
+              influencer marketing are some tactics used to earn high-quality
+              backlinks.
+              <br />
+              <br />
+              Local SEO is another significant aspect, especially for businesses
+              with a physical location or those serving a specific geographical
+              area. This involves optimizing your online presence to attract
+              local customers, primarily through local search results. Elements
+              of local SEO include managing your Google My Business listing,
+              gathering positive customer reviews, and ensuring your name,
+              address, and phone number (NAP) are consistent across all online
+              platforms.
+              <br />
+              <br />
+              Importantly, SEO is an ongoing process. Search engine algorithms
+              constantly evolve, and user behavior changes over time. As such,
+              businesses must continually monitor their SEO performance, adjust
+              their strategies, and stay updated on the latest SEO trends and
+              best practices. In conclusion, SEO is not just a technical task
+              but a vital marketing strategy. It enables businesses to reach
+              their target audience organically, build brand credibility, and
+              achieve sustainable growth. Despite the effort it requires, the
+              benefits of a well-executed SEO strategy are well worth the
+              investment.
+            </div>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
+        ask: {
+          completed: false,
+          impact: 100,
+          action: `ask`,
+          icon: `🔮`,
+          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
+            `SEO: Search Engine Optimization`
+          )} with one sentence answers?`,
+          response: (
+            <div>
+              <ol>
+                <li>
+                  <div>
+                    <b>
+                      Question 1: What are keywords, and why are they important
+                      in SEO?
+                    </b>
+                    <br />
+                    <br />
+                    Answer: Keywords are words or phrases that users enter into
+                    search engines when looking for information, products, or
+                    services. In SEO, keywords are crucial because they form the
+                    connection between what people are searching for and the
+                    content you provide to fill that need.
+                    <br />
+                    <br />
+                    Your goal in ranking on search engines is to drive organic
+                    traffic to your site from the search engine result pages
+                    (SERPs), and the keywords you choose to target (i.e., aim to
+                    rank for) will determine the kind of traffic you get. If you
+                    choose the right keywords, well-aligned with your product or
+                    service, you'll bring high-quality traffic to your site,
+                    likely to engage or convert (e.g., make a purchase, sign up
+                    for a newsletter).
+                    <br />
+                    <br />
+                    Keyword research involves identifying popular, relevant
+                    search terms with a balanced level of competition. The
+                    process often includes using SEO tools to discover keywords,
+                    analyzing the competition, and keyword mapping (assigning
+                    the identified keywords to specific pages on your site).
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <b>
+                      Question 2: What is link building, and how does it affect
+                      SEO?
+                    </b>
+                    <br />
+                    <br />
+                    Answer: Link building is the process of acquiring hyperlinks
+                    from other websites to your own. A hyperlink (usually just
+                    called a link) is a way for users to navigate between pages
+                    on the internet.
+                    <br />
+                    <br />
+                    Link building is crucial for SEO because, when it comes to
+                    ranking web pages, search engines not only look at the
+                    content of a page but also consider the number of links
+                    pointing to that page from external websites and the quality
+                    of those external websites. Essentially, the more
+                    high-quality websites that link to your website, the more
+                    likely you are to rank well in search results.
+                    <br />
+                    <br />
+                    But, it's important to note that not all links are valued
+                    the same. Links from relevant and reputable websites tend to
+                    carry more weight. This is where a sound link-building
+                    strategy comes into play. The strategy might involve content
+                    creation, public relations, and outreach efforts aimed at
+                    getting other websites to link to yours.
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <b>Question 3: What is the role of content in SEO?</b>
+                    <br />
+                    <br />
+                    Answer: Content plays a pivotal role in SEO. Search engines
+                    aim to provide users with the most relevant and high-quality
+                    content in response to their queries. Therefore, creating
+                    engaging, valuable content that answers your audience's
+                    questions is key to SEO success.
+                    <br />
+                    <br />
+                    When creating content for SEO, it's essential to:
+                    <ul>
+                      <li>
+                        Ensure it is unique and stands out from similar content
+                        on the web.
+                      </li>
+                      <li>
+                        Make it relevant and useful to your audience by
+                        addressing their needs and questions.
+                      </li>
+                      <li>
+                        Incorporate the right keywords naturally and
+                        contextually.
+                      </li>
+                      <li>
+                        Structure it properly using headers, subheaders, and
+                        meta tags.
+                      </li>
+                      Also, consider that content isn't just about text. It
+                      includes images, videos, infographics, charts, etc.
+                      Diversifying your content types can engage users more
+                      effectively and contribute positively to your SEO efforts.
+                    </ul>
+                    <br />
+                    <br />
+                    Also, consider that content isn't just about text. It
+                    includes images, videos, infographics, charts, etc.
+                    Diversifying your content types can engage users more
+                    effectively and contribute positively to your SEO efforts.
+                    <br />
+                    <br />
+                    Remember, the ultimate goal is to satisfy your audience's
+                    informational needs, keep them on your site longer, and
+                    ideally convert them into customers or subscribers. That's
+                    where the dual nature of SEO comes in: optimizing for both
+                    search engines and your human audience.
+                  </div>
+                </li>
+              </ol>
+            </div>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
+        guide: {
+          completed: false,
+          impact: 100,
+          action: `guide`,
+          icon: `🤝`,
+          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
+            `SEO: Search Engine Optimization`
+          )}?`,
+          response: (
+            <div>
+              here is an expert-level study guide and roadmap to transition from
+              a beginner to an expert in SEO:
+              <ol>
+                <li>
+                  <b>Understanding SEO Basics:</b>
+                  <p>
+                    Start with a solid foundation in SEO basics. You need to
+                    understand what SEO is, why it's important, and the
+                    difference between organic and paid search results.
+                    Familiarize yourself with common SEO terminology and the
+                    principles of how search engines work. Resources: Moz's
+                    "Beginner's Guide to SEO," Google's "Search Engine
+                    Optimization (SEO) Starter Guide."
+                  </p>
+                </li>
+                <li>
+                  <b>Keyword Research:</b>
+                  <p>
+                    The next step is understanding keywords: what they are, why
+                    they're important, and how to find the ones that are most
+                    relevant to your business. You'll learn about long-tail
+                    keywords, keyword difficulty, search intent, and keyword
+                    optimization. Resources: SEMrush's "Keyword Research Guide",
+                    Moz's "Keyword Explorer".
+                  </p>
+                </li>
+                <li>
+                  <b>On-Page SEO:</b>
+                  <p>
+                    This involves optimizing individual webpages for specific
+                    keywords to improve their search engine rankings. Key
+                    aspects include title tags, meta descriptions, headers, URL
+                    structure, and keyword usage within the content. Also, learn
+                    about image optimization and the importance of good user
+                    experience (UX). Resources: HubSpot's "On-Page SEO Guide",
+                    Google's "On-Page SEO Guide".
+                  </p>
+                </li>
+
+                <li>
+                  <b>Technical SEO:</b>
+                  <p>
+                    Here, you'll delve into more advanced topics like website
+                    architecture, mobile optimization, site speed, structured
+                    data, XML sitemaps, and canonical URLs. You'll also learn
+                    about robots.txt files, HTTPS, and other aspects that affect
+                    how search engines crawl and index your website. Resources:
+                    Google's "Technical SEO Guide", Moz's "Technical SEO Guide".
+                  </p>
+                </li>
+                <li>
+                  <b>Off-Page SEO:</b>
+                  <p>
+                    Understand the importance of off-page elements in your SEO
+                    strategy, primarily focusing on the practice of link
+                    building. Learn about the value of backlinks, how to earn
+                    them, and the importance of link quality over quantity.
+                    Resources: Ahrefs' "Guide to Link Building", Moz's
+                    "Beginner's Guide to Link Building".
+                  </p>
+                </li>
+                <li>
+                  <b>Local SEO:</b>
+                  <p>
+                    If you're a local business or have a physical location,
+                    local SEO is crucial. You'll learn about Google My Business,
+                    local citations, online reviews, local keyword optimization,
+                    and other factors that help you rank in local search
+                    results. Resources: Moz's "Local SEO Guide", Search Engine
+                    Journal's "Local SEO Guide".
+                  </p>
+                </li>
+                <li>
+                  <b>Content Marketing and SEO:</b>
+                  <p>
+                    Understanding the symbiotic relationship between content
+                    marketing and SEO is crucial. Learn how to create content
+                    that not only serves your users but also attracts backlinks
+                    and improves your search visibility. Resources: HubSpot's
+                    "SEO Content Writing Guide", Moz's "Guide to Content
+                    Marketing and SEO".
+                  </p>
+                </li>
+                <li>
+                  <b>SEO Analytics and Reporting:</b>
+                  <p>
+                    Learn how to measure your SEO success. Familiarize yourself
+                    with important metrics like organic traffic, bounce rate,
+                    conversion rate, and keyword rankings. Become proficient in
+                    using Google Analytics, Google Search Console, and other SEO
+                    analytics tools. Resources: Google's "Analytics Academy",
+                    Moz's "Guide to SEO Metrics".
+                  </p>
+                </li>
+                <li>
+                  <b>Algorithm Updates and SEO Best Practices:</b>
+                  <p>
+                    Stay up-to-date with the latest search algorithm updates and
+                    understand how they can impact your SEO efforts. Following
+                    SEO best practices will help ensure your website remains
+                    compliant with search engine guidelines. Resources: Google's
+                    "Search Central Blog", Search Engine Journal's "SEO Guide".
+                  </p>
+                </li>
+                <li>
+                  <b>Advanced SEO Techniques and Strategies:</b>
+                  <p>
+                    As you move towards the expert level, dive deeper into
+                    advanced SEO topics such as Schema markup, SEO for
+                    JavaScript-powered websites, Progressive Web Apps (PWA),
+                    voice search optimization, and AI in SEO.
+                    <br />
+                    <br />
+                    Resources: Google's "Advanced SEO Guides", Moz's
+                  </p>
+                </li>
+              </ol>
+            </div>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
+        demonstrate: {
+          completed: false,
+          impact: 100,
+          action: `demonstrate`,
+          icon: `🧿`,
+          request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
+            `SEO: Search Engine Optimization`
+          )} in html`,
+          response: `
+Let's consider an example of a hypothetical blog post about organic gardening. Here's a glimpse of how the HTML might look with SEO optimizations:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Top 10 Organic Gardening Tips for Beginners | Your Gardening Blog</title>
+  <meta name="description" content="Learn the top 10 organic gardening tips for beginners. Start your organic garden today and grow your own healthy, fresh food.">
+  <meta name="keywords" content="Organic Gardening, Gardening Tips, Beginner Gardening, Organic Vegetables">
+  <link rel="canonical" href="https://www.yourgardeningblog.com/organic-gardening-tips" />
+</head>
+<body>
+  <header>
+    <h1>Top 10 Organic Gardening Tips for Beginners</h1>
+  </header>
+  <article>
+    <h2>Getting Started with Organic Gardening</h2>
+    <p>Organic gardening is a rewarding hobby...</p>
+    <!-- Content continues... -->
+    <h2>Our Top 10 Organic Gardening Tips</h2>
+    <p>Here are our top 10 tips for new organic gardeners...</p>
+    <!-- Content continues... -->
+  </article>
+  <footer>
+    <!-- Footer content -->
+  </footer>
+</body>
+</html>
+- The <title> tag includes the main keyword (Organic Gardening Tips) and secondary keyword (Beginners), and it aligns with the content of the article.
+
+- The description meta tag provides a concise, engaging summary of the page content, which can help in click-through rates from search results.
+
+- The keywords meta tag includes relevant keywords about the page. However, note that Google officially announced in 2009 that they don’t use the keywords meta tag in web ranking, but some other search engines might still use it.
+
+- The canonical link helps prevent duplicate content issues by specifying the "canonical URL", the "preferred" version of a web page.
+
+- The <h1> and <h2> tags are used appropriately for headings and subheadings, and they include relevant keywords.
+
+- The <p> (paragraph) tags contain the main content of the page, which should be well-written and naturally include the page's target keywords.
+
+Remember, this is just a glimpse of what SEO in code might look like. Effective SEO involves much more than just optimizing your HTML. It also includes things like website performance, mobile optimization, structured data, backlinks, user engagement, and more.
+
+`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        define: {
+          completed: false,
+          impact: 100,
+          action: `define`, // may not need
+          icon: `👾`, // may not need
+          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
+            `SEO: Search Engine Optimization`
+          )} in exactly one sentence?`,
+          response: `\n\nSearch Engine Optimization (SEO) is the practice of enhancing a website's visibility and ranking in search engine results through various strategies, including keyword optimization, quality content creation, and link building.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+
+        quiz: {
+          completed: false,
+          impact: 100,
+          action: `quiz`,
+          icon: `🧪`,
+          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
+            `SEO: Search Engine Optimization`
+          )}?`,
+          response: (
+            <div>
+              <ol>
+                <li>
+                  <b>
+                    What is the difference between organic and paid search
+                    results?
+                  </b>
+                </li>
+                <li>
+                  <b>
+                    What is a 'long-tail keyword' and why is it important in
+                    SEO?
+                  </b>
+                </li>
+                <li>
+                  <b>
+                    Explain the term 'link building' in the context of SEO and
+                    why it matters.
+                  </b>
+                </li>
+                <li>
+                  <b>What is 'local SEO' and who needs it?</b>
+                </li>
+                <li>
+                  <b>
+                    Why is it important to regularly monitor and adjust your SEO
+                    strategy?
+                  </b>
+                </li>
+              </ol>
+            </div>
+          ),
           spanish: ``,
           tooltip: ``,
         },

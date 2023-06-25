@@ -4,12 +4,12 @@ import compSciLib from "../../media/images/compSciLib.jpeg";
 import metaphysicalMuse from "../../media/images/metaphysicalMuse.jpeg";
 
 export const Engineer = {
-  "Crash Course": {
+  "Crash Course Version 3 (Work In Progress)": {
     "Introduction To RO.B.E": {
       documentID: ``,
-      hasCode: false,
+      hasCode: true,
       filler: ``,
-      new: false,
+      new: true,
       highValue: false,
       underConstruction: false,
       completed: false,
@@ -414,96 +414,52 @@ export const Engineer = {
           icon: `🧿`,
           request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
             `Learn Coding`
-          )}?`,
-          response: (
-            <div>
-              Intersectionality in computer science refers to the collaboration
-              between computer science and other disciplines, where the
-              principles and techniques of computer science are applied to solve
-              problems and generate insights in various fields. Here are some
-              examples of the intersectionality of computer science:
-              <ol>
-                <li>
-                  Bioinformatics:
-                  <p>
-                    Bioinformatics combines computer science, biology, and
-                    statistics to analyze and interpret complex biological data,
-                    such as genomic sequences or protein structures. This
-                    interdisciplinary approach has led to numerous breakthroughs
-                    in understanding the genetic basis of diseases and
-                    developing targeted therapies.
-                  </p>
-                </li>
-                <li>
-                  {" "}
-                  Natural Language Processing (NLP): <p></p>
-                </li>
-                <li>
-                  {" "}
-                  <p>
-                    NLP is a subfield of artificial intelligence (AI) that
-                    focuses on the interaction between computers and human
-                    languages. NLP techniques are applied in linguistics,
-                    psychology, and cognitive science to study language
-                    structure, processing, and acquisition. Applications of NLP
-                    include machine translation, sentiment analysis, and voice
-                    recognition systems.
-                  </p>
-                </li>
+          )} in javascript?`,
+          response: `
 
-                <li>
-                  {" "}
-                  Computational Social Science:{" "}
-                  <p>
-                    This field involves the application of computer science
-                    techniques, such as data mining, network analysis, and
-                    machine learning, to study social phenomena. Researchers in
-                    this area collaborate with sociologists, political
-                    scientists, and economists to analyze large-scale social
-                    data and generate insights into human behavior, social
-                    networks, and decision-making processes.
-                  </p>
-                </li>
-                <li>
-                  {" "}
-                  Digital Humanities:{" "}
-                  <p>
-                    Digital humanities is an interdisciplinary field that uses
-                    computational methods to study humanities subjects, such as
-                    literature, history, and art. Scholars in this field
-                    leverage techniques like text mining, data visualization,
-                    and network analysis to explore patterns and connections
-                    within cultural and historical datasets.
-                  </p>
-                </li>
-                <li>
-                  Robotics:
-                  <p>
-                    Robotics is a multidisciplinary field that brings together
-                    computer science, engineering, and mathematics to design,
-                    build, and control robots. These robots can be used in
-                    various applications, including manufacturing, healthcare,
-                    space exploration, and disaster relief.
-                  </p>
-                </li>
-                <li>
-                  Environmental Computer Science:
-                  <p>
-                    Environmental Computer Science plays a crucial role in
-                    environmental modeling, where complex systems like climate,
-                    ecosystems, and hydrological cycles are studied and
-                    simulated. Researchers in this area work closely with
-                    environmental scientists, meteorologists, and ecologists to
-                    develop sophisticated models that can predict the impact of
-                    human activities and natural phenomena on the environment.
-                  </p>
-                </li>
-              </ol>
-              These examples demonstrate how computer science intersects with
-              various disciplines, contributing to problem-solving and knowledge
-              discovery across a wide range of fields.
-            </div>
-          ),
+// This is ultimately all you need to understand in order to build an app with OpenAI or ChatGPT in Javascript. 
+// You might be surprised how simple it seems. That's a sign of great engineering. 
+// If this makes no sense to you, try your best to make some sense out of it. I believe in you :)
+
+const functions = require("firebase-functions");
+const express = require("express");
+const { Configuration, OpenAIApi } = require("openai");
+
+
+
+const configuration = new Configuration({ apiKey: OPENAI_API_KEY });
+
+const openai = new OpenAIApi(configuration);
+
+const app = express();
+
+
+app.post("/task", async (request, response) => {
+
+  try {
+
+    const task = request.body.task;
+
+    const answer = await openai.createChatCompletion({
+      model: "gpt-4",
+      messages: [
+        { role: "system", content: "You are a helpful assistant teaching beginners as Steve Jobs."},
+        { role: "user", content: task }
+      ],
+    });
+
+    response.status(200).send({
+      bot: answer.data.choices[0].message,
+    });
+
+  } catch (error) {
+    console.log("error", error);
+  }
+
+});
+
+exports.app = functions.https.onRequest(app);
+          `,
           spanish: ``,
           tooltip: ``,
         },
@@ -665,15 +621,1214 @@ export const Engineer = {
         },
       },
     },
-    "Lesson 1": {
-      documentID: `Lesson 1 - Crash Course`,
-      filler: ``,
+
+    "Lesson 1 Coding Fundamentals": {
+      documentID: ``,
       hasCode: true,
-      new: true,
+      filler: ``,
       highValue: false,
       underConstruction: false,
       completed: false,
       needsImprovement: false,
+      new: true,
+      tooltip: ``,
+      sourceType: `video`, // may not need
+      button: `Lesson 1 Coding Fundamentals`, // may not need - `name`
+      header: `Lesson 1 Coding Fundamentals`,
+      fileSource:
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1684131257/IMG_0104_n7djon.mov", // may not need
+
+      prompts: {
+        patreon: {
+          completed: false,
+          impact: 1000,
+          action: `generate`,
+          icon: `►`, //`✍️`
+          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
+            `Lesson 1 Coding Fundamentals`
+          )}?`,
+          response: `null`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        inspire: {
+          completed: false,
+          impact: 100,
+          action: `inspire`,
+          icon: `⚡`,
+          request: `ms. roxana, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
+            `Lesson 1 Coding Fundamentals`
+          )}?`,
+          response: (
+            <div>
+              While there are many inspiring Latina women who've made
+              significant contributions to the tech industry, not all of their
+              personal backgrounds and family details, such as their parental
+              status, are publicly available due to privacy concerns. However,
+              one notable figure who comes to mind is Laura I. Gomez, who is a
+              mother and has been vocal about her experiences raising a child
+              while navigating the tech world.
+              <br />
+              <br />
+              Laura I. Gomez is one of the few Latinas who hold leadership
+              positions in the tech industry. She was one of the early employees
+              at Twitter, where she worked on International Product. She has
+              also worked at other tech giants like Google and YouTube. Later,
+              she founded Atipica, a startup that developed a recruitment
+              software powered by AI and machine learning to help companies
+              diversify their workforce.
+              <br />
+              <br />
+              Gomez has been an advocate for diversity in tech, speaking out
+              about the challenges faced by underrepresented groups in the
+              industry. As a mother, she has also shared her experiences
+              balancing her professional life with her responsibilities as a
+              parent. Her work and advocacy have had a significant impact on the
+              tech industry's dialogue around diversity and inclusion.
+              <br />
+              <br />
+              However, it's important to note that while there are inspiring
+              figures like Laura I. Gomez, there's still a significant
+              underrepresentation of Latinas, especially Latina mothers, in the
+              tech industry. Efforts are ongoing to create more opportunities
+              and support for these individuals to enter and succeed in the tech
+              field.
+            </div>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
+        summarize: {
+          completed: false,
+          impact: 100,
+          action: `summarize`,
+          icon: `📚`,
+          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
+            `Lesson 1 Coding Fundamentals`
+          )}?`,
+          response: (
+            <div>
+              Object-Oriented Programming (OOP) is a programming paradigm that
+              uses "objects" and their interactions to design applications and
+              software. The key principles of OOP are encapsulation,
+              inheritance, polymorphism, and abstraction. Let's break down each
+              of these principles with some real-world examples:
+              <br />
+              <br />
+              Encapsulation: Encapsulation is the bundling of data and methods
+              (functions) that work on the data within one unit, called an
+              "object". This is much like a capsule, which encapsulates several
+              different medicines. For example, consider a "Car" object. A car
+              has properties (data) like color, model, and brand, and it has
+              behaviors (methods) like drive, park, and brake. All these
+              properties and behaviors are encapsulated within the "Car" object.
+              <br />
+              <br />
+              Inheritance: Inheritance allows a class to inherit the properties
+              and methods of another class. This is much like how children
+              inherit traits from their parents. For example, if we have a
+              general class called "Bird", it might have properties like wings,
+              beak, and methods like fly or eat. Now, if we have a specific bird
+              like an "Eagle", it inherits all the properties and methods of the
+              "Bird" class but can also have specific properties or methods of
+              its own, like a unique method hunt.
+              <br />
+              <br />
+              Polymorphism: Polymorphism allows one interface to be used for a
+              general class of actions. The specific action is determined by the
+              exact nature of the situation. Consider a general class "Shape"
+              with a method "draw". Now, you have different shapes like Circle,
+              Square, Triangle and so on. For each of these shapes, the "draw"
+              method will have a different implementation. But the user doesn't
+              need to know which specific shape they are dealing with, they can
+              just call the "draw" method. This is polymorphism.
+              <br />
+              <br />
+              Abstraction: Abstraction means representing the essential features
+              without including the background details. It's much like how a car
+              driver doesn't need to know the inner mechanics of the car engine
+              in order to drive the car. In OOP, a higher-level interface is
+              provided to hide the complex lower-level details. For example, a
+              "Computer" class might have methods like boot, shutDown, openApp.
+              The implementation details of these methods are hidden from the
+              user.
+              <br />
+              <br />
+              By using these principles, OOP allows for code that is easier to
+              understand, more flexible, and easier to maintain.
+            </div>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
+        ask: {
+          completed: false,
+          impact: 100,
+          action: `ask`,
+          icon: `🔮`,
+          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
+            `Lesson 1 Coding Fundamentals`
+          )} with one sentence answers?`,
+          response: (
+            <div>
+              Question 1: What is an Object in OOP?
+              <br />
+              <br />
+              A: An object is an instance of a class. It's a fundamental
+              component of OOP that encapsulates data and functions that
+              manipulate the data. Objects are the basic run-time entities in an
+              object-oriented system. They may represent a person, a place, a
+              bank account, a table of data or any item that the program has to
+              handle.
+              <br />
+              <br />
+              <br />
+              <br />
+              Question 2: What is the difference between a class and an object?
+              <br />
+              <br />
+              Answer: To explore the intersectionality of computer science and
+              choose a specific field to work in or research, individuals should
+              consider their interests, strengths, and goals. They can start by
+              learning about various interdisciplinary fields, such as
+              bioinformatics, computational social science, or digital
+              humanities, and identify which areas align with their passions.
+              Participating in relevant courses, attending conferences, or
+              joining online communities can also help them gain exposure to
+              these fields and decide which direction to pursue. Furthermore,
+              seeking guidance from mentors or professionals in the desired
+              field can provide valuable insights and support during the
+              decision-making process.
+              <br />
+              <br />
+              <br />
+              <br />
+              Question 3: What is inheritance and why is it useful in OOP?
+              <br />
+              <br />
+              Answer: To excel in the intersectionality of computer science,
+              individuals should develop a strong foundation in core computer
+              science concepts, such as algorithms, data structures, and
+              programming languages. Additionally, they should gain expertise in
+              specific computational techniques relevant to their chosen field,
+              such as machine learning, network analysis, or data visualization.
+              Equally important is acquiring knowledge in the domain they plan
+              to work in, such as biology for bioinformatics or social science
+              for computational social science. Finally, cultivating strong
+              communication, collaboration, and critical thinking skills will
+              enable them to effectively engage with experts from other
+              disciplines, fostering successful interdisciplinary
+              collaborations.
+            </div>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
+        guide: {
+          completed: false,
+          impact: 100,
+          action: `guide`,
+          icon: `🤝`,
+          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
+            `Lesson 1 Coding Fundamentals`
+          )}?`,
+          response: (
+            <div>
+              A comprehensive study guide for understanding the
+              intersectionality of computer science can be divided into several
+              stages, taking you from beginner to expert level: <br />
+              <br />
+              <br />
+              <br />
+              Stage 1: Understanding the Basics <br />
+              <br />
+              <ol>
+                <li>
+                  Introduction to OOP: Understand the basic concept of OOP and
+                  how it differs from procedural programming. Learn about the
+                  main advantages of OOP, such as code reusability and
+                  modularity.
+                </li>
+                <li>
+                  Basics of Classes and Objects: Learn what classes and objects
+                  are, and how they relate to each other. Understand the idea of
+                  a class as a blueprint for creating objects.
+                </li>
+                <li>
+                  Understanding Methods: Learn about methods (functions defined
+                  inside a class) and how they provide behavior for objects.
+                </li>
+                <li>
+                  Properties and Encapsulation: Understand the concept of
+                  properties (data members of a class) and encapsulation
+                  (bundling of data and methods within a class and data hiding).
+                </li>
+              </ol>
+              <br />
+              <br />
+              Stage 2: Intermediate Concepts
+              <br />
+              <br />
+              <ol>
+                <li>
+                  Constructors and Destructors: Learn about these special
+                  methods which are called when an object is created and
+                  destroyed, respectively.
+                </li>
+                <li>
+                  Inheritance: Understand how one class can inherit members from
+                  another class, leading to a parent-child relationship between
+                  classes.
+                </li>
+                <li>
+                  Polymorphism: Learn about the ability of an object to take
+                  many forms. The two types of polymorphism are compile-time
+                  (function and operator overloading) and runtime (virtual
+                  functions).
+                </li>
+                <li>
+                  Abstraction: Understand how to hide certain details of an
+                  object and only show the essential features.
+                </li>
+              </ol>{" "}
+              <br />
+              <br />
+              Stage 3: Advanced Concepts <br />
+              <br />
+              <ol>
+                <li>
+                  Interfaces and Multiple Inheritance: Learn how interfaces can
+                  be used to achieve full abstraction and multiple inheritance
+                  in languages that don't support it directly (like Java).
+                </li>
+                <li>
+                  Exception Handling: Understand how to handle runtime errors
+                  using try, catch, and finally blocks.
+                </li>
+                <li>
+                  Collections and Generics: Learn about collections (like arrays
+                  and lists) and generics (classes or objects that can operate
+                  on multiple data types).
+                </li>
+              </ol>{" "}
+              <br />
+              <br />
+              Stage 4: Expert Level
+              <br />
+              <br />
+              <ol>
+                <li>
+                  Design Patterns: Study common object-oriented design patterns,
+                  like Factory, Singleton, Prototype, Decorator, Observer,
+                  Publish-Subscriber and Strategy.
+                </li>
+                <li>
+                  SOLID Principles: Learn about the five principles of
+                  object-oriented design and architecture (Single
+                  responsibility, Open-closed, Liskov substitution, Interface
+                  segregation, and Dependency inversion).
+                </li>
+                <li>
+                  Unit Testing and Test-Driven Development: Understand how to
+                  write test cases for your classes and methods, and learn about
+                  the practice of writing tests before you write code.
+                </li>
+                <li>
+                  Refactoring: Learn techniques for restructuring an existing
+                  body of code, altering its internal structure without changing
+                  its external behavior.{" "}
+                </li>
+              </ol>{" "}
+              <br />
+              <br />
+              Each stage includes studying the theory, but you should also
+              practice by writing code. Implement small projects after each
+              stage to solidify the concepts you've learned. Try to read and
+              understand good quality, idiomatic code in the language you're
+              learning to see how the principles are applied.
+              <br /> <br />
+              Remember, this is a lot of material, and it takes time to become
+              proficient in OOP. Take one step at a time, and eventually, you'll
+              reach an expert level. Many employed software engineers are not so
+              don't sweat it too much! Happy learning!
+            </div>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
+        demonstrate: {
+          completed: false,
+          impact: 100,
+          action: `demonstrate`,
+          icon: `🧿`,
+          request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
+            `Lesson 1 Coding Fundamentals`
+          )} in python?`,
+          response: `
+'''
+
+In Python, we can use classes and objects to model real-world entities. Let's model a simple Rihanna class. 
+For this example, we'll assume that Rihanna has attributes like name, profession, and nationality, 
+and methods such as sing and perform.
+
+In the Rihanna class above, __init__ is a special method that's called 
+when an object is created from the class. This is also known as a constructor. 
+The self keyword represents the instance state (or object) of the class and is used to 
+access the class attributes.
+
+'''
+
+
+class Rihanna:
+    def __init__(self, name, profession, nationality):
+        self.name = name
+        self.profession = profession
+        self.nationality = nationality
+
+    def sing(self, song):
+        return f"{self.name} is singing {song}."
+
+    def perform(self, performance):
+        return f"{self.name} is performing {performance}."
+
+
+rihanna = Rihanna("Rihanna", "Singer", "Barbadian")
+print(rihanna.sing("Diamonds"))
+print(rihanna.perform("at the Grammy Awards"))
+          `,
+          spanish: ``,
+          tooltip: ``,
+        },
+        define: {
+          completed: false,
+          impact: 100,
+          action: `define`, // may not need
+          icon: `👾`, // may not need
+          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
+            `Lesson 1 Coding Fundamentals`
+          )} in exactly one sentence?`,
+          response: `Object-Oriented Programming is a programming paradigm that organizes data into objects and behavior into classes, promoting code reuse through inheritance, encapsulation of data and functions together, and enabling polymorphism to allow a single interface for a general class of actions.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+
+        quiz: {
+          completed: false,
+          impact: 100,
+          action: `quiz`,
+          icon: `🧪`,
+          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
+            `Lesson 1 Coding Fundamentals`
+          )}?`,
+          response: (
+            <div>
+              Question 1: Design Patterns - Explain a situation where you would
+              use the Singleton design pattern versus the Factory design pattern
+              in OOP. What are the advantages and potential pitfalls of each?
+              <br />
+              <br />
+              Question 2: Inheritance vs. Composition - In the context of OOP,
+              discuss the advantages and disadvantages of using inheritance
+              versus composition. Can you provide a practical example where
+              composition would be a better choice than inheritance?
+              <br />
+              <br />
+              Question 3: Polymorphism: Imagine you're designing a zoo
+              simulation with many types of animals. How would you use the
+              principle of polymorphism to design your animal classes and their
+              behaviors? Explain your reasoning.
+              <br />
+              <br />
+              Question 4: Encapsulation - Can you discuss a scenario where
+              proper use of encapsulation improves the security and robustness
+              of a software system? How does it help in maintaining the system?
+              <br />
+              <br />
+              Question 5: SOLID Principles - Explain how the SOLID principles
+              guide design in Object-Oriented Programming. Can you provide an
+              example of a design problem that violates one or more of these
+              principles and propose a solution to fix it?
+              <br />
+              <br />
+            </div>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
+        shop: {
+          completed: false,
+          impact: 100,
+          action: `shop`,
+          icon: `🛍️`,
+          request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
+          response: (
+            <div>
+              This shopping slot is not being utilized yet. Please contact me in
+              Patreon to qualify. In the meantime, lets talk about the
+              socioeconomic state of Latinos in tech.
+              <br />
+              <br />
+              <p>
+                The underrepresentation of Latinos as founders of major tech
+                companies is a multifaceted issue that can be attributed to
+                various factors, including socioeconomic, educational, and
+                cultural barriers, as well as systemic biases and
+                discrimination. Here are some reasons that contribute to this
+                underrepresentation:
+              </p>
+              <br />
+              <ol>
+                <li>
+                  Educational barriers: Access to quality education is essential
+                  for success in the technology industry. However, Latinos may
+                  face challenges in accessing high-quality education due to
+                  factors such as socioeconomic status, underfunded schools, or
+                  living in areas with fewer educational resources. These
+                  challenges can limit their exposure to computer science and
+                  other STEM subjects, reducing the likelihood of pursuing
+                  careers in technology. <br />
+                </li>
+                <li>
+                  Socioeconomic factors: Socioeconomic status plays a
+                  significant role in shaping career opportunities and
+                  aspirations. Latinos, as a group, have historically faced
+                  economic disparities, which can impact their access to
+                  resources, networking opportunities, and the ability to take
+                  risks associated with entrepreneurship. <br />
+                </li>
+
+                <li>
+                  Lack of representation and role models: The technology
+                  industry has long been dominated by individuals from certain
+                  racial and ethnic backgrounds. The lack of Latino
+                  representation in leadership roles and as founders of major
+                  tech companies can make it challenging for aspiring Latino
+                  entrepreneurs to find role models and mentors, which is
+                  crucial for professional development and success. <br />
+                </li>
+                <li>
+                  Limited access to funding and resources: Starting a tech
+                  company often requires substantial financial investment and
+                  access to resources, such as networking opportunities,
+                  mentorship, and technical support. Latinos may face challenges
+                  in securing funding from investors due to unconscious bias,
+                  discrimination, or lack of connections within the industry.{" "}
+                  <br />
+                </li>
+                <li>
+                  Cultural factors: Cultural factors, such as family
+                  expectations and community norms, can also influence career
+                  choices and aspirations. In some cases, Latinos may face
+                  pressure to prioritize more traditional or stable career paths
+                  over the risks associated with entrepreneurship or founding a
+                  tech company. <br />
+                </li>
+                <li>
+                  Systemic biases and discrimination: The technology industry,
+                  like many other sectors, is not immune to systemic biases and
+                  discrimination that can create barriers for underrepresented
+                  groups, including Latinos. This can manifest in various forms,
+                  such as biased hiring practices, limited access to mentorship
+                  and resources, or unequal treatment within the workplace.
+                </li>
+              </ol>
+              <br />
+              <br />
+              Addressing these challenges and promoting diversity in the
+              technology industry requires concerted efforts from various
+              stakeholders, including educational institutions, policymakers,
+              investors, and tech companies themselves. By fostering inclusive
+              environments, providing equal opportunities, and breaking down
+              barriers for underrepresented groups, the tech industry can
+              benefit from the wealth of talent, perspectives, and ideas that
+              diverse founders bring to the table.
+            </div>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
+      },
+    },
+    "Lesson 2 Frontend Programming": {
+      documentID: ``,
+      hasCode: true,
+      filler: ``,
+      highValue: false,
+      underConstruction: false,
+      completed: false,
+      needsImprovement: false,
+      new: true,
+      tooltip: ``,
+      sourceType: `video`, // may not need
+      button: `Lesson 2 Frontend Programming`, // may not need - `name`
+      header: `Lesson 2 Frontend Programming`,
+      fileSource:
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1684131257/IMG_0104_n7djon.mov", // may not need
+
+      prompts: {
+        patreon: {
+          completed: false,
+          impact: 1000,
+          action: `generate`,
+          icon: `►`, //`✍️`
+          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
+            `Lesson 2 Frontend Event-Driven Programming`
+          )}?`,
+          response: `null`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        inspire: {
+          completed: false,
+          impact: 100,
+          action: `inspire`,
+          icon: `⚡`,
+          request: `ms. roxana, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
+            `Lesson 1 Coding Fundamentals`
+          )}?`,
+          response: (
+            <div>
+              Let's talk about the story of Facebook and their decision to use
+              and develop React.
+              <br />
+              <br />
+              Back in the early 2010s, Facebook was facing some major challenges
+              with their codebase. Their user interface had become increasingly
+              complex due to the sheer amount of features they were adding, and
+              their existing coding structure was becoming difficult to manage.
+              The Facebook Ads org, in particular, was struggling with a
+              challenging bug due to a lack of data consistency across different
+              parts of their app.
+              <br />
+              <br />
+              This is when Jordan Walke, a software engineer at Facebook,
+              started experimenting with a new way of building user interfaces
+              based on components. The basic idea was to encapsulate parts of
+              the interface as components that manage their own state and then
+              combine these components to create complex UIs.
+              <br />
+              <br />
+              React.js was born from this experimentation and was first deployed
+              in the Facebook's newsfeed in 2011. It proved to be a massive
+              success, making code easier to understand, debug, and scale.
+              Facebook then deployed React in Instagram in 2012.
+              <br />
+              <br />
+              In 2013, Facebook decided to open source React. The reception was
+              initially mixed. Some people were excited about the potential of
+              this new library, while others were skeptical about its unusual
+              approach, particularly its use of a virtual DOM and JSX.
+              <br />
+              <br />
+              However, the React team stayed focused and continued to improve
+              and promote React. Facebook hosted the first ever React conference
+              in 2015, inviting developers to learn about the library and share
+              their experiences. The team also focused on making React more
+              accessible and easier to learn, creating comprehensive
+              documentation and even an interactive tutorial.
+              <br />
+              <br />
+              Fast forward to today, and React has become one of the most
+              popular JavaScript libraries, used by companies big and small all
+              over the world to build their user interfaces.
+              <br />
+              <br />
+              The story of React is a true Silicon Valley story. It's about
+              innovation, experimentation, and not being afraid to break from
+              the norm. It's about facing challenges head on, and coming up with
+              creative solutions. It's about the power of open source, and the
+              incredible things that can be achieved when a community of
+              developers come together.
+              <br />
+              <br />
+              Hopefully, this story inspires you to start your own journey into
+              learning React. Just remember, every expert was once a beginner.
+              You're only one line of code away from starting your next big
+              adventure.
+            </div>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
+        summarize: {
+          completed: false,
+          impact: 100,
+          action: `summarize`,
+          icon: `📚`,
+          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
+            `Lesson 2 Frontend Event-Driven Programming`
+          )}?`,
+          response: (
+            <div>
+              Let's dive into the core foundations of React and event-driven
+              programming.
+              <br />
+              <br />
+              React is a popular JavaScript library, maintained by Facebook, for
+              constructing user interfaces (UIs), particularly for single-page
+              applications. It allows developers to build reusable UI components
+              and makes the process of building complex user interfaces more
+              manageable.
+              <br />
+              <br />
+              The foundational concept in React is the idea of components. These
+              are self-contained elements of the UI, which can be as small as a
+              button or as large as an entire page. A React application is
+              typically built from many of these components, each responsible
+              for rendering a small, reusable piece of HTML. Components are
+              designed to be reusable and can manage their own state, which is a
+              key feature that helps to minimize the complexity of code and
+              increase readability and maintainability.
+              <br />
+              <br />
+              In terms of architecture, React follows a unidirectional data flow
+              model. This means that data in a React application flows downward
+              from parent components to child components through properties
+              known as "props". State, which is a component's internal data, can
+              be passed down from parent to child via props, but it can't be
+              passed up from a child to a parent. This predictable data flow
+              greatly simplifies how a program works and makes it easier to
+              debug and understand.
+              <br />
+              <br />
+              React also employs a virtual DOM (Document Object Model) to
+              improve performance. When changes are made to the state of a
+              component, React first updates the virtual DOM, then it diffs the
+              virtual DOM against the actual DOM, and finally it updates the
+              real DOM for only the objects that changed. This selective
+              rendering improves efficiency and speed of complex or large-scale
+              applications.
+              <br />
+              <br />
+              React operates within the broader context of event-driven
+              programming, which is a paradigm that revolves around actions
+              performed by the user or the system (like clicks, key presses, or
+              data fetches). In an event-driven application, code is structured
+              around what should happen when certain events occur.
+              <br />
+              <br />
+              In a React application, user interactions or system events (like
+              successful API calls) will often result in state changes, causing
+              components to re-render. For example, clicking a "like" button
+              might trigger an event handler function that updates the state of
+              a "like count" component.
+              <br />
+              <br />
+              In conclusion, React and event-driven programming are powerful
+              tools that work in unison to enable the creation of dynamic,
+              complex, and efficient web applications. They allow for the
+              encapsulation of code into reusable components, the efficient
+              handling and rendering of state changes, and the structuring of
+              code around user and system events. Their adoption has empowered
+              developers to create more interactive, performant, and
+              user-friendly web applications.
+            </div>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
+        ask: {
+          completed: false,
+          impact: 100,
+          action: `ask`,
+          icon: `🔮`,
+          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
+            `Lesson 2 Frontend Event-Driven Programming`
+          )} with one sentence answers?`,
+          response: (
+            <div>
+              Here are three frequently asked questions by beginners about React
+              and event-driven programming, along with expert answers:
+              <br />
+              <br />
+              Question 1: What is JSX and why do we use it in React?
+              <br />
+              <br />
+              Answer: JSX, or JavaScript XML, is a syntax extension for
+              JavaScript. It allows you to write HTML-like code in your
+              JavaScript, which makes your code more readable and writeable. In
+              the context of React, JSX is used to define the structure and
+              appearance of React components. React then takes this JSX and
+              converts it into regular JavaScript objects behind the scenes
+              using a process called 'transpilation'. While you can write React
+              code without JSX, using JSX is more intuitive, especially if you
+              come from an HTML background.
+              <br />
+              <br />
+              <br />
+              <br />
+              Question 2: How does state differ from props in React?
+              <br />
+              <br />
+              Answer: Both 'state' and 'props' are plain JavaScript objects.
+              While both of them hold information that influences the output of
+              render, they are different in their functionality with respect to
+              component. Props (short for 'properties') are immutable and are
+              used to pass data from parent components to child components. It's
+              similar to function arguments. State, on the other hand, is
+              managed within the component and can be changed within the
+              component (mutable). It's similar to variables declared within a
+              function, and is used when a component needs to keep track of
+              information between renderings.
+              <br />
+              <br />
+              <br />
+              <br />
+              Question 3: What is event-driven programming and how is it used in
+              React?
+              <br />
+              <br />
+              Answer: Event-driven programming is a paradigm that involves
+              designing your program to respond to user interactions or system
+              events. These could be anything from button clicks to data
+              arriving from an API request. In the context of React,
+              event-driven programming often involves creating functions that
+              respond to user interactions, like clicks or key presses, and
+              updating the state of your components in response to these events.
+              This could involve showing or hiding a component, updating a value
+              in your state, making an API call, and so forth. Events are used
+              to create an interactive, responsive experience for the user.
+            </div>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
+        guide: {
+          completed: false,
+          impact: 100,
+          action: `guide`,
+          icon: `🤝`,
+          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
+            `Lesson 1 Coding Fundamentals`
+          )}?`,
+          response: (
+            <div>
+              Here's a detailed roadmap to go from a beginner learner to a
+              professionally employed Frontend Software Engineer focusing on
+              React.
+              <ol>
+                <li>
+                  <b>Basic Frontend Technologies</b>
+                  <ul>
+                    <li>Understand the basics of HTML, CSS, and JavaScript.</li>
+                    <li>Understand the DOM (Document Object Model).</li>
+                    <li>
+                      Familiarize yourself with responsive design and CSS
+                      frameworks like Bootstrap or Tailwind CSS.
+                    </li>
+                    <li>
+                      Learn about web accessibility and why it's important.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <b>Advanced JavaScript</b>
+                  <ul>
+                    <li>
+                      Dive deeper into JavaScript concepts: ES6 features,
+                      async/await, promises, and functional programming
+                      concepts.
+                    </li>
+                    <li>
+                      Learn about fetching data from APIs using JavaScript.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <b>Version Control with Git</b>
+                  <ul>
+                    <li>Understand the basics of Git and GitHub.</li>
+                    <li>
+                      Learn to work with repositories, branches, commits, and
+                      pull requests.
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <b> Introduction to React</b>
+                  <ul>
+                    <li>Understand what React is and why it's useful.</li>
+                    <li>Learn JSX, components, props, and state.</li>
+                    <li>Understand the component lifecycle.</li>
+                    <li>
+                      Familiarize yourself with hooks, especially useState and
+                      useEffect.
+                    </li>
+                    <li>
+                      Build a few small projects to solidify these concepts.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <b>State Management</b>
+                  <ul>
+                    <li>
+                      Understand why state management tools like Redux is
+                      needed.
+                    </li>
+                    <li>Learn to use either Redux with React.</li>
+                  </ul>
+                </li>
+                <li>
+                  <b>Routing in React</b>
+                  <ul>
+                    <li>
+                      Learn to use React Router for navigating between different
+                      parts of your application.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <b>Working with Forms in React</b>
+                  <ul>
+                    <li>
+                      Learn how to handle form inputs and validation in React.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <b>Styling in React</b>
+                  <ul>
+                    <li>
+                      Understand how to use CSS in JS libraries like
+                      styled-component.
+                    </li>
+                    <li>
+                      Explore different design systems, like Google's Material
+                      UI or Microsoft's Fluent UI.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <b>Testing</b>
+                  <ul>
+                    <li>
+                      Learn about testing libraries like Jest and React Testing
+                      Library.
+                    </li>
+                    <li>
+                      Understand different types of testing: unit testing,
+                      integration testing, and end-to-end testing.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <b>Real-world Project</b>
+                  <ul>
+                    <li>
+                      Build a larger project that combines everything you've
+                      learned. This could be a web application with multiple
+                      pages, API calls, and advanced features.
+                    </li>
+                    <li>
+                      This will solidify your knowledge and give you something
+                      to show to potential employers.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <b>Advanced Topics</b>
+                  <ul>
+                    <li>
+                      Study different toolchains like create-react-app, vercel
+                      or Gatsby
+                    </li>
+                    <li>Learn about server-side rendering with Next.js.</li>
+                    <li>Understand static site generation.</li>
+                    <li>
+                      Learn about TypeScript and consider using it in your
+                      projects.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <b>Soft Skills</b>
+                  <ul>
+                    <li>
+                      Improve your problem-solving skills: practice algorithms
+                      and data structures.
+                    </li>
+                    <li>
+                      Develop your understanding of system design principles.
+                    </li>
+                    <li>
+                      Improve your problem-solving skills: practice algorithms
+                      and data structures.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <b>Job Search</b>
+                  <ul>
+                    <li>Polish your resume and LinkedIn profile.</li>
+                    <li>
+                      Build a portfolio website to showcase your projects.
+                    </li>
+                    <li>
+                      Start applying for jobs and preparing for interviews.
+                    </li>
+                    <li>Practice coding interviews and get feedback.</li>
+                  </ul>
+                </li>
+              </ol>
+              <br /> <br />
+              This journey might take a few months to over a year, depending on
+              your dedication, prior experience, and the amount of time you can
+              dedicate to learning each day. The key is consistency and
+              persistence. Remember, everyone learns at their own pace, so don't
+              rush - make sure you understand the basics before moving onto more
+              advanced topics. Happy learning!
+            </div>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
+        demonstrate: {
+          completed: false,
+          impact: 100,
+          action: `demonstrate`,
+          icon: `🧿`,
+          request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
+            `Lesson 2 Frontend Event-Driven Programming`
+          )} in javascript?`,
+          response: `
+/*
+
+ In order to log in a user with Firebase in a React application, you'd have to install Firebase in your project first. If you haven't done this, you can add Firebase by running npm install firebase or yarn add firebase in your terminal.
+
+In this example, we have a LoginForm component that maintains its own local state for the user's email and password, as well as any error messages. The handleChange function updates this state when the user types into the form inputs, and the handleSubmit function is called when the user submits the form.
+
+In the handleSubmit function, we call Firebase's signInWithEmailAndPassword method, passing the email and password the user entered. If there's an error - for instance, if the user entered an incorrect password - we catch it and update our component's state with the error message.
+
+This is a very basic example and a real-world application would likely involve more complexities such as form validation, handling loading states, and more. But it should serve as a good starting point. Remember, you should have already initialized Firebase in your project for this to work, and the email-password authentication method should be enabled on your Firebase project's authentication settings.
+*/
+
+
+import React, { useState } from 'react';
+import firebase from 'firebase/app';
+import 'firebase/auth';
+
+const LoginForm = () => {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [error, setError] = useState(null);
+
+    const handleChange = (event) => {
+        const { name, value } = event.target;
+        if (name === 'email') {
+            setEmail(value);
+        } else if (name === 'password') {
+            setPassword(value);
+        }
+    };
+
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+
+        try {
+            await firebase.auth().signInWithEmailAndPassword(email, password);
+        } catch (error) {
+            setError(error.message);
+        }
+    };
+
+    return (
+        <form onSubmit={handleSubmit}>
+            <input
+                type='email'
+                name='email'
+                placeholder='Email'
+                value={email}
+                onChange={handleChange}
+                required
+            />
+            <input
+                type='password'
+                name='password'
+                placeholder='Password'
+                value={password}
+                onChange={handleChange}
+                required
+            />
+            {error && <p>{error}</p>}
+            <button type='submit'>Log in</button>
+        </form>
+    );
+};
+
+export default LoginForm;
+
+          `,
+          spanish: ``,
+          tooltip: ``,
+        },
+        define: {
+          completed: false,
+          impact: 100,
+          action: `define`, // may not need
+          icon: `👾`, // may not need
+          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
+            `Lesson 2 Frontend Event-Driven Programming`
+          )} in exactly one sentence?`,
+          response: `React is a JavaScript library for building user interfaces that uses event-driven programming to create interactive web applications by allowing components to update and render efficiently in response to user actions or changes in data.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+
+        quiz: {
+          completed: false,
+          impact: 100,
+          action: `quiz`,
+          icon: `🧪`,
+          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
+            `Lesson 2 Frontend Event-Driven Programming`
+          )}?`,
+          response: (
+            <div>
+              React Components: Explain the difference between a functional
+              component and a class component in React. In what scenarios might
+              you prefer to use one over the other?
+              <br />
+              <br />
+              State Management: In React, we manage state at the component level
+              and sometimes use global state management tools like Redux or the
+              Context API. What are the benefits of managing state globally, and
+              what are the potential drawbacks?
+              <br />
+              <br />
+              Event-Driven Programming: Explain how event-driven programming
+              works in the context of a React application. Give an example of
+              how a user action triggers an event which causes a change in the
+              state of a component.
+              <br />
+              <br />
+              Virtual DOM: One of React's key features is its virtual DOM.
+              Explain what the virtual DOM is and how it improves performance.
+              <br />
+              <br />
+              CSS in JS: CSS-in-JS is a popular styling technique in modern
+              frontend development, and there are libraries such as
+              styled-components that implement this in React. Discuss the
+              advantages and potential disadvantages of using CSS-in-JS compared
+              to traditional CSS stylesheets in a React application.
+              <br />
+              <br />
+              Remember, these are open-ended questions. They are designed to
+              test not only your knowledge of facts but also your understanding
+              of these concepts and your ability to articulate that
+              understanding. Good luck!
+            </div>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
+        shop: {
+          completed: false,
+          impact: 100,
+          action: `shop`,
+          icon: `🛍️`,
+          request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
+          response: (
+            <div>
+              This shopping slot is not being utilized yet. Please contact me in
+              Patreon to qualify. In the meantime, lets talk about the
+              socioeconomic state of Latinos in tech.
+              <br />
+              <br />
+              <p>
+                The underrepresentation of Latinos as founders of major tech
+                companies is a multifaceted issue that can be attributed to
+                various factors, including socioeconomic, educational, and
+                cultural barriers, as well as systemic biases and
+                discrimination. Here are some reasons that contribute to this
+                underrepresentation:
+              </p>
+              <br />
+              <ol>
+                <li>
+                  Educational barriers: Access to quality education is essential
+                  for success in the technology industry. However, Latinos may
+                  face challenges in accessing high-quality education due to
+                  factors such as socioeconomic status, underfunded schools, or
+                  living in areas with fewer educational resources. These
+                  challenges can limit their exposure to computer science and
+                  other STEM subjects, reducing the likelihood of pursuing
+                  careers in technology. <br />
+                </li>
+                <li>
+                  Socioeconomic factors: Socioeconomic status plays a
+                  significant role in shaping career opportunities and
+                  aspirations. Latinos, as a group, have historically faced
+                  economic disparities, which can impact their access to
+                  resources, networking opportunities, and the ability to take
+                  risks associated with entrepreneurship. <br />
+                </li>
+
+                <li>
+                  Lack of representation and role models: The technology
+                  industry has long been dominated by individuals from certain
+                  racial and ethnic backgrounds. The lack of Latino
+                  representation in leadership roles and as founders of major
+                  tech companies can make it challenging for aspiring Latino
+                  entrepreneurs to find role models and mentors, which is
+                  crucial for professional development and success. <br />
+                </li>
+                <li>
+                  Limited access to funding and resources: Starting a tech
+                  company often requires substantial financial investment and
+                  access to resources, such as networking opportunities,
+                  mentorship, and technical support. Latinos may face challenges
+                  in securing funding from investors due to unconscious bias,
+                  discrimination, or lack of connections within the industry.{" "}
+                  <br />
+                </li>
+                <li>
+                  Cultural factors: Cultural factors, such as family
+                  expectations and community norms, can also influence career
+                  choices and aspirations. In some cases, Latinos may face
+                  pressure to prioritize more traditional or stable career paths
+                  over the risks associated with entrepreneurship or founding a
+                  tech company. <br />
+                </li>
+                <li>
+                  Systemic biases and discrimination: The technology industry,
+                  like many other sectors, is not immune to systemic biases and
+                  discrimination that can create barriers for underrepresented
+                  groups, including Latinos. This can manifest in various forms,
+                  such as biased hiring practices, limited access to mentorship
+                  and resources, or unequal treatment within the workplace.
+                </li>
+              </ol>
+              <br />
+              <br />
+              Addressing these challenges and promoting diversity in the
+              technology industry requires concerted efforts from various
+              stakeholders, including educational institutions, policymakers,
+              investors, and tech companies themselves. By fostering inclusive
+              environments, providing equal opportunities, and breaking down
+              barriers for underrepresented groups, the tech industry can
+              benefit from the wealth of talent, perspectives, and ideas that
+              diverse founders bring to the table.
+            </div>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
+      },
+    },
+  },
+  "Crash Course": {
+    "Lesson 1": {
+      documentID: `Lesson 1 - Crash Course`,
+      filler: ``,
+      hasCode: true,
+
+      highValue: false,
+      underConstruction: false,
+      completed: false,
+      needsImprovement: false,
+      new: true,
       tooltip: ``,
       sourceType: `video`, // may not need
       button: `1. Coding & Logic`, // may not need - `name`
@@ -820,11 +1975,12 @@ export const Engineer = {
       documentID: ``,
       filler: ``,
       hasCode: true,
-      new: true,
+
       highValue: false,
       underConstruction: true,
       completed: false,
       needsImprovement: false,
+      new: true,
       tooltip: ``,
       sourceType: `video`, // may not need
       button: `2. Data & Functions`, // may not need - `name`
@@ -946,12 +2102,13 @@ export const Engineer = {
       documentID: ``,
 
       filler: ``,
-      new: true,
+
       hasCode: true,
       highValue: false,
       underConstruction: true,
       completed: false,
       needsImprovement: false,
+      new: true,
       tooltip: ``,
       sourceType: `video`, // may not need
       button: `3. Creating Objects`, // may not need - `name`
@@ -1071,12 +2228,13 @@ export const Engineer = {
       documentID: ``,
 
       filler: ``,
-      new: true,
+
       hasCode: true,
       highValue: false,
       underConstruction: true,
       completed: false,
       needsImprovement: false,
+      new: true,
       tooltip: ``,
       sourceType: `video`, // may not need
       button: `4. Internet Apps`, // may not need - `name`
@@ -1197,12 +2355,13 @@ export const Engineer = {
       documentID: ``,
 
       filler: ``,
-      new: true,
+
       hasCode: true,
       highValue: false,
       underConstruction: true,
       completed: false,
       needsImprovement: false,
+      new: true,
       tooltip: ``,
       sourceType: `video`, // may not need
       button: `5. Loops & Counting`, // may not need - `name`
@@ -1321,12 +2480,13 @@ export const Engineer = {
       documentID: ``,
 
       filler: ``,
-      new: true,
+
       hasCode: true,
       highValue: false,
       underConstruction: true,
       completed: false,
       needsImprovement: false,
+      new: true,
       tooltip: ``,
       sourceType: `video`, // may not need
       button: `6. HTML`, // may not need - `name`
@@ -1447,12 +2607,13 @@ export const Engineer = {
       documentID: ``,
 
       filler: ``,
-      new: true,
+
       hasCode: true,
       highValue: false,
       underConstruction: true,
       completed: false,
       needsImprovement: false,
+      new: true,
       tooltip: ``,
       sourceType: `video`, // may not need
       button: `7. CSS`, // may not need - `name`
@@ -1573,13 +2734,14 @@ export const Engineer = {
       documentID: ``,
 
       filler: ``,
-      new: false,
+
       hasCode: true,
 
       highValue: false,
       underConstruction: false,
       completed: false,
       needsImprovement: false,
+      new: true,
       tooltip: ``,
       sourceType: `video`, // may not need
       button: `8. React`, // may not need - `name`
@@ -1700,12 +2862,13 @@ export const Engineer = {
       documentID: ``,
 
       filler: ``,
-      new: false,
+
       highValue: false,
       hasCode: true,
       underConstruction: false,
       completed: false,
       needsImprovement: false,
+      new: true,
       tooltip: ``,
       sourceType: `video`, // may not need
       button: `9. Creating Users`, // may not need - `name`
@@ -1825,12 +2988,13 @@ export const Engineer = {
       documentID: ``,
 
       filler: ``,
-      new: false,
+
       highValue: false,
       hasCode: true,
       underConstruction: false,
       completed: false,
       needsImprovement: false,
+      new: true,
       tooltip: ``,
       sourceType: `video`, // may not need
       button: `10. Database Foundations`, // may not need - `name`
@@ -1949,12 +3113,13 @@ export const Engineer = {
       documentID: ``,
 
       filler: ``,
-      new: false,
-      highValue: true,
+
+      highValue: false,
       hasCode: true,
       underConstruction: true,
       completed: false,
       needsImprovement: false,
+      new: true,
       tooltip: ``,
       sourceType: `video`, // may not need
       button: `11. Backend Clouds`, // may not need - `name`
@@ -2074,13 +3239,14 @@ export const Engineer = {
       documentID: ``,
 
       filler: ``,
-      new: false,
-      highValue: true,
+
+      highValue: false,
       hasCode: true,
       underConstruction: true,
       rare: false,
       completed: false,
       needsImprovement: false,
+      new: true,
       tooltip: ``,
       sourceType: `video`, // may not need
       button: `12. Operating Systems & Machines`, // may not need - `name`
@@ -2198,12 +3364,14 @@ export const Engineer = {
     "Lesson 13": {
       documentID: ``,
       filler: ``,
-      new: false,
+
       highValue: false,
       hasCode: true,
       underConstruction: false,
       completed: false,
+
       needsImprovement: false,
+      new: true,
       tooltip: ``,
       sourceType: `video`, // may not need
       button: `13. Setting Up An App`, // may not need - `name`
@@ -2323,13 +3491,14 @@ export const Engineer = {
     "Lesson 14": {
       documentID: ``,
       filler: ``,
-      new: false,
-      highValue: true,
+
+      highValue: false,
       hasCode: true,
       underConstruction: false,
       completed: false,
       rare: false,
       needsImprovement: false,
+      new: true,
       tooltip: ``,
       sourceType: `video`, // may not need
       button: `14. Programming Money`, // may not need - `name`
@@ -2447,12 +3616,13 @@ export const Engineer = {
     "Lesson 15": {
       documentID: ``,
       filler: ``,
-      new: false,
+
       highValue: false,
       underConstruction: false,
       hasCode: true,
       completed: false,
       needsImprovement: false,
+      new: true,
       tooltip: ``,
       sourceType: `video`, // may not need
       button: `15. Creating Database`, // may not need - `name`
@@ -2573,13 +3743,14 @@ export const Engineer = {
     "Lesson 16": {
       documentID: ``,
       filler: ``,
-      new: false,
+
       hasCode: true,
-      highValue: true,
+      highValue: false,
       rare: false,
       underConstruction: false,
       completed: false,
       needsImprovement: false,
+      new: true,
       tooltip: ``,
       sourceType: `video`, // may not need
       button: `16. Working Together`, // may not need - `name`
@@ -2702,12 +3873,12 @@ export const Engineer = {
     "Robots Building Education": {
       documentID: ``,
       filler: ``,
-      new: false,
+      new: true,
       highValue: false,
       underConstruction: true,
       completed: false,
       needsImprovement: false,
-      rare: true,
+      rare: false,
       tooltip: ``,
       sourceType: `markdown`, // may not need
       button: `Robots Building Education`, // may not need - `name`
@@ -2822,124 +3993,124 @@ export const Engineer = {
         },
       },
     },
-    // "Build For Undocumented": {
-    //   documentID: ``,
-    //   filler: ``,
-    //   new: false,
-    //   highValue: false,
-    //   underConstruction: false,
-    //   hasCode: true,
-    //   completed: false,
-    //   rare: true,
-    //   needsImprovement: false,
-    //   tooltip: ``,
-    //   sourceType: `markdown`, // may not need
-    //   button: `Indocumentadofy`, // may not need - `name`
-    //   header: `Indocumentadofy`,
-    //   fileSource: await import("../../markdowns/indocumentadofy.md?raw"), // may not need
+    "Build For Undocumented": {
+      documentID: ``,
+      filler: ``,
+      new: true,
+      highValue: false,
+      underConstruction: true,
+      completed: false,
+      needsImprovement: false,
+      hasCode: true,
+      rare: false,
+      tooltip: ``,
+      sourceType: `markdown`, // may not need
+      button: `Indocumentadofy`, // may not need - `name`
+      header: `Indocumentadofy`,
+      fileSource: await import("../../markdowns/indocumentadofy.md?raw"), // may not need
 
-    //   prompts: {
-    //     patreon: {
-    //       completed: false,
-    //       impact: 1000,
-    //       action: `generar`,
-    //       icon: `✍️`,
-    //       request: `em. roxana, ¿puedes generar un ensayo que cubra las oportunidades de consulta como inmigrante indocumentado con el marco Hydrogen de Shopify?`,
-    //       response: `null`,
-    //       spanish: true,
-    //       tooltip: ``,
-    //     },
-    //     inspire: {
-    //       dynamicContent: true,
-    //       completed: false,
-    //       impact: 100,
-    //       action: `inspirar`,
-    //       icon: `⚡`,
-    //       request: `Roxana, ¿puedes compartir cómo los inmigrantes indocumentados pueden aprender a construir cosas con herramientas como Hydrogen de Shopify para ganarse la vida en español?`,
-    //       response: `\n\nEn primer lugar, recomendaría a los inmigrantes indocumentados que investiguen y familiaricen con el software Hydrogen de Shopify que es una herramienta de creación de sitios web que le permite a los usuarios crear hermosas tiendas de comercio electrónico sin tener que aprender lenguajes de programación como HTML o CSS. Descargar el software es fácil y gratuito, y hay mucha documentación en línea disponible para guiarles a través del proceso. Después de descargarlo e iniciar sesión, también pueden encontrar tutorías en línea ofrecidas en español para ayudarles a aprender cómo usarlo y cómo configurar una tienda exitosa. Una vez que han desarrollado el conocimiento y la habilidad necesarios, pueden usar Hydrogen para crear tiendas en línea y vender productos a clientes de todo el mundo. Esta es una excelente oportunidad para aquellos inmigrantes que buscan construir una vida exitosa de manera independiente.`,
-    //       spanish: true,
-    //       tooltip: ``,
-    //     },
-    //     summarize: {
-    //       completed: false,
-    //       impact: 100,
-    //       action: `resumir`,
-    //       icon: `📚`,
-    //       request: `Roxanita ¿Puedes resumir cómo construir tecnología con el marco de Hydrogen de Shopify?`,
-    //       response:
-    //         "\n\nEl marco de Hydrogen de Shopify proporciona las herramientas necesarias para construir y gestionar una tienda en línea de manera eficiente. A través de la interfaz de usuario intuitiva, los usuarios pueden configurar los productos, imágenes, páginas y contenidos en cuestión de minutos. Te permite configurar opciones de pago, precios y descuentos para diversos productos. El marco también le permite a los usuarios administrar el inventario, realizar publicaciones de pedidos, recopilar información de clientes y almacenar datos de forma segura. Además, le ofrece protección contra fraudes y herramientas integradas de marketing para impulsar el crecimiento de la tienda.",
-    //       spanish: true,
-    //       tooltip: ``,
-    //     },
-    //     ask: {
-    //       completed: false,
-    //       impact: 100,
-    //       action: `preguntar`,
-    //       icon: `🔮`,
-    //       request: `Roxanota, ¿puedes mostrarme tres preguntas frecuentes para principiantes sobre la consultoría como inmigrante indocumentado con el marco Hydrogen de Shopify?`,
-    //       response: `\n\n1. ¿Existe un límite específico para las cantidades en las que puedo cobrar como inmigrante indocumentado a través de la plataforma de Shopify Hydrogen? \n2. ¿Cómo puedo conectar mi cuenta de Shopify para comenzar a brindar servicios de consultoría a través de Hydrogen? \n3. ¿Hay alguna forma de proteger mis derechos como inmigrante indocumentado mientras ofrezco servicios de consultoría a través del marco Hydrogen de Shopify?`,
-    //       spanish: true,
-    //       tooltip: ``,
-    //     },
-    //     guide: {
-    //       completed: false,
-    //       impact: 100,
-    //       action: `guía`,
-    //       icon: `🤝`,
-    //       request: `señorita roxana, ¿puede crear una guía de estudio para consultar como inmigrante indocumentado con el marco Hydrogen de Shopify con 10 viñetas?`,
-    //       response: `\n\n1. Investigue Hydrogen de Shopify y familiarícese con las diferentes características y capacidades que ofrece.\n2. Comprenda las implicaciones legales cuando trabaja como inmigrante indocumentado con Hydrogen de Shopify.\n3. Utilice los recursos disponibles, como como tutoriales y materiales de apoyo disponibles.\n4. Adquiera conocimientos sobre las herramientas y técnicas compatibles con Hydrogen de Shopify.\n5. Asegúrese de que su trabajo esté listo para su carpeta de trabajos y pueda ser presentado a posibles empleadores.\n6. Desarrolle una comprensión de cómo se debe estructurar el proyecto, incluidos el cronograma y los objetivos.\n7. Conozca las oportunidades de mercado disponibles para usar Hydrogen de Shopify.\n8. Desarrolle la capacidad de solucionar y resolver cualquier problema técnico que pueda surgir.\n9. Conéctese con varias empresas y redes que usan Hydrogen de Shopify para desarrollar una red de posibles empleadores y socios.\n10. Manténgase actualizado sobre el avance de Hydrogen de Shopify para asegurarse de que puede aprovechar era de todas las nuevas capacidades`,
-    //       spanish: true,
-    //       tooltip: ``,
-    //     },
-    //     demonstrate: {
-    //       completed: false,
-    //       impact: 100,
-    //       action: `demostrar`,
-    //       icon: `🧿`,
-    //       request: `mama roxana, ¿puedes mostrarme un ejemplo de cómo Shopify construye aplicaciones con el marco Hydrogen de Shopify en español con javascript?`,
-    //       response:
-    //         "\n\nSí, puedo. Esto es un ejemplo básico de una aplicación construida con el marco de Shopify Hydrogen y JavaScript en español: \n\n// Crear un modelo de aplicación\n// Este modelo describirá una entidad de la aplicación\nvar AppModelo = Hydrogen.Modelo.extend({\n  // Definimos los atributos\n  campos: {\n    titulo: String,\n    descripcion: String,\n    precio: Numero\n  }\n});\n\n// Crear una vista de la aplicación\n// Esta vista mostrará la entidad en la aplicación\nvar AppVista = Hydrogen.Vista.extend({\n  // Establecer el modelo de la vista\n  modelo: AppModelo,\n  // Establecer la plantilla \n  plantilla: `\n   <div> \n      <h2>{{ titulo }}</h2>\n      <p>{{ descripcion }}</p>\n      <p>Precio: {{ precio }}</p>\n   </div>\n  `,\n  // Establecer los datos iniciales\n  datosIniciales: {\n    titulo: '',\n    descripcion: '',\n    precio: 0\n  }\n});\n\n// Instanciar el modelo de la aplicación\nvar miModelo = new AppModelo({\n  // Establecer los valores de los atributos\n  titulo: 'Mi Aplicación',\n  descripcion: 'Una aplicación increíble',\n  precio: 999\n});\n\n// Instanciar la vista de la aplicación\nvar miVista = new AppVista({\n  modelo: miModelo\n});\n\n// Renderizar la vista\nmiVista.renderizar();",
-    //       spanish: true,
+      prompts: {
+        patreon: {
+          completed: false,
+          impact: 1000,
+          action: `generar`,
+          icon: `✍️`,
+          request: `em. roxana, ¿puedes generar un ensayo que cubra las oportunidades de consulta como inmigrante indocumentado con el marco Hydrogen de Shopify?`,
+          response: `null`,
+          spanish: true,
+          tooltip: ``,
+        },
+        inspire: {
+          dynamicContent: true,
+          completed: false,
+          impact: 100,
+          action: `inspirar`,
+          icon: `⚡`,
+          request: `Roxana, ¿puedes compartir cómo los inmigrantes indocumentados pueden aprender a construir cosas con herramientas como Hydrogen de Shopify para ganarse la vida en español?`,
+          response: `\n\nEn primer lugar, recomendaría a los inmigrantes indocumentados que investiguen y familiaricen con el software Hydrogen de Shopify que es una herramienta de creación de sitios web que le permite a los usuarios crear hermosas tiendas de comercio electrónico sin tener que aprender lenguajes de programación como HTML o CSS. Descargar el software es fácil y gratuito, y hay mucha documentación en línea disponible para guiarles a través del proceso. Después de descargarlo e iniciar sesión, también pueden encontrar tutorías en línea ofrecidas en español para ayudarles a aprender cómo usarlo y cómo configurar una tienda exitosa. Una vez que han desarrollado el conocimiento y la habilidad necesarios, pueden usar Hydrogen para crear tiendas en línea y vender productos a clientes de todo el mundo. Esta es una excelente oportunidad para aquellos inmigrantes que buscan construir una vida exitosa de manera independiente.`,
+          spanish: true,
+          tooltip: ``,
+        },
+        summarize: {
+          completed: false,
+          impact: 100,
+          action: `resumir`,
+          icon: `📚`,
+          request: `Roxanita ¿Puedes resumir cómo construir tecnología con el marco de Hydrogen de Shopify?`,
+          response:
+            "\n\nEl marco de Hydrogen de Shopify proporciona las herramientas necesarias para construir y gestionar una tienda en línea de manera eficiente. A través de la interfaz de usuario intuitiva, los usuarios pueden configurar los productos, imágenes, páginas y contenidos en cuestión de minutos. Te permite configurar opciones de pago, precios y descuentos para diversos productos. El marco también le permite a los usuarios administrar el inventario, realizar publicaciones de pedidos, recopilar información de clientes y almacenar datos de forma segura. Además, le ofrece protección contra fraudes y herramientas integradas de marketing para impulsar el crecimiento de la tienda.",
+          spanish: true,
+          tooltip: ``,
+        },
+        ask: {
+          completed: false,
+          impact: 100,
+          action: `preguntar`,
+          icon: `🔮`,
+          request: `Roxanota, ¿puedes mostrarme tres preguntas frecuentes para principiantes sobre la consultoría como inmigrante indocumentado con el marco Hydrogen de Shopify?`,
+          response: `\n\n1. ¿Existe un límite específico para las cantidades en las que puedo cobrar como inmigrante indocumentado a través de la plataforma de Shopify Hydrogen? \n2. ¿Cómo puedo conectar mi cuenta de Shopify para comenzar a brindar servicios de consultoría a través de Hydrogen? \n3. ¿Hay alguna forma de proteger mis derechos como inmigrante indocumentado mientras ofrezco servicios de consultoría a través del marco Hydrogen de Shopify?`,
+          spanish: true,
+          tooltip: ``,
+        },
+        guide: {
+          completed: false,
+          impact: 100,
+          action: `guía`,
+          icon: `🤝`,
+          request: `señorita roxana, ¿puede crear una guía de estudio para consultar como inmigrante indocumentado con el marco Hydrogen de Shopify con 10 viñetas?`,
+          response: `\n\n1. Investigue Hydrogen de Shopify y familiarícese con las diferentes características y capacidades que ofrece.\n2. Comprenda las implicaciones legales cuando trabaja como inmigrante indocumentado con Hydrogen de Shopify.\n3. Utilice los recursos disponibles, como como tutoriales y materiales de apoyo disponibles.\n4. Adquiera conocimientos sobre las herramientas y técnicas compatibles con Hydrogen de Shopify.\n5. Asegúrese de que su trabajo esté listo para su carpeta de trabajos y pueda ser presentado a posibles empleadores.\n6. Desarrolle una comprensión de cómo se debe estructurar el proyecto, incluidos el cronograma y los objetivos.\n7. Conozca las oportunidades de mercado disponibles para usar Hydrogen de Shopify.\n8. Desarrolle la capacidad de solucionar y resolver cualquier problema técnico que pueda surgir.\n9. Conéctese con varias empresas y redes que usan Hydrogen de Shopify para desarrollar una red de posibles empleadores y socios.\n10. Manténgase actualizado sobre el avance de Hydrogen de Shopify para asegurarse de que puede aprovechar era de todas las nuevas capacidades`,
+          spanish: true,
+          tooltip: ``,
+        },
+        demonstrate: {
+          completed: false,
+          impact: 100,
+          action: `demostrar`,
+          icon: `🧿`,
+          request: `mama roxana, ¿puedes mostrarme un ejemplo de cómo Shopify construye aplicaciones con el marco Hydrogen de Shopify en español con javascript?`,
+          response:
+            "\n\n// Crear un modelo de aplicación\n// Este modelo describirá una entidad de la aplicación\nvar AppModelo = Hydrogen.Modelo.extend({\n  // Definimos los atributos\n  campos: {\n    titulo: String,\n    descripcion: String,\n    precio: Numero\n  }\n});\n\n// Crear una vista de la aplicación\n// Esta vista mostrará la entidad en la aplicación\nvar AppVista = Hydrogen.Vista.extend({\n  // Establecer el modelo de la vista\n  modelo: AppModelo,\n  // Establecer la plantilla \n  plantilla: `\n   <div> \n      <h2>{{ titulo }}</h2>\n      <p>{{ descripcion }}</p>\n      <p>Precio: {{ precio }}</p>\n   </div>\n  `,\n  // Establecer los datos iniciales\n  datosIniciales: {\n    titulo: '',\n    descripcion: '',\n    precio: 0\n  }\n});\n\n// Instanciar el modelo de la aplicación\nvar miModelo = new AppModelo({\n  // Establecer los valores de los atributos\n  titulo: 'Mi Aplicación',\n  descripcion: 'Una aplicación increíble',\n  precio: 999\n});\n\n// Instanciar la vista de la aplicación\nvar miVista = new AppVista({\n  modelo: miModelo\n});\n\n// Renderizar la vista\nmiVista.renderizar();",
+          spanish: true,
 
-    //       tooltip: ``,
-    //     },
-    //     define: {
-    //       completed: false,
-    //       impact: 100,
-    //       action: `definir`, // may not need
-    //       icon: `👾`, // may not need
-    //       request: `roxis, ¿puedes definir oportunidades para consultar como inmigrante indocumentado con el marco Hydrogen de Shopify en exactamente una oración?`,
-    //       response: `\n\nLas oportunidades de consulta como inmigrante indocumentado con el marco Hydrogen de Shopify proporcionan recursos y acceso a los servicios pertinentes para apoyar la actividad comercial.`,
-    //       spanish: true,
-    //       tooltip: ``,
-    //     },
+          tooltip: ``,
+        },
+        define: {
+          completed: false,
+          impact: 100,
+          action: `definir`, // may not need
+          icon: `👾`, // may not need
+          request: `roxis, ¿puedes definir oportunidades para consultar como inmigrante indocumentado con el marco Hydrogen de Shopify en exactamente una oración?`,
+          response: `\n\nLas oportunidades de consulta como inmigrante indocumentado con el marco Hydrogen de Shopify proporcionan recursos y acceso a los servicios pertinentes para apoyar la actividad comercial.`,
+          spanish: true,
+          tooltip: ``,
+        },
 
-    //     quiz: {
-    //       completed: false,
-    //       impact: 100,
-    //       action: `prueba`,
-    //       icon: `🧪`,
-    //       request: `mamachota roxana, ¿puedes escribir un cuestionario de 3 preguntas para principiantes que sea desafiante sobre la consultoría como inmigrante indocumentado con el marco Hydrogen de Shopify?`,
-    //       response: `\n\n1. ¿Hay políticas o trámites adicionales que deberían completarse cuando se trabaja en el marco Hydrogen de Shopify como inmigrante indocumentado? \n\n2. ¿Cuáles son algunas técnicas aconsejables para respaldar la seguridad y la privacidad de los datos personales al utilizar el marco Hydrogen de Shopify? \n\n3. ¿Cuáles son las consideraciones especiales a tener en cuenta al necesitar colaboradores o asesores para trabajar legalmente como inmigrante indocumentado en el marco Hydrogen de Shopify?`,
-    //       spanish: true,
-    //       tooltip: ``,
-    //     },
-    //     shop: {
-    //       completed: false,
-    //       impact: 100,
-    //       action: `comercio`,
-    //       icon: `🛍️`,
-    //       request: `Muy bien hermano, muéstrame lo que tienes. Quiero comprar y apoyar más esta red.`,
-    //       response: `¡excelente! Eche un vistazo a nuestros patrocinadores que apoyan el crecimiento de Robots Building Education aquí: un día :)`,
-    //       spanish: true,
-    //       tooltip: ``,
-    //     },
-    //   },
-    // },
+        quiz: {
+          completed: false,
+          impact: 100,
+          action: `prueba`,
+          icon: `🧪`,
+          request: `mamachota roxana, ¿puedes escribir un cuestionario de 3 preguntas para principiantes que sea desafiante sobre la consultoría como inmigrante indocumentado con el marco Hydrogen de Shopify?`,
+          response: `\n\n1. ¿Hay políticas o trámites adicionales que deberían completarse cuando se trabaja en el marco Hydrogen de Shopify como inmigrante indocumentado? \n\n2. ¿Cuáles son algunas técnicas aconsejables para respaldar la seguridad y la privacidad de los datos personales al utilizar el marco Hydrogen de Shopify? \n\n3. ¿Cuáles son las consideraciones especiales a tener en cuenta al necesitar colaboradores o asesores para trabajar legalmente como inmigrante indocumentado en el marco Hydrogen de Shopify?`,
+          spanish: true,
+          tooltip: ``,
+        },
+        shop: {
+          completed: false,
+          impact: 100,
+          action: `comercio`,
+          icon: `🛍️`,
+          request: `Muy bien hermano, muéstrame lo que tienes. Quiero comprar y apoyar más esta red.`,
+          response: `¡excelente! Eche un vistazo a nuestros patrocinadores que apoyan el crecimiento de Robots Building Education aquí: un día :)`,
+          spanish: true,
+          tooltip: ``,
+        },
+      },
+    },
     // "Build For Community": {
     //   documentID: ``,
     //   filler: ``,
-    //   new: false,
+    //   new: true,
     //   highValue: false,
     //   underConstruction: true,
     //   completed: false,
@@ -3062,8 +4233,8 @@ export const Engineer = {
     // "Build For Teachers": {
     //   documentID: ``,
     //   filler: ``,
-    //   new: false,
-    //   highValue: true,
+    //   new: true,
+    //   highValue: false,
     //   underConstruction: false,
     //   completed: false,
     //   needsImprovement: false,
@@ -3186,7 +4357,7 @@ export const Engineer = {
     // "Social Chat": {
     //   documentID: ``,
     //   filler: ``,
-    //   new: false,
+    //   new: true,
     //   highValue: false,
     //   underConstruction: false,
     //   completed: false,
@@ -3315,13 +4486,14 @@ export const Engineer = {
     "Programming Languages": {
       documentID: ``,
       filler: ``,
-      new: false,
+
       hasCode: false,
-      highValue: true,
+      highValue: false,
       underConstruction: false,
       completed: false,
       rare: false,
       needsImprovement: false,
+      new: true,
       tooltip: ``,
       sourceType: `video`, // may not need
       button: `Programming Languages`, // may not need - `name`
@@ -3440,12 +4612,13 @@ export const Engineer = {
     Recursion: {
       documentID: ``,
       filler: ``,
-      new: false,
+
       highValue: false,
       hasCode: true,
       underConstruction: false,
       completed: false,
       needsImprovement: false,
+      new: true,
       tooltip: ``,
       sourceType: `video`, // may not need
       button: `Recursion`, // may not need - `name`
@@ -3564,8 +4737,8 @@ export const Engineer = {
       documentID: ``,
       filler: ``,
       hasCode: true,
-      new: false,
-      highValue: true,
+      new: true,
+      highValue: false,
       underConstruction: false,
       completed: false,
       needsImprovement: false,
@@ -3689,9 +4862,9 @@ export const Engineer = {
     "Link Traversal": {
       documentID: ``,
       filler: ``,
-      new: false,
+      new: true,
       hasCode: true,
-      highValue: true,
+      highValue: false,
       underConstruction: false,
       completed: false,
       needsImprovement: false,
@@ -3813,7 +4986,7 @@ export const Engineer = {
     "Link Swapping": {
       documentID: ``,
       filler: ``,
-      new: false,
+      new: true,
       hasCode: true,
       highValue: false,
       underConstruction: false,
@@ -3937,12 +5110,13 @@ export const Engineer = {
     Algorithms: {
       documentID: ``,
       filler: ``,
-      new: false,
+
       hasCode: true,
-      highValue: true,
+      highValue: false,
       underConstruction: false,
       completed: false,
       needsImprovement: false,
+      new: true,
       tooltip: ``,
       sourceType: `video`, // may not need
       button: `Algorithms`, // may not need - `name`
