@@ -33,7 +33,7 @@ Esto se debe a la eliminación y migración a la aplicación con GPT4. Se inclui
 
 Así que he querido trabajar en esto llamado Indocumentadofy desde hace algún tiempo. Algunos de ustedes pueden recordar mi idea de que no existe una regla que establezca que las personas indocumentadas pueden aprender buenas habilidades remotas y administrar un negocio en el que estén posicionados para primas competitivas.
 
-<img width="296" alt="image" src="https://github.com/RobotsBuildingEducation/indocumentadofy/assets/65219666/6d44bced-17d5-4d0d-b0f7-ba7182dc7bf7">
+<img width="100%" alt="image" src="https://github.com/RobotsBuildingEducation/indocumentadofy/assets/65219666/6d44bced-17d5-4d0d-b0f7-ba7182dc7bf7">
 
 Aunque es un desafío, no es imposible que alguien cobre miles por un servicio y software de calidad. Creo que a menudo se trata de hacer que las personas se den cuenta del valor proporcionado, en lugar de no saberlo y posicionarse para socavar la oportunidad de mano de obra más barata.
 
@@ -45,7 +45,7 @@ La economía del creador es real. Está creciendo. Shopify se integra más profu
 
 Es posible que muchos de ustedes no sepan esto, pero el software de Facebook ejecuta gran parte de Internet, y Shopify se está convirtiendo en una gran parte de eso. Invirtieron mucho en la influencia de Facebook sobre la tecnología. Muchos grandes minoristas ahora también se están convirtiendo en aplicaciones de Shopify.
 
-<img width="296" alt="image" src="https://github.com/RobotsBuildingEducation/indocumentadofy/assets/65219666/f66d4f13-8c48-42b7-bf6b-6dcc809baaf7">
+<img width="100%" alt="image" src="https://github.com/RobotsBuildingEducation/indocumentadofy/assets/65219666/f66d4f13-8c48-42b7-bf6b-6dcc809baaf7">
  
 Por lo tanto, tiene creadores ocupados, pequeñas empresas y corporaciones con quienes encontrar negocios y, a veces, puede ser esa persona que llama a su puerta y dice “Hola. Tu negocio no tiene esto. Es una buena oportunidad que te estás perdiendo. Esto es lo que puedo hacer”.
 
@@ -83,7 +83,7 @@ The Shopify Economy
 This is due for deletion and migration to the app with GPT4. It will be included in the Dealer section under “Creating Business”
 So I’ve been wanting to work on this thing called Indocumentadofy for some time now. Some of you may remember my idea that there is no rule stating that undocumented folks can learn good remote skills and run a business where they’re positioned for competitive premiums.
 
-<img width="296" alt="image" src="https://github.com/RobotsBuildingEducation/indocumentadofy/assets/65219666/6d44bced-17d5-4d0d-b0f7-ba7182dc7bf7">
+<img width="100%" alt="image" src="https://github.com/RobotsBuildingEducation/indocumentadofy/assets/65219666/6d44bced-17d5-4d0d-b0f7-ba7182dc7bf7">
 
 Although challenging, it isn’t impossible for someone to charge thousands for quality service and software. I think often it’s making people aware of the value provided, rather than not knowing and positioning to undercut for cheaper labor opportunity.
 
@@ -94,7 +94,7 @@ It’s an inspiration from Bitcoin. Bitcoin is a global and borderless technolog
 The creator economy is real. It’s growing. Shopify integrates deeper with platforms like Pinterest and Meta and eagerly attempts to take market share from organizations like Amazon.
 Many of you may not know this, but Facebook software runs a lot of the internet, and Shopify is becoming a big slice of that. They invested heavily into Facebook’s influence over tech. So many big retailers are now becoming Shopify applications too.
 
-<img width="296" alt="image" src="https://github.com/RobotsBuildingEducation/indocumentadofy/assets/65219666/f66d4f13-8c48-42b7-bf6b-6dcc809baaf7">
+<img width="100%" alt="image" src="https://github.com/RobotsBuildingEducation/indocumentadofy/assets/65219666/f66d4f13-8c48-42b7-bf6b-6dcc809baaf7">
 
 So you have busy creators, small businesses and corporations to find business with and sometimes you can be that person that knocks on their door and says “Hey. Your business doesn’t have this. It’s a good opportunity you’re missing. Here’s what I can do.”
 
