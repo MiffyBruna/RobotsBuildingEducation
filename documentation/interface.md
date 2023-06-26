@@ -1,4 +1,4 @@
-# UI Schema
+# User Inferface Schema
 
 The following object describes the user interface defined as a variable.
 This variable is processed on by functions in order to render the appropriate data.
