@@ -11,6 +11,7 @@ import { doc, getDoc, getDocs } from "firebase/firestore";
 import { Link, useParams } from "react-router-dom";
 
 export const ImpactWallet = ({
+  globalScholarshipCounter,
   databaseUserDocument,
   computePercentage,
   globalImpactCounter,
@@ -21,7 +22,7 @@ export const ImpactWallet = ({
   globalReserve,
   userAuthObject = { uid: "demo" },
 }) => {
-  console.log("vb", globalReserve);
+  console.log("vb", globalScholarshipCounter);
   let [databaseUserDocumentCopy, setDatabaseUserDocumentCopy] =
     useState(databaseUserDocument);
 
@@ -165,7 +166,7 @@ export const ImpactWallet = ({
               financial impact for someone else.
             </p>
             <hr />
-            <h4>Scholarships Created: 5</h4>
+            <h4>Scholarships Created: {globalScholarshipCounter}</h4>
             <p>
               Work Done By You
               <br />

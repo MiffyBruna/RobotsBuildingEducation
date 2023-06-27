@@ -10,6 +10,7 @@ import { StyledPromptButton } from "../../styles/lazyStyles";
 // import { DiscordButton } from "./DiscordButton/DiscordButton";
 
 export const Prompts = ({
+  globalScholarshipCounter,
   currentPath,
   //roxana
   loadingMessage,
@@ -232,6 +233,7 @@ export const Prompts = ({
           usersModulesCollectionReference={usersModulesCollectionReference}
           usersModulesFromDB={usersModulesFromDB}
           globalReserve={globalReserve}
+          globalScholarshipCounter={globalScholarshipCounter}
         />
         {/* <DiscordButton /> */}
         <br />

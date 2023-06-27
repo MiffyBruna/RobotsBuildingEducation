@@ -48,11 +48,11 @@ export const Passcode = ({
         style={{ color: "white" }}
       >
         <Button variant="dark" style={{ width: "250px", height: "50px" }}>
-          <img
+          {/* <img
             style={{ borderRadius: "6px" }}
             width="32px"
             src="https://pbs.twimg.com/profile_images/1266950784609992705/xEe7mBx9_400x400.png"
-          />
+          /> */}
           &nbsp; Get Subscriber Passcode
         </Button>
       </a>

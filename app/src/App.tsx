@@ -77,6 +77,7 @@ function App() {
   const [globalUserModulesFromDB, setGlobalUserModulesFromDB] = useState([]);
   // used to count total global count. used to get all work done before this global counter was implemented.
   const [globalImpactCounter, setGlobalImpactCounter] = useState(0);
+  const [globalScholarshipCounter, setGlobalScholarshipCounter] = useState(0);
   const [globalReserveCounter, setGlobalReserveCounter] = useState(0);
   const [patreonObject, setPatreonObject] = useState<Record<string, any>>({});
   const [currentPath, setCurrentPath] = useState("");
@@ -234,13 +235,15 @@ function App() {
           .catch((error) => console.log("ERROR", error));
 
         getDoc(globalImpactDocRef).then((res) => {
+          console.log("resssss", res.data());
           setGlobalImpactCounter(res.data().total);
         });
 
         const globalReserveDocRef = doc(database, "global", "reserve");
         getDoc(globalReserveDocRef).then((res) => {
-          console.log("res", res.data().amount);
+          console.log("res", res.data());
           setGlobalReserveCounter(res.data().amount);
+          setGlobalScholarshipCounter(res.data().scholarships);
         });
 
         setUserDocumentReference(docRef);
@@ -291,14 +294,15 @@ function App() {
           })
           .catch((error) => console.log("ERROR"));
 
-        getDoc(globalImpactDocRef).then((res) =>
-          setGlobalImpactCounter(res.data().total)
-        );
+        getDoc(globalImpactDocRef).then((res) => {
+          setGlobalImpactCounter(res.data().total);
+        });
         const globalReserveDocRef = doc(database, "global", "reserve");
 
         getDoc(globalReserveDocRef).then((res) => {
           console.log("res", res.data());
           setGlobalReserveCounter(res.data().amount);
+          setGlobalScholarshipCounter(res.data().scholarships);
         });
 
         setUserDocumentReference(docRef);
@@ -476,6 +480,7 @@ function App() {
               {isEmpty(patreonObject) && !isDemo ? null : (
                 <>
                   <ChatGPT
+                    globalScholarshipCounter={globalScholarshipCounter}
                     globalReserve={globalReserveCounter}
                     currentPath={currentPathForAnalytics}
                     patreonObject={patreonObject}

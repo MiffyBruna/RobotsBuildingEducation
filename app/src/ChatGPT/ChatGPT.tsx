@@ -16,6 +16,7 @@ import { Intro } from "./Roxana/PromptCombiner9000/Intro";
 import { BossModeGPT } from "./BossModeGPT/BossModeGPT";
 
 export const ChatGPT = ({
+  globalScholarshipCounter,
   currentPath = "demo",
   patreonObject,
   userDocumentReference,
@@ -408,7 +409,7 @@ export const ChatGPT = ({
           {/* 
       <Roxana
         loadingMessage={loadingMessage}
-        loadingStates={loadingStates}
+        loadingStates={loadingStates} 
         chatGptResponse={chatGptResponse}
         patreonObject={patreonObject}
         isDemo={isDemo}
@@ -484,6 +485,7 @@ export const ChatGPT = ({
         currentPath={currentPath}
         isRaidActive={isRaidActive}
         globalReserve={globalReserve}
+        globalScholarshipCounter={globalScholarshipCounter}
 
         //pow
       />

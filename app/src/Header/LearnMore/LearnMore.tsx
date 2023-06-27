@@ -7,6 +7,7 @@ import elkhanmigo from "../../common/media/images/elkhanmigo.jpg";
 import { logEvent } from "firebase/analytics";
 import { analytics } from "../../database/firebaseResources";
 import { DiscordButton } from "../../ChatGPT/Prompts/DiscordButton/DiscordButton";
+import { words } from "../../common/words/words";
 export const LearnMore = ({ auth }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
@@ -51,7 +52,7 @@ export const LearnMore = ({ auth }) => {
           closeButton
           style={{ backgroundColor: "black", color: "white" }}
         >
-          <Modal.Title>About</Modal.Title>
+          <Modal.Title>Learn More</Modal.Title>
         </Modal.Header>
         <Modal.Body
           onHide={() => setIsModalOpen(false)}
@@ -63,11 +64,7 @@ export const LearnMore = ({ auth }) => {
             alignItems: "center",
           }}
         >
-          <h1 style={{ maxWidth: "100%", width: 700 }}>
-            Robots
-            <br /> Building <br />
-            Education
-          </h1>
+          <h1 style={{ maxWidth: "100%", width: 700 }}>RO.B.E</h1>
           <p style={{ maxWidth: "100%", width: 700 }}>
             Robots Building Education is a system that converts your learning
             into scholarships. Its goal is to inspire people to pursue the most

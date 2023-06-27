@@ -6,6 +6,7 @@ import { database } from "../database/firebaseResources";
 import { ImpactWallet } from "./ImpactWallet/ImpactWallet";
 
 export const ProofOfWork = ({
+  globalScholarshipCounter,
   userAuthObject,
   displayName,
   databaseUserDocument,
@@ -43,6 +44,7 @@ export const ProofOfWork = ({
           usersModulesCollectionReference={usersModulesCollectionReference}
           usersModulesFromDB={usersModulesFromDB}
           globalReserve={globalReserve}
+          globalScholarshipCounter={globalScholarshipCounter}
         />
 
         {/* {
@@ -80,6 +82,7 @@ export const ProofOfWork = ({
         usersModulesFromDB={usersModulesFromDB}
         userAuthObject={userAuthObject}
         globalReserve={globalReserve}
+        globalScholarshipCounter={globalScholarshipCounter}
       />
       {/* <a onClick={() => auth.signOut()}>Sign-out</a> */}
     </div>
