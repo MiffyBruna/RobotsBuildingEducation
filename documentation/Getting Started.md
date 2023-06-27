@@ -19,3 +19,29 @@ Observe how Firebase is implemented:
 - Setting up database: https://github.com/RobotsBuildingEducation/RobotsBuildingEducation/blob/main/app/src/database/firebaseResources.tsx
 
 - Implementing Cloud Functions with OpenAI: [https://github.com/RobotsBuildingEducation/RobotsBuildingEducation/tree/main/app/functions](https://github.com/RobotsBuildingEducation/RobotsBuildingEducation/blob/main/app/functions/index.js)
+
+
+
+
+Here are the environment variables I use. Typically speaking, environment variables are kept in a safe place 
+since it stores dangerous data to expose like access to your database.
+
+If you search the keyword `import.meta.env.`, you'll find these variables being used in the code.
+
+If you notice here, this file says "ignore this vfile when you push it up to github" https://github.com/RobotsBuildingEducation/RobotsBuildingEducation/blob/main/app/.gitignore#L25-L26
+
+Create app/.env
+```
+VITE_FREE_PROMO_PASSCODE=NOT_IN_USE
+VITE_PATREON_PASSCODE=NIKE
+VITE_INFINITE_KNOWLEDGE_PASSCODE=DRAKE
+VITE_COURSE_ADMIN_PASSCODE=NARUTO
+VITE_FIREBASE_API_KEY=key_given_by_firebase
+VITE_SHEILF=NAPO
+VITE_FOREVER_FREE=NOT_IN_USE
+```
+
+Create app/functions/.env
+```
+OPENAI_API_KEY=key_given_by_openAI
+```
