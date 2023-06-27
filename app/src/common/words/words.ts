@@ -128,4 +128,108 @@ export let words = {
       text: {}
     }
   },
+
+    spanish: {
+    modals: {
+      titles: {
+        "1": "Aprende Más",
+        "2": "Aplicar",
+        "3": "Ingeniería de Tareas de IA",
+        "4": "Cartera de Impacto",
+      },
+      headers: {
+        "1": "RO.B.E",
+        "2": "Testimonios",
+        "3": "Contenido",
+        "4": "Ingeniero",
+        "5": "Creador",
+        "6": "Concesionario",
+        "7": "Modo Jefe",
+        "8": "RO.B.E",
+        "9": "Preguntas Frecuentes",
+        "10": "¿Qué tipo de computadora necesito?",
+        "11": "¿Es difícil programar? ¿Tengo que ser bueno en matemáticas?",
+        "12": "¿Qué lenguaje de programación debería elegir?",
+        "13": "¿Vale la pena el bootcamp?",
+        "14": "¿Qué es la programación y qué puedo hacer con ella?",
+        "15": "Oye, ¿qué pasa con la ciberseguridad, el análisis de datos o estos certificados?",
+        "16": "¿Fui a la escuela?",
+
+        "17": "Becas 1.0",
+
+        "19": "¿Qué es esto?",
+
+        "20": "Impacto",
+        "21": "Becas Creadas: ",
+      },
+    },
+
+    buttons: {
+      "1": "Suscribirse",
+      "2": "Red",
+      "3": "Contacto",
+      "4": "OpenAI",
+
+      "5": "Volver a la aplicación",
+
+      "6": "Copiar dirección de correo electrónico",
+      "7": "Copiar dirección de Bitcoin",
+      "8": "Copiar dirección de Lightning",
+
+      "9": "Aprende Más & Preguntas Frecuentes",
+      "10": "Aplicar a la Beca",
+
+      "11": "Ingeniero",
+      "12": "Creador",
+      "13": "Concesionario",
+      "14": "RO.₿.E",
+      "15": "Modo Jefe",
+
+      "16": "Introducción a RO.B.E",
+      "17": "Lección 1 Fundamentos de Programación",
+      "18": "Lección 2 Programación Frontend",
+      "19": "Lección 3 Ingeniería Backend",
+      "20": "Lección 4 Construcción de una Aplicación",
+
+      "21": "Robots Construyendo Educación",
+      "22": "Indocumentadofy",
+
+      "23": "Lenguaje de Programación",
+      "24": "Recursión",
+      "25": "Listas Enlazadas",
+      "26": "Recorrido de Enlaces",
+      "27": "Intercambio de Enlaces",
+      "28": "Algoritmos",
+
+      "29": "Creando Propósito",
+      "30": "La Guerra de las Drogas",
+      "31": "Filosofía @ RO.B.E",
+      "32": "Experiencias de Usuario",
+      "33": "Revisión de Contenido (20M+ vistas)",
+      "34": "SEO: Optimización de Motores de Búsqueda",
+      "35": "Influencia & Expresión",
+      "36": "Abraham Lincoln",
+
+      "37": "Creando CVs Competitivos para Niveles Iniciales",
+      "38": "Inversión Focalizada",
+      "39": "Gestión de Riqueza",
+      "40": "Inversión en Tecnología Financiera",
+      "41": "Inversión en Medios Sociales",
+      "42": "Inversión en Tecnología Educativa",
+
+      "43": "► descubrir",
+      "44": "📚 estudiar",
+      "45": "🛍️ comprar",
+
+      "46": "💗 roxana",
+
+      "47": "🤖",
+      "48": "🏦",
+    },
+
+    content: {
+      headers: {}
+      text: {}
+    }
+  },
 };
