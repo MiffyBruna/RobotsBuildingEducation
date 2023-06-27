@@ -18,4 +18,4 @@ Observe how Firebase is implemented:
 
 - Setting up database: https://github.com/RobotsBuildingEducation/RobotsBuildingEducation/blob/main/app/src/database/firebaseResources.tsx
 
-- Implementing Cloud Functions with OpenAI: https://github.com/RobotsBuildingEducation/RobotsBuildingEducation/tree/main/app/functions
+- Implementing Cloud Functions with OpenAI: [https://github.com/RobotsBuildingEducation/RobotsBuildingEducation/tree/main/app/functions](https://github.com/RobotsBuildingEducation/RobotsBuildingEducation/blob/main/app/functions/index.js)
