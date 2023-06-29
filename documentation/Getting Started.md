@@ -1,6 +1,14 @@
-You're going to need to learn how to set up a firebase project and openAI project in order to do this.
-My crash course can help you break it down, but you will still need to learn how to do it. If you haven't watched it, watch Fireship's 100 second preview:
-https://www.youtube.com/watch?v=vAoB4VbhRzM&ab_channel=Fireship
+# Getting Started with Firebase and OpenAI
+
+To start, you'll need to set up  a Firebase project and a OpenAI project.  Don't worry 🧘, I've got a crash course to help you break it down!  All you need to do is the learning. But before we begin, I highly recommend watching Fireship's 100-second preview video on Firebase. It's a fantastic overview that makes it easy to understand the basics.
+
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=vAoB4VbhRzM&ab_channel=Fireship">
+    <img src="https://i.imgur.com/biAB4Mt.png" alt="Watch the video">
+  </a>
+</p>
+
+## IMPORTANT FILES
 
 I will show you important files here.
 
@@ -14,21 +22,23 @@ This project uses the following firebase projects:
 
 In the future, it may use Storage and Cloud Messaging.
 
-Observe how Firebase is implemented:
+Let's take a look at how Firebase is implemented in the project:
+- **Setting up database:** [firebaseResources.tsx](https://github.com/RobotsBuildingEducation/RobotsBuildingEducation/blob/main/app/src/database/firebaseResources.tsx)
 
-- Setting up database: https://github.com/RobotsBuildingEducation/RobotsBuildingEducation/blob/main/app/src/database/firebaseResources.tsx
-
-- Implementing Cloud Functions with OpenAI: [https://github.com/RobotsBuildingEducation/RobotsBuildingEducation/tree/main/app/functions](https://github.com/RobotsBuildingEducation/RobotsBuildingEducation/blob/main/app/functions/index.js)
-
+- **Implementing Cloud Functions with OpenAI:** [index.js](https://github.com/RobotsBuildingEducation/RobotsBuildingEducation/blob/main/app/functions/index.js)
 
 
 
-Here are the environment variables I use. Typically speaking, environment variables are kept in a safe place 
-since it stores dangerous data to expose like access to your database.
+## ENVIRONMENT VARIABLES
+Here are the environment variables used in this project. It's important to keep these variables safe since they contain sensitive data, such as access to your database. 
 
-If you search the keyword `import.meta.env.`, you'll find these variables being used in the code.
+You'll notice these variables being used in the code when you search the keyword `import.meta.env.`.
 
-If you notice here, this file says "ignore this vfile when you push it up to github" https://github.com/RobotsBuildingEducation/RobotsBuildingEducation/blob/main/app/.gitignore#L25-L26
+
+✏️ **NOTE:** In the project's [.gitignore](https://github.com/RobotsBuildingEducation/RobotsBuildingEducation/blob/main/app/.gitignore#L25-L26)
+ file, you'll notice that the .env file is ignored. This ensures that **sensitive data is not exposed** when pushing to GitHub.
+
+To ensure all environment variables are secure,  we have the following files:
 
 Create app/.env
 ```
@@ -45,3 +55,4 @@ Create app/functions/.env
 ```
 OPENAI_API_KEY=key_given_by_openAI
 ```
+
