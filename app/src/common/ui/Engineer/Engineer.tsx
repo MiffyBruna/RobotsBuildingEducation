@@ -1163,7 +1163,7 @@ print(rihanna.perform("at the Grammy Awards"))
       button: `Lesson 2 Frontend Programming`, // may not need - `name`
       header: `Lesson 2 Frontend Programming`,
       fileSource:
-        "https://res.cloudinary.com/eduprojectsil/video/upload/v1684131257/IMG_0104_n7djon.mov", // may not need
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1685404089/IMG_1614_usbr35.mov", // may not need
 
       prompts: {
         patreon: {
@@ -1184,7 +1184,7 @@ print(rihanna.perform("at the Grammy Awards"))
           action: `inspire`,
           icon: `⚡`,
           request: `ms. roxana, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
-            `Lesson 1 Coding Fundamentals`
+            `Lesson 2 Frontend Event-Driven Programming`
           )}?`,
           response: (
             <div>
@@ -1718,6 +1718,648 @@ export default LoginForm;
               test not only your knowledge of facts but also your understanding
               of these concepts and your ability to articulate that
               understanding. Good luck!
+            </div>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
+        shop: {
+          completed: false,
+          impact: 100,
+          action: `shop`,
+          icon: `🛍️`,
+          request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
+          response: (
+            <div>
+              This shopping slot is not being utilized yet. Please contact me in
+              Patreon to qualify. In the meantime, lets talk about the
+              socioeconomic state of Latinos in tech.
+              <br />
+              <br />
+              <p>
+                The underrepresentation of Latinos as founders of major tech
+                companies is a multifaceted issue that can be attributed to
+                various factors, including socioeconomic, educational, and
+                cultural barriers, as well as systemic biases and
+                discrimination. Here are some reasons that contribute to this
+                underrepresentation:
+              </p>
+              <br />
+              <ol>
+                <li>
+                  Educational barriers: Access to quality education is essential
+                  for success in the technology industry. However, Latinos may
+                  face challenges in accessing high-quality education due to
+                  factors such as socioeconomic status, underfunded schools, or
+                  living in areas with fewer educational resources. These
+                  challenges can limit their exposure to computer science and
+                  other STEM subjects, reducing the likelihood of pursuing
+                  careers in technology. <br />
+                </li>
+                <li>
+                  Socioeconomic factors: Socioeconomic status plays a
+                  significant role in shaping career opportunities and
+                  aspirations. Latinos, as a group, have historically faced
+                  economic disparities, which can impact their access to
+                  resources, networking opportunities, and the ability to take
+                  risks associated with entrepreneurship. <br />
+                </li>
+
+                <li>
+                  Lack of representation and role models: The technology
+                  industry has long been dominated by individuals from certain
+                  racial and ethnic backgrounds. The lack of Latino
+                  representation in leadership roles and as founders of major
+                  tech companies can make it challenging for aspiring Latino
+                  entrepreneurs to find role models and mentors, which is
+                  crucial for professional development and success. <br />
+                </li>
+                <li>
+                  Limited access to funding and resources: Starting a tech
+                  company often requires substantial financial investment and
+                  access to resources, such as networking opportunities,
+                  mentorship, and technical support. Latinos may face challenges
+                  in securing funding from investors due to unconscious bias,
+                  discrimination, or lack of connections within the industry.{" "}
+                  <br />
+                </li>
+                <li>
+                  Cultural factors: Cultural factors, such as family
+                  expectations and community norms, can also influence career
+                  choices and aspirations. In some cases, Latinos may face
+                  pressure to prioritize more traditional or stable career paths
+                  over the risks associated with entrepreneurship or founding a
+                  tech company. <br />
+                </li>
+                <li>
+                  Systemic biases and discrimination: The technology industry,
+                  like many other sectors, is not immune to systemic biases and
+                  discrimination that can create barriers for underrepresented
+                  groups, including Latinos. This can manifest in various forms,
+                  such as biased hiring practices, limited access to mentorship
+                  and resources, or unequal treatment within the workplace.
+                </li>
+              </ol>
+              <br />
+              <br />
+              Addressing these challenges and promoting diversity in the
+              technology industry requires concerted efforts from various
+              stakeholders, including educational institutions, policymakers,
+              investors, and tech companies themselves. By fostering inclusive
+              environments, providing equal opportunities, and breaking down
+              barriers for underrepresented groups, the tech industry can
+              benefit from the wealth of talent, perspectives, and ideas that
+              diverse founders bring to the table.
+            </div>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
+      },
+    },
+    "Lesson 3 Backend Engineering": {
+      documentID: ``,
+      hasCode: true,
+      filler: ``,
+      highValue: false,
+      underConstruction: false,
+      completed: false,
+      needsImprovement: false,
+      new: true,
+      tooltip: ``,
+      sourceType: `video`, // may not need
+      button: `Lesson 3 Backend Engineering`, // may not need - `name`
+      header: `Lesson 3 Backend Engineering`,
+      fileSource:
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1688807036/IMG_4356_bk9g2p.mov", // may not need
+
+      prompts: {
+        patreon: {
+          completed: false,
+          impact: 1000,
+          action: `generate`,
+          icon: `►`, //`✍️`
+          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
+            `Lesson 3 Understanding Backend Engineering`
+          )}?`,
+          response: `null`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        inspire: {
+          completed: false,
+          impact: 100,
+          action: `inspire`,
+          icon: `⚡`,
+          request: `ms. roxana, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
+            `Lesson 3 Understanding Backend Engineering`
+          )}?`,
+          response: (
+            <div>
+              One story that always inspires people about the power of backend
+              software engineering involves the company Netflix and their
+              backend engineering journey.
+              <br />
+              <br />
+              In the early 2000s, Netflix started as a mail-order DVD service
+              but soon saw the potential of streaming technology. However,
+              streaming video required vast amounts of data to be sent quickly
+              and reliably, a serious backend engineering problem.
+              <br />
+              <br />
+              In 2008, Netflix suffered a significant database corruption and
+              was down for three days. For a company that relied on the trust of
+              customers to provide consistent service, this was a disaster. It
+              was a moment of realization for the company: they had to
+              completely rethink their backend systems to cope with the scale
+              they were growing into.
+              <br />
+              <br />
+              That's when Netflix decided to migrate their systems to the cloud,
+              specifically Amazon Web Services (AWS). The complexity of this
+              task cannot be understated. Migrating the massive data sets,
+              building new microservices, redesigning the way data flowed
+              through their system - all these tasks required sophisticated
+              backend engineering.
+              <br />
+              <br />
+              One key challenge was building what came to be known as the "Chaos
+              Monkey." This piece of software was designed to randomly kill
+              processes in their system. Why would they do this? To ensure that
+              there was no single point of failure in the system. The Chaos
+              Monkey helped to ensure that Netflix's systems were truly
+              distributed and robust.
+              <br />
+              <br />
+              After several years of this complex, challenging work, Netflix had
+              completely moved all of its customer-facing services to the cloud
+              by 2016. But their work did not stop there. Netflix engineers kept
+              building on the cloud's scalability, creating new tools and
+              services that allowed them to handle even more users and deliver
+              even more content.
+              <br />
+              <br />
+              For example, Netflix engineers developed a tool called "Flux,"
+              which orchestrates asynchronous, event-based programming. This
+              kind of tool enables the smooth streaming of video content, no
+              matter how many users are watching or where they are in the world.
+              <br />
+              <br />
+              Netflix's story illustrates how backend engineering can turn a
+              company's ambitious vision into reality. It showcases how thinking
+              about system design, scalability, and reliability, coupled with a
+              willingness to experiment with radical solutions (like the Chaos
+              Monkey), can create a service that hundreds of millions of people
+              rely on for their entertainment. It's a truly inspiring story for
+              any software engineer.
+              <br />
+            </div>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
+        summarize: {
+          completed: false,
+          impact: 100,
+          action: `summarize`,
+          icon: `📚`,
+          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
+            `Lesson 3 Understanding Backend Engineering`
+          )}?`,
+          response: (
+            <div>
+              <h2>The Intricate Web of Backend Engineering</h2>
+              <br />
+              <br />
+              Backend engineering, often referred to as "server-side
+              development," is the invisible force that powers the digital
+              world. Its role is to ensure the smooth and effective operation of
+              all the technology that lies "behind the scenes" of our internet
+              experiences. While frontend development caters to the user
+              interface and direct user interaction, backend engineering focuses
+              on server communication, database management, and business logic—
+              the cogs and gears operating beneath the surface of the digital
+              landscape.
+              <br />
+              <br />
+              Backend engineering can be seen as the backbone of any online
+              system. Whenever a user performs an action on a website or an
+              application— clicking a button, filling out a form, completing a
+              transaction— it is the backend that processes these requests,
+              interacting with databases, performing calculations, applying
+              business rules, and returning the relevant results.
+              <br />
+              <br />
+              The work of backend engineers revolves around building and
+              maintaining robust, secure, and efficient server-side software.
+              They are responsible for creating APIs, writing server-side
+              scripts, ensuring data integrity, and managing user
+              authentication, among many other tasks. Backend engineers work
+              with various tools and languages such as Python, Java, Ruby, SQL,
+              and many more. The choice of technology often depends on the
+              specific requirements of the project at hand.
+              <br />
+              <br />
+              One of the key responsibilities of backend engineers is to ensure
+              that the system can handle the load, whether it's ten users or ten
+              million. Scalability is, therefore, a critical concern. Engineers
+              must design systems that can grow in capacity without a loss in
+              performance, a concept which often necessitates sophisticated
+              architectural designs like microservices.
+              <br />
+              <br />
+              Security is another primary focus. Backend engineers are
+              responsible for protecting sensitive data and ensuring that their
+              systems are resistant to attacks. This can involve everything from
+              encrypting data to preventing SQL injection attacks, to managing
+              access controls.
+              <br />
+              <br />
+              Backend engineering also ties closely with the emerging field of
+              DevOps. The DevOps philosophy involves the close integration of
+              development and operations, with a focus on automation,
+              monitoring, and continuous delivery. As such, many backend
+              engineers work with cloud platforms like AWS, Azure, or Google
+              Cloud Platform, and tools like Docker and Kubernetes for
+              containerization and orchestration.
+              <br />
+              <br />
+              In conclusion, backend engineering plays a vital role in the
+              digital world. Without it, the sleek and responsive websites and
+              apps we use daily would be void shells, devoid of functionality.
+              It is the unsung hero of the web, operating silently behind the
+              scenes to power the experiences we have come to take for granted
+              in the digital age. Understanding its principles and nuances
+              provides a deeper appreciation of the intricacy and sophistication
+              of our digital experiences.
+            </div>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
+        ask: {
+          completed: false,
+          impact: 100,
+          action: `ask`,
+          icon: `🔮`,
+          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
+            `Lesson 3 Understanding Backend Engineering`
+          )} with one sentence answers?`,
+          response: (
+            <div>
+              here are three commonly asked questions by beginners about backend
+              engineering, along with expert responses:
+              <br />
+              <br />
+              Question 1: What programming languages are most commonly used in
+              backend development and how should I choose which one to learn?
+              <br />
+              <br />
+              Many languages can be used for backend development, and the choice
+              often depends on the specific use case, your team's expertise, and
+              other project requirements. Some of the most popular languages
+              include Python, Java, JavaScript (Node.js), Ruby, and PHP. Python
+              is praised for its readability and simplicity, making it a great
+              first language for beginners. Java is highly portable and widely
+              used in enterprise-scale applications. Node.js allows you to use
+              JavaScript, a traditionally front-end language, on the
+              server-side, which can be beneficial for teams wanting to use the
+              same language across the stack. Ruby and Ruby on Rails have a
+              reputation for being developer-friendly and enabling rapid
+              development, while PHP is traditionally used in web development
+              and has a large developer community. As a beginner, you might want
+              to start with Python or JavaScript due to their syntax and
+              versatility, but remember that understanding the principles of
+              programming and backend development is more important than the
+              specific language you start with.
+              <br />
+              <br />
+              <br />
+              <br />
+              Question 2: What is the role of databases in backend development
+              and which database should I learn?
+              <br />
+              <br />
+              Databases are crucial in backend development because they store
+              the data that your application uses. This can include user
+              profiles, user-generated content, transaction history, and much
+              more. There are many types of databases, but they generally fall
+              into two categories: SQL (Relational Databases) and NoSQL
+              (Non-Relational Databases). SQL databases, like PostgreSQL, MySQL,
+              and SQLite, are great when your data is structured and consistent.
+              NoSQL databases, like MongoDB, CouchDB, or Cassandra, can be
+              useful when dealing with large volumes of diverse, rapidly
+              changing data. As a beginner, understanding SQL and the principles
+              of relational databases can be very beneficial because these
+              concepts apply to many areas of backend development. However,
+              gaining some exposure to NoSQL databases is also valuable due to
+              the growing popularity of these databases in certain industries.
+              <br />
+              <br />
+              <br />
+              <br />
+              Question 3: What is an API, and why are they important in backend
+              development?
+              <br />
+              <br />
+              API stands for Application Programming Interface. It's a set of
+              rules that allows different software applications to communicate
+              with each other. In backend development, APIs are crucial as they
+              provide a way for the frontend of an application (what the user
+              interacts with) to communicate with the backend (where data is
+              stored and manipulated). For example, when you log into a mobile
+              app, the frontend sends a request to the backend via an API. The
+              backend then checks your login details, and if they're correct, it
+              sends a response back to the frontend, which lets you access your
+              account. Understanding how to design and build APIs is a
+              fundamental skill in backend development, as it enables the
+              creation of software that can interact seamlessly with other
+              systems, whether they be different parts of the same application
+              or entirely separate applications.
+            </div>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
+        guide: {
+          completed: false,
+          impact: 100,
+          action: `guide`,
+          icon: `🤝`,
+          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
+            `Lesson 3 Understanding Backend Engineering`
+          )}?`,
+          response: (
+            <div>
+              Here's a step-by-step roadmap on how to go from beginner to
+              professional backend engineer. Note that everyone's journey is
+              unique, so adapt this guide to suit your learning style and
+              interests.
+              <ol>
+                <li>
+                  <b> Learn a Programming Language</b>
+                  <div>
+                    Start with mastering a programming language that's widely
+                    used for backend development. Python and JavaScript
+                    (Node.js) are popular choices and are beginner-friendly.
+                    Learn the syntax, data structures, control flow, error
+                    handling, and object-oriented programming principles.
+                  </div>
+                  <br />
+                  <br />
+                  <div>Resources: Codecademy, freeCodeCamp, LeetCode</div>
+                </li>
+                <li>
+                  <b>Understand How the Web Works</b>
+                  <div>
+                    Get a grasp on internet fundamentals: How do browsers,
+                    servers, and networks interact? What's HTTP and HTTPS? What
+                    are the different HTTP methods (GET, POST, PUT, DELETE)?
+                    What are status codes?
+                  </div>
+                  <br />
+                  <br />
+                  <div>
+                    Resources: Mozilla Developer Network (MDN), W3Schools
+                  </div>
+                </li>
+
+                <li>
+                  <b>Learn about Databases</b>
+                  <div>
+                    Understand the differences between SQL (Relational) and
+                    NoSQL (Non-relational) databases. Learn how to create
+                    schemas, write queries, and manage data. Start with SQL
+                    using MySQL or PostgreSQL, then try a NoSQL database like
+                    MongoDB.
+                  </div>
+                  <br />
+                  <br />
+                  <div>Resources: SQLZoo, MongoDB University</div>
+                </li>
+
+                <li>
+                  <b> Master Backend Frameworks</b>
+                  <div>
+                    Choose a framework in your chosen language and learn it
+                    thoroughly. If you chose Python, Django and Flask are
+                    excellent choices. For JavaScript, Express.js is a go-to
+                    option. Frameworks will speed up your development process
+                    and provide structure to your applications.
+                  </div>
+                  <br />
+                  <br />
+                  <div>
+                    Resources: Django or Flask's official documentation for
+                    Python, Express.js guides, YouTube tutorials
+                  </div>
+                </li>
+
+                <li>
+                  <b>Learn about APIs</b>
+                  <div>
+                    Understand RESTful APIs and how to build them. Learn about
+                    JSON, endpoints, CRUD operations, and status codes. Try
+                    creating a simple API of your own.
+                  </div>
+                  <br />
+                  <br />
+                  <div>
+                    Resources: RESTful API guides, Postman for testing APIs,
+                    build a simple API with Express.js/Flask
+                  </div>
+                </li>
+
+                <li>
+                  <b>Learn about Authentication and Authorization</b>
+                  <div>
+                    Dive into JWT, OAuth, sessions, cookies, and other methods
+                    for managing user identities and securing user data.
+                    Implement authentication and authorization in your own
+                    projects.{" "}
+                  </div>
+                  <br />
+                  <br />
+                  <div>Resources: Auth0 Docs, YouTube tutorials</div>
+                </li>
+
+                <li>
+                  <b>Learn about Testing and Debugging</b>
+                  <div>
+                    Learn how to write unit tests, integration tests, and learn
+                    about test-driven development. Understand debugging tools
+                    and techniques in your chosen language and framework.{" "}
+                  </div>{" "}
+                  <br />
+                  <br />
+                  <div>
+                    Resources: Jest (for JavaScript), PyTest (for Python),
+                    official documentation for debugging tools in your chosen
+                    IDE
+                  </div>
+                </li>
+
+                <li>
+                  <b>Get Familiar with DevOps</b>
+                  <div>
+                    Learn about cloud services like AWS, GCP, or Azure. Learn
+                    how to deploy your applications, automate workflows, and
+                    monitor performance. Understand containerization (Docker)
+                    and orchestration (Kubernetes).
+                  </div>{" "}
+                  <br />
+                  <br />
+                  <div>
+                    Resources: AWS Training and Certification, GCP Training,
+                    Azure Training, Docker's Get Started Guide
+                  </div>
+                </li>
+
+                <li>
+                  <b>Build Projects</b>
+                  <div>
+                    Backend development is always evolving. Stay updated with
+                    the latest practices, tools, and technologies. Follow
+                    influencers on Twitter, join developer communities like
+                    Stack Overflow and GitHub, and read tech blogs or
+                    newsletters.
+                  </div>{" "}
+                </li>
+
+                <li>
+                  <b>Gain Professional Experience</b>
+                  <div>
+                    Whether it's an internship, a junior developer role,
+                    contributing to open-source projects, or freelance work,
+                    real-world experience is crucial. This will not only improve
+                    your skills but also give you a feel of collaborative
+                    coding, using version control systems, and dealing with
+                    real-world problem-solving.
+                  </div>{" "}
+                </li>
+              </ol>
+              <br /> <br />
+              Remember, the journey to becoming a professional backend engineer
+              is a marathon, not a sprint. Enjoy the process, keep building, and
+              never stop learning. Good luck!
+            </div>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
+        demonstrate: {
+          completed: false,
+          impact: 100,
+          action: `demonstrate`,
+          icon: `🧿`,
+          request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
+            `Lesson 3 Understanding Backend Engineering`
+          )} in javascript?`,
+          response: `
+/*
+
+Let's consider a simple example where we create a basic RESTful API using Flask, a popular microframework for Python. This API will have endpoints for basic CRUD (Create, Read, Update, Delete) operations on a list of tasks.
+
+Please note that this is a simple in-memory example, in a real-world scenario you would typically use a database to persist the data.
+*/
+
+
+from flask import Flask, jsonify, request
+
+app = Flask(__name__)
+
+# In-memory list of tasks
+tasks = [
+    {'id': 1, 'title': 'Learn Python', 'done': False},
+    {'id': 2, 'title': 'Learn Flask', 'done': False},
+]
+
+# Route to retrieve all tasks
+@app.route('/tasks', methods=['GET'])
+def get_tasks():
+    return jsonify({'tasks': tasks})
+
+# Route to retrieve a task by id
+@app.route('/tasks/<int:task_id>', methods=['GET'])
+def get_task(task_id):
+    task = next((task for task in tasks if task['id'] == task_id), None)
+    if task is None:
+        return jsonify({'error': 'Task not found'}), 404
+    return jsonify({'task': task})
+
+# Route to create a new task
+@app.route('/tasks', methods=['POST'])
+def create_task():
+    new_task = request.get_json()
+    tasks.append(new_task)
+    return jsonify(new_task), 201
+
+# Route to update an existing task
+@app.route('/tasks/<int:task_id>', methods=['PUT'])
+def update_task(task_id):
+    task = next((task for task in tasks if task['id'] == task_id), None)
+    if task is None:
+        return jsonify({'error': 'Task not found'}), 404
+    updated_task = request.get_json()
+    task.update(updated_task)
+    return jsonify(task)
+
+# Route to delete a task
+@app.route('/tasks/<int:task_id>', methods=['DELETE'])
+def delete_task(task_id):
+    global tasks
+    tasks = [task for task in tasks if task['id'] != task_id]
+    return jsonify({'result': True})
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
+          `,
+          spanish: ``,
+          tooltip: ``,
+        },
+        define: {
+          completed: false,
+          impact: 100,
+          action: `define`, // may not need
+          icon: `👾`, // may not need
+          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
+            `Lesson 3 Understanding Backend Engineering`
+          )} in exactly one sentence?`,
+          response: `Backend engineering is the design, implementation, testing, and maintenance of the server-side logic, databases, and application interfaces that power the functionality behind user-facing components of software applications or websites.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        quiz: {
+          completed: false,
+          impact: 100,
+          action: `quiz`,
+          icon: `🧪`,
+          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
+            `Lesson 3 Understanding Backend Engineering`
+          )}?`,
+          response: (
+            <div>
+              Databases: Explain the difference between a SQL database and a
+              NoSQL database. Provide an example of a scenario where each might
+              be the more appropriate choice.
+              <br />
+              <br />
+              APIs: What is a RESTful API and why are they important in backend
+              development?
+              <br />
+              <br />
+              Backend Engineering: What is the role of a load balancer in
+              backend engineering and why is it important?
+              <br />
+              <br />
+              Privacy: What is data privacy and why is it an important aspect of
+              computer ethics?
+              <br />
+              <br />
+              Ethics: Explain the concept of "digital divide" and why it is a
+              concern in computer ethics.
+              <br />
             </div>
           ),
           spanish: ``,

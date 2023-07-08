@@ -68,11 +68,13 @@ export const PromptCombiner9000 = ({
               justifyContent: "flex-start",
               textAlign: "left",
               padding: 20,
-              // maxWidth:
-              //   patreonObject.prompts.patreon.icon === "►" ? "617.5px" : "82.5%",
-              maxWidth: "90%",
-              width: "fit-content",
 
+              // maxWidth: "90%",
+              // width: "fit-content",
+
+              // maxWidth:patreonObject.prompts.patreon.icon === "►" ? "617.5px" : "82.5%",
+              minWidth: 350,
+              maxWidth: 600,
               borderTopLeftRadius: 30,
               borderTopRightRadius: 30,
               borderBottomRightRadius: 30,
