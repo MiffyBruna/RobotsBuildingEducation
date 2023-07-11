@@ -14,6 +14,7 @@ let Patreon = ({
     if (patreonObject.sourceType === "video") {
       return (
         <video
+          poster="https://res.cloudinary.com/eduprojectsil/image/upload/v1674212147/Screen_Shot_2023-01-20_at_2.55.21_AM_ipay84.png"
           style={{
             width: "100%",
             borderRadius: "30px",

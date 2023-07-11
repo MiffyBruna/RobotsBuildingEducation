@@ -46,14 +46,6 @@ export const ProofOfWork = ({
           globalReserve={globalReserve}
           globalScholarshipCounter={globalScholarshipCounter}
         />
-
-        {/* {
-            border: "1px solid #F2D466",
-            marginBottom: "6px",
-            borderRadius: "10px",
-
-            backgroundColor: "#f2a900",
-          } */}
       </div>
     );
   }

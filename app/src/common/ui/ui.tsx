@@ -75,6 +75,8 @@ export let ultimateEffeciencyJutsu = (key) => {
 
     ["Lesson 3 Understanding Backend Engineering"]:
       "the foundations of backend engineering",
+
+    ["Lesson 4 Building Apps"]: "the basics of building apps using APIs",
     ["SEO: Search Engine Optimization"]:
       "understanding search engine optimization",
   };

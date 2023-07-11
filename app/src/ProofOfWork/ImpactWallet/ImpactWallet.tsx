@@ -22,7 +22,6 @@ export const ImpactWallet = ({
   globalReserve,
   userAuthObject = { uid: "demo" },
 }) => {
-  console.log("vb", globalScholarshipCounter);
   let [databaseUserDocumentCopy, setDatabaseUserDocumentCopy] =
     useState(databaseUserDocument);
 
@@ -33,17 +32,6 @@ export const ImpactWallet = ({
   });
   let [borderStateForLightningButton, setBorderStateForLightningButton] =
     useState({ border: "1px solid blue" });
-
-  // let mountWallet = async () => {
-  //   await getDocs(usersModulesCollectionReference).then((querySnapshot) => {
-  //         let sum = 0;
-  //         querySnapshot.forEach((doc) => {
-  //           if (doc.data()) {
-  //             console.log("MODULES", doc.data());
-  //           }
-  //         })
-  //   });
-  // }
 
   useEffect(() => {
     // mountWallet();
@@ -281,26 +269,10 @@ export const ImpactWallet = ({
                   ⚡ Copy Lightning Address
                 </Button>
               </div>
-              {/* <p style={{ maxWidth: 720 }}>
-                <br />
-                100% of subscriptions are stored as Bitcoin as a reserve system
-                for RO.B.E. This reserve is designed to position Robots Building
-                Education for growth. You're encouraged to send Bitcoin as
-                another way to support the growth of RO.B.E without
-                subscriptions. This is currently the <b>only</b> way I'm
-                monetizing on RO.B.E
-              </p> */}
 
               <br />
             </div>
 
-            {/* <div>
-              <br />
-              <h1>Education</h1>
-              <div>
-                You can now share your profile 😊 more under development!{" "}
-              </div>
-            </div> */}
             <br />
           </div>
         </Modal.Body>

@@ -4,7 +4,7 @@ import compSciLib from "../../media/images/compSciLib.jpeg";
 import metaphysicalMuse from "../../media/images/metaphysicalMuse.jpeg";
 
 export const Engineer = {
-  "Crash Course Version 3 (Work In Progress)": {
+  "Crash Course Version 3": {
     "Introduction To RO.B.E": {
       documentID: ``,
       hasCode: true,
@@ -621,7 +621,6 @@ exports.app = functions.https.onRequest(app);
         },
       },
     },
-
     "Lesson 1 Coding Fundamentals": {
       documentID: ``,
       hasCode: true,
@@ -2095,6 +2094,7 @@ export default LoginForm;
               professional backend engineer. Note that everyone's journey is
               unique, so adapt this guide to suit your learning style and
               interests.
+              <br />
               <ol>
                 <li>
                   <b> Learn a Programming Language</b>
@@ -2459,13 +2459,10 @@ if __name__ == '__main__':
         },
       },
     },
-  },
-  "Crash Course": {
-    "Lesson 1": {
-      documentID: `Lesson 1 - Crash Course`,
-      filler: ``,
+    "Lesson 4 Building Apps": {
+      documentID: ``,
       hasCode: true,
-
+      filler: ``,
       highValue: false,
       underConstruction: false,
       completed: false,
@@ -2473,162 +2470,10 @@ if __name__ == '__main__':
       new: true,
       tooltip: ``,
       sourceType: `video`, // may not need
-      button: `1. Coding & Logic`, // may not need - `name`
-      header: `Foundations: Coding & Logic`,
-
+      button: `Lesson 4 Building Apps`, // may not need - `name`
+      header: `Lesson 4 Building Apps`,
       fileSource:
-        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674220062/download_4_xnineu.mp4",
-      prompts: {
-        patreon: {
-          premiumContent: false,
-          completed: false,
-          impact: 1000,
-          action: `generate`,
-          icon: `►`, //`✍️`
-          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
-            `Lesson 1`
-          )}?`,
-          response: `null`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        inspire: {
-          humanTouch: false,
-          completed: false,
-          impact: 100,
-          action: `inspire`,
-          icon: `⚡`,
-          request: `ms. roxana, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
-            `Lesson 1`
-          )}?`,
-          response: `\n\nOne inspiring story about coding and logic is the story of Ada Lovelace. Ada Lovelace was a mathematician and writer in the 1800s who is widely considered to be the first computer programmer. She wrote the first algorithm for a machine that could calculate Bernoulli numbers, and her work laid the foundation for modern computing. Her story is inspiring because it shows that women have been making important contributions to the field of computer science for centuries.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        summarize: {
-          completed: false,
-          impact: 100,
-          action: `summarize`,
-          icon: `📚`,
-          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
-            `Lesson 1`
-          )}?`,
-          response: `\n\nCoding is the process of writing instructions in a programming language to create a program that can be executed by a computer. Computer logic is the set of rules and principles that govern the operation of a computer system. It is the basis for the design of algorithms and the development of software.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        ask: {
-          completed: false,
-          impact: 100,
-          action: `ask`,
-          icon: `🔮`,
-          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
-            `Lesson 1`
-          )} with one sentence answers?`,
-          response: `\n\n1. What is coding? - Coding is the process of creating instructions for a computer to execute.\n2. What is logic? - Logic is the process of reasoning and making decisions based on facts and evidence.\n3. What is a programming language? - A programming language is a set of instructions that can be used to create a program.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        guide: {
-          completed: false,
-          impact: 100,
-          action: `guide`,
-          icon: `🤝`,
-          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
-            `Lesson 1`
-          )}?`,
-          response: `\n\n1. Understand the fundamentals of coding and computer logic\n2. Learn the basics of programming languages such as HTML, CSS, JavaScript, and Python\n3. Familiarize yourself with the different types of data structures and algorithms\n4. Understand the principles of object-oriented programming\n5. Learn how to debug and troubleshoot code\n6. Develop an understanding of the principles of software engineering\n7. Learn how to use version control systems such as Git\n8. Understand the basics of databases and SQL\n9. Develop an understanding of web development frameworks such as React and Angular\n10. Learn how to use development tools such as IDEs and text editors`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        demonstrate: {
-          completed: false,
-          impact: 100,
-          action: `demonstrate`,
-          icon: `🧿`,
-          request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
-            `Lesson 1`
-          )} with no other text in javascript?`,
-          response:
-            "// Example of basic coding logic in JavaScript\nlet x = 5;\nlet y = 10;\n\nif (x < y) {\n  console.log(`x is less than y`);\n} else {\n  console.log(`x is greater than or equal to y`);\n}",
-          spanish: ``,
-          tooltip: ``,
-          dynamicContent: false,
-        },
-        define: {
-          completed: false,
-          impact: 100,
-          action: `define`, // may not need
-          icon: `👾`, // may not need
-          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
-            `Lesson 1`
-          )} in exactly one sentence?`,
-          response: `\n\nCoding is the process of creating instructions for a computer to execute, while computer logic is the process of using algorithms to solve problems.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-
-        quiz: {
-          completed: false,
-          impact: 100,
-          action: `quiz`,
-          icon: `🧪`,
-          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
-            `Lesson 1`
-          )}?`,
-          response: `\n\n1. What is an example of a Boolean expression?\n2. What is an algorithm used for?\n3. How can a programmer effectively debug a code?`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        // intro: {
-        //   completed: false,
-        //   sponsoredContent: false,
-        //   impact: 250,
-        //   action: `intro`,
-        //   icon: `🛍️`,
-        //   request: `let's learn!`,
-        //   response: `CompSciLib`,
-        //   advertisementPitch: "Computer Science theory education for students",
-        //   spanish: ``,
-        //   tooltip: ``,
-        //   backgroundStyles: {
-        //     boxShadow: "0 10px 20px rgba(0,0,0,1), 0 6px 6px rgba(0,0,0,1)",
-        //     height: 150,
-        //     width: 150,
-        //     marginTop: 12,
-        //     borderRadius: "50%",
-        //   },
-        //   advertisementLink: "https://www.compscilib.com/",
-        //   advertisementImageSrc: compSciLib,
-        // },
-        shop: {
-          completed: false,
-          impact: 100,
-          action: `shop`,
-          icon: `🛍️`,
-          request: `I wanna shop and support this network more. Can you show me some sponsors or local advertisements?`,
-          response: `This prompt is available for your business. Please reach out to be on Patreon with your interest :)`,
-          spanish: ``,
-          tooltip: ``,
-        },
-      },
-    },
-    "Lesson 2": {
-      documentID: ``,
-      filler: ``,
-      hasCode: true,
-
-      highValue: false,
-      underConstruction: true,
-      completed: false,
-      needsImprovement: false,
-      new: true,
-      tooltip: ``,
-      sourceType: `video`, // may not need
-      button: `2. Data & Functions`, // may not need - `name`
-      header: `2. Data & Functions`,
-      fileSource:
-        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674220121/download_5_q0viph.mp4", // may not need
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1688890864/IMG_4448_wtznbf.mov", // may not need
 
       prompts: {
         patreon: {
@@ -2637,7 +2482,7 @@ if __name__ == '__main__':
           action: `generate`,
           icon: `►`, //`✍️`
           request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
-            `Lesson 2`
+            `Lesson 4 Building Apps`
           )}?`,
           response: `null`,
           spanish: ``,
@@ -2649,9 +2494,91 @@ if __name__ == '__main__':
           action: `inspire`,
           icon: `⚡`,
           request: `ms. roxana, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
-            `Lesson 2`
+            `Lesson 4 Building Apps`
           )}?`,
-          response: `\n\nOne inspiring story about sets of data and functions in computer programming is the story of Larry Tesler. Larry Tesler was a computer scientist who made important contributions to computer science by inventing the now ubiquitous Cut, Copy and Paste functions. He also pioneered the idea of user-friendly graphical user interfaces, allowing people to interact with computers in an easier way. Tesler was the first to successfully apply the concept of \"modularity\" or divide and conquer approach to the something as complex as a computer program. He not only discovered how to break complex functions into smaller ones, but he also understood how to re-assemble these functions, creating entirely new and novel sets of data and functions. It's stories like his that inspire others to think more deeply about the potential of data and algorithms and dreams of more powerful computer programs.`,
+          response: (
+            <div>
+              <h4>
+                👋 Is there a way to distribute credit cards to students with an
+                education technical application using Stripe?
+              </h4>
+              <br />
+              <br />
+              <h2>Credit - Empowering Student Finance through Education</h2>
+              <br />
+              <br />
+              Once upon a time, in the bustling heart of Silicon Valley, a team
+              of passionate educators, seasoned fintech experts, and
+              forward-thinking technologists embarked on a mission to reimagine
+              the traditional student financial experience. They were driven by
+              a simple, powerful question: "Could we build a system that would
+              help students not just to learn, but to financially grow at the
+              same time?" This question marked the genesis of Credit, an
+              innovative edtech application set to revolutionize students'
+              approach to financial growth and independence. <br />
+              <br />
+              Credit, an app designed to empower students financially through
+              education, proposed a novel concept - a subscription-based
+              learning platform where each payment doesn't just grant access to
+              premium educational resources, but also contributes towards
+              building the students' credit score. The initiative aimed to
+              instill a sense of financial responsibility and acumen among
+              students from an early age, encouraging them to understand the
+              significance of credit scores and financial planning.
+              <br />
+              <br />
+              Harnessing the power of APIs, the Credit team integrated the
+              platform with Stripe, one of the world's leading payment
+              processors. This gave the platform robust, secure payment handling
+              capabilities, with a twist. Rather than just processing
+              transactions, every payment made on Credit was handled in a way
+              that directly impacted the student's credit history positively.
+              <br />
+              <br />
+              The magic lay in the use of Stripe's powerful Issuing API. Upon
+              subscribing, students would receive a virtual credit card from
+              Credit. The subscription fees were then charged to these cards,
+              and promptly paid off using the student's funding source, thereby
+              establishing a pattern of responsible credit use. Over time, this
+              mechanism helped students organically build a strong credit
+              history.
+              <br />
+              <br />
+              But the Credit team didn't stop there. Understanding that credit
+              was only one aspect of financial education, they also incorporated
+              a comprehensive financial literacy module within the app. It
+              covered topics such as budgeting, investing, and understanding
+              interest rates. The application gamified these learnings,
+              rewarding students with app-based rewards for demonstrating
+              knowledge and financial acumen.
+              <br />
+              <br />
+              Furthermore, students could keep track of their burgeoning credit
+              scores directly through the application, providing a tangible
+              sense of progress and achievement. To ensure the students'
+              financial data's safety and privacy, Credit strictly adhered to
+              the highest data protection standards, employing state-of-the-art
+              encryption technologies, and ensuring strict compliance with
+              PCI-DSS.
+              <br />
+              <br />
+              As the word spread, Credit became a sensation in high schools and
+              universities across the nation. Students were no longer just
+              consumers of educational content; they were budding financial
+              adults, witnessing firsthand the power of credit and financial
+              responsibility. Simultaneously, they had access to a world-class
+              educational resource, equipping them with knowledge and skills for
+              a successful future.
+              <br />
+              <br />
+              By leveraging the power of APIs and integrating them into an
+              intuitive education platform, Credit has proven that financial
+              responsibility and education can go hand in hand. It's an
+              innovative stride towards not just teaching our students but
+              preparing them for a more financially secure and informed future.
+              <br />
+            </div>
+          ),
           spanish: ``,
           tooltip: ``,
         },
@@ -2661,9 +2588,93 @@ if __name__ == '__main__':
           action: `summarize`,
           icon: `📚`,
           request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
-            `Lesson 2`
+            `Lesson 4 Building Apps`
           )}?`,
-          response: `\n\nComputer programming uses sets of data and functions to store, interpret, and process information. Data sets are groups of related items, such as numbers or text. Functions are used to manipulate data sets, for example to add, subtract, search for items, sort them into order, or calculate averages. Sets of data and functions are essential for any kind of computer programming, from web development to software engineering.`,
+          response: (
+            <div>
+              Learning to code is the first step towards building a technology
+              startup, but it's just one piece of a complex puzzle. The journey
+              from acquiring coding skills to launching a tech startup involves
+              several phases including idea generation, market research, product
+              development, and business operations.
+              <br />
+              <br />
+              <h2>Acquiring Coding Skills</h2>
+              <br />
+              The journey begins with learning to code. There are various
+              programming languages and technologies, each with its own
+              strengths and applicability. Beginners often start with languages
+              like Python or JavaScript due to their syntax and wide usage. It's
+              essential to understand the basics such as data structures,
+              algorithms, and object-oriented programming. As you become more
+              proficient, learning about databases, web protocols, and other
+              software development concepts becomes important.
+              <br />
+              <br />
+              <h2>Idea Generation and Validation</h2>
+              <br />
+              Once you have the basic coding skills, the next step is to come up
+              with a startup idea. The idea doesn't have to be unique, but there
+              should be a unique value proposition. It should solve a problem or
+              fulfill a need in a way that current solutions do not. Once an
+              idea is conceived, it's vital to validate it. This can be done
+              through market research, surveys, and talking to potential users.
+              This stage may lead to multiple iterations of the idea based on
+              the feedback received.
+              <br />
+              <br />
+              <h2>Building a Minimum Viable Product (MVP)</h2>
+              <br />
+              After validating the idea, the next phase is developing a Minimum
+              Viable Product (MVP). An MVP is a basic version of the product
+              with just enough features to be usable by early customers who can
+              then provide feedback for future product development. It helps in
+              understanding whether the product resonates with the market needs
+              without investing a lot of time and resources.
+              <br />
+              <br />
+              <h2>Launching and Marketing</h2>
+              <br />
+              Once the MVP is ready, it's time to launch the product. This is
+              where aspects like setting up a website, creating a brand, and
+              working on a launch strategy come into play. Marketing the product
+              effectively is crucial. This might involve social media marketing,
+              content marketing, SEO, and other digital marketing strategies.
+              <br />
+              <br />
+              <h2>Feedback, Iteration, and Growth</h2>
+              <br />
+              After the launch, it's crucial to gather feedback and use it to
+              improve the product. Startups often have to iterate on their
+              products multiple times before they find a good market fit. It's
+              also important to measure key metrics to understand user behavior
+              and track the growth of the startup. Once the product-market fit
+              is achieved, you can focus on scaling the product and growing the
+              user base.
+              <br />
+              <br />
+              <h2>Fundraising</h2>
+              <br />
+              Depending on the business model and growth plans, you might need
+              to raise funds. This involves understanding different fundraising
+              stages, preparing a pitch deck, and reaching out to potential
+              investors.
+              <br />
+              <br />
+              <h2>Team Building and Culture</h2>
+              <br />
+              As the startup grows, you will need to build a team. This involves
+              hiring the right people, defining the company culture, and setting
+              up processes for effective team collaboration.
+              <br />
+              <br />
+              In conclusion, the journey from learning to code to building a
+              tech startup is a challenging yet rewarding process. It involves
+              not just technical skills, but also skills in product development,
+              marketing, fundraising, and team management. It's a journey of
+              continuous learning and adaptation.
+            </div>
+          ),
           spanish: ``,
           tooltip: ``,
         },
@@ -2673,9 +2684,65 @@ if __name__ == '__main__':
           action: `ask`,
           icon: `🔮`,
           request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
-            `Lesson 2`
+            `Lesson 4 Building Apps`
           )} with one sentence answers?`,
-          response: `\n\n1. What is the difference between a set and a function? Answer: A set is a collection of values, while a function is a group of instructions that performs operations on a given set of inputs to generate a specific output.\n\n2. What are the most common operations performed on sets? Answer: Common operations performed on sets include union, intersection, complement, and cross product.\n\n3. How do you access data stored in sets? Answer: Elements stored in sets can be accessed using indexing, slicing, or iteration.`,
+          response: (
+            <div>
+              here are three frequently asked questions by beginners about
+              building with APIs, along with expert answers:
+              <br />
+              <br />
+              Question 1: What is an API and why is it important in building
+              applications?
+              <br />
+              <br />
+              An API, or Application Programming Interface, is a set of rules
+              and protocols that allows one software application to interact and
+              communicate with another. It's like a messenger that delivers a
+              request from one system to another and then delivers the response
+              back. APIs are important because they enable the integration of
+              different software systems, allowing them to leverage each other's
+              functionalities. For instance, a web application can use a mapping
+              API to show locations to users, or a weather API to display the
+              current weather. This saves development time and resources, as
+              developers can leverage existing APIs instead of building similar
+              functionalities from scratch.
+              <br />
+              <br />
+              <br />
+              <br />
+              Question 2: How do I choose which APIs to use in my application?
+              <br />
+              <br />
+              Choosing the right API depends on several factors. First, the API
+              should provide the functionality that you need. Look at the API
+              documentation to see what features it provides. Second, consider
+              the API's reliability and performance. You can find this
+              information from user reviews or testing the API yourself. Third,
+              consider the cost. Some APIs are free up to a certain limit, while
+              others require a subscription. Lastly, consider the API's support
+              and community. Good APIs have active developer communities and
+              responsive support teams.
+              <br />
+              <br />
+              <br />
+              <br />
+              Question 3: How can I secure the data being sent and received
+              through an API?
+              <br />
+              <br />
+              Data security is crucial when working with APIs. To secure the
+              data, you can use several strategies. First, use HTTPS for all API
+              requests to ensure the data is encrypted during transit. Second,
+              authenticate and authorize all API requests to ensure only
+              legitimate users and applications can access the API. This is
+              usually done using API keys or tokens. Third, validate all
+              incoming data to protect against attacks such as SQL injection.
+              Finally, limit the data that your API returns. Only return the
+              data that's necessary for each request, minimizing the potential
+              damage if the data is intercepted.
+            </div>
+          ),
           spanish: ``,
           tooltip: ``,
         },
@@ -2685,9 +2752,119 @@ if __name__ == '__main__':
           action: `guide`,
           icon: `🤝`,
           request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
-            `Lesson 2`
+            `Lesson 4 Building Apps`
           )}?`,
-          response: `\n\n1. Define data sets and functions and discuss their roles in computer programming.\n2. Explain the different types of data sets and how to manipulate them in a program.\n3. Analyze different types of programming functions, including user-defined and predefined functions.\n4. Understand and use the syntax of the various programming languages to create functions and manipulate data sets.\n5. Discuss debugging techniques for functions and data sets.\n6. Define input and output parameters and explain how they are used in functions.\n7. Identify the difference between global and local variables and explain the scope of each.\n8. Construct decision structures to work with data sets and functions.\n9. Create loops to organize data sets and functions.\n10. Create programs that can generate and manipulate data sets and functions.`,
+          response: (
+            <div>
+              Raising money for a startup can be challenging, particularly for
+              first-time entrepreneurs. The process requires significant
+              preparation, time, effort, persistence, and oftentimes facing
+              numerous rejections. However, the difficulty also depends on
+              various factors such as the nature of the business, the market
+              size and potential, the team's background and experience, the
+              timing, and the startup's traction or demonstrated progress.
+              <br />
+              <br />
+              <ol>
+                <li>
+                  <b>Develop a Solid Business Plan</b>
+                  <div>
+                    Investors want to see that you have a clear plan for how
+                    you're going to run your business, make a profit, and
+                    provide them with a return on their investment. Your
+                    business plan should clearly articulate your business model,
+                    target market, competitive advantage, marketing strategy,
+                    financial projections, and other key details about your
+                    business.
+                  </div>
+                  <br />
+                </li>
+                <li>
+                  <b>Bootstrap</b>
+                  <div>
+                    Before seeking external funding, consider funding the
+                    business yourself or with the help of friends and family.
+                    This is called bootstrapping. It shows potential investors
+                    that you are willing to take on personal risk for your
+                    business.
+                  </div>
+                  <br />
+                </li>
+
+                <li>
+                  <b>Build a Strong Team</b>
+                  <div>
+                    Investors not only invest in ideas, but also in people. A
+                    strong, dedicated, and complementary team can make your
+                    startup much more appealing to investors.
+                  </div>
+                  <br />
+                </li>
+
+                <li>
+                  <b>Create a Minimum Viable Product (MVP)</b>
+                  <div>
+                    An MVP is the simplest version of your product that still
+                    delivers your core value proposition. Launching an MVP
+                    allows you to demonstrate traction, validate your business
+                    idea, and collect user feedback – all of which can make your
+                    startup more attractive to investors.
+                  </div>
+                  <br />
+                </li>
+
+                <li>
+                  <b>Network</b>
+                  <div>
+                    Attend industry events, startup meetups, and investor
+                    meetings to build relationships with potential investors.
+                    Networking can also provide valuable feedback and advice for
+                    your startup.
+                  </div>
+                  <br />
+                </li>
+
+                <li>
+                  <b>Pitch to Investors</b>
+                  <div>
+                    Prepare a concise, compelling investor pitch that clearly
+                    explains your business idea, market size, unique value
+                    proposition, business model, marketing strategy, financial
+                    projections, and the funding you need. Be ready to answer
+                    questions and objections.
+                  </div>
+                  <br />
+                </li>
+
+                <li>
+                  <b>Consider Different Types of Funding</b>
+                  <div>
+                    There are many types of funding available to startups,
+                    including angel investors, venture capital, crowdfunding,
+                    and government grants. Research each type to understand
+                    which is the best fit for your startup.
+                  </div>{" "}
+                  <br />
+                </li>
+
+                <li>
+                  <b>Be Persistent</b>
+                  <div>
+                    Fundraising can be a long process with many rejections.
+                    Persistence is key. Use rejections as an opportunity to
+                    learn, improve your business and pitch, and come back
+                    stronger.
+                  </div>{" "}
+                  <br />
+                </li>
+              </ol>
+              <br /> <br />
+              Remember, while raising money can provide resources for growth, it
+              also often involves giving up equity and control. Therefore,
+              always consider the trade-offs, and aim to achieve a balance
+              between maintaining control and accelerating growth.
+            </div>
+          ),
           spanish: ``,
           tooltip: ``,
         },
@@ -2697,135 +2874,132 @@ if __name__ == '__main__':
           action: `demonstrate`,
           icon: `🧿`,
           request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
-            `Lesson 2`
-          )} with no other text in python?`,
-          response: `"\n\n# Sample data set\ndata_set = [2, 4, 6, 8, 10]\n\n# Sample function\ndef add_nums(inp_list):\n    result = 0\n    for elem in inp_list:\n        result += elem\n    return result\n\n# Function call\nprint(add_nums(data_set)) # Output: 30"`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        define: {
-          completed: false,
-          impact: 100,
-          action: `define`, // may not need
-          icon: `👾`, // may not need
-          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
-            `Lesson 2`
-          )} in exactly one sentence?`,
-          response: `\n\nA set of data is a collection of related information, while a function is a predefined procedure used to transform one value into another.`,
-          spanish: ``,
-          tooltip: ``,
-        },
+            `Lesson 4 Building Apps`
+          )} in javascript?`,
+          response: `
+/*
+Creating subscriptions in Stripe involves a few steps:
 
-        quiz: {
-          completed: false,
-          impact: 100,
-          action: `quiz`,
-          icon: `🧪`,
-          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
-            `Lesson 2`
-          )}?`,
-          response: `\n\n1. Briefly explain the difference between a data set and a function in computer programming.\n2. What is the purpose of creating a function in a programming language?\n3. Describe two common uses of data sets in computer programming.`,
-          spanish: ``,
-          tooltip: ``,
+Frontend: Collect payment method information from the customer using Stripe's frontend library, Stripe.js.
+Backend: Create or retrieve a customer in Stripe.
+Backend: Attach the payment method to the customer.
+Backend: Create a subscription for the customer with the appropriate pricing plan.
+As previously mentioned, the sensitive operations (steps 2-4) should be performed on the backend to ensure security. Here's a simplified example of how you could do this:
+*/
+______________________________________
+
+-----
+/* The Frontend */
+/*
+First, you'll need to set up Stripe.js on your frontend and use it to collect card details. 
+The CardElement component provides a form where users can enter their card details.
+
+
+
+*/
+
+-----
+
+import React from 'react';
+import { loadStripe } from '@stripe/stripe-js';
+import { Elements, CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
+
+// Load Stripe.js with your publishable key.
+const stripePromise = loadStripe('your-publishable-key');
+
+// Create a new CheckoutForm component
+function CheckoutForm() {
+  const stripe = useStripe();
+  const elements = useElements();
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    // Use elements.getElement to get a reference to the mounted CardElement
+    const cardElement = elements.getElement(CardElement);
+
+    // Use stripe.createPaymentMethod to create a new Payment Method for the card
+    const { error, paymentMethod } = await stripe.createPaymentMethod({
+      type: 'card',
+      card: cardElement,
+    });
+
+    if (!error) {
+      const { id } = paymentMethod;
+      // Now you can send the id of the payment method to your backend and create the subscription
+      fetch('http://localhost:8000/create-subscription', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
         },
-        shop: {
-          completed: false,
-          impact: 100,
-          action: `shop`,
-          icon: `🛍️`,
-          request: `I wanna shop and support this network more. Can you show me some sponsors or local advertisements?`,
-          response: `This prompt is available for your business. Please reach out to be on Patreon with your interest :)`,
-          spanish: ``,
-          tooltip: ``,
-        },
-      },
+        body: JSON.stringify({ payment_method: id }),
+      });
+    }
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <CardElement />
+      <button type="submit">Subscribe</button>
+    </form>
+  );
+}
+
+// In your main component, wrap your checkout form with the Elements component
+function App() {
+  return (
+    <Elements stripe={stripePromise}>
+      <CheckoutForm />
+    </Elements>
+  );
+}
+
+export default App;
+
+-----
+
+/* The Backend */
+/*
+This is a very simplified example. 
+In a real-world application, you'd want to include 
+error handling and consider edge cases. You'd also 
+want to secure your endpoints and ensure only authenticated
+users can create subscriptions.
+*/
+
+-----
+const express = require('express');
+const stripe = require('stripe')('your-secret-key');
+const app = express();
+
+app.use(express.json());
+
+app.post('/create-subscription', async (req, res) => {
+  const { payment_method } = req.body;
+  
+  // Create a new customer or retrieve an existing one
+  const customer = await stripe.customers.create({
+    payment_method,
+    email: 'customer@example.com', // you'd retrieve this from your authentication system
+    invoice_settings: {
+      default_payment_method: payment_method,
     },
-    "Lesson 3": {
-      documentID: ``,
+  });
 
-      filler: ``,
+  // Create the subscription
+  const subscription = await stripe.subscriptions.create({
+    customer: customer.id,
+    items: [{ plan: 'your-plan-id' }],
+    expand: ['latest_invoice.payment_intent'],
+  });
 
-      hasCode: true,
-      highValue: false,
-      underConstruction: true,
-      completed: false,
-      needsImprovement: false,
-      new: true,
-      tooltip: ``,
-      sourceType: `video`, // may not need
-      button: `3. Creating Objects`, // may not need - `name`
-      header: `3. Creating Objects`,
-      fileSource:
-        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674220184/download_6_mzx1ss.mp4", // may not need
+  res.send(subscription);
+});
 
-      prompts: {
-        patreon: {
-          completed: false,
-          impact: 1000,
-          action: `generate`,
-          icon: `►`, //`✍️`
-          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
-            `Lesson 3`
-          )}?`,
-          response: `null`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        inspire: {
-          completed: false,
-          impact: 100,
-          action: `inspire`,
-          icon: `⚡`,
-          request: `ms. roxana, can you tell me how important object oriented programming will be in the metaverse?`,
-          response: `\n\nObject-orientated programming (OOP) is going to be a key component of the metaverse. OOP allows for advanced programming techniques such as abstraction, polymorphisim, inheritance, and encapsulation to be employed and it will be these advanced techniques that allow for the building of complex virtual worlds with a combination of 3D graphics, media, and interactive content. OOP provides the foundation for techniques such as simulation and artificial intelligence that will form the basis of functioning metaverse agents. OOP also provides the ability to build distributed, multi-user systems and security software to protect virtual worlds and the individual participants.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        summarize: {
-          completed: false,
-          impact: 100,
-          action: `summarize`,
-          icon: `📚`,
-          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
-            `Lesson 3`
-          )}?`,
-          response: `\n\nObject-Oriented Programming (OOP) is a programming paradigm that uses classes, objects and their associated methods to create applications. It allows developers to create organized and reusable code, making applications easier to maintain and extend.\n\nCRUD applications are those that Create, Read, Update, and Delete data. Examples include content management systems (CMS) and e-commerce storefronts. They allow a user to store data and retrieve data using the 4 basic operations.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        ask: {
-          completed: false,
-          impact: 100,
-          action: `ask`,
-          icon: `🔮`,
-          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
-            `Lesson 3`
-          )} with one sentence answers?`,
-          response: `\n\n1. What is object-oriented programming? - Object-oriented programming is a programming paradigm that uses objects and classes to structure code.\n\n2. What is a CRUD application? - CRUD stands for “create, read, update, delete” and refers to the operations that can be performed on a database or application.\n\n3. What is the difference between object-oriented programming and procedural programming? - Object-oriented programming focuses on creating objects and classes to organize code, while procedural programming works with functions and commands to execute tasks.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        guide: {
-          completed: false,
-          impact: 100,
-          action: `guide`,
-          icon: `🤝`,
-          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
-            `Lesson 3`
-          )}?`,
-          response: `\n\n1. Understand the overall concept of Object Oriented Programming (OOP) and its components: classes, objects, methods, inheritance, encapsulation, polymorophism.\n2. Understand the concepts of Abstraction, Encapsulation and Modularity, and the role they play in achieving well-crafted software.\n3. Learn the basics of data design and strategy, such as SQL and MongoDB.\n4. Understand basic concepts of CRUD - Create, Read, Update, and Delete.\n5. Be familiar with the libraries and best practices for implementing CRUD operations with multiple languages and technologies.\n6. Understand how to properly store, retrieve and query large amounts of data.\n7. Learn how to diagnose and resolve common errors that arise from applying OOP principles into CRUD operations.\n8. Understand the role of security measures and consider their importance when implementing a CRUD application.\n9. Be familiar with software design patterns such as Model-View-Controller (MVC) and how they apply to CRUD applications.\n10. Learn how to properly test for specific requirements and assumptions when building a CRUD application.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        demonstrate: {
-          completed: false,
-          impact: 100,
-          action: `demonstrate`,
-          icon: `🧿`,
-          request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
-            `Lesson 3`
-          )} with no other text in Java?`,
-          response: `\n\nExample of Object Oriented Programming and CRUD Applications in Java:\n\npublic class StudentRecord {\n    private int id;\n    private String name;\n    \n    // Constructor\n    public StudentRecord(int id, String name) {\n        this.id = id;\n        this.name = name;\n    }\n    \n    // Getters and Setters\n    public int getId() {\n        return id;\n    }\n    public void setId(int id) {\n        this.id = id;\n    }\n    public String getName() {\n        return name;\n    }\n    public void setName(String name) {\n        this.name = name;\n    }\n    \n    // CRUD methods\n    public void create() {\n        // Code to create a new student record in the database\n    }\n    public void read() {\n        // Code to read an existing student record from the database\n    }\n    public void update() {\n        // Code to update an existing student record in the database\n    }\n    public void delete() {\n        // Code to delete an existing student record from the database\n    }\n}`,
+app.listen(8000, () => console.log('Server running on port 8000'));
+
+
+          `,
           spanish: ``,
           tooltip: ``,
         },
@@ -2835,22 +3009,45 @@ if __name__ == '__main__':
           action: `define`, // may not need
           icon: `👾`, // may not need
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
-            `Lesson 3`
+            `Lesson 4 Building Apps`
           )} in exactly one sentence?`,
-          response: `\n\nObject Oriented Programming is a programming paradigm that uses abstraction to create objects and classes for improving the program structure. CRUD applications are computer programs designed for basic Create, Read, Update, and Delete operations on data in a database.`,
+          response: `Building a startup involves identifying a unique business idea or problem to solve, conducting market research, developing a business plan, assembling a team, securing necessary financing, creating a product or service, launching it to the market, and continuously iterating and growing based on customer feedback and market dynamics.`,
           spanish: ``,
           tooltip: ``,
         },
-
         quiz: {
           completed: false,
           impact: 100,
           action: `quiz`,
           icon: `🧪`,
           request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
-            `Lesson 3`
-          )} without any answers?`,
-          response: `\n\n1. What is the purpose of object-oriented programming?\n2. In what ways do CRUD applications facilitate data management?\n3. How is object-oriented programming used to create complex applications?`,
+            `Lesson 4 Building Apps`
+          )}?`,
+          response: (
+            <div>
+              What factors should you consider when choosing third-party APIs to
+              integrate into your startup's product or service?
+              <br />
+              <br />
+              How would you approach evaluating the trade-offs between building
+              a feature in-house versus using an API service?
+              <br />
+              <br />
+              Describe a situation where using an API might add significant
+              value to a startup's service or product, and explain why.
+              <br />
+              <br />
+              Discuss the potential security concerns a startup should consider
+              when integrating third-party APIs and how you might mitigate these
+              risks.
+              <br />
+              <br />
+              How can the effective use of APIs accelerate a startup's time to
+              market and scalability, and can you provide examples to illustrate
+              your points?
+              <br />
+            </div>
+          ),
           spanish: ``,
           tooltip: ``,
         },
@@ -2860,1651 +3057,89 @@ if __name__ == '__main__':
           action: `shop`,
           icon: `🛍️`,
           request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
-          response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-      },
-    },
-    "Lesson 4": {
-      documentID: ``,
+          response: (
+            <div>
+              This shopping slot is not being utilized yet. Please contact me in
+              Patreon to qualify. In the meantime, lets talk about the
+              socioeconomic state of Latinos in tech.
+              <br />
+              <br />
+              <p>
+                The underrepresentation of Latinos as founders of major tech
+                companies is a multifaceted issue that can be attributed to
+                various factors, including socioeconomic, educational, and
+                cultural barriers, as well as systemic biases and
+                discrimination. Here are some reasons that contribute to this
+                underrepresentation:
+              </p>
+              <br />
+              <ol>
+                <li>
+                  Educational barriers: Access to quality education is essential
+                  for success in the technology industry. However, Latinos may
+                  face challenges in accessing high-quality education due to
+                  factors such as socioeconomic status, underfunded schools, or
+                  living in areas with fewer educational resources. These
+                  challenges can limit their exposure to computer science and
+                  other STEM subjects, reducing the likelihood of pursuing
+                  careers in technology. <br />
+                </li>
+                <li>
+                  Socioeconomic factors: Socioeconomic status plays a
+                  significant role in shaping career opportunities and
+                  aspirations. Latinos, as a group, have historically faced
+                  economic disparities, which can impact their access to
+                  resources, networking opportunities, and the ability to take
+                  risks associated with entrepreneurship. <br />
+                </li>
 
-      filler: ``,
-
-      hasCode: true,
-      highValue: false,
-      underConstruction: true,
-      completed: false,
-      needsImprovement: false,
-      new: true,
-      tooltip: ``,
-      sourceType: `video`, // may not need
-      button: `4. Internet Apps`, // may not need - `name`
-      header: `4. Internet Apps`,
-      fileSource:
-        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674220233/download_7_l6kd1z.mp4", // may not need
-
-      prompts: {
-        patreon: {
-          completed: false,
-          impact: 1000,
-          action: `generate`,
-          icon: `►`, //`✍️`
-          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
-            `Lesson 4`
-          )}?`,
-          response: `null`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        inspire: {
-          completed: false,
-          impact: 100,
-          action: `inspire`,
-          icon: `⚡`,
-          request: `ms. roxana, can you please explain how the data created by HTTP methods and machine learning algorithms are related?`,
-          response: `\n\nData created by HTTP methods and machine learning algorithms are related in that both produce data that can be used for analysis. HTTP methods generate data about how users interact with a website; for example, what pages they visit, how long they stay on the page, and what session activation times are. Machine learning algorithms generate data related to how algorithms use data to make predictions or decisions; for example, what data inputs were used to trigger a certain result, how the algorithm learned from past experiences, and what parameters impact the accuracy of models. Both methods can be used to draw insights, create models, and form decisions around data.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        summarize: {
-          completed: false,
-          impact: 100,
-          action: `summarize`,
-          icon: `📚`,
-          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
-            `Lesson 4`
-          )}?`,
-          response: `\n\nHTTP methods are the building blocks of how a web application communicates with the server. They instruct the server to take a specific action. The methods are: GET, POST, PUT, PATCH and DELETE. GET requests are used to retrieve a resource from the server. POST requests are used to send data to the server. PUT requests are used to upload or update a resource on the server. PATCH requests are used to partially update a resource on the server. DELETE requests are used to remove a resource from the server.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        ask: {
-          completed: false,
-          impact: 100,
-          action: `ask`,
-          icon: `🔮`,
-          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
-            `Lesson 4`
-          )} with one sentence answers?`,
-          response: `\n\n1.What is the difference between GET and POST methods? - GET is used to request data from a specified source, while POST is used to send data to a specified source. \n2. What is the DELETE method used for? - DELETE is used to delete data on a specified source. \n3. What is the PUT method used for? - PUT is used to update or replace existing data on a specified source.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        guide: {
-          completed: false,
-          impact: 100,
-          action: `guide`,
-          icon: `🤝`,
-          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
-            `Lesson 4`
-          )}?`,
-          response: `\n\n1. GET - allows clients to view and request data from a server. \n2. POST - allows clients to send data to be processed to the server. \n3. HEAD - similar to GET, but only returns metadata or the response headers. \n4. PUT - allows clients to upload a file to the server. \n5. DELETE - requests the server to delete a specified resource. \n6. TRACE - echoes back to the client whatever was sent to the server. \n7. OPTIONS - used to describe the communication options for the request-response pair. \n8. CONNECT - allows the client to establish a connection with the server. \n9. PATCH - used to partially modify an existing resource. \n10. LINK - helps in establishing relationships between multiple web resource requests.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        demonstrate: {
-          completed: false,
-          impact: 100,
-          action: `demonstrate`,
-          humanTouch: true,
-          icon: `🧿`,
-          request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
-            `Lesson 4`
-          )} with no other text in javascript to create a transaction with Stripe?`,
-          response: `\n\nYes, you can use the following code example to create a transaction with Stripe in JavaScript:\n\n// Create the transaction with Stripe \nconst Stripe = require('stripe');\nconst stripe = new Stripe('<YOUR_STRIPE_SECRET_KEY>'); \n\n//Create the transaction details\nconst transactionDetails = {\n  amount: 10.00,\n  currency: 'usd',\n  source: '<token generated by Stripe.js>'\n};\n\n//Submit the transaction details to Stripe\nstripe.charges.create(transactionDetails, (err, charge) => {\n  if (err) {\n    console.log(err); \n  } else { \n    console.log('Transaction successful');\n  }\n});`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        define: {
-          completed: false,
-          impact: 100,
-          action: `define`, // may not need
-          icon: `👾`, // may not need
-          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
-            `Lesson 4`
-          )} in exactly one sentence?`,
-          response: `\n\nHTTP methods are commands that a client sends to a server to indicate the desired action to be performed on a provided resource.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-
-        quiz: {
-          completed: false,
-          impact: 100,
-          action: `quiz`,
-          icon: `🧪`,
-          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
-            `Lesson 4`
-          )} without any answers?`,
-          response: `\n\n1. What common HTTP methods are used in RESTful web services?\n2. What is the main purpose of the OPTIONS method?\n3. What is the HTTP method used to modify an existing resource?`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        shop: {
-          completed: false,
-          impact: 100,
-          action: `shop`,
-          icon: `🛍️`,
-          request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
-          response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-      },
-    },
-    "Lesson 5": {
-      documentID: ``,
-
-      filler: ``,
-
-      hasCode: true,
-      highValue: false,
-      underConstruction: true,
-      completed: false,
-      needsImprovement: false,
-      new: true,
-      tooltip: ``,
-      sourceType: `video`, // may not need
-      button: `5. Loops & Counting`, // may not need - `name`
-      header: `5. Loops & Counting`,
-      fileSource:
-        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674220261/download_8_gww39e.mp4", // may not need
-      prompts: {
-        patreon: {
-          completed: false,
-          impact: 1000,
-          action: `generate`,
-          icon: `►`, //`✍️`
-          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
-            `Lesson 5`
-          )}?`,
-          response: `null`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        inspire: {
-          completed: false,
-          impact: 100,
-          action: `inspire`,
-          icon: `⚡`,
-          request: `ms. roxana, can you please explain what kind of loops Google or OpenAI  uses in their search algorithms?`,
-          response: `\n\nGoogle and OpenAI use many different kinds of loops in their search algorithms, including for loops, while loops, recursive loops, and more. For loops are used to iterate through a sequence of items, while while loops are used to continue repeating a set of instructions until a certain condition is met. Recursive loops are used to call a function within itself, allowing for deeper exploration of search queries. Google and OpenAI also use machine learning algorithms in their search algorithms to optimize the looping and increase the efficiency of their search results.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        summarize: {
-          completed: false,
-          impact: 100,
-          action: `summarize`,
-          icon: `📚`,
-          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
-            `Lesson 5`
-          )}?`,
-          response: `\n\nComputer programming loops use a statement or set of statements to repeat a block of code. \nLoops allow us to repeat a set of statements for a given number of times or until a certain condition is met. Loops are used to iterate over collections of data or create animations, and come in three main types: for, while, and do-while loops.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        ask: {
-          completed: false,
-          impact: 100,
-          action: `ask`,
-          icon: `🔮`,
-          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
-            `Lesson 5`
-          )} with one sentence answers?`,
-          response: `\n\n1. What is a loop in programming? -Looping is the ability to repeat a set of instructions until a condition is met. \n2. What is the difference between a while loop and a for loop? -A while loop runs slightly differently than a for loop. A for loop runs for a specific number of iterations, while a while loop runs until a certain condition is met. \n3. What is an infinite loop? -An infinite loop is a loop that runs indefinitely, never reaching a completion point.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        guide: {
-          completed: false,
-          impact: 100,
-          action: `guide`,
-          icon: `🤝`,
-          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
-            `Lesson 5`
-          )}?`,
-          response: `\n\n1. Understand what a loop is and its role in programming.\n2. Know the most common types of loops and their syntax.\n3. Become familiar with iteration and understand how it works in loops.\n4. Understand the concepts of loop control variables.\n5. Learn how to use for and while loops for different tasks.\n6. Know when and how to break out of a loop.\n7. Familiarize yourself with continue and its usage in loops.\n8. Understand nested loops and when they should be used.\n9. Learn how to use recursion as an alternative form of looping.\n10. Familiarize yourself with different debugging tools and how to use them to identify and solve errors related to looping.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        demonstrate: {
-          completed: false,
-          impact: 100,
-          action: `demonstrate`,
-          icon: `🧿`,
-          request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
-            `Lesson 5`
-          )} with no other text in C#?`,
-          response: `\n\nfor (int i = 0; i < 10; i++)\n{\n    Console.WriteLine(i);\n}`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        define: {
-          completed: false,
-          impact: 100,
-          action: `define`, // may not need
-          icon: `👾`, // may not need
-          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
-            `Lesson 5`
-          )} in exactly one sentence?`,
-          response: `\n\nComputer programming loops are a set of instructions that are repeated until a specific condition is met.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-
-        quiz: {
-          completed: false,
-          impact: 100,
-          action: `quiz`,
-          icon: `🧪`,
-          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
-            `Lesson 5`
-          )} without any answers?`,
-          response: `\n\n1. What type of loop should be used when you want to iterate over a collection of items in the same order that they appear in the collection? \n\n2. What keyword is used in most programming languages to start and end a loop? \n\n3. How do you prevent an infinite loop from running indefinitely in a program?`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        shop: {
-          completed: false,
-          impact: 100,
-          action: `shop`,
-          icon: `🛍️`,
-          request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
-          response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-      },
-    },
-    "Lesson 6": {
-      documentID: ``,
-
-      filler: ``,
-
-      hasCode: true,
-      highValue: false,
-      underConstruction: true,
-      completed: false,
-      needsImprovement: false,
-      new: true,
-      tooltip: ``,
-      sourceType: `video`, // may not need
-      button: `6. HTML`, // may not need - `name`
-      header: `6. HTML`,
-      fileSource:
-        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674220287/download_9_uf9kjn.mp4", // may not need
-
-      prompts: {
-        patreon: {
-          completed: false,
-          impact: 1000,
-          action: `generate`,
-          icon: `►`, //`✍️`
-          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
-            `Lesson 6`
-          )}?`,
-          response: `null`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        inspire: {
-          completed: false,
-          impact: 100,
-          action: `inspire`,
-          icon: `⚡`,
-          request: `ms. roxana, can you please explain why Facebook created React, its position in the market, and how it's related to how HTML was coded for myspace pages?`,
-          response: `\n\nFacebook created React to modernize how webpages are coded. React is a JavaScript library that enables developers to create user interfaces. In the market, React serves as a powerful solution for building modern web, mobile, and desktop applications. It is related to how HTML was coded for MySpace pages in that it is also used to build webpages, but is much more advanced than HTML as it is a JavaScript library, which allows developers to create complex user interfaces, unlike HTML which only provides basic building blocks.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        summarize: {
-          completed: false,
-          impact: 100,
-          action: `summarize`,
-          icon: `📚`,
-          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
-            `Lesson 6`
-          )}?`,
-          response: `\n\nHTML (HyperText Markup Language) is the standard language used for designing webpages and web applications. It uses a collection of tags to define the structure and content of webpages. The tags describe the content and arrange it into sections, paragraphs, headings, lists, links, and images. HTML also enables the designer to add styles or scripts to further customize the page's look and functionality.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        ask: {
-          completed: false,
-          impact: 100,
-          action: `ask`,
-          icon: `🔮`,
-          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
-            `Lesson 6`
-          )} with one sentence answers?`,
-          response: `\n\n1. What is HTML? - HTML is the standard markup language for creating web pages and web applications. \n2. How do I create a link in HTML? - To create a link in HTML, use the <a> tag with the href attribute.\n3. How do I create an HTML table? - Use the <table> tag to create an HTML table.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        guide: {
-          completed: false,
-          impact: 100,
-          action: `guide`,
-          icon: `🤝`,
-          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
-            `Lesson 6`
-          )}?`,
-          response: `\n\n1. Understand the syntax rules for HTML elements and structure\n2. Know the differences between HTML versions, including HTML4, XHTML and HTML5\n3. Be aware of how to structure and divide HTML code into sections for readability\n4. Become familiar with the use of HTML tags, including table, paragraph and list tags\n5. Learn the basics of using hyperlinks and internal/external links\n6. Develop an understanding of the attributes, such as styles and classes, that can be used in HTML document\n7. Comprehend the basics of displaying multimedia like video, audio and Flash content\n8. Understand the structure and arrangement of meta tags and metadata\n9. Learn how to detect and troubleshoot HTML errors and bugs\n10. Grasp the basics of using HTML forms and input fields`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        demonstrate: {
-          humanTouch: true,
-          completed: false,
-          impact: 100,
-          action: `demonstrate`,
-          icon: `🧿`,
-          request: `ms. roxana, can you please show me an example of a box with a name centered using flexbox positioning in ${ultimateEffeciencyJutsu(
-            `Lesson 6`
-          )} with no other text in HTML?`,
-          response: `\n\n<div style=\"display: flex; justify-content: center;\"> \n  <div>MyName</div> \n</div>`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        define: {
-          completed: false,
-          impact: 100,
-          action: `define`, // may not need
-          icon: `👾`, // may not need
-          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
-            `Lesson 6`
-          )} in exactly one sentence?`,
-          response: `\n\nHTML (HyperText Markup Language) is a standardized system for tagging text files to achieve font, color, graphic, and hyperlink effects on World Wide Web pages.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-
-        quiz: {
-          completed: false,
-          impact: 100,
-          action: `quiz`,
-          icon: `🧪`,
-          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
-            `Lesson 6`
-          )}?`,
-          response: `\n\n1. What is the basic syntax of an HTML tag?\n2. What is the purpose of the <head> tag in an HTML document?\n3. How can you reference a custom external stylesheet in an HTML document?`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        shop: {
-          completed: false,
-          impact: 100,
-          action: `shop`,
-          icon: `🛍️`,
-          request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
-          response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-      },
-    },
-    "Lesson 7": {
-      documentID: ``,
-
-      filler: ``,
-
-      hasCode: true,
-      highValue: false,
-      underConstruction: true,
-      completed: false,
-      needsImprovement: false,
-      new: true,
-      tooltip: ``,
-      sourceType: `video`, // may not need
-      button: `7. CSS`, // may not need - `name`
-      header: `7. CSS`,
-      fileSource:
-        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674220314/download_10_epzusw.mp4", // may not need
-
-      prompts: {
-        patreon: {
-          completed: false,
-          impact: 1000,
-          action: `generate`,
-          icon: `►`, //`✍️`
-          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
-            `Lesson 7`
-          )}?`,
-          response: `null`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        inspire: {
-          humanTouch: true,
-          completed: false,
-          impact: 100,
-          action: `inspire`,
-          icon: `⚡`,
-          request: `ms. roxana, can you please how designers use tools like Figma and CSS?`,
-          response: `\n\nDesigners use tools like Figma to create visuals and wireframes; they use CSS to create the design styling, layouts, grid designs, and page layout structure. Figma is used to create a visual representation of the design, such as a color, font and design layout. Then, CSS can be used to bring this design to life by styling the elements and adding animations, transitions, and other interactive features. Additionally, designers use CSS to make sure their designs are responsive and work properly on different devices and browsers.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        summarize: {
-          completed: false,
-          impact: 100,
-          action: `summarize`,
-          icon: `📚`,
-          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
-            `Lesson 7`
-          )}?`,
-          response: `\n\nCSS stands for "Cascading Style Sheets" and is a type of language used to create the design, style, and layout of a webpage. It describes the look and formatting of documents written in HTML or XML, and can be used to style webpages, text, images, and even audio and video content. CSS can be used to adjust some basic things like font size, background colors, and border colors, etc., as well as more complex styling and layout configurations.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        ask: {
-          completed: false,
-          impact: 100,
-          action: `ask`,
-          icon: `🔮`,
-          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
-            `Lesson 7`
-          )} with one sentence answers?`,
-          response: `\n\n1. What are the benefits of using CSS? - CSS enables designers to create attractive and interactive webpages without writing long lines of code.\n\n2. How do I add a background image to my web page with CSS? - The CSS background-image property is used to set an image as the background of an element.\n\n3. How can I create flexible layouts with CSS? - CSS Flexbox allows developers to build flexible web layouts through shared properties and alignments.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        guide: {
-          completed: false,
-          impact: 100,
-          action: `guide`,
-          icon: `🤝`,
-          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
-            `Lesson 7`
-          )}?`,
-          response: `\n\n1. Understand basic concepts such as HTML elements, selectors, classes and ID attributes.\n\n2. Know the various CSS selectors and their uses, such as element selectors, class selectors and ID selectors.\n\n3. Learn how to apply text-level, block-level and box properties to elements.\n\n4. Practice using shorthand properties to control multiple CSS properties.\n\n5. Master the use of CSS positioning elements to control the flow and order of presentation.\n\n6. Understand the basics of working with forms, including styling form elements.\n\n7. Learn how to create dynamic pages in CSS by understanding hover states, dynamic page selection and page transiting.\n\n8. Familiarize yourself with browser-dependent templates and hacks to ensure consistently appearing pages.\n\n9. Understand the basics of working with layout via the float, clear and display properties.\n\n10. Research cross-browser problems such as box models, table rendering and page elements.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        demonstrate: {
-          completed: false,
-          impact: 100,
-          action: `demonstrate`,
-          icon: `🧿`,
-          request: `ms. roxana, can you please show me an example of the box model and flexbox in ${ultimateEffeciencyJutsu(
-            `Lesson 7`
-          )} with no other text in CSS?`,
-          response: `\n\nYes! Here is an example of the box model in CSS:\n\ndiv {\n    width: 100px;\n    height: 100px;\n    border: 1px solid black;\n    padding: 10px;\n    margin: 20px;\n}\n\nAnd here is an example of flexbox in CSS:\n\ndiv {\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between;\n}`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        define: {
-          completed: false,
-          impact: 100,
-          action: `define`, // may not need
-          icon: `👾`, // may not need
-          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
-            `Lesson 7`
-          )} in exactly one sentence?`,
-          response: `\n\nCSS is a stylesheet language used to define the presentation of HTML elements on a web page.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-
-        quiz: {
-          completed: false,
-          impact: 100,
-          action: `quiz`,
-          icon: `🧪`,
-          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
-            `Lesson 7`
-          )} without any answers?`,
-          response: `\n\n1. What's the difference between margin and padding in terms of CSS styling? \n2. What kind of selector would you use to target a div element with an ID of 'container'? \n3. What is the purpose of using float in CSS?`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        shop: {
-          completed: false,
-          impact: 100,
-          action: `shop`,
-          icon: `🛍️`,
-          request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
-          response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-      },
-    },
-    "Lesson 8": {
-      documentID: ``,
-
-      filler: ``,
-
-      hasCode: true,
-
-      highValue: false,
-      underConstruction: false,
-      completed: false,
-      needsImprovement: false,
-      new: true,
-      tooltip: ``,
-      sourceType: `video`, // may not need
-      button: `8. React`, // may not need - `name`
-      header: `8. React`,
-      fileSource:
-        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674220343/download_11_whqtek.mp4", // may not need
-
-      prompts: {
-        patreon: {
-          completed: false,
-          impact: 1000,
-          action: `generate`,
-          icon: `►`, //`✍️`
-          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
-            `Lesson 8`
-          )}?`,
-          response: `null`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        inspire: {
-          completed: false,
-          impact: 100,
-          action: `inspire`,
-          icon: `⚡`,
-          request: `ms. roxana, can React programming be used to code apps with AI or blockchain?`,
-          response: `\n\nYes, React programming can be used to code apps with AI or blockchain. React Native allows developers to create powerful and robust applications with AI and blockchain capabilities. You can also use tools like Hyperledger or Ethereum to create blockchain-based applications with React.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        summarize: {
-          completed: false,
-          impact: 100,
-          action: `summarize`,
-          icon: `📚`,
-          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
-            `Lesson 8`
-          )}?`,
-          response: `\n\nReact is a JavaScript library for building user interfaces. It is a component-based library which allows developers to write components that manage their own state and can be easily combined with other components to make complex user interfaces. React also provides a declarative API for creating UI elements, allowing developers to more easily create dynamic and interactive web applications.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        ask: {
-          completed: false,
-          impact: 100,
-          action: `ask`,
-          icon: `🔮`,
-          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
-            `Lesson 8`
-          )} with one sentence answers?`,
-          response: `\n\n1. What is React? Ans: React is a JavaScript library for building user interfaces. \n2. How is React different from other JavaScript frameworks? Ans: React is a library, while other frameworks like Angular and Vue are full-fledged frameworks.\n3. What is the virtual DOM? Ans: The virtual DOM is an abstract copy of the actual DOM, which React utilizes to minimize DOM manipulation.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        guide: {
-          completed: false,
-          impact: 100,
-          action: `guide`,
-          icon: `🤝`,
-          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
-            `Lesson 8`
-          )}?`,
-          response: `\n\n1. Become familiar with basic concepts, such as components, props, state, and lifecycle\n2. Understand core features, such as JSX and the Virtual DOM\n3. Learn the basics of the React architecture and how to create React applications\n4. Compare React to other frameworks, such as Angular and Vue\n5. Master the React syntax and writing efficient React components\n6. Learn the best practices when working with React and create scalable applications\n7. Become familiar with popular libraries, such as Redux, React Router, and React Transition Group\n8. Use debugging tools to identify and resolve issues\n9. Understand the best practices for security and performance optimization\n10. Utilize testing frameworks such as Mocha, Chai, and Jest to ensure code quality`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        demonstrate: {
-          humanTouch: true,
-          completed: false,
-          impact: 100,
-          action: `demonstrate`,
-          icon: `🧿`,
-          request: `ms. roxana, can you please show me an example of a "login with Google" button in ${ultimateEffeciencyJutsu(
-            `Lesson 8`
-          )} with no other text in React?`,
-          response: `\n\nYes, here is an example of a \"Login with Google\" button in React programming, with no other text:\n\nimport React from \"react\";\nimport { GoogleLogin } from 'react-google-login';\n \nconst LoginComponent = () => {\n  const responseGoogle = (response) => {\n      console.log(response);\n  }\n \n  return (\n    <GoogleLogin\n        clientId=\"YOUR_CLIENT_ID\"\n        buttonText=\"Login with Google\"\n        onSuccess={responseGoogle}\n        onFailure={responseGoogle}\n        cookiePolicy={'single_host_origin'}\n    />\n  );\n}\n \nexport default LoginComponent;`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        define: {
-          completed: false,
-          impact: 100,
-          action: `define`, // may not need
-          icon: `👾`, // may not need
-          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
-            `Lesson 8`
-          )} in exactly one sentence?`,
-          response: `\n\nReact is an open-source JavaScript library for building user interfaces.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-
-        quiz: {
-          completed: false,
-          impact: 100,
-          action: `quiz`,
-          icon: `🧪`,
-          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
-            `Lesson 8`
-          )}?`,
-          response: `\n\n1. What is the purpose of React's component lifecycle methods?\n2. What is the fundamental difference between a Class component and a Functional component in React?\n3. What is the purpose of the useState hook in React?`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        shop: {
-          completed: false,
-          impact: 100,
-          action: `shop`,
-          icon: `🛍️`,
-          request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
-          response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-      },
-    },
-    "Lesson 9": {
-      documentID: ``,
-
-      filler: ``,
-
-      highValue: false,
-      hasCode: true,
-      underConstruction: false,
-      completed: false,
-      needsImprovement: false,
-      new: true,
-      tooltip: ``,
-      sourceType: `video`, // may not need
-      button: `9. Creating Users`, // may not need - `name`
-      header: `9. Creating Users`,
-      fileSource:
-        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674220377/download_12_adwen3.mp4", // may not need
-
-      prompts: {
-        patreon: {
-          completed: false,
-          impact: 1000,
-          action: `generate`,
-          icon: `►`, //`✍️`
-          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
-            `Lesson 9`
-          )}?`,
-          response: `null`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        inspire: {
-          completed: false,
-          impact: 100,
-          action: `inspire`,
-          icon: `⚡`,
-          request: `ms. roxana, can you please explain how companies are able to collect data when creating users on their platform?`,
-          response: `\n\nCompanies are able to collect data from users when they create an account by using a series of registration or sign-up forms where the user is asked to provide information. This information may include name, age, gender, location, email, phone number, and other details. This data is then stored in the company’s database, which is later accessed by data scientists and other team members to gain insights into user behaviour, needs and preferences.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        summarize: {
-          completed: false,
-          impact: 100,
-          action: `summarize`,
-          icon: `📚`,
-          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
-            `Lesson 9`
-          )}?`,
-          response: `\n\nOAuth is an open-standard authorization protocol or framework that describes how users can access resources on third-party websites or applications through a secure system. It works by providing access tokens, which are essentially encrypted keys that identify a user and give them access to a restricted resource. Users log in to their accounts and authorise the third-party application to access their data by providing a specific access token. The application then presents the token to the service provider, which the service provider then verifies and allows the access to the user-assigned resource. OAuth promotes secure access to user data through stronger authentication mechanisms, as well as by allowing users to revoke app access rights at any time.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        ask: {
-          completed: false,
-          impact: 100,
-          action: `ask`,
-          icon: `🔮`,
-          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
-            `Lesson 9`
-          )} with one sentence answers?`,
-          response: `\n\n1. What is OAuth? Answer: OAuth is an open standard authorization framework that allows applications to securely access resources on behalf of a user.\n\n2. What is the difference between OAuth and OpenID? Answer: OAuth is used to authorize third-party applications to access user resources, whereas OpenID is used to authenticate users.\n\n3. What is a Bearer Token? Answer: A Bearer Token is an access token that grants its holder access to a protected resource without additional authentication.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        guide: {
-          completed: false,
-          impact: 100,
-          action: `guide`,
-          icon: `🤝`,
-          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
-            `Lesson 9`
-          )}?`,
-          response: `\n\n1. OAuth is an open-source authorization protocol that allows users to securely access resources without sharing personal credentials.\n\n2. OAuth enables clients to access resources on behalf of a user without having to store or handle the user's credentials.\n\n3. OAuth uses tokens which identify the authenticated user and the scope of access permitted to the resource.\n\n4. OAuth uses an authorization server and a resource server to manage access to resources.\n\n5. OAuth provides various permission-granting options, including authorization codes, implicit grants, resource owner credentials, and client credentials.\n\n6. OAuth is used to authorize access to web services, APIs, and mobile applications.\n\n7. OAuth supports applications built on different operating systems, such as web, mobile, and desktop.\n\n8. OAuth provides support for both the client and the resource server to communicate securely over the internet.\n\n9. OAuth enables applications to access user data on other websites and in the cloud.\n\n10. OAuth is built on the concept of secure delegation and is used in many popular applications, such as Google, Amazon, and Twitter.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        demonstrate: {
-          completed: false,
-          impact: 100,
-          action: `demonstrate`,
-          icon: `🧿`,
-          request: `ms. roxana, can you please show me an example of using ${ultimateEffeciencyJutsu(
-            `Lesson 9`
-          )} with no other text in ruby?`,
-          response: `\n\nHere is a basic example of how to implement OAuth in Ruby.\n\nrequire 'base64'\nrequire 'net/https'\nrequire 'uri'\nrequire 'json'\n\n# Client ID and secret\nclient_id = 'yourclientid'\nclient_secret = 'yourclientsecret'\n\n# HTTP request URL \nurl = 'https://example.com/oauth/token'\n\n# Encode credentials\ncredentials = Base64.strict_encode64(\"#{client_id}:#{client_secret}\")\n\n# Create the HTTP objects\nuri = URI.parse(url)\nhttp = Net::HTTP.new(uri.host, uri.port)\nhttp.use_ssl = true\n\n# Create the POST request\nrequest = Net::HTTP::Post.new(uri.request_uri)\n\n# Set headers\nrequest.basic_auth('Basic', credentials)\nrequest.add_field('Content-Type', 'application/x-www-form-urlencoded')\n\n# Set body params\nrequest.body = 'grant_type=client_credentials'\n\n# Send request\nresponse = http.request(request) \n\n# Parse response\ndata = JSON.parse(response.body)\n\n# Extract the access token\naccess_token = data['access_token']`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        define: {
-          completed: false,
-          impact: 100,
-          action: `define`, // may not need
-          icon: `👾`, // may not need
-          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
-            `Lesson 9`
-          )} in exactly one sentence?`,
-          response: `\n\nOAuth is an open authorization protocol that enables secure API authentication.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-
-        quiz: {
-          completed: false,
-          impact: 100,
-          action: `quiz`,
-          icon: `🧪`,
-          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
-            `Lesson 9`
-          )}?`,
-          response: `\n\n1. How does OAuth enable secure access to data?\n\n2. What are the different OAuth authorization flows?\n\n3. How does OAuth differ from OpenID Connect?`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        shop: {
-          completed: false,
-          impact: 100,
-          action: `shop`,
-          icon: `🛍️`,
-          request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
-          response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-      },
-    },
-    "Lesson 10": {
-      documentID: ``,
-
-      filler: ``,
-
-      highValue: false,
-      hasCode: true,
-      underConstruction: false,
-      completed: false,
-      needsImprovement: false,
-      new: true,
-      tooltip: ``,
-      sourceType: `video`, // may not need
-      button: `10. Database Foundations`, // may not need - `name`
-      header: `10. Database Foundations`,
-      fileSource:
-        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674220399/download_13_xxdhvo.mp4", // may not need
-
-      prompts: {
-        patreon: {
-          completed: false,
-          impact: 1000,
-          action: `generate`,
-          icon: `►`, //`✍️`
-          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
-            `Lesson 10`
-          )}?`,
-          response: `null`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        inspire: {
-          completed: false,
-          impact: 100,
-          action: `inspire`,
-          icon: `⚡`,
-          request: `ms. roxana, can you please explain how users in a databases and machine learning are related?`,
-          response: `\n\nUsers in a database and machine learning are related because having more users in a database provides more data for the machine learning algorithm to analyze. This data can be used to train the machine learning model, as well as to improve the model's accuracy. In other words, the more information available in the database, the better the machine learning model can be trained and the more accurate it can become.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        summarize: {
-          completed: false,
-          impact: 100,
-          action: `summarize`,
-          icon: `📚`,
-          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
-            `Lesson 10`
-          )}?`,
-          response: `\n\nDatabase design involves creating a logical and physical structure of a database, using software applications and specialized programming tools. This process involves mapping out the structure of the data, setting up and maintaining the data storage parameters, and creating the necessary rules and regulations to manage the data. Database design also involves setting up the processes needed to manage the flow of data into and out of the system. Finally, it also involves setting up any necessary user access and security protocols.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        ask: {
-          completed: false,
-          impact: 100,
-          action: `ask`,
-          icon: `🔮`,
-          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
-            `Lesson 10`
-          )} with one sentence answers?`,
-          response: `\n\n1. What is normalization? - Normalization is a process of organizing data in a database to minimize redundancy and dependency.\n\n2. What is a primary key? - A primary key is a unique identifier for a record in a database table.\n\n3. What is the difference between clustered and nonclustered index? - A clustered index stores the data in a sorted format, while a nonclustered index only stores a reference to the data.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        guide: {
-          completed: false,
-          impact: 100,
-          action: `guide`,
-          icon: `🤝`,
-          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
-            `Lesson 10`
-          )}?`,
-          response: `\n\n1. Understand the importance of database design and be familiar with the different ways it is used. \n2. Learn Database Theory and how to use it to organize and manage data. \n3. Understand the basics of database architecture and the different components used.\n4. Learn the role and importance of data modeling and how it relates to database design.\n5. Have an understanding of Normalization techniques used in database design.\n6. Be familiar with different database programming language syntax and tools.\n7. Learn about the different types of keys and how they can be used to maintain data integrity. \n8. Be able to create and maintain database tables, fields, and data relationships. \n9. Understand the different security measures that should be taken when designing and maintaining a database.\n10. Understand the importance of user interaction with databases, incorporating language(s) such as SQL, PL/SQL, AND T-SQL.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        demonstrate: {
-          humanTouch: true,
-          completed: false,
-          impact: 100,
-          action: `demonstrate`,
-          icon: `🧿`,
-          request: `ms. roxana, can you please show me an example of noSQL with firebase and SQL and mySQL?`,
-          response: `\n\nNoSQL example with Firebase:\n\nConsider a Firebase database that stores student records. A NoSQL approach may store data in a document-like structure like this:\n\n{\n  Name: \"John Doe\",\n  Age: 22,\n  Preferences: {\n    Music: \"Classical\",\n    Language: \"English\"\n  },\n  Grades: {\n    Math: \"A+\",\n    Science: \"B\"\n  }\n}\n\nSQL example with MySQL:\n\nConsider a MySQL database that stores student records. A SQL approach may store data in a table-like structure like this:\n\nCREATE TABLE student_records (\n  Name VARCHAR(255),\n  Age INT,\n  Music VARCHAR(255),\n  Language VARCHAR(255),\n  Math CHAR(2),\n  Science CHAR(2)\n);\n\nINSERT INTO student_records (Name, Age, Music, Language, Math, Science) \nVALUES(\"John Doe\", 22, \"Classical\", \"English\", \"A+\", \"B\");`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        define: {
-          completed: false,
-          impact: 100,
-          action: `define`, // may not need
-          icon: `👾`, // may not need
-          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
-            `Lesson 10`
-          )} in exactly one sentence?`,
-          response: `\n\nDatabase design is the process of creating a logical data structure used to store, manipulate and retrieve data efficiently.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-
-        quiz: {
-          completed: false,
-          impact: 100,
-          action: `quiz`,
-          icon: `🧪`,
-          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
-            `Lesson 10`
-          )}?`,
-          response: `\n\n1. What is the process of data normalization, and why is it important in database design?\n2. How can data integrity be ensured when designing a database?\n3. What strategies can be employed when designing a database to optimize query performance?`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        shop: {
-          completed: false,
-          impact: 100,
-          action: `shop`,
-          icon: `🛍️`,
-          request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
-          response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-      },
-    },
-    "Lesson 11": {
-      documentID: ``,
-
-      filler: ``,
-
-      highValue: false,
-      hasCode: true,
-      underConstruction: true,
-      completed: false,
-      needsImprovement: false,
-      new: true,
-      tooltip: ``,
-      sourceType: `video`, // may not need
-      button: `11. Backend Clouds`, // may not need - `name`
-      header: `11. Backend Clouds`,
-      fileSource:
-        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674220422/download_14_lkehax.mp4", // may not need
-
-      prompts: {
-        patreon: {
-          completed: false,
-          impact: 1000,
-          action: `generate`,
-          icon: `►`, //`✍️`
-          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
-            `Lesson 11`
-          )}?`,
-          response: `null`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        inspire: {
-          completed: false,
-          impact: 100,
-          action: `inspire`,
-          icon: `⚡`,
-          request: `ms. roxana, can you please explain why serverless computing got popular?`,
-          response: `\n\nServerless computing became popular in recent years thanks to its ability to abstract away the complexities of managing underlying cloud infrastructure, allowing developers to focus more on building the applications themselves. Serverless computing can be used to quickly build and deploy applications at scale, often with more reliability, durability and cost-effectiveness than traditional infrastructure. Additionally, it reduces the amount of manual work involved in setting up and coordinating a server infrastructure, as well as the ongoing operational costs associated with maintaining servers.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        summarize: {
-          completed: false,
-          impact: 100,
-          action: `summarize`,
-          icon: `📚`,
-          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
-            `Lesson 11`
-          )}?`,
-          response: `\n\nBackend software engineering is the process of designing the programming and technology that power the web applications, websites, and other web-based products. This work involves using programming languages such as Java, Python, C#, and C++ to create the software’s code, logic, and architecture. It also involves setting up the infrastructure such as databases, web servers, and file systems to store and access the data. Finally, it also involves ensuring that the application product performs correctly and security policies are in place.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        ask: {
-          completed: false,
-          impact: 100,
-          action: `ask`,
-          icon: `🔮`,
-          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
-            `Lesson 11`
-          )} with one sentence answers?`,
-          response: `\n\n1. What is backend software engineering? - Backend software engineering is the branch of software engineering related to devising, building, and maintaining the underlying architecture of digital applications.\n\n2. What skills are needed for backend software engineering? - Proficiency with software programming languages, database and server management, API development, and system architecture are all necessary skills for a successful backend software engineer.\n\n3. What is the best way to learn backend software engineering? - The best way to learn backend software engineering is to start with basics like HTML, CSS, and JavaScript then progress to more complex enterprise-grade programming languages.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        guide: {
-          completed: false,
-          impact: 100,
-          action: `guide`,
-          icon: `🤝`,
-          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
-            `Lesson 11`
-          )}?`,
-          response: `\n\n1. Understand back-end architectures including MVC, REST, and SOA \n2. Be familiar with popular server-side technologies such as Node.js, Ruby on Rails and Java\n3. Implement authentication and authorization\n4. Design and query databases such as MySQL and Postgres\n5. Understand caching mechanisms such as memcache and Redis\n6. Implement API services using web services such as SOAP and XML-RPC \n7. Utilize version control systems such as git\n8. Have a basic understanding of the command line and shell scripting\n9. Utilize DevOps strategies such as continuous integration, deployment and monitoring\n10. Know principles of security and scalability, such as potential threats and load balancing`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        demonstrate: {
-          completed: false,
-          impact: 100,
-          action: `demonstrate`,
-          icon: `🧿`,
-          request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
-            `Lesson 11`
-          )} with no other text in python?`,
-          response: `\n\nA note from RO.B.E. ms. roxana is talking about sockets here. \n\nThey're really cool. \n\n Check out more here: https://www.geeksforgeeks.org/what-is-web-socket-and-how-it-is-different-from-the-http/\n\n# Example of backend software engineering with no other text in Python:\n\n#import a necessary module\nimport socket\n\n#create a socket object\nsock = socket.socket()\n\n#Bind the socket to a port\nsock.bind(('', 55555))\n\n#listen for incoming connections\nsock.listen(5)\n\n#accept incoming connection\nconnection, addr = sock.accept()\n\n#receive data from the client\ndata = connection.recv(1024)\n\n#process the data \nresponse = process_data(data)\n\n#send the response to the client\nconnection.send(response)\n\n#close the connection\nconnection.close()`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        define: {
-          completed: false,
-          impact: 100,
-          action: `define`, // may not need
-          icon: `👾`, // may not need
-          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
-            `Lesson 11`
-          )} in exactly one sentence?`,
-          response: `\n\nBackend software engineering is the development of server-side logic to provide a backend architecture for web applications.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-
-        quiz: {
-          completed: false,
-          impact: 100,
-          action: `quiz`,
-          icon: `🧪`,
-          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
-            `Lesson 11`
-          )} without any answers?`,
-          response: `\n\n1. What is the purpose of dependency injection in web development?\n2. Describe the roles of models, views, and controllers in a back-end system.\n3. What is the role of object-relational mapping (ORM) in backend software engineering?`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        shop: {
-          completed: false,
-          impact: 100,
-          action: `shop`,
-          icon: `🛍️`,
-          request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
-          response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-      },
-    },
-    "Lesson 12": {
-      documentID: ``,
-
-      filler: ``,
-
-      highValue: false,
-      hasCode: true,
-      underConstruction: true,
-      rare: false,
-      completed: false,
-      needsImprovement: false,
-      new: true,
-      tooltip: ``,
-      sourceType: `video`, // may not need
-      button: `12. Operating Systems & Machines`, // may not need - `name`
-      header: `12. Operating Systems & Machines`,
-      fileSource:
-        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674220456/download_15_um5siz.mp4", // may not need
-
-      prompts: {
-        patreon: {
-          completed: false,
-          impact: 1000,
-          action: `generate`,
-          icon: `►`, //`✍️`
-          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
-            `Lesson 12`
-          )}?`,
-          response: `null`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        inspire: {
-          completed: false,
-          impact: 100,
-          action: `inspire`,
-          icon: `⚡`,
-          request: `ms. roxana, can you please explain the relationship between ASICs, FPGAs, Tesla's Optimus robot and bitcoin miners?`,
-          response: `\n\nASICs (application-specific integrated circuits) are specialized chips used to mine crypto-currencies, like bitcoin. They are built specifically to perform cryptocurrency mining calculations at higher speeds and greater efficiency than other chips like GPUs, CPUs, and FPGAs. ASICs are very important in the cryptocurrency market as they enable miners to mine more cryptocurrencies in less time.\n\nFPGAs (Field Programmable Gate Arrays) are microchips that can be programmed to perform specific tasks that ASICs would not be able to. FPGAs are more energy efficient than ASICs and can also be quickly reconfigured to perform different tasks. Although FPGAs are slower than ASICs, they can be used to mine alternative currencies.\n\nTesla's Optimus Robot is a robotic construction tool designed for large-scale projects. This tool can be programmed to build complex structures quickly and efficiently. Optimus Robot can be a powerful tool for large-scale cryptocurrency mining operations.\n\nBitcoin miners use computers and other hardware devices to validate Bitcoin transactions and keep the Bitcoin network secure. Bitcoin miners need specialized hardware to support the processing power and memory required to successfully mine Bitcoins. ASICs, FPGAs, and Radeon GPUs are popular choices for Bitcoin miners due to their excellent speed, efficiency and cost-effectiveness.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        summarize: {
-          completed: false,
-          impact: 100,
-          action: `summarize`,
-          icon: `📚`,
-          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
-            `Lesson 12`
-          )}?`,
-          response: `\n\nThe basics of an operating system are: its purpose is to manage the hardware and software components of a computer system; it acts as an intermediary between applications and the computer hardware; it provides basic functions such as memory and process management, input/output device control, file system management, and data management; it also provides an interface for the user to interact with the system.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        ask: {
-          completed: false,
-          impact: 100,
-          action: `ask`,
-          icon: `🔮`,
-          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
-            `Lesson 12`
-          )} with one sentence answers?`,
-          response: `\n\n1. What is an operating system? Answer: An operating system is software that manages the operation of a computer's hardware components.\n\n2. What are the main features of an operating system? Answer: Operating systems offer features such as memory management, process management, user interface, networking, and device driver support.\n\n3. What is the difference between a Linux-based and a Windows-based system? Answer: A Linux-based system is typically open source and free to use, while a Windows-based system requires a purchased license and is not open source.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        guide: {
-          completed: false,
-          impact: 100,
-          action: `guide`,
-          icon: `🤝`,
-          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
-            `Lesson 12`
-          )}?`,
-          response: `\n\n1. Understand the basic concept of computer operating systems and their components, including hardware and application elements. \n2. Learn about the different types of operating systems and the advantages and disadvantages of each.\n3. Learn how to set up network environments and connect devices to the system.\n4. Learn the process of installing, configuring, and maintaining an operating system.\n5. Learn to customize settings and user options, manage system resources and modify system preferences.\n6. Become familiar with different user interfaces and understand how to interact with them.\n7. Learn how to use command line tools to diagnose and troubleshoot issues.\n8. Learn how to configure security settings, including authentication and access control.\n9. Understand how to keep an operating system patched and up-to-date with available security updates.\n10. Learn how to back up data and restore the operating system after a hardware or software failure.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        demonstrate: {
-          completed: false,
-          humanTouch: true,
-          impact: 100,
-          action: `demonstrate`,
-          icon: `🧿`,
-          request: `ms. roxana, can you please show me an example of kernel code written in C++?`,
-          response: `\n\nHere is an example of kernel code written in C++:\n\n// Kernel code in C++ \n__global__ void simple_kernel(int *data) \n{ \n    int tid = threadIdx.x;\n    int i = blockIdx.x * blockDim.x + threadIdx.x;\n\n    // Kernel code here\n    data[i] *= 2; \n}`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        define: {
-          completed: false,
-          impact: 100,
-          action: `define`, // may not need
-          icon: `👾`, // may not need
-          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
-            `Lesson 12`
-          )} in exactly one sentence?`,
-          response: `\n\nA computer operating system is a software that manages hardware and software resources to provide the necessary services for applications to run on a computer.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-
-        quiz: {
-          completed: false,
-          impact: 100,
-          action: `quiz`,
-          icon: `🧪`,
-          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
-            `Lesson 12`
-          )} without any answers?`,
-          response: `\n\n1. In an operating system, what is the difference between the kernel and user space processes?\n\n2. What is the purpose of virtualization in an operating system?\n\n3. What is the master boot record and how is it used within an operating system?`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        shop: {
-          completed: false,
-          impact: 100,
-          action: `shop`,
-          icon: `🛍️`,
-          request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
-          response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-      },
-    },
-    "Lesson 13": {
-      documentID: ``,
-      filler: ``,
-
-      highValue: false,
-      hasCode: true,
-      underConstruction: false,
-      completed: false,
-
-      needsImprovement: false,
-      new: true,
-      tooltip: ``,
-      sourceType: `video`, // may not need
-      button: `13. Setting Up An App`, // may not need - `name`
-      header: `13. Setting Up An App`,
-      fileSource:
-        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674220489/download_16_lpne2o.mp4", // may not need
-
-      prompts: {
-        patreon: {
-          completed: false,
-          impact: 1000,
-          action: `generate`,
-          icon: `►`, //`✍️`
-          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
-            `Lesson 13`
-          )}?`,
-          response: `null`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        inspire: {
-          completed: false,
-          impact: 100,
-          action: `inspire`,
-          icon: `⚡`,
-          request: `ms. roxana, can you please explain how things like chatGPT and command lines are similar?`,
-          response: `\n\nChatGPT and command lines are both ways of interacting with a computer, usually via text-based input. Both involve providing input on a text-based interface, and the computer provides output in a similar way. The main difference is that command line interfaces require the user to type a command into the terminal in order to get the computer to do something, whereas with ChatGPT the user can just type a natural language question or statement and the computer will generate a response.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        summarize: {
-          completed: false,
-          impact: 100,
-          action: `summarize`,
-          icon: `📚`,
-          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
-            `Lesson 13`
-          )}?`,
-          response: `\n\nA command line interface (CLI) is a means of interacting with a computer program where the user issues commands to the program in the form of lines of text (i.e. commands and arguments). This is usually done through a command shell, although other programs may also access the same features. In a command line interface, a user types in commands, which can include simple operations such as launching a program, copying or deleting a file, or more complex operations such as searching text files for a certain keyword. The command line interface is a powerful tool as it allows a user to quickly and easily access a vast array of computer programs, tasks, and settings with just a few simple keystrokes.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        ask: {
-          completed: false,
-          impact: 100,
-          action: `ask`,
-          icon: `🔮`,
-          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
-            `Lesson 13`
-          )} with one sentence answers?`,
-          response: `\n\n1. What is a command line interface? Ans: A command line interface (CLI) is a method of interacting with a computer by typing text-based commands.\n\n2. How do I access a command line interface? Ans: Accessing a command line interface usually requires using a terminal emulator program.\n\n3. What is the difference between a terminal and a shell? Ans: A terminal is the graphical interface to interact with the command line whereas a shell is the program that interprets user commands.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        guide: {
-          completed: false,
-          impact: 100,
-          action: `guide`,
-          icon: `🤝`,
-          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
-            `Lesson 13`
-          )}?`,
-          response: `\n\n1. Understand the concepts and fundamentals of command line interfaces (CLI)\n2. Change the directory (cd)\n3. List and view content in the current directory (ls)\n4. Create new directories (mkdir)\n5. Remove existing directories (rmdir)\n6. Create/edit files (touch/vi)\n7. Copy, move, and rename files (cp/mv/rename)\n8. Find files (find)\n9. Basic commands for system and network administration (ping/ifconfig)\n10. Download files from the internet (wget/curl)`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        demonstrate: {
-          completed: false,
-          impact: 100,
-          action: `demonstrate`,
-          icon: `🧿`,
-          request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
-            `Lesson 13`
-          )} with basic npm commands?`,
-          response:
-            "// Example of basic coding logic in JavaScript\nlet x = 5;\nlet y = 10;\n\nif (x < y) {\n  console.log(`x is less than y`);\n} else {\n  console.log(`x is greater than or equal to y`);\n}",
-          spanish: ``,
-          tooltip: ``,
-        },
-        define: {
-          completed: false,
-          impact: 100,
-          action: `define`, // may not need
-          icon: `👾`, // may not need
-          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
-            `Lesson 13`
-          )} in exactly one sentence?`,
-          response: `\n\nA command line interface is a user interface that allows a user to interact with a computer using text-based command inputs.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-
-        quiz: {
-          completed: false,
-          impact: 100,
-          action: `quiz`,
-          icon: `🧪`,
-          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
-            `Lesson 13`
-          )} without any answers?`,
-          response: `\n\n1. What is a command line interface?\n2. What are the common commands available when using a command line interface?\n3. How does a command line interface differ from a graphical user interface?`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        shop: {
-          completed: false,
-          impact: 100,
-          action: `shop`,
-          icon: `🛍️`,
-          request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
-          response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-      },
-    },
-    "Lesson 14": {
-      documentID: ``,
-      filler: ``,
-
-      highValue: false,
-      hasCode: true,
-      underConstruction: false,
-      completed: false,
-      rare: false,
-      needsImprovement: false,
-      new: true,
-      tooltip: ``,
-      sourceType: `video`, // may not need
-      button: `14. Programming Money`, // may not need - `name`
-      header: `14. Programming Money`,
-      fileSource:
-        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674220538/download_17_snhdb6.mp4", // may not need
-
-      prompts: {
-        patreon: {
-          completed: false,
-          impact: 1000,
-          action: `generate`,
-          icon: `►`, //`✍️`
-          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
-            `Lesson 14`
-          )}?`,
-          response: `null`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        inspire: {
-          humanTouch: true,
-          completed: false,
-          impact: 100,
-          action: `inspire`,
-          icon: `⚡`,
-          request: `ms. roxana, can you please explain how the drug war, bitcoin and the bank secrecy act are related and how it may be problematic for civil liberties?`,
-          response: `\n\nThe Drug War, Bitcoin and the Bank Secrecy Act are all related in the sense that each can potentially be used to facilitate illegal activity or money laundering. Bitcoin and the Bank Secrecy Act both provide a layer of privacy and anonymity that can be used by drug dealers and other criminals to mask illegal activities. This can be problematic for civil liberties because it allows individuals to commit crimes without fear of being caught, thus undermining the rule of law. Furthermore, the ability to easily move and exchange large amounts of money anonymously through digital currencies like Bitcoin has opened the door for new forms of criminal activity such as money laundering, tax evasion, and terrorism financing. Blockchain based currencies can also be used to circumvent sanctions and regulations, further eroding the legitimacy of legal systems.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        summarize: {
-          completed: false,
-          impact: 100,
-          action: `summarize`,
-          icon: `📚`,
-          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
-            `Lesson 14`
-          )}?`,
-          response: `\n\nFinTech APIs are programmatic interfaces used by banks, financial institutions, and businesses to access financial services. They allow users to send, receive, and store digital funds, process payments, track money transfers, and manage financial data in an automated and secure way. These APIs have become increasingly popular as they offer scalability, provide businesses with more control over their payments, and offer a secure way to move money between different accounts. They offer a range of features and services, such as payments processing, digital money transfers, invoicing, fraud prevention, integrated marketing, data analytics, automated payment reconciliation, and more.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        ask: {
-          completed: false,
-          impact: 100,
-          action: `ask`,
-          icon: `🔮`,
-          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
-            `Lesson 14`
-          )} with one sentence answers?`,
-          response: `\n\n1. What is an API in fintech? - An API in fintech allows third-party developers to access financial data and services.\n\n2. How does a fintech API work? - A fintech API works by providing an interface for developers to access financial data and services, without the need for manual intervention. \n\n3. What’s the benefit of using a fintech API? - By using a fintech API, businesses can quickly integrate powerful financial solutions and save time and money.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        guide: {
-          completed: false,
-          impact: 100,
-          action: `guide`,
-          icon: `🤝`,
-          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
-            `Lesson 14`
-          )}?`,
-          response: `\n\n1. Understand the different types of fintech APIs and their specific use cases \n2. Familiarize yourself with the various technologies used in fintech APIs including REST, SOAP, JSON, and OAUTH2 \n3. Learn how to integrate financial service APIs with third-party applications \n4. Understand how payment gateways and merchant processing APIs enable online and mobile payments \n5. Explore the security considerations around handling financial data \n6. Know the privacy and data protection aspects of financial services APIs \n7. Research the different pricing models for using fintech APIs \n8. Identify which financial services APIs can be used in particular jurisdictions \n9. Learn how to best use the APIs' documentation to create and test applications \n10. Monitor the development of new and emerging fintech APIs for opportunities.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        demonstrate: {
-          completed: false,
-          impact: 100,
-          action: `demonstrate`,
-          icon: `🧿`,
-          request: `ms. roxana, can you please show me an example of creating a transaction with Stripe's Javascript SDK?`,
-          response: `\n\nSure. Here is an example of creating a transaction with Stripe's Javascript SDK.\n\n// Create a stripe instance using your Stripe API keys.\nvar stripe = Stripe('pk_test_your_stripe_key');\n\n// Create a card element and add it to the page.\nvar card = stripe.elements().create('card');\ncard.mount('#card-element');\n\n// Handle real-time validation errors from the card element.\ncard.addEventListener('change', function(event) {\n  var displayError = document.getElementById('card-errors');\n  if (event.error) {\n    displayError.textContent = event.error.message;\n  } else {\n    displayError.textContent = '';\n  }\n});\n\n// Handle form submission.\nvar form = document.getElementById('payment-form');\nform.addEventListener('submit', function(event) {\n  event.preventDefault();\n\n  stripe.createToken(card).then(function(result) {\n    if (result.error) {\n      // Inform the user if there was an error\n      var errorElement = document.getElementById('card-errors');\n      errorElement.textContent = result.error.message;\n    } else {\n      // Send the token to your server\n      stripeTokenHandler(result.token);\n    }\n  });\n});\n\n// Submit the form with the token ID.\nfunction stripeTokenHandler(token) {\n  // Insert the token ID into the form so it gets submitted to the server\n  var form = document.getElementById('payment-form');\n  var hiddenInput = document.createElement('input');\n  hiddenInput.setAttribute('type', 'hidden');\n  hiddenInput.setAttribute('name', 'stripeToken');\n  hiddenInput.setAttribute('value', token.id);\n  form.appendChild(hiddenInput);\n\n  // Submit the form\n  form.submit();\n}`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        define: {
-          completed: false,
-          impact: 100,
-          action: `define`, // may not need
-          icon: `👾`, // may not need
-          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
-            `Lesson 14`
-          )} in exactly one sentence?`,
-          response: `\n\nFintech APIs allow for the secure integration of technology products with financial systems and services.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-
-        quiz: {
-          completed: false,
-          impact: 100,
-          action: `quiz`,
-          icon: `🧪`,
-          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
-            `Lesson 14`
-          )}?`,
-          response: `\n\n1. What is the main purpose of a FinTech API?\n\n2. What type of information can a FinTech API provide?\n\n3. What are some of the benefits of using a FinTech API?`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        shop: {
-          completed: false,
-          impact: 100,
-          action: `shop`,
-          icon: `🛍️`,
-          request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
-          response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-      },
-    },
-    "Lesson 15": {
-      documentID: ``,
-      filler: ``,
-
-      highValue: false,
-      underConstruction: false,
-      hasCode: true,
-      completed: false,
-      needsImprovement: false,
-      new: true,
-      tooltip: ``,
-      sourceType: `video`, // may not need
-      button: `15. Creating Database`, // may not need - `name`
-      header: `15. Creating Database`,
-      fileSource:
-        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674220555/download_18_uv5kve.mp4", // may not need
-
-      prompts: {
-        patreon: {
-          completed: false,
-          impact: 1000,
-          action: `generate`,
-          icon: `►`, //`✍️`
-          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
-            `Lesson 15`
-          )}?`,
-          response: `null`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        inspire: {
-          humanTouch: true,
-          completed: false,
-          impact: 100,
-          action: `inspire`,
-          icon: `⚡`,
-          request: `ms. roxana, can you please explain how entrepeneurs can use platforms like Firebase to create businesses?`,
-          response: `\n\nEntrepreneurs can use Firebase, a cloud-based development platform, in various ways to create and grow businesses. Firebase provides powerful development and analytics tools, so you don't need to worry about setting up a backend or learning how to use a database. \n\nFirebase can help entrepreneurs create their apps with a few clicks and a few lines of code. It provides easy-to-use solutions for user authentication, data storage and hosting, serverless functions, and analytics that can help entrepreneurs understand their customers better. Firebase also provides tools for automating tasks such as marketing campaigns, customer support, and more. \n\nFirebase can provide a valuable platform for entrepreneurs to launch their businesses in a cost-effective and time-efficient manner. With the help of Firebase, entrepreneurs can quickly launch their products, test their ideas, and get an early start on their businesses.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        summarize: {
-          completed: false,
-          impact: 100,
-          action: `summarize`,
-          icon: `📚`,
-          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
-            `Lesson 15`
-          )}?`,
-          response: `\n\nNoSQL with Firebase Firestore is a document-oriented NoSQL database designed for storing, syncing and querying large datasets for modern, web and mobile app development. It stores data as documents in a distributed cloud environment. Documents are stored in collections, with each document containing a set of key-value pairs. Firestore provides features like offline data synchronization, real-time data streaming, authentication and data validation. It also lets developers query and filter data and includes automatic scaling of data across multiple regions. Firestore also offers security rules to ensure data safety and access control.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        ask: {
-          completed: false,
-          impact: 100,
-          action: `ask`,
-          icon: `🔮`,
-          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
-            `Lesson 15`
-          )} with one sentence answers?`,
-          response: `\n\n1. What is NoSQL and Firebase Firestore? - NoSQL is a non-relational database management system and Firebase Firestore is the cloud-hosted, NoSQL database provided by Google.\n\n2. Why should I use Firebase Firestore? - Firebase Firestore provides users with a scalable, real-time database that enables data synchronization in client and server-side applications.\n\n3. How does Firebase Firestore save my data? - Firebase Firestore stores data in collections of documents and fields within those documents, similar to MongoDB or CouchDB.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        guide: {
-          completed: false,
-          impact: 100,
-          action: `guide`,
-          icon: `🤝`,
-          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
-            `Lesson 15`
-          )}?`,
-          response: `\n\n1. Understand the purpose of using NoSQL and Firebase Firestore in modern development \n2. Become familiar with the different types of NoSQL databases, e.g. key-value pair, document-oriented, columnar, graph-based, etc.\n3. Understand the basics of the Firebase architecture and how it works with cloud computing\n4. Learn the basics of data modeling for NoSQL databases and how to structure data to optimize query performance\n5. Understand the scalability, security, and availability of NoSQL databases on the Firebase platform\n6. Understand the basics of client-side security and authentication features available in Firebase Firestore\n7. Become familiar with querying data in Firebase Firestore, including understanding different query types, such as data ordering, filtering, and aggregation\n8. Understand the basics of Firebase Firestore synchronization and real-time data streaming\n9. Get familiar with different features available in the Firebase console, such as monitoring and analytics\n10. Become proficient with development tools like Cloud Functions and Firebase SDKs for Android, iOS, and web development`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        demonstrate: {
-          humanTouch: true,
-          completed: false,
-          impact: 100,
-          action: `demonstrate`,
-          icon: `🧿`,
-          request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
-            `Lesson 15`
-          )} that stores openAI's ChatGPT messages in a collection with documents defined by user_id with no other text in javascript?`,
-          response: `\n\nHere is an example of code that uses Firebase Firestore to store openAI's ChatGPT messages in a collection with documents defined by user_id with no other text in Javascript:\n\n//Wirte to Firestore using the Firebase web SDK \nvar firestore = firebase.firestore(); \n\n//Create a reference to the collection of openAI messages \nvar openAIMessagesRef = firestore.collection('chatGPT');\n\n//Create a reference to the specific user document \nvar userRef = openAIMessagesRef.doc(user_id); \n\nuserRef.set({\n   openAIMessage: openAIMessage,\n});`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        define: {
-          completed: false,
-          impact: 100,
-          action: `define`, // may not need
-          icon: `👾`, // may not need
-          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
-            `Lesson 15`
-          )} in exactly one sentence?`,
-          response: `\n\nNoSQL Firebase Firestore is a cloud-based, scalable database service designed to store and sync application data in real time.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-
-        quiz: {
-          completed: false,
-          impact: 100,
-          action: `quiz`,
-          icon: `🧪`,
-          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
-            `Lesson 15`
-          )}?`,
-          response: `\n\n1. What is the main advantage of using Firebase Firestore over other NoSQL databases?\n\n2. What are some of the features and benefits of using Firebase's cloud-hosted Firestore?\n\n3. How can developers structure data within Firebase Firestore to optimize performance?`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        shop: {
-          completed: false,
-          impact: 100,
-          action: `shop`,
-          icon: `🛍️`,
-          request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
-          response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-      },
-    },
-    "Lesson 16": {
-      documentID: ``,
-      filler: ``,
-
-      hasCode: true,
-      highValue: false,
-      rare: false,
-      underConstruction: false,
-      completed: false,
-      needsImprovement: false,
-      new: true,
-      tooltip: ``,
-      sourceType: `video`, // may not need
-      button: `16. Working Together`, // may not need - `name`
-      header: `16. Working Together`,
-      fileSource:
-        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674220688/download_vm66up.mp4", // may not need
-
-      prompts: {
-        patreon: {
-          completed: false,
-          impact: 1000,
-          action: `generate`,
-          icon: `►`, //`✍️`
-          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
-            `Lesson 16`
-          )}?`,
-          response: `null`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        inspire: {
-          humanTouch: true,
-          completed: false,
-          impact: 100,
-          action: `inspire`,
-          icon: `⚡`,
-          request:
-            "ms. roxana, can you please explain what robotic process automation is?",
-          response: `\n\nRobotic process automation (RPA) is a type of technology that uses software bots (aka robotics) to execute simple and repetitive tasks and processes. They interact with applications, websites, databases, and systems, just like a human worker would, but at a much faster rate. RPA bots can be programmed to take over and automate common, tedious, and time-consuming digital tasks. They can complete these tasks using existing applications and systems, eliminating the need for manual data entry and human involvement in certain processes.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        summarize: {
-          completed: false,
-          impact: 100,
-          action: `summarize`,
-          icon: `📚`,
-          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
-            `Lesson 16`
-          )}?`,
-          response: `\n\nGit is a version control system used for tracking changes made to projects over time. Github is a hosting platform for Git that is used to store and manage files and code in a project. It allows for collaboration between developers, thereby enabling them to update, author, review, and maintain project code. It also provides various security, branch management, and deployment features to make it easier for developers to work together. Additionally, Github offers a variety of integrations and tools to help streamline the development process.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        ask: {
-          completed: false,
-          impact: 100,
-          action: `ask`,
-          icon: `🔮`,
-          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
-            `Lesson 16`
-          )} with one sentence answers?`,
-          response: `\n\n1. What is Git? - Git is an open source distributed version control system for tracking changes in source code.\n\n2. What is GitHub? - GitHub is a code hosting platform for version control and collaboration.\n\n3. How do I use Push and Pull in Git? - Push enables local changes to be uploaded to remote repositories, while pull allows changes from remote repositories to be downloaded to local branches.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        guide: {
-          completed: false,
-          impact: 100,
-          action: `guide`,
-          icon: `🤝`,
-          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
-            `Lesson 16`
-          )}?`,
-          response: `\n\n1. Understand the difference between Git and Github – Git is a version control system, while Github is a cloud-based hosting service used to store and manage repositories.\n2. Learn how to create and clone a repository – the most basic step in using Git and Github.\n3. Know how to stage and commit changes – this is essential for tracking and managing changes to a repository.\n4. Gain familiarity with working with branches – branches help keep code organized and makes it easier to test possible changes before committing them to the main repository.\n5. Familiarize yourself with Cherry picking – Cherry picking allows you to choose specific commits from other branches and add them to your current branch. \n6. Understand how to use Github pull requests – If a team is working on the same project, pull requests are vital for enabling team collaboration.\n7. Be familiar with reverting a commit – Reverting a commit is useful for undoing any changes that have been made to a codebase. \n8. Become familiar with forking repositories – Forks are like separate copies of a repository, and are used to experiment without disrupting the main repository. \n9. Know how to manage merge conflicts – Merge conflicts arise when multiple people are making changes to a codebase at the same time, and they need to be managed to keep the codebase functional. \n10. Learn how to use Github Gists – Gists are short snippets of code that can be stored and shared with others.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        demonstrate: {
-          completed: false,
-          impact: 100,
-          action: `demonstrate`,
-          icon: `🧿`,
-          request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
-            `Lesson 16`
-          )} with no other text in the command line?`,
-          response: `\n\ngit clone https://github.com/username/repositoryname.git`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        define: {
-          completed: false,
-          impact: 100,
-          action: `define`, // may not need
-          icon: `👾`, // may not need
-          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
-            `Lesson 16`
-          )} in exactly one sentence?`,
-          response: `\n\nGit is a version control system for tracking changes in code, and Github is a cloud-based host for version control repositories.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-
-        quiz: {
-          completed: false,
-          impact: 100,
-          action: `quiz`,
-          icon: `🧪`,
-          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
-            `Lesson 16`
-          )}?`,
-          response: `\n\n1. What is the difference between Git and GitHub?\n2. What command is used to create a local Git repository?\n3. How can multiple collaborators work on an open source project in the same repository?`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        shop: {
-          completed: false,
-          impact: 100,
-          action: `shop`,
-          icon: `🛍️`,
-          request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
-          response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
+                <li>
+                  Lack of representation and role models: The technology
+                  industry has long been dominated by individuals from certain
+                  racial and ethnic backgrounds. The lack of Latino
+                  representation in leadership roles and as founders of major
+                  tech companies can make it challenging for aspiring Latino
+                  entrepreneurs to find role models and mentors, which is
+                  crucial for professional development and success. <br />
+                </li>
+                <li>
+                  Limited access to funding and resources: Starting a tech
+                  company often requires substantial financial investment and
+                  access to resources, such as networking opportunities,
+                  mentorship, and technical support. Latinos may face challenges
+                  in securing funding from investors due to unconscious bias,
+                  discrimination, or lack of connections within the industry.{" "}
+                  <br />
+                </li>
+                <li>
+                  Cultural factors: Cultural factors, such as family
+                  expectations and community norms, can also influence career
+                  choices and aspirations. In some cases, Latinos may face
+                  pressure to prioritize more traditional or stable career paths
+                  over the risks associated with entrepreneurship or founding a
+                  tech company. <br />
+                </li>
+                <li>
+                  Systemic biases and discrimination: The technology industry,
+                  like many other sectors, is not immune to systemic biases and
+                  discrimination that can create barriers for underrepresented
+                  groups, including Latinos. This can manifest in various forms,
+                  such as biased hiring practices, limited access to mentorship
+                  and resources, or unequal treatment within the workplace.
+                </li>
+              </ol>
+              <br />
+              <br />
+              Addressing these challenges and promoting diversity in the
+              technology industry requires concerted efforts from various
+              stakeholders, including educational institutions, policymakers,
+              investors, and tech companies themselves. By fostering inclusive
+              environments, providing equal opportunities, and breaking down
+              barriers for underrepresented groups, the tech industry can
+              benefit from the wealth of talent, perspectives, and ideas that
+              diverse founders bring to the table.
+            </div>
+          ),
           spanish: ``,
           tooltip: ``,
         },
@@ -4635,7 +3270,7 @@ if __name__ == '__main__':
         },
       },
     },
-    "Build For Undocumented": {
+    "Undocumented Building": {
       documentID: ``,
       filler: ``,
       new: true,
@@ -5124,7 +3759,7 @@ if __name__ == '__main__':
     //   },
     // },
   },
-  "Computer Science": {
+  "Computer Science (older version)": {
     "Programming Languages": {
       documentID: ``,
       filler: ``,
@@ -5858,6 +4493,2058 @@ if __name__ == '__main__':
             `Algorithms`
           )}?`,
           response: `\n\n1. What is the difference between a breadth-first search and a depth-first search in terms of tree and graph algorithms?\n\n2. How is Kruskal's algorithm used to find the minimum spanning tree in a graph?\n\n3. What is the difference between a directed graph and an undirected graph with respect to tree and graph algorithms?`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        shop: {
+          completed: false,
+          impact: 100,
+          action: `shop`,
+          icon: `🛍️`,
+          request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
+          response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+      },
+    },
+  },
+
+  "Crash Course Version 2 (older version)": {
+    "Lesson 1": {
+      documentID: `Lesson 1 - Crash Course`,
+      filler: ``,
+      hasCode: true,
+
+      highValue: false,
+      underConstruction: false,
+      completed: false,
+      needsImprovement: false,
+      new: true,
+      tooltip: ``,
+      sourceType: `video`, // may not need
+      button: `1. Coding & Logic`, // may not need - `name`
+      header: `Foundations: Coding & Logic`,
+
+      fileSource:
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674220062/download_4_xnineu.mp4",
+      prompts: {
+        patreon: {
+          premiumContent: false,
+          completed: false,
+          impact: 1000,
+          action: `generate`,
+          icon: `►`, //`✍️`
+          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
+            `Lesson 1`
+          )}?`,
+          response: `null`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        inspire: {
+          humanTouch: false,
+          completed: false,
+          impact: 100,
+          action: `inspire`,
+          icon: `⚡`,
+          request: `ms. roxana, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
+            `Lesson 1`
+          )}?`,
+          response: `\n\nOne inspiring story about coding and logic is the story of Ada Lovelace. Ada Lovelace was a mathematician and writer in the 1800s who is widely considered to be the first computer programmer. She wrote the first algorithm for a machine that could calculate Bernoulli numbers, and her work laid the foundation for modern computing. Her story is inspiring because it shows that women have been making important contributions to the field of computer science for centuries.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        summarize: {
+          completed: false,
+          impact: 100,
+          action: `summarize`,
+          icon: `📚`,
+          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
+            `Lesson 1`
+          )}?`,
+          response: `\n\nCoding is the process of writing instructions in a programming language to create a program that can be executed by a computer. Computer logic is the set of rules and principles that govern the operation of a computer system. It is the basis for the design of algorithms and the development of software.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        ask: {
+          completed: false,
+          impact: 100,
+          action: `ask`,
+          icon: `🔮`,
+          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
+            `Lesson 1`
+          )} with one sentence answers?`,
+          response: `\n\n1. What is coding? - Coding is the process of creating instructions for a computer to execute.\n2. What is logic? - Logic is the process of reasoning and making decisions based on facts and evidence.\n3. What is a programming language? - A programming language is a set of instructions that can be used to create a program.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        guide: {
+          completed: false,
+          impact: 100,
+          action: `guide`,
+          icon: `🤝`,
+          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
+            `Lesson 1`
+          )}?`,
+          response: `\n\n1. Understand the fundamentals of coding and computer logic\n2. Learn the basics of programming languages such as HTML, CSS, JavaScript, and Python\n3. Familiarize yourself with the different types of data structures and algorithms\n4. Understand the principles of object-oriented programming\n5. Learn how to debug and troubleshoot code\n6. Develop an understanding of the principles of software engineering\n7. Learn how to use version control systems such as Git\n8. Understand the basics of databases and SQL\n9. Develop an understanding of web development frameworks such as React and Angular\n10. Learn how to use development tools such as IDEs and text editors`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        demonstrate: {
+          completed: false,
+          impact: 100,
+          action: `demonstrate`,
+          icon: `🧿`,
+          request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
+            `Lesson 1`
+          )} with no other text in javascript?`,
+          response:
+            "// Example of basic coding logic in JavaScript\nlet x = 5;\nlet y = 10;\n\nif (x < y) {\n  console.log(`x is less than y`);\n} else {\n  console.log(`x is greater than or equal to y`);\n}",
+          spanish: ``,
+          tooltip: ``,
+          dynamicContent: false,
+        },
+        define: {
+          completed: false,
+          impact: 100,
+          action: `define`, // may not need
+          icon: `👾`, // may not need
+          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
+            `Lesson 1`
+          )} in exactly one sentence?`,
+          response: `\n\nCoding is the process of creating instructions for a computer to execute, while computer logic is the process of using algorithms to solve problems.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+
+        quiz: {
+          completed: false,
+          impact: 100,
+          action: `quiz`,
+          icon: `🧪`,
+          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
+            `Lesson 1`
+          )}?`,
+          response: `\n\n1. What is an example of a Boolean expression?\n2. What is an algorithm used for?\n3. How can a programmer effectively debug a code?`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        // intro: {
+        //   completed: false,
+        //   sponsoredContent: false,
+        //   impact: 250,
+        //   action: `intro`,
+        //   icon: `🛍️`,
+        //   request: `let's learn!`,
+        //   response: `CompSciLib`,
+        //   advertisementPitch: "Computer Science theory education for students",
+        //   spanish: ``,
+        //   tooltip: ``,
+        //   backgroundStyles: {
+        //     boxShadow: "0 10px 20px rgba(0,0,0,1), 0 6px 6px rgba(0,0,0,1)",
+        //     height: 150,
+        //     width: 150,
+        //     marginTop: 12,
+        //     borderRadius: "50%",
+        //   },
+        //   advertisementLink: "https://www.compscilib.com/",
+        //   advertisementImageSrc: compSciLib,
+        // },
+        shop: {
+          completed: false,
+          impact: 100,
+          action: `shop`,
+          icon: `🛍️`,
+          request: `I wanna shop and support this network more. Can you show me some sponsors or local advertisements?`,
+          response: `This prompt is available for your business. Please reach out to be on Patreon with your interest :)`,
+          spanish: ``,
+          tooltip: ``,
+        },
+      },
+    },
+    "Lesson 2": {
+      documentID: ``,
+      filler: ``,
+      hasCode: true,
+
+      highValue: false,
+      underConstruction: true,
+      completed: false,
+      needsImprovement: false,
+      new: true,
+      tooltip: ``,
+      sourceType: `video`, // may not need
+      button: `2. Data & Functions`, // may not need - `name`
+      header: `2. Data & Functions`,
+      fileSource:
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674220121/download_5_q0viph.mp4", // may not need
+
+      prompts: {
+        patreon: {
+          completed: false,
+          impact: 1000,
+          action: `generate`,
+          icon: `►`, //`✍️`
+          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
+            `Lesson 2`
+          )}?`,
+          response: `null`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        inspire: {
+          completed: false,
+          impact: 100,
+          action: `inspire`,
+          icon: `⚡`,
+          request: `ms. roxana, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
+            `Lesson 2`
+          )}?`,
+          response: `\n\nOne inspiring story about sets of data and functions in computer programming is the story of Larry Tesler. Larry Tesler was a computer scientist who made important contributions to computer science by inventing the now ubiquitous Cut, Copy and Paste functions. He also pioneered the idea of user-friendly graphical user interfaces, allowing people to interact with computers in an easier way. Tesler was the first to successfully apply the concept of \"modularity\" or divide and conquer approach to the something as complex as a computer program. He not only discovered how to break complex functions into smaller ones, but he also understood how to re-assemble these functions, creating entirely new and novel sets of data and functions. It's stories like his that inspire others to think more deeply about the potential of data and algorithms and dreams of more powerful computer programs.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        summarize: {
+          completed: false,
+          impact: 100,
+          action: `summarize`,
+          icon: `📚`,
+          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
+            `Lesson 2`
+          )}?`,
+          response: `\n\nComputer programming uses sets of data and functions to store, interpret, and process information. Data sets are groups of related items, such as numbers or text. Functions are used to manipulate data sets, for example to add, subtract, search for items, sort them into order, or calculate averages. Sets of data and functions are essential for any kind of computer programming, from web development to software engineering.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        ask: {
+          completed: false,
+          impact: 100,
+          action: `ask`,
+          icon: `🔮`,
+          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
+            `Lesson 2`
+          )} with one sentence answers?`,
+          response: `\n\n1. What is the difference between a set and a function? Answer: A set is a collection of values, while a function is a group of instructions that performs operations on a given set of inputs to generate a specific output.\n\n2. What are the most common operations performed on sets? Answer: Common operations performed on sets include union, intersection, complement, and cross product.\n\n3. How do you access data stored in sets? Answer: Elements stored in sets can be accessed using indexing, slicing, or iteration.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        guide: {
+          completed: false,
+          impact: 100,
+          action: `guide`,
+          icon: `🤝`,
+          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
+            `Lesson 2`
+          )}?`,
+          response: `\n\n1. Define data sets and functions and discuss their roles in computer programming.\n2. Explain the different types of data sets and how to manipulate them in a program.\n3. Analyze different types of programming functions, including user-defined and predefined functions.\n4. Understand and use the syntax of the various programming languages to create functions and manipulate data sets.\n5. Discuss debugging techniques for functions and data sets.\n6. Define input and output parameters and explain how they are used in functions.\n7. Identify the difference between global and local variables and explain the scope of each.\n8. Construct decision structures to work with data sets and functions.\n9. Create loops to organize data sets and functions.\n10. Create programs that can generate and manipulate data sets and functions.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        demonstrate: {
+          completed: false,
+          impact: 100,
+          action: `demonstrate`,
+          icon: `🧿`,
+          request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
+            `Lesson 2`
+          )} with no other text in python?`,
+          response: `"\n\n# Sample data set\ndata_set = [2, 4, 6, 8, 10]\n\n# Sample function\ndef add_nums(inp_list):\n    result = 0\n    for elem in inp_list:\n        result += elem\n    return result\n\n# Function call\nprint(add_nums(data_set)) # Output: 30"`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        define: {
+          completed: false,
+          impact: 100,
+          action: `define`, // may not need
+          icon: `👾`, // may not need
+          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
+            `Lesson 2`
+          )} in exactly one sentence?`,
+          response: `\n\nA set of data is a collection of related information, while a function is a predefined procedure used to transform one value into another.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+
+        quiz: {
+          completed: false,
+          impact: 100,
+          action: `quiz`,
+          icon: `🧪`,
+          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
+            `Lesson 2`
+          )}?`,
+          response: `\n\n1. Briefly explain the difference between a data set and a function in computer programming.\n2. What is the purpose of creating a function in a programming language?\n3. Describe two common uses of data sets in computer programming.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        shop: {
+          completed: false,
+          impact: 100,
+          action: `shop`,
+          icon: `🛍️`,
+          request: `I wanna shop and support this network more. Can you show me some sponsors or local advertisements?`,
+          response: `This prompt is available for your business. Please reach out to be on Patreon with your interest :)`,
+          spanish: ``,
+          tooltip: ``,
+        },
+      },
+    },
+    "Lesson 3": {
+      documentID: ``,
+
+      filler: ``,
+
+      hasCode: true,
+      highValue: false,
+      underConstruction: true,
+      completed: false,
+      needsImprovement: false,
+      new: true,
+      tooltip: ``,
+      sourceType: `video`, // may not need
+      button: `3. Creating Objects`, // may not need - `name`
+      header: `3. Creating Objects`,
+      fileSource:
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1688976548/Video_6_cljclp.mp4", // may not need
+
+      prompts: {
+        patreon: {
+          completed: false,
+          impact: 1000,
+          action: `generate`,
+          icon: `►`, //`✍️`
+          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
+            `Lesson 3`
+          )}?`,
+          response: `null`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        inspire: {
+          completed: false,
+          impact: 100,
+          action: `inspire`,
+          icon: `⚡`,
+          request: `ms. roxana, can you tell me how important object oriented programming will be in the metaverse?`,
+          response: `\n\nObject-orientated programming (OOP) is going to be a key component of the metaverse. OOP allows for advanced programming techniques such as abstraction, polymorphisim, inheritance, and encapsulation to be employed and it will be these advanced techniques that allow for the building of complex virtual worlds with a combination of 3D graphics, media, and interactive content. OOP provides the foundation for techniques such as simulation and artificial intelligence that will form the basis of functioning metaverse agents. OOP also provides the ability to build distributed, multi-user systems and security software to protect virtual worlds and the individual participants.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        summarize: {
+          completed: false,
+          impact: 100,
+          action: `summarize`,
+          icon: `📚`,
+          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
+            `Lesson 3`
+          )}?`,
+          response: `\n\nObject-Oriented Programming (OOP) is a programming paradigm that uses classes, objects and their associated methods to create applications. It allows developers to create organized and reusable code, making applications easier to maintain and extend.\n\nCRUD applications are those that Create, Read, Update, and Delete data. Examples include content management systems (CMS) and e-commerce storefronts. They allow a user to store data and retrieve data using the 4 basic operations.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        ask: {
+          completed: false,
+          impact: 100,
+          action: `ask`,
+          icon: `🔮`,
+          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
+            `Lesson 3`
+          )} with one sentence answers?`,
+          response: `\n\n1. What is object-oriented programming? - Object-oriented programming is a programming paradigm that uses objects and classes to structure code.\n\n2. What is a CRUD application? - CRUD stands for “create, read, update, delete” and refers to the operations that can be performed on a database or application.\n\n3. What is the difference between object-oriented programming and procedural programming? - Object-oriented programming focuses on creating objects and classes to organize code, while procedural programming works with functions and commands to execute tasks.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        guide: {
+          completed: false,
+          impact: 100,
+          action: `guide`,
+          icon: `🤝`,
+          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
+            `Lesson 3`
+          )}?`,
+          response: `\n\n1. Understand the overall concept of Object Oriented Programming (OOP) and its components: classes, objects, methods, inheritance, encapsulation, polymorophism.\n2. Understand the concepts of Abstraction, Encapsulation and Modularity, and the role they play in achieving well-crafted software.\n3. Learn the basics of data design and strategy, such as SQL and MongoDB.\n4. Understand basic concepts of CRUD - Create, Read, Update, and Delete.\n5. Be familiar with the libraries and best practices for implementing CRUD operations with multiple languages and technologies.\n6. Understand how to properly store, retrieve and query large amounts of data.\n7. Learn how to diagnose and resolve common errors that arise from applying OOP principles into CRUD operations.\n8. Understand the role of security measures and consider their importance when implementing a CRUD application.\n9. Be familiar with software design patterns such as Model-View-Controller (MVC) and how they apply to CRUD applications.\n10. Learn how to properly test for specific requirements and assumptions when building a CRUD application.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        demonstrate: {
+          completed: false,
+          impact: 100,
+          action: `demonstrate`,
+          icon: `🧿`,
+          request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
+            `Lesson 3`
+          )} with no other text in Java?`,
+          response: `\n\nExample of Object Oriented Programming and CRUD Applications in Java:\n\npublic class StudentRecord {\n    private int id;\n    private String name;\n    \n    // Constructor\n    public StudentRecord(int id, String name) {\n        this.id = id;\n        this.name = name;\n    }\n    \n    // Getters and Setters\n    public int getId() {\n        return id;\n    }\n    public void setId(int id) {\n        this.id = id;\n    }\n    public String getName() {\n        return name;\n    }\n    public void setName(String name) {\n        this.name = name;\n    }\n    \n    // CRUD methods\n    public void create() {\n        // Code to create a new student record in the database\n    }\n    public void read() {\n        // Code to read an existing student record from the database\n    }\n    public void update() {\n        // Code to update an existing student record in the database\n    }\n    public void delete() {\n        // Code to delete an existing student record from the database\n    }\n}`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        define: {
+          completed: false,
+          impact: 100,
+          action: `define`, // may not need
+          icon: `👾`, // may not need
+          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
+            `Lesson 3`
+          )} in exactly one sentence?`,
+          response: `\n\nObject Oriented Programming is a programming paradigm that uses abstraction to create objects and classes for improving the program structure. CRUD applications are computer programs designed for basic Create, Read, Update, and Delete operations on data in a database.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+
+        quiz: {
+          completed: false,
+          impact: 100,
+          action: `quiz`,
+          icon: `🧪`,
+          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
+            `Lesson 3`
+          )} without any answers?`,
+          response: `\n\n1. What is the purpose of object-oriented programming?\n2. In what ways do CRUD applications facilitate data management?\n3. How is object-oriented programming used to create complex applications?`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        shop: {
+          completed: false,
+          impact: 100,
+          action: `shop`,
+          icon: `🛍️`,
+          request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
+          response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+      },
+    },
+    "Lesson 4": {
+      documentID: ``,
+
+      filler: ``,
+
+      hasCode: true,
+      highValue: false,
+      underConstruction: true,
+      completed: false,
+      needsImprovement: false,
+      new: true,
+      tooltip: ``,
+      sourceType: `video`, // may not need
+      button: `4. Internet Apps`, // may not need - `name`
+      header: `4. Internet Apps`,
+      fileSource:
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1688976614/Video_7_tr3uts.mp4", // may not need
+
+      prompts: {
+        patreon: {
+          completed: false,
+          impact: 1000,
+          action: `generate`,
+          icon: `►`, //`✍️`
+          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
+            `Lesson 4`
+          )}?`,
+          response: `null`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        inspire: {
+          completed: false,
+          impact: 100,
+          action: `inspire`,
+          icon: `⚡`,
+          request: `ms. roxana, can you please explain how the data created by HTTP methods and machine learning algorithms are related?`,
+          response: `\n\nData created by HTTP methods and machine learning algorithms are related in that both produce data that can be used for analysis. HTTP methods generate data about how users interact with a website; for example, what pages they visit, how long they stay on the page, and what session activation times are. Machine learning algorithms generate data related to how algorithms use data to make predictions or decisions; for example, what data inputs were used to trigger a certain result, how the algorithm learned from past experiences, and what parameters impact the accuracy of models. Both methods can be used to draw insights, create models, and form decisions around data.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        summarize: {
+          completed: false,
+          impact: 100,
+          action: `summarize`,
+          icon: `📚`,
+          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
+            `Lesson 4`
+          )}?`,
+          response: `\n\nHTTP methods are the building blocks of how a web application communicates with the server. They instruct the server to take a specific action. The methods are: GET, POST, PUT, PATCH and DELETE. GET requests are used to retrieve a resource from the server. POST requests are used to send data to the server. PUT requests are used to upload or update a resource on the server. PATCH requests are used to partially update a resource on the server. DELETE requests are used to remove a resource from the server.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        ask: {
+          completed: false,
+          impact: 100,
+          action: `ask`,
+          icon: `🔮`,
+          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
+            `Lesson 4`
+          )} with one sentence answers?`,
+          response: `\n\n1.What is the difference between GET and POST methods? - GET is used to request data from a specified source, while POST is used to send data to a specified source. \n2. What is the DELETE method used for? - DELETE is used to delete data on a specified source. \n3. What is the PUT method used for? - PUT is used to update or replace existing data on a specified source.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        guide: {
+          completed: false,
+          impact: 100,
+          action: `guide`,
+          icon: `🤝`,
+          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
+            `Lesson 4`
+          )}?`,
+          response: `\n\n1. GET - allows clients to view and request data from a server. \n2. POST - allows clients to send data to be processed to the server. \n3. HEAD - similar to GET, but only returns metadata or the response headers. \n4. PUT - allows clients to upload a file to the server. \n5. DELETE - requests the server to delete a specified resource. \n6. TRACE - echoes back to the client whatever was sent to the server. \n7. OPTIONS - used to describe the communication options for the request-response pair. \n8. CONNECT - allows the client to establish a connection with the server. \n9. PATCH - used to partially modify an existing resource. \n10. LINK - helps in establishing relationships between multiple web resource requests.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        demonstrate: {
+          completed: false,
+          impact: 100,
+          action: `demonstrate`,
+          humanTouch: true,
+          icon: `🧿`,
+          request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
+            `Lesson 4`
+          )} with no other text in javascript to create a transaction with Stripe?`,
+          response: `\n\nYes, you can use the following code example to create a transaction with Stripe in JavaScript:\n\n// Create the transaction with Stripe \nconst Stripe = require('stripe');\nconst stripe = new Stripe('<YOUR_STRIPE_SECRET_KEY>'); \n\n//Create the transaction details\nconst transactionDetails = {\n  amount: 10.00,\n  currency: 'usd',\n  source: '<token generated by Stripe.js>'\n};\n\n//Submit the transaction details to Stripe\nstripe.charges.create(transactionDetails, (err, charge) => {\n  if (err) {\n    console.log(err); \n  } else { \n    console.log('Transaction successful');\n  }\n});`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        define: {
+          completed: false,
+          impact: 100,
+          action: `define`, // may not need
+          icon: `👾`, // may not need
+          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
+            `Lesson 4`
+          )} in exactly one sentence?`,
+          response: `\n\nHTTP methods are commands that a client sends to a server to indicate the desired action to be performed on a provided resource.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+
+        quiz: {
+          completed: false,
+          impact: 100,
+          action: `quiz`,
+          icon: `🧪`,
+          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
+            `Lesson 4`
+          )} without any answers?`,
+          response: `\n\n1. What common HTTP methods are used in RESTful web services?\n2. What is the main purpose of the OPTIONS method?\n3. What is the HTTP method used to modify an existing resource?`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        shop: {
+          completed: false,
+          impact: 100,
+          action: `shop`,
+          icon: `🛍️`,
+          request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
+          response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+      },
+    },
+    "Lesson 5": {
+      documentID: ``,
+
+      filler: ``,
+
+      hasCode: true,
+      highValue: false,
+      underConstruction: true,
+      completed: false,
+      needsImprovement: false,
+      new: true,
+      tooltip: ``,
+      sourceType: `video`, // may not need
+      button: `5. Loops & Counting`, // may not need - `name`
+      header: `5. Loops & Counting`,
+      fileSource:
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1688976614/video_8_t7tvep.mp4", // may not need
+      prompts: {
+        patreon: {
+          completed: false,
+          impact: 1000,
+          action: `generate`,
+          icon: `►`, //`✍️`
+          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
+            `Lesson 5`
+          )}?`,
+          response: `null`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        inspire: {
+          completed: false,
+          impact: 100,
+          action: `inspire`,
+          icon: `⚡`,
+          request: `ms. roxana, can you please explain what kind of loops Google or OpenAI  uses in their search algorithms?`,
+          response: `\n\nGoogle and OpenAI use many different kinds of loops in their search algorithms, including for loops, while loops, recursive loops, and more. For loops are used to iterate through a sequence of items, while while loops are used to continue repeating a set of instructions until a certain condition is met. Recursive loops are used to call a function within itself, allowing for deeper exploration of search queries. Google and OpenAI also use machine learning algorithms in their search algorithms to optimize the looping and increase the efficiency of their search results.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        summarize: {
+          completed: false,
+          impact: 100,
+          action: `summarize`,
+          icon: `📚`,
+          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
+            `Lesson 5`
+          )}?`,
+          response: `\n\nComputer programming loops use a statement or set of statements to repeat a block of code. \nLoops allow us to repeat a set of statements for a given number of times or until a certain condition is met. Loops are used to iterate over collections of data or create animations, and come in three main types: for, while, and do-while loops.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        ask: {
+          completed: false,
+          impact: 100,
+          action: `ask`,
+          icon: `🔮`,
+          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
+            `Lesson 5`
+          )} with one sentence answers?`,
+          response: `\n\n1. What is a loop in programming? -Looping is the ability to repeat a set of instructions until a condition is met. \n2. What is the difference between a while loop and a for loop? -A while loop runs slightly differently than a for loop. A for loop runs for a specific number of iterations, while a while loop runs until a certain condition is met. \n3. What is an infinite loop? -An infinite loop is a loop that runs indefinitely, never reaching a completion point.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        guide: {
+          completed: false,
+          impact: 100,
+          action: `guide`,
+          icon: `🤝`,
+          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
+            `Lesson 5`
+          )}?`,
+          response: `\n\n1. Understand what a loop is and its role in programming.\n2. Know the most common types of loops and their syntax.\n3. Become familiar with iteration and understand how it works in loops.\n4. Understand the concepts of loop control variables.\n5. Learn how to use for and while loops for different tasks.\n6. Know when and how to break out of a loop.\n7. Familiarize yourself with continue and its usage in loops.\n8. Understand nested loops and when they should be used.\n9. Learn how to use recursion as an alternative form of looping.\n10. Familiarize yourself with different debugging tools and how to use them to identify and solve errors related to looping.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        demonstrate: {
+          completed: false,
+          impact: 100,
+          action: `demonstrate`,
+          icon: `🧿`,
+          request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
+            `Lesson 5`
+          )} with no other text in C#?`,
+          response: `\n\nfor (int i = 0; i < 10; i++)\n{\n    Console.WriteLine(i);\n}`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        define: {
+          completed: false,
+          impact: 100,
+          action: `define`, // may not need
+          icon: `👾`, // may not need
+          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
+            `Lesson 5`
+          )} in exactly one sentence?`,
+          response: `\n\nComputer programming loops are a set of instructions that are repeated until a specific condition is met.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+
+        quiz: {
+          completed: false,
+          impact: 100,
+          action: `quiz`,
+          icon: `🧪`,
+          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
+            `Lesson 5`
+          )} without any answers?`,
+          response: `\n\n1. What type of loop should be used when you want to iterate over a collection of items in the same order that they appear in the collection? \n\n2. What keyword is used in most programming languages to start and end a loop? \n\n3. How do you prevent an infinite loop from running indefinitely in a program?`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        shop: {
+          completed: false,
+          impact: 100,
+          action: `shop`,
+          icon: `🛍️`,
+          request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
+          response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+      },
+    },
+    "Lesson 6": {
+      documentID: ``,
+
+      filler: ``,
+
+      hasCode: true,
+      highValue: false,
+      underConstruction: true,
+      completed: false,
+      needsImprovement: false,
+      new: true,
+      tooltip: ``,
+      sourceType: `video`, // may not need
+      button: `6. HTML`, // may not need - `name`
+      header: `6. HTML`,
+      fileSource:
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1688976512/Video_9_uoedla.mp4", // may not need
+
+      prompts: {
+        patreon: {
+          completed: false,
+          impact: 1000,
+          action: `generate`,
+          icon: `►`, //`✍️`
+          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
+            `Lesson 6`
+          )}?`,
+          response: `null`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        inspire: {
+          completed: false,
+          impact: 100,
+          action: `inspire`,
+          icon: `⚡`,
+          request: `ms. roxana, can you please explain why Facebook created React, its position in the market, and how it's related to how HTML was coded for myspace pages?`,
+          response: `\n\nFacebook created React to modernize how webpages are coded. React is a JavaScript library that enables developers to create user interfaces. In the market, React serves as a powerful solution for building modern web, mobile, and desktop applications. It is related to how HTML was coded for MySpace pages in that it is also used to build webpages, but is much more advanced than HTML as it is a JavaScript library, which allows developers to create complex user interfaces, unlike HTML which only provides basic building blocks.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        summarize: {
+          completed: false,
+          impact: 100,
+          action: `summarize`,
+          icon: `📚`,
+          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
+            `Lesson 6`
+          )}?`,
+          response: `\n\nHTML (HyperText Markup Language) is the standard language used for designing webpages and web applications. It uses a collection of tags to define the structure and content of webpages. The tags describe the content and arrange it into sections, paragraphs, headings, lists, links, and images. HTML also enables the designer to add styles or scripts to further customize the page's look and functionality.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        ask: {
+          completed: false,
+          impact: 100,
+          action: `ask`,
+          icon: `🔮`,
+          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
+            `Lesson 6`
+          )} with one sentence answers?`,
+          response: `\n\n1. What is HTML? - HTML is the standard markup language for creating web pages and web applications. \n2. How do I create a link in HTML? - To create a link in HTML, use the <a> tag with the href attribute.\n3. How do I create an HTML table? - Use the <table> tag to create an HTML table.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        guide: {
+          completed: false,
+          impact: 100,
+          action: `guide`,
+          icon: `🤝`,
+          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
+            `Lesson 6`
+          )}?`,
+          response: `\n\n1. Understand the syntax rules for HTML elements and structure\n2. Know the differences between HTML versions, including HTML4, XHTML and HTML5\n3. Be aware of how to structure and divide HTML code into sections for readability\n4. Become familiar with the use of HTML tags, including table, paragraph and list tags\n5. Learn the basics of using hyperlinks and internal/external links\n6. Develop an understanding of the attributes, such as styles and classes, that can be used in HTML document\n7. Comprehend the basics of displaying multimedia like video, audio and Flash content\n8. Understand the structure and arrangement of meta tags and metadata\n9. Learn how to detect and troubleshoot HTML errors and bugs\n10. Grasp the basics of using HTML forms and input fields`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        demonstrate: {
+          humanTouch: true,
+          completed: false,
+          impact: 100,
+          action: `demonstrate`,
+          icon: `🧿`,
+          request: `ms. roxana, can you please show me an example of a box with a name centered using flexbox positioning in ${ultimateEffeciencyJutsu(
+            `Lesson 6`
+          )} with no other text in HTML?`,
+          response: `\n\n<div style=\"display: flex; justify-content: center;\"> \n  <div>MyName</div> \n</div>`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        define: {
+          completed: false,
+          impact: 100,
+          action: `define`, // may not need
+          icon: `👾`, // may not need
+          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
+            `Lesson 6`
+          )} in exactly one sentence?`,
+          response: `\n\nHTML (HyperText Markup Language) is a standardized system for tagging text files to achieve font, color, graphic, and hyperlink effects on World Wide Web pages.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+
+        quiz: {
+          completed: false,
+          impact: 100,
+          action: `quiz`,
+          icon: `🧪`,
+          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
+            `Lesson 6`
+          )}?`,
+          response: `\n\n1. What is the basic syntax of an HTML tag?\n2. What is the purpose of the <head> tag in an HTML document?\n3. How can you reference a custom external stylesheet in an HTML document?`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        shop: {
+          completed: false,
+          impact: 100,
+          action: `shop`,
+          icon: `🛍️`,
+          request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
+          response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+      },
+    },
+    "Lesson 7": {
+      documentID: ``,
+
+      filler: ``,
+
+      hasCode: true,
+      highValue: false,
+      underConstruction: true,
+      completed: false,
+      needsImprovement: false,
+      new: true,
+      tooltip: ``,
+      sourceType: `video`, // may not need
+      button: `7. CSS`, // may not need - `name`
+      header: `7. CSS`,
+      fileSource:
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1688976569/video_10_otgaue.mp4", // may not need
+
+      prompts: {
+        patreon: {
+          completed: false,
+          impact: 1000,
+          action: `generate`,
+          icon: `►`, //`✍️`
+          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
+            `Lesson 7`
+          )}?`,
+          response: `null`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        inspire: {
+          humanTouch: true,
+          completed: false,
+          impact: 100,
+          action: `inspire`,
+          icon: `⚡`,
+          request: `ms. roxana, can you please how designers use tools like Figma and CSS?`,
+          response: `\n\nDesigners use tools like Figma to create visuals and wireframes; they use CSS to create the design styling, layouts, grid designs, and page layout structure. Figma is used to create a visual representation of the design, such as a color, font and design layout. Then, CSS can be used to bring this design to life by styling the elements and adding animations, transitions, and other interactive features. Additionally, designers use CSS to make sure their designs are responsive and work properly on different devices and browsers.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        summarize: {
+          completed: false,
+          impact: 100,
+          action: `summarize`,
+          icon: `📚`,
+          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
+            `Lesson 7`
+          )}?`,
+          response: `\n\nCSS stands for "Cascading Style Sheets" and is a type of language used to create the design, style, and layout of a webpage. It describes the look and formatting of documents written in HTML or XML, and can be used to style webpages, text, images, and even audio and video content. CSS can be used to adjust some basic things like font size, background colors, and border colors, etc., as well as more complex styling and layout configurations.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        ask: {
+          completed: false,
+          impact: 100,
+          action: `ask`,
+          icon: `🔮`,
+          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
+            `Lesson 7`
+          )} with one sentence answers?`,
+          response: `\n\n1. What are the benefits of using CSS? - CSS enables designers to create attractive and interactive webpages without writing long lines of code.\n\n2. How do I add a background image to my web page with CSS? - The CSS background-image property is used to set an image as the background of an element.\n\n3. How can I create flexible layouts with CSS? - CSS Flexbox allows developers to build flexible web layouts through shared properties and alignments.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        guide: {
+          completed: false,
+          impact: 100,
+          action: `guide`,
+          icon: `🤝`,
+          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
+            `Lesson 7`
+          )}?`,
+          response: `\n\n1. Understand basic concepts such as HTML elements, selectors, classes and ID attributes.\n\n2. Know the various CSS selectors and their uses, such as element selectors, class selectors and ID selectors.\n\n3. Learn how to apply text-level, block-level and box properties to elements.\n\n4. Practice using shorthand properties to control multiple CSS properties.\n\n5. Master the use of CSS positioning elements to control the flow and order of presentation.\n\n6. Understand the basics of working with forms, including styling form elements.\n\n7. Learn how to create dynamic pages in CSS by understanding hover states, dynamic page selection and page transiting.\n\n8. Familiarize yourself with browser-dependent templates and hacks to ensure consistently appearing pages.\n\n9. Understand the basics of working with layout via the float, clear and display properties.\n\n10. Research cross-browser problems such as box models, table rendering and page elements.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        demonstrate: {
+          completed: false,
+          impact: 100,
+          action: `demonstrate`,
+          icon: `🧿`,
+          request: `ms. roxana, can you please show me an example of the box model and flexbox in ${ultimateEffeciencyJutsu(
+            `Lesson 7`
+          )} with no other text in CSS?`,
+          response: `\n\nYes! Here is an example of the box model in CSS:\n\ndiv {\n    width: 100px;\n    height: 100px;\n    border: 1px solid black;\n    padding: 10px;\n    margin: 20px;\n}\n\nAnd here is an example of flexbox in CSS:\n\ndiv {\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between;\n}`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        define: {
+          completed: false,
+          impact: 100,
+          action: `define`, // may not need
+          icon: `👾`, // may not need
+          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
+            `Lesson 7`
+          )} in exactly one sentence?`,
+          response: `\n\nCSS is a stylesheet language used to define the presentation of HTML elements on a web page.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+
+        quiz: {
+          completed: false,
+          impact: 100,
+          action: `quiz`,
+          icon: `🧪`,
+          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
+            `Lesson 7`
+          )} without any answers?`,
+          response: `\n\n1. What's the difference between margin and padding in terms of CSS styling? \n2. What kind of selector would you use to target a div element with an ID of 'container'? \n3. What is the purpose of using float in CSS?`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        shop: {
+          completed: false,
+          impact: 100,
+          action: `shop`,
+          icon: `🛍️`,
+          request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
+          response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+      },
+    },
+    "Lesson 8": {
+      documentID: ``,
+
+      filler: ``,
+
+      hasCode: true,
+
+      highValue: false,
+      underConstruction: false,
+      completed: false,
+      needsImprovement: false,
+      new: true,
+      tooltip: ``,
+      sourceType: `video`, // may not need
+      button: `8. React`, // may not need - `name`
+      header: `8. React`,
+      fileSource:
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1688976543/video_11_j3ce46.mp4", // may not need
+
+      prompts: {
+        patreon: {
+          completed: false,
+          impact: 1000,
+          action: `generate`,
+          icon: `►`, //`✍️`
+          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
+            `Lesson 8`
+          )}?`,
+          response: `null`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        inspire: {
+          completed: false,
+          impact: 100,
+          action: `inspire`,
+          icon: `⚡`,
+          request: `ms. roxana, can React programming be used to code apps with AI or blockchain?`,
+          response: `\n\nYes, React programming can be used to code apps with AI or blockchain. React Native allows developers to create powerful and robust applications with AI and blockchain capabilities. You can also use tools like Hyperledger or Ethereum to create blockchain-based applications with React.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        summarize: {
+          completed: false,
+          impact: 100,
+          action: `summarize`,
+          icon: `📚`,
+          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
+            `Lesson 8`
+          )}?`,
+          response: `\n\nReact is a JavaScript library for building user interfaces. It is a component-based library which allows developers to write components that manage their own state and can be easily combined with other components to make complex user interfaces. React also provides a declarative API for creating UI elements, allowing developers to more easily create dynamic and interactive web applications.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        ask: {
+          completed: false,
+          impact: 100,
+          action: `ask`,
+          icon: `🔮`,
+          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
+            `Lesson 8`
+          )} with one sentence answers?`,
+          response: `\n\n1. What is React? Ans: React is a JavaScript library for building user interfaces. \n2. How is React different from other JavaScript frameworks? Ans: React is a library, while other frameworks like Angular and Vue are full-fledged frameworks.\n3. What is the virtual DOM? Ans: The virtual DOM is an abstract copy of the actual DOM, which React utilizes to minimize DOM manipulation.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        guide: {
+          completed: false,
+          impact: 100,
+          action: `guide`,
+          icon: `🤝`,
+          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
+            `Lesson 8`
+          )}?`,
+          response: `\n\n1. Become familiar with basic concepts, such as components, props, state, and lifecycle\n2. Understand core features, such as JSX and the Virtual DOM\n3. Learn the basics of the React architecture and how to create React applications\n4. Compare React to other frameworks, such as Angular and Vue\n5. Master the React syntax and writing efficient React components\n6. Learn the best practices when working with React and create scalable applications\n7. Become familiar with popular libraries, such as Redux, React Router, and React Transition Group\n8. Use debugging tools to identify and resolve issues\n9. Understand the best practices for security and performance optimization\n10. Utilize testing frameworks such as Mocha, Chai, and Jest to ensure code quality`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        demonstrate: {
+          humanTouch: true,
+          completed: false,
+          impact: 100,
+          action: `demonstrate`,
+          icon: `🧿`,
+          request: `ms. roxana, can you please show me an example of a "login with Google" button in ${ultimateEffeciencyJutsu(
+            `Lesson 8`
+          )} with no other text in React?`,
+          response: `\n\nYes, here is an example of a \"Login with Google\" button in React programming, with no other text:\n\nimport React from \"react\";\nimport { GoogleLogin } from 'react-google-login';\n \nconst LoginComponent = () => {\n  const responseGoogle = (response) => {\n      console.log(response);\n  }\n \n  return (\n    <GoogleLogin\n        clientId=\"YOUR_CLIENT_ID\"\n        buttonText=\"Login with Google\"\n        onSuccess={responseGoogle}\n        onFailure={responseGoogle}\n        cookiePolicy={'single_host_origin'}\n    />\n  );\n}\n \nexport default LoginComponent;`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        define: {
+          completed: false,
+          impact: 100,
+          action: `define`, // may not need
+          icon: `👾`, // may not need
+          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
+            `Lesson 8`
+          )} in exactly one sentence?`,
+          response: `\n\nReact is an open-source JavaScript library for building user interfaces.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+
+        quiz: {
+          completed: false,
+          impact: 100,
+          action: `quiz`,
+          icon: `🧪`,
+          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
+            `Lesson 8`
+          )}?`,
+          response: `\n\n1. What is the purpose of React's component lifecycle methods?\n2. What is the fundamental difference between a Class component and a Functional component in React?\n3. What is the purpose of the useState hook in React?`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        shop: {
+          completed: false,
+          impact: 100,
+          action: `shop`,
+          icon: `🛍️`,
+          request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
+          response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+      },
+    },
+    "Lesson 9": {
+      documentID: ``,
+
+      filler: ``,
+
+      highValue: false,
+      hasCode: true,
+      underConstruction: false,
+      completed: false,
+      needsImprovement: false,
+      new: true,
+      tooltip: ``,
+      sourceType: `video`, // may not need
+      button: `9. Creating Users`, // may not need - `name`
+      header: `9. Creating Users`,
+      fileSource:
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1688976586/video_12_wii6so.mp4", // may not need
+
+      prompts: {
+        patreon: {
+          completed: false,
+          impact: 1000,
+          action: `generate`,
+          icon: `►`, //`✍️`
+          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
+            `Lesson 9`
+          )}?`,
+          response: `null`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        inspire: {
+          completed: false,
+          impact: 100,
+          action: `inspire`,
+          icon: `⚡`,
+          request: `ms. roxana, can you please explain how companies are able to collect data when creating users on their platform?`,
+          response: `\n\nCompanies are able to collect data from users when they create an account by using a series of registration or sign-up forms where the user is asked to provide information. This information may include name, age, gender, location, email, phone number, and other details. This data is then stored in the company’s database, which is later accessed by data scientists and other team members to gain insights into user behaviour, needs and preferences.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        summarize: {
+          completed: false,
+          impact: 100,
+          action: `summarize`,
+          icon: `📚`,
+          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
+            `Lesson 9`
+          )}?`,
+          response: `\n\nOAuth is an open-standard authorization protocol or framework that describes how users can access resources on third-party websites or applications through a secure system. It works by providing access tokens, which are essentially encrypted keys that identify a user and give them access to a restricted resource. Users log in to their accounts and authorise the third-party application to access their data by providing a specific access token. The application then presents the token to the service provider, which the service provider then verifies and allows the access to the user-assigned resource. OAuth promotes secure access to user data through stronger authentication mechanisms, as well as by allowing users to revoke app access rights at any time.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        ask: {
+          completed: false,
+          impact: 100,
+          action: `ask`,
+          icon: `🔮`,
+          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
+            `Lesson 9`
+          )} with one sentence answers?`,
+          response: `\n\n1. What is OAuth? Answer: OAuth is an open standard authorization framework that allows applications to securely access resources on behalf of a user.\n\n2. What is the difference between OAuth and OpenID? Answer: OAuth is used to authorize third-party applications to access user resources, whereas OpenID is used to authenticate users.\n\n3. What is a Bearer Token? Answer: A Bearer Token is an access token that grants its holder access to a protected resource without additional authentication.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        guide: {
+          completed: false,
+          impact: 100,
+          action: `guide`,
+          icon: `🤝`,
+          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
+            `Lesson 9`
+          )}?`,
+          response: `\n\n1. OAuth is an open-source authorization protocol that allows users to securely access resources without sharing personal credentials.\n\n2. OAuth enables clients to access resources on behalf of a user without having to store or handle the user's credentials.\n\n3. OAuth uses tokens which identify the authenticated user and the scope of access permitted to the resource.\n\n4. OAuth uses an authorization server and a resource server to manage access to resources.\n\n5. OAuth provides various permission-granting options, including authorization codes, implicit grants, resource owner credentials, and client credentials.\n\n6. OAuth is used to authorize access to web services, APIs, and mobile applications.\n\n7. OAuth supports applications built on different operating systems, such as web, mobile, and desktop.\n\n8. OAuth provides support for both the client and the resource server to communicate securely over the internet.\n\n9. OAuth enables applications to access user data on other websites and in the cloud.\n\n10. OAuth is built on the concept of secure delegation and is used in many popular applications, such as Google, Amazon, and Twitter.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        demonstrate: {
+          completed: false,
+          impact: 100,
+          action: `demonstrate`,
+          icon: `🧿`,
+          request: `ms. roxana, can you please show me an example of using ${ultimateEffeciencyJutsu(
+            `Lesson 9`
+          )} with no other text in ruby?`,
+          response: `\n\nHere is a basic example of how to implement OAuth in Ruby.\n\nrequire 'base64'\nrequire 'net/https'\nrequire 'uri'\nrequire 'json'\n\n# Client ID and secret\nclient_id = 'yourclientid'\nclient_secret = 'yourclientsecret'\n\n# HTTP request URL \nurl = 'https://example.com/oauth/token'\n\n# Encode credentials\ncredentials = Base64.strict_encode64(\"#{client_id}:#{client_secret}\")\n\n# Create the HTTP objects\nuri = URI.parse(url)\nhttp = Net::HTTP.new(uri.host, uri.port)\nhttp.use_ssl = true\n\n# Create the POST request\nrequest = Net::HTTP::Post.new(uri.request_uri)\n\n# Set headers\nrequest.basic_auth('Basic', credentials)\nrequest.add_field('Content-Type', 'application/x-www-form-urlencoded')\n\n# Set body params\nrequest.body = 'grant_type=client_credentials'\n\n# Send request\nresponse = http.request(request) \n\n# Parse response\ndata = JSON.parse(response.body)\n\n# Extract the access token\naccess_token = data['access_token']`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        define: {
+          completed: false,
+          impact: 100,
+          action: `define`, // may not need
+          icon: `👾`, // may not need
+          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
+            `Lesson 9`
+          )} in exactly one sentence?`,
+          response: `\n\nOAuth is an open authorization protocol that enables secure API authentication.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+
+        quiz: {
+          completed: false,
+          impact: 100,
+          action: `quiz`,
+          icon: `🧪`,
+          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
+            `Lesson 9`
+          )}?`,
+          response: `\n\n1. How does OAuth enable secure access to data?\n\n2. What are the different OAuth authorization flows?\n\n3. How does OAuth differ from OpenID Connect?`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        shop: {
+          completed: false,
+          impact: 100,
+          action: `shop`,
+          icon: `🛍️`,
+          request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
+          response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+      },
+    },
+    "Lesson 10": {
+      documentID: ``,
+
+      filler: ``,
+
+      highValue: false,
+      hasCode: true,
+      underConstruction: false,
+      completed: false,
+      needsImprovement: false,
+      new: true,
+      tooltip: ``,
+      sourceType: `video`, // may not need
+      button: `10. Database Foundations`, // may not need - `name`
+      header: `10. Database Foundations`,
+      fileSource:
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1688976542/video_13_kz1ogx.mp4", // may not need
+
+      prompts: {
+        patreon: {
+          completed: false,
+          impact: 1000,
+          action: `generate`,
+          icon: `►`, //`✍️`
+          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
+            `Lesson 10`
+          )}?`,
+          response: `null`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        inspire: {
+          completed: false,
+          impact: 100,
+          action: `inspire`,
+          icon: `⚡`,
+          request: `ms. roxana, can you please explain how users in a databases and machine learning are related?`,
+          response: `\n\nUsers in a database and machine learning are related because having more users in a database provides more data for the machine learning algorithm to analyze. This data can be used to train the machine learning model, as well as to improve the model's accuracy. In other words, the more information available in the database, the better the machine learning model can be trained and the more accurate it can become.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        summarize: {
+          completed: false,
+          impact: 100,
+          action: `summarize`,
+          icon: `📚`,
+          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
+            `Lesson 10`
+          )}?`,
+          response: `\n\nDatabase design involves creating a logical and physical structure of a database, using software applications and specialized programming tools. This process involves mapping out the structure of the data, setting up and maintaining the data storage parameters, and creating the necessary rules and regulations to manage the data. Database design also involves setting up the processes needed to manage the flow of data into and out of the system. Finally, it also involves setting up any necessary user access and security protocols.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        ask: {
+          completed: false,
+          impact: 100,
+          action: `ask`,
+          icon: `🔮`,
+          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
+            `Lesson 10`
+          )} with one sentence answers?`,
+          response: `\n\n1. What is normalization? - Normalization is a process of organizing data in a database to minimize redundancy and dependency.\n\n2. What is a primary key? - A primary key is a unique identifier for a record in a database table.\n\n3. What is the difference between clustered and nonclustered index? - A clustered index stores the data in a sorted format, while a nonclustered index only stores a reference to the data.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        guide: {
+          completed: false,
+          impact: 100,
+          action: `guide`,
+          icon: `🤝`,
+          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
+            `Lesson 10`
+          )}?`,
+          response: `\n\n1. Understand the importance of database design and be familiar with the different ways it is used. \n2. Learn Database Theory and how to use it to organize and manage data. \n3. Understand the basics of database architecture and the different components used.\n4. Learn the role and importance of data modeling and how it relates to database design.\n5. Have an understanding of Normalization techniques used in database design.\n6. Be familiar with different database programming language syntax and tools.\n7. Learn about the different types of keys and how they can be used to maintain data integrity. \n8. Be able to create and maintain database tables, fields, and data relationships. \n9. Understand the different security measures that should be taken when designing and maintaining a database.\n10. Understand the importance of user interaction with databases, incorporating language(s) such as SQL, PL/SQL, AND T-SQL.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        demonstrate: {
+          humanTouch: true,
+          completed: false,
+          impact: 100,
+          action: `demonstrate`,
+          icon: `🧿`,
+          request: `ms. roxana, can you please show me an example of noSQL with firebase and SQL and mySQL?`,
+          response: `\n\nNoSQL example with Firebase:\n\nConsider a Firebase database that stores student records. A NoSQL approach may store data in a document-like structure like this:\n\n{\n  Name: \"John Doe\",\n  Age: 22,\n  Preferences: {\n    Music: \"Classical\",\n    Language: \"English\"\n  },\n  Grades: {\n    Math: \"A+\",\n    Science: \"B\"\n  }\n}\n\nSQL example with MySQL:\n\nConsider a MySQL database that stores student records. A SQL approach may store data in a table-like structure like this:\n\nCREATE TABLE student_records (\n  Name VARCHAR(255),\n  Age INT,\n  Music VARCHAR(255),\n  Language VARCHAR(255),\n  Math CHAR(2),\n  Science CHAR(2)\n);\n\nINSERT INTO student_records (Name, Age, Music, Language, Math, Science) \nVALUES(\"John Doe\", 22, \"Classical\", \"English\", \"A+\", \"B\");`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        define: {
+          completed: false,
+          impact: 100,
+          action: `define`, // may not need
+          icon: `👾`, // may not need
+          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
+            `Lesson 10`
+          )} in exactly one sentence?`,
+          response: `\n\nDatabase design is the process of creating a logical data structure used to store, manipulate and retrieve data efficiently.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+
+        quiz: {
+          completed: false,
+          impact: 100,
+          action: `quiz`,
+          icon: `🧪`,
+          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
+            `Lesson 10`
+          )}?`,
+          response: `\n\n1. What is the process of data normalization, and why is it important in database design?\n2. How can data integrity be ensured when designing a database?\n3. What strategies can be employed when designing a database to optimize query performance?`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        shop: {
+          completed: false,
+          impact: 100,
+          action: `shop`,
+          icon: `🛍️`,
+          request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
+          response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+      },
+    },
+    "Lesson 11": {
+      documentID: ``,
+
+      filler: ``,
+
+      highValue: false,
+      hasCode: true,
+      underConstruction: true,
+      completed: false,
+      needsImprovement: false,
+      new: true,
+      tooltip: ``,
+      sourceType: `video`, // may not need
+      button: `11. Backend Clouds`, // may not need - `name`
+      header: `11. Backend Clouds`,
+      fileSource:
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1688976562/video_14_xtmdsk.mp4", // may not need
+
+      prompts: {
+        patreon: {
+          completed: false,
+          impact: 1000,
+          action: `generate`,
+          icon: `►`, //`✍️`
+          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
+            `Lesson 11`
+          )}?`,
+          response: `null`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        inspire: {
+          completed: false,
+          impact: 100,
+          action: `inspire`,
+          icon: `⚡`,
+          request: `ms. roxana, can you please explain why serverless computing got popular?`,
+          response: `\n\nServerless computing became popular in recent years thanks to its ability to abstract away the complexities of managing underlying cloud infrastructure, allowing developers to focus more on building the applications themselves. Serverless computing can be used to quickly build and deploy applications at scale, often with more reliability, durability and cost-effectiveness than traditional infrastructure. Additionally, it reduces the amount of manual work involved in setting up and coordinating a server infrastructure, as well as the ongoing operational costs associated with maintaining servers.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        summarize: {
+          completed: false,
+          impact: 100,
+          action: `summarize`,
+          icon: `📚`,
+          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
+            `Lesson 11`
+          )}?`,
+          response: `\n\nBackend software engineering is the process of designing the programming and technology that power the web applications, websites, and other web-based products. This work involves using programming languages such as Java, Python, C#, and C++ to create the software’s code, logic, and architecture. It also involves setting up the infrastructure such as databases, web servers, and file systems to store and access the data. Finally, it also involves ensuring that the application product performs correctly and security policies are in place.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        ask: {
+          completed: false,
+          impact: 100,
+          action: `ask`,
+          icon: `🔮`,
+          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
+            `Lesson 11`
+          )} with one sentence answers?`,
+          response: `\n\n1. What is backend software engineering? - Backend software engineering is the branch of software engineering related to devising, building, and maintaining the underlying architecture of digital applications.\n\n2. What skills are needed for backend software engineering? - Proficiency with software programming languages, database and server management, API development, and system architecture are all necessary skills for a successful backend software engineer.\n\n3. What is the best way to learn backend software engineering? - The best way to learn backend software engineering is to start with basics like HTML, CSS, and JavaScript then progress to more complex enterprise-grade programming languages.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        guide: {
+          completed: false,
+          impact: 100,
+          action: `guide`,
+          icon: `🤝`,
+          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
+            `Lesson 11`
+          )}?`,
+          response: `\n\n1. Understand back-end architectures including MVC, REST, and SOA \n2. Be familiar with popular server-side technologies such as Node.js, Ruby on Rails and Java\n3. Implement authentication and authorization\n4. Design and query databases such as MySQL and Postgres\n5. Understand caching mechanisms such as memcache and Redis\n6. Implement API services using web services such as SOAP and XML-RPC \n7. Utilize version control systems such as git\n8. Have a basic understanding of the command line and shell scripting\n9. Utilize DevOps strategies such as continuous integration, deployment and monitoring\n10. Know principles of security and scalability, such as potential threats and load balancing`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        demonstrate: {
+          completed: false,
+          impact: 100,
+          action: `demonstrate`,
+          icon: `🧿`,
+          request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
+            `Lesson 11`
+          )} with no other text in python?`,
+          response: `\n\nA note from RO.B.E. ms. roxana is talking about sockets here. \n\nThey're really cool. \n\n Check out more here: https://www.geeksforgeeks.org/what-is-web-socket-and-how-it-is-different-from-the-http/\n\n# Example of backend software engineering with no other text in Python:\n\n#import a necessary module\nimport socket\n\n#create a socket object\nsock = socket.socket()\n\n#Bind the socket to a port\nsock.bind(('', 55555))\n\n#listen for incoming connections\nsock.listen(5)\n\n#accept incoming connection\nconnection, addr = sock.accept()\n\n#receive data from the client\ndata = connection.recv(1024)\n\n#process the data \nresponse = process_data(data)\n\n#send the response to the client\nconnection.send(response)\n\n#close the connection\nconnection.close()`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        define: {
+          completed: false,
+          impact: 100,
+          action: `define`, // may not need
+          icon: `👾`, // may not need
+          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
+            `Lesson 11`
+          )} in exactly one sentence?`,
+          response: `\n\nBackend software engineering is the development of server-side logic to provide a backend architecture for web applications.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+
+        quiz: {
+          completed: false,
+          impact: 100,
+          action: `quiz`,
+          icon: `🧪`,
+          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
+            `Lesson 11`
+          )} without any answers?`,
+          response: `\n\n1. What is the purpose of dependency injection in web development?\n2. Describe the roles of models, views, and controllers in a back-end system.\n3. What is the role of object-relational mapping (ORM) in backend software engineering?`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        shop: {
+          completed: false,
+          impact: 100,
+          action: `shop`,
+          icon: `🛍️`,
+          request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
+          response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+      },
+    },
+    "Lesson 12": {
+      documentID: ``,
+
+      filler: ``,
+
+      highValue: false,
+      hasCode: true,
+      underConstruction: true,
+      rare: false,
+      completed: false,
+      needsImprovement: false,
+      new: true,
+      tooltip: ``,
+      sourceType: `video`, // may not need
+      button: `12. Operating Systems & Machines`, // may not need - `name`
+      header: `12. Operating Systems & Machines`,
+      fileSource:
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1688976596/video_15_ripydd.mp4", // may not need
+
+      prompts: {
+        patreon: {
+          completed: false,
+          impact: 1000,
+          action: `generate`,
+          icon: `►`, //`✍️`
+          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
+            `Lesson 12`
+          )}?`,
+          response: `null`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        inspire: {
+          completed: false,
+          impact: 100,
+          action: `inspire`,
+          icon: `⚡`,
+          request: `ms. roxana, can you please explain the relationship between ASICs, FPGAs, Tesla's Optimus robot and bitcoin miners?`,
+          response: `\n\nASICs (application-specific integrated circuits) are specialized chips used to mine crypto-currencies, like bitcoin. They are built specifically to perform cryptocurrency mining calculations at higher speeds and greater efficiency than other chips like GPUs, CPUs, and FPGAs. ASICs are very important in the cryptocurrency market as they enable miners to mine more cryptocurrencies in less time.\n\nFPGAs (Field Programmable Gate Arrays) are microchips that can be programmed to perform specific tasks that ASICs would not be able to. FPGAs are more energy efficient than ASICs and can also be quickly reconfigured to perform different tasks. Although FPGAs are slower than ASICs, they can be used to mine alternative currencies.\n\nTesla's Optimus Robot is a robotic construction tool designed for large-scale projects. This tool can be programmed to build complex structures quickly and efficiently. Optimus Robot can be a powerful tool for large-scale cryptocurrency mining operations.\n\nBitcoin miners use computers and other hardware devices to validate Bitcoin transactions and keep the Bitcoin network secure. Bitcoin miners need specialized hardware to support the processing power and memory required to successfully mine Bitcoins. ASICs, FPGAs, and Radeon GPUs are popular choices for Bitcoin miners due to their excellent speed, efficiency and cost-effectiveness.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        summarize: {
+          completed: false,
+          impact: 100,
+          action: `summarize`,
+          icon: `📚`,
+          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
+            `Lesson 12`
+          )}?`,
+          response: `\n\nThe basics of an operating system are: its purpose is to manage the hardware and software components of a computer system; it acts as an intermediary between applications and the computer hardware; it provides basic functions such as memory and process management, input/output device control, file system management, and data management; it also provides an interface for the user to interact with the system.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        ask: {
+          completed: false,
+          impact: 100,
+          action: `ask`,
+          icon: `🔮`,
+          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
+            `Lesson 12`
+          )} with one sentence answers?`,
+          response: `\n\n1. What is an operating system? Answer: An operating system is software that manages the operation of a computer's hardware components.\n\n2. What are the main features of an operating system? Answer: Operating systems offer features such as memory management, process management, user interface, networking, and device driver support.\n\n3. What is the difference between a Linux-based and a Windows-based system? Answer: A Linux-based system is typically open source and free to use, while a Windows-based system requires a purchased license and is not open source.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        guide: {
+          completed: false,
+          impact: 100,
+          action: `guide`,
+          icon: `🤝`,
+          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
+            `Lesson 12`
+          )}?`,
+          response: `\n\n1. Understand the basic concept of computer operating systems and their components, including hardware and application elements. \n2. Learn about the different types of operating systems and the advantages and disadvantages of each.\n3. Learn how to set up network environments and connect devices to the system.\n4. Learn the process of installing, configuring, and maintaining an operating system.\n5. Learn to customize settings and user options, manage system resources and modify system preferences.\n6. Become familiar with different user interfaces and understand how to interact with them.\n7. Learn how to use command line tools to diagnose and troubleshoot issues.\n8. Learn how to configure security settings, including authentication and access control.\n9. Understand how to keep an operating system patched and up-to-date with available security updates.\n10. Learn how to back up data and restore the operating system after a hardware or software failure.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        demonstrate: {
+          completed: false,
+          humanTouch: true,
+          impact: 100,
+          action: `demonstrate`,
+          icon: `🧿`,
+          request: `ms. roxana, can you please show me an example of kernel code written in C++?`,
+          response: `\n\nHere is an example of kernel code written in C++:\n\n// Kernel code in C++ \n__global__ void simple_kernel(int *data) \n{ \n    int tid = threadIdx.x;\n    int i = blockIdx.x * blockDim.x + threadIdx.x;\n\n    // Kernel code here\n    data[i] *= 2; \n}`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        define: {
+          completed: false,
+          impact: 100,
+          action: `define`, // may not need
+          icon: `👾`, // may not need
+          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
+            `Lesson 12`
+          )} in exactly one sentence?`,
+          response: `\n\nA computer operating system is a software that manages hardware and software resources to provide the necessary services for applications to run on a computer.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+
+        quiz: {
+          completed: false,
+          impact: 100,
+          action: `quiz`,
+          icon: `🧪`,
+          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
+            `Lesson 12`
+          )} without any answers?`,
+          response: `\n\n1. In an operating system, what is the difference between the kernel and user space processes?\n\n2. What is the purpose of virtualization in an operating system?\n\n3. What is the master boot record and how is it used within an operating system?`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        shop: {
+          completed: false,
+          impact: 100,
+          action: `shop`,
+          icon: `🛍️`,
+          request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
+          response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+      },
+    },
+    "Lesson 13": {
+      documentID: ``,
+      filler: ``,
+
+      highValue: false,
+      hasCode: true,
+      underConstruction: false,
+      completed: false,
+
+      needsImprovement: false,
+      new: true,
+      tooltip: ``,
+      sourceType: `video`, // may not need
+      button: `13. Setting Up An App`, // may not need - `name`
+      header: `13. Setting Up An App`,
+      fileSource:
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1688976596/video_16_evebis.mp4", // may not need
+
+      prompts: {
+        patreon: {
+          completed: false,
+          impact: 1000,
+          action: `generate`,
+          icon: `►`, //`✍️`
+          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
+            `Lesson 13`
+          )}?`,
+          response: `null`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        inspire: {
+          completed: false,
+          impact: 100,
+          action: `inspire`,
+          icon: `⚡`,
+          request: `ms. roxana, can you please explain how things like chatGPT and command lines are similar?`,
+          response: `\n\nChatGPT and command lines are both ways of interacting with a computer, usually via text-based input. Both involve providing input on a text-based interface, and the computer provides output in a similar way. The main difference is that command line interfaces require the user to type a command into the terminal in order to get the computer to do something, whereas with ChatGPT the user can just type a natural language question or statement and the computer will generate a response.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        summarize: {
+          completed: false,
+          impact: 100,
+          action: `summarize`,
+          icon: `📚`,
+          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
+            `Lesson 13`
+          )}?`,
+          response: `\n\nA command line interface (CLI) is a means of interacting with a computer program where the user issues commands to the program in the form of lines of text (i.e. commands and arguments). This is usually done through a command shell, although other programs may also access the same features. In a command line interface, a user types in commands, which can include simple operations such as launching a program, copying or deleting a file, or more complex operations such as searching text files for a certain keyword. The command line interface is a powerful tool as it allows a user to quickly and easily access a vast array of computer programs, tasks, and settings with just a few simple keystrokes.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        ask: {
+          completed: false,
+          impact: 100,
+          action: `ask`,
+          icon: `🔮`,
+          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
+            `Lesson 13`
+          )} with one sentence answers?`,
+          response: `\n\n1. What is a command line interface? Ans: A command line interface (CLI) is a method of interacting with a computer by typing text-based commands.\n\n2. How do I access a command line interface? Ans: Accessing a command line interface usually requires using a terminal emulator program.\n\n3. What is the difference between a terminal and a shell? Ans: A terminal is the graphical interface to interact with the command line whereas a shell is the program that interprets user commands.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        guide: {
+          completed: false,
+          impact: 100,
+          action: `guide`,
+          icon: `🤝`,
+          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
+            `Lesson 13`
+          )}?`,
+          response: `\n\n1. Understand the concepts and fundamentals of command line interfaces (CLI)\n2. Change the directory (cd)\n3. List and view content in the current directory (ls)\n4. Create new directories (mkdir)\n5. Remove existing directories (rmdir)\n6. Create/edit files (touch/vi)\n7. Copy, move, and rename files (cp/mv/rename)\n8. Find files (find)\n9. Basic commands for system and network administration (ping/ifconfig)\n10. Download files from the internet (wget/curl)`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        demonstrate: {
+          completed: false,
+          impact: 100,
+          action: `demonstrate`,
+          icon: `🧿`,
+          request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
+            `Lesson 13`
+          )} with basic npm commands?`,
+          response:
+            "// Example of basic coding logic in JavaScript\nlet x = 5;\nlet y = 10;\n\nif (x < y) {\n  console.log(`x is less than y`);\n} else {\n  console.log(`x is greater than or equal to y`);\n}",
+          spanish: ``,
+          tooltip: ``,
+        },
+        define: {
+          completed: false,
+          impact: 100,
+          action: `define`, // may not need
+          icon: `👾`, // may not need
+          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
+            `Lesson 13`
+          )} in exactly one sentence?`,
+          response: `\n\nA command line interface is a user interface that allows a user to interact with a computer using text-based command inputs.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+
+        quiz: {
+          completed: false,
+          impact: 100,
+          action: `quiz`,
+          icon: `🧪`,
+          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
+            `Lesson 13`
+          )} without any answers?`,
+          response: `\n\n1. What is a command line interface?\n2. What are the common commands available when using a command line interface?\n3. How does a command line interface differ from a graphical user interface?`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        shop: {
+          completed: false,
+          impact: 100,
+          action: `shop`,
+          icon: `🛍️`,
+          request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
+          response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+      },
+    },
+    "Lesson 14": {
+      documentID: ``,
+      filler: ``,
+
+      highValue: false,
+      hasCode: true,
+      underConstruction: false,
+      completed: false,
+      rare: false,
+      needsImprovement: false,
+      new: true,
+      tooltip: ``,
+      sourceType: `video`, // may not need
+      button: `14. Programming Money`, // may not need - `name`
+      header: `14. Programming Money`,
+      fileSource:
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1688976632/video_17_weddln.mp4", // may not need
+
+      prompts: {
+        patreon: {
+          completed: false,
+          impact: 1000,
+          action: `generate`,
+          icon: `►`, //`✍️`
+          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
+            `Lesson 14`
+          )}?`,
+          response: `null`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        inspire: {
+          humanTouch: true,
+          completed: false,
+          impact: 100,
+          action: `inspire`,
+          icon: `⚡`,
+          request: `ms. roxana, can you please explain how the drug war, bitcoin and the bank secrecy act are related and how it may be problematic for civil liberties?`,
+          response: `\n\nThe Drug War, Bitcoin and the Bank Secrecy Act are all related in the sense that each can potentially be used to facilitate illegal activity or money laundering. Bitcoin and the Bank Secrecy Act both provide a layer of privacy and anonymity that can be used by drug dealers and other criminals to mask illegal activities. This can be problematic for civil liberties because it allows individuals to commit crimes without fear of being caught, thus undermining the rule of law. Furthermore, the ability to easily move and exchange large amounts of money anonymously through digital currencies like Bitcoin has opened the door for new forms of criminal activity such as money laundering, tax evasion, and terrorism financing. Blockchain based currencies can also be used to circumvent sanctions and regulations, further eroding the legitimacy of legal systems.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        summarize: {
+          completed: false,
+          impact: 100,
+          action: `summarize`,
+          icon: `📚`,
+          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
+            `Lesson 14`
+          )}?`,
+          response: `\n\nFinTech APIs are programmatic interfaces used by banks, financial institutions, and businesses to access financial services. They allow users to send, receive, and store digital funds, process payments, track money transfers, and manage financial data in an automated and secure way. These APIs have become increasingly popular as they offer scalability, provide businesses with more control over their payments, and offer a secure way to move money between different accounts. They offer a range of features and services, such as payments processing, digital money transfers, invoicing, fraud prevention, integrated marketing, data analytics, automated payment reconciliation, and more.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        ask: {
+          completed: false,
+          impact: 100,
+          action: `ask`,
+          icon: `🔮`,
+          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
+            `Lesson 14`
+          )} with one sentence answers?`,
+          response: `\n\n1. What is an API in fintech? - An API in fintech allows third-party developers to access financial data and services.\n\n2. How does a fintech API work? - A fintech API works by providing an interface for developers to access financial data and services, without the need for manual intervention. \n\n3. What’s the benefit of using a fintech API? - By using a fintech API, businesses can quickly integrate powerful financial solutions and save time and money.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        guide: {
+          completed: false,
+          impact: 100,
+          action: `guide`,
+          icon: `🤝`,
+          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
+            `Lesson 14`
+          )}?`,
+          response: `\n\n1. Understand the different types of fintech APIs and their specific use cases \n2. Familiarize yourself with the various technologies used in fintech APIs including REST, SOAP, JSON, and OAUTH2 \n3. Learn how to integrate financial service APIs with third-party applications \n4. Understand how payment gateways and merchant processing APIs enable online and mobile payments \n5. Explore the security considerations around handling financial data \n6. Know the privacy and data protection aspects of financial services APIs \n7. Research the different pricing models for using fintech APIs \n8. Identify which financial services APIs can be used in particular jurisdictions \n9. Learn how to best use the APIs' documentation to create and test applications \n10. Monitor the development of new and emerging fintech APIs for opportunities.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        demonstrate: {
+          completed: false,
+          impact: 100,
+          action: `demonstrate`,
+          icon: `🧿`,
+          request: `ms. roxana, can you please show me an example of creating a transaction with Stripe's Javascript SDK?`,
+          response: `\n\nSure. Here is an example of creating a transaction with Stripe's Javascript SDK.\n\n// Create a stripe instance using your Stripe API keys.\nvar stripe = Stripe('pk_test_your_stripe_key');\n\n// Create a card element and add it to the page.\nvar card = stripe.elements().create('card');\ncard.mount('#card-element');\n\n// Handle real-time validation errors from the card element.\ncard.addEventListener('change', function(event) {\n  var displayError = document.getElementById('card-errors');\n  if (event.error) {\n    displayError.textContent = event.error.message;\n  } else {\n    displayError.textContent = '';\n  }\n});\n\n// Handle form submission.\nvar form = document.getElementById('payment-form');\nform.addEventListener('submit', function(event) {\n  event.preventDefault();\n\n  stripe.createToken(card).then(function(result) {\n    if (result.error) {\n      // Inform the user if there was an error\n      var errorElement = document.getElementById('card-errors');\n      errorElement.textContent = result.error.message;\n    } else {\n      // Send the token to your server\n      stripeTokenHandler(result.token);\n    }\n  });\n});\n\n// Submit the form with the token ID.\nfunction stripeTokenHandler(token) {\n  // Insert the token ID into the form so it gets submitted to the server\n  var form = document.getElementById('payment-form');\n  var hiddenInput = document.createElement('input');\n  hiddenInput.setAttribute('type', 'hidden');\n  hiddenInput.setAttribute('name', 'stripeToken');\n  hiddenInput.setAttribute('value', token.id);\n  form.appendChild(hiddenInput);\n\n  // Submit the form\n  form.submit();\n}`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        define: {
+          completed: false,
+          impact: 100,
+          action: `define`, // may not need
+          icon: `👾`, // may not need
+          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
+            `Lesson 14`
+          )} in exactly one sentence?`,
+          response: `\n\nFintech APIs allow for the secure integration of technology products with financial systems and services.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+
+        quiz: {
+          completed: false,
+          impact: 100,
+          action: `quiz`,
+          icon: `🧪`,
+          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
+            `Lesson 14`
+          )}?`,
+          response: `\n\n1. What is the main purpose of a FinTech API?\n\n2. What type of information can a FinTech API provide?\n\n3. What are some of the benefits of using a FinTech API?`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        shop: {
+          completed: false,
+          impact: 100,
+          action: `shop`,
+          icon: `🛍️`,
+          request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
+          response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+      },
+    },
+    "Lesson 15": {
+      documentID: ``,
+      filler: ``,
+
+      highValue: false,
+      underConstruction: false,
+      hasCode: true,
+      completed: false,
+      needsImprovement: false,
+      new: true,
+      tooltip: ``,
+      sourceType: `video`, // may not need
+      button: `15. Creating Database`, // may not need - `name`
+      header: `15. Creating Database`,
+      fileSource:
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1688976630/video_18_gjfmgl.mp4", // may not need
+
+      prompts: {
+        patreon: {
+          completed: false,
+          impact: 1000,
+          action: `generate`,
+          icon: `►`, //`✍️`
+          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
+            `Lesson 15`
+          )}?`,
+          response: `null`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        inspire: {
+          humanTouch: true,
+          completed: false,
+          impact: 100,
+          action: `inspire`,
+          icon: `⚡`,
+          request: `ms. roxana, can you please explain how entrepeneurs can use platforms like Firebase to create businesses?`,
+          response: `\n\nEntrepreneurs can use Firebase, a cloud-based development platform, in various ways to create and grow businesses. Firebase provides powerful development and analytics tools, so you don't need to worry about setting up a backend or learning how to use a database. \n\nFirebase can help entrepreneurs create their apps with a few clicks and a few lines of code. It provides easy-to-use solutions for user authentication, data storage and hosting, serverless functions, and analytics that can help entrepreneurs understand their customers better. Firebase also provides tools for automating tasks such as marketing campaigns, customer support, and more. \n\nFirebase can provide a valuable platform for entrepreneurs to launch their businesses in a cost-effective and time-efficient manner. With the help of Firebase, entrepreneurs can quickly launch their products, test their ideas, and get an early start on their businesses.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        summarize: {
+          completed: false,
+          impact: 100,
+          action: `summarize`,
+          icon: `📚`,
+          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
+            `Lesson 15`
+          )}?`,
+          response: `\n\nNoSQL with Firebase Firestore is a document-oriented NoSQL database designed for storing, syncing and querying large datasets for modern, web and mobile app development. It stores data as documents in a distributed cloud environment. Documents are stored in collections, with each document containing a set of key-value pairs. Firestore provides features like offline data synchronization, real-time data streaming, authentication and data validation. It also lets developers query and filter data and includes automatic scaling of data across multiple regions. Firestore also offers security rules to ensure data safety and access control.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        ask: {
+          completed: false,
+          impact: 100,
+          action: `ask`,
+          icon: `🔮`,
+          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
+            `Lesson 15`
+          )} with one sentence answers?`,
+          response: `\n\n1. What is NoSQL and Firebase Firestore? - NoSQL is a non-relational database management system and Firebase Firestore is the cloud-hosted, NoSQL database provided by Google.\n\n2. Why should I use Firebase Firestore? - Firebase Firestore provides users with a scalable, real-time database that enables data synchronization in client and server-side applications.\n\n3. How does Firebase Firestore save my data? - Firebase Firestore stores data in collections of documents and fields within those documents, similar to MongoDB or CouchDB.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        guide: {
+          completed: false,
+          impact: 100,
+          action: `guide`,
+          icon: `🤝`,
+          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
+            `Lesson 15`
+          )}?`,
+          response: `\n\n1. Understand the purpose of using NoSQL and Firebase Firestore in modern development \n2. Become familiar with the different types of NoSQL databases, e.g. key-value pair, document-oriented, columnar, graph-based, etc.\n3. Understand the basics of the Firebase architecture and how it works with cloud computing\n4. Learn the basics of data modeling for NoSQL databases and how to structure data to optimize query performance\n5. Understand the scalability, security, and availability of NoSQL databases on the Firebase platform\n6. Understand the basics of client-side security and authentication features available in Firebase Firestore\n7. Become familiar with querying data in Firebase Firestore, including understanding different query types, such as data ordering, filtering, and aggregation\n8. Understand the basics of Firebase Firestore synchronization and real-time data streaming\n9. Get familiar with different features available in the Firebase console, such as monitoring and analytics\n10. Become proficient with development tools like Cloud Functions and Firebase SDKs for Android, iOS, and web development`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        demonstrate: {
+          humanTouch: true,
+          completed: false,
+          impact: 100,
+          action: `demonstrate`,
+          icon: `🧿`,
+          request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
+            `Lesson 15`
+          )} that stores openAI's ChatGPT messages in a collection with documents defined by user_id with no other text in javascript?`,
+          response: `\n\nHere is an example of code that uses Firebase Firestore to store openAI's ChatGPT messages in a collection with documents defined by user_id with no other text in Javascript:\n\n//Wirte to Firestore using the Firebase web SDK \nvar firestore = firebase.firestore(); \n\n//Create a reference to the collection of openAI messages \nvar openAIMessagesRef = firestore.collection('chatGPT');\n\n//Create a reference to the specific user document \nvar userRef = openAIMessagesRef.doc(user_id); \n\nuserRef.set({\n   openAIMessage: openAIMessage,\n});`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        define: {
+          completed: false,
+          impact: 100,
+          action: `define`, // may not need
+          icon: `👾`, // may not need
+          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
+            `Lesson 15`
+          )} in exactly one sentence?`,
+          response: `\n\nNoSQL Firebase Firestore is a cloud-based, scalable database service designed to store and sync application data in real time.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+
+        quiz: {
+          completed: false,
+          impact: 100,
+          action: `quiz`,
+          icon: `🧪`,
+          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
+            `Lesson 15`
+          )}?`,
+          response: `\n\n1. What is the main advantage of using Firebase Firestore over other NoSQL databases?\n\n2. What are some of the features and benefits of using Firebase's cloud-hosted Firestore?\n\n3. How can developers structure data within Firebase Firestore to optimize performance?`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        shop: {
+          completed: false,
+          impact: 100,
+          action: `shop`,
+          icon: `🛍️`,
+          request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
+          response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+      },
+    },
+    "Lesson 16": {
+      documentID: ``,
+      filler: ``,
+
+      hasCode: true,
+      highValue: false,
+      rare: false,
+      underConstruction: false,
+      completed: false,
+      needsImprovement: false,
+      new: true,
+      tooltip: ``,
+      sourceType: `video`, // may not need
+      button: `16. Working Together`, // may not need - `name`
+      header: `16. Working Together`,
+      fileSource:
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1688976617/video_19_vnbbms.mp4", // may not need
+
+      prompts: {
+        patreon: {
+          completed: false,
+          impact: 1000,
+          action: `generate`,
+          icon: `►`, //`✍️`
+          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
+            `Lesson 16`
+          )}?`,
+          response: `null`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        inspire: {
+          humanTouch: true,
+          completed: false,
+          impact: 100,
+          action: `inspire`,
+          icon: `⚡`,
+          request:
+            "ms. roxana, can you please explain what robotic process automation is?",
+          response: `\n\nRobotic process automation (RPA) is a type of technology that uses software bots (aka robotics) to execute simple and repetitive tasks and processes. They interact with applications, websites, databases, and systems, just like a human worker would, but at a much faster rate. RPA bots can be programmed to take over and automate common, tedious, and time-consuming digital tasks. They can complete these tasks using existing applications and systems, eliminating the need for manual data entry and human involvement in certain processes.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        summarize: {
+          completed: false,
+          impact: 100,
+          action: `summarize`,
+          icon: `📚`,
+          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
+            `Lesson 16`
+          )}?`,
+          response: `\n\nGit is a version control system used for tracking changes made to projects over time. Github is a hosting platform for Git that is used to store and manage files and code in a project. It allows for collaboration between developers, thereby enabling them to update, author, review, and maintain project code. It also provides various security, branch management, and deployment features to make it easier for developers to work together. Additionally, Github offers a variety of integrations and tools to help streamline the development process.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        ask: {
+          completed: false,
+          impact: 100,
+          action: `ask`,
+          icon: `🔮`,
+          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
+            `Lesson 16`
+          )} with one sentence answers?`,
+          response: `\n\n1. What is Git? - Git is an open source distributed version control system for tracking changes in source code.\n\n2. What is GitHub? - GitHub is a code hosting platform for version control and collaboration.\n\n3. How do I use Push and Pull in Git? - Push enables local changes to be uploaded to remote repositories, while pull allows changes from remote repositories to be downloaded to local branches.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        guide: {
+          completed: false,
+          impact: 100,
+          action: `guide`,
+          icon: `🤝`,
+          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
+            `Lesson 16`
+          )}?`,
+          response: `\n\n1. Understand the difference between Git and Github – Git is a version control system, while Github is a cloud-based hosting service used to store and manage repositories.\n2. Learn how to create and clone a repository – the most basic step in using Git and Github.\n3. Know how to stage and commit changes – this is essential for tracking and managing changes to a repository.\n4. Gain familiarity with working with branches – branches help keep code organized and makes it easier to test possible changes before committing them to the main repository.\n5. Familiarize yourself with Cherry picking – Cherry picking allows you to choose specific commits from other branches and add them to your current branch. \n6. Understand how to use Github pull requests – If a team is working on the same project, pull requests are vital for enabling team collaboration.\n7. Be familiar with reverting a commit – Reverting a commit is useful for undoing any changes that have been made to a codebase. \n8. Become familiar with forking repositories – Forks are like separate copies of a repository, and are used to experiment without disrupting the main repository. \n9. Know how to manage merge conflicts – Merge conflicts arise when multiple people are making changes to a codebase at the same time, and they need to be managed to keep the codebase functional. \n10. Learn how to use Github Gists – Gists are short snippets of code that can be stored and shared with others.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        demonstrate: {
+          completed: false,
+          impact: 100,
+          action: `demonstrate`,
+          icon: `🧿`,
+          request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
+            `Lesson 16`
+          )} with no other text in the command line?`,
+          response: `\n\ngit clone https://github.com/username/repositoryname.git`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        define: {
+          completed: false,
+          impact: 100,
+          action: `define`, // may not need
+          icon: `👾`, // may not need
+          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
+            `Lesson 16`
+          )} in exactly one sentence?`,
+          response: `\n\nGit is a version control system for tracking changes in code, and Github is a cloud-based host for version control repositories.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+
+        quiz: {
+          completed: false,
+          impact: 100,
+          action: `quiz`,
+          icon: `🧪`,
+          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
+            `Lesson 16`
+          )}?`,
+          response: `\n\n1. What is the difference between Git and GitHub?\n2. What command is used to create a local Git repository?\n3. How can multiple collaborators work on an open source project in the same repository?`,
           spanish: ``,
           tooltip: ``,
         },
