@@ -411,7 +411,7 @@ export const Engineer = {
           completed: false,
           impact: 100,
           action: `demonstrate`,
-          icon: `🧿`,
+          icon: `🎨`,
           request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
             `Learn Coding`
           )} in javascript?`,
@@ -467,7 +467,7 @@ exports.app = functions.https.onRequest(app);
           completed: false,
           impact: 100,
           action: `define`, // may not need
-          icon: `👾`, // may not need
+          icon: `🧿`, // may not need
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Learn Coding`
           )} in exactly one sentence?`,
@@ -959,7 +959,7 @@ exports.app = functions.https.onRequest(app);
           completed: false,
           impact: 100,
           action: `demonstrate`,
-          icon: `🧿`,
+          icon: `🎨`,
           request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
             `Lesson 1 Coding Fundamentals`
           )} in python?`,
@@ -1002,7 +1002,7 @@ print(rihanna.perform("at the Grammy Awards"))
           completed: false,
           impact: 100,
           action: `define`, // may not need
-          icon: `👾`, // may not need
+          icon: `🧿`, // may not need
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Lesson 1 Coding Fundamentals`
           )} in exactly one sentence?`,
@@ -1587,7 +1587,7 @@ print(rihanna.perform("at the Grammy Awards"))
           completed: false,
           impact: 100,
           action: `demonstrate`,
-          icon: `🧿`,
+          icon: `🎨`,
           request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
             `Lesson 2 Frontend Event-Driven Programming`
           )} in javascript?`,
@@ -1666,7 +1666,7 @@ export default LoginForm;
           completed: false,
           impact: 100,
           action: `define`, // may not need
-          icon: `👾`, // may not need
+          icon: `🧿`, // may not need
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Lesson 2 Frontend Event-Driven Programming`
           )} in exactly one sentence?`,
@@ -2251,7 +2251,7 @@ export default LoginForm;
           completed: false,
           impact: 100,
           action: `demonstrate`,
-          icon: `🧿`,
+          icon: `🎨`,
           request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
             `Lesson 3 Understanding Backend Engineering`
           )} in javascript?`,
@@ -2322,7 +2322,7 @@ if __name__ == '__main__':
           completed: false,
           impact: 100,
           action: `define`, // may not need
-          icon: `👾`, // may not need
+          icon: `🧿`, // may not need
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Lesson 3 Understanding Backend Engineering`
           )} in exactly one sentence?`,
@@ -2872,7 +2872,7 @@ if __name__ == '__main__':
           completed: false,
           impact: 100,
           action: `demonstrate`,
-          icon: `🧿`,
+          icon: `🎨`,
           request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
             `Lesson 4 Building Apps`
           )} in javascript?`,
@@ -3007,7 +3007,7 @@ app.listen(8000, () => console.log('Server running on port 8000'));
           completed: false,
           impact: 100,
           action: `define`, // may not need
-          icon: `👾`, // may not need
+          icon: `🧿`, // may not need
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Lesson 4 Building Apps`
           )} in exactly one sentence?`,
@@ -3227,7 +3227,7 @@ app.listen(8000, () => console.log('Server running on port 8000'));
           completed: false,
           impact: 100,
           action: `demonstrate`,
-          icon: `🧿`,
+          icon: `🎨`,
           request: `ms. roxana, can you please show me an example of how proof of work can work in education?`,
           response: `\n\nAn example of how proof of work can work in education is through the utilization of advanced testing techniques. For example, if a student must complete an online course, they must first complete a assignment or test. After they complete the initial assignment or test, they must then provide proof of their progress by working to answer harder questions, or taking a more advanced course. By utilizing challenges that only certain students can complete, the instructor will have proof that the student actually completed the coursework.`,
           spanish: ``,
@@ -3237,7 +3237,7 @@ app.listen(8000, () => console.log('Server running on port 8000'));
           completed: false,
           impact: 100,
           action: `define`, // may not need
-          icon: `👾`, // may not need
+          icon: `🧿`, // may not need
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Build For Community`
           )} in exactly one sentence?`,
@@ -3343,7 +3343,7 @@ app.listen(8000, () => console.log('Server running on port 8000'));
           completed: false,
           impact: 100,
           action: `demostrar`,
-          icon: `🧿`,
+          icon: `🎨`,
           request: `mama roxana, ¿puedes mostrarme un ejemplo de cómo Shopify construye aplicaciones con el marco Hydrogen de Shopify en español con javascript?`,
           response:
             "\n\n// Crear un modelo de aplicación\n// Este modelo describirá una entidad de la aplicación\nvar AppModelo = Hydrogen.Modelo.extend({\n  // Definimos los atributos\n  campos: {\n    titulo: String,\n    descripcion: String,\n    precio: Numero\n  }\n});\n\n// Crear una vista de la aplicación\n// Esta vista mostrará la entidad en la aplicación\nvar AppVista = Hydrogen.Vista.extend({\n  // Establecer el modelo de la vista\n  modelo: AppModelo,\n  // Establecer la plantilla \n  plantilla: `\n   <div> \n      <h2>{{ titulo }}</h2>\n      <p>{{ descripcion }}</p>\n      <p>Precio: {{ precio }}</p>\n   </div>\n  `,\n  // Establecer los datos iniciales\n  datosIniciales: {\n    titulo: '',\n    descripcion: '',\n    precio: 0\n  }\n});\n\n// Instanciar el modelo de la aplicación\nvar miModelo = new AppModelo({\n  // Establecer los valores de los atributos\n  titulo: 'Mi Aplicación',\n  descripcion: 'Una aplicación increíble',\n  precio: 999\n});\n\n// Instanciar la vista de la aplicación\nvar miVista = new AppVista({\n  modelo: miModelo\n});\n\n// Renderizar la vista\nmiVista.renderizar();",
@@ -3355,7 +3355,7 @@ app.listen(8000, () => console.log('Server running on port 8000'));
           completed: false,
           impact: 100,
           action: `definir`, // may not need
-          icon: `👾`, // may not need
+          icon: `🧿`, // may not need
           request: `roxis, ¿puedes definir oportunidades para consultar como inmigrante indocumentado con el marco Hydrogen de Shopify en exactamente una oración?`,
           response: `\n\nLas oportunidades de consulta como inmigrante indocumentado con el marco Hydrogen de Shopify proporcionan recursos y acceso a los servicios pertinentes para apoyar la actividad comercial.`,
           spanish: true,
@@ -3464,7 +3464,7 @@ app.listen(8000, () => console.log('Server running on port 8000'));
     //       completed: false,
     //       impact: 100,
     //       action: `demonstrate`,
-    //       icon: `🧿`,
+    //       icon: `🎨`,
     //       request: `ms. roxana, can you please show me an example of how proof of work can work in education?`,
     //       response: `\n\nAn example of how proof of work can work in education is through the utilization of advanced testing techniques. For example, if a student must complete an online course, they must first complete a assignment or test. After they complete the initial assignment or test, they must then provide proof of their progress by working to answer harder questions, or taking a more advanced course. By utilizing challenges that only certain students can complete, the instructor will have proof that the student actually completed the coursework.`,
     //       spanish: ``,
@@ -3474,7 +3474,7 @@ app.listen(8000, () => console.log('Server running on port 8000'));
     //       completed: false,
     //       impact: 100,
     //       action: `define`, // may not need
-    //       icon: `👾`, // may not need
+    //       icon: `🧿`, // may not need
     //       request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
     //         `Build For Community`
     //       )} in exactly one sentence?`,
@@ -3586,7 +3586,7 @@ app.listen(8000, () => console.log('Server running on port 8000'));
     //       completed: false,
     //       impact: 100,
     //       action: `demonstrate`,
-    //       icon: `🧿`,
+    //       icon: `🎨`,
     //       request: `ms. roxana, can you please show me an example of how an app like ${ultimateEffeciencyJutsu(
     //         `Build For Teachers`
     //       )} would work?`,
@@ -3598,7 +3598,7 @@ app.listen(8000, () => console.log('Server running on port 8000'));
     //       completed: false,
     //       impact: 100,
     //       action: `define`, // may not need
-    //       icon: `👾`, // may not need
+    //       icon: `🧿`, // may not need
     //       request: `ms. roxana, can you please define an app like ${ultimateEffeciencyJutsu(
     //         `Build For Teachers`
     //       )} in exactly one sentence?`,
@@ -3712,7 +3712,7 @@ app.listen(8000, () => console.log('Server running on port 8000'));
     //       completed: false,
     //       impact: 100,
     //       action: `demonstrate`,
-    //       icon: `🧿`,
+    //       icon: `🎨`,
     //       request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
     //         `Social Chat`
     //       )}`,
@@ -3725,7 +3725,7 @@ app.listen(8000, () => console.log('Server running on port 8000'));
     //       completed: false,
     //       impact: 100,
     //       action: `define`, // may not need
-    //       icon: `👾`, // may not need
+    //       icon: `🧿`, // may not need
     //       request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
     //         `Social Chat`
     //       )} in exactly one sentence?`,
@@ -3843,7 +3843,7 @@ app.listen(8000, () => console.log('Server running on port 8000'));
           completed: false,
           impact: 100,
           action: `demonstrate`,
-          icon: `🧿`,
+          icon: `🎨`,
           request: `ms. roxana, can you please explain an example of a pumping lemma in the theory of formal programming languages?`,
           response: `\n\nA pumping lemma is a fundamental tool used to prove that certain types of languages are not regular. The pumping lemma states that if a language is regular, then there must exist a certain number, known as the “pumping constant”, such that any string in the language of length greater than the pumping constant may be “pumped”, or divided into three parts, in such a way that when any of those parts are repeated an arbitrary number of times, the resulting string will still be in the language. \n\nFor example, let's say that the language L consists of all strings of a's, b's, and c's where the number of a's, b's, and c's are all the same. If a string in language L has length n and n is greater than the pumping constant, then that string may be divided into three parts consisting of x, y, and z such that xy^iz is still a valid string in language L for any positive integer i. In other words, if we take any string of length n in L, and break it into three parts x, y, and z such that x and z are non-empty, then any string of the form xy^iz (with a positive integer i) will still be a valid string in L. \n\nThus, if there is any language that cannot fulfill this requirement, then that language is not regular. The pumping lemma provides a useful tool in recognizing and determining which languages are and are not regular.`,
           spanish: ``,
@@ -3853,7 +3853,7 @@ app.listen(8000, () => console.log('Server running on port 8000'));
           completed: false,
           impact: 100,
           action: `define`, // may not need
-          icon: `👾`, // may not need
+          icon: `🧿`, // may not need
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Programming Languages`
           )} in exactly one sentence?`,
@@ -3968,7 +3968,7 @@ app.listen(8000, () => console.log('Server running on port 8000'));
           completed: false,
           impact: 100,
           action: `demonstrate`,
-          icon: `🧿`,
+          icon: `🎨`,
           request: `ms. roxana, can you please show me an example of a fibonacci sequence  done recursively in python?`,
           response: `\n\ndef fibonacci(n): \n    if n <= 1: \n        return n \n    else: \n        return(fibonacci(n-1) + fibonacci(n-2)) \n\n# test\nfor n in range(10):\n    print(fibonacci(n))`,
           spanish: ``,
@@ -3978,7 +3978,7 @@ app.listen(8000, () => console.log('Server running on port 8000'));
           completed: false,
           impact: 100,
           action: `define`, // may not need
-          icon: `👾`, // may not need
+          icon: `🧿`, // may not need
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Recursion`
           )} in exactly one sentence?`,
@@ -4091,7 +4091,7 @@ app.listen(8000, () => console.log('Server running on port 8000'));
           completed: false,
           impact: 100,
           action: `demonstrate`,
-          icon: `🧿`,
+          icon: `🎨`,
           request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
             `Linked Lists`
           )} with no other text in python?`,
@@ -4103,7 +4103,7 @@ app.listen(8000, () => console.log('Server running on port 8000'));
           completed: false,
           impact: 100,
           action: `define`, // may not need
-          icon: `👾`, // may not need
+          icon: `🧿`, // may not need
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Linked Lists`
           )} in exactly one sentence?`,
@@ -4215,7 +4215,7 @@ app.listen(8000, () => console.log('Server running on port 8000'));
           completed: false,
           impact: 100,
           action: `demonstrate`,
-          icon: `🧿`,
+          icon: `🎨`,
           request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
             `Link Travel`
           )} with no other text in python?`,
@@ -4227,7 +4227,7 @@ app.listen(8000, () => console.log('Server running on port 8000'));
           completed: false,
           impact: 100,
           action: `define`, // may not need
-          icon: `👾`, // may not need
+          icon: `🧿`, // may not need
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Link Travel`
           )} in exactly one sentence?`,
@@ -4339,7 +4339,7 @@ app.listen(8000, () => console.log('Server running on port 8000'));
           completed: false,
           impact: 100,
           action: `demonstrate`,
-          icon: `🧿`,
+          icon: `🎨`,
           request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
             `Link Changing`
           )} with no other text in javascript?`,
@@ -4351,7 +4351,7 @@ app.listen(8000, () => console.log('Server running on port 8000'));
           completed: false,
           impact: 100,
           action: `define`, // may not need
-          icon: `👾`, // may not need
+          icon: `🧿`, // may not need
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Link Changing`
           )} in exactly one sentence?`,
@@ -4465,7 +4465,7 @@ app.listen(8000, () => console.log('Server running on port 8000'));
           completed: false,
           impact: 100,
           action: `demonstrate`,
-          icon: `🧿`,
+          icon: `🎨`,
           request: `ms. roxana, can you please show me an example of a common tree or graph algorithm in javascript?`,
           response: `\n\nTree Algorithm:\n\nfunction traverse(node) {\n  if (node === null) {\n    return;\n  }\n  console.log(node.data);\n  traverse(node.left);\n  traverse(node.right);\n}\n\nGraph Algorithm:\n\nfunction visit(vertex) {\n  if (visited[vertex]) {\n    return;\n  }\n  visited[vertex] = true;\n  console.log(vertex);\n  for (let neighbor of neighbors[vertex]) {\n    visit(neighbor);\n  }\n}`,
           spanish: ``,
@@ -4475,7 +4475,7 @@ app.listen(8000, () => console.log('Server running on port 8000'));
           completed: false,
           impact: 100,
           action: `define`, // may not need
-          icon: `👾`, // may not need
+          icon: `🧿`, // may not need
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Algorithms`
           )} in exactly one sentence?`,
@@ -4595,7 +4595,7 @@ app.listen(8000, () => console.log('Server running on port 8000'));
           completed: false,
           impact: 100,
           action: `demonstrate`,
-          icon: `🧿`,
+          icon: `🎨`,
           request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
             `Lesson 1`
           )} with no other text in javascript?`,
@@ -4609,7 +4609,7 @@ app.listen(8000, () => console.log('Server running on port 8000'));
           completed: false,
           impact: 100,
           action: `define`, // may not need
-          icon: `👾`, // may not need
+          icon: `🧿`, // may not need
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Lesson 1`
           )} in exactly one sentence?`,
@@ -4745,7 +4745,7 @@ app.listen(8000, () => console.log('Server running on port 8000'));
           completed: false,
           impact: 100,
           action: `demonstrate`,
-          icon: `🧿`,
+          icon: `🎨`,
           request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
             `Lesson 2`
           )} with no other text in python?`,
@@ -4757,7 +4757,7 @@ app.listen(8000, () => console.log('Server running on port 8000'));
           completed: false,
           impact: 100,
           action: `define`, // may not need
-          icon: `👾`, // may not need
+          icon: `🧿`, // may not need
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Lesson 2`
           )} in exactly one sentence?`,
@@ -4871,7 +4871,7 @@ app.listen(8000, () => console.log('Server running on port 8000'));
           completed: false,
           impact: 100,
           action: `demonstrate`,
-          icon: `🧿`,
+          icon: `🎨`,
           request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
             `Lesson 3`
           )} with no other text in Java?`,
@@ -4883,7 +4883,7 @@ app.listen(8000, () => console.log('Server running on port 8000'));
           completed: false,
           impact: 100,
           action: `define`, // may not need
-          icon: `👾`, // may not need
+          icon: `🧿`, // may not need
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Lesson 3`
           )} in exactly one sentence?`,
@@ -4998,7 +4998,7 @@ app.listen(8000, () => console.log('Server running on port 8000'));
           impact: 100,
           action: `demonstrate`,
           humanTouch: true,
-          icon: `🧿`,
+          icon: `🎨`,
           request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
             `Lesson 4`
           )} with no other text in javascript to create a transaction with Stripe?`,
@@ -5010,7 +5010,7 @@ app.listen(8000, () => console.log('Server running on port 8000'));
           completed: false,
           impact: 100,
           action: `define`, // may not need
-          icon: `👾`, // may not need
+          icon: `🧿`, // may not need
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Lesson 4`
           )} in exactly one sentence?`,
@@ -5123,7 +5123,7 @@ app.listen(8000, () => console.log('Server running on port 8000'));
           completed: false,
           impact: 100,
           action: `demonstrate`,
-          icon: `🧿`,
+          icon: `🎨`,
           request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
             `Lesson 5`
           )} with no other text in C#?`,
@@ -5135,7 +5135,7 @@ app.listen(8000, () => console.log('Server running on port 8000'));
           completed: false,
           impact: 100,
           action: `define`, // may not need
-          icon: `👾`, // may not need
+          icon: `🧿`, // may not need
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Lesson 5`
           )} in exactly one sentence?`,
@@ -5250,7 +5250,7 @@ app.listen(8000, () => console.log('Server running on port 8000'));
           completed: false,
           impact: 100,
           action: `demonstrate`,
-          icon: `🧿`,
+          icon: `🎨`,
           request: `ms. roxana, can you please show me an example of a box with a name centered using flexbox positioning in ${ultimateEffeciencyJutsu(
             `Lesson 6`
           )} with no other text in HTML?`,
@@ -5262,7 +5262,7 @@ app.listen(8000, () => console.log('Server running on port 8000'));
           completed: false,
           impact: 100,
           action: `define`, // may not need
-          icon: `👾`, // may not need
+          icon: `🧿`, // may not need
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Lesson 6`
           )} in exactly one sentence?`,
@@ -5377,7 +5377,7 @@ app.listen(8000, () => console.log('Server running on port 8000'));
           completed: false,
           impact: 100,
           action: `demonstrate`,
-          icon: `🧿`,
+          icon: `🎨`,
           request: `ms. roxana, can you please show me an example of the box model and flexbox in ${ultimateEffeciencyJutsu(
             `Lesson 7`
           )} with no other text in CSS?`,
@@ -5389,7 +5389,7 @@ app.listen(8000, () => console.log('Server running on port 8000'));
           completed: false,
           impact: 100,
           action: `define`, // may not need
-          icon: `👾`, // may not need
+          icon: `🧿`, // may not need
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Lesson 7`
           )} in exactly one sentence?`,
@@ -5505,7 +5505,7 @@ app.listen(8000, () => console.log('Server running on port 8000'));
           completed: false,
           impact: 100,
           action: `demonstrate`,
-          icon: `🧿`,
+          icon: `🎨`,
           request: `ms. roxana, can you please show me an example of a "login with Google" button in ${ultimateEffeciencyJutsu(
             `Lesson 8`
           )} with no other text in React?`,
@@ -5517,7 +5517,7 @@ app.listen(8000, () => console.log('Server running on port 8000'));
           completed: false,
           impact: 100,
           action: `define`, // may not need
-          icon: `👾`, // may not need
+          icon: `🧿`, // may not need
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Lesson 8`
           )} in exactly one sentence?`,
@@ -5631,7 +5631,7 @@ app.listen(8000, () => console.log('Server running on port 8000'));
           completed: false,
           impact: 100,
           action: `demonstrate`,
-          icon: `🧿`,
+          icon: `🎨`,
           request: `ms. roxana, can you please show me an example of using ${ultimateEffeciencyJutsu(
             `Lesson 9`
           )} with no other text in ruby?`,
@@ -5643,7 +5643,7 @@ app.listen(8000, () => console.log('Server running on port 8000'));
           completed: false,
           impact: 100,
           action: `define`, // may not need
-          icon: `👾`, // may not need
+          icon: `🧿`, // may not need
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Lesson 9`
           )} in exactly one sentence?`,
@@ -5758,7 +5758,7 @@ app.listen(8000, () => console.log('Server running on port 8000'));
           completed: false,
           impact: 100,
           action: `demonstrate`,
-          icon: `🧿`,
+          icon: `🎨`,
           request: `ms. roxana, can you please show me an example of noSQL with firebase and SQL and mySQL?`,
           response: `\n\nNoSQL example with Firebase:\n\nConsider a Firebase database that stores student records. A NoSQL approach may store data in a document-like structure like this:\n\n{\n  Name: \"John Doe\",\n  Age: 22,\n  Preferences: {\n    Music: \"Classical\",\n    Language: \"English\"\n  },\n  Grades: {\n    Math: \"A+\",\n    Science: \"B\"\n  }\n}\n\nSQL example with MySQL:\n\nConsider a MySQL database that stores student records. A SQL approach may store data in a table-like structure like this:\n\nCREATE TABLE student_records (\n  Name VARCHAR(255),\n  Age INT,\n  Music VARCHAR(255),\n  Language VARCHAR(255),\n  Math CHAR(2),\n  Science CHAR(2)\n);\n\nINSERT INTO student_records (Name, Age, Music, Language, Math, Science) \nVALUES(\"John Doe\", 22, \"Classical\", \"English\", \"A+\", \"B\");`,
           spanish: ``,
@@ -5768,7 +5768,7 @@ app.listen(8000, () => console.log('Server running on port 8000'));
           completed: false,
           impact: 100,
           action: `define`, // may not need
-          icon: `👾`, // may not need
+          icon: `🧿`, // may not need
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Lesson 10`
           )} in exactly one sentence?`,
@@ -5882,7 +5882,7 @@ app.listen(8000, () => console.log('Server running on port 8000'));
           completed: false,
           impact: 100,
           action: `demonstrate`,
-          icon: `🧿`,
+          icon: `🎨`,
           request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
             `Lesson 11`
           )} with no other text in python?`,
@@ -5894,7 +5894,7 @@ app.listen(8000, () => console.log('Server running on port 8000'));
           completed: false,
           impact: 100,
           action: `define`, // may not need
-          icon: `👾`, // may not need
+          icon: `🧿`, // may not need
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Lesson 11`
           )} in exactly one sentence?`,
@@ -6010,7 +6010,7 @@ app.listen(8000, () => console.log('Server running on port 8000'));
           humanTouch: true,
           impact: 100,
           action: `demonstrate`,
-          icon: `🧿`,
+          icon: `🎨`,
           request: `ms. roxana, can you please show me an example of kernel code written in C++?`,
           response: `\n\nHere is an example of kernel code written in C++:\n\n// Kernel code in C++ \n__global__ void simple_kernel(int *data) \n{ \n    int tid = threadIdx.x;\n    int i = blockIdx.x * blockDim.x + threadIdx.x;\n\n    // Kernel code here\n    data[i] *= 2; \n}`,
           spanish: ``,
@@ -6020,7 +6020,7 @@ app.listen(8000, () => console.log('Server running on port 8000'));
           completed: false,
           impact: 100,
           action: `define`, // may not need
-          icon: `👾`, // may not need
+          icon: `🧿`, // may not need
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Lesson 12`
           )} in exactly one sentence?`,
@@ -6134,7 +6134,7 @@ app.listen(8000, () => console.log('Server running on port 8000'));
           completed: false,
           impact: 100,
           action: `demonstrate`,
-          icon: `🧿`,
+          icon: `🎨`,
           request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
             `Lesson 13`
           )} with basic npm commands?`,
@@ -6147,7 +6147,7 @@ app.listen(8000, () => console.log('Server running on port 8000'));
           completed: false,
           impact: 100,
           action: `define`, // may not need
-          icon: `👾`, // may not need
+          icon: `🧿`, // may not need
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Lesson 13`
           )} in exactly one sentence?`,
@@ -6262,7 +6262,7 @@ app.listen(8000, () => console.log('Server running on port 8000'));
           completed: false,
           impact: 100,
           action: `demonstrate`,
-          icon: `🧿`,
+          icon: `🎨`,
           request: `ms. roxana, can you please show me an example of creating a transaction with Stripe's Javascript SDK?`,
           response: `\n\nSure. Here is an example of creating a transaction with Stripe's Javascript SDK.\n\n// Create a stripe instance using your Stripe API keys.\nvar stripe = Stripe('pk_test_your_stripe_key');\n\n// Create a card element and add it to the page.\nvar card = stripe.elements().create('card');\ncard.mount('#card-element');\n\n// Handle real-time validation errors from the card element.\ncard.addEventListener('change', function(event) {\n  var displayError = document.getElementById('card-errors');\n  if (event.error) {\n    displayError.textContent = event.error.message;\n  } else {\n    displayError.textContent = '';\n  }\n});\n\n// Handle form submission.\nvar form = document.getElementById('payment-form');\nform.addEventListener('submit', function(event) {\n  event.preventDefault();\n\n  stripe.createToken(card).then(function(result) {\n    if (result.error) {\n      // Inform the user if there was an error\n      var errorElement = document.getElementById('card-errors');\n      errorElement.textContent = result.error.message;\n    } else {\n      // Send the token to your server\n      stripeTokenHandler(result.token);\n    }\n  });\n});\n\n// Submit the form with the token ID.\nfunction stripeTokenHandler(token) {\n  // Insert the token ID into the form so it gets submitted to the server\n  var form = document.getElementById('payment-form');\n  var hiddenInput = document.createElement('input');\n  hiddenInput.setAttribute('type', 'hidden');\n  hiddenInput.setAttribute('name', 'stripeToken');\n  hiddenInput.setAttribute('value', token.id);\n  form.appendChild(hiddenInput);\n\n  // Submit the form\n  form.submit();\n}`,
           spanish: ``,
@@ -6272,7 +6272,7 @@ app.listen(8000, () => console.log('Server running on port 8000'));
           completed: false,
           impact: 100,
           action: `define`, // may not need
-          icon: `👾`, // may not need
+          icon: `🧿`, // may not need
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Lesson 14`
           )} in exactly one sentence?`,
@@ -6387,7 +6387,7 @@ app.listen(8000, () => console.log('Server running on port 8000'));
           completed: false,
           impact: 100,
           action: `demonstrate`,
-          icon: `🧿`,
+          icon: `🎨`,
           request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
             `Lesson 15`
           )} that stores openAI's ChatGPT messages in a collection with documents defined by user_id with no other text in javascript?`,
@@ -6399,7 +6399,7 @@ app.listen(8000, () => console.log('Server running on port 8000'));
           completed: false,
           impact: 100,
           action: `define`, // may not need
-          icon: `👾`, // may not need
+          icon: `🧿`, // may not need
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Lesson 15`
           )} in exactly one sentence?`,
@@ -6515,7 +6515,7 @@ app.listen(8000, () => console.log('Server running on port 8000'));
           completed: false,
           impact: 100,
           action: `demonstrate`,
-          icon: `🧿`,
+          icon: `🎨`,
           request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
             `Lesson 16`
           )} with no other text in the command line?`,
@@ -6527,7 +6527,7 @@ app.listen(8000, () => console.log('Server running on port 8000'));
           completed: false,
           impact: 100,
           action: `define`, // may not need
-          icon: `👾`, // may not need
+          icon: `🧿`, // may not need
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Lesson 16`
           )} in exactly one sentence?`,

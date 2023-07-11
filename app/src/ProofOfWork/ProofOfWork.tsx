@@ -16,6 +16,8 @@ export const ProofOfWork = ({
   usersModulesCollectionReference = null,
   usersModulesFromDB,
   globalReserve,
+  handlePathSelection,
+  isDemo,
 }) => {
   const [isImpactWalletOpen, setIsImpactWalletOpen] = useState(false);
 
@@ -34,7 +36,7 @@ export const ProofOfWork = ({
           textAlign: "center",
         }}
       >
-        <p>🤖 {displayName}</p>
+        <p>👾 {displayName}</p>
         <ImpactWallet
           databaseUserDocument={databaseUserDocument}
           computePercentage={computePercentage}
@@ -45,26 +47,31 @@ export const ProofOfWork = ({
           usersModulesFromDB={usersModulesFromDB}
           globalReserve={globalReserve}
           globalScholarshipCounter={globalScholarshipCounter}
+          isDemo={isDemo}
         />
       </div>
     );
   }
 
+  console.log("database user doc", databaseUserDocument);
+
   return (
     <div
       style={{
         border: "1px solid #1C1C1E",
-        width: "fit-content",
-        padding: 12,
+
+        padding: 6,
         backgroundColor: "#1C1C1E",
-        marginBottom: "48px",
+
         maxWidth: "600px",
         minWidth: "300px",
         textAlign: "center",
+        width: "100%",
       }}
     >
-      <p>🤖 {displayName}</p>
+      <div style={{ marginBottom: 6 }}>👾 {displayName}</div>
       <ImpactWallet
+        handlePathSelection={handlePathSelection}
         databaseUserDocument={databaseUserDocument}
         computePercentage={computePercentage}
         globalImpactCounter={globalImpactCounter}

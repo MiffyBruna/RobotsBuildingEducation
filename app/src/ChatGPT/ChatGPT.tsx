@@ -486,6 +486,7 @@ export const ChatGPT = ({
         isRaidActive={isRaidActive}
         globalReserve={globalReserve}
         globalScholarshipCounter={globalScholarshipCounter}
+        isDemo={isDemo}
 
         //pow
       />

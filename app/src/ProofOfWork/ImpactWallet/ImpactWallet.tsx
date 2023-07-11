@@ -21,6 +21,8 @@ export const ImpactWallet = ({
   usersModulesFromDB,
   globalReserve,
   userAuthObject = { uid: "demo" },
+  handlePathSelection,
+  isDemo,
 }) => {
   let [databaseUserDocumentCopy, setDatabaseUserDocumentCopy] =
     useState(databaseUserDocument);
@@ -79,6 +81,22 @@ export const ImpactWallet = ({
   return (
     <>
       <div>
+        {!isDemo ? (
+          <Button
+            style={{ textShadow: "2px 2px 12px black" }}
+            onClick={() => {
+              handlePathSelection({ target: { id: "RO.₿.E" } });
+              logEvent(analytics, "select_content", {
+                content_type: "button",
+                item_id: "Robots Building Education Button",
+              });
+            }}
+            variant="secondary"
+          >
+            🤖
+          </Button>
+        ) : null}
+        &nbsp; &nbsp;
         <Link to={`/profile/${params?.profileID || userAuthObject?.uid}`}>
           <Button
             style={{ textShadow: "2px 2px 12px black" }}
@@ -94,13 +112,32 @@ export const ImpactWallet = ({
             🏦
           </Button>
         </Link>
-        &nbsp; {databaseUserDocumentCopy?.impact || 0}{" "}
+        &nbsp; &nbsp;
+        {!isDemo ? (
+          <Button
+            style={{ textShadow: "2px 2px 12px black" }}
+            onClick={() => {
+              handlePathSelection({ target: { id: "Boss Mode" } });
+              logEvent(analytics, "select_content", {
+                content_type: "button",
+                item_id: "Boss Mode Button",
+              });
+              // setIsImpactWalletOpen(true);
+            }}
+            variant="secondary"
+            id="Boss Mode"
+          >
+            🐉
+          </Button>
+        ) : null}
+        &nbsp;{" "}
+        {databaseUserDocumentCopy?.impact || databaseUserDocument?.impact || 0}{" "}
         <div>
           <ProgressBar
             style={{
               backgroundColor: "black",
               borderRadius: "0px",
-              margin: 12,
+              margin: 6,
             }}
             variant="success"
             now={Math.floor(computePercentage * 100)}

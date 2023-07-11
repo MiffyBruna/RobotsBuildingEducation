@@ -82,7 +82,7 @@ export const Creator = {
           completed: false,
           impact: 100,
           action: `demonstrate`,
-          icon: `🧿`,
+          icon: `🎨`,
           request: `ms. roxana, can you please show me an example of creating meaning out of life by creating journies with purpose?`,
           response: `\n\nOne example of creating meaning out of life by creating journeys with purpose is through setting goals and working towards achieving them. For example, if your purpose is to make a difference in the world, you can set a goal to volunteer in your community, or to create a non-profit organization to help a cause you're passionate about. Or if your purpose is to become an expert in a certain field, you can set goals to further your education by attending classes, reading books, and networking. By setting and achieving goals, you are actively creating meaningful journeys that enrich your life and the lives of others.`,
           spanish: ``,
@@ -92,7 +92,7 @@ export const Creator = {
           completed: false,
           impact: 100,
           action: `define`, // may not need
-          icon: `👾`, // may not need
+          icon: `🧿`, // may not need
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Creating Purpose`
           )} in exactly one sentence?`,
@@ -428,7 +428,7 @@ export const Creator = {
           completed: false,
           impact: 100,
           action: `demonstrate`,
-          icon: `🧿`,
+          icon: `🎨`,
           request: `ms. roxana, can you please show me an example of creating meaning out of life by creating journies with purpose?`,
           response: (
             <div>
@@ -481,7 +481,7 @@ export const Creator = {
           completed: false,
           impact: 100,
           action: `define`, // may not need
-          icon: `👾`, // may not need
+          icon: `🧿`, // may not need
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `The Drug War`
           )} in exactly one sentence?`,
@@ -622,7 +622,7 @@ export const Creator = {
           completed: false,
           impact: 100,
           action: `demonstrate`,
-          icon: `🧿`,
+          icon: `🎨`,
           request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
             `Philosophy`
           )}`,
@@ -634,7 +634,7 @@ export const Creator = {
           completed: false,
           impact: 100,
           action: `define`, // may not need
-          icon: `👾`, // may not need
+          icon: `🧿`, // may not need
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Philosophy`
           )} in exactly one sentence?`,
@@ -748,7 +748,7 @@ export const Creator = {
           completed: false,
           impact: 100,
           action: `demonstrate`,
-          icon: `🧿`,
+          icon: `🎨`,
           request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
             `UI/UX`
           )}?`,
@@ -760,7 +760,7 @@ export const Creator = {
           completed: false,
           impact: 100,
           action: `define`, // may not need
-          icon: `👾`, // may not need
+          icon: `🧿`, // may not need
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `UI/UX`
           )} in exactly one sentence?`,
@@ -875,7 +875,7 @@ export const Creator = {
           completed: false,
           impact: 100,
           action: `demonstrate`,
-          icon: `🧿`,
+          icon: `🎨`,
           request: `ms. roxana, can you please show me a single successful viral example of ${ultimateEffeciencyJutsu(
             `Content Review`
           )}?`,
@@ -887,7 +887,7 @@ export const Creator = {
           completed: false,
           impact: 100,
           action: `define`, // may not need
-          icon: `👾`, // may not need
+          icon: `🧿`, // may not need
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Content Review`
           )} in exactly one sentence?`,
@@ -1359,7 +1359,7 @@ export const Creator = {
           completed: false,
           impact: 100,
           action: `demonstrate`,
-          icon: `🧿`,
+          icon: `🎨`,
           request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
             `SEO: Search Engine Optimization`
           )} in html`,
@@ -1413,7 +1413,7 @@ Remember, this is just a glimpse of what SEO in code might look like. Effective 
           completed: false,
           impact: 100,
           action: `define`, // may not need
-          icon: `👾`, // may not need
+          icon: `🧿`, // may not need
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `SEO: Search Engine Optimization`
           )} in exactly one sentence?`,
@@ -1558,7 +1558,7 @@ Remember, this is just a glimpse of what SEO in code might look like. Effective 
           completed: false,
           impact: 100,
           action: `demonstrate`,
-          icon: `🧿`,
+          icon: `🎨`,
           request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
             `Influence & Expression`
           )}`,
@@ -1570,7 +1570,7 @@ Remember, this is just a glimpse of what SEO in code might look like. Effective 
           completed: false,
           impact: 100,
           action: `define`, // may not need
-          icon: `👾`, // may not need
+          icon: `🧿`, // may not need
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Influence & Expression`
           )} in exactly one sentence?`,
@@ -1685,7 +1685,7 @@ Remember, this is just a glimpse of what SEO in code might look like. Effective 
           robotTouch: true,
           impact: 100,
           action: `demonstrate`,
-          icon: `🧿`,
+          icon: `🎨`,
           request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
             `Abraham Lincoln`
           )}`,
@@ -1697,7 +1697,7 @@ Remember, this is just a glimpse of what SEO in code might look like. Effective 
           completed: false,
           impact: 100,
           action: `define`, // may not need
-          icon: `👾`, // may not need
+          icon: `🧿`, // may not need
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Abraham Lincoln`
           )} in exactly one sentence?`,

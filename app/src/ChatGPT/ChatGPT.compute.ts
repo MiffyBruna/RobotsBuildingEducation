@@ -38,7 +38,7 @@ export let computeResponseList = (patreonObject, promptType) => {
       {
         response: patreonObject?.prompts["demonstrate"]?.response,
         type: "demonstrate",
-        icon: "🧿",
+        icon: "🎨",
       },
     ];
   } else if (promptType === "guide") {
@@ -46,7 +46,7 @@ export let computeResponseList = (patreonObject, promptType) => {
       {
         response: patreonObject?.prompts["define"]?.response,
         type: "define",
-        icon: "👾",
+        icon: "🧿",
       },
       {
         response: patreonObject?.prompts["summarize"]?.response,

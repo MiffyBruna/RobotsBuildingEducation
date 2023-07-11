@@ -89,7 +89,7 @@ export const Entrepeneur = {
           impact: 100,
           humanTouch: true,
           action: `demonstrate`,
-          icon: `🧿`,
+          icon: `🎨`,
           request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
             `Creating Competitive Entry Level Resumes`
           )}?`,
@@ -101,7 +101,7 @@ export const Entrepeneur = {
           completed: false,
           impact: 100,
           action: `define`, // may not need
-          icon: `👾`, // may not need
+          icon: `🧿`, // may not need
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Creating Competitive Entry Level Resumes`
           )} in exactly one sentence?`,
@@ -221,7 +221,7 @@ export const Entrepeneur = {
           completed: false,
           impact: 100,
           action: `demonstrate`,
-          icon: `🧿`,
+          icon: `🎨`,
           request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
             `Focus Investing`
           )}?`,
@@ -234,7 +234,7 @@ export const Entrepeneur = {
           completed: false,
           impact: 100,
           action: `define`, // may not need
-          icon: `👾`, // may not need
+          icon: `🧿`, // may not need
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Focus Investing`
           )} in exactly one sentence?`,
@@ -284,7 +284,7 @@ export const Entrepeneur = {
       sourceType: `markdown`, // may not need
       button: `Wealth Management`, // may not need - `name`
       header: `Wealth Management`,
-      fileSource: await import("../../markdowns/wealthManagement.md?raw"),// may not need
+      fileSource: await import("../../markdowns/wealthManagement.md?raw"), // may not need
 
       prompts: {
         patreon: {
@@ -353,7 +353,7 @@ export const Entrepeneur = {
           completed: false,
           impact: 100,
           action: `demonstrate`,
-          icon: `🧿`,
+          icon: `🎨`,
           request: `ms. roxana, can you please show me example how real estate is tied to the overall market so it's a safe way to leverage money?`,
           response:
             "\n\nReal estate is linked to the broader economy in several ways. The housing market is strongly associated with mortgage lending, employment, consumer confidence, and consumer spending. When the overall economy is doing well, there is typically greater demand for real estate, driving prices higher. This creates a positive cycle of investment returns, which can be leveraged to create additional investments, or to acquire additional real estate for rental income or appreciation. Similarly, when consumer spending and employment levels are low, the housing market tends to be affected, leading to decreased prices. Despite this, real estate remains an attractive long-term investment due to its potential for capital and rental income, as well as its tangible and safe nature.",
@@ -364,7 +364,7 @@ export const Entrepeneur = {
           completed: false,
           impact: 100,
           action: `define`, // may not need
-          icon: `👾`, // may not need
+          icon: `🧿`, // may not need
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Wealth Management`
           )} in exactly one sentence?`,
@@ -481,7 +481,7 @@ export const Entrepeneur = {
     //       completed: false,
     //       impact: 100,
     //       action: `demonstrate`,
-    //       icon: `🧿`,
+    //       icon: `🎨`,
     //       request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
     //         `Bitcoin, Automa & the Drug War`
     //       )}?`,
@@ -493,7 +493,7 @@ export const Entrepeneur = {
     //       completed: false,
     //       impact: 100,
     //       action: `define`, // may not need
-    //       icon: `👾`, // may not need
+    //       icon: `🧿`, // may not need
     //       request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
     //         `Bitcoin, Automa & the Drug War`
     //       )} in exactly one sentence?`,
@@ -606,7 +606,7 @@ export const Entrepeneur = {
     //       completed: false,
     //       impact: 100,
     //       action: `demonstrate`,
-    //       icon: `🧿`,
+    //       icon: `🎨`,
     //       request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
     //         `Bitcoin x Social Technology`
     //       )}?`,
@@ -619,7 +619,7 @@ export const Entrepeneur = {
     //       completed: false,
     //       impact: 100,
     //       action: `define`, // may not need
-    //       icon: `👾`, // may not need
+    //       icon: `🧿`, // may not need
     //       request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
     //         `Bitcoin x Social Technology`
     //       )} in exactly one sentence?`,
@@ -736,7 +736,7 @@ export const Entrepeneur = {
     //       completed: false,
     //       impact: 100,
     //       action: `demonstrate`,
-    //       icon: `🧿`,
+    //       icon: `🎨`,
     //       request: `ms. roxana, can you please show me an example of investing in a tech recession?`,
     //       response:
     //         "\n\nSure! One example of investing in a tech recession is to buy into technology stocks that are resilient during bearish markets. For instance, during the dot-com crash of 2001, some tech stocks managed well enough to still see strong returns in the following years. Examples include Apple and Microsoft which all experienced significant increases in their share price in the following years throughout the recession. So it may be wise to find those tech stocks that have proven to be resistant in past tech recessions and focus on long-term growth instead of short-term gains.",
@@ -747,7 +747,7 @@ export const Entrepeneur = {
     //       completed: false,
     //       impact: 100,
     //       action: `define`, // may not need
-    //       icon: `👾`, // may not need
+    //       icon: `🧿`, // may not need
     //       request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
     //         `Tech Recession Investing`
     //       )} in exactly one sentence?`,
@@ -866,7 +866,7 @@ export const Entrepeneur = {
     //       completed: false,
     //       impact: 100,
     //       action: `demonstrate`,
-    //       icon: `🧿`,
+    //       icon: `🎨`,
     //       request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
     //         `Tech Recession Investing x Real Estate II`
     //       )}?`,
@@ -879,7 +879,7 @@ export const Entrepeneur = {
     //       completed: false,
     //       impact: 100,
     //       action: `define`, // may not need
-    //       icon: `👾`, // may not need
+    //       icon: `🧿`, // may not need
     //       request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
     //         `Tech Recession Investing x Real Estate II`
     //       )} in exactly one sentence?`,
@@ -995,7 +995,7 @@ export const Entrepeneur = {
     //       completed: false,
     //       impact: 100,
     //       action: `demonstrate`,
-    //       icon: `🧿`,
+    //       icon: `🎨`,
     //       request: `ms. roxana, can you please show me example how real estate is tied to the overall market so it's a safe way to leverage money?`,
     //       response:
     //         "\n\nReal estate is linked to the broader economy in several ways. The housing market is strongly associated with mortgage lending, employment, consumer confidence, and consumer spending. When the overall economy is doing well, there is typically greater demand for real estate, driving prices higher. This creates a positive cycle of investment returns, which can be leveraged to create additional investments, or to acquire additional real estate for rental income or appreciation. Similarly, when consumer spending and employment levels are low, the housing market tends to be affected, leading to decreased prices. Despite this, real estate remains an attractive long-term investment due to its potential for capital and rental income, as well as its tangible and safe nature.",
@@ -1006,7 +1006,7 @@ export const Entrepeneur = {
     //       completed: false,
     //       impact: 100,
     //       action: `define`, // may not need
-    //       icon: `👾`, // may not need
+    //       icon: `🧿`, // may not need
     //       request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
     //         `Tech Recession Investing x Real Estate III`
     //       )} in exactly one sentence?`,
@@ -1127,7 +1127,7 @@ export const Entrepeneur = {
     //       completed: false,
     //       impact: 100,
     //       action: `demonstrate`,
-    //       icon: `🧿`,
+    //       icon: `🎨`,
     //       request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
     //         `Options Trading Advice`
     //       )}?`,
@@ -1140,7 +1140,7 @@ export const Entrepeneur = {
     //       completed: false,
     //       impact: 100,
     //       action: `define`, // may not need
-    //       icon: `👾`, // may not need
+    //       icon: `🧿`, // may not need
     //       request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
     //         `Options Trading Advice`
     //       )} in exactly one sentence?`,
@@ -1255,7 +1255,7 @@ export const Entrepeneur = {
           completed: false,
           impact: 100,
           action: `demonstrate`,
-          icon: `🧿`,
+          icon: `🎨`,
           request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
             `Bitcoin, Automa & the Drug War`
           )}?`,
@@ -1267,7 +1267,7 @@ export const Entrepeneur = {
           completed: false,
           impact: 100,
           action: `define`, // may not need
-          icon: `👾`, // may not need
+          icon: `🧿`, // may not need
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Bitcoin, Automa & the Drug War`
           )} in exactly one sentence?`,
@@ -1382,7 +1382,7 @@ export const Entrepeneur = {
           completed: false,
           impact: 100,
           action: `demonstrate`,
-          icon: `🧿`,
+          icon: `🎨`,
           request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
             `Social Media Investing`
           )}?`,
@@ -1395,7 +1395,7 @@ export const Entrepeneur = {
           completed: false,
           impact: 100,
           action: `define`, // may not need
-          icon: `👾`, // may not need
+          icon: `🧿`, // may not need
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Social Media Investing`
           )} in exactly one sentence?`,
@@ -1513,7 +1513,7 @@ export const Entrepeneur = {
     //       completed: false,
     //       impact: 100,
     //       action: `demonstrate`,
-    //       icon: `🧿`,
+    //       icon: `🎨`,
     //       request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
     //         `Metaverse Investing`
     //       )}?`,
@@ -1526,7 +1526,7 @@ export const Entrepeneur = {
     //       completed: false,
     //       impact: 100,
     //       action: `define`, // may not need
-    //       icon: `👾`, // may not need
+    //       icon: `🧿`, // may not need
     //       request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
     //         `Metaverse Investing`
     //       )} in exactly one sentence?`,
@@ -1641,7 +1641,7 @@ export const Entrepeneur = {
     //       completed: false,
     //       impact: 100,
     //       action: `demonstrate`,
-    //       icon: `🧿`,
+    //       icon: `🎨`,
     //       request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
     //         `Mexican-American Trade Investing`
     //       )}?`,
@@ -1654,7 +1654,7 @@ export const Entrepeneur = {
     //       completed: false,
     //       impact: 100,
     //       action: `define`, // may not need
-    //       icon: `👾`, // may not need
+    //       icon: `🧿`, // may not need
     //       request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
     //         `Mexican-American Trade Investing`
     //       )} in exactly one sentence?`,
@@ -1769,7 +1769,7 @@ export const Entrepeneur = {
     //       completed: false,
     //       impact: 100,
     //       action: `demonstrate`,
-    //       icon: `🧿`,
+    //       icon: `🎨`,
     //       request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
     //         `Infrastructure Investing`
     //       )}?`,
@@ -1782,7 +1782,7 @@ export const Entrepeneur = {
     //       completed: false,
     //       impact: 100,
     //       action: `define`, // may not need
-    //       icon: `👾`, // may not need
+    //       icon: `🧿`, // may not need
     //       request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
     //         `Infrastructure Investing`
     //       )} in exactly one sentence?`,
@@ -1895,7 +1895,7 @@ export const Entrepeneur = {
     //       completed: false,
     //       impact: 100,
     //       action: `demonstrate`,
-    //       icon: `🧿`,
+    //       icon: `🎨`,
     //       request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
     //         `Cloud Investing`
     //       )}?`,
@@ -1907,7 +1907,7 @@ export const Entrepeneur = {
     //       completed: false,
     //       impact: 100,
     //       action: `define`, // may not need
-    //       icon: `👾`, // may not need
+    //       icon: `🧿`, // may not need
     //       request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
     //         `Cloud Investing`
     //       )} in exactly one sentence?`,

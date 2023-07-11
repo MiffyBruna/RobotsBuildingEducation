@@ -242,8 +242,8 @@ export const Intro = ({
             <RoxanaLoadingAnimation />
           ) : chatGptResponse ? (
             <h2>
-              {promptSelection === "patreon" ? "⚡🧿►✍️" : null}
-              {promptSelection === "guide" ? "📚🔮🤝👾🧪" : null}
+              {promptSelection === "patreon" ? "⚡🎨►✍️" : null}
+              {promptSelection === "guide" ? "📚🔮🤝🧿🧪" : null}
               {promptSelection === "shop" ? "🛍️" : null}
             </h2>
           ) : (

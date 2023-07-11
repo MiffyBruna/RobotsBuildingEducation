@@ -47,7 +47,7 @@ export const Paths = ({ handlePathSelection }): JSX.Element => {
   return (
     <>
       <StyledNavigationContainer>{displayTop}</StyledNavigationContainer>
-      <StyledNavigationContainer>{displayBot}</StyledNavigationContainer>
+      {/* <StyledNavigationContainer>{displayBot}</StyledNavigationContainer> */}
     </>
   );
 };

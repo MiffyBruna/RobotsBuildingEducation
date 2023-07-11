@@ -35,6 +35,7 @@ import {
 import { Spinner } from "react-bootstrap";
 import { logEvent } from "firebase/analytics";
 import { useParams } from "react-router-dom";
+import { ProofOfWork } from "./ProofOfWork/ProofOfWork";
 
 logEvent(analytics, "page_view", {
   page_location: "https://learn-robotsbuildingeducation.firebaseapp.com/",
@@ -66,6 +67,7 @@ function App() {
   const [usersModulesCollectionReference, setUsersModulesCollectionReference] =
     useState({});
 
+  //courses references are deprecated
   const [usersCoursesCollectionReference, setUsersCoursesCollectionReference] =
     useState({});
 
@@ -150,10 +152,7 @@ function App() {
     }
   };
 
-  const handleRandomDemoPressed = () => {
-    setPatreonObject(randomLessonGeneratorMachine444(globalUserModulesFromDB));
-  };
-
+  // gets the user's modules created by RO.B.E
   let documentProcForUsersModules = async (collectionRef) => {
     await getDocs(collectionRef).then((querySnapshot) => {
       let modulesSet = [];
@@ -170,6 +169,7 @@ function App() {
     });
   };
 
+  // gets the global modules created by RO.B.E
   let documentProcForGlobalModules = async (collectionRef) => {
     await getDocs(collectionRef).then((querySnapshot) => {
       let modulesSet = [];
@@ -344,10 +344,6 @@ function App() {
     if (params?.moduleID) {
       mountDataForRoute(params?.moduleID);
       setIsLoadingRoute(false);
-      //  console.log("get set", ui(globalUserModulesFromDB)['RO.₿.E']);
-      // setPatreonObject(ui(globalUserModulesFromDB)['RO.₿.E'][])
-
-      // setCurrentCollection("")
     } else {
       console.log("no data");
     }
@@ -370,61 +366,12 @@ function App() {
   }
 
   return (
-    <div className="App">
-      {/* <button onClick={() => dispatch({ type: "incremented_age" })}>
-        click
-      </button>auth
-      my age {state.age} */}
-      {/*  */}
-      <Header
-        auth={auth}
-        globalReserveCounter={globalReserveCounter}
-        patreonObject={patreonObject}
-        userDocumentReference={userDocumentReference}
-        databaseUserDocument={databaseUserDocument}
-        setDatabaseUserDocument={setDatabaseUserDocument}
-        globalDocumentReference={globalDocumentReference}
-        globalImpactCounter={globalImpactCounter}
-        setGlobalImpactCounter={setGlobalImpactCounter}
-        computePercentage={computePercentage}
-      />
-
-      {typeof isSignedIn === "string" ||
-      (!isSignedIn && isZeroKnowledgeUser) ? (
-        <div
-          style={{
-            border: "1px solid #1C1C1E",
-            width: "fit-content",
-            margin: "auto",
-            backgroundColor: "#1C1C1E",
-            marginBottom: "48px",
-          }}
-          onClick={() => {
-            logEvent(analytics, "login", { method: "Google" });
-          }}
-        >
-          <AuthComponent
-            id="firebaseui-auth-container"
-            uiConfig={uiConfig}
-            firebaseAuth={auth}
-          />
-        </div>
-      ) : null}
-
-      {/* {isSignedIn !== "start" && isSignedIn && isZeroKnowledgeUser ? (
-        <ProofOfWork
-          displayName={auth?.currentUser?.displayName || "@DemoRobots"}
-          databaseUserDocument={databaseUserDocument}
-          computePercentage={computePercentage}
-          globalImpactCounter={globalImpactCounter}
-        />
-      ) : null} */}
-
-      {!isZeroKnowledgeUser ? (
-        <Passcode
+    <>
+      <div className="App" style={{ minHeight: "100vh" }}>
+        <Header
+          auth={auth}
+          globalReserveCounter={globalReserveCounter}
           patreonObject={patreonObject}
-          handleRandomDemoPressed={handleRandomDemoPressed}
-          handleZeroKnowledgePassword={handleZeroKnowledgePassword}
           userDocumentReference={userDocumentReference}
           databaseUserDocument={databaseUserDocument}
           setDatabaseUserDocument={setDatabaseUserDocument}
@@ -433,82 +380,141 @@ function App() {
           setGlobalImpactCounter={setGlobalImpactCounter}
           computePercentage={computePercentage}
         />
-      ) : null}
-      {isZeroKnowledgeUser ? (
-        <>
-          {/* <div>My Accoun</div> */}
-          {/* navigate */}
 
-          <Paths handlePathSelection={handlePathSelection} />
+        {typeof isSignedIn === "string" ||
+        (!isSignedIn && isZeroKnowledgeUser) ? (
+          <div
+            style={{
+              border: "1px solid #1C1C1E",
+              width: "fit-content",
+              margin: "auto",
+              backgroundColor: "#1C1C1E",
+              marginBottom: "48px",
+            }}
+            onClick={() => {
+              logEvent(analytics, "login", { method: "Google" });
+            }}
+          >
+            <AuthComponent
+              id="firebaseui-auth-container"
+              uiConfig={uiConfig}
+              firebaseAuth={auth}
+            />
+          </div>
+        ) : null}
 
-          <Collections
-            usersCoursesCollectionReference={usersCoursesCollectionReference}
-            userAuthObject={userAuthObject}
-            visibilityMap={visibilityMap}
-            handleModuleSelection={handleModuleSelection}
-            currentPath={currentPath}
+        {!isZeroKnowledgeUser ? (
+          <Passcode
             patreonObject={patreonObject}
+            handleZeroKnowledgePassword={handleZeroKnowledgePassword}
             userDocumentReference={userDocumentReference}
             databaseUserDocument={databaseUserDocument}
             setDatabaseUserDocument={setDatabaseUserDocument}
             globalDocumentReference={globalDocumentReference}
             globalImpactCounter={globalImpactCounter}
             setGlobalImpactCounter={setGlobalImpactCounter}
-            displayName={auth?.currentUser?.displayName || "@DemoRobots"}
             computePercentage={computePercentage}
-            isDemo={isDemo}
-            moduleName={moduleName}
-            globalModulesCollectionReference={globalModulesCollectionReference}
-            globalUserModulesFromDB={globalUserModulesFromDB}
-            documentProcForGlobalModules={documentProcForGlobalModules}
           />
+        ) : null}
+        {isZeroKnowledgeUser ? (
+          <>
+            <Paths handlePathSelection={handlePathSelection} />
 
-          <br />
-          {/* selected header */}
-          {!isEmpty(patreonObject.button) ? (
-            <h2 style={{ color: "white", marginTop: 12 }}>
-              {" "}
-              {patreonObject?.button || ""}{" "}
-            </h2>
-          ) : null}
+            <Collections
+              usersCoursesCollectionReference={usersCoursesCollectionReference}
+              userAuthObject={userAuthObject}
+              visibilityMap={visibilityMap}
+              handleModuleSelection={handleModuleSelection}
+              currentPath={currentPath}
+              patreonObject={patreonObject}
+              userDocumentReference={userDocumentReference}
+              databaseUserDocument={databaseUserDocument}
+              setDatabaseUserDocument={setDatabaseUserDocument}
+              globalDocumentReference={globalDocumentReference}
+              globalImpactCounter={globalImpactCounter}
+              setGlobalImpactCounter={setGlobalImpactCounter}
+              displayName={auth?.currentUser?.displayName || "@DemoRobots"}
+              computePercentage={computePercentage}
+              isDemo={isDemo}
+              moduleName={moduleName}
+              globalModulesCollectionReference={
+                globalModulesCollectionReference
+              }
+              globalUserModulesFromDB={globalUserModulesFromDB}
+              documentProcForGlobalModules={documentProcForGlobalModules}
+            />
 
-          <br />
+            <br />
 
-          {/* render chatbot */}
-          <div style={{ width: "100%" }}>
-            <div>
-              {isEmpty(patreonObject) && !isDemo ? null : (
-                <>
-                  <ChatGPT
-                    globalScholarshipCounter={globalScholarshipCounter}
-                    globalReserve={globalReserveCounter}
-                    currentPath={currentPathForAnalytics}
-                    patreonObject={patreonObject}
-                    userDocumentReference={userDocumentReference}
-                    databaseUserDocument={databaseUserDocument}
-                    setDatabaseUserDocument={setDatabaseUserDocument}
-                    globalDocumentReference={globalDocumentReference}
-                    globalImpactCounter={globalImpactCounter}
-                    setGlobalImpactCounter={setGlobalImpactCounter}
-                    displayName={
-                      auth?.currentUser?.displayName || "@DemoRobots"
-                    }
-                    computePercentage={computePercentage}
-                    isDemo={isDemo}
-                    moduleName={moduleName}
-                    usersModulesCollectionReference={
-                      usersModulesCollectionReference
-                    }
-                    usersModulesFromDB={usersModulesFromDB}
-                    userAuthObject={userAuthObject}
-                  />
-                </>
-              )}
+            {!isEmpty(patreonObject.button) ? (
+              <h2 style={{ color: "white", marginTop: 12 }}>
+                {" "}
+                {patreonObject?.button || ""}{" "}
+              </h2>
+            ) : null}
+
+            <br />
+
+            <div style={{ width: "100%" }}>
+              <div>
+                {isEmpty(patreonObject) && !isDemo ? null : (
+                  <>
+                    <ChatGPT
+                      globalScholarshipCounter={globalScholarshipCounter}
+                      globalReserve={globalReserveCounter}
+                      currentPath={currentPathForAnalytics}
+                      patreonObject={patreonObject}
+                      userDocumentReference={userDocumentReference}
+                      databaseUserDocument={databaseUserDocument}
+                      setDatabaseUserDocument={setDatabaseUserDocument}
+                      globalDocumentReference={globalDocumentReference}
+                      globalImpactCounter={globalImpactCounter}
+                      setGlobalImpactCounter={setGlobalImpactCounter}
+                      displayName={
+                        auth?.currentUser?.displayName || "@DemoRobots"
+                      }
+                      computePercentage={computePercentage}
+                      isDemo={isDemo}
+                      moduleName={moduleName}
+                      usersModulesCollectionReference={
+                        usersModulesCollectionReference
+                      }
+                      usersModulesFromDB={usersModulesFromDB}
+                      userAuthObject={userAuthObject}
+                    />
+                  </>
+                )}
+              </div>
             </div>
-          </div>
-        </>
-      ) : null}
-    </div>
+          </>
+        ) : null}
+      </div>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          position: "sticky",
+          bottom: 0,
+          width: "100%",
+        }}
+      >
+        {databaseUserDocument && isSignedIn && isZeroKnowledgeUser ? (
+          <ProofOfWork
+            userAuthObject={userAuthObject}
+            displayName={auth?.currentUser?.displayName || "@DemoRobots"}
+            databaseUserDocument={databaseUserDocument}
+            computePercentage={computePercentage}
+            globalImpactCounter={globalImpactCounter}
+            usersModulesCollectionReference={usersModulesCollectionReference}
+            usersModulesFromDB={usersModulesFromDB}
+            globalReserve={globalReserveCounter}
+            globalScholarshipCounter={globalScholarshipCounter}
+            handlePathSelection={handlePathSelection}
+          />
+        ) : null}
+      </div>
+    </>
   );
 }
 

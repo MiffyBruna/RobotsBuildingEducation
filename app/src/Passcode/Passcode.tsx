@@ -16,7 +16,6 @@ export const Passcode = ({
   setGlobalImpactCounter,
   computePercentage,
   patreonObject,
-  handleRandomDemoPressed,
 }) => {
   return (
     <div>
