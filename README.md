@@ -1,3 +1,5 @@
+# The Original AI Tutor & Mentor In Your Pocket
+
 ## Contact
 
 - Please join this Discord community for more casual & information conversation about this app: [Discord](https://discord.gg/9kguaaDRmt)
