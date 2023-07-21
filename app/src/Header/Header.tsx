@@ -27,7 +27,7 @@ export const Header = ({
 
       <br />
       <LearnMore auth={auth} />
-      <Apply
+      {/* <Apply
         auth={auth}
         globalReserveCounter={globalReserveCounter}
         patreonObject={patreonObject}
@@ -38,7 +38,7 @@ export const Header = ({
         globalImpactCounter={globalImpactCounter}
         setGlobalImpactCounter={setGlobalImpactCounter}
         computePercentage={computePercentage}
-      />
+      /> */}
     </div>
   );
 };

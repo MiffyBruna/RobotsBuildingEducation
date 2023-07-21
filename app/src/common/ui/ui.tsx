@@ -39,7 +39,8 @@ export let ultimateEffeciencyJutsu = (key) => {
     ["The Drug War"]:
       "why the drug war has been the primary source for inequality in the United States (This is under construction 🚧🚧🚧) ",
     ["Abraham Lincoln"]: "Abraham Lincoln and his views on divine providence",
-    ["Philosophy"]: "Critical Race Theory and machine learning algorithms",
+    ["Philosophy"]:
+      "the relationship between the philosophy of purpose, critical race theory and machine learning algorithms",
     ["Bitcoin, Automa & the Drug War"]:
       "the relationship between bitcoin, automation, universal basic income and the drug war",
     // ["Bitcoin x Social Technology"]:
@@ -79,6 +80,9 @@ export let ultimateEffeciencyJutsu = (key) => {
     ["Lesson 4 Building Apps"]: "the basics of building apps using APIs",
     ["SEO: Search Engine Optimization"]:
       "understanding search engine optimization",
+
+    ["Human-Computer Interaction"]:
+      "human-computer interaction, search engine optimization and influence",
   };
   return map[key] || "null";
 };

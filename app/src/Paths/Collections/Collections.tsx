@@ -129,9 +129,6 @@ export const Collections = ({
             </div>
           ) : null}
           <br />
-
-          {display}
-
           {currentPath === "RO.₿.E" && hasZeroKnowledgeAccess ? (
             <Button
               variant="light"
@@ -140,6 +137,8 @@ export const Collections = ({
               Activate InfiniteKnowledgeEngine9001
             </Button>
           ) : null}
+
+          {display}
         </div>
 
         <InfiniteKnowledgeEngine9001

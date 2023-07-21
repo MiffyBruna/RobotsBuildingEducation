@@ -12,6 +12,7 @@ import lionel from "../../../common/media/images/lionel.png";
 import roxanaGif from "../../../common/media/images/roxanaGif.gif";
 import "../Roxana.css";
 import { Sketching } from "./Sketching";
+// import CanvasComponent from "./CanvasComponent";
 
 // This is an archived version of a set of 9 prompts.
 export const PromptCombiner9000 = ({
@@ -135,6 +136,8 @@ export const PromptCombiner9000 = ({
                   >
                     {chatGptResponse.response}
                   </SyntaxHighlighter>
+
+                  {/* <CanvasComponent /> */}
                 </div>
               ) : (loadingMessage.length < 1 &&
                   ((chatGptResponse.response &&
