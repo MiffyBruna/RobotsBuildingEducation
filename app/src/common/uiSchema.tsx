@@ -184,6 +184,7 @@ export let renderWithTooltip = (
 ) => {
   return (
     <OverlayTrigger
+      //setting trigger to click basically makes it impossible to use
       trigger="click"
       placement={renderingDirection}
       overlay={<Tooltip style={style}>{tooltip}</Tooltip>}

@@ -273,7 +273,7 @@ export const Apply = ({
               </div>
             </p>
             <br />
-            <Demo
+            {/* <Demo
               userDocumentReference={userDocumentReference}
               databaseUserDocument={databaseUserDocument}
               setDatabaseUserDocument={setDatabaseUserDocument}
@@ -286,7 +286,7 @@ export const Apply = ({
               }
               isDemo={true}
               demoName={"Demo: Philosophy @ RO.B.E"}
-            />
+            /> */}
           </p>
         </Modal.Body>
         <Modal.Footer style={{ backgroundColor: "black", color: "white" }}>

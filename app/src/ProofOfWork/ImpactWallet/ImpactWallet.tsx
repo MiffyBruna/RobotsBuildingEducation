@@ -11,6 +11,7 @@ import { doc, getDoc, getDocs } from "firebase/firestore";
 import { Link, useParams } from "react-router-dom";
 
 export const ImpactWallet = ({
+  globalScholarshipCounter,
   databaseUserDocument,
   computePercentage,
   globalImpactCounter,
@@ -18,12 +19,14 @@ export const ImpactWallet = ({
   setIsImpactWalletOpen,
   usersModulesCollectionReference,
   usersModulesFromDB,
-  globalReserve,
+
   userAuthObject = { uid: "demo" },
+  handlePathSelection,
+  isDemo,
+  globalReserveObject,
 }) => {
-  console.log("vb", globalReserve);
-  let [databaseUserDocumentCopy, setDatabaseUserDocumentCopy] =
-    useState(databaseUserDocument);
+  console.log("xy", databaseUserDocument);
+  let [databaseUserDocumentCopy, setDatabaseUserDocumentCopy] = useState({});
 
   let params = useParams();
 
@@ -33,29 +36,24 @@ export const ImpactWallet = ({
   let [borderStateForLightningButton, setBorderStateForLightningButton] =
     useState({ border: "1px solid blue" });
 
-  // let mountWallet = async () => {
-  //   await getDocs(usersModulesCollectionReference).then((querySnapshot) => {
-  //         let sum = 0;
-  //         querySnapshot.forEach((doc) => {
-  //           if (doc.data()) {
-  //             console.log("MODULES", doc.data());
-  //           }
-  //         })
-  //   });
-  // }
-
   useEffect(() => {
     // mountWallet();
+    console.log("user auth", userAuthObject);
+    console.log("params", params);
     if (params?.profileID && params?.profileID !== userAuthObject?.uid) {
       const docRef = doc(database, "users", params?.profileID);
       getDoc(docRef).then((res) => {
         if (!res?.data()) {
           // unsafe case?
         } else {
+          console.log("rest", res);
           setDatabaseUserDocumentCopy(res?.data());
           setIsImpactWalletOpen(true);
         }
       });
+    } else {
+      console.log("user's own profile");
+      setDatabaseUserDocumentCopy(databaseUserDocument);
     }
   }, []);
 
@@ -87,9 +85,29 @@ export const ImpactWallet = ({
       setBorderStateForLightningButton({ border: "1px solid blue" });
     }
   };
+
+  console.log("wtf", databaseUserDocumentCopy);
+  console.log("wtf", globalReserveObject);
+
   return (
     <>
       <div>
+        {!isDemo ? (
+          <Button
+            style={{ textShadow: "2px 2px 12px black" }}
+            onClick={() => {
+              handlePathSelection({ target: { id: "RO.₿.E" } });
+              logEvent(analytics, "select_content", {
+                content_type: "button",
+                item_id: "Robots Building Education Button",
+              });
+            }}
+            variant="secondary"
+          >
+            🤖
+          </Button>
+        ) : null}
+        &nbsp; &nbsp;
         <Link to={`/profile/${params?.profileID || userAuthObject?.uid}`}>
           <Button
             style={{ textShadow: "2px 2px 12px black" }}
@@ -105,13 +123,32 @@ export const ImpactWallet = ({
             🏦
           </Button>
         </Link>
-        &nbsp; {databaseUserDocumentCopy?.impact || 0}{" "}
+        &nbsp; &nbsp;
+        {!isDemo ? (
+          <Button
+            style={{ textShadow: "2px 2px 12px black" }}
+            onClick={() => {
+              handlePathSelection({ target: { id: "Boss Mode" } });
+              logEvent(analytics, "select_content", {
+                content_type: "button",
+                item_id: "Boss Mode Button",
+              });
+              // setIsImpactWalletOpen(true);
+            }}
+            variant="secondary"
+            id="Boss Mode"
+          >
+            🐉
+          </Button>
+        ) : null}
+        &nbsp;{" "}
+        {databaseUserDocumentCopy?.impact || databaseUserDocument?.impact || 0}{" "}
         <div>
           <ProgressBar
             style={{
               backgroundColor: "black",
               borderRadius: "0px",
-              margin: 12,
+              margin: 6,
             }}
             variant="success"
             now={Math.floor(computePercentage * 100)}
@@ -165,11 +202,14 @@ export const ImpactWallet = ({
               financial impact for someone else.
             </p>
             <hr />
-            <h4>Scholarships Created: 5</h4>
+            <h4>Scholarships Created: {globalScholarshipCounter}</h4>
             <p>
               Work Done By You
               <br />
-              {databaseUserDocumentCopy?.impact || 15200} / {getGlobalImpact()}
+              {databaseUserDocumentCopy?.impact ||
+                databaseUserDocument.impact ||
+                15200}{" "}
+              / {getGlobalImpact()}
               <ProgressBar
                 style={{
                   backgroundColor: "black",
@@ -188,7 +228,9 @@ export const ImpactWallet = ({
               You are &nbsp;
               <b>
                 {(
-                  ((databaseUserDocumentCopy?.impact || 0) /
+                  ((databaseUserDocumentCopy?.impact ||
+                    databaseUserDocument.impact ||
+                    0) /
                     globalImpactCounter) *
                   100
                 ).toFixed(2)}
@@ -203,7 +245,9 @@ export const ImpactWallet = ({
                 }}
                 variant="warning"
                 now={Math.floor(
-                  ((databaseUserDocumentCopy?.impact || 0) /
+                  ((databaseUserDocumentCopy?.impact ||
+                    databaseUserDocument.impact ||
+                    0) /
                     globalImpactCounter) *
                     100
                 )}
@@ -228,7 +272,11 @@ export const ImpactWallet = ({
             </div>
             <div>
               <h1>The Reserve</h1>
-              <h3>{globalReserve}</h3>
+              <h3>invested {globalReserveObject?.invested || "N/A"}</h3>
+              <h6>gain {globalReserveObject?.profit}</h6>
+              <h6>total value {globalReserveObject?.total}</h6>
+              <h6>total gain {globalReserveObject?.percent_gained}</h6>
+              <h6>last updated {globalReserveObject?.last_updated}</h6>
               <div></div>
               <img src={sheilferBitcoin} width={300} height={350} />
 
@@ -280,26 +328,10 @@ export const ImpactWallet = ({
                   ⚡ Copy Lightning Address
                 </Button>
               </div>
-              {/* <p style={{ maxWidth: 720 }}>
-                <br />
-                100% of subscriptions are stored as Bitcoin as a reserve system
-                for RO.B.E. This reserve is designed to position Robots Building
-                Education for growth. You're encouraged to send Bitcoin as
-                another way to support the growth of RO.B.E without
-                subscriptions. This is currently the <b>only</b> way I'm
-                monetizing on RO.B.E
-              </p> */}
 
               <br />
             </div>
 
-            {/* <div>
-              <br />
-              <h1>Education</h1>
-              <div>
-                You can now share your profile 😊 more under development!{" "}
-              </div>
-            </div> */}
             <br />
           </div>
         </Modal.Body>

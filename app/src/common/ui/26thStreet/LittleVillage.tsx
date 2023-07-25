@@ -105,7 +105,7 @@ export const LittleVillage = (globalUserModulesFromDB = []) => {
               completed: false,
               impact: 100,
               action: `demonstrate`,
-              icon: `🧿`,
+              icon: `🎨`,
               request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
                 `Lesson 1`
               )} with no other text in javascript?`,
@@ -119,7 +119,7 @@ export const LittleVillage = (globalUserModulesFromDB = []) => {
               completed: false,
               impact: 100,
               action: `define`, // may not need
-              icon: `👾`, // may not need
+              icon: `🧿`, // may not need
               request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
                 `Lesson 1`
               )} in exactly one sentence?`,

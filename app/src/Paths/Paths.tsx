@@ -17,11 +17,7 @@ export const Paths = ({ handlePathSelection }): JSX.Element => {
   // active prop will handle some styling to display restricted or blocked access
 
   const top = ["Engineer", "Creator", "Entrepeneur"];
-  const bot = [
-    "RO.₿.E",
-    // "Raise Ur Hand",
-    "Boss Mode",
-  ];
+  const bot = ["RO.₿.E", "Boss Mode"];
 
   let displayTop = top.map((path) => (
     <StyledLink
@@ -51,7 +47,7 @@ export const Paths = ({ handlePathSelection }): JSX.Element => {
   return (
     <>
       <StyledNavigationContainer>{displayTop}</StyledNavigationContainer>
-      <StyledNavigationContainer>{displayBot}</StyledNavigationContainer>
+      {/* <StyledNavigationContainer>{displayBot}</StyledNavigationContainer> */}
     </>
   );
 };

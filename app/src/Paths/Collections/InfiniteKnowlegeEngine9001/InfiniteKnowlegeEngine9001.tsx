@@ -105,7 +105,7 @@ export const InfiniteKnowledgeEngine9001 = ({
           completed: false,
           impact: 100,
           action: `demonstrate`,
-          icon: `🧿`,
+          icon: `🎨`,
           request: `ms. roxana, can you please show me an example of creating meaning out of life by creating journies with purpose?`,
           response: "",
         },
@@ -113,7 +113,7 @@ export const InfiniteKnowledgeEngine9001 = ({
           completed: false,
           impact: 100,
           action: `define`, // may not need
-          icon: `👾`, // may not need
+          icon: `🧿`, // may not need
           request: `ms. roxana, can you please define expression and its impacts on influence in social media in exactly one sentence?`,
           response: "",
         },

@@ -89,7 +89,7 @@ export const Entrepeneur = {
           impact: 100,
           humanTouch: true,
           action: `demonstrate`,
-          icon: `🧿`,
+          icon: `🎨`,
           request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
             `Creating Competitive Entry Level Resumes`
           )}?`,
@@ -101,7 +101,7 @@ export const Entrepeneur = {
           completed: false,
           impact: 100,
           action: `define`, // may not need
-          icon: `👾`, // may not need
+          icon: `🧿`, // may not need
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Creating Competitive Entry Level Resumes`
           )} in exactly one sentence?`,
@@ -221,7 +221,7 @@ export const Entrepeneur = {
           completed: false,
           impact: 100,
           action: `demonstrate`,
-          icon: `🧿`,
+          icon: `🎨`,
           request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
             `Focus Investing`
           )}?`,
@@ -234,7 +234,7 @@ export const Entrepeneur = {
           completed: false,
           impact: 100,
           action: `define`, // may not need
-          icon: `👾`, // may not need
+          icon: `🧿`, // may not need
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Focus Investing`
           )} in exactly one sentence?`,
@@ -284,7 +284,7 @@ export const Entrepeneur = {
       sourceType: `markdown`, // may not need
       button: `Wealth Management`, // may not need - `name`
       header: `Wealth Management`,
-      fileSource: await import("../../markdowns/wealthManagement.md?raw"),// may not need
+      fileSource: await import("../../markdowns/wealthManagement.md?raw"), // may not need
 
       prompts: {
         patreon: {
@@ -353,7 +353,7 @@ export const Entrepeneur = {
           completed: false,
           impact: 100,
           action: `demonstrate`,
-          icon: `🧿`,
+          icon: `🎨`,
           request: `ms. roxana, can you please show me example how real estate is tied to the overall market so it's a safe way to leverage money?`,
           response:
             "\n\nReal estate is linked to the broader economy in several ways. The housing market is strongly associated with mortgage lending, employment, consumer confidence, and consumer spending. When the overall economy is doing well, there is typically greater demand for real estate, driving prices higher. This creates a positive cycle of investment returns, which can be leveraged to create additional investments, or to acquire additional real estate for rental income or appreciation. Similarly, when consumer spending and employment levels are low, the housing market tends to be affected, leading to decreased prices. Despite this, real estate remains an attractive long-term investment due to its potential for capital and rental income, as well as its tangible and safe nature.",
@@ -364,7 +364,7 @@ export const Entrepeneur = {
           completed: false,
           impact: 100,
           action: `define`, // may not need
-          icon: `👾`, // may not need
+          icon: `🧿`, // may not need
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Wealth Management`
           )} in exactly one sentence?`,
@@ -481,7 +481,7 @@ export const Entrepeneur = {
     //       completed: false,
     //       impact: 100,
     //       action: `demonstrate`,
-    //       icon: `🧿`,
+    //       icon: `🎨`,
     //       request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
     //         `Bitcoin, Automa & the Drug War`
     //       )}?`,
@@ -493,7 +493,7 @@ export const Entrepeneur = {
     //       completed: false,
     //       impact: 100,
     //       action: `define`, // may not need
-    //       icon: `👾`, // may not need
+    //       icon: `🧿`, // may not need
     //       request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
     //         `Bitcoin, Automa & the Drug War`
     //       )} in exactly one sentence?`,
@@ -606,7 +606,7 @@ export const Entrepeneur = {
     //       completed: false,
     //       impact: 100,
     //       action: `demonstrate`,
-    //       icon: `🧿`,
+    //       icon: `🎨`,
     //       request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
     //         `Bitcoin x Social Technology`
     //       )}?`,
@@ -619,7 +619,7 @@ export const Entrepeneur = {
     //       completed: false,
     //       impact: 100,
     //       action: `define`, // may not need
-    //       icon: `👾`, // may not need
+    //       icon: `🧿`, // may not need
     //       request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
     //         `Bitcoin x Social Technology`
     //       )} in exactly one sentence?`,
@@ -736,7 +736,7 @@ export const Entrepeneur = {
     //       completed: false,
     //       impact: 100,
     //       action: `demonstrate`,
-    //       icon: `🧿`,
+    //       icon: `🎨`,
     //       request: `ms. roxana, can you please show me an example of investing in a tech recession?`,
     //       response:
     //         "\n\nSure! One example of investing in a tech recession is to buy into technology stocks that are resilient during bearish markets. For instance, during the dot-com crash of 2001, some tech stocks managed well enough to still see strong returns in the following years. Examples include Apple and Microsoft which all experienced significant increases in their share price in the following years throughout the recession. So it may be wise to find those tech stocks that have proven to be resistant in past tech recessions and focus on long-term growth instead of short-term gains.",
@@ -747,7 +747,7 @@ export const Entrepeneur = {
     //       completed: false,
     //       impact: 100,
     //       action: `define`, // may not need
-    //       icon: `👾`, // may not need
+    //       icon: `🧿`, // may not need
     //       request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
     //         `Tech Recession Investing`
     //       )} in exactly one sentence?`,
@@ -866,7 +866,7 @@ export const Entrepeneur = {
     //       completed: false,
     //       impact: 100,
     //       action: `demonstrate`,
-    //       icon: `🧿`,
+    //       icon: `🎨`,
     //       request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
     //         `Tech Recession Investing x Real Estate II`
     //       )}?`,
@@ -879,7 +879,7 @@ export const Entrepeneur = {
     //       completed: false,
     //       impact: 100,
     //       action: `define`, // may not need
-    //       icon: `👾`, // may not need
+    //       icon: `🧿`, // may not need
     //       request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
     //         `Tech Recession Investing x Real Estate II`
     //       )} in exactly one sentence?`,
@@ -995,7 +995,7 @@ export const Entrepeneur = {
     //       completed: false,
     //       impact: 100,
     //       action: `demonstrate`,
-    //       icon: `🧿`,
+    //       icon: `🎨`,
     //       request: `ms. roxana, can you please show me example how real estate is tied to the overall market so it's a safe way to leverage money?`,
     //       response:
     //         "\n\nReal estate is linked to the broader economy in several ways. The housing market is strongly associated with mortgage lending, employment, consumer confidence, and consumer spending. When the overall economy is doing well, there is typically greater demand for real estate, driving prices higher. This creates a positive cycle of investment returns, which can be leveraged to create additional investments, or to acquire additional real estate for rental income or appreciation. Similarly, when consumer spending and employment levels are low, the housing market tends to be affected, leading to decreased prices. Despite this, real estate remains an attractive long-term investment due to its potential for capital and rental income, as well as its tangible and safe nature.",
@@ -1006,7 +1006,7 @@ export const Entrepeneur = {
     //       completed: false,
     //       impact: 100,
     //       action: `define`, // may not need
-    //       icon: `👾`, // may not need
+    //       icon: `🧿`, // may not need
     //       request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
     //         `Tech Recession Investing x Real Estate III`
     //       )} in exactly one sentence?`,
@@ -1127,7 +1127,7 @@ export const Entrepeneur = {
     //       completed: false,
     //       impact: 100,
     //       action: `demonstrate`,
-    //       icon: `🧿`,
+    //       icon: `🎨`,
     //       request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
     //         `Options Trading Advice`
     //       )}?`,
@@ -1140,7 +1140,7 @@ export const Entrepeneur = {
     //       completed: false,
     //       impact: 100,
     //       action: `define`, // may not need
-    //       icon: `👾`, // may not need
+    //       icon: `🧿`, // may not need
     //       request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
     //         `Options Trading Advice`
     //       )} in exactly one sentence?`,
@@ -1175,261 +1175,261 @@ export const Entrepeneur = {
     //     },
     //   },
     // },
-    "Financial Technology Investing": {
-      documentID: ``,
-      hasCode: false,
-      filler: ``,
-      new: false,
-      highValue: true,
-      underConstruction: false,
-      completed: false,
-      needsImprovement: false,
-      tooltip: ``,
-      sourceType: `markdown`, // may not need
-      button: `Financial Technology Investing`, // may not need - `name`
-      header: `Financial Technology Investing`,
-      fileSource: await import("../../markdowns/fintechInvesting.md?raw"), // may not need
+    // "Financial Technology Investing": {
+    //   documentID: ``,
+    //   hasCode: false,
+    //   filler: ``,
+    //   new: false,
+    //   highValue: true,
+    //   underConstruction: false,
+    //   completed: false,
+    //   needsImprovement: false,
+    //   tooltip: ``,
+    //   sourceType: `markdown`, // may not need
+    //   button: `Financial Technology Investing`, // may not need - `name`
+    //   header: `Financial Technology Investing`,
+    //   fileSource: await import("../../markdowns/fintechInvesting.md?raw"), // may not need
 
-      prompts: {
-        patreon: {
-          completed: false,
-          impact: 1000,
-          action: `generate`,
-          icon: `✍️`,
-          request: `ms. roxana, can you please generate an essay that introduces me to ${ultimateEffeciencyJutsu(
-            `Bitcoin, Automa & the Drug War`
-          )}?`,
-          response: `null`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        inspire: {
-          completed: false,
-          impact: 100,
-          action: `inspire`,
-          icon: `⚡`,
-          request: `ms. roxana, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
-            `Bitcoin, Automa & the Drug War`
-          )}?`,
-          response: `\n\nThe idea of using Bitcoin as a foundation for Universal Basic Income (UBI) and as a way to fight the drug war has gained significant attention in recent years. This idea stems from the fact that Bitcoin is borderless, decentralized, and secure, making it an ideal medium to distribute funds to the world’s citizenry.\n\nWhen faced with the challenge of driving down drug usage, the idea of providing people with a basic income would allow a steady source of financial support to alleviate the economic pressures often associated with drug usage (e.g. poverty, lack of education, limited job options) and make drugs a less attractive option. Bitcoin provides an ideal platform to make UBI a worldwide reality and allow governments to address decades of failed policies aimed at eliminating the problem. The concept of UBI can also give people time and resources to pursue more productive activities which may otherwise have been wasted on drugs.\n\nUltimately, it is up to individual governments to decide if using Bitcoin as the foundation of universal basic income is an effective strategy for addressing the drug issue.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        summarize: {
-          completed: false,
-          impact: 100,
-          action: `summarize`,
-          icon: `📚`,
-          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
-            `Bitcoin, Automa & the Drug War`
-          )}?`,
-          response: `\n\nIn brief, the relationship between bitcoin, automation and universal basic income is that automation is likely to lead to job losses or job displacement, which some economists suggest can be mitigated by offering a universal basic income as a social safety net. Bitcoin, a digital cryptocurrency, could be used to provide this universal basic income, as it is a secure, global means of transferring funds. Moreover, the Drug War has blocked citizens in certain countries from accessing these safety nets and benefits, driving them to find alternative means of income. Bitcoin, due to its decentralization, could provide an avenue for these individuals to access the benefits of a universal basic income.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        ask: {
-          completed: false,
-          impact: 100,
-          action: `ask`,
-          icon: `🔮`,
-          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
-            `Bitcoin, Automa & the Drug War`
-          )} with one sentence answers?`,
-          response: `\n\n1. How is Bitcoin related to automation? - Bitcoin enables automated payments, which can help reduce overhead costs associated with manual processing.\n\n2. How is Universal Basic Income related to the drug war? - UBI could provide additional funds to those affected by the war on drugs, allowing them to support themselves without resorting to criminal activity.\n\n3. How is automation related to the drug war? - Automation of certain processes associated with the drug war can help reduce the number of labor hours needed to conduct investigations and crime prevention.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        guide: {
-          completed: false,
-          impact: 100,
-          action: `guide`,
-          icon: `🤝`,
-          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
-            `Bitcoin, Automa & the Drug War`
-          )}?`,
-          response: `\n\nStudy Guide for the Relationship Between Bitcoin, Automation, Universal Basic Income and the Drug War \n1. Explain how Bitcoin works and how it can be used to disrupt the traditional financial system.\n2. Discuss the potential implications of automation on the workforce, such as job displacement and increased inequality.\n3. Describe how a universal basic income could mitigate the effects of automation and provide financial stability for citizens.\n4. Analyze how a universal basic income could potentially help to reduce crime levels related to drug use.\n5. Examine the role that Bitcoin could play in providing access to economic opportunities and reducing financial inequality.\n6. Discuss the potential consequences of the increased use of Bitcoin for drug dealing and other illicit activities.\n7. Articulate the impact of Bitcoin or other digital currencies on existing laws, regulations and enforcement efforts related to drug trafficking.\n8. Explain the implications of a universal basic income for helping to reduce drug use and crime levels.\n9. Assess whether Bitcoin could be used to facilitate effective international collaboration in the war against drugs.\n10. Analyze the potential impact of automation and digital currencies on the current enforcement strategies related to the Drug War.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        demonstrate: {
-          completed: false,
-          impact: 100,
-          action: `demonstrate`,
-          icon: `🧿`,
-          request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
-            `Bitcoin, Automa & the Drug War`
-          )}?`,
-          response: `\n\nThe relationship between bitcoin, automation, universal basic income, and the drug war is complicated, yet interconnected. \n\nBitcoin has the potential to enable financial access to populations with little financial inclusion and access. This could potentially reduce the risk of participation in the drug trade due to a better alternative source of income, with the distributed nature of the Bitcoin network providing some degree of anonymity. \n\nAutomation, particularly automation in low-wage jobs, could present an economic incentive to those working in such industries by providing a Universal Basic Income. This could potentially reduce the economic incentive of the drug trade due to a guaranteed income stream. \n\nUniversal basic income also has the potential to provide greater financial stability for individuals involved in the drug trade, reducing the associated risks of poverty and incentivizing individuals to pursue legitimate opportunities outside of the drug trade. \n\nFinally, the reduced dependence on the drug trade provided by alternatives such as Bitcoin and Universal Basic Income could present countries such as the United States with a greater opportunity to curtail the drug war, as individuals are no longer financially tied to the industry.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        define: {
-          completed: false,
-          impact: 100,
-          action: `define`, // may not need
-          icon: `👾`, // may not need
-          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
-            `Bitcoin, Automa & the Drug War`
-          )} in exactly one sentence?`,
-          response: `\n\nThe intersection of Bitcoin, automation, Universal Basic Income, and the Drug War could provide a way to reduce extreme poverty, inequality and create economic security for marginalized communities.`,
-          spanish: ``,
-          tooltip: ``,
-        },
+    //   prompts: {
+    //     patreon: {
+    //       completed: false,
+    //       impact: 1000,
+    //       action: `generate`,
+    //       icon: `✍️`,
+    //       request: `ms. roxana, can you please generate an essay that introduces me to ${ultimateEffeciencyJutsu(
+    //         `Bitcoin, Automa & the Drug War`
+    //       )}?`,
+    //       response: `null`,
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+    //     inspire: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `inspire`,
+    //       icon: `⚡`,
+    //       request: `ms. roxana, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
+    //         `Bitcoin, Automa & the Drug War`
+    //       )}?`,
+    //       response: `\n\nThe idea of using Bitcoin as a foundation for Universal Basic Income (UBI) and as a way to fight the drug war has gained significant attention in recent years. This idea stems from the fact that Bitcoin is borderless, decentralized, and secure, making it an ideal medium to distribute funds to the world’s citizenry.\n\nWhen faced with the challenge of driving down drug usage, the idea of providing people with a basic income would allow a steady source of financial support to alleviate the economic pressures often associated with drug usage (e.g. poverty, lack of education, limited job options) and make drugs a less attractive option. Bitcoin provides an ideal platform to make UBI a worldwide reality and allow governments to address decades of failed policies aimed at eliminating the problem. The concept of UBI can also give people time and resources to pursue more productive activities which may otherwise have been wasted on drugs.\n\nUltimately, it is up to individual governments to decide if using Bitcoin as the foundation of universal basic income is an effective strategy for addressing the drug issue.`,
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+    //     summarize: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `summarize`,
+    //       icon: `📚`,
+    //       request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
+    //         `Bitcoin, Automa & the Drug War`
+    //       )}?`,
+    //       response: `\n\nIn brief, the relationship between bitcoin, automation and universal basic income is that automation is likely to lead to job losses or job displacement, which some economists suggest can be mitigated by offering a universal basic income as a social safety net. Bitcoin, a digital cryptocurrency, could be used to provide this universal basic income, as it is a secure, global means of transferring funds. Moreover, the Drug War has blocked citizens in certain countries from accessing these safety nets and benefits, driving them to find alternative means of income. Bitcoin, due to its decentralization, could provide an avenue for these individuals to access the benefits of a universal basic income.`,
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+    //     ask: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `ask`,
+    //       icon: `🔮`,
+    //       request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
+    //         `Bitcoin, Automa & the Drug War`
+    //       )} with one sentence answers?`,
+    //       response: `\n\n1. How is Bitcoin related to automation? - Bitcoin enables automated payments, which can help reduce overhead costs associated with manual processing.\n\n2. How is Universal Basic Income related to the drug war? - UBI could provide additional funds to those affected by the war on drugs, allowing them to support themselves without resorting to criminal activity.\n\n3. How is automation related to the drug war? - Automation of certain processes associated with the drug war can help reduce the number of labor hours needed to conduct investigations and crime prevention.`,
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+    //     guide: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `guide`,
+    //       icon: `🤝`,
+    //       request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
+    //         `Bitcoin, Automa & the Drug War`
+    //       )}?`,
+    //       response: `\n\nStudy Guide for the Relationship Between Bitcoin, Automation, Universal Basic Income and the Drug War \n1. Explain how Bitcoin works and how it can be used to disrupt the traditional financial system.\n2. Discuss the potential implications of automation on the workforce, such as job displacement and increased inequality.\n3. Describe how a universal basic income could mitigate the effects of automation and provide financial stability for citizens.\n4. Analyze how a universal basic income could potentially help to reduce crime levels related to drug use.\n5. Examine the role that Bitcoin could play in providing access to economic opportunities and reducing financial inequality.\n6. Discuss the potential consequences of the increased use of Bitcoin for drug dealing and other illicit activities.\n7. Articulate the impact of Bitcoin or other digital currencies on existing laws, regulations and enforcement efforts related to drug trafficking.\n8. Explain the implications of a universal basic income for helping to reduce drug use and crime levels.\n9. Assess whether Bitcoin could be used to facilitate effective international collaboration in the war against drugs.\n10. Analyze the potential impact of automation and digital currencies on the current enforcement strategies related to the Drug War.`,
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+    //     demonstrate: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `demonstrate`,
+    //       icon: `🎨`,
+    //       request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
+    //         `Bitcoin, Automa & the Drug War`
+    //       )}?`,
+    //       response: `\n\nThe relationship between bitcoin, automation, universal basic income, and the drug war is complicated, yet interconnected. \n\nBitcoin has the potential to enable financial access to populations with little financial inclusion and access. This could potentially reduce the risk of participation in the drug trade due to a better alternative source of income, with the distributed nature of the Bitcoin network providing some degree of anonymity. \n\nAutomation, particularly automation in low-wage jobs, could present an economic incentive to those working in such industries by providing a Universal Basic Income. This could potentially reduce the economic incentive of the drug trade due to a guaranteed income stream. \n\nUniversal basic income also has the potential to provide greater financial stability for individuals involved in the drug trade, reducing the associated risks of poverty and incentivizing individuals to pursue legitimate opportunities outside of the drug trade. \n\nFinally, the reduced dependence on the drug trade provided by alternatives such as Bitcoin and Universal Basic Income could present countries such as the United States with a greater opportunity to curtail the drug war, as individuals are no longer financially tied to the industry.`,
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+    //     define: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `define`, // may not need
+    //       icon: `🧿`, // may not need
+    //       request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
+    //         `Bitcoin, Automa & the Drug War`
+    //       )} in exactly one sentence?`,
+    //       response: `\n\nThe intersection of Bitcoin, automation, Universal Basic Income, and the Drug War could provide a way to reduce extreme poverty, inequality and create economic security for marginalized communities.`,
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
 
-        quiz: {
-          completed: false,
-          impact: 100,
-          action: `quiz`,
-          icon: `🧪`,
-          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
-            `Bitcoin, Automa & the Drug War`
-          )}?`,
-          response: `\n\n1. How has the drug war pushed countries to embrace digital currencies like Bitcoin?\n2. How can automation and universal basic income affect the purchasing and trading of Bitcoin?\n3. What implications does the spread of Bitcoin have for continuing the drug war?`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        shop: {
-          completed: false,
-          impact: 100,
-          action: `shop`,
-          icon: `🛍️`,
-          request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
-          response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-      },
-    },
-    "Social Media Investing": {
-      documentID: ``,
-      hasCode: false,
-      filler: ``,
-      new: false,
-      highValue: true,
-      underConstruction: false,
-      completed: false,
-      needsImprovement: false,
-      tooltip: ``,
-      sourceType: `markdown`, // may not need
-      button: `Social Media Investing`, // may not need - `name`
-      header: `Social Media Investing`,
-      fileSource: await import("../../markdowns/socialMediaInvesting.md?raw"), // may not need
+    //     quiz: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `quiz`,
+    //       icon: `🧪`,
+    //       request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
+    //         `Bitcoin, Automa & the Drug War`
+    //       )}?`,
+    //       response: `\n\n1. How has the drug war pushed countries to embrace digital currencies like Bitcoin?\n2. How can automation and universal basic income affect the purchasing and trading of Bitcoin?\n3. What implications does the spread of Bitcoin have for continuing the drug war?`,
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+    //     shop: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `shop`,
+    //       icon: `🛍️`,
+    //       request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
+    //       response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+    //   },
+    // },
+    // "Social Media Investing": {
+    //   documentID: ``,
+    //   hasCode: false,
+    //   filler: ``,
+    //   new: false,
+    //   highValue: true,
+    //   underConstruction: false,
+    //   completed: false,
+    //   needsImprovement: false,
+    //   tooltip: ``,
+    //   sourceType: `markdown`, // may not need
+    //   button: `Social Media Investing`, // may not need - `name`
+    //   header: `Social Media Investing`,
+    //   fileSource: await import("../../markdowns/socialMediaInvesting.md?raw"), // may not need
 
-      prompts: {
-        patreon: {
-          completed: false,
-          impact: 1000,
-          action: `generate`,
-          icon: `✍️`,
-          request: `ms. roxana, can you please generate an essay that introduces me to ${ultimateEffeciencyJutsu(
-            `Social Media Investing`
-          )}?`,
-          response: `null`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        inspire: {
-          completed: false,
-          impact: 100,
-          action: `inspire`,
-          icon: `⚡`,
-          request: `ms. roxana, can you please share the incentives behind Pinterest?`,
-          response:
-            "\n\nPinterest offers a few incentives to entice users to use the platform, including:\n\n1. Visual Discovery – Pinterest's visual appeal has a powerful effect on users, allowing them to quickly scroll through thousands of images and ideas in a matter of minutes. \n\n2. Inspiration – Pinterest makes it easy for users to find ideas for different projects, such as redecorating a room or creating the perfect outfit. \n\n3. Social Engagement – Not only can users discover ideas from others, but they can interact with other users through likes, comments, and direct messages.\n\n4. Shopping – With many products and businesses offering their goods and services through the platform, users can easily shop for items they find, making it easy to go from inspiration to purchase. \n\n5. Advantages for Businesses – Businesses benefit from the platform by increasing their visibility and reach, gaining a better understanding of their target market, and having access to analytics about their content and followers.",
-          spanish: ``,
-          tooltip: ``,
-        },
-        summarize: {
-          completed: false,
-          impact: 100,
-          action: `summarize`,
-          icon: `📚`,
-          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
-            `Social Media Investing`
-          )}?`,
-          response:
-            "\n\nIncentives behind social media are designed to keep users engaged and help increase their activity on the platform. These incentives range from recognition in the form of likes and comments, to social currency such as followers and retweets, to rewards and promotions from businesses. By having an incentive system in place, companies are able to keep users engaged and remain profitable.",
-          spanish: ``,
-          tooltip: ``,
-        },
-        ask: {
-          completed: false,
-          impact: 100,
-          action: `ask`,
-          icon: `🔮`,
-          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
-            `Social Media Investing`
-          )} with one sentence answers?`,
-          response:
-            "\n\n1. What are the main motives for people to use social media? - To socialize, find entertainment, and stay informed.\n2. What incentives motivate companies to use social media? - To grow their brand, grow their customer base, and build trust.\n3. How do businesses measure the success of a social media campaign? - By tracking engagement metrics such as likes, comments, and shares.",
-          spanish: ``,
-          tooltip: ``,
-        },
-        guide: {
-          completed: false,
-          impact: 100,
-          action: `guide`,
-          icon: `🤝`,
-          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
-            `Social Media Investing`
-          )}?`,
-          response:
-            "\n\n1. Immediate reward: Most social media platforms offer rewards such as badges, points, virtual currency or discounts for accomplishments or loyalty.\n\n2. Status symbols: Popular platforms like Instagram make it easy for users to ‘like’ or ‘re-share’ posts. Content that reaches a certain amount of likes can become recognizable and can be a status symbol.\n\n3. Public recognition through mentions: Platforms like Twitter allow users to mention others in posts/tweets. This form of recognition can be a great incentive for users. \n\n4. Networking: Social media allows users to make connections with people all around the globe. This can prove to be a great asset in terms of forming relationships and generating business.\n\n5. Leadership opportunities: Platforms like LinkedIn offer the chance for users to become influencers within their industries. This can create a great incentive for users.\n\n6. Competition: By creating different levels and rankings, users have greater incentive to be more active on the platform.\n\n7. Creative expression: Platforms such as YouTube allow users to explore creative ways of expressing themselves. This can be an incentive for creative users.\n\n8. Financial incentives: Many social media platforms offer additional financial incentives for reaching milestones or for sharing sponsored content.\n\n9. Exposure: Platforms such as Instagram allow users to get their content in front of a larger audience which can be beneficial and can create incentives for users.\n\n10. Learning benefits: Social media has made it easier for users to access different sources of education, which can be rewarding for learners.",
-          spanish: ``,
-          tooltip: ``,
-        },
-        demonstrate: {
-          completed: false,
-          impact: 100,
-          action: `demonstrate`,
-          icon: `🧿`,
-          request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
-            `Social Media Investing`
-          )}?`,
-          response:
-            "\n\nAn example of an incentive behind social media could be receiving rewards points or discounts for posting, liking, or sharing something on a specific platform. Other incentives could include entering into promotions, giveaways, and contests. In addition to tangible rewards, sometimes social media users also gain intangible rewards, such as a sense of belonging, recognition, or status within the community.",
-          spanish: ``,
-          tooltip: ``,
-        },
-        define: {
-          completed: false,
-          impact: 100,
-          action: `define`, // may not need
-          icon: `👾`, // may not need
-          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
-            `Social Media Investing`
-          )} in exactly one sentence?`,
-          response:
-            "\n\nIncentives behind social media are the rewards or recognition users get from participating and engaging in the platform.",
-          spanish: ``,
-          tooltip: ``,
-        },
+    //   prompts: {
+    //     patreon: {
+    //       completed: false,
+    //       impact: 1000,
+    //       action: `generate`,
+    //       icon: `✍️`,
+    //       request: `ms. roxana, can you please generate an essay that introduces me to ${ultimateEffeciencyJutsu(
+    //         `Social Media Investing`
+    //       )}?`,
+    //       response: `null`,
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+    //     inspire: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `inspire`,
+    //       icon: `⚡`,
+    //       request: `ms. roxana, can you please share the incentives behind Pinterest?`,
+    //       response:
+    //         "\n\nPinterest offers a few incentives to entice users to use the platform, including:\n\n1. Visual Discovery – Pinterest's visual appeal has a powerful effect on users, allowing them to quickly scroll through thousands of images and ideas in a matter of minutes. \n\n2. Inspiration – Pinterest makes it easy for users to find ideas for different projects, such as redecorating a room or creating the perfect outfit. \n\n3. Social Engagement – Not only can users discover ideas from others, but they can interact with other users through likes, comments, and direct messages.\n\n4. Shopping – With many products and businesses offering their goods and services through the platform, users can easily shop for items they find, making it easy to go from inspiration to purchase. \n\n5. Advantages for Businesses – Businesses benefit from the platform by increasing their visibility and reach, gaining a better understanding of their target market, and having access to analytics about their content and followers.",
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+    //     summarize: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `summarize`,
+    //       icon: `📚`,
+    //       request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
+    //         `Social Media Investing`
+    //       )}?`,
+    //       response:
+    //         "\n\nIncentives behind social media are designed to keep users engaged and help increase their activity on the platform. These incentives range from recognition in the form of likes and comments, to social currency such as followers and retweets, to rewards and promotions from businesses. By having an incentive system in place, companies are able to keep users engaged and remain profitable.",
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+    //     ask: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `ask`,
+    //       icon: `🔮`,
+    //       request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
+    //         `Social Media Investing`
+    //       )} with one sentence answers?`,
+    //       response:
+    //         "\n\n1. What are the main motives for people to use social media? - To socialize, find entertainment, and stay informed.\n2. What incentives motivate companies to use social media? - To grow their brand, grow their customer base, and build trust.\n3. How do businesses measure the success of a social media campaign? - By tracking engagement metrics such as likes, comments, and shares.",
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+    //     guide: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `guide`,
+    //       icon: `🤝`,
+    //       request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
+    //         `Social Media Investing`
+    //       )}?`,
+    //       response:
+    //         "\n\n1. Immediate reward: Most social media platforms offer rewards such as badges, points, virtual currency or discounts for accomplishments or loyalty.\n\n2. Status symbols: Popular platforms like Instagram make it easy for users to ‘like’ or ‘re-share’ posts. Content that reaches a certain amount of likes can become recognizable and can be a status symbol.\n\n3. Public recognition through mentions: Platforms like Twitter allow users to mention others in posts/tweets. This form of recognition can be a great incentive for users. \n\n4. Networking: Social media allows users to make connections with people all around the globe. This can prove to be a great asset in terms of forming relationships and generating business.\n\n5. Leadership opportunities: Platforms like LinkedIn offer the chance for users to become influencers within their industries. This can create a great incentive for users.\n\n6. Competition: By creating different levels and rankings, users have greater incentive to be more active on the platform.\n\n7. Creative expression: Platforms such as YouTube allow users to explore creative ways of expressing themselves. This can be an incentive for creative users.\n\n8. Financial incentives: Many social media platforms offer additional financial incentives for reaching milestones or for sharing sponsored content.\n\n9. Exposure: Platforms such as Instagram allow users to get their content in front of a larger audience which can be beneficial and can create incentives for users.\n\n10. Learning benefits: Social media has made it easier for users to access different sources of education, which can be rewarding for learners.",
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+    //     demonstrate: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `demonstrate`,
+    //       icon: `🎨`,
+    //       request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
+    //         `Social Media Investing`
+    //       )}?`,
+    //       response:
+    //         "\n\nAn example of an incentive behind social media could be receiving rewards points or discounts for posting, liking, or sharing something on a specific platform. Other incentives could include entering into promotions, giveaways, and contests. In addition to tangible rewards, sometimes social media users also gain intangible rewards, such as a sense of belonging, recognition, or status within the community.",
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+    //     define: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `define`, // may not need
+    //       icon: `🧿`, // may not need
+    //       request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
+    //         `Social Media Investing`
+    //       )} in exactly one sentence?`,
+    //       response:
+    //         "\n\nIncentives behind social media are the rewards or recognition users get from participating and engaging in the platform.",
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
 
-        quiz: {
-          completed: false,
-          impact: 100,
-          action: `quiz`,
-          icon: `🧪`,
-          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
-            `Social Media Investing`
-          )}?`,
-          response:
-            "\n\n1. What is one incentive for businesses to use social media?\n2. Why do social media platforms encourage positive user engagement?\n3. What types of incentives are offered to encourage users to create and share content on social media?",
-          spanish: ``,
-          tooltip: ``,
-        },
-        shop: {
-          completed: false,
-          impact: 100,
-          action: `shop`,
-          icon: `🛍️`,
-          request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
-          response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-      },
-    },
+    //     quiz: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `quiz`,
+    //       icon: `🧪`,
+    //       request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
+    //         `Social Media Investing`
+    //       )}?`,
+    //       response:
+    //         "\n\n1. What is one incentive for businesses to use social media?\n2. Why do social media platforms encourage positive user engagement?\n3. What types of incentives are offered to encourage users to create and share content on social media?",
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+    //     shop: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `shop`,
+    //       icon: `🛍️`,
+    //       request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
+    //       response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+    //   },
+    // },
 
     // "Metaverse Investing": {
     //   documentID: ``,
@@ -1513,7 +1513,7 @@ export const Entrepeneur = {
     //       completed: false,
     //       impact: 100,
     //       action: `demonstrate`,
-    //       icon: `🧿`,
+    //       icon: `🎨`,
     //       request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
     //         `Metaverse Investing`
     //       )}?`,
@@ -1526,7 +1526,7 @@ export const Entrepeneur = {
     //       completed: false,
     //       impact: 100,
     //       action: `define`, // may not need
-    //       icon: `👾`, // may not need
+    //       icon: `🧿`, // may not need
     //       request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
     //         `Metaverse Investing`
     //       )} in exactly one sentence?`,
@@ -1641,7 +1641,7 @@ export const Entrepeneur = {
     //       completed: false,
     //       impact: 100,
     //       action: `demonstrate`,
-    //       icon: `🧿`,
+    //       icon: `🎨`,
     //       request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
     //         `Mexican-American Trade Investing`
     //       )}?`,
@@ -1654,7 +1654,7 @@ export const Entrepeneur = {
     //       completed: false,
     //       impact: 100,
     //       action: `define`, // may not need
-    //       icon: `👾`, // may not need
+    //       icon: `🧿`, // may not need
     //       request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
     //         `Mexican-American Trade Investing`
     //       )} in exactly one sentence?`,
@@ -1769,7 +1769,7 @@ export const Entrepeneur = {
     //       completed: false,
     //       impact: 100,
     //       action: `demonstrate`,
-    //       icon: `🧿`,
+    //       icon: `🎨`,
     //       request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
     //         `Infrastructure Investing`
     //       )}?`,
@@ -1782,7 +1782,7 @@ export const Entrepeneur = {
     //       completed: false,
     //       impact: 100,
     //       action: `define`, // may not need
-    //       icon: `👾`, // may not need
+    //       icon: `🧿`, // may not need
     //       request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
     //         `Infrastructure Investing`
     //       )} in exactly one sentence?`,
@@ -1895,7 +1895,7 @@ export const Entrepeneur = {
     //       completed: false,
     //       impact: 100,
     //       action: `demonstrate`,
-    //       icon: `🧿`,
+    //       icon: `🎨`,
     //       request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
     //         `Cloud Investing`
     //       )}?`,
@@ -1907,7 +1907,7 @@ export const Entrepeneur = {
     //       completed: false,
     //       impact: 100,
     //       action: `define`, // may not need
-    //       icon: `👾`, // may not need
+    //       icon: `🧿`, // may not need
     //       request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
     //         `Cloud Investing`
     //       )} in exactly one sentence?`,

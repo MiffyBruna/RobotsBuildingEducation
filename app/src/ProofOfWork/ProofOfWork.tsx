@@ -6,6 +6,7 @@ import { database } from "../database/firebaseResources";
 import { ImpactWallet } from "./ImpactWallet/ImpactWallet";
 
 export const ProofOfWork = ({
+  globalScholarshipCounter,
   userAuthObject,
   displayName,
   databaseUserDocument,
@@ -14,7 +15,10 @@ export const ProofOfWork = ({
   isModule = false,
   usersModulesCollectionReference = null,
   usersModulesFromDB,
-  globalReserve,
+
+  handlePathSelection,
+  isDemo,
+  globalReserveObject,
 }) => {
   const [isImpactWalletOpen, setIsImpactWalletOpen] = useState(false);
 
@@ -33,7 +37,7 @@ export const ProofOfWork = ({
           textAlign: "center",
         }}
       >
-        <p>🤖 {displayName}</p>
+        <p>👾 {displayName}</p>
         <ImpactWallet
           databaseUserDocument={databaseUserDocument}
           computePercentage={computePercentage}
@@ -42,35 +46,33 @@ export const ProofOfWork = ({
           setIsImpactWalletOpen={setIsImpactWalletOpen}
           usersModulesCollectionReference={usersModulesCollectionReference}
           usersModulesFromDB={usersModulesFromDB}
-          globalReserve={globalReserve}
+          globalScholarshipCounter={globalScholarshipCounter}
+          isDemo={isDemo}
+          globalReserveObject={globalReserveObject}
         />
-
-        {/* {
-            border: "1px solid #F2D466",
-            marginBottom: "6px",
-            borderRadius: "10px",
-
-            backgroundColor: "#f2a900",
-          } */}
       </div>
     );
   }
+
+  console.log("database user doc", databaseUserDocument);
 
   return (
     <div
       style={{
         border: "1px solid #1C1C1E",
-        width: "fit-content",
-        padding: 12,
+
+        padding: 6,
         backgroundColor: "#1C1C1E",
-        marginBottom: "48px",
+
         maxWidth: "600px",
         minWidth: "300px",
         textAlign: "center",
+        width: "100%",
       }}
     >
-      <p>🤖 {displayName}</p>
+      <div style={{ marginBottom: 6 }}>👾 {displayName}</div>
       <ImpactWallet
+        handlePathSelection={handlePathSelection}
         databaseUserDocument={databaseUserDocument}
         computePercentage={computePercentage}
         globalImpactCounter={globalImpactCounter}
@@ -79,7 +81,8 @@ export const ProofOfWork = ({
         usersModulesCollectionReference={usersModulesCollectionReference}
         usersModulesFromDB={usersModulesFromDB}
         userAuthObject={userAuthObject}
-        globalReserve={globalReserve}
+        globalScholarshipCounter={globalScholarshipCounter}
+        globalReserveObject={globalReserveObject}
       />
       {/* <a onClick={() => auth.signOut()}>Sign-out</a> */}
     </div>

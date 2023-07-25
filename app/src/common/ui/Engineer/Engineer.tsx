@@ -4,7 +4,7 @@ import compSciLib from "../../media/images/compSciLib.jpeg";
 import metaphysicalMuse from "../../media/images/metaphysicalMuse.jpeg";
 
 export const Engineer = {
-  "Crash Course Version 3 (Work In Progress)": {
+  "Crash Course Version 3": {
     "Introduction To RO.B.E": {
       documentID: ``,
       hasCode: true,
@@ -20,7 +20,6 @@ export const Engineer = {
       header: `Introduction To RO.B.E`,
       fileSource:
         "https://res.cloudinary.com/eduprojectsil/video/upload/v1683183182/IMG_9320_yrjxou.mov", // may not need
-
       prompts: {
         patreon: {
           completed: false,
@@ -411,7 +410,7 @@ export const Engineer = {
           completed: false,
           impact: 100,
           action: `demonstrate`,
-          icon: `🧿`,
+          icon: `🎨`,
           request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
             `Learn Coding`
           )} in javascript?`,
@@ -467,7 +466,7 @@ exports.app = functions.https.onRequest(app);
           completed: false,
           impact: 100,
           action: `define`, // may not need
-          icon: `👾`, // may not need
+          icon: `🧿`, // may not need
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Learn Coding`
           )} in exactly one sentence?`,
@@ -621,7 +620,6 @@ exports.app = functions.https.onRequest(app);
         },
       },
     },
-
     "Lesson 1 Coding Fundamentals": {
       documentID: ``,
       hasCode: true,
@@ -960,7 +958,7 @@ exports.app = functions.https.onRequest(app);
           completed: false,
           impact: 100,
           action: `demonstrate`,
-          icon: `🧿`,
+          icon: `🎨`,
           request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
             `Lesson 1 Coding Fundamentals`
           )} in python?`,
@@ -1003,7 +1001,7 @@ print(rihanna.perform("at the Grammy Awards"))
           completed: false,
           impact: 100,
           action: `define`, // may not need
-          icon: `👾`, // may not need
+          icon: `🧿`, // may not need
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Lesson 1 Coding Fundamentals`
           )} in exactly one sentence?`,
@@ -1163,7 +1161,7 @@ print(rihanna.perform("at the Grammy Awards"))
       button: `Lesson 2 Frontend Programming`, // may not need - `name`
       header: `Lesson 2 Frontend Programming`,
       fileSource:
-        "https://res.cloudinary.com/eduprojectsil/video/upload/v1684131257/IMG_0104_n7djon.mov", // may not need
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1685404089/IMG_1614_usbr35.mov", // may not need
 
       prompts: {
         patreon: {
@@ -1184,7 +1182,7 @@ print(rihanna.perform("at the Grammy Awards"))
           action: `inspire`,
           icon: `⚡`,
           request: `ms. roxana, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
-            `Lesson 1 Coding Fundamentals`
+            `Lesson 2 Frontend Event-Driven Programming`
           )}?`,
           response: (
             <div>
@@ -1588,7 +1586,7 @@ print(rihanna.perform("at the Grammy Awards"))
           completed: false,
           impact: 100,
           action: `demonstrate`,
-          icon: `🧿`,
+          icon: `🎨`,
           request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
             `Lesson 2 Frontend Event-Driven Programming`
           )} in javascript?`,
@@ -1667,7 +1665,7 @@ export default LoginForm;
           completed: false,
           impact: 100,
           action: `define`, // may not need
-          icon: `👾`, // may not need
+          icon: `🧿`, // may not need
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Lesson 2 Frontend Event-Driven Programming`
           )} in exactly one sentence?`,
@@ -1817,8 +1815,2701 @@ export default LoginForm;
         },
       },
     },
+    "Lesson 3 Backend Engineering": {
+      documentID: ``,
+      hasCode: true,
+      filler: ``,
+      highValue: false,
+      underConstruction: false,
+      completed: false,
+      needsImprovement: false,
+      new: true,
+      tooltip: ``,
+      sourceType: `video`, // may not need
+      button: `Lesson 3 Backend Engineering`, // may not need - `name`
+      header: `Lesson 3 Backend Engineering`,
+      fileSource:
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1688807036/IMG_4356_bk9g2p.mov", // may not need
+
+      prompts: {
+        patreon: {
+          completed: false,
+          impact: 1000,
+          action: `generate`,
+          icon: `►`, //`✍️`
+          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
+            `Lesson 3 Understanding Backend Engineering`
+          )}?`,
+          response: `null`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        inspire: {
+          completed: false,
+          impact: 100,
+          action: `inspire`,
+          icon: `⚡`,
+          request: `ms. roxana, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
+            `Lesson 3 Understanding Backend Engineering`
+          )}?`,
+          response: (
+            <div>
+              One story that always inspires people about the power of backend
+              software engineering involves the company Netflix and their
+              backend engineering journey.
+              <br />
+              <br />
+              In the early 2000s, Netflix started as a mail-order DVD service
+              but soon saw the potential of streaming technology. However,
+              streaming video required vast amounts of data to be sent quickly
+              and reliably, a serious backend engineering problem.
+              <br />
+              <br />
+              In 2008, Netflix suffered a significant database corruption and
+              was down for three days. For a company that relied on the trust of
+              customers to provide consistent service, this was a disaster. It
+              was a moment of realization for the company: they had to
+              completely rethink their backend systems to cope with the scale
+              they were growing into.
+              <br />
+              <br />
+              That's when Netflix decided to migrate their systems to the cloud,
+              specifically Amazon Web Services (AWS). The complexity of this
+              task cannot be understated. Migrating the massive data sets,
+              building new microservices, redesigning the way data flowed
+              through their system - all these tasks required sophisticated
+              backend engineering.
+              <br />
+              <br />
+              One key challenge was building what came to be known as the "Chaos
+              Monkey." This piece of software was designed to randomly kill
+              processes in their system. Why would they do this? To ensure that
+              there was no single point of failure in the system. The Chaos
+              Monkey helped to ensure that Netflix's systems were truly
+              distributed and robust.
+              <br />
+              <br />
+              After several years of this complex, challenging work, Netflix had
+              completely moved all of its customer-facing services to the cloud
+              by 2016. But their work did not stop there. Netflix engineers kept
+              building on the cloud's scalability, creating new tools and
+              services that allowed them to handle even more users and deliver
+              even more content.
+              <br />
+              <br />
+              For example, Netflix engineers developed a tool called "Flux,"
+              which orchestrates asynchronous, event-based programming. This
+              kind of tool enables the smooth streaming of video content, no
+              matter how many users are watching or where they are in the world.
+              <br />
+              <br />
+              Netflix's story illustrates how backend engineering can turn a
+              company's ambitious vision into reality. It showcases how thinking
+              about system design, scalability, and reliability, coupled with a
+              willingness to experiment with radical solutions (like the Chaos
+              Monkey), can create a service that hundreds of millions of people
+              rely on for their entertainment. It's a truly inspiring story for
+              any software engineer.
+              <br />
+            </div>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
+        summarize: {
+          completed: false,
+          impact: 100,
+          action: `summarize`,
+          icon: `📚`,
+          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
+            `Lesson 3 Understanding Backend Engineering`
+          )}?`,
+          response: (
+            <div>
+              <h2>The Intricate Web of Backend Engineering</h2>
+              <br />
+              <br />
+              Backend engineering, often referred to as "server-side
+              development," is the invisible force that powers the digital
+              world. Its role is to ensure the smooth and effective operation of
+              all the technology that lies "behind the scenes" of our internet
+              experiences. While frontend development caters to the user
+              interface and direct user interaction, backend engineering focuses
+              on server communication, database management, and business logic—
+              the cogs and gears operating beneath the surface of the digital
+              landscape.
+              <br />
+              <br />
+              Backend engineering can be seen as the backbone of any online
+              system. Whenever a user performs an action on a website or an
+              application— clicking a button, filling out a form, completing a
+              transaction— it is the backend that processes these requests,
+              interacting with databases, performing calculations, applying
+              business rules, and returning the relevant results.
+              <br />
+              <br />
+              The work of backend engineers revolves around building and
+              maintaining robust, secure, and efficient server-side software.
+              They are responsible for creating APIs, writing server-side
+              scripts, ensuring data integrity, and managing user
+              authentication, among many other tasks. Backend engineers work
+              with various tools and languages such as Python, Java, Ruby, SQL,
+              and many more. The choice of technology often depends on the
+              specific requirements of the project at hand.
+              <br />
+              <br />
+              One of the key responsibilities of backend engineers is to ensure
+              that the system can handle the load, whether it's ten users or ten
+              million. Scalability is, therefore, a critical concern. Engineers
+              must design systems that can grow in capacity without a loss in
+              performance, a concept which often necessitates sophisticated
+              architectural designs like microservices.
+              <br />
+              <br />
+              Security is another primary focus. Backend engineers are
+              responsible for protecting sensitive data and ensuring that their
+              systems are resistant to attacks. This can involve everything from
+              encrypting data to preventing SQL injection attacks, to managing
+              access controls.
+              <br />
+              <br />
+              Backend engineering also ties closely with the emerging field of
+              DevOps. The DevOps philosophy involves the close integration of
+              development and operations, with a focus on automation,
+              monitoring, and continuous delivery. As such, many backend
+              engineers work with cloud platforms like AWS, Azure, or Google
+              Cloud Platform, and tools like Docker and Kubernetes for
+              containerization and orchestration.
+              <br />
+              <br />
+              In conclusion, backend engineering plays a vital role in the
+              digital world. Without it, the sleek and responsive websites and
+              apps we use daily would be void shells, devoid of functionality.
+              It is the unsung hero of the web, operating silently behind the
+              scenes to power the experiences we have come to take for granted
+              in the digital age. Understanding its principles and nuances
+              provides a deeper appreciation of the intricacy and sophistication
+              of our digital experiences.
+            </div>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
+        ask: {
+          completed: false,
+          impact: 100,
+          action: `ask`,
+          icon: `🔮`,
+          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
+            `Lesson 3 Understanding Backend Engineering`
+          )} with one sentence answers?`,
+          response: (
+            <div>
+              here are three commonly asked questions by beginners about backend
+              engineering, along with expert responses:
+              <br />
+              <br />
+              Question 1: What programming languages are most commonly used in
+              backend development and how should I choose which one to learn?
+              <br />
+              <br />
+              Many languages can be used for backend development, and the choice
+              often depends on the specific use case, your team's expertise, and
+              other project requirements. Some of the most popular languages
+              include Python, Java, JavaScript (Node.js), Ruby, and PHP. Python
+              is praised for its readability and simplicity, making it a great
+              first language for beginners. Java is highly portable and widely
+              used in enterprise-scale applications. Node.js allows you to use
+              JavaScript, a traditionally front-end language, on the
+              server-side, which can be beneficial for teams wanting to use the
+              same language across the stack. Ruby and Ruby on Rails have a
+              reputation for being developer-friendly and enabling rapid
+              development, while PHP is traditionally used in web development
+              and has a large developer community. As a beginner, you might want
+              to start with Python or JavaScript due to their syntax and
+              versatility, but remember that understanding the principles of
+              programming and backend development is more important than the
+              specific language you start with.
+              <br />
+              <br />
+              <br />
+              <br />
+              Question 2: What is the role of databases in backend development
+              and which database should I learn?
+              <br />
+              <br />
+              Databases are crucial in backend development because they store
+              the data that your application uses. This can include user
+              profiles, user-generated content, transaction history, and much
+              more. There are many types of databases, but they generally fall
+              into two categories: SQL (Relational Databases) and NoSQL
+              (Non-Relational Databases). SQL databases, like PostgreSQL, MySQL,
+              and SQLite, are great when your data is structured and consistent.
+              NoSQL databases, like MongoDB, CouchDB, or Cassandra, can be
+              useful when dealing with large volumes of diverse, rapidly
+              changing data. As a beginner, understanding SQL and the principles
+              of relational databases can be very beneficial because these
+              concepts apply to many areas of backend development. However,
+              gaining some exposure to NoSQL databases is also valuable due to
+              the growing popularity of these databases in certain industries.
+              <br />
+              <br />
+              <br />
+              <br />
+              Question 3: What is an API, and why are they important in backend
+              development?
+              <br />
+              <br />
+              API stands for Application Programming Interface. It's a set of
+              rules that allows different software applications to communicate
+              with each other. In backend development, APIs are crucial as they
+              provide a way for the frontend of an application (what the user
+              interacts with) to communicate with the backend (where data is
+              stored and manipulated). For example, when you log into a mobile
+              app, the frontend sends a request to the backend via an API. The
+              backend then checks your login details, and if they're correct, it
+              sends a response back to the frontend, which lets you access your
+              account. Understanding how to design and build APIs is a
+              fundamental skill in backend development, as it enables the
+              creation of software that can interact seamlessly with other
+              systems, whether they be different parts of the same application
+              or entirely separate applications.
+            </div>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
+        guide: {
+          completed: false,
+          impact: 100,
+          action: `guide`,
+          icon: `🤝`,
+          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
+            `Lesson 3 Understanding Backend Engineering`
+          )}?`,
+          response: (
+            <div>
+              Here's a step-by-step roadmap on how to go from beginner to
+              professional backend engineer. Note that everyone's journey is
+              unique, so adapt this guide to suit your learning style and
+              interests.
+              <br />
+              <ol>
+                <li>
+                  <b> Learn a Programming Language</b>
+                  <div>
+                    Start with mastering a programming language that's widely
+                    used for backend development. Python and JavaScript
+                    (Node.js) are popular choices and are beginner-friendly.
+                    Learn the syntax, data structures, control flow, error
+                    handling, and object-oriented programming principles.
+                  </div>
+                  <br />
+                  <br />
+                  <div>Resources: Codecademy, freeCodeCamp, LeetCode</div>
+                </li>
+                <li>
+                  <b>Understand How the Web Works</b>
+                  <div>
+                    Get a grasp on internet fundamentals: How do browsers,
+                    servers, and networks interact? What's HTTP and HTTPS? What
+                    are the different HTTP methods (GET, POST, PUT, DELETE)?
+                    What are status codes?
+                  </div>
+                  <br />
+                  <br />
+                  <div>
+                    Resources: Mozilla Developer Network (MDN), W3Schools
+                  </div>
+                </li>
+
+                <li>
+                  <b>Learn about Databases</b>
+                  <div>
+                    Understand the differences between SQL (Relational) and
+                    NoSQL (Non-relational) databases. Learn how to create
+                    schemas, write queries, and manage data. Start with SQL
+                    using MySQL or PostgreSQL, then try a NoSQL database like
+                    MongoDB.
+                  </div>
+                  <br />
+                  <br />
+                  <div>Resources: SQLZoo, MongoDB University</div>
+                </li>
+
+                <li>
+                  <b> Master Backend Frameworks</b>
+                  <div>
+                    Choose a framework in your chosen language and learn it
+                    thoroughly. If you chose Python, Django and Flask are
+                    excellent choices. For JavaScript, Express.js is a go-to
+                    option. Frameworks will speed up your development process
+                    and provide structure to your applications.
+                  </div>
+                  <br />
+                  <br />
+                  <div>
+                    Resources: Django or Flask's official documentation for
+                    Python, Express.js guides, YouTube tutorials
+                  </div>
+                </li>
+
+                <li>
+                  <b>Learn about APIs</b>
+                  <div>
+                    Understand RESTful APIs and how to build them. Learn about
+                    JSON, endpoints, CRUD operations, and status codes. Try
+                    creating a simple API of your own.
+                  </div>
+                  <br />
+                  <br />
+                  <div>
+                    Resources: RESTful API guides, Postman for testing APIs,
+                    build a simple API with Express.js/Flask
+                  </div>
+                </li>
+
+                <li>
+                  <b>Learn about Authentication and Authorization</b>
+                  <div>
+                    Dive into JWT, OAuth, sessions, cookies, and other methods
+                    for managing user identities and securing user data.
+                    Implement authentication and authorization in your own
+                    projects.{" "}
+                  </div>
+                  <br />
+                  <br />
+                  <div>Resources: Auth0 Docs, YouTube tutorials</div>
+                </li>
+
+                <li>
+                  <b>Learn about Testing and Debugging</b>
+                  <div>
+                    Learn how to write unit tests, integration tests, and learn
+                    about test-driven development. Understand debugging tools
+                    and techniques in your chosen language and framework.{" "}
+                  </div>{" "}
+                  <br />
+                  <br />
+                  <div>
+                    Resources: Jest (for JavaScript), PyTest (for Python),
+                    official documentation for debugging tools in your chosen
+                    IDE
+                  </div>
+                </li>
+
+                <li>
+                  <b>Get Familiar with DevOps</b>
+                  <div>
+                    Learn about cloud services like AWS, GCP, or Azure. Learn
+                    how to deploy your applications, automate workflows, and
+                    monitor performance. Understand containerization (Docker)
+                    and orchestration (Kubernetes).
+                  </div>{" "}
+                  <br />
+                  <br />
+                  <div>
+                    Resources: AWS Training and Certification, GCP Training,
+                    Azure Training, Docker's Get Started Guide
+                  </div>
+                </li>
+
+                <li>
+                  <b>Build Projects</b>
+                  <div>
+                    Backend development is always evolving. Stay updated with
+                    the latest practices, tools, and technologies. Follow
+                    influencers on Twitter, join developer communities like
+                    Stack Overflow and GitHub, and read tech blogs or
+                    newsletters.
+                  </div>{" "}
+                </li>
+
+                <li>
+                  <b>Gain Professional Experience</b>
+                  <div>
+                    Whether it's an internship, a junior developer role,
+                    contributing to open-source projects, or freelance work,
+                    real-world experience is crucial. This will not only improve
+                    your skills but also give you a feel of collaborative
+                    coding, using version control systems, and dealing with
+                    real-world problem-solving.
+                  </div>{" "}
+                </li>
+              </ol>
+              <br /> <br />
+              Remember, the journey to becoming a professional backend engineer
+              is a marathon, not a sprint. Enjoy the process, keep building, and
+              never stop learning. Good luck!
+            </div>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
+        demonstrate: {
+          completed: false,
+          impact: 100,
+          action: `demonstrate`,
+          icon: `🎨`,
+          request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
+            `Lesson 3 Understanding Backend Engineering`
+          )} in javascript?`,
+          response: `
+/*
+
+Let's consider a simple example where we create a basic RESTful API using Flask, a popular microframework for Python. This API will have endpoints for basic CRUD (Create, Read, Update, Delete) operations on a list of tasks.
+
+Please note that this is a simple in-memory example, in a real-world scenario you would typically use a database to persist the data.
+*/
+
+
+from flask import Flask, jsonify, request
+
+app = Flask(__name__)
+
+# In-memory list of tasks
+tasks = [
+    {'id': 1, 'title': 'Learn Python', 'done': False},
+    {'id': 2, 'title': 'Learn Flask', 'done': False},
+]
+
+# Route to retrieve all tasks
+@app.route('/tasks', methods=['GET'])
+def get_tasks():
+    return jsonify({'tasks': tasks})
+
+# Route to retrieve a task by id
+@app.route('/tasks/<int:task_id>', methods=['GET'])
+def get_task(task_id):
+    task = next((task for task in tasks if task['id'] == task_id), None)
+    if task is None:
+        return jsonify({'error': 'Task not found'}), 404
+    return jsonify({'task': task})
+
+# Route to create a new task
+@app.route('/tasks', methods=['POST'])
+def create_task():
+    new_task = request.get_json()
+    tasks.append(new_task)
+    return jsonify(new_task), 201
+
+# Route to update an existing task
+@app.route('/tasks/<int:task_id>', methods=['PUT'])
+def update_task(task_id):
+    task = next((task for task in tasks if task['id'] == task_id), None)
+    if task is None:
+        return jsonify({'error': 'Task not found'}), 404
+    updated_task = request.get_json()
+    task.update(updated_task)
+    return jsonify(task)
+
+# Route to delete a task
+@app.route('/tasks/<int:task_id>', methods=['DELETE'])
+def delete_task(task_id):
+    global tasks
+    tasks = [task for task in tasks if task['id'] != task_id]
+    return jsonify({'result': True})
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
+          `,
+          spanish: ``,
+          tooltip: ``,
+        },
+        define: {
+          completed: false,
+          impact: 100,
+          action: `define`, // may not need
+          icon: `🧿`, // may not need
+          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
+            `Lesson 3 Understanding Backend Engineering`
+          )} in exactly one sentence?`,
+          response: `Backend engineering is the design, implementation, testing, and maintenance of the server-side logic, databases, and application interfaces that power the functionality behind user-facing components of software applications or websites.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        quiz: {
+          completed: false,
+          impact: 100,
+          action: `quiz`,
+          icon: `🧪`,
+          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
+            `Lesson 3 Understanding Backend Engineering`
+          )}?`,
+          response: (
+            <div>
+              Databases: Explain the difference between a SQL database and a
+              NoSQL database. Provide an example of a scenario where each might
+              be the more appropriate choice.
+              <br />
+              <br />
+              APIs: What is a RESTful API and why are they important in backend
+              development?
+              <br />
+              <br />
+              Backend Engineering: What is the role of a load balancer in
+              backend engineering and why is it important?
+              <br />
+              <br />
+              Privacy: What is data privacy and why is it an important aspect of
+              computer ethics?
+              <br />
+              <br />
+              Ethics: Explain the concept of "digital divide" and why it is a
+              concern in computer ethics.
+              <br />
+            </div>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
+        shop: {
+          completed: false,
+          impact: 100,
+          action: `shop`,
+          icon: `🛍️`,
+          request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
+          response: (
+            <div>
+              This shopping slot is not being utilized yet. Please contact me in
+              Patreon to qualify. In the meantime, lets talk about the
+              socioeconomic state of Latinos in tech.
+              <br />
+              <br />
+              <p>
+                The underrepresentation of Latinos as founders of major tech
+                companies is a multifaceted issue that can be attributed to
+                various factors, including socioeconomic, educational, and
+                cultural barriers, as well as systemic biases and
+                discrimination. Here are some reasons that contribute to this
+                underrepresentation:
+              </p>
+              <br />
+              <ol>
+                <li>
+                  Educational barriers: Access to quality education is essential
+                  for success in the technology industry. However, Latinos may
+                  face challenges in accessing high-quality education due to
+                  factors such as socioeconomic status, underfunded schools, or
+                  living in areas with fewer educational resources. These
+                  challenges can limit their exposure to computer science and
+                  other STEM subjects, reducing the likelihood of pursuing
+                  careers in technology. <br />
+                </li>
+                <li>
+                  Socioeconomic factors: Socioeconomic status plays a
+                  significant role in shaping career opportunities and
+                  aspirations. Latinos, as a group, have historically faced
+                  economic disparities, which can impact their access to
+                  resources, networking opportunities, and the ability to take
+                  risks associated with entrepreneurship. <br />
+                </li>
+
+                <li>
+                  Lack of representation and role models: The technology
+                  industry has long been dominated by individuals from certain
+                  racial and ethnic backgrounds. The lack of Latino
+                  representation in leadership roles and as founders of major
+                  tech companies can make it challenging for aspiring Latino
+                  entrepreneurs to find role models and mentors, which is
+                  crucial for professional development and success. <br />
+                </li>
+                <li>
+                  Limited access to funding and resources: Starting a tech
+                  company often requires substantial financial investment and
+                  access to resources, such as networking opportunities,
+                  mentorship, and technical support. Latinos may face challenges
+                  in securing funding from investors due to unconscious bias,
+                  discrimination, or lack of connections within the industry.{" "}
+                  <br />
+                </li>
+                <li>
+                  Cultural factors: Cultural factors, such as family
+                  expectations and community norms, can also influence career
+                  choices and aspirations. In some cases, Latinos may face
+                  pressure to prioritize more traditional or stable career paths
+                  over the risks associated with entrepreneurship or founding a
+                  tech company. <br />
+                </li>
+                <li>
+                  Systemic biases and discrimination: The technology industry,
+                  like many other sectors, is not immune to systemic biases and
+                  discrimination that can create barriers for underrepresented
+                  groups, including Latinos. This can manifest in various forms,
+                  such as biased hiring practices, limited access to mentorship
+                  and resources, or unequal treatment within the workplace.
+                </li>
+              </ol>
+              <br />
+              <br />
+              Addressing these challenges and promoting diversity in the
+              technology industry requires concerted efforts from various
+              stakeholders, including educational institutions, policymakers,
+              investors, and tech companies themselves. By fostering inclusive
+              environments, providing equal opportunities, and breaking down
+              barriers for underrepresented groups, the tech industry can
+              benefit from the wealth of talent, perspectives, and ideas that
+              diverse founders bring to the table.
+            </div>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
+      },
+    },
+    "Lesson 4 Building Apps": {
+      documentID: ``,
+      hasCode: true,
+      filler: ``,
+      highValue: false,
+      underConstruction: false,
+      completed: false,
+      needsImprovement: false,
+      new: true,
+      tooltip: ``,
+      sourceType: `video`, // may not need
+      button: `Lesson 4 Building Apps`, // may not need - `name`
+      header: `Lesson 4 Building Apps`,
+      fileSource:
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1688890864/IMG_4448_wtznbf.mov", // may not need
+
+      prompts: {
+        patreon: {
+          completed: false,
+          impact: 1000,
+          action: `generate`,
+          icon: `►`, //`✍️`
+          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
+            `Lesson 4 Building Apps`
+          )}?`,
+          response: `null`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        inspire: {
+          completed: false,
+          impact: 100,
+          action: `inspire`,
+          icon: `⚡`,
+          request: `ms. roxana, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
+            `Lesson 4 Building Apps`
+          )}?`,
+          response: (
+            <div>
+              <h4>
+                👋 Is there a way to distribute credit cards to students with an
+                education technical application using Stripe?
+              </h4>
+              <br />
+              <br />
+              <h2>Credit - Empowering Student Finance through Education</h2>
+              <br />
+              <br />
+              Once upon a time, in the bustling heart of Silicon Valley, a team
+              of passionate educators, seasoned fintech experts, and
+              forward-thinking technologists embarked on a mission to reimagine
+              the traditional student financial experience. They were driven by
+              a simple, powerful question: "Could we build a system that would
+              help students not just to learn, but to financially grow at the
+              same time?" This question marked the genesis of Credit, an
+              innovative edtech application set to revolutionize students'
+              approach to financial growth and independence. <br />
+              <br />
+              Credit, an app designed to empower students financially through
+              education, proposed a novel concept - a subscription-based
+              learning platform where each payment doesn't just grant access to
+              premium educational resources, but also contributes towards
+              building the students' credit score. The initiative aimed to
+              instill a sense of financial responsibility and acumen among
+              students from an early age, encouraging them to understand the
+              significance of credit scores and financial planning.
+              <br />
+              <br />
+              Harnessing the power of APIs, the Credit team integrated the
+              platform with Stripe, one of the world's leading payment
+              processors. This gave the platform robust, secure payment handling
+              capabilities, with a twist. Rather than just processing
+              transactions, every payment made on Credit was handled in a way
+              that directly impacted the student's credit history positively.
+              <br />
+              <br />
+              The magic lay in the use of Stripe's powerful Issuing API. Upon
+              subscribing, students would receive a virtual credit card from
+              Credit. The subscription fees were then charged to these cards,
+              and promptly paid off using the student's funding source, thereby
+              establishing a pattern of responsible credit use. Over time, this
+              mechanism helped students organically build a strong credit
+              history.
+              <br />
+              <br />
+              But the Credit team didn't stop there. Understanding that credit
+              was only one aspect of financial education, they also incorporated
+              a comprehensive financial literacy module within the app. It
+              covered topics such as budgeting, investing, and understanding
+              interest rates. The application gamified these learnings,
+              rewarding students with app-based rewards for demonstrating
+              knowledge and financial acumen.
+              <br />
+              <br />
+              Furthermore, students could keep track of their burgeoning credit
+              scores directly through the application, providing a tangible
+              sense of progress and achievement. To ensure the students'
+              financial data's safety and privacy, Credit strictly adhered to
+              the highest data protection standards, employing state-of-the-art
+              encryption technologies, and ensuring strict compliance with
+              PCI-DSS.
+              <br />
+              <br />
+              As the word spread, Credit became a sensation in high schools and
+              universities across the nation. Students were no longer just
+              consumers of educational content; they were budding financial
+              adults, witnessing firsthand the power of credit and financial
+              responsibility. Simultaneously, they had access to a world-class
+              educational resource, equipping them with knowledge and skills for
+              a successful future.
+              <br />
+              <br />
+              By leveraging the power of APIs and integrating them into an
+              intuitive education platform, Credit has proven that financial
+              responsibility and education can go hand in hand. It's an
+              innovative stride towards not just teaching our students but
+              preparing them for a more financially secure and informed future.
+              <br />
+            </div>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
+        summarize: {
+          completed: false,
+          impact: 100,
+          action: `summarize`,
+          icon: `📚`,
+          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
+            `Lesson 4 Building Apps`
+          )}?`,
+          response: (
+            <div>
+              Learning to code is the first step towards building a technology
+              startup, but it's just one piece of a complex puzzle. The journey
+              from acquiring coding skills to launching a tech startup involves
+              several phases including idea generation, market research, product
+              development, and business operations.
+              <br />
+              <br />
+              <h2>Acquiring Coding Skills</h2>
+              <br />
+              The journey begins with learning to code. There are various
+              programming languages and technologies, each with its own
+              strengths and applicability. Beginners often start with languages
+              like Python or JavaScript due to their syntax and wide usage. It's
+              essential to understand the basics such as data structures,
+              algorithms, and object-oriented programming. As you become more
+              proficient, learning about databases, web protocols, and other
+              software development concepts becomes important.
+              <br />
+              <br />
+              <h2>Idea Generation and Validation</h2>
+              <br />
+              Once you have the basic coding skills, the next step is to come up
+              with a startup idea. The idea doesn't have to be unique, but there
+              should be a unique value proposition. It should solve a problem or
+              fulfill a need in a way that current solutions do not. Once an
+              idea is conceived, it's vital to validate it. This can be done
+              through market research, surveys, and talking to potential users.
+              This stage may lead to multiple iterations of the idea based on
+              the feedback received.
+              <br />
+              <br />
+              <h2>Building a Minimum Viable Product (MVP)</h2>
+              <br />
+              After validating the idea, the next phase is developing a Minimum
+              Viable Product (MVP). An MVP is a basic version of the product
+              with just enough features to be usable by early customers who can
+              then provide feedback for future product development. It helps in
+              understanding whether the product resonates with the market needs
+              without investing a lot of time and resources.
+              <br />
+              <br />
+              <h2>Launching and Marketing</h2>
+              <br />
+              Once the MVP is ready, it's time to launch the product. This is
+              where aspects like setting up a website, creating a brand, and
+              working on a launch strategy come into play. Marketing the product
+              effectively is crucial. This might involve social media marketing,
+              content marketing, SEO, and other digital marketing strategies.
+              <br />
+              <br />
+              <h2>Feedback, Iteration, and Growth</h2>
+              <br />
+              After the launch, it's crucial to gather feedback and use it to
+              improve the product. Startups often have to iterate on their
+              products multiple times before they find a good market fit. It's
+              also important to measure key metrics to understand user behavior
+              and track the growth of the startup. Once the product-market fit
+              is achieved, you can focus on scaling the product and growing the
+              user base.
+              <br />
+              <br />
+              <h2>Fundraising</h2>
+              <br />
+              Depending on the business model and growth plans, you might need
+              to raise funds. This involves understanding different fundraising
+              stages, preparing a pitch deck, and reaching out to potential
+              investors.
+              <br />
+              <br />
+              <h2>Team Building and Culture</h2>
+              <br />
+              As the startup grows, you will need to build a team. This involves
+              hiring the right people, defining the company culture, and setting
+              up processes for effective team collaboration.
+              <br />
+              <br />
+              In conclusion, the journey from learning to code to building a
+              tech startup is a challenging yet rewarding process. It involves
+              not just technical skills, but also skills in product development,
+              marketing, fundraising, and team management. It's a journey of
+              continuous learning and adaptation.
+            </div>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
+        ask: {
+          completed: false,
+          impact: 100,
+          action: `ask`,
+          icon: `🔮`,
+          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
+            `Lesson 4 Building Apps`
+          )} with one sentence answers?`,
+          response: (
+            <div>
+              here are three frequently asked questions by beginners about
+              building with APIs, along with expert answers:
+              <br />
+              <br />
+              Question 1: What is an API and why is it important in building
+              applications?
+              <br />
+              <br />
+              An API, or Application Programming Interface, is a set of rules
+              and protocols that allows one software application to interact and
+              communicate with another. It's like a messenger that delivers a
+              request from one system to another and then delivers the response
+              back. APIs are important because they enable the integration of
+              different software systems, allowing them to leverage each other's
+              functionalities. For instance, a web application can use a mapping
+              API to show locations to users, or a weather API to display the
+              current weather. This saves development time and resources, as
+              developers can leverage existing APIs instead of building similar
+              functionalities from scratch.
+              <br />
+              <br />
+              <br />
+              <br />
+              Question 2: How do I choose which APIs to use in my application?
+              <br />
+              <br />
+              Choosing the right API depends on several factors. First, the API
+              should provide the functionality that you need. Look at the API
+              documentation to see what features it provides. Second, consider
+              the API's reliability and performance. You can find this
+              information from user reviews or testing the API yourself. Third,
+              consider the cost. Some APIs are free up to a certain limit, while
+              others require a subscription. Lastly, consider the API's support
+              and community. Good APIs have active developer communities and
+              responsive support teams.
+              <br />
+              <br />
+              <br />
+              <br />
+              Question 3: How can I secure the data being sent and received
+              through an API?
+              <br />
+              <br />
+              Data security is crucial when working with APIs. To secure the
+              data, you can use several strategies. First, use HTTPS for all API
+              requests to ensure the data is encrypted during transit. Second,
+              authenticate and authorize all API requests to ensure only
+              legitimate users and applications can access the API. This is
+              usually done using API keys or tokens. Third, validate all
+              incoming data to protect against attacks such as SQL injection.
+              Finally, limit the data that your API returns. Only return the
+              data that's necessary for each request, minimizing the potential
+              damage if the data is intercepted.
+            </div>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
+        guide: {
+          completed: false,
+          impact: 100,
+          action: `guide`,
+          icon: `🤝`,
+          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
+            `Lesson 4 Building Apps`
+          )}?`,
+          response: (
+            <div>
+              Raising money for a startup can be challenging, particularly for
+              first-time entrepreneurs. The process requires significant
+              preparation, time, effort, persistence, and oftentimes facing
+              numerous rejections. However, the difficulty also depends on
+              various factors such as the nature of the business, the market
+              size and potential, the team's background and experience, the
+              timing, and the startup's traction or demonstrated progress.
+              <br />
+              <br />
+              <ol>
+                <li>
+                  <b>Develop a Solid Business Plan</b>
+                  <div>
+                    Investors want to see that you have a clear plan for how
+                    you're going to run your business, make a profit, and
+                    provide them with a return on their investment. Your
+                    business plan should clearly articulate your business model,
+                    target market, competitive advantage, marketing strategy,
+                    financial projections, and other key details about your
+                    business.
+                  </div>
+                  <br />
+                </li>
+                <li>
+                  <b>Bootstrap</b>
+                  <div>
+                    Before seeking external funding, consider funding the
+                    business yourself or with the help of friends and family.
+                    This is called bootstrapping. It shows potential investors
+                    that you are willing to take on personal risk for your
+                    business.
+                  </div>
+                  <br />
+                </li>
+
+                <li>
+                  <b>Build a Strong Team</b>
+                  <div>
+                    Investors not only invest in ideas, but also in people. A
+                    strong, dedicated, and complementary team can make your
+                    startup much more appealing to investors.
+                  </div>
+                  <br />
+                </li>
+
+                <li>
+                  <b>Create a Minimum Viable Product (MVP)</b>
+                  <div>
+                    An MVP is the simplest version of your product that still
+                    delivers your core value proposition. Launching an MVP
+                    allows you to demonstrate traction, validate your business
+                    idea, and collect user feedback – all of which can make your
+                    startup more attractive to investors.
+                  </div>
+                  <br />
+                </li>
+
+                <li>
+                  <b>Network</b>
+                  <div>
+                    Attend industry events, startup meetups, and investor
+                    meetings to build relationships with potential investors.
+                    Networking can also provide valuable feedback and advice for
+                    your startup.
+                  </div>
+                  <br />
+                </li>
+
+                <li>
+                  <b>Pitch to Investors</b>
+                  <div>
+                    Prepare a concise, compelling investor pitch that clearly
+                    explains your business idea, market size, unique value
+                    proposition, business model, marketing strategy, financial
+                    projections, and the funding you need. Be ready to answer
+                    questions and objections.
+                  </div>
+                  <br />
+                </li>
+
+                <li>
+                  <b>Consider Different Types of Funding</b>
+                  <div>
+                    There are many types of funding available to startups,
+                    including angel investors, venture capital, crowdfunding,
+                    and government grants. Research each type to understand
+                    which is the best fit for your startup.
+                  </div>{" "}
+                  <br />
+                </li>
+
+                <li>
+                  <b>Be Persistent</b>
+                  <div>
+                    Fundraising can be a long process with many rejections.
+                    Persistence is key. Use rejections as an opportunity to
+                    learn, improve your business and pitch, and come back
+                    stronger.
+                  </div>{" "}
+                  <br />
+                </li>
+              </ol>
+              <br /> <br />
+              Remember, while raising money can provide resources for growth, it
+              also often involves giving up equity and control. Therefore,
+              always consider the trade-offs, and aim to achieve a balance
+              between maintaining control and accelerating growth.
+            </div>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
+        demonstrate: {
+          completed: false,
+          impact: 100,
+          action: `demonstrate`,
+          icon: `🎨`,
+          request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
+            `Lesson 4 Building Apps`
+          )} in javascript?`,
+          response: `
+/*
+Creating subscriptions in Stripe involves a few steps:
+
+Frontend: Collect payment method information from the customer using Stripe's frontend library, Stripe.js.
+Backend: Create or retrieve a customer in Stripe.
+Backend: Attach the payment method to the customer.
+Backend: Create a subscription for the customer with the appropriate pricing plan.
+As previously mentioned, the sensitive operations (steps 2-4) should be performed on the backend to ensure security. Here's a simplified example of how you could do this:
+*/
+______________________________________
+
+-----
+/* The Frontend */
+/*
+First, you'll need to set up Stripe.js on your frontend and use it to collect card details. 
+The CardElement component provides a form where users can enter their card details.
+
+
+
+*/
+
+-----
+
+import React from 'react';
+import { loadStripe } from '@stripe/stripe-js';
+import { Elements, CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
+
+// Load Stripe.js with your publishable key.
+const stripePromise = loadStripe('your-publishable-key');
+
+// Create a new CheckoutForm component
+function CheckoutForm() {
+  const stripe = useStripe();
+  const elements = useElements();
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    // Use elements.getElement to get a reference to the mounted CardElement
+    const cardElement = elements.getElement(CardElement);
+
+    // Use stripe.createPaymentMethod to create a new Payment Method for the card
+    const { error, paymentMethod } = await stripe.createPaymentMethod({
+      type: 'card',
+      card: cardElement,
+    });
+
+    if (!error) {
+      const { id } = paymentMethod;
+      // Now you can send the id of the payment method to your backend and create the subscription
+      fetch('http://localhost:8000/create-subscription', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ payment_method: id }),
+      });
+    }
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <CardElement />
+      <button type="submit">Subscribe</button>
+    </form>
+  );
+}
+
+// In your main component, wrap your checkout form with the Elements component
+function App() {
+  return (
+    <Elements stripe={stripePromise}>
+      <CheckoutForm />
+    </Elements>
+  );
+}
+
+export default App;
+
+-----
+
+/* The Backend */
+/*
+This is a very simplified example. 
+In a real-world application, you'd want to include 
+error handling and consider edge cases. You'd also 
+want to secure your endpoints and ensure only authenticated
+users can create subscriptions.
+*/
+
+-----
+const express = require('express');
+const stripe = require('stripe')('your-secret-key');
+const app = express();
+
+app.use(express.json());
+
+app.post('/create-subscription', async (req, res) => {
+  const { payment_method } = req.body;
+  
+  // Create a new customer or retrieve an existing one
+  const customer = await stripe.customers.create({
+    payment_method,
+    email: 'customer@example.com', // you'd retrieve this from your authentication system
+    invoice_settings: {
+      default_payment_method: payment_method,
+    },
+  });
+
+  // Create the subscription
+  const subscription = await stripe.subscriptions.create({
+    customer: customer.id,
+    items: [{ plan: 'your-plan-id' }],
+    expand: ['latest_invoice.payment_intent'],
+  });
+
+  res.send(subscription);
+});
+
+app.listen(8000, () => console.log('Server running on port 8000'));
+
+
+          `,
+          spanish: ``,
+          tooltip: ``,
+        },
+        define: {
+          completed: false,
+          impact: 100,
+          action: `define`, // may not need
+          icon: `🧿`, // may not need
+          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
+            `Lesson 4 Building Apps`
+          )} in exactly one sentence?`,
+          response: `Building a startup involves identifying a unique business idea or problem to solve, conducting market research, developing a business plan, assembling a team, securing necessary financing, creating a product or service, launching it to the market, and continuously iterating and growing based on customer feedback and market dynamics.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        quiz: {
+          completed: false,
+          impact: 100,
+          action: `quiz`,
+          icon: `🧪`,
+          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
+            `Lesson 4 Building Apps`
+          )}?`,
+          response: (
+            <div>
+              What factors should you consider when choosing third-party APIs to
+              integrate into your startup's product or service?
+              <br />
+              <br />
+              How would you approach evaluating the trade-offs between building
+              a feature in-house versus using an API service?
+              <br />
+              <br />
+              Describe a situation where using an API might add significant
+              value to a startup's service or product, and explain why.
+              <br />
+              <br />
+              Discuss the potential security concerns a startup should consider
+              when integrating third-party APIs and how you might mitigate these
+              risks.
+              <br />
+              <br />
+              How can the effective use of APIs accelerate a startup's time to
+              market and scalability, and can you provide examples to illustrate
+              your points?
+              <br />
+            </div>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
+        shop: {
+          completed: false,
+          impact: 100,
+          action: `shop`,
+          icon: `🛍️`,
+          request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
+          response: (
+            <div>
+              This shopping slot is not being utilized yet. Please contact me in
+              Patreon to qualify. In the meantime, lets talk about the
+              socioeconomic state of Latinos in tech.
+              <br />
+              <br />
+              <p>
+                The underrepresentation of Latinos as founders of major tech
+                companies is a multifaceted issue that can be attributed to
+                various factors, including socioeconomic, educational, and
+                cultural barriers, as well as systemic biases and
+                discrimination. Here are some reasons that contribute to this
+                underrepresentation:
+              </p>
+              <br />
+              <ol>
+                <li>
+                  Educational barriers: Access to quality education is essential
+                  for success in the technology industry. However, Latinos may
+                  face challenges in accessing high-quality education due to
+                  factors such as socioeconomic status, underfunded schools, or
+                  living in areas with fewer educational resources. These
+                  challenges can limit their exposure to computer science and
+                  other STEM subjects, reducing the likelihood of pursuing
+                  careers in technology. <br />
+                </li>
+                <li>
+                  Socioeconomic factors: Socioeconomic status plays a
+                  significant role in shaping career opportunities and
+                  aspirations. Latinos, as a group, have historically faced
+                  economic disparities, which can impact their access to
+                  resources, networking opportunities, and the ability to take
+                  risks associated with entrepreneurship. <br />
+                </li>
+
+                <li>
+                  Lack of representation and role models: The technology
+                  industry has long been dominated by individuals from certain
+                  racial and ethnic backgrounds. The lack of Latino
+                  representation in leadership roles and as founders of major
+                  tech companies can make it challenging for aspiring Latino
+                  entrepreneurs to find role models and mentors, which is
+                  crucial for professional development and success. <br />
+                </li>
+                <li>
+                  Limited access to funding and resources: Starting a tech
+                  company often requires substantial financial investment and
+                  access to resources, such as networking opportunities,
+                  mentorship, and technical support. Latinos may face challenges
+                  in securing funding from investors due to unconscious bias,
+                  discrimination, or lack of connections within the industry.{" "}
+                  <br />
+                </li>
+                <li>
+                  Cultural factors: Cultural factors, such as family
+                  expectations and community norms, can also influence career
+                  choices and aspirations. In some cases, Latinos may face
+                  pressure to prioritize more traditional or stable career paths
+                  over the risks associated with entrepreneurship or founding a
+                  tech company. <br />
+                </li>
+                <li>
+                  Systemic biases and discrimination: The technology industry,
+                  like many other sectors, is not immune to systemic biases and
+                  discrimination that can create barriers for underrepresented
+                  groups, including Latinos. This can manifest in various forms,
+                  such as biased hiring practices, limited access to mentorship
+                  and resources, or unequal treatment within the workplace.
+                </li>
+              </ol>
+              <br />
+              <br />
+              Addressing these challenges and promoting diversity in the
+              technology industry requires concerted efforts from various
+              stakeholders, including educational institutions, policymakers,
+              investors, and tech companies themselves. By fostering inclusive
+              environments, providing equal opportunities, and breaking down
+              barriers for underrepresented groups, the tech industry can
+              benefit from the wealth of talent, perspectives, and ideas that
+              diverse founders bring to the table.
+            </div>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
+      },
+    },
   },
-  "Crash Course": {
+  "Get Experience": {
+    "Robots Building Education": {
+      documentID: ``,
+      filler: ``,
+      new: true,
+      highValue: false,
+      underConstruction: true,
+      completed: false,
+      needsImprovement: false,
+      rare: false,
+      tooltip: ``,
+      sourceType: `markdown`, // may not need
+      button: `Robots Building Education`, // may not need - `name`
+      header: `Robots Building Education`,
+      fileSource: await import("../../markdowns/learn.md?raw"), // may not need
+
+      prompts: {
+        patreon: {
+          completed: false,
+          impact: 1000,
+          action: `generate`,
+          icon: `✍️`,
+          request: `ms. roxana, can you please generate an essay that introduces me to ${ultimateEffeciencyJutsu(
+            `Build For Community`
+          )}?`,
+          response: `null`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        inspire: {
+          completed: false,
+          impact: 100,
+          action: `inspire`,
+          icon: `⚡`,
+          request: `ms. roxana, can you please share a potential future with the ${ultimateEffeciencyJutsu(
+            `Build For Community`
+          )}?`,
+          response: `\n\nSure! In the future, it's possible that bitcoin, automation, and universal basic income could all converge to create a new form of financial system. Under this system, individuals could receive an automated universal basic income that is denominated in a uniform cryptocurrency, such as Bitcoin, giving individuals the freedom to purchase goods and services instantly and securely using a digital payment method. In addition, individuals would have access to a multitude of automated tools to manage their finances, such as automated savings and investments tools that maximize returns and minimize risk. This system could also help to reduce poverty and inequality, as it would make it easy for everyone to access basic financial services, regardless of location or class.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        summarize: {
+          completed: false,
+          impact: 100,
+          action: `summarize`,
+          icon: `📚`,
+          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
+            `Build For Community`
+          )}?`,
+          response: `\n\nBitcoin relies heavily on automation. Automation is the integration of technology in the process of completing certain tasks, and it helps to reduce the need for human labor. Bitcoin transactions are almost entirely automated, and this automation creates a strong case for the implementation of universal basic income (UBI). UBI is a system whereby citizens of a state receive a regular monthly allowance from the government, regardless of their economic standing or whether or not they are currently employed. Automation and the increasing presence of cryptocurrencies like Bitcoin can provide the economic mechanisms for implementing a UBI system, and so it can be seen that the two are linked.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        ask: {
+          completed: false,
+          impact: 100,
+          action: `ask`,
+          icon: `🔮`,
+          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
+            `Build For Community`
+          )} with one sentence answers?`,
+          response: `\n\n1. How does Bitcoin interact with automation? Answer: Bitcoin is used to facilitate instantaneous payment transfers, enabling automated transactions between two parties.\n2. What is the relationship between Bitcoin and Universal Basic Income? Answer: Universal Basic Income is a policy concept which can be supported through the use of Bitcoin, due to its transparency and low transaction costs.\n3. How does automation impact the use of Bitcoin? Answer: Automation can be used to simplify the process of transactting with Bitcoin, such as through digital wallets and automated trading bots.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        guide: {
+          completed: false,
+          impact: 100,
+          action: `guide`,
+          icon: `🤝`,
+          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
+            `Build For Community`
+          )}?`,
+          response: `\n\n1. Definition of Bitcoin – what it is, key features and how it works\n2. Impact of Automation on Employment and its related implications\n3. Potential Benefits of Universal Basic Income\n4. Possibility of Bitcoin and Automation to Enhance UBI\n5. Challenges and Obstacles in Implementing Bitcoin and Automation for UBI\n6. Prospects of Bitcoin as a Potential Solution to Enhance UBI\n7. Relationship between Bitcoin, Automation and UBI in Terms of Asset Distribution\n8. Advantages of UBI in the Context of Bitcoin and Automation\n9. Regulatory Issues Surrounding the Deployment of a UBI Scheme Using Bitcoin and/or Automation\n10. The Social and Economic Implications of Bitcoin, Automation and UBI`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        demonstrate: {
+          completed: false,
+          impact: 100,
+          action: `demonstrate`,
+          icon: `🎨`,
+          request: `ms. roxana, can you please show me an example of how proof of work can work in education?`,
+          response: `\n\nAn example of how proof of work can work in education is through the utilization of advanced testing techniques. For example, if a student must complete an online course, they must first complete a assignment or test. After they complete the initial assignment or test, they must then provide proof of their progress by working to answer harder questions, or taking a more advanced course. By utilizing challenges that only certain students can complete, the instructor will have proof that the student actually completed the coursework.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        define: {
+          completed: false,
+          impact: 100,
+          action: `define`, // may not need
+          icon: `🧿`, // may not need
+          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
+            `Build For Community`
+          )} in exactly one sentence?`,
+          response: `\n\nThe combination of automation and Bitcoin technologies could theoretically provide a Universal Basic Income to all individuals.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+
+        quiz: {
+          completed: false,
+          impact: 100,
+          action: `quiz`,
+          icon: `🧪`,
+          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
+            `Build For Community`
+          )}?`,
+          response: `\n\n1. What is the connection between Bitcoin, Automation, and Universal Basic Income (UBI)?\n\n2. In what ways could Automation lead to the implementation of UBI?\n\n3. How could decentralized digital currencies such as Bitcoin be used to fund a UBI system?`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        shop: {
+          completed: false,
+          impact: 100,
+          action: `shop`,
+          icon: `🛍️`,
+          request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
+          response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+      },
+    },
+    "Undocumented Building": {
+      documentID: ``,
+      filler: ``,
+      new: true,
+      highValue: false,
+      underConstruction: true,
+      completed: false,
+      needsImprovement: false,
+      hasCode: true,
+      rare: false,
+      tooltip: ``,
+      sourceType: `markdown`, // may not need
+      button: `Indocumentadofy`, // may not need - `name`
+      header: `Indocumentadofy`,
+      fileSource: await import("../../markdowns/indocumentadofy.md?raw"), // may not need
+
+      prompts: {
+        patreon: {
+          completed: false,
+          impact: 1000,
+          action: `generar`,
+          icon: `✍️`,
+          request: `em. roxana, ¿puedes generar un ensayo que cubra las oportunidades de consulta como inmigrante indocumentado con el marco Hydrogen de Shopify?`,
+          response: `null`,
+          spanish: true,
+          tooltip: ``,
+        },
+        inspire: {
+          dynamicContent: true,
+          completed: false,
+          impact: 100,
+          action: `inspirar`,
+          icon: `⚡`,
+          request: `Roxana, ¿puedes compartir cómo los inmigrantes indocumentados pueden aprender a construir cosas con herramientas como Hydrogen de Shopify para ganarse la vida en español?`,
+          response: `\n\nEn primer lugar, recomendaría a los inmigrantes indocumentados que investiguen y familiaricen con el software Hydrogen de Shopify que es una herramienta de creación de sitios web que le permite a los usuarios crear hermosas tiendas de comercio electrónico sin tener que aprender lenguajes de programación como HTML o CSS. Descargar el software es fácil y gratuito, y hay mucha documentación en línea disponible para guiarles a través del proceso. Después de descargarlo e iniciar sesión, también pueden encontrar tutorías en línea ofrecidas en español para ayudarles a aprender cómo usarlo y cómo configurar una tienda exitosa. Una vez que han desarrollado el conocimiento y la habilidad necesarios, pueden usar Hydrogen para crear tiendas en línea y vender productos a clientes de todo el mundo. Esta es una excelente oportunidad para aquellos inmigrantes que buscan construir una vida exitosa de manera independiente.`,
+          spanish: true,
+          tooltip: ``,
+        },
+        summarize: {
+          completed: false,
+          impact: 100,
+          action: `resumir`,
+          icon: `📚`,
+          request: `Roxanita ¿Puedes resumir cómo construir tecnología con el marco de Hydrogen de Shopify?`,
+          response:
+            "\n\nEl marco de Hydrogen de Shopify proporciona las herramientas necesarias para construir y gestionar una tienda en línea de manera eficiente. A través de la interfaz de usuario intuitiva, los usuarios pueden configurar los productos, imágenes, páginas y contenidos en cuestión de minutos. Te permite configurar opciones de pago, precios y descuentos para diversos productos. El marco también le permite a los usuarios administrar el inventario, realizar publicaciones de pedidos, recopilar información de clientes y almacenar datos de forma segura. Además, le ofrece protección contra fraudes y herramientas integradas de marketing para impulsar el crecimiento de la tienda.",
+          spanish: true,
+          tooltip: ``,
+        },
+        ask: {
+          completed: false,
+          impact: 100,
+          action: `preguntar`,
+          icon: `🔮`,
+          request: `Roxanota, ¿puedes mostrarme tres preguntas frecuentes para principiantes sobre la consultoría como inmigrante indocumentado con el marco Hydrogen de Shopify?`,
+          response: `\n\n1. ¿Existe un límite específico para las cantidades en las que puedo cobrar como inmigrante indocumentado a través de la plataforma de Shopify Hydrogen? \n2. ¿Cómo puedo conectar mi cuenta de Shopify para comenzar a brindar servicios de consultoría a través de Hydrogen? \n3. ¿Hay alguna forma de proteger mis derechos como inmigrante indocumentado mientras ofrezco servicios de consultoría a través del marco Hydrogen de Shopify?`,
+          spanish: true,
+          tooltip: ``,
+        },
+        guide: {
+          completed: false,
+          impact: 100,
+          action: `guía`,
+          icon: `🤝`,
+          request: `señorita roxana, ¿puede crear una guía de estudio para consultar como inmigrante indocumentado con el marco Hydrogen de Shopify con 10 viñetas?`,
+          response: `\n\n1. Investigue Hydrogen de Shopify y familiarícese con las diferentes características y capacidades que ofrece.\n2. Comprenda las implicaciones legales cuando trabaja como inmigrante indocumentado con Hydrogen de Shopify.\n3. Utilice los recursos disponibles, como como tutoriales y materiales de apoyo disponibles.\n4. Adquiera conocimientos sobre las herramientas y técnicas compatibles con Hydrogen de Shopify.\n5. Asegúrese de que su trabajo esté listo para su carpeta de trabajos y pueda ser presentado a posibles empleadores.\n6. Desarrolle una comprensión de cómo se debe estructurar el proyecto, incluidos el cronograma y los objetivos.\n7. Conozca las oportunidades de mercado disponibles para usar Hydrogen de Shopify.\n8. Desarrolle la capacidad de solucionar y resolver cualquier problema técnico que pueda surgir.\n9. Conéctese con varias empresas y redes que usan Hydrogen de Shopify para desarrollar una red de posibles empleadores y socios.\n10. Manténgase actualizado sobre el avance de Hydrogen de Shopify para asegurarse de que puede aprovechar era de todas las nuevas capacidades`,
+          spanish: true,
+          tooltip: ``,
+        },
+        demonstrate: {
+          completed: false,
+          impact: 100,
+          action: `demostrar`,
+          icon: `🎨`,
+          request: `mama roxana, ¿puedes mostrarme un ejemplo de cómo Shopify construye aplicaciones con el marco Hydrogen de Shopify en español con javascript?`,
+          response:
+            "\n\n// Crear un modelo de aplicación\n// Este modelo describirá una entidad de la aplicación\nvar AppModelo = Hydrogen.Modelo.extend({\n  // Definimos los atributos\n  campos: {\n    titulo: String,\n    descripcion: String,\n    precio: Numero\n  }\n});\n\n// Crear una vista de la aplicación\n// Esta vista mostrará la entidad en la aplicación\nvar AppVista = Hydrogen.Vista.extend({\n  // Establecer el modelo de la vista\n  modelo: AppModelo,\n  // Establecer la plantilla \n  plantilla: `\n   <div> \n      <h2>{{ titulo }}</h2>\n      <p>{{ descripcion }}</p>\n      <p>Precio: {{ precio }}</p>\n   </div>\n  `,\n  // Establecer los datos iniciales\n  datosIniciales: {\n    titulo: '',\n    descripcion: '',\n    precio: 0\n  }\n});\n\n// Instanciar el modelo de la aplicación\nvar miModelo = new AppModelo({\n  // Establecer los valores de los atributos\n  titulo: 'Mi Aplicación',\n  descripcion: 'Una aplicación increíble',\n  precio: 999\n});\n\n// Instanciar la vista de la aplicación\nvar miVista = new AppVista({\n  modelo: miModelo\n});\n\n// Renderizar la vista\nmiVista.renderizar();",
+          spanish: true,
+
+          tooltip: ``,
+        },
+        define: {
+          completed: false,
+          impact: 100,
+          action: `definir`, // may not need
+          icon: `🧿`, // may not need
+          request: `roxis, ¿puedes definir oportunidades para consultar como inmigrante indocumentado con el marco Hydrogen de Shopify en exactamente una oración?`,
+          response: `\n\nLas oportunidades de consulta como inmigrante indocumentado con el marco Hydrogen de Shopify proporcionan recursos y acceso a los servicios pertinentes para apoyar la actividad comercial.`,
+          spanish: true,
+          tooltip: ``,
+        },
+
+        quiz: {
+          completed: false,
+          impact: 100,
+          action: `prueba`,
+          icon: `🧪`,
+          request: `mamachota roxana, ¿puedes escribir un cuestionario de 3 preguntas para principiantes que sea desafiante sobre la consultoría como inmigrante indocumentado con el marco Hydrogen de Shopify?`,
+          response: `\n\n1. ¿Hay políticas o trámites adicionales que deberían completarse cuando se trabaja en el marco Hydrogen de Shopify como inmigrante indocumentado? \n\n2. ¿Cuáles son algunas técnicas aconsejables para respaldar la seguridad y la privacidad de los datos personales al utilizar el marco Hydrogen de Shopify? \n\n3. ¿Cuáles son las consideraciones especiales a tener en cuenta al necesitar colaboradores o asesores para trabajar legalmente como inmigrante indocumentado en el marco Hydrogen de Shopify?`,
+          spanish: true,
+          tooltip: ``,
+        },
+        shop: {
+          completed: false,
+          impact: 100,
+          action: `comercio`,
+          icon: `🛍️`,
+          request: `Muy bien hermano, muéstrame lo que tienes. Quiero comprar y apoyar más esta red.`,
+          response: `¡excelente! Eche un vistazo a nuestros patrocinadores que apoyan el crecimiento de Robots Building Education aquí: un día :)`,
+          spanish: true,
+          tooltip: ``,
+        },
+      },
+    },
+    // "Build For Community": {
+    //   documentID: ``,
+    //   filler: ``,
+    //   new: true,
+    //   highValue: false,
+    //   underConstruction: true,
+    //   completed: false,
+    //   needsImprovement: false,
+    //   rare: true,
+    //   tooltip: ``,
+    //   sourceType: `markdown`, // may not need
+    //   button: `Universal Basic Income`, // may not need - `name`
+    //   header: `Robots Building Education`,
+    //   fileSource: await import("../../markdowns/learn.md?raw"), // may not need
+
+    //   prompts: {
+    //     patreon: {
+    //       completed: false,
+    //       impact: 1000,
+    //       action: `generate`,
+    //       icon: `✍️`,
+    //       request: `ms. roxana, can you please generate an essay that introduces me to ${ultimateEffeciencyJutsu(
+    //         `Build For Community`
+    //       )}?`,
+    //       response: `null`,
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+    //     inspire: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `inspire`,
+    //       icon: `⚡`,
+    //       request: `ms. roxana, can you please share a potential future with the ${ultimateEffeciencyJutsu(
+    //         `Build For Community`
+    //       )}?`,
+    //       response: `\n\nSure! In the future, it's possible that bitcoin, automation, and universal basic income could all converge to create a new form of financial system. Under this system, individuals could receive an automated universal basic income that is denominated in a uniform cryptocurrency, such as Bitcoin, giving individuals the freedom to purchase goods and services instantly and securely using a digital payment method. In addition, individuals would have access to a multitude of automated tools to manage their finances, such as automated savings and investments tools that maximize returns and minimize risk. This system could also help to reduce poverty and inequality, as it would make it easy for everyone to access basic financial services, regardless of location or class.`,
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+    //     summarize: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `summarize`,
+    //       icon: `📚`,
+    //       request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
+    //         `Build For Community`
+    //       )}?`,
+    //       response: `\n\nBitcoin relies heavily on automation. Automation is the integration of technology in the process of completing certain tasks, and it helps to reduce the need for human labor. Bitcoin transactions are almost entirely automated, and this automation creates a strong case for the implementation of universal basic income (UBI). UBI is a system whereby citizens of a state receive a regular monthly allowance from the government, regardless of their economic standing or whether or not they are currently employed. Automation and the increasing presence of cryptocurrencies like Bitcoin can provide the economic mechanisms for implementing a UBI system, and so it can be seen that the two are linked.`,
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+    //     ask: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `ask`,
+    //       icon: `🔮`,
+    //       request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
+    //         `Build For Community`
+    //       )} with one sentence answers?`,
+    //       response: `\n\n1. How does Bitcoin interact with automation? Answer: Bitcoin is used to facilitate instantaneous payment transfers, enabling automated transactions between two parties.\n2. What is the relationship between Bitcoin and Universal Basic Income? Answer: Universal Basic Income is a policy concept which can be supported through the use of Bitcoin, due to its transparency and low transaction costs.\n3. How does automation impact the use of Bitcoin? Answer: Automation can be used to simplify the process of transactting with Bitcoin, such as through digital wallets and automated trading bots.`,
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+    //     guide: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `guide`,
+    //       icon: `🤝`,
+    //       request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
+    //         `Build For Community`
+    //       )}?`,
+    //       response: `\n\n1. Definition of Bitcoin – what it is, key features and how it works\n2. Impact of Automation on Employment and its related implications\n3. Potential Benefits of Universal Basic Income\n4. Possibility of Bitcoin and Automation to Enhance UBI\n5. Challenges and Obstacles in Implementing Bitcoin and Automation for UBI\n6. Prospects of Bitcoin as a Potential Solution to Enhance UBI\n7. Relationship between Bitcoin, Automation and UBI in Terms of Asset Distribution\n8. Advantages of UBI in the Context of Bitcoin and Automation\n9. Regulatory Issues Surrounding the Deployment of a UBI Scheme Using Bitcoin and/or Automation\n10. The Social and Economic Implications of Bitcoin, Automation and UBI`,
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+    //     demonstrate: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `demonstrate`,
+    //       icon: `🎨`,
+    //       request: `ms. roxana, can you please show me an example of how proof of work can work in education?`,
+    //       response: `\n\nAn example of how proof of work can work in education is through the utilization of advanced testing techniques. For example, if a student must complete an online course, they must first complete a assignment or test. After they complete the initial assignment or test, they must then provide proof of their progress by working to answer harder questions, or taking a more advanced course. By utilizing challenges that only certain students can complete, the instructor will have proof that the student actually completed the coursework.`,
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+    //     define: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `define`, // may not need
+    //       icon: `🧿`, // may not need
+    //       request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
+    //         `Build For Community`
+    //       )} in exactly one sentence?`,
+    //       response: `\n\nThe combination of automation and Bitcoin technologies could theoretically provide a Universal Basic Income to all individuals.`,
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+
+    //     quiz: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `quiz`,
+    //       icon: `🧪`,
+    //       request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
+    //         `Build For Community`
+    //       )}?`,
+    //       response: `\n\n1. What is the connection between Bitcoin, Automation, and Universal Basic Income (UBI)?\n\n2. In what ways could Automation lead to the implementation of UBI?\n\n3. How could decentralized digital currencies such as Bitcoin be used to fund a UBI system?`,
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+    //     shop: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `shop`,
+    //       icon: `🛍️`,
+    //       request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
+    //       response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+    //   },
+    // },
+    // "Build For Teachers": {
+    //   documentID: ``,
+    //   filler: ``,
+    //   new: true,
+    //   highValue: false,
+    //   underConstruction: false,
+    //   completed: false,
+    //   needsImprovement: false,
+    //   tooltip: ``,
+    //   sourceType: `markdown`, // may not need
+    //   button: `Pedagogy`, // may not need - `name`
+    //   header: `Educate`,
+    //   fileSource: await import("../../markdowns/educate.md?raw"), // may not need
+
+    //   prompts: {
+    //     patreon: {
+    //       completed: false,
+    //       impact: 1000,
+    //       action: `generate`,
+    //       icon: `✍️`,
+    //       request: `ms. roxana, can you please generate an essay that introduces me to ${ultimateEffeciencyJutsu(
+    //         `Build For Teachers`
+    //       )}?`,
+    //       response: `null`,
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+    //     inspire: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `inspire`,
+    //       icon: `⚡`,
+    //       request: `ms. roxana, can you please share how an app like ${ultimateEffeciencyJutsu(
+    //         `Build For Teachers`
+    //       )} would be useful?`,
+    //       response: `\n\nGitHub for teachers would be a great way for educators to share resources and collaborate on projects, discuss teaching methods and topics, and generally support each other. Teachers could use it to find, share, and discuss high-quality teaching resources, ranging from lesson plans to instructional materials and activities. Teachers could post questions and look for advice and troubleshooting ideas, or connect with colleagues in different states or countries to gain another perspective. With GitHub for teachers, collaboration would become easier, enabling teachers to collaborate on large projects with fewer IT headaches and time constraints.`,
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+    //     summarize: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `summarize`,
+    //       icon: `📚`,
+    //       request: `ms. roxana, can you please summarize the basics of how an app like ${ultimateEffeciencyJutsu(
+    //         `Build For Teachers`
+    //       )} would work?`,
+    //       response: `\n\nGitHub for teachers is an app that makes it easy for teachers to collaborate and share materials with other teachers by using version-control and git repository, which are services that enable users to track changes to files over time. It provides a simple way for teachers to store, share and access lesson plans, worksheets, and other teaching materials with peers. Using GitHub for teachers, teachers can create private, public, and \"organization\" repositories. Repositories are collections of folders and files related to a particular lesson or project. When changes are made to a file, the repository automatically records and stores a version of the file that can be referenced in the future. In addition to collaboration, teachers can also use the app to assess student work, request feedback from other teachers and mentors on lesson plans, and track the progress of their teaching materials over time.`,
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+    //     ask: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `ask`,
+    //       icon: `🔮`,
+    //       request: `ms. roxana, can you please show me three frequently asked beginner questions about an app designed like ${ultimateEffeciencyJutsu(
+    //         `Build For Teachers`
+    //       )} with one sentence answers?`,
+    //       response: `\n\n1. How do I create a classroom on the app? - You can create a classroom by registering for your account and following the setup instructions. \n2. How do I invite my students to a classroom? - You can invite your students through the app by clicking the \"Invite Student\" button in the classroom settings.\n3. What can I do with the app? - The app allows teachers to create and manage classrooms, assign tasks and assignments, track student progress, and more.`,
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+    //     guide: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `guide`,
+    //       icon: `🤝`,
+    //       request: `ms. roxana, can you please create a study guide for app designed like ${ultimateEffeciencyJutsu(
+    //         `Build For Teachers`
+    //       )}?`,
+    //       response: `\n\n1. Understand the features and functionality of the GitHub app designed for teachers.\n2. Familiarize yourself with the user interface and navigation of the app.\n3. Become familiarized with the different ways that students can submit work via the app.\n4. Set up notifications for new assignments and due dates to ensure students stay on track.\n5. Use the gradebook feature to track student progress and share feedback easily with students.\n6. Explore options for different ways to assess student performance, such as rubrics and PDFs.\n7. Understand how to easily share resources, such as reading material, videos, and worksheets with the entire class or individual students.\n8. Utilize the messaging feature to communicate with other teachers and collaborate on projects.\n9. Familiarize yourself with the app’s security and privacy settings to ensure student data is safe and secure.\n10. Conduct research on best practices for using the app more effectively as a tool for learning.`,
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+    //     demonstrate: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `demonstrate`,
+    //       icon: `🎨`,
+    //       request: `ms. roxana, can you please show me an example of how an app like ${ultimateEffeciencyJutsu(
+    //         `Build For Teachers`
+    //       )} would work?`,
+    //       response: `\n\nGitHub for teachers is an app that would allow teachers to store their lesson plans, project ideas, digital materials, student assignments, and other educational documents in the cloud. It would also make it easy for teachers to collaborate with colleagues by sharing these documents or adding comments/feedback to them. With the app, teachers would be able to securely back up their work, track changes to documents over time, and easily collaborate with colleagues. It would also allow teachers to easily search for other educators’ education-related documents or materials, which could help them stay up-to-date on the latest best practices and educational ideas.`,
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+    //     define: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `define`, // may not need
+    //       icon: `🧿`, // may not need
+    //       request: `ms. roxana, can you please define an app like ${ultimateEffeciencyJutsu(
+    //         `Build For Teachers`
+    //       )} in exactly one sentence?`,
+    //       response: `\n\nGitHub is a version control platform that helps teachers store, organize, and collaborate on teaching materials.`,
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+
+    //     quiz: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `quiz`,
+    //       icon: `🧪`,
+    //       request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about an app designed like ${ultimateEffeciencyJutsu(
+    //         `Build For Teachers`
+    //       )}?`,
+    //       response: `\n\n1. What is the main purpose of an app designed like GitHub for teachers?\n2. What type of information can teachers store using an app like GitHub?\n3. What features of GitHub make it particularly useful for teachers?`,
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+    //     shop: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `shop`,
+    //       icon: `🛍️`,
+    //       request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
+    //       response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+    //   },
+    // },
+    // "Social Chat": {
+    //   documentID: ``,
+    //   filler: ``,
+    //   new: true,
+    //   highValue: false,
+    //   underConstruction: false,
+    //   completed: false,
+    //   needsImprovement: false,
+    //   tooltip: ``,
+    //   sourceType: `markdown`, // may not need
+    //   button: `Tap In Chat`, // may not need - `name`
+    //   header: `Subscribe to read DMs`,
+    //   fileSource: await import("../../markdowns/chatApp.md?raw"), // may not need
+
+    //   prompts: {
+    //     patreon: {
+    //       completed: false,
+    //       impact: 1000,
+    //       action: `generate`,
+    //       icon: `✍️`,
+    //       request: `ms. roxana, can you please generate an essay that introduces me to ${ultimateEffeciencyJutsu(
+    //         `Social Chat`
+    //       )}?`,
+    //       response: `null`,
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+    //     inspire: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `inspire`,
+    //       icon: `⚡`,
+    //       request: `ms. roxana, can you please explain how a ${ultimateEffeciencyJutsu(
+    //         `Social Chat`
+    //       )} can be useful?`,
+    //       response:
+    //         "\n\nChat apps that allow users to subscribe to other people's private chats can be a great way to stay connected and up to date with friends and family. Since these chats are private, they often contain more intimate conversations, giving users a better insight into the people they're subscribing to. Additionally, these chats can be used as an important part of staying in touch with those that are important to you, allowing you to receive regular updates and comments.",
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+    //     summarize: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `summarize`,
+    //       icon: `📚`,
+    //       request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
+    //         `Social Chat`
+    //       )}?`,
+    //       response:
+    //         "\n\nA chat app with private chat subscriptions allows users to subscribe to private conversations between two people or groups. Users must provide their personal details to verify their identity and be approved as a subscriber. This allows subscribers to message and communicate with the participants involved in the private chat, as well as post comments. Subscribers must be approved by the participants to follow the private conversations.",
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+    //     ask: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `ask`,
+    //       icon: `🔮`,
+    //       request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
+    //         `Social Chat`
+    //       )} with one sentence answers?`,
+    //       response: `\n\n1. What is a chat app? - A chat app is an application that allows users to send and receive text, audio and/or visual messages. \n\n2. How do I subscribe to someone's private chat? - You can subscribe to someone's private chat by visiting their profile page and selecting the \"Subscribe\" option. \n\n3. How do I start a chat with someone? - You can start a chat with someone by selecting the chat icon in the top navigation bar and selecting the person you'd like to chat with.`,
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+    //     guide: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `guide`,
+    //       icon: `🤝`,
+    //       request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
+    //         `Social Chat`
+    //       )}?`,
+    //       response: `\n\nStudy Guide for a Chat App: \n1. Understand the concept of private chatting and why users may want to use this feature. \n2. Learn the different types of private chat features available in the app.\n3. Become familiar with the functions available in private chats.\n4. Explore the process for subscribing to someone’s private chat.\n5. Understand the benefits of subscribing to private chats.\n6. Learn about user privacy and security in private chats.\n7. Research the security policy for private chats.\n8. Examine application speed and reliability for private chats.\n9. Learn about the cost associated with private chatting. \n10. Test various private chat features and assess the user experience.`,
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+    //     demonstrate: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `demonstrate`,
+    //       icon: `🎨`,
+    //       request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
+    //         `Social Chat`
+    //       )}`,
+    //       response:
+    //         "\n\nRather than creating group chats with others, people would network and communicate with one another privately, but publicly allowing their chats to be read by outsiders.",
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+    //     define: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `define`, // may not need
+    //       icon: `🧿`, // may not need
+    //       request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
+    //         `Social Chat`
+    //       )} in exactly one sentence?`,
+    //       response: `\n\nA chat app that allows users to subscribe to and follow private conversations between individuals.`,
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+
+    //     quiz: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `quiz`,
+    //       icon: `🧪`,
+    //       request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
+    //         `Social Chat`
+    //       )}?`,
+    //       response: `\n\n1. What is the most important security feature of a chat app that allows users to subscribe to private chats?\n\n2. How does the chat app appreciate the data privacy of its users who subscribe to private chats?\n\n3. How does the chat app monitor the activities of users who subscribe to private chats to ensure they remain secure and private?`,
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+    //     shop: {
+    //       completed: false,
+    //       impact: 100,
+    //       action: `shop`,
+    //       icon: `🛍️`,
+    //       request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
+    //       response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
+    //       spanish: ``,
+    //       tooltip: ``,
+    //     },
+    //   },
+    // },
+  },
+  "Computer Science (older version)": {
+    "Programming Languages": {
+      documentID: ``,
+      filler: ``,
+
+      hasCode: false,
+      highValue: false,
+      underConstruction: false,
+      completed: false,
+      rare: false,
+      needsImprovement: false,
+      new: true,
+      tooltip: ``,
+      sourceType: `video`, // may not need
+      button: `Programming Languages`, // may not need - `name`
+      header: `Programming Languages`,
+      fileSource:
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674725780/download_19_gintiu.mp4", // may not need
+
+      prompts: {
+        patreon: {
+          completed: false,
+          impact: 1000,
+          action: `generate`,
+          icon: `►`, //`✍️`
+          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
+            `Programming Languages`
+          )}?`,
+          response: `null`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        inspire: {
+          completed: false,
+          impact: 100,
+          action: `inspire`,
+          icon: `⚡`,
+          request: `ms. roxana, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
+            `Programming Languages`
+          )}?`,
+          response: `\n\nOne inspiring story that comes to mind is the story of Grace Hopper, an American computer scientist and United States Navy officer. She is widely credited as being the inventor of the first compiler for a computer programming language, making software programming more accessible and easier to complete. She also helped develop the first English-like programming language, COBOL, which is still widely used today. Her work opened up the field of computer programming and she helped create the groundwork for modern programming languages. She was a true pioneer in the world of computer science and is an inspiring role model for anyone considering entering into the field.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        summarize: {
+          completed: false,
+          impact: 100,
+          action: `summarize`,
+          icon: `📚`,
+          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
+            `Programming Languages`
+          )}?`,
+          response: `\n\nThe basics of the theory of programming languages include the concept of a programming language, which is a formal system designed for writing as well as executing a sequence of instructions. This code is then compiled, partially evaluated, or interpreted for a target machine (e.g., a computer), which deploys it for a particular task. Programming language theory examines the design, implementation, and definition of programming languages, as well as their application in the software industry. It looks at the syntax, semantics, formal correctness, and compilation of programming language construction, as well as its application domains, such as programming language design, language processing systems, database systems, operating systems, artificial intelligence, computer graphics, and natural language processing.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        ask: {
+          completed: false,
+          impact: 100,
+          action: `ask`,
+          icon: `🔮`,
+          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
+            `Programming Languages`
+          )} with one sentence answers?`,
+          response: `\n\n1. What is a programming language? - A programming language is a structured language used to write programs for a computer.\n2. What is type checking? - Type checking is the process of verifying and enforcing restrictions on the data types used in a program.\n3. What are the common goals of programming language design? - Common goals of programming language design include code readability, modularity, reusability and scalability.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        guide: {
+          completed: false,
+          impact: 100,
+          action: `guide`,
+          icon: `🤝`,
+          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
+            `Programming Languages`
+          )}?`,
+          response: `\n\n1. Understand the concept of syntax and context-free grammars \n2. Understand the concept of types and type systems\n3. Identify and distinguish different programming paradigms\n4. Understand the principles of denotational and operational semantics\n5. Know the process of compilation of a program \n6. Be familiar with the Pragmatics of language design\n7. Investigate the strengths and weaknesses of language features\n8. Understand how garbage collection and exception handling works\n9. Understand language modularization, abstraction and encapsulation\n10. Understand memory management, references and aliasing`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        demonstrate: {
+          completed: false,
+          impact: 100,
+          action: `demonstrate`,
+          icon: `🎨`,
+          request: `ms. roxana, can you please explain an example of a pumping lemma in the theory of formal programming languages?`,
+          response: `\n\nA pumping lemma is a fundamental tool used to prove that certain types of languages are not regular. The pumping lemma states that if a language is regular, then there must exist a certain number, known as the “pumping constant”, such that any string in the language of length greater than the pumping constant may be “pumped”, or divided into three parts, in such a way that when any of those parts are repeated an arbitrary number of times, the resulting string will still be in the language. \n\nFor example, let's say that the language L consists of all strings of a's, b's, and c's where the number of a's, b's, and c's are all the same. If a string in language L has length n and n is greater than the pumping constant, then that string may be divided into three parts consisting of x, y, and z such that xy^iz is still a valid string in language L for any positive integer i. In other words, if we take any string of length n in L, and break it into three parts x, y, and z such that x and z are non-empty, then any string of the form xy^iz (with a positive integer i) will still be a valid string in L. \n\nThus, if there is any language that cannot fulfill this requirement, then that language is not regular. The pumping lemma provides a useful tool in recognizing and determining which languages are and are not regular.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        define: {
+          completed: false,
+          impact: 100,
+          action: `define`, // may not need
+          icon: `🧿`, // may not need
+          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
+            `Programming Languages`
+          )} in exactly one sentence?`,
+          response: `\n\nThe Theory of Programming Languages is the study of the structure, implementation, and definition of programming languages and systems.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+
+        quiz: {
+          completed: false,
+          impact: 100,
+          action: `quiz`,
+          icon: `🧪`,
+          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
+            `Programming Languages`
+          )}?`,
+          response: `\n\n1. What are the four main components of a programming language?\n2. What are the differences between procedural and object-oriented programming?\n3. What is a compiler and why is it important for programming languages?`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        shop: {
+          completed: false,
+          impact: 100,
+          action: `shop`,
+          icon: `🛍️`,
+          request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
+          response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+      },
+    },
+    Recursion: {
+      documentID: ``,
+      filler: ``,
+
+      highValue: false,
+      hasCode: true,
+      underConstruction: false,
+      completed: false,
+      needsImprovement: false,
+      new: true,
+      tooltip: ``,
+      sourceType: `video`, // may not need
+      button: `Recursion`, // may not need - `name`
+      header: `Recursion`,
+      fileSource:
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674725818/download_20_bjmac7.mp4", // may not need
+
+      prompts: {
+        patreon: {
+          completed: false,
+          impact: 1000,
+          action: `generate`,
+          icon: `►`, //`✍️`
+          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
+            `Recursion`
+          )}?`,
+          response: `null`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        inspire: {
+          completed: false,
+          impact: 100,
+          action: `inspire`,
+          icon: `⚡`,
+          request: `ms. roxana, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
+            `Recursion`
+          )}?`,
+          response: `\n\nOne inspiring story of recursion concerns a man named Jakob Bernoulli (1654–1705), a Swiss mathematician and physicist. He studied the art of recursive patterns in nature, such as the spirals of a nautilus shell, and developed the mathematical foundations for the modern concept of recursion. He even wrote about this topic in 1713: “The is, indeed, an admirable mystery in the altitude of figures which terminate a spiral line, the descent of which slides insensibly from circumference to the centre.” This showed a deep appreciation for recursive patterns, and it inspired mathematicians for centuries to come.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        summarize: {
+          completed: false,
+          impact: 100,
+          action: `summarize`,
+          icon: `📚`,
+          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
+            `Recursion`
+          )}?`,
+          response: `\n\nRecursion is a way of breaking a problem into smaller parts of the same problem and repeating a process, called the recursive step, until the problem is solved. In other words, it’s a method of solving a problem by breaking it down into simpler versions of the same problem until a solution is found. In programming, it's used to solve problems relating to iterations, algorithms and data structures.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        ask: {
+          completed: false,
+          impact: 100,
+          action: `ask`,
+          icon: `🔮`,
+          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
+            `Recursion`
+          )} with one sentence answers?`,
+          response: `\n\n1. What is recursion? - Recursion is a programming technique which involves a method calling itself.\n2. How does recursion work? - Recursion works by breaking a problem down into smaller subproblems, each of which is solved using the same algorithm.\n3. What is the base case of a recursive problem? - The base case is the condition which tells the algorithm when to stop recursing, and start returning values up the stack.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        guide: {
+          completed: false,
+          impact: 100,
+          action: `guide`,
+          icon: `🤝`,
+          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
+            `Recursion`
+          )}?`,
+          response: `\n\n1. Understand what recursion is and how it works. \n2. Describe the advantages and disadvantages of using recursion.\n3. Identify the base case and recursive case of a problem.\n4. Identify tail recursion and understand how it is executed.\n5. Explain the differences between linear recursion and binary recursion. \n6. Understand the relationship between recursion and iteration.\n7. Explain the concept of recursion space complexity.\n8. Design an algorithm using recursion.\n9. Understand how recursion can be used to generate relationships between data sets.\n10. Develop an understanding of how the principles of recursion can be applied in problem solving.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        demonstrate: {
+          completed: false,
+          impact: 100,
+          action: `demonstrate`,
+          icon: `🎨`,
+          request: `ms. roxana, can you please show me an example of a fibonacci sequence  done recursively in python?`,
+          response: `\n\ndef fibonacci(n): \n    if n <= 1: \n        return n \n    else: \n        return(fibonacci(n-1) + fibonacci(n-2)) \n\n# test\nfor n in range(10):\n    print(fibonacci(n))`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        define: {
+          completed: false,
+          impact: 100,
+          action: `define`, // may not need
+          icon: `🧿`, // may not need
+          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
+            `Recursion`
+          )} in exactly one sentence?`,
+          response: `\n\nRecursion is a process whereby a function calls itself repeatedly until a given condition is satisfied.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        quiz: {
+          completed: false,
+          impact: 100,
+          action: `quiz`,
+          icon: `🧪`,
+          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
+            `Recursion`
+          )}?`,
+          response: `\n\n1. What is the definition of recursion?\n2. What is a potential use case of recursion in computer programming?\n3. How can you control the execution of recursion to prevent it from entering an infinite loop?`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        shop: {
+          completed: false,
+          impact: 100,
+          action: `shop`,
+          icon: `🛍️`,
+          request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
+          response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+      },
+    },
+    "Linked Lists": {
+      documentID: ``,
+      filler: ``,
+      hasCode: true,
+      new: true,
+      highValue: false,
+      underConstruction: false,
+      completed: false,
+      needsImprovement: false,
+      tooltip: ``,
+      sourceType: `video`, // may not need
+      button: `Linked Lists`, // may not need - `name`
+      header: `Linked Lists`,
+      fileSource:
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674725865/download_21_k9d6in.mp4", // may not need
+
+      prompts: {
+        patreon: {
+          completed: false,
+          impact: 1000,
+          action: `generate`,
+          icon: `►`, //`✍️`
+          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
+            `Linked Lists`
+          )}?`,
+          response: `null`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        inspire: {
+          completed: false,
+          impact: 100,
+          action: `inspire`,
+          icon: `⚡`,
+          request: `ms. roxana, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
+            `Linked Lists`
+          )}?`,
+          response: `\n\nThere is an inspiring story about a computer science professor who, despite all odds, found a way to use linked-lists in a creative and useful way. The professor was teaching a course on data structures and devoted a considerable amount of time to helping her students understand linked-lists. One student, however, wasn't getting the concept and was failing the course. In desperation, the professor asked the student to come to her for help and began to explain linked-lists again, this time, using everyday examples. After some time, the student finally understood the concept and together, they began brainstorming on how to apply linked-lists to a real life problem. \n\nThe professor asked the student if he was familiar with public transportation schedules, to which the student said yes. The professor continued by asking the student how he would approach the task of creating a complex multi-route journey planner given the data available to him. This is when it clicked for the student. Using linked-lists, he rearranged the data into a tree-like structure and was able to come up with a workable solution to the problem.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        summarize: {
+          completed: false,
+          impact: 100,
+          action: `summarize`,
+          icon: `📚`,
+          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
+            `Linked Lists`
+          )}?`,
+          response: `\n\nLinked lists are a data structure used to store sequences of data elements in a linear fashion. Each element is connected to its neighbor in the sequence with a link (pointer) to the next element. An element in a linked list is known as a node and typically contains two parts; data and the link to the next element. Linked lists can be implemented in almost any language and can be used to store and retrieve objects in a dynamic manner. They are commonly used for sorting, searching and manipulating data.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        ask: {
+          completed: false,
+          impact: 100,
+          action: `ask`,
+          icon: `🔮`,
+          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
+            `Linked Lists`
+          )} with one sentence answers?`,
+          response: `\n\n1. What is a linked list? - A linked list is a data structure consisting of a chain of nodes connected by links or pointers.\n2. What is the difference between an array and a linked list? - An array stores data in a contiguous, or sequential, block of memory whereas a linked list stores data in separate nodes connected by links.\n3. How are linked lists useful? - Linked lists are useful because they use memory efficiently and have fast insertion and deletion capabilities.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        guide: {
+          completed: false,
+          impact: 100,
+          action: `guide`,
+          icon: `🤝`,
+          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
+            `Linked Lists`
+          )}?`,
+          response: `\n\n1. Understand the purpose of a linked list and its nature as a linear, dynamic data structure\n2. Recognize that a linked list is composed of nodes and each node stores a piece of data and reference to another node\n3. Understand the components of a node: data and next, and the role of the dummy node in a linked list\n4. Know the key operations of a linked list: insertion (add new element to start, node at specific location, end of linked list), deletion, search (sequential and binary search)\n5. Be able to differentiate between a singly- and a doubly-linked list\n6. Know how to iterate through a linked list to traverse and access its elements\n7. Know the difference between a linked list and an array, when to choose one over the other\n8. Understand the advantages and disadvantages of using a linked list\n9. Know common applications of linked lists such as stacks, queues and hash tables\n10. Understand the concept of memory management when creating linked list objects`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        demonstrate: {
+          completed: false,
+          impact: 100,
+          action: `demonstrate`,
+          icon: `🎨`,
+          request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
+            `Linked Lists`
+          )} with no other text in python?`,
+          response: `\n\nLinked List in Python:\n\nclass Node: \n    def __init__(self, data): \n        self.data = data \n        self.next = None\n  \nclass LinkedList: \n    def __init__(self): \n        self.head = None\n  \n    def push(self, new_data): \n        # 1 & 2: Allocate the Node & Put in the data \n        new_node = Node(new_data) \n\n        # 3. Make next of new Node as head \n        new_node.next = self.head \n  \n        # 4. Move the head to point to new Node  \n        self.head = new_node \n  \n    def printList(self): \n        temp = self.head \n        while (temp): \n            print (temp.data) \n            temp = temp.next`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        define: {
+          completed: false,
+          impact: 100,
+          action: `define`, // may not need
+          icon: `🧿`, // may not need
+          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
+            `Linked Lists`
+          )} in exactly one sentence?`,
+          response: `\n\nA linked list is a dynamic data structure of sequentially linked memory elements.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+
+        quiz: {
+          completed: false,
+          impact: 100,
+          action: `quiz`,
+          icon: `🧪`,
+          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
+            `Linked Lists`
+          )}?`,
+          response: `\n\n1. What characteristic do linked lists have that differentiates them from other data structures?\n2. What is the purpose of a sentinel node in a linked list?\n3. What are the advantages of using a linked list over an array?`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        shop: {
+          completed: false,
+          impact: 100,
+          action: `shop`,
+          icon: `🛍️`,
+          request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
+          response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+      },
+    },
+    "Link Traversal": {
+      documentID: ``,
+      filler: ``,
+      new: true,
+      hasCode: true,
+      highValue: false,
+      underConstruction: false,
+      completed: false,
+      needsImprovement: false,
+      tooltip: ``,
+      sourceType: `video`, // may not need
+      button: `Link Traversal`, // may not need - `name`
+      header: `Link Traversal`,
+      fileSource:
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674725908/download_22_rjgmqs.mp4", // may not need
+
+      prompts: {
+        patreon: {
+          completed: false,
+          impact: 1000,
+          action: `generate`,
+          icon: `►`, //`✍️`
+          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
+            `Link Travel`
+          )}?`,
+          response: `null`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        inspire: {
+          completed: false,
+          impact: 100,
+          action: `inspire`,
+          icon: `⚡`,
+          request: `ms. roxana, can you please share how linked lists work in neural networks?`,
+          response: `\n\nLinked lists are generally used to represent the layers of a neural network. They can be used to represent how the nodes in each layer is connected to one another. A linked list stores a collection of values, called nodes, and each node contains an associated value as well as a pointer to the address of the next node in the structure. This allows neural networks to quickly retrieve a specific node without having to traverse the entire list.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        summarize: {
+          completed: false,
+          impact: 100,
+          action: `summarize`,
+          icon: `📚`,
+          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
+            `Link Travel`
+          )}?`,
+          response: `\n\nTraversing a linked list means to iterate through all elements in the list. To begin, you'll need to create a variable to store the head of the list. You will then want to iterate through the list until you reach the tail. As you iterate, you'll want to access each element and/or perform some action. When you're done, you'll set the variable to the next element and continue until the tail is reached. \n\nTraversing a tree means to visit each node in the tree, either in a pre-order, in-order, or post-order approach. In a pre-order approach, you would first process the root node, followed by all its left-subtree, and then all its right-subtree. In an in-order approach, you would first process the left-subtree, followed by the root node, and then the right-subtree. In a post-order approach, you would process each left-subtree and right-subtree first, followed by the root node.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        ask: {
+          completed: false,
+          impact: 100,
+          action: `ask`,
+          icon: `🔮`,
+          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
+            `Link Travel`
+          )} with one sentence answers?`,
+          response: `\n\n1. How do I start traversing a linked list? - Begin the traversal by starting at the head node.\n2. How do I traverse a binary tree? - Traverse a binary tree by recursively visiting the left and right nodes.\n3. What is post-order traversal? - Post-order traversal is when you visit the left and right children of a node before the node itself.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        guide: {
+          completed: false,
+          impact: 100,
+          action: `guide`,
+          icon: `🤝`,
+          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
+            `Link Travel`
+          )}?`,
+          response: `\n\n1. Understand the differences between a linked list and a tree.\n2. Learn the basic components of a linked list: head node, tail node, and data node.\n3. Understand the purpose of a linked list: to store data in linear order.\n4. Understand the basic components of a tree: root, branch, and leaf.\n5. Learn about the different types of trees: binary search tree, red-black tree, AVL tree, etc.\n6. Learn about traversing trees: pre-order, post-order, and in-order traversal.\n7. Understand the steps involved in a tree traversal: analyze the current node, traverse the left subtree, traverse the right subtree.\n8. Learn how to traverse both linked lists and trees using iterative and recursive techniques.\n9. Practice coding the traversal algorithms.\n10. Understand the Big-O runtime of the traversal algorithms.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        demonstrate: {
+          completed: false,
+          impact: 100,
+          action: `demonstrate`,
+          icon: `🎨`,
+          request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
+            `Link Travel`
+          )} with no other text in python?`,
+          response: `\n\nTraversing a linked list: \n\nclass Node: \n    def __init__(self, data): \n        self.data = data \n        self.next = None\n\nclass LinkedList: \n    def __init__(self): \n        self.head = None\n\n    def traverse(self): \n        current = self.head\n\n        while current is not None: \n            print(current.data)\n            current = current.next \n\n\nTraversing a tree: \n\nclass Node: \n    def __init__(self, data): \n        self.data = data \n        self.left = None \n        self.right = None\n\ndef traverse(root): \n    if root is not None: \n\n        traverse(root.left) \n        print(root.data) \n        traverse(root.right)`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        define: {
+          completed: false,
+          impact: 100,
+          action: `define`, // may not need
+          icon: `🧿`, // may not need
+          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
+            `Link Travel`
+          )} in exactly one sentence?`,
+          response: `\n\nTraversing linked lists and trees involves systematically visiting each node or item in the structure, usually in a specific order.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+
+        quiz: {
+          completed: false,
+          impact: 100,
+          action: `quiz`,
+          icon: `🧪`,
+          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
+            `Link Travel`
+          )}?`,
+          response: `\n\n1. What is the difference between a linked list and a tree?\n2. What is the time complexity of traversing a linked list using a recursive algorithm?\n3. How can memory be saved when traversing a tree using a breadth-first search?`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        shop: {
+          completed: false,
+          impact: 100,
+          action: `shop`,
+          icon: `🛍️`,
+          request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
+          response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+      },
+    },
+    "Link Swapping": {
+      documentID: ``,
+      filler: ``,
+      new: true,
+      hasCode: true,
+      highValue: false,
+      underConstruction: false,
+      completed: false,
+      needsImprovement: false,
+      tooltip: ``,
+      sourceType: `video`, // may not need
+      button: `Link Swapping`, // may not need - `name`
+      header: `Link Swapping`,
+      fileSource:
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674725986/download_23_lbtipl.mp4", // may not need
+
+      prompts: {
+        patreon: {
+          completed: false,
+          impact: 1000,
+          action: `generate`,
+          icon: `►`, //`✍️`
+          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
+            `Link Changing`
+          )}?`,
+          response: `null`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        inspire: {
+          completed: false,
+          impact: 100,
+          action: `inspire`,
+          icon: `⚡`,
+          request: `ms. roxana, can you please social networks and following graphs work?`,
+          response: `\n\nSocial networks are networks of individuals and organizations that are connected to each other based on a common relationship, usually formed through communication and information exchange. Following graphs describe relationships between entities, such as between two people, organizations, or groups. They are typically visualized as lines or arrows that connect the entities, symbolizing their relationships. Following graphs can be used to represent complex social networks and visualize how relationships between individuals or organizations evolve over time.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        summarize: {
+          completed: false,
+          impact: 100,
+          action: `summarize`,
+          icon: `📚`,
+          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
+            `Link Changing`
+          )}?`,
+          response: `\n\nSwapping nodes in a linked list, tree, or graph involves exchanging two nodes and the elements the nodes contain. In a linked list, two adjacent nodes are usually swapped; in a tree, two child nodes can be swapped; and in a graph, two adjacent nodes can be swapped. The process of swapping involves taking the element in one node and placing it in another node while also moving the connecting pointers and relationships between the nodes to maintain the list/tree/graph structure.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        ask: {
+          completed: false,
+          impact: 100,
+          action: `ask`,
+          icon: `🔮`,
+          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
+            `Link Changing`
+          )} with one sentence answers?`,
+          response: `\n\n1. How do I swap two nodes in a linked list? - Swap the data stored in the two nodes.\n2. How do I swap two nodes in a tree? - Traverse the tree to find the nodes, then swap their data.\n3. How do I swap two nodes in a graph? - Traverse the graph to find the nodes, then swap their adjacent edges.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        guide: {
+          completed: false,
+          impact: 100,
+          action: `guide`,
+          icon: `🤝`,
+          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
+            `Link Changing`
+          )}?`,
+          response: `\n\n1. Understand the basic concepts behind linked lists, trees, and graphs\n2. Be familiar with the syntax and the logic that links nodes in these structures\n3. Consider the different kinds of swapping operations available for manipulating nodes (direct swap, data swap, etc.)\n4. Define the elements that need to be exchanged when swapping nodes (pointers, links, or data)\n5. Explore the implications of swapping nodes on the structure (ordering, length, balance, etc.)\n6. Identify the correct sequence of steps when swapping nodes in a linked list, tree, or graph\n7. Develop an understanding of the methods used to traverse and locate nodes within a structure\n8. Compare and contrast the advantages and disadvantages of different node swapping operations\n9. Learn practical strategies for debugging problems encountered when swapping nodes\n10. Practice coding different node swapping operations with different data structures`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        demonstrate: {
+          completed: false,
+          impact: 100,
+          action: `demonstrate`,
+          icon: `🎨`,
+          request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
+            `Link Changing`
+          )} with no other text in javascript?`,
+          response: `\n\nHere is an example of swapping nodes in a linked list in JavaScript: \n\n// Create a Linked List Node \nclass Node { \n  constructor(data) { \n      this.data = data; \n      this.next = null; \n  } \n} \n\n// Create a swapNodes function \nfunction swapNodes(head, p, q) { \n    let current_p = head; \n    let current_q = head; \n    let prev_p = head; \n    let prev_q = head; \n  \n    // Loop until the two nodes are found \n    while (current_p !== null && current_p.data != p.data) { \n        prev_p = current_p; \n        current_p = current_p.next; \n    } \n  \n    while (current_q !== null && current_q.data != q.data) { \n        prev_q = current_q; \n        current_q = current_q.next; \n    } \n  \n    // Check if the nodes were found \n    if (current_p === null || current_q === null) { \n        return; \n    } \n  \n    // If the nodes were found, swap them \n    prev_p.next = current_q; \n    prev_q.next = current_p; \n  \n    // Swap their \"next\" pointers \n    let temp = current_p.next; \n    current_p.next = current_q.next; \n    current_q.next = temp; \n  \n    return head; \n}`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        define: {
+          completed: false,
+          impact: 100,
+          action: `define`, // may not need
+          icon: `🧿`, // may not need
+          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
+            `Link Changing`
+          )} in exactly one sentence?`,
+          response: `\n\nSwapping nodes in a linked list, tree, or graph is the process of exchanging two nodes' positions in the structure.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+
+        quiz: {
+          completed: false,
+          impact: 100,
+          action: `quiz`,
+          icon: `🧪`,
+          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
+            `Link Changing`
+          )}?`,
+          response: `\n\n1. What is the difference between swapping nodes in a linked list, tree, and graph?\n2. What are the steps required to swap two nodes in a linked list?\n3. What algorithm can be used to efficiently swap two nodes in a tree or graph?`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        shop: {
+          completed: false,
+          impact: 100,
+          action: `shop`,
+          icon: `🛍️`,
+          request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
+          response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+      },
+    },
+    Algorithms: {
+      documentID: ``,
+      filler: ``,
+
+      hasCode: true,
+      highValue: false,
+      underConstruction: false,
+      completed: false,
+      needsImprovement: false,
+      new: true,
+      tooltip: ``,
+      sourceType: `video`, // may not need
+      button: `Algorithms`, // may not need - `name`
+      header: `Algorithms`,
+      fileSource:
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674726053/download_24_wkw20z.mp4", // may not need
+
+      prompts: {
+        patreon: {
+          completed: false,
+          impact: 1000,
+          action: `generate`,
+          icon: `►`, //`✍️`
+          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
+            `Algorithms`
+          )}?`,
+          response: `null`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        inspire: {
+          completed: false,
+          impact: 100,
+          robotTouch: true,
+          action: `inspire`,
+          icon: `⚡`,
+          request: `ms. roxana, can you please share how tree and graph algorithms were used for the COVID outbreak?`,
+          response: `\n\nTree and graph algorithms are used in COVID outbreak modeling to analyze data and visualize complex networks and connections that exist between different factors, such as individuals, communities, and environmental conditions and events. These algorithms can be used to track the spread of the disease, predict high-risk areas and disease trajectories, and understand the underlying transmission networks to better inform public health interventions and population-level responses. For example, tree algorithms can be used to build predictive models that identify high-risk trends in transmission, such as locations that are at a higher risk for outbreaks and travel-associated risk. Graph algorithms can be used to map and visualize complex spatial networks and connections that influence the spread of the virus, such as how social contact and movement of people can spread the virus or how healthcare access can impact outcomes. They can also be used to assess resource allocation needs and assist with targeted interventions by accurately forecasting the future spread of the virus.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        summarize: {
+          completed: false,
+          impact: 100,
+          action: `summarize`,
+          icon: `📚`,
+          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
+            `Algorithms`
+          )}?`,
+          response: `\n\nTree algorithms are search algorithms for traversing a tree in order to find specific information. These algorithms can be used to maximize the effectiveness of a search by exploring the complete tree to return the most relevant information. Graph algorithms are a subset of tree algorithms and enable efficient searching of paths between two points in a graph. Graph algorithms are a branch of mathematics that focus on finding the shortest path from one node to another in a graph, or finding the most efficient path using the fewest number of edges.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        ask: {
+          completed: false,
+          impact: 100,
+          action: `ask`,
+          icon: `🔮`,
+          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
+            `Algorithms`
+          )} with one sentence answers?`,
+          response: `\n\n1. What is the difference between Trees and Graphs? Answer: Trees consist of nodes connected by directed, or unidirectional, edges while Graphs consist of nodes connected by bidirectional edges. \n\n2. What is Depth-First Search? Answer: Depth-First Search is a graph traversal algorithm that begins at the root node and explores as far as possible along each branch before backtracking. \n\n3. What is Breadth-First Search? Answer: Breadth-First Search is a graph traversal algorithm that starts from the root node and explores the neighbor nodes first, before moving to the next level neighbors.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        guide: {
+          completed: false,
+          impact: 100,
+          action: `guide`,
+          icon: `🤝`,
+          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
+            `Algorithms`
+          )}?`,
+          response: `\n\n1. Understand the key differences between trees and graphs, including the definition of each structure and the differences of their associated algorithms.\n2. Review the various techniques and processes used to traverse a tree or graph structure, such as depth-first search (DFS), breadth-first search (BFS), and topological sorting.\n3. Learn how to implement the AVL tree data structure and its associated algorithms for balancing and searching.\n4. Grasp the concepts of minimum spanning tree (MST) algorithm, such as Prim’s or Kruskal’s algorithm, and how to compute, store and optimize the structure.\n5. Analyze and understand different graph operations, such as finding the shortest path between two vertices, connectivity and connectivity components.\n6. Comprehend Dijkstra’s Algorithm, Bellman-Ford Algorithm, A* Algorithm and Floyd-Warshell Algorithm, and when and how to use each algorithm.\n7. Grasp techniques and algorithms utilized in network flow optimization problems, including the Maximum Flow Problem and the Minimum Cost Flow Problem.\n8. Learn techniques to traverse the structure of a network flow and calculate maximum and minimum flow values.\n9. Identify Hamiltonian Path and Eulerian Path, and both components needed to solve the Traveling Salesman Problem.\n10. Analyze algorithms used to identify and sort connected components, such as Connected Component Labeling and Kosa-Karu Algorithm.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        demonstrate: {
+          completed: false,
+          impact: 100,
+          action: `demonstrate`,
+          icon: `🎨`,
+          request: `ms. roxana, can you please show me an example of a common tree or graph algorithm in javascript?`,
+          response: `\n\nTree Algorithm:\n\nfunction traverse(node) {\n  if (node === null) {\n    return;\n  }\n  console.log(node.data);\n  traverse(node.left);\n  traverse(node.right);\n}\n\nGraph Algorithm:\n\nfunction visit(vertex) {\n  if (visited[vertex]) {\n    return;\n  }\n  visited[vertex] = true;\n  console.log(vertex);\n  for (let neighbor of neighbors[vertex]) {\n    visit(neighbor);\n  }\n}`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        define: {
+          completed: false,
+          impact: 100,
+          action: `define`, // may not need
+          icon: `🧿`, // may not need
+          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
+            `Algorithms`
+          )} in exactly one sentence?`,
+          response: `\n\nTree algorithms are algorithms which traverse a tree data structure to perform a functional task, while graph algorithms traverse a graph data structure to perform a functional task.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+
+        quiz: {
+          completed: false,
+          impact: 100,
+          action: `quiz`,
+          icon: `🧪`,
+          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
+            `Algorithms`
+          )}?`,
+          response: `\n\n1. What is the difference between a breadth-first search and a depth-first search in terms of tree and graph algorithms?\n\n2. How is Kruskal's algorithm used to find the minimum spanning tree in a graph?\n\n3. What is the difference between a directed graph and an undirected graph with respect to tree and graph algorithms?`,
+          spanish: ``,
+          tooltip: ``,
+        },
+        shop: {
+          completed: false,
+          impact: 100,
+          action: `shop`,
+          icon: `🛍️`,
+          request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
+          response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
+          spanish: ``,
+          tooltip: ``,
+        },
+      },
+    },
+  },
+
+  "Crash Course Version 2 (older version)": {
     "Lesson 1": {
       documentID: `Lesson 1 - Crash Course`,
       filler: ``,
@@ -1903,7 +4594,7 @@ export default LoginForm;
           completed: false,
           impact: 100,
           action: `demonstrate`,
-          icon: `🧿`,
+          icon: `🎨`,
           request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
             `Lesson 1`
           )} with no other text in javascript?`,
@@ -1917,7 +4608,7 @@ export default LoginForm;
           completed: false,
           impact: 100,
           action: `define`, // may not need
-          icon: `👾`, // may not need
+          icon: `🧿`, // may not need
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Lesson 1`
           )} in exactly one sentence?`,
@@ -2053,7 +4744,7 @@ export default LoginForm;
           completed: false,
           impact: 100,
           action: `demonstrate`,
-          icon: `🧿`,
+          icon: `🎨`,
           request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
             `Lesson 2`
           )} with no other text in python?`,
@@ -2065,7 +4756,7 @@ export default LoginForm;
           completed: false,
           impact: 100,
           action: `define`, // may not need
-          icon: `👾`, // may not need
+          icon: `🧿`, // may not need
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Lesson 2`
           )} in exactly one sentence?`,
@@ -2114,7 +4805,7 @@ export default LoginForm;
       button: `3. Creating Objects`, // may not need - `name`
       header: `3. Creating Objects`,
       fileSource:
-        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674220184/download_6_mzx1ss.mp4", // may not need
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1688976548/Video_6_cljclp.mp4", // may not need
 
       prompts: {
         patreon: {
@@ -2179,7 +4870,7 @@ export default LoginForm;
           completed: false,
           impact: 100,
           action: `demonstrate`,
-          icon: `🧿`,
+          icon: `🎨`,
           request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
             `Lesson 3`
           )} with no other text in Java?`,
@@ -2191,7 +4882,7 @@ export default LoginForm;
           completed: false,
           impact: 100,
           action: `define`, // may not need
-          icon: `👾`, // may not need
+          icon: `🧿`, // may not need
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Lesson 3`
           )} in exactly one sentence?`,
@@ -2240,7 +4931,7 @@ export default LoginForm;
       button: `4. Internet Apps`, // may not need - `name`
       header: `4. Internet Apps`,
       fileSource:
-        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674220233/download_7_l6kd1z.mp4", // may not need
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1688976614/Video_7_tr3uts.mp4", // may not need
 
       prompts: {
         patreon: {
@@ -2306,7 +4997,7 @@ export default LoginForm;
           impact: 100,
           action: `demonstrate`,
           humanTouch: true,
-          icon: `🧿`,
+          icon: `🎨`,
           request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
             `Lesson 4`
           )} with no other text in javascript to create a transaction with Stripe?`,
@@ -2318,7 +5009,7 @@ export default LoginForm;
           completed: false,
           impact: 100,
           action: `define`, // may not need
-          icon: `👾`, // may not need
+          icon: `🧿`, // may not need
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Lesson 4`
           )} in exactly one sentence?`,
@@ -2367,7 +5058,7 @@ export default LoginForm;
       button: `5. Loops & Counting`, // may not need - `name`
       header: `5. Loops & Counting`,
       fileSource:
-        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674220261/download_8_gww39e.mp4", // may not need
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1688976614/video_8_t7tvep.mp4", // may not need
       prompts: {
         patreon: {
           completed: false,
@@ -2431,7 +5122,7 @@ export default LoginForm;
           completed: false,
           impact: 100,
           action: `demonstrate`,
-          icon: `🧿`,
+          icon: `🎨`,
           request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
             `Lesson 5`
           )} with no other text in C#?`,
@@ -2443,7 +5134,7 @@ export default LoginForm;
           completed: false,
           impact: 100,
           action: `define`, // may not need
-          icon: `👾`, // may not need
+          icon: `🧿`, // may not need
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Lesson 5`
           )} in exactly one sentence?`,
@@ -2492,7 +5183,7 @@ export default LoginForm;
       button: `6. HTML`, // may not need - `name`
       header: `6. HTML`,
       fileSource:
-        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674220287/download_9_uf9kjn.mp4", // may not need
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1688976512/Video_9_uoedla.mp4", // may not need
 
       prompts: {
         patreon: {
@@ -2558,7 +5249,7 @@ export default LoginForm;
           completed: false,
           impact: 100,
           action: `demonstrate`,
-          icon: `🧿`,
+          icon: `🎨`,
           request: `ms. roxana, can you please show me an example of a box with a name centered using flexbox positioning in ${ultimateEffeciencyJutsu(
             `Lesson 6`
           )} with no other text in HTML?`,
@@ -2570,7 +5261,7 @@ export default LoginForm;
           completed: false,
           impact: 100,
           action: `define`, // may not need
-          icon: `👾`, // may not need
+          icon: `🧿`, // may not need
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Lesson 6`
           )} in exactly one sentence?`,
@@ -2619,7 +5310,7 @@ export default LoginForm;
       button: `7. CSS`, // may not need - `name`
       header: `7. CSS`,
       fileSource:
-        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674220314/download_10_epzusw.mp4", // may not need
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1688976569/video_10_otgaue.mp4", // may not need
 
       prompts: {
         patreon: {
@@ -2685,7 +5376,7 @@ export default LoginForm;
           completed: false,
           impact: 100,
           action: `demonstrate`,
-          icon: `🧿`,
+          icon: `🎨`,
           request: `ms. roxana, can you please show me an example of the box model and flexbox in ${ultimateEffeciencyJutsu(
             `Lesson 7`
           )} with no other text in CSS?`,
@@ -2697,7 +5388,7 @@ export default LoginForm;
           completed: false,
           impact: 100,
           action: `define`, // may not need
-          icon: `👾`, // may not need
+          icon: `🧿`, // may not need
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Lesson 7`
           )} in exactly one sentence?`,
@@ -2747,7 +5438,7 @@ export default LoginForm;
       button: `8. React`, // may not need - `name`
       header: `8. React`,
       fileSource:
-        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674220343/download_11_whqtek.mp4", // may not need
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1688976543/video_11_j3ce46.mp4", // may not need
 
       prompts: {
         patreon: {
@@ -2813,7 +5504,7 @@ export default LoginForm;
           completed: false,
           impact: 100,
           action: `demonstrate`,
-          icon: `🧿`,
+          icon: `🎨`,
           request: `ms. roxana, can you please show me an example of a "login with Google" button in ${ultimateEffeciencyJutsu(
             `Lesson 8`
           )} with no other text in React?`,
@@ -2825,7 +5516,7 @@ export default LoginForm;
           completed: false,
           impact: 100,
           action: `define`, // may not need
-          icon: `👾`, // may not need
+          icon: `🧿`, // may not need
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Lesson 8`
           )} in exactly one sentence?`,
@@ -2874,7 +5565,7 @@ export default LoginForm;
       button: `9. Creating Users`, // may not need - `name`
       header: `9. Creating Users`,
       fileSource:
-        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674220377/download_12_adwen3.mp4", // may not need
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1688976586/video_12_wii6so.mp4", // may not need
 
       prompts: {
         patreon: {
@@ -2939,7 +5630,7 @@ export default LoginForm;
           completed: false,
           impact: 100,
           action: `demonstrate`,
-          icon: `🧿`,
+          icon: `🎨`,
           request: `ms. roxana, can you please show me an example of using ${ultimateEffeciencyJutsu(
             `Lesson 9`
           )} with no other text in ruby?`,
@@ -2951,7 +5642,7 @@ export default LoginForm;
           completed: false,
           impact: 100,
           action: `define`, // may not need
-          icon: `👾`, // may not need
+          icon: `🧿`, // may not need
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Lesson 9`
           )} in exactly one sentence?`,
@@ -3000,7 +5691,7 @@ export default LoginForm;
       button: `10. Database Foundations`, // may not need - `name`
       header: `10. Database Foundations`,
       fileSource:
-        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674220399/download_13_xxdhvo.mp4", // may not need
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1688976542/video_13_kz1ogx.mp4", // may not need
 
       prompts: {
         patreon: {
@@ -3066,7 +5757,7 @@ export default LoginForm;
           completed: false,
           impact: 100,
           action: `demonstrate`,
-          icon: `🧿`,
+          icon: `🎨`,
           request: `ms. roxana, can you please show me an example of noSQL with firebase and SQL and mySQL?`,
           response: `\n\nNoSQL example with Firebase:\n\nConsider a Firebase database that stores student records. A NoSQL approach may store data in a document-like structure like this:\n\n{\n  Name: \"John Doe\",\n  Age: 22,\n  Preferences: {\n    Music: \"Classical\",\n    Language: \"English\"\n  },\n  Grades: {\n    Math: \"A+\",\n    Science: \"B\"\n  }\n}\n\nSQL example with MySQL:\n\nConsider a MySQL database that stores student records. A SQL approach may store data in a table-like structure like this:\n\nCREATE TABLE student_records (\n  Name VARCHAR(255),\n  Age INT,\n  Music VARCHAR(255),\n  Language VARCHAR(255),\n  Math CHAR(2),\n  Science CHAR(2)\n);\n\nINSERT INTO student_records (Name, Age, Music, Language, Math, Science) \nVALUES(\"John Doe\", 22, \"Classical\", \"English\", \"A+\", \"B\");`,
           spanish: ``,
@@ -3076,7 +5767,7 @@ export default LoginForm;
           completed: false,
           impact: 100,
           action: `define`, // may not need
-          icon: `👾`, // may not need
+          icon: `🧿`, // may not need
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Lesson 10`
           )} in exactly one sentence?`,
@@ -3125,7 +5816,7 @@ export default LoginForm;
       button: `11. Backend Clouds`, // may not need - `name`
       header: `11. Backend Clouds`,
       fileSource:
-        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674220422/download_14_lkehax.mp4", // may not need
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1688976562/video_14_xtmdsk.mp4", // may not need
 
       prompts: {
         patreon: {
@@ -3190,7 +5881,7 @@ export default LoginForm;
           completed: false,
           impact: 100,
           action: `demonstrate`,
-          icon: `🧿`,
+          icon: `🎨`,
           request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
             `Lesson 11`
           )} with no other text in python?`,
@@ -3202,7 +5893,7 @@ export default LoginForm;
           completed: false,
           impact: 100,
           action: `define`, // may not need
-          icon: `👾`, // may not need
+          icon: `🧿`, // may not need
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Lesson 11`
           )} in exactly one sentence?`,
@@ -3252,7 +5943,7 @@ export default LoginForm;
       button: `12. Operating Systems & Machines`, // may not need - `name`
       header: `12. Operating Systems & Machines`,
       fileSource:
-        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674220456/download_15_um5siz.mp4", // may not need
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1688976596/video_15_ripydd.mp4", // may not need
 
       prompts: {
         patreon: {
@@ -3318,7 +6009,7 @@ export default LoginForm;
           humanTouch: true,
           impact: 100,
           action: `demonstrate`,
-          icon: `🧿`,
+          icon: `🎨`,
           request: `ms. roxana, can you please show me an example of kernel code written in C++?`,
           response: `\n\nHere is an example of kernel code written in C++:\n\n// Kernel code in C++ \n__global__ void simple_kernel(int *data) \n{ \n    int tid = threadIdx.x;\n    int i = blockIdx.x * blockDim.x + threadIdx.x;\n\n    // Kernel code here\n    data[i] *= 2; \n}`,
           spanish: ``,
@@ -3328,7 +6019,7 @@ export default LoginForm;
           completed: false,
           impact: 100,
           action: `define`, // may not need
-          icon: `👾`, // may not need
+          icon: `🧿`, // may not need
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Lesson 12`
           )} in exactly one sentence?`,
@@ -3377,7 +6068,7 @@ export default LoginForm;
       button: `13. Setting Up An App`, // may not need - `name`
       header: `13. Setting Up An App`,
       fileSource:
-        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674220489/download_16_lpne2o.mp4", // may not need
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1688976596/video_16_evebis.mp4", // may not need
 
       prompts: {
         patreon: {
@@ -3442,7 +6133,7 @@ export default LoginForm;
           completed: false,
           impact: 100,
           action: `demonstrate`,
-          icon: `🧿`,
+          icon: `🎨`,
           request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
             `Lesson 13`
           )} with basic npm commands?`,
@@ -3455,7 +6146,7 @@ export default LoginForm;
           completed: false,
           impact: 100,
           action: `define`, // may not need
-          icon: `👾`, // may not need
+          icon: `🧿`, // may not need
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Lesson 13`
           )} in exactly one sentence?`,
@@ -3504,7 +6195,7 @@ export default LoginForm;
       button: `14. Programming Money`, // may not need - `name`
       header: `14. Programming Money`,
       fileSource:
-        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674220538/download_17_snhdb6.mp4", // may not need
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1688976632/video_17_weddln.mp4", // may not need
 
       prompts: {
         patreon: {
@@ -3570,7 +6261,7 @@ export default LoginForm;
           completed: false,
           impact: 100,
           action: `demonstrate`,
-          icon: `🧿`,
+          icon: `🎨`,
           request: `ms. roxana, can you please show me an example of creating a transaction with Stripe's Javascript SDK?`,
           response: `\n\nSure. Here is an example of creating a transaction with Stripe's Javascript SDK.\n\n// Create a stripe instance using your Stripe API keys.\nvar stripe = Stripe('pk_test_your_stripe_key');\n\n// Create a card element and add it to the page.\nvar card = stripe.elements().create('card');\ncard.mount('#card-element');\n\n// Handle real-time validation errors from the card element.\ncard.addEventListener('change', function(event) {\n  var displayError = document.getElementById('card-errors');\n  if (event.error) {\n    displayError.textContent = event.error.message;\n  } else {\n    displayError.textContent = '';\n  }\n});\n\n// Handle form submission.\nvar form = document.getElementById('payment-form');\nform.addEventListener('submit', function(event) {\n  event.preventDefault();\n\n  stripe.createToken(card).then(function(result) {\n    if (result.error) {\n      // Inform the user if there was an error\n      var errorElement = document.getElementById('card-errors');\n      errorElement.textContent = result.error.message;\n    } else {\n      // Send the token to your server\n      stripeTokenHandler(result.token);\n    }\n  });\n});\n\n// Submit the form with the token ID.\nfunction stripeTokenHandler(token) {\n  // Insert the token ID into the form so it gets submitted to the server\n  var form = document.getElementById('payment-form');\n  var hiddenInput = document.createElement('input');\n  hiddenInput.setAttribute('type', 'hidden');\n  hiddenInput.setAttribute('name', 'stripeToken');\n  hiddenInput.setAttribute('value', token.id);\n  form.appendChild(hiddenInput);\n\n  // Submit the form\n  form.submit();\n}`,
           spanish: ``,
@@ -3580,7 +6271,7 @@ export default LoginForm;
           completed: false,
           impact: 100,
           action: `define`, // may not need
-          icon: `👾`, // may not need
+          icon: `🧿`, // may not need
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Lesson 14`
           )} in exactly one sentence?`,
@@ -3628,7 +6319,7 @@ export default LoginForm;
       button: `15. Creating Database`, // may not need - `name`
       header: `15. Creating Database`,
       fileSource:
-        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674220555/download_18_uv5kve.mp4", // may not need
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1688976630/video_18_gjfmgl.mp4", // may not need
 
       prompts: {
         patreon: {
@@ -3695,7 +6386,7 @@ export default LoginForm;
           completed: false,
           impact: 100,
           action: `demonstrate`,
-          icon: `🧿`,
+          icon: `🎨`,
           request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
             `Lesson 15`
           )} that stores openAI's ChatGPT messages in a collection with documents defined by user_id with no other text in javascript?`,
@@ -3707,7 +6398,7 @@ export default LoginForm;
           completed: false,
           impact: 100,
           action: `define`, // may not need
-          icon: `👾`, // may not need
+          icon: `🧿`, // may not need
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Lesson 15`
           )} in exactly one sentence?`,
@@ -3756,7 +6447,7 @@ export default LoginForm;
       button: `16. Working Together`, // may not need - `name`
       header: `16. Working Together`,
       fileSource:
-        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674220688/download_vm66up.mp4", // may not need
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1688976617/video_19_vnbbms.mp4", // may not need
 
       prompts: {
         patreon: {
@@ -3823,7 +6514,7 @@ export default LoginForm;
           completed: false,
           impact: 100,
           action: `demonstrate`,
-          icon: `🧿`,
+          icon: `🎨`,
           request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
             `Lesson 16`
           )} with no other text in the command line?`,
@@ -3835,7 +6526,7 @@ export default LoginForm;
           completed: false,
           impact: 100,
           action: `define`, // may not need
-          icon: `👾`, // may not need
+          icon: `🧿`, // may not need
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Lesson 16`
           )} in exactly one sentence?`,
@@ -3853,1369 +6544,6 @@ export default LoginForm;
             `Lesson 16`
           )}?`,
           response: `\n\n1. What is the difference between Git and GitHub?\n2. What command is used to create a local Git repository?\n3. How can multiple collaborators work on an open source project in the same repository?`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        shop: {
-          completed: false,
-          impact: 100,
-          action: `shop`,
-          icon: `🛍️`,
-          request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
-          response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-      },
-    },
-  },
-  "Get Experience": {
-    "Robots Building Education": {
-      documentID: ``,
-      filler: ``,
-      new: true,
-      highValue: false,
-      underConstruction: true,
-      completed: false,
-      needsImprovement: false,
-      rare: false,
-      tooltip: ``,
-      sourceType: `markdown`, // may not need
-      button: `Robots Building Education`, // may not need - `name`
-      header: `Robots Building Education`,
-      fileSource: await import("../../markdowns/learn.md?raw"), // may not need
-
-      prompts: {
-        patreon: {
-          completed: false,
-          impact: 1000,
-          action: `generate`,
-          icon: `✍️`,
-          request: `ms. roxana, can you please generate an essay that introduces me to ${ultimateEffeciencyJutsu(
-            `Build For Community`
-          )}?`,
-          response: `null`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        inspire: {
-          completed: false,
-          impact: 100,
-          action: `inspire`,
-          icon: `⚡`,
-          request: `ms. roxana, can you please share a potential future with the ${ultimateEffeciencyJutsu(
-            `Build For Community`
-          )}?`,
-          response: `\n\nSure! In the future, it's possible that bitcoin, automation, and universal basic income could all converge to create a new form of financial system. Under this system, individuals could receive an automated universal basic income that is denominated in a uniform cryptocurrency, such as Bitcoin, giving individuals the freedom to purchase goods and services instantly and securely using a digital payment method. In addition, individuals would have access to a multitude of automated tools to manage their finances, such as automated savings and investments tools that maximize returns and minimize risk. This system could also help to reduce poverty and inequality, as it would make it easy for everyone to access basic financial services, regardless of location or class.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        summarize: {
-          completed: false,
-          impact: 100,
-          action: `summarize`,
-          icon: `📚`,
-          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
-            `Build For Community`
-          )}?`,
-          response: `\n\nBitcoin relies heavily on automation. Automation is the integration of technology in the process of completing certain tasks, and it helps to reduce the need for human labor. Bitcoin transactions are almost entirely automated, and this automation creates a strong case for the implementation of universal basic income (UBI). UBI is a system whereby citizens of a state receive a regular monthly allowance from the government, regardless of their economic standing or whether or not they are currently employed. Automation and the increasing presence of cryptocurrencies like Bitcoin can provide the economic mechanisms for implementing a UBI system, and so it can be seen that the two are linked.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        ask: {
-          completed: false,
-          impact: 100,
-          action: `ask`,
-          icon: `🔮`,
-          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
-            `Build For Community`
-          )} with one sentence answers?`,
-          response: `\n\n1. How does Bitcoin interact with automation? Answer: Bitcoin is used to facilitate instantaneous payment transfers, enabling automated transactions between two parties.\n2. What is the relationship between Bitcoin and Universal Basic Income? Answer: Universal Basic Income is a policy concept which can be supported through the use of Bitcoin, due to its transparency and low transaction costs.\n3. How does automation impact the use of Bitcoin? Answer: Automation can be used to simplify the process of transactting with Bitcoin, such as through digital wallets and automated trading bots.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        guide: {
-          completed: false,
-          impact: 100,
-          action: `guide`,
-          icon: `🤝`,
-          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
-            `Build For Community`
-          )}?`,
-          response: `\n\n1. Definition of Bitcoin – what it is, key features and how it works\n2. Impact of Automation on Employment and its related implications\n3. Potential Benefits of Universal Basic Income\n4. Possibility of Bitcoin and Automation to Enhance UBI\n5. Challenges and Obstacles in Implementing Bitcoin and Automation for UBI\n6. Prospects of Bitcoin as a Potential Solution to Enhance UBI\n7. Relationship between Bitcoin, Automation and UBI in Terms of Asset Distribution\n8. Advantages of UBI in the Context of Bitcoin and Automation\n9. Regulatory Issues Surrounding the Deployment of a UBI Scheme Using Bitcoin and/or Automation\n10. The Social and Economic Implications of Bitcoin, Automation and UBI`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        demonstrate: {
-          completed: false,
-          impact: 100,
-          action: `demonstrate`,
-          icon: `🧿`,
-          request: `ms. roxana, can you please show me an example of how proof of work can work in education?`,
-          response: `\n\nAn example of how proof of work can work in education is through the utilization of advanced testing techniques. For example, if a student must complete an online course, they must first complete a assignment or test. After they complete the initial assignment or test, they must then provide proof of their progress by working to answer harder questions, or taking a more advanced course. By utilizing challenges that only certain students can complete, the instructor will have proof that the student actually completed the coursework.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        define: {
-          completed: false,
-          impact: 100,
-          action: `define`, // may not need
-          icon: `👾`, // may not need
-          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
-            `Build For Community`
-          )} in exactly one sentence?`,
-          response: `\n\nThe combination of automation and Bitcoin technologies could theoretically provide a Universal Basic Income to all individuals.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-
-        quiz: {
-          completed: false,
-          impact: 100,
-          action: `quiz`,
-          icon: `🧪`,
-          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
-            `Build For Community`
-          )}?`,
-          response: `\n\n1. What is the connection between Bitcoin, Automation, and Universal Basic Income (UBI)?\n\n2. In what ways could Automation lead to the implementation of UBI?\n\n3. How could decentralized digital currencies such as Bitcoin be used to fund a UBI system?`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        shop: {
-          completed: false,
-          impact: 100,
-          action: `shop`,
-          icon: `🛍️`,
-          request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
-          response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-      },
-    },
-    "Build For Undocumented": {
-      documentID: ``,
-      filler: ``,
-      new: true,
-      highValue: false,
-      underConstruction: true,
-      completed: false,
-      needsImprovement: false,
-      hasCode: true,
-      rare: false,
-      tooltip: ``,
-      sourceType: `markdown`, // may not need
-      button: `Indocumentadofy`, // may not need - `name`
-      header: `Indocumentadofy`,
-      fileSource: await import("../../markdowns/indocumentadofy.md?raw"), // may not need
-
-      prompts: {
-        patreon: {
-          completed: false,
-          impact: 1000,
-          action: `generar`,
-          icon: `✍️`,
-          request: `em. roxana, ¿puedes generar un ensayo que cubra las oportunidades de consulta como inmigrante indocumentado con el marco Hydrogen de Shopify?`,
-          response: `null`,
-          spanish: true,
-          tooltip: ``,
-        },
-        inspire: {
-          dynamicContent: true,
-          completed: false,
-          impact: 100,
-          action: `inspirar`,
-          icon: `⚡`,
-          request: `Roxana, ¿puedes compartir cómo los inmigrantes indocumentados pueden aprender a construir cosas con herramientas como Hydrogen de Shopify para ganarse la vida en español?`,
-          response: `\n\nEn primer lugar, recomendaría a los inmigrantes indocumentados que investiguen y familiaricen con el software Hydrogen de Shopify que es una herramienta de creación de sitios web que le permite a los usuarios crear hermosas tiendas de comercio electrónico sin tener que aprender lenguajes de programación como HTML o CSS. Descargar el software es fácil y gratuito, y hay mucha documentación en línea disponible para guiarles a través del proceso. Después de descargarlo e iniciar sesión, también pueden encontrar tutorías en línea ofrecidas en español para ayudarles a aprender cómo usarlo y cómo configurar una tienda exitosa. Una vez que han desarrollado el conocimiento y la habilidad necesarios, pueden usar Hydrogen para crear tiendas en línea y vender productos a clientes de todo el mundo. Esta es una excelente oportunidad para aquellos inmigrantes que buscan construir una vida exitosa de manera independiente.`,
-          spanish: true,
-          tooltip: ``,
-        },
-        summarize: {
-          completed: false,
-          impact: 100,
-          action: `resumir`,
-          icon: `📚`,
-          request: `Roxanita ¿Puedes resumir cómo construir tecnología con el marco de Hydrogen de Shopify?`,
-          response:
-            "\n\nEl marco de Hydrogen de Shopify proporciona las herramientas necesarias para construir y gestionar una tienda en línea de manera eficiente. A través de la interfaz de usuario intuitiva, los usuarios pueden configurar los productos, imágenes, páginas y contenidos en cuestión de minutos. Te permite configurar opciones de pago, precios y descuentos para diversos productos. El marco también le permite a los usuarios administrar el inventario, realizar publicaciones de pedidos, recopilar información de clientes y almacenar datos de forma segura. Además, le ofrece protección contra fraudes y herramientas integradas de marketing para impulsar el crecimiento de la tienda.",
-          spanish: true,
-          tooltip: ``,
-        },
-        ask: {
-          completed: false,
-          impact: 100,
-          action: `preguntar`,
-          icon: `🔮`,
-          request: `Roxanota, ¿puedes mostrarme tres preguntas frecuentes para principiantes sobre la consultoría como inmigrante indocumentado con el marco Hydrogen de Shopify?`,
-          response: `\n\n1. ¿Existe un límite específico para las cantidades en las que puedo cobrar como inmigrante indocumentado a través de la plataforma de Shopify Hydrogen? \n2. ¿Cómo puedo conectar mi cuenta de Shopify para comenzar a brindar servicios de consultoría a través de Hydrogen? \n3. ¿Hay alguna forma de proteger mis derechos como inmigrante indocumentado mientras ofrezco servicios de consultoría a través del marco Hydrogen de Shopify?`,
-          spanish: true,
-          tooltip: ``,
-        },
-        guide: {
-          completed: false,
-          impact: 100,
-          action: `guía`,
-          icon: `🤝`,
-          request: `señorita roxana, ¿puede crear una guía de estudio para consultar como inmigrante indocumentado con el marco Hydrogen de Shopify con 10 viñetas?`,
-          response: `\n\n1. Investigue Hydrogen de Shopify y familiarícese con las diferentes características y capacidades que ofrece.\n2. Comprenda las implicaciones legales cuando trabaja como inmigrante indocumentado con Hydrogen de Shopify.\n3. Utilice los recursos disponibles, como como tutoriales y materiales de apoyo disponibles.\n4. Adquiera conocimientos sobre las herramientas y técnicas compatibles con Hydrogen de Shopify.\n5. Asegúrese de que su trabajo esté listo para su carpeta de trabajos y pueda ser presentado a posibles empleadores.\n6. Desarrolle una comprensión de cómo se debe estructurar el proyecto, incluidos el cronograma y los objetivos.\n7. Conozca las oportunidades de mercado disponibles para usar Hydrogen de Shopify.\n8. Desarrolle la capacidad de solucionar y resolver cualquier problema técnico que pueda surgir.\n9. Conéctese con varias empresas y redes que usan Hydrogen de Shopify para desarrollar una red de posibles empleadores y socios.\n10. Manténgase actualizado sobre el avance de Hydrogen de Shopify para asegurarse de que puede aprovechar era de todas las nuevas capacidades`,
-          spanish: true,
-          tooltip: ``,
-        },
-        demonstrate: {
-          completed: false,
-          impact: 100,
-          action: `demostrar`,
-          icon: `🧿`,
-          request: `mama roxana, ¿puedes mostrarme un ejemplo de cómo Shopify construye aplicaciones con el marco Hydrogen de Shopify en español con javascript?`,
-          response:
-            "\n\n// Crear un modelo de aplicación\n// Este modelo describirá una entidad de la aplicación\nvar AppModelo = Hydrogen.Modelo.extend({\n  // Definimos los atributos\n  campos: {\n    titulo: String,\n    descripcion: String,\n    precio: Numero\n  }\n});\n\n// Crear una vista de la aplicación\n// Esta vista mostrará la entidad en la aplicación\nvar AppVista = Hydrogen.Vista.extend({\n  // Establecer el modelo de la vista\n  modelo: AppModelo,\n  // Establecer la plantilla \n  plantilla: `\n   <div> \n      <h2>{{ titulo }}</h2>\n      <p>{{ descripcion }}</p>\n      <p>Precio: {{ precio }}</p>\n   </div>\n  `,\n  // Establecer los datos iniciales\n  datosIniciales: {\n    titulo: '',\n    descripcion: '',\n    precio: 0\n  }\n});\n\n// Instanciar el modelo de la aplicación\nvar miModelo = new AppModelo({\n  // Establecer los valores de los atributos\n  titulo: 'Mi Aplicación',\n  descripcion: 'Una aplicación increíble',\n  precio: 999\n});\n\n// Instanciar la vista de la aplicación\nvar miVista = new AppVista({\n  modelo: miModelo\n});\n\n// Renderizar la vista\nmiVista.renderizar();",
-          spanish: true,
-
-          tooltip: ``,
-        },
-        define: {
-          completed: false,
-          impact: 100,
-          action: `definir`, // may not need
-          icon: `👾`, // may not need
-          request: `roxis, ¿puedes definir oportunidades para consultar como inmigrante indocumentado con el marco Hydrogen de Shopify en exactamente una oración?`,
-          response: `\n\nLas oportunidades de consulta como inmigrante indocumentado con el marco Hydrogen de Shopify proporcionan recursos y acceso a los servicios pertinentes para apoyar la actividad comercial.`,
-          spanish: true,
-          tooltip: ``,
-        },
-
-        quiz: {
-          completed: false,
-          impact: 100,
-          action: `prueba`,
-          icon: `🧪`,
-          request: `mamachota roxana, ¿puedes escribir un cuestionario de 3 preguntas para principiantes que sea desafiante sobre la consultoría como inmigrante indocumentado con el marco Hydrogen de Shopify?`,
-          response: `\n\n1. ¿Hay políticas o trámites adicionales que deberían completarse cuando se trabaja en el marco Hydrogen de Shopify como inmigrante indocumentado? \n\n2. ¿Cuáles son algunas técnicas aconsejables para respaldar la seguridad y la privacidad de los datos personales al utilizar el marco Hydrogen de Shopify? \n\n3. ¿Cuáles son las consideraciones especiales a tener en cuenta al necesitar colaboradores o asesores para trabajar legalmente como inmigrante indocumentado en el marco Hydrogen de Shopify?`,
-          spanish: true,
-          tooltip: ``,
-        },
-        shop: {
-          completed: false,
-          impact: 100,
-          action: `comercio`,
-          icon: `🛍️`,
-          request: `Muy bien hermano, muéstrame lo que tienes. Quiero comprar y apoyar más esta red.`,
-          response: `¡excelente! Eche un vistazo a nuestros patrocinadores que apoyan el crecimiento de Robots Building Education aquí: un día :)`,
-          spanish: true,
-          tooltip: ``,
-        },
-      },
-    },
-    // "Build For Community": {
-    //   documentID: ``,
-    //   filler: ``,
-    //   new: true,
-    //   highValue: false,
-    //   underConstruction: true,
-    //   completed: false,
-    //   needsImprovement: false,
-    //   rare: true,
-    //   tooltip: ``,
-    //   sourceType: `markdown`, // may not need
-    //   button: `Universal Basic Income`, // may not need - `name`
-    //   header: `Robots Building Education`,
-    //   fileSource: await import("../../markdowns/learn.md?raw"), // may not need
-
-    //   prompts: {
-    //     patreon: {
-    //       completed: false,
-    //       impact: 1000,
-    //       action: `generate`,
-    //       icon: `✍️`,
-    //       request: `ms. roxana, can you please generate an essay that introduces me to ${ultimateEffeciencyJutsu(
-    //         `Build For Community`
-    //       )}?`,
-    //       response: `null`,
-    //       spanish: ``,
-    //       tooltip: ``,
-    //     },
-    //     inspire: {
-    //       completed: false,
-    //       impact: 100,
-    //       action: `inspire`,
-    //       icon: `⚡`,
-    //       request: `ms. roxana, can you please share a potential future with the ${ultimateEffeciencyJutsu(
-    //         `Build For Community`
-    //       )}?`,
-    //       response: `\n\nSure! In the future, it's possible that bitcoin, automation, and universal basic income could all converge to create a new form of financial system. Under this system, individuals could receive an automated universal basic income that is denominated in a uniform cryptocurrency, such as Bitcoin, giving individuals the freedom to purchase goods and services instantly and securely using a digital payment method. In addition, individuals would have access to a multitude of automated tools to manage their finances, such as automated savings and investments tools that maximize returns and minimize risk. This system could also help to reduce poverty and inequality, as it would make it easy for everyone to access basic financial services, regardless of location or class.`,
-    //       spanish: ``,
-    //       tooltip: ``,
-    //     },
-    //     summarize: {
-    //       completed: false,
-    //       impact: 100,
-    //       action: `summarize`,
-    //       icon: `📚`,
-    //       request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
-    //         `Build For Community`
-    //       )}?`,
-    //       response: `\n\nBitcoin relies heavily on automation. Automation is the integration of technology in the process of completing certain tasks, and it helps to reduce the need for human labor. Bitcoin transactions are almost entirely automated, and this automation creates a strong case for the implementation of universal basic income (UBI). UBI is a system whereby citizens of a state receive a regular monthly allowance from the government, regardless of their economic standing or whether or not they are currently employed. Automation and the increasing presence of cryptocurrencies like Bitcoin can provide the economic mechanisms for implementing a UBI system, and so it can be seen that the two are linked.`,
-    //       spanish: ``,
-    //       tooltip: ``,
-    //     },
-    //     ask: {
-    //       completed: false,
-    //       impact: 100,
-    //       action: `ask`,
-    //       icon: `🔮`,
-    //       request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
-    //         `Build For Community`
-    //       )} with one sentence answers?`,
-    //       response: `\n\n1. How does Bitcoin interact with automation? Answer: Bitcoin is used to facilitate instantaneous payment transfers, enabling automated transactions between two parties.\n2. What is the relationship between Bitcoin and Universal Basic Income? Answer: Universal Basic Income is a policy concept which can be supported through the use of Bitcoin, due to its transparency and low transaction costs.\n3. How does automation impact the use of Bitcoin? Answer: Automation can be used to simplify the process of transactting with Bitcoin, such as through digital wallets and automated trading bots.`,
-    //       spanish: ``,
-    //       tooltip: ``,
-    //     },
-    //     guide: {
-    //       completed: false,
-    //       impact: 100,
-    //       action: `guide`,
-    //       icon: `🤝`,
-    //       request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
-    //         `Build For Community`
-    //       )}?`,
-    //       response: `\n\n1. Definition of Bitcoin – what it is, key features and how it works\n2. Impact of Automation on Employment and its related implications\n3. Potential Benefits of Universal Basic Income\n4. Possibility of Bitcoin and Automation to Enhance UBI\n5. Challenges and Obstacles in Implementing Bitcoin and Automation for UBI\n6. Prospects of Bitcoin as a Potential Solution to Enhance UBI\n7. Relationship between Bitcoin, Automation and UBI in Terms of Asset Distribution\n8. Advantages of UBI in the Context of Bitcoin and Automation\n9. Regulatory Issues Surrounding the Deployment of a UBI Scheme Using Bitcoin and/or Automation\n10. The Social and Economic Implications of Bitcoin, Automation and UBI`,
-    //       spanish: ``,
-    //       tooltip: ``,
-    //     },
-    //     demonstrate: {
-    //       completed: false,
-    //       impact: 100,
-    //       action: `demonstrate`,
-    //       icon: `🧿`,
-    //       request: `ms. roxana, can you please show me an example of how proof of work can work in education?`,
-    //       response: `\n\nAn example of how proof of work can work in education is through the utilization of advanced testing techniques. For example, if a student must complete an online course, they must first complete a assignment or test. After they complete the initial assignment or test, they must then provide proof of their progress by working to answer harder questions, or taking a more advanced course. By utilizing challenges that only certain students can complete, the instructor will have proof that the student actually completed the coursework.`,
-    //       spanish: ``,
-    //       tooltip: ``,
-    //     },
-    //     define: {
-    //       completed: false,
-    //       impact: 100,
-    //       action: `define`, // may not need
-    //       icon: `👾`, // may not need
-    //       request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
-    //         `Build For Community`
-    //       )} in exactly one sentence?`,
-    //       response: `\n\nThe combination of automation and Bitcoin technologies could theoretically provide a Universal Basic Income to all individuals.`,
-    //       spanish: ``,
-    //       tooltip: ``,
-    //     },
-
-    //     quiz: {
-    //       completed: false,
-    //       impact: 100,
-    //       action: `quiz`,
-    //       icon: `🧪`,
-    //       request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
-    //         `Build For Community`
-    //       )}?`,
-    //       response: `\n\n1. What is the connection between Bitcoin, Automation, and Universal Basic Income (UBI)?\n\n2. In what ways could Automation lead to the implementation of UBI?\n\n3. How could decentralized digital currencies such as Bitcoin be used to fund a UBI system?`,
-    //       spanish: ``,
-    //       tooltip: ``,
-    //     },
-    //     shop: {
-    //       completed: false,
-    //       impact: 100,
-    //       action: `shop`,
-    //       icon: `🛍️`,
-    //       request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
-    //       response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
-    //       spanish: ``,
-    //       tooltip: ``,
-    //     },
-    //   },
-    // },
-    // "Build For Teachers": {
-    //   documentID: ``,
-    //   filler: ``,
-    //   new: true,
-    //   highValue: false,
-    //   underConstruction: false,
-    //   completed: false,
-    //   needsImprovement: false,
-    //   tooltip: ``,
-    //   sourceType: `markdown`, // may not need
-    //   button: `Pedagogy`, // may not need - `name`
-    //   header: `Educate`,
-    //   fileSource: await import("../../markdowns/educate.md?raw"), // may not need
-
-    //   prompts: {
-    //     patreon: {
-    //       completed: false,
-    //       impact: 1000,
-    //       action: `generate`,
-    //       icon: `✍️`,
-    //       request: `ms. roxana, can you please generate an essay that introduces me to ${ultimateEffeciencyJutsu(
-    //         `Build For Teachers`
-    //       )}?`,
-    //       response: `null`,
-    //       spanish: ``,
-    //       tooltip: ``,
-    //     },
-    //     inspire: {
-    //       completed: false,
-    //       impact: 100,
-    //       action: `inspire`,
-    //       icon: `⚡`,
-    //       request: `ms. roxana, can you please share how an app like ${ultimateEffeciencyJutsu(
-    //         `Build For Teachers`
-    //       )} would be useful?`,
-    //       response: `\n\nGitHub for teachers would be a great way for educators to share resources and collaborate on projects, discuss teaching methods and topics, and generally support each other. Teachers could use it to find, share, and discuss high-quality teaching resources, ranging from lesson plans to instructional materials and activities. Teachers could post questions and look for advice and troubleshooting ideas, or connect with colleagues in different states or countries to gain another perspective. With GitHub for teachers, collaboration would become easier, enabling teachers to collaborate on large projects with fewer IT headaches and time constraints.`,
-    //       spanish: ``,
-    //       tooltip: ``,
-    //     },
-    //     summarize: {
-    //       completed: false,
-    //       impact: 100,
-    //       action: `summarize`,
-    //       icon: `📚`,
-    //       request: `ms. roxana, can you please summarize the basics of how an app like ${ultimateEffeciencyJutsu(
-    //         `Build For Teachers`
-    //       )} would work?`,
-    //       response: `\n\nGitHub for teachers is an app that makes it easy for teachers to collaborate and share materials with other teachers by using version-control and git repository, which are services that enable users to track changes to files over time. It provides a simple way for teachers to store, share and access lesson plans, worksheets, and other teaching materials with peers. Using GitHub for teachers, teachers can create private, public, and \"organization\" repositories. Repositories are collections of folders and files related to a particular lesson or project. When changes are made to a file, the repository automatically records and stores a version of the file that can be referenced in the future. In addition to collaboration, teachers can also use the app to assess student work, request feedback from other teachers and mentors on lesson plans, and track the progress of their teaching materials over time.`,
-    //       spanish: ``,
-    //       tooltip: ``,
-    //     },
-    //     ask: {
-    //       completed: false,
-    //       impact: 100,
-    //       action: `ask`,
-    //       icon: `🔮`,
-    //       request: `ms. roxana, can you please show me three frequently asked beginner questions about an app designed like ${ultimateEffeciencyJutsu(
-    //         `Build For Teachers`
-    //       )} with one sentence answers?`,
-    //       response: `\n\n1. How do I create a classroom on the app? - You can create a classroom by registering for your account and following the setup instructions. \n2. How do I invite my students to a classroom? - You can invite your students through the app by clicking the \"Invite Student\" button in the classroom settings.\n3. What can I do with the app? - The app allows teachers to create and manage classrooms, assign tasks and assignments, track student progress, and more.`,
-    //       spanish: ``,
-    //       tooltip: ``,
-    //     },
-    //     guide: {
-    //       completed: false,
-    //       impact: 100,
-    //       action: `guide`,
-    //       icon: `🤝`,
-    //       request: `ms. roxana, can you please create a study guide for app designed like ${ultimateEffeciencyJutsu(
-    //         `Build For Teachers`
-    //       )}?`,
-    //       response: `\n\n1. Understand the features and functionality of the GitHub app designed for teachers.\n2. Familiarize yourself with the user interface and navigation of the app.\n3. Become familiarized with the different ways that students can submit work via the app.\n4. Set up notifications for new assignments and due dates to ensure students stay on track.\n5. Use the gradebook feature to track student progress and share feedback easily with students.\n6. Explore options for different ways to assess student performance, such as rubrics and PDFs.\n7. Understand how to easily share resources, such as reading material, videos, and worksheets with the entire class or individual students.\n8. Utilize the messaging feature to communicate with other teachers and collaborate on projects.\n9. Familiarize yourself with the app’s security and privacy settings to ensure student data is safe and secure.\n10. Conduct research on best practices for using the app more effectively as a tool for learning.`,
-    //       spanish: ``,
-    //       tooltip: ``,
-    //     },
-    //     demonstrate: {
-    //       completed: false,
-    //       impact: 100,
-    //       action: `demonstrate`,
-    //       icon: `🧿`,
-    //       request: `ms. roxana, can you please show me an example of how an app like ${ultimateEffeciencyJutsu(
-    //         `Build For Teachers`
-    //       )} would work?`,
-    //       response: `\n\nGitHub for teachers is an app that would allow teachers to store their lesson plans, project ideas, digital materials, student assignments, and other educational documents in the cloud. It would also make it easy for teachers to collaborate with colleagues by sharing these documents or adding comments/feedback to them. With the app, teachers would be able to securely back up their work, track changes to documents over time, and easily collaborate with colleagues. It would also allow teachers to easily search for other educators’ education-related documents or materials, which could help them stay up-to-date on the latest best practices and educational ideas.`,
-    //       spanish: ``,
-    //       tooltip: ``,
-    //     },
-    //     define: {
-    //       completed: false,
-    //       impact: 100,
-    //       action: `define`, // may not need
-    //       icon: `👾`, // may not need
-    //       request: `ms. roxana, can you please define an app like ${ultimateEffeciencyJutsu(
-    //         `Build For Teachers`
-    //       )} in exactly one sentence?`,
-    //       response: `\n\nGitHub is a version control platform that helps teachers store, organize, and collaborate on teaching materials.`,
-    //       spanish: ``,
-    //       tooltip: ``,
-    //     },
-
-    //     quiz: {
-    //       completed: false,
-    //       impact: 100,
-    //       action: `quiz`,
-    //       icon: `🧪`,
-    //       request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about an app designed like ${ultimateEffeciencyJutsu(
-    //         `Build For Teachers`
-    //       )}?`,
-    //       response: `\n\n1. What is the main purpose of an app designed like GitHub for teachers?\n2. What type of information can teachers store using an app like GitHub?\n3. What features of GitHub make it particularly useful for teachers?`,
-    //       spanish: ``,
-    //       tooltip: ``,
-    //     },
-    //     shop: {
-    //       completed: false,
-    //       impact: 100,
-    //       action: `shop`,
-    //       icon: `🛍️`,
-    //       request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
-    //       response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
-    //       spanish: ``,
-    //       tooltip: ``,
-    //     },
-    //   },
-    // },
-    // "Social Chat": {
-    //   documentID: ``,
-    //   filler: ``,
-    //   new: true,
-    //   highValue: false,
-    //   underConstruction: false,
-    //   completed: false,
-    //   needsImprovement: false,
-    //   tooltip: ``,
-    //   sourceType: `markdown`, // may not need
-    //   button: `Tap In Chat`, // may not need - `name`
-    //   header: `Subscribe to read DMs`,
-    //   fileSource: await import("../../markdowns/chatApp.md?raw"), // may not need
-
-    //   prompts: {
-    //     patreon: {
-    //       completed: false,
-    //       impact: 1000,
-    //       action: `generate`,
-    //       icon: `✍️`,
-    //       request: `ms. roxana, can you please generate an essay that introduces me to ${ultimateEffeciencyJutsu(
-    //         `Social Chat`
-    //       )}?`,
-    //       response: `null`,
-    //       spanish: ``,
-    //       tooltip: ``,
-    //     },
-    //     inspire: {
-    //       completed: false,
-    //       impact: 100,
-    //       action: `inspire`,
-    //       icon: `⚡`,
-    //       request: `ms. roxana, can you please explain how a ${ultimateEffeciencyJutsu(
-    //         `Social Chat`
-    //       )} can be useful?`,
-    //       response:
-    //         "\n\nChat apps that allow users to subscribe to other people's private chats can be a great way to stay connected and up to date with friends and family. Since these chats are private, they often contain more intimate conversations, giving users a better insight into the people they're subscribing to. Additionally, these chats can be used as an important part of staying in touch with those that are important to you, allowing you to receive regular updates and comments.",
-    //       spanish: ``,
-    //       tooltip: ``,
-    //     },
-    //     summarize: {
-    //       completed: false,
-    //       impact: 100,
-    //       action: `summarize`,
-    //       icon: `📚`,
-    //       request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
-    //         `Social Chat`
-    //       )}?`,
-    //       response:
-    //         "\n\nA chat app with private chat subscriptions allows users to subscribe to private conversations between two people or groups. Users must provide their personal details to verify their identity and be approved as a subscriber. This allows subscribers to message and communicate with the participants involved in the private chat, as well as post comments. Subscribers must be approved by the participants to follow the private conversations.",
-    //       spanish: ``,
-    //       tooltip: ``,
-    //     },
-    //     ask: {
-    //       completed: false,
-    //       impact: 100,
-    //       action: `ask`,
-    //       icon: `🔮`,
-    //       request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
-    //         `Social Chat`
-    //       )} with one sentence answers?`,
-    //       response: `\n\n1. What is a chat app? - A chat app is an application that allows users to send and receive text, audio and/or visual messages. \n\n2. How do I subscribe to someone's private chat? - You can subscribe to someone's private chat by visiting their profile page and selecting the \"Subscribe\" option. \n\n3. How do I start a chat with someone? - You can start a chat with someone by selecting the chat icon in the top navigation bar and selecting the person you'd like to chat with.`,
-    //       spanish: ``,
-    //       tooltip: ``,
-    //     },
-    //     guide: {
-    //       completed: false,
-    //       impact: 100,
-    //       action: `guide`,
-    //       icon: `🤝`,
-    //       request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
-    //         `Social Chat`
-    //       )}?`,
-    //       response: `\n\nStudy Guide for a Chat App: \n1. Understand the concept of private chatting and why users may want to use this feature. \n2. Learn the different types of private chat features available in the app.\n3. Become familiar with the functions available in private chats.\n4. Explore the process for subscribing to someone’s private chat.\n5. Understand the benefits of subscribing to private chats.\n6. Learn about user privacy and security in private chats.\n7. Research the security policy for private chats.\n8. Examine application speed and reliability for private chats.\n9. Learn about the cost associated with private chatting. \n10. Test various private chat features and assess the user experience.`,
-    //       spanish: ``,
-    //       tooltip: ``,
-    //     },
-    //     demonstrate: {
-    //       completed: false,
-    //       impact: 100,
-    //       action: `demonstrate`,
-    //       icon: `🧿`,
-    //       request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
-    //         `Social Chat`
-    //       )}`,
-    //       response:
-    //         "\n\nRather than creating group chats with others, people would network and communicate with one another privately, but publicly allowing their chats to be read by outsiders.",
-    //       spanish: ``,
-    //       tooltip: ``,
-    //     },
-    //     define: {
-    //       completed: false,
-    //       impact: 100,
-    //       action: `define`, // may not need
-    //       icon: `👾`, // may not need
-    //       request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
-    //         `Social Chat`
-    //       )} in exactly one sentence?`,
-    //       response: `\n\nA chat app that allows users to subscribe to and follow private conversations between individuals.`,
-    //       spanish: ``,
-    //       tooltip: ``,
-    //     },
-
-    //     quiz: {
-    //       completed: false,
-    //       impact: 100,
-    //       action: `quiz`,
-    //       icon: `🧪`,
-    //       request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
-    //         `Social Chat`
-    //       )}?`,
-    //       response: `\n\n1. What is the most important security feature of a chat app that allows users to subscribe to private chats?\n\n2. How does the chat app appreciate the data privacy of its users who subscribe to private chats?\n\n3. How does the chat app monitor the activities of users who subscribe to private chats to ensure they remain secure and private?`,
-    //       spanish: ``,
-    //       tooltip: ``,
-    //     },
-    //     shop: {
-    //       completed: false,
-    //       impact: 100,
-    //       action: `shop`,
-    //       icon: `🛍️`,
-    //       request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
-    //       response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
-    //       spanish: ``,
-    //       tooltip: ``,
-    //     },
-    //   },
-    // },
-  },
-  "Computer Science": {
-    "Programming Languages": {
-      documentID: ``,
-      filler: ``,
-
-      hasCode: false,
-      highValue: false,
-      underConstruction: false,
-      completed: false,
-      rare: false,
-      needsImprovement: false,
-      new: true,
-      tooltip: ``,
-      sourceType: `video`, // may not need
-      button: `Programming Languages`, // may not need - `name`
-      header: `Programming Languages`,
-      fileSource:
-        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674725780/download_19_gintiu.mp4", // may not need
-
-      prompts: {
-        patreon: {
-          completed: false,
-          impact: 1000,
-          action: `generate`,
-          icon: `►`, //`✍️`
-          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
-            `Programming Languages`
-          )}?`,
-          response: `null`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        inspire: {
-          completed: false,
-          impact: 100,
-          action: `inspire`,
-          icon: `⚡`,
-          request: `ms. roxana, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
-            `Programming Languages`
-          )}?`,
-          response: `\n\nOne inspiring story that comes to mind is the story of Grace Hopper, an American computer scientist and United States Navy officer. She is widely credited as being the inventor of the first compiler for a computer programming language, making software programming more accessible and easier to complete. She also helped develop the first English-like programming language, COBOL, which is still widely used today. Her work opened up the field of computer programming and she helped create the groundwork for modern programming languages. She was a true pioneer in the world of computer science and is an inspiring role model for anyone considering entering into the field.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        summarize: {
-          completed: false,
-          impact: 100,
-          action: `summarize`,
-          icon: `📚`,
-          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
-            `Programming Languages`
-          )}?`,
-          response: `\n\nThe basics of the theory of programming languages include the concept of a programming language, which is a formal system designed for writing as well as executing a sequence of instructions. This code is then compiled, partially evaluated, or interpreted for a target machine (e.g., a computer), which deploys it for a particular task. Programming language theory examines the design, implementation, and definition of programming languages, as well as their application in the software industry. It looks at the syntax, semantics, formal correctness, and compilation of programming language construction, as well as its application domains, such as programming language design, language processing systems, database systems, operating systems, artificial intelligence, computer graphics, and natural language processing.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        ask: {
-          completed: false,
-          impact: 100,
-          action: `ask`,
-          icon: `🔮`,
-          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
-            `Programming Languages`
-          )} with one sentence answers?`,
-          response: `\n\n1. What is a programming language? - A programming language is a structured language used to write programs for a computer.\n2. What is type checking? - Type checking is the process of verifying and enforcing restrictions on the data types used in a program.\n3. What are the common goals of programming language design? - Common goals of programming language design include code readability, modularity, reusability and scalability.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        guide: {
-          completed: false,
-          impact: 100,
-          action: `guide`,
-          icon: `🤝`,
-          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
-            `Programming Languages`
-          )}?`,
-          response: `\n\n1. Understand the concept of syntax and context-free grammars \n2. Understand the concept of types and type systems\n3. Identify and distinguish different programming paradigms\n4. Understand the principles of denotational and operational semantics\n5. Know the process of compilation of a program \n6. Be familiar with the Pragmatics of language design\n7. Investigate the strengths and weaknesses of language features\n8. Understand how garbage collection and exception handling works\n9. Understand language modularization, abstraction and encapsulation\n10. Understand memory management, references and aliasing`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        demonstrate: {
-          completed: false,
-          impact: 100,
-          action: `demonstrate`,
-          icon: `🧿`,
-          request: `ms. roxana, can you please explain an example of a pumping lemma in the theory of formal programming languages?`,
-          response: `\n\nA pumping lemma is a fundamental tool used to prove that certain types of languages are not regular. The pumping lemma states that if a language is regular, then there must exist a certain number, known as the “pumping constant”, such that any string in the language of length greater than the pumping constant may be “pumped”, or divided into three parts, in such a way that when any of those parts are repeated an arbitrary number of times, the resulting string will still be in the language. \n\nFor example, let's say that the language L consists of all strings of a's, b's, and c's where the number of a's, b's, and c's are all the same. If a string in language L has length n and n is greater than the pumping constant, then that string may be divided into three parts consisting of x, y, and z such that xy^iz is still a valid string in language L for any positive integer i. In other words, if we take any string of length n in L, and break it into three parts x, y, and z such that x and z are non-empty, then any string of the form xy^iz (with a positive integer i) will still be a valid string in L. \n\nThus, if there is any language that cannot fulfill this requirement, then that language is not regular. The pumping lemma provides a useful tool in recognizing and determining which languages are and are not regular.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        define: {
-          completed: false,
-          impact: 100,
-          action: `define`, // may not need
-          icon: `👾`, // may not need
-          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
-            `Programming Languages`
-          )} in exactly one sentence?`,
-          response: `\n\nThe Theory of Programming Languages is the study of the structure, implementation, and definition of programming languages and systems.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-
-        quiz: {
-          completed: false,
-          impact: 100,
-          action: `quiz`,
-          icon: `🧪`,
-          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
-            `Programming Languages`
-          )}?`,
-          response: `\n\n1. What are the four main components of a programming language?\n2. What are the differences between procedural and object-oriented programming?\n3. What is a compiler and why is it important for programming languages?`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        shop: {
-          completed: false,
-          impact: 100,
-          action: `shop`,
-          icon: `🛍️`,
-          request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
-          response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-      },
-    },
-    Recursion: {
-      documentID: ``,
-      filler: ``,
-
-      highValue: false,
-      hasCode: true,
-      underConstruction: false,
-      completed: false,
-      needsImprovement: false,
-      new: true,
-      tooltip: ``,
-      sourceType: `video`, // may not need
-      button: `Recursion`, // may not need - `name`
-      header: `Recursion`,
-      fileSource:
-        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674725818/download_20_bjmac7.mp4", // may not need
-
-      prompts: {
-        patreon: {
-          completed: false,
-          impact: 1000,
-          action: `generate`,
-          icon: `►`, //`✍️`
-          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
-            `Recursion`
-          )}?`,
-          response: `null`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        inspire: {
-          completed: false,
-          impact: 100,
-          action: `inspire`,
-          icon: `⚡`,
-          request: `ms. roxana, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
-            `Recursion`
-          )}?`,
-          response: `\n\nOne inspiring story of recursion concerns a man named Jakob Bernoulli (1654–1705), a Swiss mathematician and physicist. He studied the art of recursive patterns in nature, such as the spirals of a nautilus shell, and developed the mathematical foundations for the modern concept of recursion. He even wrote about this topic in 1713: “The is, indeed, an admirable mystery in the altitude of figures which terminate a spiral line, the descent of which slides insensibly from circumference to the centre.” This showed a deep appreciation for recursive patterns, and it inspired mathematicians for centuries to come.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        summarize: {
-          completed: false,
-          impact: 100,
-          action: `summarize`,
-          icon: `📚`,
-          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
-            `Recursion`
-          )}?`,
-          response: `\n\nRecursion is a way of breaking a problem into smaller parts of the same problem and repeating a process, called the recursive step, until the problem is solved. In other words, it’s a method of solving a problem by breaking it down into simpler versions of the same problem until a solution is found. In programming, it's used to solve problems relating to iterations, algorithms and data structures.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        ask: {
-          completed: false,
-          impact: 100,
-          action: `ask`,
-          icon: `🔮`,
-          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
-            `Recursion`
-          )} with one sentence answers?`,
-          response: `\n\n1. What is recursion? - Recursion is a programming technique which involves a method calling itself.\n2. How does recursion work? - Recursion works by breaking a problem down into smaller subproblems, each of which is solved using the same algorithm.\n3. What is the base case of a recursive problem? - The base case is the condition which tells the algorithm when to stop recursing, and start returning values up the stack.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        guide: {
-          completed: false,
-          impact: 100,
-          action: `guide`,
-          icon: `🤝`,
-          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
-            `Recursion`
-          )}?`,
-          response: `\n\n1. Understand what recursion is and how it works. \n2. Describe the advantages and disadvantages of using recursion.\n3. Identify the base case and recursive case of a problem.\n4. Identify tail recursion and understand how it is executed.\n5. Explain the differences between linear recursion and binary recursion. \n6. Understand the relationship between recursion and iteration.\n7. Explain the concept of recursion space complexity.\n8. Design an algorithm using recursion.\n9. Understand how recursion can be used to generate relationships between data sets.\n10. Develop an understanding of how the principles of recursion can be applied in problem solving.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        demonstrate: {
-          completed: false,
-          impact: 100,
-          action: `demonstrate`,
-          icon: `🧿`,
-          request: `ms. roxana, can you please show me an example of a fibonacci sequence  done recursively in python?`,
-          response: `\n\ndef fibonacci(n): \n    if n <= 1: \n        return n \n    else: \n        return(fibonacci(n-1) + fibonacci(n-2)) \n\n# test\nfor n in range(10):\n    print(fibonacci(n))`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        define: {
-          completed: false,
-          impact: 100,
-          action: `define`, // may not need
-          icon: `👾`, // may not need
-          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
-            `Recursion`
-          )} in exactly one sentence?`,
-          response: `\n\nRecursion is a process whereby a function calls itself repeatedly until a given condition is satisfied.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        quiz: {
-          completed: false,
-          impact: 100,
-          action: `quiz`,
-          icon: `🧪`,
-          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
-            `Recursion`
-          )}?`,
-          response: `\n\n1. What is the definition of recursion?\n2. What is a potential use case of recursion in computer programming?\n3. How can you control the execution of recursion to prevent it from entering an infinite loop?`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        shop: {
-          completed: false,
-          impact: 100,
-          action: `shop`,
-          icon: `🛍️`,
-          request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
-          response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-      },
-    },
-    "Linked Lists": {
-      documentID: ``,
-      filler: ``,
-      hasCode: true,
-      new: true,
-      highValue: false,
-      underConstruction: false,
-      completed: false,
-      needsImprovement: false,
-      tooltip: ``,
-      sourceType: `video`, // may not need
-      button: `Linked Lists`, // may not need - `name`
-      header: `Linked Lists`,
-      fileSource:
-        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674725865/download_21_k9d6in.mp4", // may not need
-
-      prompts: {
-        patreon: {
-          completed: false,
-          impact: 1000,
-          action: `generate`,
-          icon: `►`, //`✍️`
-          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
-            `Linked Lists`
-          )}?`,
-          response: `null`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        inspire: {
-          completed: false,
-          impact: 100,
-          action: `inspire`,
-          icon: `⚡`,
-          request: `ms. roxana, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
-            `Linked Lists`
-          )}?`,
-          response: `\n\nThere is an inspiring story about a computer science professor who, despite all odds, found a way to use linked-lists in a creative and useful way. The professor was teaching a course on data structures and devoted a considerable amount of time to helping her students understand linked-lists. One student, however, wasn't getting the concept and was failing the course. In desperation, the professor asked the student to come to her for help and began to explain linked-lists again, this time, using everyday examples. After some time, the student finally understood the concept and together, they began brainstorming on how to apply linked-lists to a real life problem. \n\nThe professor asked the student if he was familiar with public transportation schedules, to which the student said yes. The professor continued by asking the student how he would approach the task of creating a complex multi-route journey planner given the data available to him. This is when it clicked for the student. Using linked-lists, he rearranged the data into a tree-like structure and was able to come up with a workable solution to the problem.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        summarize: {
-          completed: false,
-          impact: 100,
-          action: `summarize`,
-          icon: `📚`,
-          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
-            `Linked Lists`
-          )}?`,
-          response: `\n\nLinked lists are a data structure used to store sequences of data elements in a linear fashion. Each element is connected to its neighbor in the sequence with a link (pointer) to the next element. An element in a linked list is known as a node and typically contains two parts; data and the link to the next element. Linked lists can be implemented in almost any language and can be used to store and retrieve objects in a dynamic manner. They are commonly used for sorting, searching and manipulating data.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        ask: {
-          completed: false,
-          impact: 100,
-          action: `ask`,
-          icon: `🔮`,
-          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
-            `Linked Lists`
-          )} with one sentence answers?`,
-          response: `\n\n1. What is a linked list? - A linked list is a data structure consisting of a chain of nodes connected by links or pointers.\n2. What is the difference between an array and a linked list? - An array stores data in a contiguous, or sequential, block of memory whereas a linked list stores data in separate nodes connected by links.\n3. How are linked lists useful? - Linked lists are useful because they use memory efficiently and have fast insertion and deletion capabilities.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        guide: {
-          completed: false,
-          impact: 100,
-          action: `guide`,
-          icon: `🤝`,
-          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
-            `Linked Lists`
-          )}?`,
-          response: `\n\n1. Understand the purpose of a linked list and its nature as a linear, dynamic data structure\n2. Recognize that a linked list is composed of nodes and each node stores a piece of data and reference to another node\n3. Understand the components of a node: data and next, and the role of the dummy node in a linked list\n4. Know the key operations of a linked list: insertion (add new element to start, node at specific location, end of linked list), deletion, search (sequential and binary search)\n5. Be able to differentiate between a singly- and a doubly-linked list\n6. Know how to iterate through a linked list to traverse and access its elements\n7. Know the difference between a linked list and an array, when to choose one over the other\n8. Understand the advantages and disadvantages of using a linked list\n9. Know common applications of linked lists such as stacks, queues and hash tables\n10. Understand the concept of memory management when creating linked list objects`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        demonstrate: {
-          completed: false,
-          impact: 100,
-          action: `demonstrate`,
-          icon: `🧿`,
-          request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
-            `Linked Lists`
-          )} with no other text in python?`,
-          response: `\n\nLinked List in Python:\n\nclass Node: \n    def __init__(self, data): \n        self.data = data \n        self.next = None\n  \nclass LinkedList: \n    def __init__(self): \n        self.head = None\n  \n    def push(self, new_data): \n        # 1 & 2: Allocate the Node & Put in the data \n        new_node = Node(new_data) \n\n        # 3. Make next of new Node as head \n        new_node.next = self.head \n  \n        # 4. Move the head to point to new Node  \n        self.head = new_node \n  \n    def printList(self): \n        temp = self.head \n        while (temp): \n            print (temp.data) \n            temp = temp.next`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        define: {
-          completed: false,
-          impact: 100,
-          action: `define`, // may not need
-          icon: `👾`, // may not need
-          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
-            `Linked Lists`
-          )} in exactly one sentence?`,
-          response: `\n\nA linked list is a dynamic data structure of sequentially linked memory elements.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-
-        quiz: {
-          completed: false,
-          impact: 100,
-          action: `quiz`,
-          icon: `🧪`,
-          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
-            `Linked Lists`
-          )}?`,
-          response: `\n\n1. What characteristic do linked lists have that differentiates them from other data structures?\n2. What is the purpose of a sentinel node in a linked list?\n3. What are the advantages of using a linked list over an array?`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        shop: {
-          completed: false,
-          impact: 100,
-          action: `shop`,
-          icon: `🛍️`,
-          request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
-          response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-      },
-    },
-    "Link Traversal": {
-      documentID: ``,
-      filler: ``,
-      new: true,
-      hasCode: true,
-      highValue: false,
-      underConstruction: false,
-      completed: false,
-      needsImprovement: false,
-      tooltip: ``,
-      sourceType: `video`, // may not need
-      button: `Link Traversal`, // may not need - `name`
-      header: `Link Traversal`,
-      fileSource:
-        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674725908/download_22_rjgmqs.mp4", // may not need
-
-      prompts: {
-        patreon: {
-          completed: false,
-          impact: 1000,
-          action: `generate`,
-          icon: `►`, //`✍️`
-          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
-            `Link Travel`
-          )}?`,
-          response: `null`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        inspire: {
-          completed: false,
-          impact: 100,
-          action: `inspire`,
-          icon: `⚡`,
-          request: `ms. roxana, can you please share how linked lists work in neural networks?`,
-          response: `\n\nLinked lists are generally used to represent the layers of a neural network. They can be used to represent how the nodes in each layer is connected to one another. A linked list stores a collection of values, called nodes, and each node contains an associated value as well as a pointer to the address of the next node in the structure. This allows neural networks to quickly retrieve a specific node without having to traverse the entire list.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        summarize: {
-          completed: false,
-          impact: 100,
-          action: `summarize`,
-          icon: `📚`,
-          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
-            `Link Travel`
-          )}?`,
-          response: `\n\nTraversing a linked list means to iterate through all elements in the list. To begin, you'll need to create a variable to store the head of the list. You will then want to iterate through the list until you reach the tail. As you iterate, you'll want to access each element and/or perform some action. When you're done, you'll set the variable to the next element and continue until the tail is reached. \n\nTraversing a tree means to visit each node in the tree, either in a pre-order, in-order, or post-order approach. In a pre-order approach, you would first process the root node, followed by all its left-subtree, and then all its right-subtree. In an in-order approach, you would first process the left-subtree, followed by the root node, and then the right-subtree. In a post-order approach, you would process each left-subtree and right-subtree first, followed by the root node.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        ask: {
-          completed: false,
-          impact: 100,
-          action: `ask`,
-          icon: `🔮`,
-          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
-            `Link Travel`
-          )} with one sentence answers?`,
-          response: `\n\n1. How do I start traversing a linked list? - Begin the traversal by starting at the head node.\n2. How do I traverse a binary tree? - Traverse a binary tree by recursively visiting the left and right nodes.\n3. What is post-order traversal? - Post-order traversal is when you visit the left and right children of a node before the node itself.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        guide: {
-          completed: false,
-          impact: 100,
-          action: `guide`,
-          icon: `🤝`,
-          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
-            `Link Travel`
-          )}?`,
-          response: `\n\n1. Understand the differences between a linked list and a tree.\n2. Learn the basic components of a linked list: head node, tail node, and data node.\n3. Understand the purpose of a linked list: to store data in linear order.\n4. Understand the basic components of a tree: root, branch, and leaf.\n5. Learn about the different types of trees: binary search tree, red-black tree, AVL tree, etc.\n6. Learn about traversing trees: pre-order, post-order, and in-order traversal.\n7. Understand the steps involved in a tree traversal: analyze the current node, traverse the left subtree, traverse the right subtree.\n8. Learn how to traverse both linked lists and trees using iterative and recursive techniques.\n9. Practice coding the traversal algorithms.\n10. Understand the Big-O runtime of the traversal algorithms.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        demonstrate: {
-          completed: false,
-          impact: 100,
-          action: `demonstrate`,
-          icon: `🧿`,
-          request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
-            `Link Travel`
-          )} with no other text in python?`,
-          response: `\n\nTraversing a linked list: \n\nclass Node: \n    def __init__(self, data): \n        self.data = data \n        self.next = None\n\nclass LinkedList: \n    def __init__(self): \n        self.head = None\n\n    def traverse(self): \n        current = self.head\n\n        while current is not None: \n            print(current.data)\n            current = current.next \n\n\nTraversing a tree: \n\nclass Node: \n    def __init__(self, data): \n        self.data = data \n        self.left = None \n        self.right = None\n\ndef traverse(root): \n    if root is not None: \n\n        traverse(root.left) \n        print(root.data) \n        traverse(root.right)`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        define: {
-          completed: false,
-          impact: 100,
-          action: `define`, // may not need
-          icon: `👾`, // may not need
-          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
-            `Link Travel`
-          )} in exactly one sentence?`,
-          response: `\n\nTraversing linked lists and trees involves systematically visiting each node or item in the structure, usually in a specific order.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-
-        quiz: {
-          completed: false,
-          impact: 100,
-          action: `quiz`,
-          icon: `🧪`,
-          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
-            `Link Travel`
-          )}?`,
-          response: `\n\n1. What is the difference between a linked list and a tree?\n2. What is the time complexity of traversing a linked list using a recursive algorithm?\n3. How can memory be saved when traversing a tree using a breadth-first search?`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        shop: {
-          completed: false,
-          impact: 100,
-          action: `shop`,
-          icon: `🛍️`,
-          request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
-          response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-      },
-    },
-    "Link Swapping": {
-      documentID: ``,
-      filler: ``,
-      new: true,
-      hasCode: true,
-      highValue: false,
-      underConstruction: false,
-      completed: false,
-      needsImprovement: false,
-      tooltip: ``,
-      sourceType: `video`, // may not need
-      button: `Link Swapping`, // may not need - `name`
-      header: `Link Swapping`,
-      fileSource:
-        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674725986/download_23_lbtipl.mp4", // may not need
-
-      prompts: {
-        patreon: {
-          completed: false,
-          impact: 1000,
-          action: `generate`,
-          icon: `►`, //`✍️`
-          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
-            `Link Changing`
-          )}?`,
-          response: `null`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        inspire: {
-          completed: false,
-          impact: 100,
-          action: `inspire`,
-          icon: `⚡`,
-          request: `ms. roxana, can you please social networks and following graphs work?`,
-          response: `\n\nSocial networks are networks of individuals and organizations that are connected to each other based on a common relationship, usually formed through communication and information exchange. Following graphs describe relationships between entities, such as between two people, organizations, or groups. They are typically visualized as lines or arrows that connect the entities, symbolizing their relationships. Following graphs can be used to represent complex social networks and visualize how relationships between individuals or organizations evolve over time.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        summarize: {
-          completed: false,
-          impact: 100,
-          action: `summarize`,
-          icon: `📚`,
-          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
-            `Link Changing`
-          )}?`,
-          response: `\n\nSwapping nodes in a linked list, tree, or graph involves exchanging two nodes and the elements the nodes contain. In a linked list, two adjacent nodes are usually swapped; in a tree, two child nodes can be swapped; and in a graph, two adjacent nodes can be swapped. The process of swapping involves taking the element in one node and placing it in another node while also moving the connecting pointers and relationships between the nodes to maintain the list/tree/graph structure.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        ask: {
-          completed: false,
-          impact: 100,
-          action: `ask`,
-          icon: `🔮`,
-          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
-            `Link Changing`
-          )} with one sentence answers?`,
-          response: `\n\n1. How do I swap two nodes in a linked list? - Swap the data stored in the two nodes.\n2. How do I swap two nodes in a tree? - Traverse the tree to find the nodes, then swap their data.\n3. How do I swap two nodes in a graph? - Traverse the graph to find the nodes, then swap their adjacent edges.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        guide: {
-          completed: false,
-          impact: 100,
-          action: `guide`,
-          icon: `🤝`,
-          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
-            `Link Changing`
-          )}?`,
-          response: `\n\n1. Understand the basic concepts behind linked lists, trees, and graphs\n2. Be familiar with the syntax and the logic that links nodes in these structures\n3. Consider the different kinds of swapping operations available for manipulating nodes (direct swap, data swap, etc.)\n4. Define the elements that need to be exchanged when swapping nodes (pointers, links, or data)\n5. Explore the implications of swapping nodes on the structure (ordering, length, balance, etc.)\n6. Identify the correct sequence of steps when swapping nodes in a linked list, tree, or graph\n7. Develop an understanding of the methods used to traverse and locate nodes within a structure\n8. Compare and contrast the advantages and disadvantages of different node swapping operations\n9. Learn practical strategies for debugging problems encountered when swapping nodes\n10. Practice coding different node swapping operations with different data structures`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        demonstrate: {
-          completed: false,
-          impact: 100,
-          action: `demonstrate`,
-          icon: `🧿`,
-          request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
-            `Link Changing`
-          )} with no other text in javascript?`,
-          response: `\n\nHere is an example of swapping nodes in a linked list in JavaScript: \n\n// Create a Linked List Node \nclass Node { \n  constructor(data) { \n      this.data = data; \n      this.next = null; \n  } \n} \n\n// Create a swapNodes function \nfunction swapNodes(head, p, q) { \n    let current_p = head; \n    let current_q = head; \n    let prev_p = head; \n    let prev_q = head; \n  \n    // Loop until the two nodes are found \n    while (current_p !== null && current_p.data != p.data) { \n        prev_p = current_p; \n        current_p = current_p.next; \n    } \n  \n    while (current_q !== null && current_q.data != q.data) { \n        prev_q = current_q; \n        current_q = current_q.next; \n    } \n  \n    // Check if the nodes were found \n    if (current_p === null || current_q === null) { \n        return; \n    } \n  \n    // If the nodes were found, swap them \n    prev_p.next = current_q; \n    prev_q.next = current_p; \n  \n    // Swap their \"next\" pointers \n    let temp = current_p.next; \n    current_p.next = current_q.next; \n    current_q.next = temp; \n  \n    return head; \n}`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        define: {
-          completed: false,
-          impact: 100,
-          action: `define`, // may not need
-          icon: `👾`, // may not need
-          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
-            `Link Changing`
-          )} in exactly one sentence?`,
-          response: `\n\nSwapping nodes in a linked list, tree, or graph is the process of exchanging two nodes' positions in the structure.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-
-        quiz: {
-          completed: false,
-          impact: 100,
-          action: `quiz`,
-          icon: `🧪`,
-          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
-            `Link Changing`
-          )}?`,
-          response: `\n\n1. What is the difference between swapping nodes in a linked list, tree, and graph?\n2. What are the steps required to swap two nodes in a linked list?\n3. What algorithm can be used to efficiently swap two nodes in a tree or graph?`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        shop: {
-          completed: false,
-          impact: 100,
-          action: `shop`,
-          icon: `🛍️`,
-          request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
-          response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-      },
-    },
-    Algorithms: {
-      documentID: ``,
-      filler: ``,
-
-      hasCode: true,
-      highValue: false,
-      underConstruction: false,
-      completed: false,
-      needsImprovement: false,
-      new: true,
-      tooltip: ``,
-      sourceType: `video`, // may not need
-      button: `Algorithms`, // may not need - `name`
-      header: `Algorithms`,
-      fileSource:
-        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674726053/download_24_wkw20z.mp4", // may not need
-
-      prompts: {
-        patreon: {
-          completed: false,
-          impact: 1000,
-          action: `generate`,
-          icon: `►`, //`✍️`
-          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
-            `Algorithms`
-          )}?`,
-          response: `null`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        inspire: {
-          completed: false,
-          impact: 100,
-          robotTouch: true,
-          action: `inspire`,
-          icon: `⚡`,
-          request: `ms. roxana, can you please share how tree and graph algorithms were used for the COVID outbreak?`,
-          response: `\n\nTree and graph algorithms are used in COVID outbreak modeling to analyze data and visualize complex networks and connections that exist between different factors, such as individuals, communities, and environmental conditions and events. These algorithms can be used to track the spread of the disease, predict high-risk areas and disease trajectories, and understand the underlying transmission networks to better inform public health interventions and population-level responses. For example, tree algorithms can be used to build predictive models that identify high-risk trends in transmission, such as locations that are at a higher risk for outbreaks and travel-associated risk. Graph algorithms can be used to map and visualize complex spatial networks and connections that influence the spread of the virus, such as how social contact and movement of people can spread the virus or how healthcare access can impact outcomes. They can also be used to assess resource allocation needs and assist with targeted interventions by accurately forecasting the future spread of the virus.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        summarize: {
-          completed: false,
-          impact: 100,
-          action: `summarize`,
-          icon: `📚`,
-          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
-            `Algorithms`
-          )}?`,
-          response: `\n\nTree algorithms are search algorithms for traversing a tree in order to find specific information. These algorithms can be used to maximize the effectiveness of a search by exploring the complete tree to return the most relevant information. Graph algorithms are a subset of tree algorithms and enable efficient searching of paths between two points in a graph. Graph algorithms are a branch of mathematics that focus on finding the shortest path from one node to another in a graph, or finding the most efficient path using the fewest number of edges.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        ask: {
-          completed: false,
-          impact: 100,
-          action: `ask`,
-          icon: `🔮`,
-          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
-            `Algorithms`
-          )} with one sentence answers?`,
-          response: `\n\n1. What is the difference between Trees and Graphs? Answer: Trees consist of nodes connected by directed, or unidirectional, edges while Graphs consist of nodes connected by bidirectional edges. \n\n2. What is Depth-First Search? Answer: Depth-First Search is a graph traversal algorithm that begins at the root node and explores as far as possible along each branch before backtracking. \n\n3. What is Breadth-First Search? Answer: Breadth-First Search is a graph traversal algorithm that starts from the root node and explores the neighbor nodes first, before moving to the next level neighbors.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        guide: {
-          completed: false,
-          impact: 100,
-          action: `guide`,
-          icon: `🤝`,
-          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
-            `Algorithms`
-          )}?`,
-          response: `\n\n1. Understand the key differences between trees and graphs, including the definition of each structure and the differences of their associated algorithms.\n2. Review the various techniques and processes used to traverse a tree or graph structure, such as depth-first search (DFS), breadth-first search (BFS), and topological sorting.\n3. Learn how to implement the AVL tree data structure and its associated algorithms for balancing and searching.\n4. Grasp the concepts of minimum spanning tree (MST) algorithm, such as Prim’s or Kruskal’s algorithm, and how to compute, store and optimize the structure.\n5. Analyze and understand different graph operations, such as finding the shortest path between two vertices, connectivity and connectivity components.\n6. Comprehend Dijkstra’s Algorithm, Bellman-Ford Algorithm, A* Algorithm and Floyd-Warshell Algorithm, and when and how to use each algorithm.\n7. Grasp techniques and algorithms utilized in network flow optimization problems, including the Maximum Flow Problem and the Minimum Cost Flow Problem.\n8. Learn techniques to traverse the structure of a network flow and calculate maximum and minimum flow values.\n9. Identify Hamiltonian Path and Eulerian Path, and both components needed to solve the Traveling Salesman Problem.\n10. Analyze algorithms used to identify and sort connected components, such as Connected Component Labeling and Kosa-Karu Algorithm.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        demonstrate: {
-          completed: false,
-          impact: 100,
-          action: `demonstrate`,
-          icon: `🧿`,
-          request: `ms. roxana, can you please show me an example of a common tree or graph algorithm in javascript?`,
-          response: `\n\nTree Algorithm:\n\nfunction traverse(node) {\n  if (node === null) {\n    return;\n  }\n  console.log(node.data);\n  traverse(node.left);\n  traverse(node.right);\n}\n\nGraph Algorithm:\n\nfunction visit(vertex) {\n  if (visited[vertex]) {\n    return;\n  }\n  visited[vertex] = true;\n  console.log(vertex);\n  for (let neighbor of neighbors[vertex]) {\n    visit(neighbor);\n  }\n}`,
-          spanish: ``,
-          tooltip: ``,
-        },
-        define: {
-          completed: false,
-          impact: 100,
-          action: `define`, // may not need
-          icon: `👾`, // may not need
-          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
-            `Algorithms`
-          )} in exactly one sentence?`,
-          response: `\n\nTree algorithms are algorithms which traverse a tree data structure to perform a functional task, while graph algorithms traverse a graph data structure to perform a functional task.`,
-          spanish: ``,
-          tooltip: ``,
-        },
-
-        quiz: {
-          completed: false,
-          impact: 100,
-          action: `quiz`,
-          icon: `🧪`,
-          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
-            `Algorithms`
-          )}?`,
-          response: `\n\n1. What is the difference between a breadth-first search and a depth-first search in terms of tree and graph algorithms?\n\n2. How is Kruskal's algorithm used to find the minimum spanning tree in a graph?\n\n3. What is the difference between a directed graph and an undirected graph with respect to tree and graph algorithms?`,
           spanish: ``,
           tooltip: ``,
         },

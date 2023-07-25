@@ -16,7 +16,6 @@ export const Passcode = ({
   setGlobalImpactCounter,
   computePercentage,
   patreonObject,
-  handleRandomDemoPressed,
 }) => {
   return (
     <div>
@@ -24,16 +23,7 @@ export const Passcode = ({
       <input onChange={handleZeroKnowledgePassword} type="password" />
       <br />
       <br />
-      {/* <div
-        style={{
-          border: "1px solid pink",
-          width: "fit-content",
-          textAlign: "center",
-        }}
-      >
-        If you're applying to scholarship, please read the About in my Patreon  
-        😊
-      </div> */}
+
       <a
         onClick={() =>
           logEvent(analytics, "select_promotion", {
@@ -48,29 +38,12 @@ export const Passcode = ({
         style={{ color: "white" }}
       >
         <Button variant="dark" style={{ width: "250px", height: "50px" }}>
-          <img
-            style={{ borderRadius: "6px" }}
-            width="32px"
-            src="https://pbs.twimg.com/profile_images/1266950784609992705/xEe7mBx9_400x400.png"
-          />
           &nbsp; Get Subscriber Passcode
         </Button>
       </a>
       <br />
       <br />
 
-      {/* <Button
-        variant="dark"
-        style={{ width: "250px", height: "50px" }}
-        onClick={() => handleRandomDemoPressed()}
-      >
-        <img
-          src="/../../../roxana.ico"
-          width="32px"
-          style={{ borderRadius: "6px" }}
-        />
-        &nbsp; Random Demo
-      </Button> */}
       <br />
       <br />
       {patreonObject ? (
@@ -83,9 +56,7 @@ export const Passcode = ({
           setGlobalImpactCounter={setGlobalImpactCounter}
           computePercentage={computePercentage}
           patreonObject={
-            ui()["Engineer"]["Crash Course Version 3 (Work In Progress)"][
-              "Introduction To RO.B.E"
-            ]
+            ui()["Engineer"]["Crash Course Version 3"]["Introduction To RO.B.E"]
           }
           isDemo={true}
           demoName={"Demo: Introduction To RO.B.E"}
