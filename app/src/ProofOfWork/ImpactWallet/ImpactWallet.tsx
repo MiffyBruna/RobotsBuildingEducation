@@ -19,13 +19,14 @@ export const ImpactWallet = ({
   setIsImpactWalletOpen,
   usersModulesCollectionReference,
   usersModulesFromDB,
-  globalReserve,
+
   userAuthObject = { uid: "demo" },
   handlePathSelection,
   isDemo,
+  globalReserveObject,
 }) => {
-  let [databaseUserDocumentCopy, setDatabaseUserDocumentCopy] =
-    useState(databaseUserDocument);
+  console.log("xy", databaseUserDocument);
+  let [databaseUserDocumentCopy, setDatabaseUserDocumentCopy] = useState({});
 
   let params = useParams();
 
@@ -37,16 +38,22 @@ export const ImpactWallet = ({
 
   useEffect(() => {
     // mountWallet();
+    console.log("user auth", userAuthObject);
+    console.log("params", params);
     if (params?.profileID && params?.profileID !== userAuthObject?.uid) {
       const docRef = doc(database, "users", params?.profileID);
       getDoc(docRef).then((res) => {
         if (!res?.data()) {
           // unsafe case?
         } else {
+          console.log("rest", res);
           setDatabaseUserDocumentCopy(res?.data());
           setIsImpactWalletOpen(true);
         }
       });
+    } else {
+      console.log("user's own profile");
+      setDatabaseUserDocumentCopy(databaseUserDocument);
     }
   }, []);
 
@@ -78,6 +85,10 @@ export const ImpactWallet = ({
       setBorderStateForLightningButton({ border: "1px solid blue" });
     }
   };
+
+  console.log("wtf", databaseUserDocumentCopy);
+  console.log("wtf", globalReserveObject);
+
   return (
     <>
       <div>
@@ -195,7 +206,10 @@ export const ImpactWallet = ({
             <p>
               Work Done By You
               <br />
-              {databaseUserDocumentCopy?.impact || 15200} / {getGlobalImpact()}
+              {databaseUserDocumentCopy?.impact ||
+                databaseUserDocument.impact ||
+                15200}{" "}
+              / {getGlobalImpact()}
               <ProgressBar
                 style={{
                   backgroundColor: "black",
@@ -214,7 +228,9 @@ export const ImpactWallet = ({
               You are &nbsp;
               <b>
                 {(
-                  ((databaseUserDocumentCopy?.impact || 0) /
+                  ((databaseUserDocumentCopy?.impact ||
+                    databaseUserDocument.impact ||
+                    0) /
                     globalImpactCounter) *
                   100
                 ).toFixed(2)}
@@ -229,7 +245,9 @@ export const ImpactWallet = ({
                 }}
                 variant="warning"
                 now={Math.floor(
-                  ((databaseUserDocumentCopy?.impact || 0) /
+                  ((databaseUserDocumentCopy?.impact ||
+                    databaseUserDocument.impact ||
+                    0) /
                     globalImpactCounter) *
                     100
                 )}
@@ -254,7 +272,11 @@ export const ImpactWallet = ({
             </div>
             <div>
               <h1>The Reserve</h1>
-              <h3>{globalReserve}</h3>
+              <h3>invested {globalReserveObject?.invested || "N/A"}</h3>
+              <h6>gain {globalReserveObject?.profit}</h6>
+              <h6>total value {globalReserveObject?.total}</h6>
+              <h6>total gain {globalReserveObject?.percent_gained}</h6>
+              <h6>last updated {globalReserveObject?.last_updated}</h6>
               <div></div>
               <img src={sheilferBitcoin} width={300} height={350} />
 

@@ -16,7 +16,10 @@ export const LearnMore = ({ auth }) => {
     <>
       <Button
         variant="success"
-        style={{ color: "white", textShadow: "0px 0px 4px black" }}
+        style={{
+          color: "white",
+          textShadow: "0px 0px 4px black",
+        }}
         onClick={() => {
           logEvent(analytics, "select_content", {
             content_type: "button",
@@ -131,7 +134,7 @@ export const LearnMore = ({ auth }) => {
               style={{
                 maxWidth: "100%",
                 width: 700,
-                ...textBlock(japaneseThemePalette.GoldenAccent, 15),
+                ...textBlock(japaneseThemePalette.FujiSanBlue, 0, null),
               }}
             >
               I have not collected testimonials. I'm working hard on creating a
@@ -149,13 +152,13 @@ export const LearnMore = ({ auth }) => {
                   alignItems: "center",
                 }}
               >
-                <img width={350} src={elkhanmigo} />
+                {/* <img width={350} src={elkhanmigo} /> */}
                 <br />
                 <img
                   width={350}
                   src={khanac}
                   style={{
-                    boxShadow: `1px 4px 20px 5px rgba(0,0,0,1)`,
+                    boxShadow: `1px 4px 5px 5px rgba(0,0,0,1)`,
                   }}
                 />
                 <br />
@@ -164,7 +167,7 @@ export const LearnMore = ({ auth }) => {
                   width={350}
                   src={snow}
                   style={{
-                    boxShadow: "1px 4px 20px 5px rgba(0,0,0,1)",
+                    boxShadow: "1px 4px 5px 5px rgba(0,0,0,1)",
                   }}
                 />
 
@@ -173,7 +176,7 @@ export const LearnMore = ({ auth }) => {
                   width={350}
                   src={phillyd}
                   style={{
-                    boxShadow: "1px 4px 20px 5px rgba(0,0,0,1)",
+                    boxShadow: "1px 4px 5px 5px rgba(0,0,0,1)",
                   }}
                 />
               </div>
@@ -235,7 +238,7 @@ export const LearnMore = ({ auth }) => {
             <div
               style={{
                 ...textBlock(
-                  japaneseThemePalette.WoodenArchitectureBrown,
+                  japaneseThemePalette.ProsperityEmeraldGreen,
                   0,
                   12
                 ),
@@ -313,7 +316,7 @@ export const LearnMore = ({ auth }) => {
             <div
               style={{
                 ...textBlock(
-                  japaneseThemePalette.WoodenArchitectureBrown,
+                  japaneseThemePalette.ProsperityEmeraldGreen,
                   0,
                   12
                 ),
@@ -382,7 +385,7 @@ export const LearnMore = ({ auth }) => {
             <div
               style={{
                 ...textBlock(
-                  japaneseThemePalette.WoodenArchitectureBrown,
+                  japaneseThemePalette.ProsperityEmeraldGreen,
                   0,
                   12
                 ),
@@ -444,7 +447,7 @@ export const LearnMore = ({ auth }) => {
             <div
               style={{
                 ...textBlock(
-                  japaneseThemePalette.WoodenArchitectureBrown,
+                  japaneseThemePalette.ProsperityEmeraldGreen,
                   0,
                   12
                 ),
@@ -488,7 +491,7 @@ export const LearnMore = ({ auth }) => {
             <div
               style={{
                 ...textBlock(
-                  japaneseThemePalette.WoodenArchitectureBrown,
+                  japaneseThemePalette.ProsperityEmeraldGreen,
                   0,
                   12
                 ),
@@ -516,7 +519,7 @@ export const LearnMore = ({ auth }) => {
             <br />
             <div
               style={{
-                ...textBlock(japaneseThemePalette.KyotoPurple, 10, 24),
+                ...textBlock(japaneseThemePalette.DeepCherryBlossomPink, 0, 24),
               }}
             >
               <h3>Engineer</h3>
@@ -536,11 +539,7 @@ export const LearnMore = ({ auth }) => {
             <br />
             <div
               style={{
-                ...textBlock(
-                  japaneseThemePalette.DeepCherryBlossomPink,
-                  10,
-                  24
-                ),
+                ...textBlock(japaneseThemePalette.SakuraMochiPink, 0, 24),
               }}
             >
               <h3>Creator</h3>
@@ -558,11 +557,7 @@ export const LearnMore = ({ auth }) => {
             <br />
             <div
               style={{
-                ...textBlock(
-                  japaneseThemePalette.ProsperityEmeraldGreen,
-                  10,
-                  24
-                ),
+                ...textBlock(japaneseThemePalette.DeepCherryBlossomPink, 0, 24),
               }}
             >
               <h3>Dealer</h3>
@@ -578,7 +573,7 @@ export const LearnMore = ({ auth }) => {
             <br />
             <div
               style={{
-                ...textBlock(japaneseThemePalette.StrongRed, 10, 24),
+                ...textBlock(japaneseThemePalette.SakuraMochiPink, 0, 24),
               }}
             >
               <h3>Boss Mode</h3>
@@ -593,7 +588,9 @@ export const LearnMore = ({ auth }) => {
             <br />
             <br />
             <div
-              style={{ ...textBlock(japaneseThemePalette.StrongBlue, 10, 24) }}
+              style={{
+                ...textBlock(japaneseThemePalette.DeepCherryBlossomPink, 0, 24),
+              }}
             >
               <h2>RO.₿.E</h2>
               <i>theme: intelligent assistance</i>
@@ -612,7 +609,7 @@ export const LearnMore = ({ auth }) => {
             <br />
             <div
               style={{
-                ...textBlock(japaneseThemePalette.DarkMetallicSilver, 10, 24),
+                ...textBlock(japaneseThemePalette.SakuraMochiPink, 0, 24),
               }}
             >
               <h2>Impact Wallet</h2>

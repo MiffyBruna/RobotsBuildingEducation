@@ -12,6 +12,7 @@ const MarkdownRenderer = ({ file, patreonObject }) => {
   if (isEmpty(file)) {
     return <div>{patreonObject?.prompts?.patreon?.response || ""}</div>;
   }
+
   return (
     <div
       style={{ color: "white", wordBreak: "break-word" }}

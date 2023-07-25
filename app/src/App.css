@@ -45,3 +45,12 @@
 .read-the-docs {
   color: #888;
 }
+
+
+.modal-header {
+  border-bottom: 1px solid black;
+}
+
+.modal-footer {
+  border-top: 1px solid black;
+}

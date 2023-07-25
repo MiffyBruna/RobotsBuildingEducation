@@ -232,26 +232,32 @@ export let prettyColorPalette = {
 export let japaneseThemePalette = {
   CherryBlossomPink: "#FFB7C5", // Cherry Blossom
   KyotoPurple: "#663399", // Sweet Potato Purple
-  FujiSanBlue: "#3A5F7D", // Mount Fuji Blue
+  FujiSanBlue: "#6f97d3", // Mount Fuji Blue
   TokyoTwilight: "#706fd3", // Twilight in Tokyo
   SakuraMochiPink: "#FF92A9", // Sakura Mochi
   WisteriaPurple: "#89729E", // Wisteria Flower
-  GoldenAccent: "#DAA520", // Gold in Japanese Art
-  WoodenArchitectureBrown: "#8B4513", // Japanese Wood Architecture
-  BambooForestGreen: "#6B8E23", // Bamboo Forest
+  GoldenAccent: "#bf8902", // Gold in Japanese Art
+  WoodenArchitectureBrown: "#d3a86f", // Japanese Wood Architecture
+  BambooForestGreen: "#6fd3bc", // Bamboo Forest
   DeepCherryBlossomPink: "#C71585", // Deep Cherry Blossom
-  ProsperityEmeraldGreen: "#008B45", // Symbol of Wealth
+  ProsperityEmeraldGreen: "#88d36f", // Symbol of Wealth
   StrongRed: "#DC143C", // Japanese Flag Red
   StrongBlue: "#00008B", // Indigo Blue Textile
   DarkMetallicSilver: "#5A5A5A", // Darkened Steel Samurai Sword
 };
 
 // opinionated
-export let textBlock = (color, shadowSize = 2, borderRadius = 4) => {
+export let textBlock = (
+  backgroundColor,
+  shadowSize = 4,
+  borderRadius = 4,
+  color = "white"
+) => {
   return {
-    backgroundColor: color,
+    backgroundColor: backgroundColor,
     borderRadius: borderRadius,
     padding: 16,
-    textShadow: `${shadowSize}px ${shadowSize}px ${shadowSize}px black`,
+    textShadow: `${shadowSize}px ${shadowSize}px ${shadowSize || 10}px black`,
+    color: color,
   };
 };

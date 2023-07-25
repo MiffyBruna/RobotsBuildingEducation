@@ -234,7 +234,6 @@ export const Prompts = ({
             globalImpactCounter={globalImpactCounter}
             usersModulesCollectionReference={usersModulesCollectionReference}
             usersModulesFromDB={usersModulesFromDB}
-            globalReserve={globalReserve}
             globalScholarshipCounter={globalScholarshipCounter}
             isDemo={isDemo}
           />

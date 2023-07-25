@@ -1,4 +1,4 @@
-import { useEffect, useState, useReducer } from "react";
+import { useEffect, useState } from "react";
 import { isEmpty } from "lodash";
 
 import "./App.css";
@@ -41,49 +41,64 @@ logEvent(analytics, "page_view", {
   page_location: "https://learn-robotsbuildingeducation.firebaseapp.com/",
 });
 
-export const reducer = (state, action) => {
-  if (action.type === "incremented_age") {
-    return {
-      age: state.age + 1,
-    };
-  }
-  throw Error("Unknown action.");
-};
-
 function App() {
-  const [isLoadingRoute, setIsLoadingRoute] = useState(false);
   let params = useParams();
-  // const [state, dispatch] = useReducer(reducer, { age: 42 });
+
+  // mounts data from route - needs refactoring/rearchitecting
+  const [isLoadingRoute, setIsLoadingRoute] = useState(false);
+
+  // auth state
   const [isSignedIn, setIsSignedIn] = useState("start"); // Local signed-in state.
   const [isZeroKnowledgeUser, setIsZeroKnowledgeUser] = useState(false);
   const [userAuthObject, setUserAuthObject] = useState({});
 
-  // this is the data inside a user document
+  // this is the actual data inside a user document for UI
   const [databaseUserDocument, setDatabaseUserDocument] = useState({});
 
   // this is a document object reference for a user collection
   const [userDocumentReference, setUserDocumentReference] = useState({});
+
+  //**important 🤪: this is a terrible reference. It's used to process the "impact" document found inside of the "global" collection
+  //it's due for a refactor, see globalReserveObject. It may be redundant.
   const [globalDocumentReference, setGlobalDocumentReference] = useState({});
+
+  // this GETs is a set of modules that belongs to a user. Not in use in the UI, but may be useful some other day.
   const [usersModulesCollectionReference, setUsersModulesCollectionReference] =
     useState({});
 
-  //courses references are deprecated
+  //**important 🤪: "usersCoursesCollectionReference" this can be removed. It will be developed better in the future
   const [usersCoursesCollectionReference, setUsersCoursesCollectionReference] =
     useState({});
 
+  //**important 🤪: this GETs all AI course templates in an not scalable way.
   const [
     globalModulesCollectionReference,
     setGlobalModulesCollectionReference,
   ] = useState({});
-  const [usersModulesFromDB, setUsersModulesFromDB] = useState([]); //setGlobalUserModulesFromDB
+
+  //this is the set of data inside of modules belonging to a user meant for UI.
+  const [usersModulesFromDB, setUsersModulesFromDB] = useState([]);
+
+  // //**important 🤪: this displays all AI course templates in an not scalable way. this is the set of data inside of global meant for UI.
   const [globalUserModulesFromDB, setGlobalUserModulesFromDB] = useState([]);
+
   // used to count total global count. used to get all work done before this global counter was implemented.
   const [globalImpactCounter, setGlobalImpactCounter] = useState(0);
+
+  // ui db data result
   const [globalScholarshipCounter, setGlobalScholarshipCounter] = useState(0);
-  const [globalReserveCounter, setGlobalReserveCounter] = useState(0);
+
+  // ui db data result
+  const [globalReserveObject, setGobalReserveObject] = useState({});
+
+  // ui schema result
   const [patreonObject, setPatreonObject] = useState<Record<string, any>>({});
+
+  // ui schema result
   const [currentPath, setCurrentPath] = useState("");
+
   const [currentPathForAnalytics, setCurrentPathForAnalytics] = useState("");
+
   const [proofOfWorkFromModules, setProofOfWorkFromModules] = useState(0);
 
   const [isDemo, setIsDemo] = useState(true);
@@ -235,15 +250,15 @@ function App() {
           .catch((error) => console.log("ERROR", error));
 
         getDoc(globalImpactDocRef).then((res) => {
-          console.log("resssss", res.data());
           setGlobalImpactCounter(res.data().total);
         });
 
         const globalReserveDocRef = doc(database, "global", "reserve");
         getDoc(globalReserveDocRef).then((res) => {
           console.log("res", res.data());
-          setGlobalReserveCounter(res.data().amount);
+
           setGlobalScholarshipCounter(res.data().scholarships);
+          setGobalReserveObject(res.data());
         });
 
         setUserDocumentReference(docRef);
@@ -301,7 +316,7 @@ function App() {
 
         getDoc(globalReserveDocRef).then((res) => {
           console.log("res", res.data());
-          setGlobalReserveCounter(res.data().amount);
+
           setGlobalScholarshipCounter(res.data().scholarships);
         });
 
@@ -370,12 +385,10 @@ function App() {
       <div className="App" style={{ minHeight: "100vh" }}>
         <Header
           auth={auth}
-          globalReserveCounter={globalReserveCounter}
           patreonObject={patreonObject}
           userDocumentReference={userDocumentReference}
           databaseUserDocument={databaseUserDocument}
           setDatabaseUserDocument={setDatabaseUserDocument}
-          globalDocumentReference={globalDocumentReference}
           globalImpactCounter={globalImpactCounter}
           setGlobalImpactCounter={setGlobalImpactCounter}
           computePercentage={computePercentage}
@@ -461,7 +474,6 @@ function App() {
                   <>
                     <ChatGPT
                       globalScholarshipCounter={globalScholarshipCounter}
-                      globalReserve={globalReserveCounter}
                       currentPath={currentPathForAnalytics}
                       patreonObject={patreonObject}
                       userDocumentReference={userDocumentReference}
@@ -497,6 +509,7 @@ function App() {
           position: "sticky",
           bottom: 0,
           width: "100%",
+          backgroundColor: "rgba(28,28,30,0.75)",
         }}
       >
         {databaseUserDocument && isSignedIn && isZeroKnowledgeUser ? (
@@ -508,9 +521,9 @@ function App() {
             globalImpactCounter={globalImpactCounter}
             usersModulesCollectionReference={usersModulesCollectionReference}
             usersModulesFromDB={usersModulesFromDB}
-            globalReserve={globalReserveCounter}
             globalScholarshipCounter={globalScholarshipCounter}
             handlePathSelection={handlePathSelection}
+            globalReserveObject={globalReserveObject}
           />
         ) : null}
       </div>

@@ -33,7 +33,6 @@ export const ChatGPT = ({
   computePercentage,
   isGeneratedDemo = false,
   usersModulesCollectionReference,
-  globalReserve,
 
   userAuthObject,
 }) => {
@@ -484,7 +483,6 @@ export const ChatGPT = ({
         userAuthObject={userAuthObject}
         currentPath={currentPath}
         isRaidActive={isRaidActive}
-        globalReserve={globalReserve}
         globalScholarshipCounter={globalScholarshipCounter}
         isDemo={isDemo}
 

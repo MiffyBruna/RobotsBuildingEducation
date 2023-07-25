@@ -15,9 +15,10 @@ export const ProofOfWork = ({
   isModule = false,
   usersModulesCollectionReference = null,
   usersModulesFromDB,
-  globalReserve,
+
   handlePathSelection,
   isDemo,
+  globalReserveObject,
 }) => {
   const [isImpactWalletOpen, setIsImpactWalletOpen] = useState(false);
 
@@ -45,9 +46,9 @@ export const ProofOfWork = ({
           setIsImpactWalletOpen={setIsImpactWalletOpen}
           usersModulesCollectionReference={usersModulesCollectionReference}
           usersModulesFromDB={usersModulesFromDB}
-          globalReserve={globalReserve}
           globalScholarshipCounter={globalScholarshipCounter}
           isDemo={isDemo}
+          globalReserveObject={globalReserveObject}
         />
       </div>
     );
@@ -80,8 +81,8 @@ export const ProofOfWork = ({
         usersModulesCollectionReference={usersModulesCollectionReference}
         usersModulesFromDB={usersModulesFromDB}
         userAuthObject={userAuthObject}
-        globalReserve={globalReserve}
         globalScholarshipCounter={globalScholarshipCounter}
+        globalReserveObject={globalReserveObject}
       />
       {/* <a onClick={() => auth.signOut()}>Sign-out</a> */}
     </div>
