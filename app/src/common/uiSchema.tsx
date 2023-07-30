@@ -210,6 +210,8 @@ export let getGlobalImpact = () => {
 
   const ignorePath = ["Boss Mode", "RO.₿.E"];
 
+  const ignoreModule = ["Lesson 5 Computer Science", "Self-esteem"];
+
   const ignorePrompt = ["welcome", "intro"];
 
   pathKeys.forEach((path) => {
@@ -221,16 +223,18 @@ export let getGlobalImpact = () => {
           let moduleKeys = Object.keys(ui()[path][collection]);
 
           moduleKeys.forEach((module) => {
-            moduleCount = moduleCount + 1;
+            if (!ignoreModule.includes(module)) {
+              moduleCount = moduleCount + 1;
 
-            let mod = ui()[path][collection][module];
-            let prompts = Object.keys(mod.prompts);
+              let mod = ui()[path][collection][module];
+              let prompts = Object.keys(mod.prompts);
 
-            prompts.forEach((prompt) => {
-              if (!ignorePrompt.includes(prompt)) {
-                sum = sum + mod.prompts[prompt].impact;
-              }
-            });
+              prompts.forEach((prompt) => {
+                if (!ignorePrompt.includes(prompt)) {
+                  sum = sum + mod.prompts[prompt].impact;
+                }
+              });
+            }
           });
         }
       });

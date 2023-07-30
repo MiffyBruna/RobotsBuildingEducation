@@ -3,7 +3,7 @@ import { ultimateEffeciencyJutsu } from "../ui";
 // add a collapse feature
 
 export const Creator = {
-  "Communication Science": {
+  Communications: {
     // Philosophx: {
     //   documentID: ``,
     //   filler: ``,
@@ -2843,6 +2843,12 @@ export const Creator = {
           tooltip: ``,
         },
       },
+    },
+    "Self-esteem": {
+      underConstruction: true,
+      isModuleDisabled: true,
+      button: "Self-esteem",
+      sourceType: "video",
     },
   },
 };

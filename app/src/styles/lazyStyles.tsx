@@ -100,6 +100,70 @@ export const StyledModule = styled.button`
   }
 `;
 
+export const ComingSoonModule = styled.button`
+  border: 1px solid #636366;
+  background-color: black;
+  background-size: cover;
+  box-sizing: border-box;
+  margin: 8px;
+  width: 140px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
+  color: white;
+  transition: 0.15s all ease-in-out;
+  border: 5px dashed
+    ${(props) => {
+      return props.patreonObject.isModuleDisabled
+        ? japaneseThemePalette.SakuraMochiPink
+        : props.patreonObject.rare
+        ? "#DA830D"
+        : props.patreonObject.highValue
+        ? "#F8B125"
+        : props.patreonObject.new
+        ? "#f9c4ff"
+        : props.patreonObject.underConstruction
+        ? "#6A74B4"
+        : "#B271D1";
+    }};
+
+  text-shadow: 1px 1px 5px black;
+  background-color: ${(props) => {
+    return props.patreonObject.isModuleDisabled
+      ? "black"
+      : props.patreonObject.header === "Boss Mode"
+      ? "#590f04"
+      : props.patreonObject.rare
+      ? "#DA830D"
+      : props.patreonObject.highValue
+      ? "#F8B125"
+      : props.patreonObject.new
+      ? "#f6a3ff"
+      : props.patreonObject.underConstruction
+      ? "#6A74B4"
+      : "#F099AD";
+  }};
+
+  cursor: ${(props) => {
+    return props.patreonObject.isModuleDisabled
+      ? "not-allowed!important"
+      : "grab";
+  }};
+
+  &:hover {
+    transform: scale(1.1);
+
+    background: ${(props) => {
+      return props.patreonObject.isModuleDisabled ? "black" : "#f5befa";
+    }};
+  }
+`;
+
 export const StyledLink = styled(Link)`
   background-color: ${(props) => {
     return props.isBot ? "#8672B7" : "#B271D1";

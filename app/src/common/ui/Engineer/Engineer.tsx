@@ -7,7 +7,7 @@ import { MessageBlock } from "../MessageBlock/MessageBlock";
 import { CodeBlock } from "../CodeBlock/CodeBlock";
 
 export const Engineer = {
-  "Crash Course Version 3": {
+  "Coding Crash Course Version 3": {
     "Introduction To RO.B.E": {
       documentID: ``,
       hasCode: true,
@@ -3386,6 +3386,12 @@ app.listen(8000, () => console.log('Server running on port 8000'));
           tooltip: ``,
         },
       },
+    },
+    "Lesson 5 Computer Science": {
+      underConstruction: true,
+      isModuleDisabled: true,
+      button: "Lesson 5 Computer Science",
+      sourceType: "video",
     },
   },
   "Get Experience": {
