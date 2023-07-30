@@ -72,12 +72,12 @@ export let ultimateEffeciencyJutsu = (key) => {
       "the fundamentals of object oriented programming",
 
     ["Lesson 2 Frontend Event-Driven Programming"]:
-      "the fundamentals of event-driven programming with React JS",
+      "the fundamentals of event-driven programming and user-centered design",
 
     ["Lesson 3 Understanding Backend Engineering"]:
-      "the foundations of backend engineering",
+      "the foundations of backend engineering, cloud computing and big data",
 
-    ["Lesson 4 Building Apps"]: "the basics of building apps using APIs",
+    ["Lesson 4 Building Apps"]: "how to build a startup and raise investment",
     ["SEO: Search Engine Optimization"]:
       "understanding search engine optimization",
 

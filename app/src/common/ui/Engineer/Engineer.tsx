@@ -2,12 +2,16 @@ import { ultimateEffeciencyJutsu } from "../ui";
 
 import compSciLib from "../../media/images/compSciLib.jpeg";
 import metaphysicalMuse from "../../media/images/metaphysicalMuse.jpeg";
+import { japaneseThemePalette, textBlock } from "../../../styles/lazyStyles";
+import { MessageBlock } from "../MessageBlock/MessageBlock";
+import { CodeBlock } from "../CodeBlock/CodeBlock";
 
 export const Engineer = {
   "Crash Course Version 3": {
     "Introduction To RO.B.E": {
       documentID: ``,
       hasCode: true,
+      hasCustomIntro: true,
       filler: ``,
       new: true,
       highValue: false,
@@ -19,8 +23,40 @@ export const Engineer = {
       button: `Introduction To RO.B.E`, // may not need - `name`
       header: `Introduction To RO.B.E`,
       fileSource:
-        "https://res.cloudinary.com/eduprojectsil/video/upload/v1683183182/IMG_9320_yrjxou.mov", // may not need
+        "https://res.cloudinary.com/eduprojectsil/video/upload/v1690439824/IMG_5331_kzgvoo.mov", // may not need
       prompts: {
+        // should we add impact to selecting a course? adding it to "welcome" would achieve this.
+        welcome: {
+          response: (
+            // <MessageBlock>
+            <div>
+              Dear Innovators &amp; Bright Minds 🌟,
+              <br />
+              <br />
+              🌱 Welcome to your journey through the dynamic world of computer
+              science! I'm Ms. Roxana, your guide on this path of discovery.
+              Computer science is not just coding, it's a universe where
+              creativity, problem-solving, and a multitude of disciplines
+              collide.
+              <br />
+              <br />
+              By exploring this field, you're gaining a new perspective, a tool
+              that can help you make a difference, no matter where your passions
+              lie. As we traverse this adventure together, remember that every
+              mistake is an opportunity to grow. Here's to unearthing potential,
+              to embracing curiosity, and stepping into a world where anything
+              is possible 🚀.
+              <br />
+              <br />
+              Yours in exploration ❤️,
+              <br />
+              Ms. Roxana
+            </div>
+            // </MessageBlock>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
         patreon: {
           completed: false,
           impact: 1000,
@@ -43,61 +79,34 @@ export const Engineer = {
           )}?`,
           response: (
             <div>
-              In the mid-2010s, a computer scientist and psychologist named Dr.
-              Rosalind Picard made a significant impact at the intersection of
-              computer science and mental well-being research. Dr. Picard, a
-              professor at the Massachusetts Institute of Technology (MIT) Media
-              Lab, recognized the potential for technology to help individuals
-              better understand and manage their emotions, leading to improved
-              mental well-being.
+              Meet Kismet, a robot developed by Cynthia Breazeal at the MIT
+              Media Lab back in the late 1990s 🤖. Kismet wasn't just any robot;
+              it was designed to engage in social interaction with humans. The
+              fascinating thing about Kismet is it could recognize and respond
+              to human emotions through facial and voice cues, mimicking the
+              interactions of a human baby 👶. This was an extraordinary
+              milestone in human-computer interaction and affective computing!
               <br />
               <br />
-              Dr. Picard's research focused on affective computing, a field she
-              pioneered that explores how computers can be designed to
-              recognize, interpret, and respond to human emotions. Affective
-              computing has applications in various domains, including mental
-              health, education, and human-computer interaction
+              Fast forward to today, and machine learning algorithms play an
+              enormous role in enhancing our interaction with technology, even
+              beyond what Kismet was capable of 🚀. From voice assistants like
+              Siri and Alexa that understand our spoken commands, to
+              recommendation systems like those on Netflix and YouTube that
+              learn our preferences over time, machine learning is bridging the
+              gap between humans and computers 💻❤️.
               <br />
               <br />
-              One of Dr. Picard's most notable projects is the development of
-              wearable devices that can measure physiological signals associated
-              with emotional experiences. By analyzing data from these devices,
-              such as skin conductance and heart rate, Dr. Picard and her team
-              were able to develop algorithms that could infer users' emotional
-              states, providing insights into their mental well-being.
-              <br />
-              <br />
-              One of the wearable devices developed by Dr. Picard's team is the
-              Embrace smartwatch. This device, initially designed to help
-              individuals with epilepsy by detecting seizures, was found to have
-              broader applications in mental well-being. The Embrace smartwatch
-              can track various physiological markers associated with stress and
-              anxiety, enabling users to monitor their emotional well-being and
-              take steps to manage it effectively.
-              <br />
-              <br />
-              Dr. Picard's work has also contributed to the development of
-              interventions that promote mental well-being, particularly for
-              individuals with autism spectrum disorder (ASD). She and her team
-              have developed tools and techniques that help people with ASD
-              recognize and manage their emotions, leading to improvements in
-              social functioning and overall well-being.
-              <br />
-              <br />
-              Beyond her work in affective computing, Dr. Picard has been a
-              strong advocate for mental well-being within the technology
-              industry. She has spoken openly about her experiences with stress
-              and burnout, emphasizing the importance of self-care and mental
-              health support for those working in high-pressure environments.
-              <br />
-              <br />
-              Dr. Rosalind Picard's inspiring story highlights the power of the
-              intersection between computer science and mental well-being
-              research. By applying her expertise in computer science to address
-              critical challenges in understanding and managing emotions, Dr.
-              Picard has contributed to the development of innovative solutions
-              that hold the potential to improve the mental well-being of
-              countless individuals.
+              The most inspiring part is that these technologies are not built
+              by magic, but by people like you, who are willing to learn and
+              innovate 🎓✨. The field is wide open, inviting you to make your
+              own contributions. No matter how daunting the challenges might
+              seem, remember: every expert was once a beginner. Just like
+              Cynthia Breazeal, who combined her understanding of machine
+              learning and human-computer interaction to create Kismet, you too
+              can make a significant impact in the world of technology 👏🌎. So,
+              keep learning, keep creating, and who knows? The next big
+              breakthrough might just be yours to discover! 🌟
             </div>
           ),
           spanish: ``,
@@ -113,68 +122,54 @@ export const Engineer = {
           )}?`,
           response: (
             <div>
-              The Intersectionality of Computer Science: Bridging Disciplines
-              for Innovation
+              <h2>
+                Let's delve into the dynamic relationship between computer
+                science, its interdisciplinary applications, and human-computer
+                interaction (HCI).
+              </h2>
               <br />
               <br />
-              The field of computer science has rapidly expanded beyond its
-              traditional boundaries, becoming increasingly intertwined with
-              numerous disciplines and driving innovation across a wide range of
-              fields. This intersectionality has sparked groundbreaking
-              discoveries and advancements, transforming the way we understand
-              and address complex problems.
+              Computer science is not a siloed field; rather, it's a
+              multi-faceted discipline with the potential to branch out and
+              integrate with various other domains. Its power lies in its
+              flexibility and adaptability, its ability to mold itself to
+              enhance and innovate within any field it intersects with. 🌐
               <br />
               <br />
-              One of the most prominent examples of this interdisciplinary
-              collaboration is bioinformatics, which fuses computer science,
-              biology, and statistics to analyze large-scale biological data.
-              This integration has led to a better understanding of the genetic
-              basis of diseases, the development of targeted therapies, and
-              personalized medicine.
+              For instance, in healthcare, computer science lends its power to
+              decode complex biological data, making strides in personalized
+              medicine and early diagnosis of diseases. In environmental
+              studies, it contributes to data modeling and simulation, essential
+              for understanding and mitigating the impacts of climate change. 🍃
               <br />
               <br />
-              Natural Language Processing (NLP), a subfield of artificial
-              intelligence, highlights another area where computer science
-              intersects with other disciplines. NLP techniques have been
-              employed in linguistics, psychology, and cognitive science to
-              study language structure, processing, and acquisition, leading to
-              applications such as machine translation, sentiment analysis, and
-              voice recognition systems.
+              Similarly, the educational field is being redefined by the
+              infusion of computer science, which aids in creating dynamic,
+              interactive, and personalized learning experiences. 📚 The world
+              of arts is also touched, where digital tools, backed by computer
+              science, have introduced new forms of creative expression. 🎨
               <br />
               <br />
-              In the social sciences, the advent of computational social science
-              demonstrates how computer science can help us better understand
-              human behavior and social systems. By applying techniques like
-              data mining, network analysis, and machine learning, researchers
-              can analyze large-scale social data, uncovering insights into
-              social networks, decision-making processes, and other sociological
-              phenomena.
+              This synergy of computer science with various disciplines is
+              enriched further by HCI. As the bridge between humans and the
+              complex world of technology, HCI focuses on making technology more
+              user-friendly, making the interaction between users and computers
+              more intuitive, efficient, and enjoyable. 🤝
               <br />
               <br />
-              The digital humanities represent another important intersection,
-              where computational methods are employed to study humanities
-              subjects such as literature, history, and art. Techniques like
-              text mining, data visualization, and network analysis provide new
-              perspectives on cultural and historical datasets, allowing for
-              novel explorations of patterns and connections within these
-              domains.
+              From smart home devices that understand your spoken commands, to
+              adaptive learning platforms that mold themselves to individual
+              learning styles, HCI has made technology an integral part of our
+              lives, a reliable companion that understands and caters to our
+              needs. 🏠🎧
               <br />
               <br />
-              Environmental modeling showcases the critical role of computer
-              science in understanding and predicting the impact of human
-              activities and natural phenomena on the environment. By working
-              closely with environmental scientists, meteorologists, and
-              ecologists, computer scientists contribute to the development of
-              sophisticated models that can simulate complex systems like
-              climate, ecosystems, and hydrological cycles.
-              <br />
-              <br />
-              In conclusion, the intersectionality of computer science has
-              facilitated problem-solving and knowledge discovery across a wide
-              range of disciplines. By transcending traditional boundaries,
-              computer science has proven to be a powerful force for innovation,
-              driving advancements that have the potential to transform our
-              understanding of the world and improve the human condition.
+              Ultimately, the story of computer science isn't just about coding
+              and algorithms. It's about how these tools can be harnessed to
+              create positive impacts in diverse fields, to improve lives, and
+              to make the world a better place. It's a thrilling journey of
+              continuous learning, creativity, and innovation, with countless
+              opportunities for you to make a difference. 🚀🌟
               <br />
               <br />
             </div>
@@ -187,64 +182,64 @@ export const Engineer = {
           impact: 100,
           action: `ask`,
           icon: `🔮`,
-          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
+          request: `ms. roxana, can you please show me three freq   uently asked beginner questions about ${ultimateEffeciencyJutsu(
             `Learn Coding`
           )} with one sentence answers?`,
           response: (
             <div>
-              Question 1: What is the intersectionality of computer science, and
-              why is it important?
+              <div>
+                <h3>
+                  Embarking on a journey to learn computer science can bring up
+                  some intriguing and challenging questions. Here are three
+                  common ones, spruced up with a friendly touch. 🌟
+                </h3>
+              </div>
               <br />
               <br />
-              Answer: The intersectionality of computer science refers to the
-              application of computational principles and techniques to solve
-              problems, generate insights, and drive innovation across diverse
-              disciplines and fields of study. This interdisciplinary approach
-              is important because it facilitates collaboration between experts
-              from different fields, allowing them to leverage each other's
-              knowledge and skills to address complex problems, create new
-              technologies, and advance our understanding of the world.
+              <b>
+                Question 1: How can I think more like a computer scientist? 👩‍💻
+              </b>
               <br />
               <br />
-              <br />
-              <br />
-              Question 2: How can someone interested in the intersectionality of
-              computer science choose a specific field to work in or research?
-              <br />
-              <br />
-              Answer: To explore the intersectionality of computer science and
-              choose a specific field to work in or research, individuals should
-              consider their interests, strengths, and goals. They can start by
-              learning about various interdisciplinary fields, such as
-              bioinformatics, computational social science, or digital
-              humanities, and identify which areas align with their passions.
-              Participating in relevant courses, attending conferences, or
-              joining online communities can also help them gain exposure to
-              these fields and decide which direction to pursue. Furthermore,
-              seeking guidance from mentors or professionals in the desired
-              field can provide valuable insights and support during the
-              decision-making process.
+              This question arises as learners navigate the transition from
+              learning the syntax of a programming language to effectively
+              solving problems using it. It involves the development of
+              computational thinking skills – the ability to break down complex
+              problems into smaller, manageable parts, and thinking logically.
               <br />
               <br />
               <br />
               <br />
-              Question 3: What skills should someone develop to excel in the
-              intersectionality of computer science?
+              <b>
+                Question 2: How important is math in computer science, and how
+                can I get better at it? 🧮
+              </b>
               <br />
               <br />
-              Answer: To excel in the intersectionality of computer science,
-              individuals should develop a strong foundation in core computer
-              science concepts, such as algorithms, data structures, and
-              programming languages. Additionally, they should gain expertise in
-              specific computational techniques relevant to their chosen field,
-              such as machine learning, network analysis, or data visualization.
-              Equally important is acquiring knowledge in the domain they plan
-              to work in, such as biology for bioinformatics or social science
-              for computational social science. Finally, cultivating strong
-              communication, collaboration, and critical thinking skills will
-              enable them to effectively engage with experts from other
-              disciplines, fostering successful interdisciplinary
-              collaborations.
+              While not every aspect of computer science requires advanced
+              mathematics, certain areas like algorithms and machine learning do
+              use mathematical concepts. Many learners question how deeply they
+              need to understand math and how to improve their skills in it.
+              <br />
+              <br />
+              <br />
+              <br />
+              <b>
+                Question 3: How do I stay updated and continue learning in such
+                a rapidly evolving field? 🚀{" "}
+              </b>
+              <br />
+              <br />
+              Computer science is a dynamic field, with new languages,
+              technologies, and concepts emerging regularly. Learners often
+              wonder how they can keep up with the pace of change, stay
+              relevant, and continue learning throughout their careers.
+              <br />
+              <br />
+              <br />
+              Remember, every question is a stepping stone to deeper
+              understanding and growth. Embrace them as exciting challenges on
+              your path of discovery in computer science! 🌈📘
             </div>
           ),
           spanish: ``,
@@ -260,120 +255,110 @@ export const Engineer = {
           )}?`,
           response: (
             <div>
-              A comprehensive study guide for understanding the
-              intersectionality of computer science can be divided into several
-              stages, taking you from beginner to expert level: <br />
+              <h3>
+                Let's break down this process into five stages, taking you from
+                the basics to professional expertise in intersectional research,
+                human-computer interaction (HCI), and computer science.
+              </h3>
               <br />
               <br />
               <br />
-              Stage 1: Building a Strong Foundation in Computer Science <br />
+              <br />
+              🌱Beginner: Introduction to the foundations.
+              <br />
               <br />
               <ol>
                 <li>
-                  Learn the fundamentals of programming languages, such as
-                  Python, Java, or C++.
+                  Start with the basics of computer science. Familiarize
+                  yourself with a programming language like Python.
                 </li>
                 <li>
-                  Gain a strong understanding of data structures and algorithms.
+                  Read introductory books on HCI, such as "Designing the User
+                  Interface" by Ben Shneiderman and Catherine Plaisant.{" "}
                 </li>
                 <li>
-                  Familiarize yourself with basic principles of software
-                  engineering and development.
-                </li>
-                <li>
-                  Learn about computer systems, including hardware, operating
-                  systems, and computer networks.
+                  Learn about intersectionality theory from foundational texts
+                  like Kimberlé Crenshaw's papers.
                 </li>
               </ol>
               <br />
               <br />
-              Stage 2: Introduction to Interdisciplinary Fields in Computer
-              Science
+              🌿Intermediate: Building on the basics.
               <br />
               <br />
               <ol>
                 <li>
-                  Explore various interdisciplinary fields where computer
-                  science intersects with other disciplines, such as
-                  bioinformatics, natural language processing, computational
-                  social{" "}
+                  Develop your skills in another programming language, such as
+                  Java or JavaScript.
                 </li>
                 <li>
-                  science, digital humanities, and environmental modeling.
+                  Start with some basic UX/UI design courses to understand
+                  principles of HCI.
                 </li>
                 <li>
-                  Take introductory courses or attend workshops, seminars, or
-                  webinars in the fields that interest you.
-                </li>
-                <li>
-                  Read articles, books, and research papers to gain an overview
-                  of the current state of research and applications in these
-                  interdisciplinary fields.
+                  Explore the intersectionality in depth, focusing on the
+                  overlapping social categories that contribute to systemic
+                  injustice and social inequality.
                 </li>
               </ol>{" "}
               <br />
               <br />
-              Stage 3: Acquiring Domain-Specific Knowledge <br />
+              🌴Advanced: Deepening your knowledge and specialization.
+              <br />
               <br />
               <ol>
                 <li>
-                  Gain a deeper understanding of the domain in which you plan to
-                  work, such as biology for bioinformatics or social science for
-                  computational social science.
+                  Familiarize yourself with advanced HCI concepts like
+                  user-centered design and heuristic evaluation.
                 </li>
                 <li>
-                  Take relevant courses or attend workshops and conferences in
-                  your chosen domain.
+                  Delve into intersectional research literature. Look at case
+                  studies that apply intersectionality to technology.
                 </li>
                 <li>
-                  Engage with domain-specific literature, research papers, and
-                  online resources to build a strong knowledge base.
+                  Learn about data structures and algorithms to enhance your
+                  computer science foundation.
                 </li>
               </ol>{" "}
               <br />
               <br />
-              Stage 4: Developing Expertise in Relevant Computational Techniques{" "}
-              <br />
+              🌳Professional: Practice and real-world experience. <br />
               <br />
               <ol>
                 <li>
-                  Learn advanced techniques such as machine learning, data
-                  mining, network analysis, or data visualization, depending on
-                  your chosen field.
+                  Begin to work on projects that incorporate all three areas.
+                  Perhaps a software project that requires user-centered design
+                  and considers intersectionality.
                 </li>
+                <li>Contribute to open source projects related to HCI.</li>
                 <li>
-                  Acquire proficiency in specialized tools, libraries, and
-                  frameworks relevant to your area of interest.
-                </li>
-                <li>
-                  Participate in projects, internships, or research
-                  assistantships to gain practical experience in applying
-                  computational techniques in your chosen domain.
+                  Attend webinars and seminars related to intersectional tech
+                  research.
                 </li>
               </ol>{" "}
               <br />
               <br />
-              Stage 5: Building a Professional Network and Engaging with the
-              Community <br />
+              🎓Continued Learning: Staying up-to-date and never stop learning.{" "}
+              <br />
               <br />
               <ol>
                 <li>
-                  Attend conferences, workshops, and seminars related to the
-                  intersectionality of computer science and your chosen domain.
+                  Participate in ongoing discussions and debates about
+                  intersectionality in tech. This could be in online forums or
+                  academic conferences.
                 </li>
                 <li>
-                  Join online forums, social media groups, and professional
-                  networks to connect with experts, researchers, and
-                  practitioners in your field.
+                  Regularly read recent HCI research papers to keep up with the
+                  latest developments.
                 </li>
                 <li>
-                  Present your work, share your knowledge, and contribute to
-                  discussions in your area of interest.
+                  Continuously refine your programming skills with new languages
+                  and technologies.
                 </li>
               </ol>
               <br />
               <br />
-              Stage 6: Conducting Original Research and Advancing the Field{" "}
+              🔥 Leading: Conducting Original research and advancing the field{" "}
               <br />
               <br />
               <ol>
@@ -396,11 +381,10 @@ export const Engineer = {
               </ol>
               <br />
               <br />
-              By following this study guide and progressively building your
-              knowledge and skills, you can become an expert in the
-              intersectionality of computer science and contribute to advancing
-              the understanding and application of computational techniques in
-              various fields.
+              Remember, growth and learning are processes that happen step by
+              step. Keep going, stay curious, and embrace the journey. Every
+              expert was once a beginner, and you have the capacity to reach
+              your goals. 😊👩‍💻🌟
             </div>
           ),
           spanish: ``,
@@ -475,7 +459,6 @@ exports.app = functions.https.onRequest(app);
           spanish: ``,
           tooltip: ``,
         },
-
         quiz: {
           completed: false,
           impact: 100,
@@ -485,43 +468,35 @@ exports.app = functions.https.onRequest(app);
             `Learn Coding`
           )}?`,
           response: (
-            <div>
-              Question 1: Evaluate the potential ethical implications and
-              challenges that may arise from the intersectionality of computer
-              science with other disciplines, such as AI-driven decision-making
-              in healthcare or the use of predictive analytics in criminal
-              justice.
+            <MessageBlock>
+              🌐Geography & Computer Science: How can computer science and GIS
+              (Geographic Information System) technologies be combined to help
+              combat climate change?
               <br />
               <br />
-              Question 2: Discuss the role of interdisciplinary collaboration in
-              addressing complex problems, such as climate change or global
-              health crises, and explain how the intersectionality of computer
-              science can contribute to the development of innovative solutions
-              in these areas.
+              🧬Biology & Computer Science: In what ways can computer science
+              accelerate research and discoveries in the field of genomics?
               <br />
               <br />
-              Question 3: Consider the potential consequences of relying heavily
-              on data-driven approaches in interdisciplinary fields, such as
-              computational social science. Discuss the limitations and biases
-              that may arise from using data-centric methodologies and suggest
-              ways to mitigate these issues.
+              🎨Art & Computer Science: How does understanding the principles of
+              computer science contribute to the evolution of digital art and
+              animation?
               <br />
               <br />
-              Question 4: Analyze the impact of digital humanities on
-              traditional humanities research and debate the potential benefits
-              and drawbacks of incorporating computational methods in the study
-              of literature, history, and art.
+              📚Literature & Computer Science: How might machine learning and
+              natural language processing transform the future of literary
+              analysis or linguistics?
               <br />
               <br />
-              Question 5: As AI and machine learning continue to advance and
-              intersect with various disciplines, discuss the implications of
-              the increasing automation of decision-making and knowledge
-              discovery processes. Consider the potential consequences for human
-              expertise, creativity, and the role of human judgment in these
-              fields.
+              ⚖️Law & Computer Science: How do you envision the role of computer
+              science in the future of law enforcement and crime investigation,
+              especially in light of privacy concerns?
               <br />
               <br />
-            </div>
+              These questions encourage the exploration of the
+              multi-disciplinary applications of computer science, sparking
+              creativity and stimulating critical thinking. 💡🚀
+            </MessageBlock>
           ),
           spanish: ``,
           tooltip: ``,
@@ -623,6 +598,7 @@ exports.app = functions.https.onRequest(app);
     "Lesson 1 Coding Fundamentals": {
       documentID: ``,
       hasCode: true,
+      hasCustomIntro: true,
       filler: ``,
       highValue: false,
       underConstruction: false,
@@ -637,6 +613,33 @@ exports.app = functions.https.onRequest(app);
         "https://res.cloudinary.com/eduprojectsil/video/upload/v1684131257/IMG_0104_n7djon.mov", // may not need
 
       prompts: {
+        welcome: {
+          response: (
+            // <MessageBlock>
+            <div>
+              ¡Hola, estudiantes! 🌸
+              <br />
+              <br />
+              I'm Ms. Roxana, your guide through the enchanting garden of
+              Object-Oriented Programming (OOP). In this garden, we plant
+              'objects', each a unique flower with its own color and fragrance,
+              or in programming terms, attributes and methods. 🌹 Navigating
+              this garden might feel challenging initially, but remember, every
+              bloom takes time and patience, and I'm here to support you through
+              it all. 🌱 We'll explore vibrant concepts like classes, objects,
+              inheritance, and much more. Ready to blossom into brilliant
+              programmers? Let's start this magical journey together! 🦋
+              <br />
+              <br />
+              With all my warmth and support,
+              <br />
+              Ms. Roxana 🌟
+            </div>
+            // </MessageBlock>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
         patreon: {
           completed: false,
           impact: 1000,
@@ -659,38 +662,52 @@ exports.app = functions.https.onRequest(app);
           )}?`,
           response: (
             <div>
-              While there are many inspiring Latina women who've made
-              significant contributions to the tech industry, not all of their
-              personal backgrounds and family details, such as their parental
-              status, are publicly available due to privacy concerns. However,
-              one notable figure who comes to mind is Laura I. Gomez, who is a
-              mother and has been vocal about her experiences raising a child
-              while navigating the tech world.
+              Queridos estudiantes! 🌟
               <br />
               <br />
-              Laura I. Gomez is one of the few Latinas who hold leadership
-              positions in the tech industry. She was one of the early employees
-              at Twitter, where she worked on International Product. She has
-              also worked at other tech giants like Google and YouTube. Later,
-              she founded Atipica, a startup that developed a recruitment
-              software powered by AI and machine learning to help companies
-              diversify their workforce.
+              Object-oriented programming (OOP) is a very special type of
+              programming, and it's full of wonder! Here are some inspiring
+              facts about it:
               <br />
               <br />
-              Gomez has been an advocate for diversity in tech, speaking out
-              about the challenges faced by underrepresented groups in the
-              industry. As a mother, she has also shared her experiences
-              balancing her professional life with her responsibilities as a
-              parent. Her work and advocacy have had a significant impact on the
-              tech industry's dialogue around diversity and inclusion.
+              <b> You're in good company! 🌍: </b>
+              OOP is one of the most widely-used programming paradigms in the
+              world. It's used by tech giants like Google, Facebook, and Amazon.
+              Even if you're just starting, remember that every great developer
+              started where you are right now.
               <br />
               <br />
-              However, it's important to note that while there are inspiring
-              figures like Laura I. Gomez, there's still a significant
-              underrepresentation of Latinas, especially Latina mothers, in the
-              tech industry. Efforts are ongoing to create more opportunities
-              and support for these individuals to enter and succeed in the tech
-              field.
+              <b> Building blocks for the digital world! 🏗️: </b>
+              Think of OOP like building with blocks. Each object you create is
+              like a building block with its own properties and behaviors. You
+              can reuse these blocks as much as you want! The real world is full
+              of objects that interact with each other, right? Well, OOP allows
+              us to model these real-world objects and interactions in our code,
+              making it more intuitive and relatable.
+              <br />
+              <br />
+              <b> Teamwork makes the dream work! 🤝: </b>
+              OOP is perfect for team projects. You can work on one class or
+              object while your teammate works on another. It's all about
+              collaboration and working together, just like in real life.
+              <br />
+              <br />
+              <b>Forever learning, forever growing! 🌱:</b>
+              One of the beautiful aspects of OOP is that there is always more
+              to learn. As you grow as a programmer, so too will your
+              understanding and application of OOP. It's like a journey that
+              never ends, and it's all part of the adventure of learning!
+              <br />
+              <br />
+              Remember, it's not about being the best from the start, it's about
+              growth, determination, and resilience. I believe in your abilities
+              and potential. Keep pushing forward, and you'll be amazed at what
+              you can achieve! 💖💪🏽🚀
+              <br />
+              <br />
+              Remember that your heritage, your struggles, and your dreams give
+              you a unique perspective that is valuable in the world of coding.
+              Let's embrace the journey and keep on coding! 💻🌟
             </div>
           ),
           spanish: ``,
@@ -706,54 +723,164 @@ exports.app = functions.https.onRequest(app);
           )}?`,
           response: (
             <div>
-              Object-Oriented Programming (OOP) is a programming paradigm that
-              uses "objects" and their interactions to design applications and
-              software. The key principles of OOP are encapsulation,
-              inheritance, polymorphism, and abstraction. Let's break down each
-              of these principles with some real-world examples:
+              ¡Hola estudiantes! 🌞
+              <br /> <br />
+              It's Ms. Roxana here again, ready to deepen our understanding of
+              Object-Oriented Programming (OOP) with you! 🚀🎓
+              <br /> <br />
+              Remember, it's completely okay if things seem challenging at
+              first. We're here to learn, and every learning journey has its
+              hills to climb. Let's dive a bit deeper into OOP today and
+              understand it better with some JavaScript code examples. We will
+              also discuss two additional concepts: encapsulation and
+              abstraction. 💡🌈
               <br />
               <br />
-              Encapsulation: Encapsulation is the bundling of data and methods
-              (functions) that work on the data within one unit, called an
-              "object". This is much like a capsule, which encapsulates several
-              different medicines. For example, consider a "Car" object. A car
-              has properties (data) like color, model, and brand, and it has
-              behaviors (methods) like drive, park, and brake. All these
-              properties and behaviors are encapsulated within the "Car" object.
+              <b> Objects and Classes 🍏🏫:</b>
+              In OOP, objects and classes are two sides of the same coin. A
+              class is like a blueprint, defining what an object of that class
+              should have and what it can do. In JavaScript, we can define a
+              "Student" class with attributes like name, age, and grade, and
+              behaviors like studying. Then, an object is like an individual
+              instance created from that class or blueprint. So if we create an
+              object named "Maria" from the "Student" class, Maria would have
+              her own specific name, age, and grade and could perform actions
+              like studying or taking an exam.
+              <CodeBlock
+                code={`
+class Student {
+  constructor(name, age, grade) {
+      this.name = name;
+      this.age = age;
+      this.grade = grade;
+  }
+
+  study() {
+      console.log("$\{this.name} is studying.");
+  }
+}
+
+// An object is an individual instance created from that class.
+let maria = new Student("Maria", 12, "7th Grade");
+maria.study();  // Outputs: "Maria is studying."`}
+              />
               <br />
               <br />
-              Inheritance: Inheritance allows a class to inherit the properties
-              and methods of another class. This is much like how children
-              inherit traits from their parents. For example, if we have a
-              general class called "Bird", it might have properties like wings,
-              beak, and methods like fly or eat. Now, if we have a specific bird
-              like an "Eagle", it inherits all the properties and methods of the
-              "Bird" class but can also have specific properties or methods of
-              its own, like a unique method hunt.
+              <b> Inheritance 🌳: </b>
+              This allows one class (the child, or subclass) to inherit features
+              from another class (the parent, or superclass). This is great for
+              reusing code.
+              <CodeBlock
+                code={`
+class Athlete extends Student {
+  constructor(name, age, grade, sport) {
+      super(name, age, grade);
+      this.sport = sport;
+  }
+
+  play() {
+      console.log("$\{this.name} is playing $\{this.sport}.");
+  }
+}
+
+let juan = new Athlete("Juan", 15, "10th Grade", "Soccer");
+juan.study();  // Outputs: "Juan is studying."
+juan.play();   // Outputs: "Juan is playing Soccer."`}
+              />
               <br />
               <br />
-              Polymorphism: Polymorphism allows one interface to be used for a
-              general class of actions. The specific action is determined by the
-              exact nature of the situation. Consider a general class "Shape"
-              with a method "draw". Now, you have different shapes like Circle,
-              Square, Triangle and so on. For each of these shapes, the "draw"
-              method will have a different implementation. But the user doesn't
-              need to know which specific shape they are dealing with, they can
-              just call the "draw" method. This is polymorphism.
+              <b> Polymorphism 🐾: </b>
+              This term means "many shapes". It allows one object to take on
+              many forms. In code, it allows a child class to behave uniquely,
+              even when using attributes inherited from a parent class.
+              <CodeBlock
+                code={`
+class Artist extends Student {
+  constructor(name, age, grade, artForm) {
+      super(name, age, grade);
+      this.artForm = artForm;
+  }
+
+  study() {
+      console.log("$\{this.name} is studying $\{this.artForm}.");
+  }
+}
+
+let sofia = new Artist("Sofia", 17, "12th Grade", "painting");
+sofia.study();  // Outputs: "Sofia is studying painting."
+`}
+              />
               <br />
               <br />
-              Abstraction: Abstraction means representing the essential features
-              without including the background details. It's much like how a car
-              driver doesn't need to know the inner mechanics of the car engine
-              in order to drive the car. In OOP, a higher-level interface is
-              provided to hide the complex lower-level details. For example, a
-              "Computer" class might have methods like boot, shutDown, openApp.
-              The implementation details of these methods are hidden from the
-              user.
+              <b> Encapsulation 📦: </b>
+              Think of encapsulation like a protective bubble that wraps around
+              our data (attributes) and code (behaviors) to keep them safe. It
+              controls access to an object's internal state, meaning we can
+              limit how and when its data is modified. This way, we keep our
+              code neat and prevent bugs.
+              <CodeBlock
+                code={`
+class Student {
+  constructor(name, age, grade) {
+      this._name = name; // "_" indicates it should not be accessed directly
+      this._age = age;
+      this._grade = grade;
+  }
+
+  // getter
+  get name() {
+      return this._name;
+  }
+
+  // setter
+  set name(newName) {
+      this._name = newName;
+  }
+}
+
+let luis = new Student("Luis", 14, "9th Grade");
+luis.name = "Luis Miguel";  // We can safely change the name
+console.log(luis.name);  // Outputs: "Luis Miguel"
+`}
+              />
               <br />
               <br />
-              By using these principles, OOP allows for code that is easier to
-              understand, more flexible, and easier to maintain.
+              <b> Abstraction 🖼️: </b>
+              Abstraction is like an artist's impression of a landscape. They
+              don't need to include every little detail—only what's important.
+              Similarly, abstraction in OOP allows us to hide complex details
+              and show only essential features. This helps make our code easier
+              to understand and work with.
+              <CodeBlock
+                code={`
+class Student {
+  constructor(name, age, grade) {
+      this.name = name;
+      this.age = age;
+      this.grade = grade;
+      this._attendance = [];  // Private attribute not directly accessible
+  }
+
+  // Public method that abstracts away the complexity
+  markAttendance(status) {
+      this._attendance.push(status);
+  }
+}
+
+let ana = new Student("Ana", 16, "11th Grade");
+ana.markAttendance("Present");  // We don't deal with the _attendance array directly
+        
+          `}
+              />
+              <br />
+              <br />
+              You're doing amazing! 💖 Remember, every step you take, even if it
+              feels small, is progress. You are capable of understanding and
+              mastering these concepts. So, let's keep going, keep questioning,
+              and keep growing together! 🌱💫
+              <br />
+              <br />
+              You got this! I believe in you! 🔥🌟
             </div>
           ),
           spanish: ``,
@@ -769,54 +896,100 @@ exports.app = functions.https.onRequest(app);
           )} with one sentence answers?`,
           response: (
             <div>
-              Question 1: What is an Object in OOP?
+              What exactly is an 'object' in OOP? 🤔
               <br />
               <br />
-              A: An object is an instance of a class. It's a fundamental
-              component of OOP that encapsulates data and functions that
-              manipulate the data. Objects are the basic run-time entities in an
-              object-oriented system. They may represent a person, a place, a
-              bank account, a table of data or any item that the program has to
-              handle.
+              Objects are fundamental components in OOP. You can think of an
+              object as a 'thing' that can perform a set of related activities.
+              An object can represent a person, a place, a bank account, a table
+              of data or any item that the program has to handle. Importantly,
+              an object packages both data and the procedures that manipulate
+              that data.
+              <CodeBlock
+                code={`
+let student = {
+  name: 'Juan',
+  age: 18,
+  greet: function() {
+    console.log("Hello, my name is $\{this.name}!");
+  }
+};
+
+student.greet();  // Outputs: Hello, my name is Juan!`}
+              />
+              How do 'classes' and 'objects' relate to each other? 🧐
               <br />
               <br />
+              Think of a class as a blueprint or a mold, and objects are the
+              things made from this blueprint. So, a class defines the
+              properties (attributes) and methods (actions) that an object can
+              have. For example, if we have a class 'Dog', it may define
+              properties like breed, color, age, and methods like bark, eat,
+              sleep. Then, each 'Dog' object we create from this class can have
+              different breeds, colors, and ages, but all will be capable of
+              barking, eating, and sleeping.
+              <CodeBlock
+                code={`
+class Student {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  greet() {
+    console.log("Hello, my name is $\{this.name}!");
+  }
+}
+
+let juan = new Student('Juan', 18);
+juan.greet();  // Outputs: Hello, my name is Juan!       
+                `}
+              />
+              What is 'inheritance' and why is it useful? 💰
               <br />
               <br />
-              Question 2: What is the difference between a class and an object?
+              Inheritance is a mechanism where you can to derive a class from
+              another class for a hierarchy of classes that share a set of
+              attributes and methods. It allows classes to inherit commonly used
+              state and behavior from other classes. In OOP, this helps to
+              promote code re-usability and makes your code more organized and
+              easier to manage.
+              <CodeBlock
+                code={`
+class Person {
+  constructor(name) {
+    this.name = name;
+  }
+
+  greet() {
+    console.log("Hello, my name is $\{this.name}!");
+  }
+}
+
+class Student extends Person {
+  constructor(name, grade) {
+    super(name);
+    this.grade = grade;
+  }
+
+  study() {
+    console.log("$\{this.name} is studying.");
+  }
+}
+
+let juan = new Student('Juan', 10);
+juan.greet();  // Outputs: Hello, my name is Juan!
+juan.study();  // Outputs: Juan is studying.  
+                `}
+              />
+              Remember, it's perfectly okay if you don't understand these
+              concepts right away. Keep practicing and asking questions, and it
+              will all start making sense. You've got this! 💪
               <br />
               <br />
-              Answer: To explore the intersectionality of computer science and
-              choose a specific field to work in or research, individuals should
-              consider their interests, strengths, and goals. They can start by
-              learning about various interdisciplinary fields, such as
-              bioinformatics, computational social science, or digital
-              humanities, and identify which areas align with their passions.
-              Participating in relevant courses, attending conferences, or
-              joining online communities can also help them gain exposure to
-              these fields and decide which direction to pursue. Furthermore,
-              seeking guidance from mentors or professionals in the desired
-              field can provide valuable insights and support during the
-              decision-making process.
+              With all my support,
               <br />
-              <br />
-              <br />
-              <br />
-              Question 3: What is inheritance and why is it useful in OOP?
-              <br />
-              <br />
-              Answer: To excel in the intersectionality of computer science,
-              individuals should develop a strong foundation in core computer
-              science concepts, such as algorithms, data structures, and
-              programming languages. Additionally, they should gain expertise in
-              specific computational techniques relevant to their chosen field,
-              such as machine learning, network analysis, or data visualization.
-              Equally important is acquiring knowledge in the domain they plan
-              to work in, such as biology for bioinformatics or social science
-              for computational social science. Finally, cultivating strong
-              communication, collaboration, and critical thinking skills will
-              enable them to effectively engage with experts from other
-              disciplines, fostering successful interdisciplinary
-              collaborations.
+              Ms. Roxana 🌟
             </div>
           ),
           spanish: ``,
@@ -832,123 +1005,133 @@ exports.app = functions.https.onRequest(app);
           )}?`,
           response: (
             <div>
-              A comprehensive study guide for understanding the
-              intersectionality of computer science can be divided into several
-              stages, taking you from beginner to expert level: <br />
+              Dear students! 😊 Here is a roadmap to help you navigate your
+              journey from beginner to pro in Object-Oriented Programming (OOP):{" "}
               <br />
               <br />
               <br />
-              Stage 1: Understanding the Basics <br />
+              <br />
+              <b>Understanding the Basics of Programming 🌱</b>
+              <br />
               <br />
               <ol>
                 <li>
-                  Introduction to OOP: Understand the basic concept of OOP and
-                  how it differs from procedural programming. Learn about the
-                  main advantages of OOP, such as code reusability and
-                  modularity.
+                  Begin with the basics of programming concepts, such as
+                  variables, data types, control structures (loops, if-else
+                  conditions), and functions.
                 </li>
                 <li>
-                  Basics of Classes and Objects: Learn what classes and objects
-                  are, and how they relate to each other. Understand the idea of
-                  a class as a blueprint for creating objects.
-                </li>
-                <li>
-                  Understanding Methods: Learn about methods (functions defined
-                  inside a class) and how they provide behavior for objects.
-                </li>
-                <li>
-                  Properties and Encapsulation: Understand the concept of
-                  properties (data members of a class) and encapsulation
-                  (bundling of data and methods within a class and data hiding).
+                  Practice writing simple programs that use these concepts.
                 </li>
               </ol>
               <br />
               <br />
-              Stage 2: Intermediate Concepts
+              <b>Introduction to OOP 📘</b>
               <br />
               <br />
               <ol>
                 <li>
-                  Constructors and Destructors: Learn about these special
-                  methods which are called when an object is created and
-                  destroyed, respectively.
+                  Learn about the fundamental concepts of OOP: Objects, Classes,
+                  Attributes, and Methods.
                 </li>
-                <li>
-                  Inheritance: Understand how one class can inherit members from
-                  another class, leading to a parent-child relationship between
-                  classes.
-                </li>
-                <li>
-                  Polymorphism: Learn about the ability of an object to take
-                  many forms. The two types of polymorphism are compile-time
-                  (function and operator overloading) and runtime (virtual
-                  functions).
-                </li>
-                <li>
-                  Abstraction: Understand how to hide certain details of an
-                  object and only show the essential features.
-                </li>
+                <li>Practice creating simple classes and objects.</li>
               </ol>{" "}
               <br />
               <br />
-              Stage 3: Advanced Concepts <br />
-              <br />
-              <ol>
-                <li>
-                  Interfaces and Multiple Inheritance: Learn how interfaces can
-                  be used to achieve full abstraction and multiple inheritance
-                  in languages that don't support it directly (like Java).
-                </li>
-                <li>
-                  Exception Handling: Understand how to handle runtime errors
-                  using try, catch, and finally blocks.
-                </li>
-                <li>
-                  Collections and Generics: Learn about collections (like arrays
-                  and lists) and generics (classes or objects that can operate
-                  on multiple data types).
-                </li>
-              </ol>{" "}
-              <br />
-              <br />
-              Stage 4: Expert Level
+              <b>Diving Deeper into OOP 🌊</b>
               <br />
               <br />
               <ol>
                 <li>
-                  Design Patterns: Study common object-oriented design patterns,
-                  like Factory, Singleton, Prototype, Decorator, Observer,
-                  Publish-Subscriber and Strategy.
+                  Understand the core principles of OOP: Encapsulation,
+                  Inheritance, Abstraction, and Polymorphism.
                 </li>
                 <li>
-                  SOLID Principles: Learn about the five principles of
-                  object-oriented design and architecture (Single
-                  responsibility, Open-closed, Liskov substitution, Interface
-                  segregation, and Dependency inversion).
-                </li>
-                <li>
-                  Unit Testing and Test-Driven Development: Understand how to
-                  write test cases for your classes and methods, and learn about
-                  the practice of writing tests before you write code.
-                </li>
-                <li>
-                  Refactoring: Learn techniques for restructuring an existing
-                  body of code, altering its internal structure without changing
-                  its external behavior.{" "}
+                  Write programs that demonstrate each of these principles.
                 </li>
               </ol>{" "}
               <br />
               <br />
-              Each stage includes studying the theory, but you should also
-              practice by writing code. Implement small projects after each
-              stage to solidify the concepts you've learned. Try to read and
-              understand good quality, idiomatic code in the language you're
-              learning to see how the principles are applied.
+              <b>Advanced OOP Concepts 🚀</b>
+              <br />
+              <br />
+              <ol>
+                <li>
+                  Learn about interfaces, method overloading and overriding,
+                  composition, access modifiers (public, private, protected).
+                </li>
+                <li>
+                  Write more complex programs that incorporate these advanced
+                  concepts.
+                </li>
+              </ol>{" "}
+              <br />
+              <br />
+              <b>Design Patterns in OOP 💡</b>
+              <br />
+              <br />
+              <ol>
+                <li>
+                  Study common design patterns in OOP (such as Singleton,
+                  Factory, Observer, and Strategy patterns). These patterns are
+                  proven solutions to common programming challenges.
+                </li>
+                <li>Implement these design patterns in your programs.</li>
+              </ol>{" "}
+              <br />
+              <br />
+              <b>Real-world Projects 🏗️</b>
+              <br />
+              <br />
+              <ol>
+                <li>
+                  Apply your knowledge in real-world projects. This could be
+                  anything from a simple calculator app to a more complex game
+                  or even a mini database system.
+                </li>
+                <li>
+                  Collaborate with others on projects to learn about using OOP
+                  in a team setting.
+                </li>
+              </ol>{" "}
+              <br />
+              <br />
+              <b>Reading and Understanding Others' Code 🧩</b>
+              <br />
+              <br />
+              <ol>
+                <li>
+                  Reading others' code is a great way to learn. Look at
+                  open-source projects or other people's code on platforms like
+                  GitHub.
+                </li>
+                <li>
+                  Try to understand how they have used OOP principles and how
+                  you might approach it differently.
+                </li>
+              </ol>{" "}
+              <br />
+              <br />
+              <b>Continuous Learning and Practice 🎯</b>
+              <br />
+              <br />
+              <ol>
+                <li>
+                  Keep up to date with the latest trends and practices in OOP.
+                </li>
+                <li>
+                  Regularly practice your skills with coding problems and
+                  projects.
+                </li>
+              </ol>{" "}
+              <br />
+              <br />
+              This is a journey, and every programmer learns at their own pace.
+              It's perfectly fine if some concepts take a while to sink in. The
+              key is to never stop learning and practicing. Be patient with
+              yourself, keep your curiosity alive, and celebrate every victory,
+              no matter how small. You're doing an amazing job! 💪🌟
               <br /> <br />
-              Remember, this is a lot of material, and it takes time to become
-              proficient in OOP. Take one step at a time, and eventually, you'll
-              reach an expert level. Many employed software engineers are not so
-              don't sweat it too much! Happy learning!
             </div>
           ),
           spanish: ``,
@@ -991,7 +1174,7 @@ class Rihanna:
 
 
 rihanna = Rihanna("Rihanna", "Singer", "Barbadian")
-print(rihanna.sing("Diamonds"))
+print(rihanna.sing("Love On The Brain"))
 print(rihanna.perform("at the Grammy Awards"))
           `,
           spanish: ``,
@@ -1020,34 +1203,47 @@ print(rihanna.perform("at the Grammy Awards"))
           )}?`,
           response: (
             <div>
-              Question 1: Design Patterns - Explain a situation where you would
-              use the Singleton design pattern versus the Factory design pattern
-              in OOP. What are the advantages and potential pitfalls of each?
+              Object Oriented Programming is a beautiful world filled with
+              abstract concepts and logical relationships. Let's dive in and
+              explore this together, there's no need to worry - remember, there
+              are no wrong answers, only learning experiences! 😊
               <br />
               <br />
-              Question 2: Inheritance vs. Composition - In the context of OOP,
-              discuss the advantages and disadvantages of using inheritance
-              versus composition. Can you provide a practical example where
-              composition would be a better choice than inheritance?
+              Imagine you're explaining it to a friend who's never heard of it:
+              what is Object-Oriented Programming (OOP) and how is it different
+              from other programming paradigms? 🤔
               <br />
               <br />
-              Question 3: Polymorphism: Imagine you're designing a zoo
-              simulation with many types of animals. How would you use the
-              principle of polymorphism to design your animal classes and their
-              behaviors? Explain your reasoning.
+              In OOP, we often talk about classes and objects. Can you describe
+              the relationship between them, as if they were elements in a story
+              you're telling? 📖💡
               <br />
               <br />
-              Question 4: Encapsulation - Can you discuss a scenario where
-              proper use of encapsulation improves the security and robustness
-              of a software system? How does it help in maintaining the system?
+              Let's imagine a real-world scenario: a public library system. What
+              might be some of the classes you'd design, and what attributes and
+              methods would they have? Don't forget to include the relationships
+              between these classes too! 📚
               <br />
               <br />
-              Question 5: SOLID Principles - Explain how the SOLID principles
-              guide design in Object-Oriented Programming. Can you provide an
-              example of a design problem that violates one or more of these
-              principles and propose a solution to fix it?
+              You've likely heard of the principles of OOP: encapsulation,
+              inheritance, and polymorphism. Can you give an example of each,
+              using a context that interests you, perhaps a favorite hobby or
+              passion? ⚽
               <br />
               <br />
+              Often in programming, we encounter problems that require a nuanced
+              understanding of OOP. Let's say you have a class Bird and a class
+              Airplane. Both can fly, but they're quite different in other
+              respects. How might you use OOP principles to handle this
+              situation without code duplication? 🐝
+              <br />
+              <br />
+              <div>
+                Remember, each question is an opportunity to explore, learn, and
+                understand better. Take your time, dig deep into your
+                creativity, and most importantly, have fun with it! You're all
+                capable of brilliant things, I have faith in you! ✨
+              </div>
             </div>
           ),
           spanish: ``,
@@ -1164,6 +1360,39 @@ print(rihanna.perform("at the Grammy Awards"))
         "https://res.cloudinary.com/eduprojectsil/video/upload/v1685404089/IMG_1614_usbr35.mov", // may not need
 
       prompts: {
+        welcome: {
+          response: (
+            // <MessageBlock>
+            <div>
+              Exceptional students! 🌟
+              <br />
+              <br />
+              I extend a warm welcome to you as you embark on the exciting
+              journey of learning event-driven programming and user-centered
+              design. 🚀🎉 Event-driven programming is like a captivating dance
+              where your users or system events set the rhythm. It offers a
+              unique approach to crafting software that is truly responsive and
+              interactive, providing an enriching experience for your users and
+              making your applications feel alive! 💃💻
+              <br />
+              <br />
+              On the other hand, user-centered design places the users at the
+              heart of the entire design process, making you empathetic
+              storytellers. It encourages you to walk in your users' shoes,
+              understand their needs, preferences, and values, and design
+              solutions that truly resonate with them. 🎨💖 Welcome to this
+              vibrant voyage of learning and exploration.
+              <br /> <br />
+              As you acquire these skills and knowledge, may you be inspired and
+              empowered to create digital experiences that are truly
+              extraordinary. So, get ready, let your creativity bloom, and let
+              your brilliance light up the world! 🌼🌟
+            </div>
+            // </MessageBlock>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
         patreon: {
           completed: false,
           impact: 1000,
@@ -1186,63 +1415,47 @@ print(rihanna.perform("at the Grammy Awards"))
           )}?`,
           response: (
             <div>
-              Let's talk about the story of Facebook and their decision to use
-              and develop React.
+              My dear students! 🌟 Let's dive right in!
               <br />
               <br />
-              Back in the early 2010s, Facebook was facing some major challenges
-              with their codebase. Their user interface had become increasingly
-              complex due to the sheer amount of features they were adding, and
-              their existing coding structure was becoming difficult to manage.
-              The Facebook Ads org, in particular, was struggling with a
-              challenging bug due to a lack of data consistency across different
-              parts of their app.
+              Event-driven programming is truly a magical realm. Picture
+              yourself at the helm of a ship 🚢, and all around you are buttons,
+              knobs, and levers. Each of these represents an event in your
+              program. When you, the captain, decide to press a button or turn a
+              knob, you're creating an event. It's like your ship responds to
+              you, and that's the heart of event-driven programming. You're not
+              just a passenger, you're the captain, steering your program in the
+              direction you choose! So, in each line of code you write,
+              remember: you are the captain, full of power and ability. 💪🌟{" "}
               <br />
               <br />
-              This is when Jordan Walke, a software engineer at Facebook,
-              started experimenting with a new way of building user interfaces
-              based on components. The basic idea was to encapsulate parts of
-              the interface as components that manage their own state and then
-              combine these components to create complex UIs.
+              Now, let's talk about user-centered design. Imagine you are a
+              sculptor 🗿, but instead of chiseling away at marble without any
+              guidance, you have your audience right there with you, telling you
+              exactly what they want to see in the sculpture. That's
+              user-centered design! You are creating something specifically to
+              make people's lives easier and better. How beautiful it is to have
+              such a direct impact, right? You're not only a sculptor but also a
+              creator of joy and utility. And that's something truly special. ✨
               <br />
               <br />
-              React.js was born from this experimentation and was first deployed
-              in the Facebook's newsfeed in 2011. It proved to be a massive
-              success, making code easier to understand, debug, and scale.
-              Facebook then deployed React in Instagram in 2012.
+              Lastly, the metaverse. Close your eyes and imagine being able to
+              step into any world you can think of, being anyone you wish to be
+              🌌. That's the promise of the metaverse. It's not just a new
+              technology; it's a new universe, a digital home where the rules of
+              reality can be bent. The metaverse is like the ultimate sandbox.
+              You're not just a player; you're also a creator. It's a place
+              where everyone can create, share, and experience together. It's
+              full of potential for education, creativity, and connection. It’s
+              like a dream that we all can share and explore together. So
+              exciting, right? 😃
               <br />
               <br />
-              In 2013, Facebook decided to open source React. The reception was
-              initially mixed. Some people were excited about the potential of
-              this new library, while others were skeptical about its unusual
-              approach, particularly its use of a virtual DOM and JSX.
-              <br />
-              <br />
-              However, the React team stayed focused and continued to improve
-              and promote React. Facebook hosted the first ever React conference
-              in 2015, inviting developers to learn about the library and share
-              their experiences. The team also focused on making React more
-              accessible and easier to learn, creating comprehensive
-              documentation and even an interactive tutorial.
-              <br />
-              <br />
-              Fast forward to today, and React has become one of the most
-              popular JavaScript libraries, used by companies big and small all
-              over the world to build their user interfaces.
-              <br />
-              <br />
-              The story of React is a true Silicon Valley story. It's about
-              innovation, experimentation, and not being afraid to break from
-              the norm. It's about facing challenges head on, and coming up with
-              creative solutions. It's about the power of open source, and the
-              incredible things that can be achieved when a community of
-              developers come together.
-              <br />
-              <br />
-              Hopefully, this story inspires you to start your own journey into
-              learning React. Just remember, every expert was once a beginner.
-              You're only one line of code away from starting your next big
-              adventure.
+              Remember, the beauty of these concepts lies not just in their
+              technology, but also in their power to create, to connect, and to
+              transform. You have the power to change the world with your ideas
+              and innovations. Always remember that, and let it guide you in
+              your journey. Let's conquer this together! 🚀💖
             </div>
           ),
           spanish: ``,
@@ -1258,68 +1471,33 @@ print(rihanna.perform("at the Grammy Awards"))
           )}?`,
           response: (
             <div>
-              Let's dive into the core foundations of React and event-driven
-              programming.
+              Let's recap
               <br />
               <br />
-              React is a popular JavaScript library, maintained by Facebook, for
-              constructing user interfaces (UIs), particularly for single-page
-              applications. It allows developers to build reusable UI components
-              and makes the process of building complex user interfaces more
-              manageable.
+              <b>Event-driven programming</b> is like a lively dance 💃. The
+              code doesn't just follow a strict routine, instead it waits and
+              responds to the rhythm of user input or system events, making our
+              applications interactive and dynamic.
               <br />
               <br />
-              The foundational concept in React is the idea of components. These
-              are self-contained elements of the UI, which can be as small as a
-              button or as large as an entire page. A React application is
-              typically built from many of these components, each responsible
-              for rendering a small, reusable piece of HTML. Components are
-              designed to be reusable and can manage their own state, which is a
-              key feature that helps to minimize the complexity of code and
-              increase readability and maintainability.
+              Next up, <b>user-centered design</b>is like being an attentive
+              architect 🏡. Instead of creating based solely on your own ideas,
+              you take into account the needs, habits, and desires of the people
+              who will use the product, making it not just functional but
+              comfortable and truly delightful.
               <br />
               <br />
-              In terms of architecture, React follows a unidirectional data flow
-              model. This means that data in a React application flows downward
-              from parent components to child components through properties
-              known as "props". State, which is a component's internal data, can
-              be passed down from parent to child via props, but it can't be
-              passed up from a child to a parent. This predictable data flow
-              greatly simplifies how a program works and makes it easier to
-              debug and understand.
+              Lastly, <b>component architecture</b> in frameworks like React is
+              like using a set of building blocks 🧱. Each block, or component,
+              is self-contained with its own functionality, simplifying
+              development and making our code more efficient, maintainable, and
+              reusable.
               <br />
               <br />
-              React also employs a virtual DOM (Document Object Model) to
-              improve performance. When changes are made to the state of a
-              component, React first updates the virtual DOM, then it diffs the
-              virtual DOM against the actual DOM, and finally it updates the
-              real DOM for only the objects that changed. This selective
-              rendering improves efficiency and speed of complex or large-scale
-              applications.
-              <br />
-              <br />
-              React operates within the broader context of event-driven
-              programming, which is a paradigm that revolves around actions
-              performed by the user or the system (like clicks, key presses, or
-              data fetches). In an event-driven application, code is structured
-              around what should happen when certain events occur.
-              <br />
-              <br />
-              In a React application, user interactions or system events (like
-              successful API calls) will often result in state changes, causing
-              components to re-render. For example, clicking a "like" button
-              might trigger an event handler function that updates the state of
-              a "like count" component.
-              <br />
-              <br />
-              In conclusion, React and event-driven programming are powerful
-              tools that work in unison to enable the creation of dynamic,
-              complex, and efficient web applications. They allow for the
-              encapsulation of code into reusable components, the efficient
-              handling and rendering of state changes, and the structuring of
-              code around user and system events. Their adoption has empowered
-              developers to create more interactive, performant, and
-              user-friendly web applications.
+              Combined, these concepts enable us to create applications that are
+              responsive, user-friendly, and efficient. They are our trusty
+              tools in the wonderful journey of coding and innovation. Let's
+              cherish and utilize them in our exciting quest! 🚀💫
             </div>
           ),
           spanish: ``,
@@ -1335,57 +1513,57 @@ print(rihanna.perform("at the Grammy Awards"))
           )} with one sentence answers?`,
           response: (
             <div>
-              Here are three frequently asked questions by beginners about React
-              and event-driven programming, along with expert answers:
+              Let's explore these interesting questions together.
               <br />
               <br />
-              Question 1: What is JSX and why do we use it in React?
+              <b>1️⃣ Event-Driven Programming</b>
+              <br />
+              Question: How does event-driven programming make a difference in
+              application development?
               <br />
               <br />
-              Answer: JSX, or JavaScript XML, is a syntax extension for
-              JavaScript. It allows you to write HTML-like code in your
-              JavaScript, which makes your code more readable and writeable. In
-              the context of React, JSX is used to define the structure and
-              appearance of React components. React then takes this JSX and
-              converts it into regular JavaScript objects behind the scenes
-              using a process called 'transpilation'. While you can write React
-              code without JSX, using JSX is more intuitive, especially if you
-              come from an HTML background.
+              Answer: Event-driven programming makes your application more
+              responsive and user-friendly. It allows your program to react to
+              user inputs or system events, creating an interactive experience.
+              Instead of the program controlling the user, the user controls the
+              program, which leads to a more intuitive and engaging user
+              experience. 🎮💡
               <br />
               <br />
+              <b>2️⃣ User-Centered Design</b>
+              <br />
+              Question: Why is user-centered design important?
               <br />
               <br />
-              Question 2: How does state differ from props in React?
+              Answer: User-centered design ensures that the product you're
+              creating truly meets the needs and preferences of your users. By
+              involving users throughout the design process, you can create a
+              product that is not just functional, but also intuitive,
+              enjoyable, and tailored to your users' needs. This not only
+              enhances user satisfaction, but can also lead to increased usage
+              and success of your product. 🎯🌈
               <br />
               <br />
-              Answer: Both 'state' and 'props' are plain JavaScript objects.
-              While both of them hold information that influences the output of
-              render, they are different in their functionality with respect to
-              component. Props (short for 'properties') are immutable and are
-              used to pass data from parent components to child components. It's
-              similar to function arguments. State, on the other hand, is
-              managed within the component and can be changed within the
-              component (mutable). It's similar to variables declared within a
-              function, and is used when a component needs to keep track of
-              information between renderings.
+              <b>3️⃣ Component Architecture</b>
+              <br />
+              Question: How does component architecture benefit our coding
+              process?
               <br />
               <br />
+              Answer: Component architecture, like what we see in React, allows
+              for modularity in your code. Each component is self-contained,
+              managing its own state and properties, which makes your code more
+              organized and easier to maintain. Components can be reused across
+              your application, saving you time and effort. Also, by breaking
+              down the application into components, it's easier to isolate bugs
+              and make updates without disrupting the entire system. It's like
+              having a well-organized toolbox, making your coding process more
+              efficient and enjoyable! 🔧💫
               <br />
               <br />
-              Question 3: What is event-driven programming and how is it used in
-              React?
-              <br />
-              <br />
-              Answer: Event-driven programming is a paradigm that involves
-              designing your program to respond to user interactions or system
-              events. These could be anything from button clicks to data
-              arriving from an API request. In the context of React,
-              event-driven programming often involves creating functions that
-              respond to user interactions, like clicks or key presses, and
-              updating the state of your components in response to these events.
-              This could involve showing or hiding a component, updating a value
-              in your state, making an API call, and so forth. Events are used
-              to create an interactive, responsive experience for the user.
+              Remember, there's no such thing as a silly question. Each question
+              takes you one step further on your journey of learning. Keep
+              exploring, keep asking, and keep growing! 🚀💖
             </div>
           ),
           spanish: ``,
@@ -1401,182 +1579,126 @@ print(rihanna.perform("at the Grammy Awards"))
           )}?`,
           response: (
             <div>
-              Here's a detailed roadmap to go from a beginner learner to a
-              professionally employed Frontend Software Engineer focusing on
-              React.
+              Hola, brilliant stars of the future! 🌟 I'm here to guide you on
+              your journey to become professional frontend software engineers.
+              Remember, every single one of you can shine brightly in the world
+              of tech, even if it seems challenging at first. Just like learning
+              a new language or a musical instrument, mastering a skill like
+              React will take time and practice. Don't worry, you'll get there
+              step by step, just like climbing a mountain. 🏔️
+              <br /> <br />
+              Here's a roadmap to help you navigate through your learning
+              journey:
+              <br />
+              <br />
               <ol>
                 <li>
-                  <b>Basic Frontend Technologies</b>
-                  <ul>
-                    <li>Understand the basics of HTML, CSS, and JavaScript.</li>
-                    <li>Understand the DOM (Document Object Model).</li>
-                    <li>
-                      Familiarize yourself with responsive design and CSS
-                      frameworks like Bootstrap or Tailwind CSS.
-                    </li>
-                    <li>
-                      Learn about web accessibility and why it's important.
-                    </li>
-                  </ul>
+                  <b>Fundamentals of Web Development 🌐</b>
+                  <div>
+                    Before diving into React, it's essential to understand the
+                    basic building blocks of the web:
+                    <ul>
+                      <li>HTML: The skeleton of a web page</li>
+                      <li>CSS: The styling and design aspect of a web page</li>
+                      <li>
+                        JavaScript: The behavior and interactivity of a web page
+                      </li>
+                    </ul>
+                  </div>
                 </li>
+                <br />
                 <li>
-                  <b>Advanced JavaScript</b>
-                  <ul>
-                    <li>
-                      Dive deeper into JavaScript concepts: ES6 features,
-                      async/await, promises, and functional programming
-                      concepts.
-                    </li>
-                    <li>
-                      Learn about fetching data from APIs using JavaScript.
-                    </li>
-                  </ul>
+                  <b>JavaScript (Advanced) 💡</b>
+                  <div>
+                    Dive deeper into JavaScript to understand concepts such as
+                    promises, async/await, ES6 features like arrow functions,
+                    and so on. This will help you truly harness the power of
+                    React later on.
+                  </div>
                 </li>
+                <br />
                 <li>
-                  <b>Version Control with Git</b>
-                  <ul>
-                    <li>Understand the basics of Git and GitHub.</li>
-                    <li>
-                      Learn to work with repositories, branches, commits, and
-                      pull requests.
-                    </li>
-                  </ul>
+                  <b>Version Control/Git ⚙️</b>
+                  <div>
+                    Git helps you manage different versions of your code, and
+                    it's essential in any developer's toolkit. Spend some time
+                    learning about repositories, commits, branches, and the
+                    like.
+                  </div>
+                </li>
+                <br />
+                <li>
+                  <b>Responsive Design 🖥️ 📱</b>
+                  <div>
+                    Web pages need to look good and function well on all
+                    devices, not just desktop computers. Learn about media
+                    queries, flexbox, and grid systems.
+                  </div>
+                </li>
+                <br />
+                <li>
+                  <b>React Basics ⚛️</b>
+                  <div>
+                    Now we're getting to the exciting part! Start by
+                    understanding what React is and why it's used. Then learn
+                    about components, props, and state.
+                  </div>
+                </li>
+                <br />
+                <li>
+                  <b>React Advanced Concepts ⚛️💡</b>
+                  <div>
+                    Now that you're comfortable with the basics, explore more
+                    advanced topics like hooks and routing with React Router.{" "}
+                  </div>
+                </li>
+                <br />
+                <li>
+                  <b>State Management 🗄️</b>
+                  <div>
+                    Learn about managing complex state with tools like Redux
+                    although hooks and context can be enough for many
+                    applications.
+                  </div>
+                </li>
+                <br />
+                <li>
+                  <b>Testing 🧪</b>
+                  <div>
+                    Learn how to write tests for your React applications to
+                    ensure they work as expected. Tools like Jest and React
+                    Testing Library are widely used.
+                  </div>
+                  <br />
                 </li>
 
                 <li>
-                  <b> Introduction to React</b>
-                  <ul>
-                    <li>Understand what React is and why it's useful.</li>
-                    <li>Learn JSX, components, props, and state.</li>
-                    <li>Understand the component lifecycle.</li>
-                    <li>
-                      Familiarize yourself with hooks, especially useState and
-                      useEffect.
-                    </li>
-                    <li>
-                      Build a few small projects to solidify these concepts.
-                    </li>
-                  </ul>
+                  <b>Build a Full Project 🏗️</b>
+                  <div>
+                    Nothing reinforces learning like building a complete
+                    application from scratch. Choose a project that excites you
+                    - it could be a personal blog, a task manager app, or
+                    anything else you can dream of!
+                  </div>
+                  <br />
                 </li>
+
                 <li>
-                  <b>State Management</b>
-                  <ul>
-                    <li>
-                      Understand why state management tools like Redux is
-                      needed.
-                    </li>
-                    <li>Learn to use either Redux with React.</li>
-                  </ul>
-                </li>
-                <li>
-                  <b>Routing in React</b>
-                  <ul>
-                    <li>
-                      Learn to use React Router for navigating between different
-                      parts of your application.
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <b>Working with Forms in React</b>
-                  <ul>
-                    <li>
-                      Learn how to handle form inputs and validation in React.
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <b>Styling in React</b>
-                  <ul>
-                    <li>
-                      Understand how to use CSS in JS libraries like
-                      styled-component.
-                    </li>
-                    <li>
-                      Explore different design systems, like Google's Material
-                      UI or Microsoft's Fluent UI.
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <b>Testing</b>
-                  <ul>
-                    <li>
-                      Learn about testing libraries like Jest and React Testing
-                      Library.
-                    </li>
-                    <li>
-                      Understand different types of testing: unit testing,
-                      integration testing, and end-to-end testing.
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <b>Real-world Project</b>
-                  <ul>
-                    <li>
-                      Build a larger project that combines everything you've
-                      learned. This could be a web application with multiple
-                      pages, API calls, and advanced features.
-                    </li>
-                    <li>
-                      This will solidify your knowledge and give you something
-                      to show to potential employers.
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <b>Advanced Topics</b>
-                  <ul>
-                    <li>
-                      Study different toolchains like create-react-app, vercel
-                      or Gatsby
-                    </li>
-                    <li>Learn about server-side rendering with Next.js.</li>
-                    <li>Understand static site generation.</li>
-                    <li>
-                      Learn about TypeScript and consider using it in your
-                      projects.
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <b>Soft Skills</b>
-                  <ul>
-                    <li>
-                      Improve your problem-solving skills: practice algorithms
-                      and data structures.
-                    </li>
-                    <li>
-                      Develop your understanding of system design principles.
-                    </li>
-                    <li>
-                      Improve your problem-solving skills: practice algorithms
-                      and data structures.
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <b>Job Search</b>
-                  <ul>
-                    <li>Polish your resume and LinkedIn profile.</li>
-                    <li>
-                      Build a portfolio website to showcase your projects.
-                    </li>
-                    <li>
-                      Start applying for jobs and preparing for interviews.
-                    </li>
-                    <li>Practice coding interviews and get feedback.</li>
-                  </ul>
+                  <b>Continue Learning 📚</b>
+                  <div>
+                    Technology is always evolving, and so should you. Learn
+                    about related tools, libraries, and frameworks, like
+                    Next.js, Gatsby, TypeScript, and so on.
+                  </div>
+                  <br />
                 </li>
               </ol>
-              <br /> <br />
-              This journey might take a few months to over a year, depending on
-              your dedication, prior experience, and the amount of time you can
-              dedicate to learning each day. The key is consistency and
-              persistence. Remember, everyone learns at their own pace, so don't
-              rush - make sure you understand the basics before moving onto more
-              advanced topics. Happy learning!
+              <br />
+              Every step of the way is an achievement to celebrate. 🎉 Feel
+              proud of your progress, no matter how small, and don't forget to
+              help and support each other on this journey. Your future as tech
+              wizards is bright and promising. Let's embrace this adventure
+              together! 🚀
             </div>
           ),
           spanish: ``,
@@ -1669,7 +1791,7 @@ export default LoginForm;
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Lesson 2 Frontend Event-Driven Programming`
           )} in exactly one sentence?`,
-          response: `React is a JavaScript library for building user interfaces that uses event-driven programming to create interactive web applications by allowing components to update and render efficiently in response to user actions or changes in data.`,
+          response: `Event-driven programming is about writing code that responds to user actions or system events, user-centered design focuses on tailoring the design based on user needs and feedback, and component architecture involves building a system from separate parts, each encapsulating a specific functionality, that work together seamlessly.`,
           spanish: ``,
           tooltip: ``,
         },
@@ -1684,38 +1806,82 @@ export default LoginForm;
           )}?`,
           response: (
             <div>
-              React Components: Explain the difference between a functional
-              component and a class component in React. In what scenarios might
-              you prefer to use one over the other?
+              Dear explorers of the digital universe! 🌌 The best way to learn
+              is by questioning and digging deeper. Let's see how you engage
+              with these challenging open-ended questions. Remember, there are
+              no wrong answers here. This is all about your understanding and
+              perspective! 🧠🎈
               <br />
               <br />
-              State Management: In React, we manage state at the component level
-              and sometimes use global state management tools like Redux or the
-              Context API. What are the benefits of managing state globally, and
-              what are the potential drawbacks?
+              <ol>
+                <li>
+                  <b>Event-Driven Programming: ✨</b>
+
+                  <div>
+                    Describe a real-world situation or system that functions
+                    similarly to an event-driven programming model. How does
+                    this system react to different "events"? How might
+                    understanding this real-world example help someone new to
+                    event-driven programming grasp the concept?
+                  </div>
+                  <br />
+                </li>
+                <li>
+                  <b>User-Centered Design: 🎨</b>
+
+                  <div>
+                    If you were tasked with designing an educational app for
+                    your fellow students, what would be some key considerations
+                    you'd keep in mind? How would you ensure the design is truly
+                    user-centered?
+                  </div>
+                  <br />
+                </li>
+                <li>
+                  <b>Component Architecture: 🏗️</b>
+
+                  <div>
+                    Imagine you are explaining the concept of component
+                    architecture to a child. How would you describe what it is
+                    and why it is important in software development?
+                  </div>
+                  <br />
+                </li>
+                <li>
+                  <b>Synthesizing Concepts: 🌟</b>
+
+                  <div>
+                    How can concepts from event-driven programming and component
+                    architecture be used to improve the user experience in a web
+                    application? Can you think of an example?
+                  </div>
+                  <br />
+                </li>
+                <li>
+                  <b>Looking Ahead: 🚀</b>
+
+                  <div>
+                    As you learn about these different aspects of programming
+                    and design, how do you see them influencing the future of
+                    how we interact with digital spaces, especially with the
+                    emergence of technologies like virtual reality (VR) and
+                    augmented reality (AR)?
+                  </div>
+                  <br />
+                </li>
+              </ol>
+              <br />
+              These questions are meant to stretch your thinking and enhance
+              your understanding. I can't wait to hear your answers and engage
+              in some enlightening discussions! The journey of learning is
+              filled with challenges, but those challenges are what make it
+              exciting and rewarding. Stay curious, keep questioning, and above
+              all, believe in your incredible potential. 🎈💡🌈
               <br />
               <br />
-              Event-Driven Programming: Explain how event-driven programming
-              works in the context of a React application. Give an example of
-              how a user action triggers an event which causes a change in the
-              state of a component.
+              Warmly,
               <br />
-              <br />
-              Virtual DOM: One of React's key features is its virtual DOM.
-              Explain what the virtual DOM is and how it improves performance.
-              <br />
-              <br />
-              CSS in JS: CSS-in-JS is a popular styling technique in modern
-              frontend development, and there are libraries such as
-              styled-components that implement this in React. Discuss the
-              advantages and potential disadvantages of using CSS-in-JS compared
-              to traditional CSS stylesheets in a React application.
-              <br />
-              <br />
-              Remember, these are open-ended questions. They are designed to
-              test not only your knowledge of facts but also your understanding
-              of these concepts and your ability to articulate that
-              understanding. Good luck!
+              Ms. Roxana
             </div>
           ),
           spanish: ``,
@@ -1832,6 +1998,33 @@ export default LoginForm;
         "https://res.cloudinary.com/eduprojectsil/video/upload/v1688807036/IMG_4356_bk9g2p.mov", // may not need
 
       prompts: {
+        welcome: {
+          response: (
+            // <MessageBlock>
+            <div>
+              Hello my wonderful students! 😊
+              <br />
+              <br />
+              Welcome to our thrilling exploration of backend engineering, cloud
+              computing, and big data! Just like a forest relies on its unseen
+              roots, our digital world relies on backend engineering to keep
+              things running smoothly. And much like a cloud can drift anywhere
+              across the sky, our data can be accessed anytime, anywhere thanks
+              to cloud computing. Big data? It's like the leaves of a forest
+              whispering stories, sharing knowledge, and predicting the future.
+              🌳☁️🍃
+              <br />
+              <br />
+              So let's embark on this adventure together. Remember, every
+              question is a step forward, and every mistake, a lesson learned.
+              Si se puede! Let's dive into the wonderful world of technology
+              together. 🚀💖🌈
+            </div>
+            // </MessageBlock>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
         patreon: {
           completed: false,
           impact: 1000,
@@ -1854,63 +2047,70 @@ export default LoginForm;
           )}?`,
           response: (
             <div>
-              One story that always inspires people about the power of backend
-              software engineering involves the company Netflix and their
-              backend engineering journey.
+              Hola queridos estudiantes, 😊
+              <br /> <br />
+              I'm delighted to share some inspiring facts about cloud
+              engineering and big data! These are fields that can open up
+              tremendous opportunities for you, and they're becoming more
+              important than ever in our increasingly digital world.
               <br />
               <br />
-              In the early 2000s, Netflix started as a mail-order DVD service
-              but soon saw the potential of streaming technology. However,
-              streaming video required vast amounts of data to be sent quickly
-              and reliably, a serious backend engineering problem.
-              <br />
-              <br />
-              In 2008, Netflix suffered a significant database corruption and
-              was down for three days. For a company that relied on the trust of
-              customers to provide consistent service, this was a disaster. It
-              was a moment of realization for the company: they had to
-              completely rethink their backend systems to cope with the scale
-              they were growing into.
-              <br />
-              <br />
-              That's when Netflix decided to migrate their systems to the cloud,
-              specifically Amazon Web Services (AWS). The complexity of this
-              task cannot be understated. Migrating the massive data sets,
-              building new microservices, redesigning the way data flowed
-              through their system - all these tasks required sophisticated
-              backend engineering.
-              <br />
-              <br />
-              One key challenge was building what came to be known as the "Chaos
-              Monkey." This piece of software was designed to randomly kill
-              processes in their system. Why would they do this? To ensure that
-              there was no single point of failure in the system. The Chaos
-              Monkey helped to ensure that Netflix's systems were truly
-              distributed and robust.
-              <br />
-              <br />
-              After several years of this complex, challenging work, Netflix had
-              completely moved all of its customer-facing services to the cloud
-              by 2016. But their work did not stop there. Netflix engineers kept
-              building on the cloud's scalability, creating new tools and
-              services that allowed them to handle even more users and deliver
-              even more content.
-              <br />
-              <br />
-              For example, Netflix engineers developed a tool called "Flux,"
-              which orchestrates asynchronous, event-based programming. This
-              kind of tool enables the smooth streaming of video content, no
-              matter how many users are watching or where they are in the world.
-              <br />
-              <br />
-              Netflix's story illustrates how backend engineering can turn a
-              company's ambitious vision into reality. It showcases how thinking
-              about system design, scalability, and reliability, coupled with a
-              willingness to experiment with radical solutions (like the Chaos
-              Monkey), can create a service that hundreds of millions of people
-              rely on for their entertainment. It's a truly inspiring story for
-              any software engineer.
-              <br />
+              <ol>
+                <li>
+                  <b>Cloud is Everywhere:</b>
+                  ☁️ You know how you can access your photos, files, and even
+                  some of your favorite games from any device? That's the magic
+                  of cloud engineering! The cloud is transforming how we store
+                  information and how we access it.
+                </li>
+                <br />
+                <li>
+                  <b>Empowering Innovation:</b>
+                  🚀 Cloud engineering allows companies, small and large alike,
+                  to innovate faster. It allows you to launch new applications,
+                  improve existing ones, and deliver software faster than ever
+                  before. Think about how quickly we see new features on apps
+                  like Instagram or TikTok - that's the power of the cloud.
+                </li>
+                <br />
+                <li>
+                  <b>Big Data is Big Business:</b>
+                  💼 Companies all over the world are using big data to make
+                  better decisions. From figuring out what products to sell, to
+                  predicting the hottest new music hits, big data plays a
+                  crucial role. In fact, the big data market is expected to
+                  reach $274.3 billion by 2022!
+                </li>
+                <br />
+                <li>
+                  <b>Predicting the Future: </b>
+                  🔮 Big data can be used to predict trends and make decisions.
+                  This can be anything from predicting the outcome of an
+                  election, to determining what product a company should launch
+                  next. It's like having a crystal ball!
+                </li>
+                <br />
+                <li>
+                  <b>Solving Real Problems:</b>
+                  🌍 With cloud engineering and big data, we can tackle some of
+                  the world's most pressing problems. For example, scientists
+                  are using big data to track and predict climate change, and
+                  cloud computing is helping to provide digital education to
+                  students around the world.
+                </li>
+                <br />
+              </ol>
+              <div>
+                Even if these fields seem challenging or distant, don't let that
+                discourage you. You are capable of amazing things and your
+                unique perspective is valuable and needed. Don't forget the
+                importance of your dreams and aspirations, as they are your
+                guiding star towards success. 🌟
+                <br />
+                <br />
+                Learning is a journey, and every step, no matter how small,
+                brings you closer to your goals. Si se puede! 💪💖
+              </div>
             </div>
           ),
           spanish: ``,
@@ -1926,70 +2126,53 @@ export default LoginForm;
           )}?`,
           response: (
             <div>
-              <h2>The Intricate Web of Backend Engineering</h2>
+              <h3>
+                The Trio Powering Our Digital Age: Backend Engineering, Cloud
+                Computing, and Big Data 🚀🌐🔮
+              </h3>
               <br />
               <br />
-              Backend engineering, often referred to as "server-side
-              development," is the invisible force that powers the digital
-              world. Its role is to ensure the smooth and effective operation of
-              all the technology that lies "behind the scenes" of our internet
-              experiences. While frontend development caters to the user
-              interface and direct user interaction, backend engineering focuses
-              on server communication, database management, and business logic—
-              the cogs and gears operating beneath the surface of the digital
-              landscape.
+              In the grand canvas of our digital age, three unseen forces are
+              artistically at work, quietly painting the picture of our lives:
+              backend engineering, cloud computing, and big data. 🎨 These
+              aren't just technical terms, they're magic keys 🔑 that open doors
+              to a world where technology dances with imagination. 💃🌟
               <br />
               <br />
-              Backend engineering can be seen as the backbone of any online
-              system. Whenever a user performs an action on a website or an
-              application— clicking a button, filling out a form, completing a
-              transaction— it is the backend that processes these requests,
-              interacting with databases, performing calculations, applying
-              business rules, and returning the relevant results.
+              The first key is backend engineering. Like a puppet master pulling
+              the strings behind the curtain, backend engineering powers the
+              applications and websites we interact with daily. 🎭💻 It's the
+              heartbeat 💗 that keeps our digital world alive and functioning.
+              In essence, backend engineering is the backstage hero, unseen, yet
+              holding the show together.
               <br />
               <br />
-              The work of backend engineers revolves around building and
-              maintaining robust, secure, and efficient server-side software.
-              They are responsible for creating APIs, writing server-side
-              scripts, ensuring data integrity, and managing user
-              authentication, among many other tasks. Backend engineers work
-              with various tools and languages such as Python, Java, Ruby, SQL,
-              and many more. The choice of technology often depends on the
-              specific requirements of the project at hand.
+              (she's really hallucinating here lol - sheilf)
+              <br />
+              Next, enter the realm of cloud computing. ☁️ Imagine your data as
+              birds, once confined to a single tree, but now free to fly across
+              the sky, landing where you need them. That's the freedom cloud
+              computing has given us – data that's as free as a bird, accessible
+              from any device, anytime, anywhere. 🐦💼
               <br />
               <br />
-              One of the key responsibilities of backend engineers is to ensure
-              that the system can handle the load, whether it's ten users or ten
-              million. Scalability is, therefore, a critical concern. Engineers
-              must design systems that can grow in capacity without a loss in
-              performance, a concept which often necessitates sophisticated
-              architectural designs like microservices.
+              Finally, let's dive into the vast ocean of big data. 🌊 It's about
+              uncovering the tales whispered by billions of data points, each a
+              drop in the digital sea. Studying these whispers reveals patterns,
+              trends, and insights, much like how listening to the rustling
+              leaves 🍃 can tell us about the changing seasons. Big data is our
+              digital crystal ball, helping us analyze, predict, and navigate
+              our way through the digital world. 🔮🗺️
               <br />
               <br />
-              Security is another primary focus. Backend engineers are
-              responsible for protecting sensitive data and ensuring that their
-              systems are resistant to attacks. This can involve everything from
-              encrypting data to preventing SQL injection attacks, to managing
-              access controls.
-              <br />
-              <br />
-              Backend engineering also ties closely with the emerging field of
-              DevOps. The DevOps philosophy involves the close integration of
-              development and operations, with a focus on automation,
-              monitoring, and continuous delivery. As such, many backend
-              engineers work with cloud platforms like AWS, Azure, or Google
-              Cloud Platform, and tools like Docker and Kubernetes for
-              containerization and orchestration.
-              <br />
-              <br />
-              In conclusion, backend engineering plays a vital role in the
-              digital world. Without it, the sleek and responsive websites and
-              apps we use daily would be void shells, devoid of functionality.
-              It is the unsung hero of the web, operating silently behind the
-              scenes to power the experiences we have come to take for granted
-              in the digital age. Understanding its principles and nuances
-              provides a deeper appreciation of the intricacy and sophistication
-              of our digital experiences.
+              In conclusion, backend engineering, cloud computing, and big data
+              are like three companions on our digital journey. 🛤️ They're
+              shaping our present and lighting up the path to a future that's
+              more interconnected and insightful. As we embrace and understand
+              these forces, we step into a world where we can use technology to
+              create, to solve, and to dream. Let's keep exploring and learning
+              together, my dear students. Remember, si se puede! We're on this
+              journey together. 🚀💖🌈
             </div>
           ),
           spanish: ``,
@@ -2005,75 +2188,62 @@ export default LoginForm;
           )} with one sentence answers?`,
           response: (
             <div>
-              here are three commonly asked questions by beginners about backend
-              engineering, along with expert responses:
+              Here are three common questions beginners often ask about these
+              fascinating fields, and some expert answers to help guide your
+              understanding. 🧠🌟
               <br />
               <br />
-              Question 1: What programming languages are most commonly used in
-              backend development and how should I choose which one to learn?
-              <br />
-              <br />
-              Many languages can be used for backend development, and the choice
-              often depends on the specific use case, your team's expertise, and
-              other project requirements. Some of the most popular languages
-              include Python, Java, JavaScript (Node.js), Ruby, and PHP. Python
-              is praised for its readability and simplicity, making it a great
-              first language for beginners. Java is highly portable and widely
-              used in enterprise-scale applications. Node.js allows you to use
-              JavaScript, a traditionally front-end language, on the
-              server-side, which can be beneficial for teams wanting to use the
-              same language across the stack. Ruby and Ruby on Rails have a
-              reputation for being developer-friendly and enabling rapid
-              development, while PHP is traditionally used in web development
-              and has a large developer community. As a beginner, you might want
-              to start with Python or JavaScript due to their syntax and
-              versatility, but remember that understanding the principles of
-              programming and backend development is more important than the
-              specific language you start with.
-              <br />
-              <br />
-              <br />
-              <br />
-              Question 2: What is the role of databases in backend development
-              and which database should I learn?
-              <br />
-              <br />
-              Databases are crucial in backend development because they store
-              the data that your application uses. This can include user
-              profiles, user-generated content, transaction history, and much
-              more. There are many types of databases, but they generally fall
-              into two categories: SQL (Relational Databases) and NoSQL
-              (Non-Relational Databases). SQL databases, like PostgreSQL, MySQL,
-              and SQLite, are great when your data is structured and consistent.
-              NoSQL databases, like MongoDB, CouchDB, or Cassandra, can be
-              useful when dealing with large volumes of diverse, rapidly
-              changing data. As a beginner, understanding SQL and the principles
-              of relational databases can be very beneficial because these
-              concepts apply to many areas of backend development. However,
-              gaining some exposure to NoSQL databases is also valuable due to
-              the growing popularity of these databases in certain industries.
-              <br />
-              <br />
-              <br />
-              <br />
-              Question 3: What is an API, and why are they important in backend
-              development?
-              <br />
-              <br />
-              API stands for Application Programming Interface. It's a set of
-              rules that allows different software applications to communicate
-              with each other. In backend development, APIs are crucial as they
-              provide a way for the frontend of an application (what the user
-              interacts with) to communicate with the backend (where data is
-              stored and manipulated). For example, when you log into a mobile
-              app, the frontend sends a request to the backend via an API. The
-              backend then checks your login details, and if they're correct, it
-              sends a response back to the frontend, which lets you access your
-              account. Understanding how to design and build APIs is a
-              fundamental skill in backend development, as it enables the
-              creation of software that can interact seamlessly with other
-              systems, whether they be different parts of the same application
-              or entirely separate applications.
+              <ol>
+                <li>
+                  <b>What exactly is backend engineering? 🤔</b>
+                  <div>
+                    Expert Answer: "Backend engineering, my dear students, is
+                    like the backstage crew at a concert. 🎬🎸 While you might
+                    not see them, they ensure everything runs smoothly. In
+                    digital terms, they develop and maintain the technology
+                    needed to power the components which enable the user-facing
+                    side of websites to exist. Their work includes server-side
+                    programming, database creation and management, and even data
+                    analysis." 🖥️🌐
+                  </div>
+                </li>
+                <br />
+                <li>
+                  <b>How does cloud computing work? ☁️</b>
+                  <div>
+                    Expert Answer: "Imagine having a superpower where you can
+                    store anything you want in a magical box and access it
+                    anytime, anywhere. 🎁✨ That's cloud computing in a
+                    nutshell. Instead of storing data on your own computer or
+                    server, it's stored on a network of servers on the internet.
+                    Not only can you store data, but you can also use the cloud
+                    to run applications, similar to how you would run them on
+                    your own computer. It's like having a powerful computer
+                    right at your fingertips, no matter where you are!" 💻🌍
+                  </div>
+                </li>
+                <br />
+                <li>
+                  <b>Why is big data important? 📊</b>
+                  <div>
+                    Expert Answer: "Big data is like a treasure trove of secrets
+                    waiting to be unlocked. 🔐💎 It refers to the enormous
+                    volume of data that is collected every day from various
+                    digital sources. But the real value of big data isn't just
+                    in the quantity, but in what we can learn from it. By
+                    analyzing big data, we can uncover patterns and trends that
+                    can help businesses make better decisions, scientists make
+                    discoveries, and even predict future trends. It's like
+                    having a digital crystal ball." 🔮🌠
+                  </div>
+                </li>
+                <br />
+              </ol>
+              <div>
+                Every question you ask is a step forward in your learning
+                journey. Keep being curious and never stop learning, my dear
+                students. Si se puede! 🦐💖🌈
+              </div>
             </div>
           ),
           spanish: ``,
@@ -2089,158 +2259,131 @@ export default LoginForm;
           )}?`,
           response: (
             <div>
-              Here's a step-by-step roadmap on how to go from beginner to
-              professional backend engineer. Note that everyone's journey is
-              unique, so adapt this guide to suit your learning style and
-              interests.
+              Dear students! 😊 Here's a roadmap to guide your journey from
+              beginner to professional in backend engineering, cloud computing,
+              and big data. Remember, everyone's path may look a bit different,
+              and that's perfectly okay. Your journey is unique to you! 🗺️🌟
+              <br />
+              <br />
+              <h4>Backend Engineering:</h4>
               <br />
               <ol>
                 <li>
-                  <b> Learn a Programming Language</b>
-                  <div>
-                    Start with mastering a programming language that's widely
-                    used for backend development. Python and JavaScript
-                    (Node.js) are popular choices and are beginner-friendly.
-                    Learn the syntax, data structures, control flow, error
-                    handling, and object-oriented programming principles.
-                  </div>
-                  <br />
-                  <br />
-                  <div>Resources: Codecademy, freeCodeCamp, LeetCode</div>
+                  <b>Start with the Basics: </b>
+                  Learn a general-purpose programming language like Python or
+                  JavaScript. Understand basic concepts like variables, loops,
+                  functions, and data structures. 👨‍💻📘
                 </li>
+                <br />
                 <li>
-                  <b>Understand How the Web Works</b>
-                  <div>
-                    Get a grasp on internet fundamentals: How do browsers,
-                    servers, and networks interact? What's HTTP and HTTPS? What
-                    are the different HTTP methods (GET, POST, PUT, DELETE)?
-                    What are status codes?
-                  </div>
-                  <br />
-                  <br />
-                  <div>
-                    Resources: Mozilla Developer Network (MDN), W3Schools
-                  </div>
+                  <b>Learn about Databases:</b>
+                  Familiarize yourself with SQL for relational databases and
+                  NoSQL for non-relational databases. Practice how to create,
+                  read, update, and delete data. 💽🔍
                 </li>
-
+                <br />
                 <li>
-                  <b>Learn about Databases</b>
-                  <div>
-                    Understand the differences between SQL (Relational) and
-                    NoSQL (Non-relational) databases. Learn how to create
-                    schemas, write queries, and manage data. Start with SQL
-                    using MySQL or PostgreSQL, then try a NoSQL database like
-                    MongoDB.
-                  </div>
-                  <br />
-                  <br />
-                  <div>Resources: SQLZoo, MongoDB University</div>
+                  <b>Understand Web Fundamentals: </b>
+                  Learn about HTTP protocols, request/response cycle, and
+                  RESTful APIs. 🌐💬
                 </li>
-
+                <br />
                 <li>
-                  <b> Master Backend Frameworks</b>
-                  <div>
-                    Choose a framework in your chosen language and learn it
-                    thoroughly. If you chose Python, Django and Flask are
-                    excellent choices. For JavaScript, Express.js is a go-to
-                    option. Frameworks will speed up your development process
-                    and provide structure to your applications.
-                  </div>
-                  <br />
-                  <br />
-                  <div>
-                    Resources: Django or Flask's official documentation for
-                    Python, Express.js guides, YouTube tutorials
-                  </div>
+                  <b>Explore Frameworks:</b>
+                  Pick a backend framework like Node.js (if you chose
+                  JavaScript) or Django (if you chose Python), and understand
+                  how to build and structure a backend application. 🏗️🔧
                 </li>
-
+                <br />
                 <li>
-                  <b>Learn about APIs</b>
-                  <div>
-                    Understand RESTful APIs and how to build them. Learn about
-                    JSON, endpoints, CRUD operations, and status codes. Try
-                    creating a simple API of your own.
-                  </div>
-                  <br />
-                  <br />
-                  <div>
-                    Resources: RESTful API guides, Postman for testing APIs,
-                    build a simple API with Express.js/Flask
-                  </div>
+                  <b>Work on Projects:</b>
+                  Apply your skills to build simple applications. As you grow,
+                  so should the complexity of your projects. Building actual
+                  projects is one of the best ways to learn and showcase your
+                  skills! 🎯💪
                 </li>
-
-                <li>
-                  <b>Learn about Authentication and Authorization</b>
-                  <div>
-                    Dive into JWT, OAuth, sessions, cookies, and other methods
-                    for managing user identities and securing user data.
-                    Implement authentication and authorization in your own
-                    projects.{" "}
-                  </div>
-                  <br />
-                  <br />
-                  <div>Resources: Auth0 Docs, YouTube tutorials</div>
-                </li>
-
-                <li>
-                  <b>Learn about Testing and Debugging</b>
-                  <div>
-                    Learn how to write unit tests, integration tests, and learn
-                    about test-driven development. Understand debugging tools
-                    and techniques in your chosen language and framework.{" "}
-                  </div>{" "}
-                  <br />
-                  <br />
-                  <div>
-                    Resources: Jest (for JavaScript), PyTest (for Python),
-                    official documentation for debugging tools in your chosen
-                    IDE
-                  </div>
-                </li>
-
-                <li>
-                  <b>Get Familiar with DevOps</b>
-                  <div>
-                    Learn about cloud services like AWS, GCP, or Azure. Learn
-                    how to deploy your applications, automate workflows, and
-                    monitor performance. Understand containerization (Docker)
-                    and orchestration (Kubernetes).
-                  </div>{" "}
-                  <br />
-                  <br />
-                  <div>
-                    Resources: AWS Training and Certification, GCP Training,
-                    Azure Training, Docker's Get Started Guide
-                  </div>
-                </li>
-
-                <li>
-                  <b>Build Projects</b>
-                  <div>
-                    Backend development is always evolving. Stay updated with
-                    the latest practices, tools, and technologies. Follow
-                    influencers on Twitter, join developer communities like
-                    Stack Overflow and GitHub, and read tech blogs or
-                    newsletters.
-                  </div>{" "}
-                </li>
-
-                <li>
-                  <b>Gain Professional Experience</b>
-                  <div>
-                    Whether it's an internship, a junior developer role,
-                    contributing to open-source projects, or freelance work,
-                    real-world experience is crucial. This will not only improve
-                    your skills but also give you a feel of collaborative
-                    coding, using version control systems, and dealing with
-                    real-world problem-solving.
-                  </div>{" "}
-                </li>
+                <br />
               </ol>
-              <br /> <br />
-              Remember, the journey to becoming a professional backend engineer
-              is a marathon, not a sprint. Enjoy the process, keep building, and
-              never stop learning. Good luck!
+              <h4>Cloud Computing:</h4>
+              <br />
+              <ol>
+                <li>
+                  <b>Understand the Basics:</b>
+                  Learn the fundamentals of networking and web servers. You
+                  should also get comfortable with Linux as it's commonly used
+                  in cloud environments. 🌐💻
+                </li>
+                <br />
+                <li>
+                  <b>Learn a Cloud Platform: </b>
+                  Start with one of the big providers like Amazon Web Services
+                  (AWS), Google Cloud Platform (GCP), or Microsoft Azure. Most
+                  offer free tier services that you can use to learn and
+                  experiment. ☁️🚀
+                </li>
+                <br />
+                <li>
+                  <b>Get Hands-On Experience:</b>
+                  The best way to learn cloud computing is by doing. Set up
+                  virtual servers, deploy applications, or even create a network
+                  of virtual machines. The more hands-on experience you get, the
+                  better. ✅🛠️
+                </li>
+                <br />
+                <li>
+                  <b>Study for a Certification:</b>
+                  Cloud providers offer certifications that can validate your
+                  skills and make you more attractive to employers. Start with a
+                  foundational certification like AWS Certified Cloud
+                  Practitioner or Google Cloud Certified - Associate Cloud
+                  Engineer. 🎓🏅
+                </li>
+                <br />
+              </ol>
+              <h4>Big Data:</h4>
+              <br />
+              <ol>
+                <li>
+                  <b>Start with the Basics: </b>
+                  Learn a programming language like Python or R, which are often
+                  used for data analysis. Understand data structures and
+                  algorithms. 🧮📘
+                </li>
+                <br />
+                <li>
+                  <b>Learn About Databases:</b>
+                  You should understand how to work with large datasets. Learn
+                  SQL and also big data technologies like Hadoop or Apache
+                  Spark. 💽⚡
+                </li>
+                <br />
+                <li>
+                  <b>Understand Data Processing:</b>
+                  Learn how to clean, process, and analyze large datasets. Also
+                  learn about data warehousing and ETL (Extract, Transform,
+                  Load) processes. 📊🔍
+                </li>
+                <br />
+                <li>
+                  <b>Statistics and Machine Learning: </b>
+                  Understand statistical analysis and predictive modeling.
+                  Machine learning is a common application of big data. 🧪🤖
+                </li>
+                <br />
+                <li>
+                  <b>Projects and Real-World Experience: </b>
+                  Apply what you've learned to real-world datasets. There are
+                  many open datasets available that you can use to practice your
+                  skills and build your portfolio. 🎯💼
+                </li>
+                <br />
+                <div>
+                  Stay curious, stay persistent, and remember that the best
+                  learning comes from doing. You've got this, and remember, si
+                  se puede! Let's embrace this exciting journey into the tech
+                  world together. 🚀💖🌈
+                </div>
+              </ol>
             </div>
           ),
           spanish: ``,
@@ -2325,7 +2468,7 @@ if __name__ == '__main__':
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Lesson 3 Understanding Backend Engineering`
           )} in exactly one sentence?`,
-          response: `Backend engineering is the design, implementation, testing, and maintenance of the server-side logic, databases, and application interfaces that power the functionality behind user-facing components of software applications or websites.`,
+          response: `Backend engineering builds the hidden machinery that powers our apps and websites, cloud computing uses the internet to access and store data instead of a local computer, and big data refers to processing vast amounts of information to uncover patterns and insights. `,
           spanish: ``,
           tooltip: ``,
         },
@@ -2339,26 +2482,69 @@ if __name__ == '__main__':
           )}?`,
           response: (
             <div>
-              Databases: Explain the difference between a SQL database and a
-              NoSQL database. Provide an example of a scenario where each might
-              be the more appropriate choice.
+              <div>
+                Here are five open-ended questions designed to challenge your
+                understanding of backend engineering, cloud computing, and big
+                data. There are no right or wrong answers, it's all about your
+                thoughtful analysis and understanding. 😊🎓🔍
+              </div>
               <br />
               <br />
-              APIs: What is a RESTful API and why are they important in backend
-              development?
-              <br />
-              <br />
-              Backend Engineering: What is the role of a load balancer in
-              backend engineering and why is it important?
-              <br />
-              <br />
-              Privacy: What is data privacy and why is it an important aspect of
-              computer ethics?
-              <br />
-              <br />
-              Ethics: Explain the concept of "digital divide" and why it is a
-              concern in computer ethics.
-              <br />
+
+              <ol>
+                <li>
+                  <b>Backend Engineering:</b>
+                  Consider an online shopping website. Can you describe how a
+                  backend engineer would design a system to handle and process
+                  an order? Consider factors like product availability, payment
+                  processing, and order tracking. 🛒🔧
+                </li>
+                <br />
+                <li>
+                  <b>Cloud Computing: </b>
+                  Cloud computing has become a key player in the growth of many
+                  businesses. Can you identify and explain an example of a
+                  real-world application that heavily relies on cloud computing?
+                  Describe how this application uses cloud computing to its
+                  advantage. ☁️💼
+                </li>
+                <br />
+                <li>
+                  <b>Big Data: </b>
+                  Imagine you're working with a large dataset that contains
+                  millions of rows of user data for a popular mobile app. How
+                  would you use big data analysis techniques to extract
+                  meaningful insights about user behavior from this dataset?
+                  📊📲
+                </li>
+                <br />
+                <li>
+                  <b>Cloud Computing & Computer Ethics: </b>
+                  Cloud services allow for unprecedented access to data and
+                  resources. However, this convenience can also lead to ethical
+                  challenges. Can you think of a potential ethical issue that
+                  could arise from widespread use of cloud computing and how it
+                  could be mitigated? ☁️⚖️
+                </li>
+                <br />
+                <li>
+                  <b>Big Data, Cloud Computing & Critical Race Theory:</b>
+                  Consider a hypothetical scenario where a cloud-based big data
+                  project is being used to guide city planning. How might
+                  critical race theory inform the use and analysis of this data
+                  to ensure that the development benefits marginalized
+                  communities equitably and doesn't reinforce existing
+                  inequities? ☁️🌆🤝
+                </li>
+                <br />
+                <div>
+                  These questions allow us to reflect on how technology
+                  intertwines with societal and ethical concerns. Remember, it's
+                  not just about how we build, but why we build and who we build
+                  for. Stay curious, empathetic, and mindful in your tech
+                  journey. Si se puede! 🚀🌈💖
+                </div>
+              </ol>
             </div>
           ),
           spanish: ``,
@@ -2475,6 +2661,37 @@ if __name__ == '__main__':
         "https://res.cloudinary.com/eduprojectsil/video/upload/v1688890864/IMG_4448_wtznbf.mov", // may not need
 
       prompts: {
+        welcome: {
+          response: (
+            // <MessageBlock>
+            <div>
+              Hello my brave students! 🌟
+              <br /> <br />
+              Welcome to your incredible journey as future startup founders and
+              app developers! 🚀 This path is paved with creativity, innovation,
+              and endless learning. As founders, you have the unique opportunity
+              to bring your visionary ideas to life, creating something that can
+              have a profound impact on many. 🌎🌱
+              <br />
+              <br />
+              In the realm of app development, utilizing Backend as a Service
+              (BaaS) platforms empowers you to create engaging, scalable, and
+              secure apps efficiently. These tools enable you to focus on
+              crafting an exceptional experience for your users and bringing
+              your unique vision to life. 💻✨
+              <br /> <br />
+              Embrace this journey with openness and eagerness. Remember, every
+              challenge is a chance to grow, and every stumble a lesson to
+              learn. Stay curious, be resilient, and always be supportive of
+              yourselves and each other. Your ideas, energy, and passion are
+              ready to make a mark in the world. So, buckle up, my dear
+              students, and let your brilliance illuminate the path ahead! 🎉💖
+            </div>
+            // </MessageBlock>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
         patreon: {
           completed: false,
           impact: 1000,
@@ -2497,85 +2714,84 @@ if __name__ == '__main__':
           )}?`,
           response: (
             <div>
-              <h4>
-                👋 Is there a way to distribute credit cards to students with an
-                education technical application using Stripe?
-              </h4>
+              <div>
+                Hello again, my creative students! 🌟 This is Ms. Roxana, and
+                today we're going to dive into an exciting topic that shows just
+                how possible it is for you to turn your incredible ideas into
+                reality. Let's talk about raising money from venture capitalists
+                using SAFE documents with the help of organizations like Y
+                Combinator. 🚀💰
+              </div>
               <br />
               <br />
-              <h2>Credit - Empowering Student Finance through Education</h2>
+              SAFE stands for Simple Agreement for Future Equity. It's like a
+              promise between you—the startup creators—and investors. The magic
+              of a SAFE document is in its simplicity and ease. Let me share
+              some inspiring facts about it:
               <br />
               <br />
-              Once upon a time, in the bustling heart of Silicon Valley, a team
-              of passionate educators, seasoned fintech experts, and
-              forward-thinking technologists embarked on a mission to reimagine
-              the traditional student financial experience. They were driven by
-              a simple, powerful question: "Could we build a system that would
-              help students not just to learn, but to financially grow at the
-              same time?" This question marked the genesis of Credit, an
-              innovative edtech application set to revolutionize students'
-              approach to financial growth and independence. <br />
-              <br />
-              Credit, an app designed to empower students financially through
-              education, proposed a novel concept - a subscription-based
-              learning platform where each payment doesn't just grant access to
-              premium educational resources, but also contributes towards
-              building the students' credit score. The initiative aimed to
-              instill a sense of financial responsibility and acumen among
-              students from an early age, encouraging them to understand the
-              significance of credit scores and financial planning.
-              <br />
-              <br />
-              Harnessing the power of APIs, the Credit team integrated the
-              platform with Stripe, one of the world's leading payment
-              processors. This gave the platform robust, secure payment handling
-              capabilities, with a twist. Rather than just processing
-              transactions, every payment made on Credit was handled in a way
-              that directly impacted the student's credit history positively.
-              <br />
-              <br />
-              The magic lay in the use of Stripe's powerful Issuing API. Upon
-              subscribing, students would receive a virtual credit card from
-              Credit. The subscription fees were then charged to these cards,
-              and promptly paid off using the student's funding source, thereby
-              establishing a pattern of responsible credit use. Over time, this
-              mechanism helped students organically build a strong credit
-              history.
-              <br />
-              <br />
-              But the Credit team didn't stop there. Understanding that credit
-              was only one aspect of financial education, they also incorporated
-              a comprehensive financial literacy module within the app. It
-              covered topics such as budgeting, investing, and understanding
-              interest rates. The application gamified these learnings,
-              rewarding students with app-based rewards for demonstrating
-              knowledge and financial acumen.
-              <br />
-              <br />
-              Furthermore, students could keep track of their burgeoning credit
-              scores directly through the application, providing a tangible
-              sense of progress and achievement. To ensure the students'
-              financial data's safety and privacy, Credit strictly adhered to
-              the highest data protection standards, employing state-of-the-art
-              encryption technologies, and ensuring strict compliance with
-              PCI-DSS.
-              <br />
-              <br />
-              As the word spread, Credit became a sensation in high schools and
-              universities across the nation. Students were no longer just
-              consumers of educational content; they were budding financial
-              adults, witnessing firsthand the power of credit and financial
-              responsibility. Simultaneously, they had access to a world-class
-              educational resource, equipping them with knowledge and skills for
-              a successful future.
-              <br />
-              <br />
-              By leveraging the power of APIs and integrating them into an
-              intuitive education platform, Credit has proven that financial
-              responsibility and education can go hand in hand. It's an
-              innovative stride towards not just teaching our students but
-              preparing them for a more financially secure and informed future.
-              <br />
+              <ol>
+                <li>
+                  <b>Created for Startups:</b>
+                  SAFE documents were brought to life by Y Combinator, a
+                  prestigious startup accelerator that has helped launch
+                  successful companies like Dropbox, Airbnb, and Reddit. They
+                  understand startups and they developed SAFE to be simple and
+                  efficient, reducing the time and complexity involved in
+                  raising funds. 🏗️✨
+                </li>
+                <br />
+                <li>
+                  <b>Cloud Computing: </b>
+                  Cloud computing has become a key player in the growth of many
+                  businesses. Can you identify and explain an example of a
+                  real-world application that heavily relies on cloud computing?
+                  Describe how this application uses cloud computing to its
+                  advantage. ☁️💼
+                </li>
+                <br />
+                <li>
+                  <b>Speed and Simplicity:</b>
+                  With a SAFE, you're able to secure funding quickly, without
+                  getting lost in lengthy negotiations or complicated financial
+                  terms. It's designed to be entrepreneur-friendly, so you can
+                  focus more on innovating and less on paperwork! 📈📝
+                </li>
+                <br />
+                <li>
+                  <b>Recognized and Respected:</b>
+                  SAFE documents are well recognized by venture capitalists
+                  globally. This means when you're using a SAFE, you're speaking
+                  a language that investors understand and respect. It's like
+                  having a golden ticket to the world of venture capital. 🎫🌎
+                </li>
+                <br />
+                <li>
+                  <b>Flexibility and Fairness: </b>A SAFE is flexible—it lets
+                  you raise money without having to decide the exact value of
+                  your company upfront. As your startup grows and its value
+                  increases, your investors get to share in that success. This
+                  makes it a fair and attractive option for both parties. 🤝🌱
+                </li>
+                <br />
+                <li>
+                  <b>Success Stories:</b>Thousands of startups have used SAFE
+                  documents to raise billions of dollars in funding. With Y
+                  Combinator's guidance, these startups have transformed into
+                  successful companies that make a significant impact on the
+                  world. And guess what? You can be part of this inspiring
+                  journey too! 🌠💼
+                </li>
+                <br />
+              </ol>
+              <div>
+                My wonderful students, you have brilliant ideas, and there are
+                organizations and tools out there like Y Combinator and SAFE
+                documents to help you bring those ideas to life. Your dreams are
+                valid and achievable. With persistence, creativity, and courage,
+                you're capable of creating something truly remarkable. Believe
+                in your potential, and let's continue to shine together! 🎉💖
+              </div>
             </div>
           ),
           spanish: ``,
@@ -2591,87 +2807,60 @@ if __name__ == '__main__':
           )}?`,
           response: (
             <div>
-              Learning to code is the first step towards building a technology
-              startup, but it's just one piece of a complex puzzle. The journey
-              from acquiring coding skills to launching a tech startup involves
-              several phases including idea generation, market research, product
-              development, and business operations.
+              My dear students!!!!! 🌟 Let's embark on a journey of
+              understanding how we can combine the power of Backend as a Service
+              (BaaS) in building apps with the financial support we can get
+              through SAFE documents. Here we go! 🚀
               <br />
               <br />
-              <h2>Acquiring Coding Skills</h2>
-              <br />
-              The journey begins with learning to code. There are various
-              programming languages and technologies, each with its own
-              strengths and applicability. Beginners often start with languages
-              like Python or JavaScript due to their syntax and wide usage. It's
-              essential to understand the basics such as data structures,
-              algorithms, and object-oriented programming. As you become more
-              proficient, learning about databases, web protocols, and other
-              software development concepts becomes important.
+              Building an app is like constructing a house. Just like you need a
+              sturdy foundation and structure (the backend) to support the walls
+              and decor (the frontend), you need a solid backend to support your
+              app's user interface. But creating this backend can be quite a
+              task, especially for new developers or small teams. That's where
+              Backend as a Service or BaaS comes into play. It's like a
+              construction team that's already equipped with the tools and
+              materials to help you build your house more efficiently. 😊🏠
               <br />
               <br />
-              <h2>Idea Generation and Validation</h2>
-              <br />
-              Once you have the basic coding skills, the next step is to come up
-              with a startup idea. The idea doesn't have to be unique, but there
-              should be a unique value proposition. It should solve a problem or
-              fulfill a need in a way that current solutions do not. Once an
-              idea is conceived, it's vital to validate it. This can be done
-              through market research, surveys, and talking to potential users.
-              This stage may lead to multiple iterations of the idea based on
-              the feedback received.
+              BaaS platforms like Firebase, Parse, and AWS Amplify provide
+              ready-made services such as databases, user authentication, and
+              cloud storage. So instead of worrying about setting up and
+              managing servers, you can focus on creating an engaging user
+              interface and delivering a great user experience. BaaS is your
+              secret weapon in the world of app development, making the journey
+              more accessible and enjoyable. 🎉👩‍💻
               <br />
               <br />
-              <h2>Building a Minimum Viable Product (MVP)</h2>
-              <br />
-              After validating the idea, the next phase is developing a Minimum
-              Viable Product (MVP). An MVP is a basic version of the product
-              with just enough features to be usable by early customers who can
-              then provide feedback for future product development. It helps in
-              understanding whether the product resonates with the market needs
-              without investing a lot of time and resources.
+              However, even with the right technical tools, you still need
+              resources to turn your app idea into a successful business. This
+              is where SAFE (Simple Agreement for Future Equity) documents come
+              in. SAFE is a contract between you, the innovators, and your
+              investors. It's like a promise that your investors will have a
+              part of your company's equity in the future. 💼💰
               <br />
               <br />
-              <h2>Launching and Marketing</h2>
-              <br />
-              Once the MVP is ready, it's time to launch the product. This is
-              where aspects like setting up a website, creating a brand, and
-              working on a launch strategy come into play. Marketing the product
-              effectively is crucial. This might involve social media marketing,
-              content marketing, SEO, and other digital marketing strategies.
-              <br />
-              <br />
-              <h2>Feedback, Iteration, and Growth</h2>
-              <br />
-              After the launch, it's crucial to gather feedback and use it to
-              improve the product. Startups often have to iterate on their
-              products multiple times before they find a good market fit. It's
-              also important to measure key metrics to understand user behavior
-              and track the growth of the startup. Once the product-market fit
-              is achieved, you can focus on scaling the product and growing the
-              user base.
+              SAFE documents were designed by Y Combinator, a prestigious
+              startup accelerator, to be simple and efficient, making it easier
+              for you to secure funding without getting lost in legal jargon or
+              lengthy negotiations. With a SAFE, you can raise money from
+              venture capitalists at an early stage, allowing you to focus on
+              growing your business. 🌱🚀
               <br />
               <br />
-              <h2>Fundraising</h2>
-              <br />
-              Depending on the business model and growth plans, you might need
-              to raise funds. This involves understanding different fundraising
-              stages, preparing a pitch deck, and reaching out to potential
-              investors.
-              <br />
-              <br />
-              <h2>Team Building and Culture</h2>
-              <br />
-              As the startup grows, you will need to build a team. This involves
-              hiring the right people, defining the company culture, and setting
-              up processes for effective team collaboration.
+              So my dear students, remember this - with the right technical
+              tools like BaaS and the right financial tools like SAFE, you are
+              well-equipped to turn your brilliant app ideas into a reality.
+              Don't let the challenges discourage you. Embrace them as
+              opportunities to learn and grow. Believe in your ideas, believe in
+              yourselves, and remember, you have the power to create something
+              truly remarkable. 💖🌟
               <br />
               <br />
-              In conclusion, the journey from learning to code to building a
-              tech startup is a challenging yet rewarding process. It involves
-              not just technical skills, but also skills in product development,
-              marketing, fundraising, and team management. It's a journey of
-              continuous learning and adaptation.
+              The world of app development and entrepreneurship is full of
+              excitement and opportunities. And you, my brave students, are more
+              than ready to step into it and shine. Let's continue this amazing
+              journey together! 🎉🙌
             </div>
           ),
           spanish: ``,
@@ -2687,59 +2876,61 @@ if __name__ == '__main__':
           )} with one sentence answers?`,
           response: (
             <div>
-              here are three frequently asked questions by beginners about
-              building with APIs, along with expert answers:
-              <br />
-              <br />
-              Question 1: What is an API and why is it important in building
-              applications?
-              <br />
-              <br />
-              An API, or Application Programming Interface, is a set of rules
-              and protocols that allows one software application to interact and
-              communicate with another. It's like a messenger that delivers a
-              request from one system to another and then delivers the response
-              back. APIs are important because they enable the integration of
-              different software systems, allowing them to leverage each other's
-              functionalities. For instance, a web application can use a mapping
-              API to show locations to users, or a weather API to display the
-              current weather. This saves development time and resources, as
-              developers can leverage existing APIs instead of building similar
-              functionalities from scratch.
-              <br />
-              <br />
-              <br />
-              <br />
-              Question 2: How do I choose which APIs to use in my application?
-              <br />
-              <br />
-              Choosing the right API depends on several factors. First, the API
-              should provide the functionality that you need. Look at the API
-              documentation to see what features it provides. Second, consider
-              the API's reliability and performance. You can find this
-              information from user reviews or testing the API yourself. Third,
-              consider the cost. Some APIs are free up to a certain limit, while
-              others require a subscription. Lastly, consider the API's support
-              and community. Good APIs have active developer communities and
-              responsive support teams.
-              <br />
-              <br />
-              <br />
-              <br />
-              Question 3: How can I secure the data being sent and received
-              through an API?
-              <br />
-              <br />
-              Data security is crucial when working with APIs. To secure the
-              data, you can use several strategies. First, use HTTPS for all API
-              requests to ensure the data is encrypted during transit. Second,
-              authenticate and authorize all API requests to ensure only
-              legitimate users and applications can access the API. This is
-              usually done using API keys or tokens. Third, validate all
-              incoming data to protect against attacks such as SQL injection.
-              Finally, limit the data that your API returns. Only return the
-              data that's necessary for each request, minimizing the potential
-              damage if the data is intercepted.
+              <ol>
+                <li>
+                  <b>
+                    Question: What exactly is Backend as a Service (BaaS) and
+                    why is it useful for a startup?
+                  </b>
+                  <br />
+                  Answer: BaaS is a cloud-based service model that provides
+                  developers with ready-made backend services, such as
+                  databases, user authentication, server-side logic, and cloud
+                  storage. It's beneficial for startups, especially for smaller
+                  teams or those with limited resources, as it simplifies app
+                  development by eliminating the need to build and manage a
+                  backend from scratch. This way, you can focus on creating a
+                  great user experience and getting your product to market more
+                  quickly. 💻✨
+                </li>
+                <br />
+                <li>
+                  <b>Question: How can BaaS tools help me scale my startup?</b>
+                  <br />
+                  Answer: BaaS tools are designed to be scalable, meaning they
+                  can handle growth in user numbers or data volume without
+                  sacrificing performance. As your startup grows, your app needs
+                  to support more users and handle more data, which can be
+                  technically challenging. BaaS providers manage this scaling
+                  for you, allowing you to focus on improving your product and
+                  expanding your business. 🌱📈
+                </li>
+                <br />
+                <li>
+                  <b>
+                    Question: I've heard of SAFE documents for raising money.
+                    How do they work and why are they helpful for startups?
+                  </b>
+                  <br />
+                  Answer: SAFE stands for Simple Agreement for Future Equity.
+                  It's a contract that allows you to receive investment from
+                  venture capitalists without setting a specific value for your
+                  company upfront. Instead, investors receive the right to
+                  future shares in your company. SAFE documents, developed by Y
+                  Combinator, simplify the fundraising process, making it faster
+                  and more efficient. They eliminate the need for lengthy price
+                  negotiations, which can be particularly beneficial for
+                  startups in their early stages, when it can be hard to
+                  determine an accurate value for the company. 💼💰
+                </li>
+                <br />
+              </ol>
+              <div>
+                MY!!! DEAR!!! STUDENTS!!!! These are only the basics. The world
+                of app development and startup funding is broad and exciting,
+                and there's always more to learn. So stay curious, continue
+                asking questions, and let's keep exploring together! 🎉🙌
+              </div>
             </div>
           ),
           spanish: ``,
@@ -2755,113 +2946,134 @@ if __name__ == '__main__':
           )}?`,
           response: (
             <div>
-              Raising money for a startup can be challenging, particularly for
-              first-time entrepreneurs. The process requires significant
-              preparation, time, effort, persistence, and oftentimes facing
-              numerous rejections. However, the difficulty also depends on
-              various factors such as the nature of the business, the market
-              size and potential, the team's background and experience, the
-              timing, and the startup's traction or demonstrated progress.
+              MY DEDICATED!!! STUDENTS! 💫 Let's map out this exciting journey
+              from learning to code, to building an app with a Backend as a
+              Service (BaaS), and then raising money to fund your startup. Are
+              you ready? Here we go! 🚀📚
               <br />
               <br />
-              <ol>
-                <li>
-                  <b>Develop a Solid Business Plan</b>
-                  <div>
-                    Investors want to see that you have a clear plan for how
-                    you're going to run your business, make a profit, and
-                    provide them with a return on their investment. Your
-                    business plan should clearly articulate your business model,
-                    target market, competitive advantage, marketing strategy,
-                    financial projections, and other key details about your
-                    business.
-                  </div>
-                  <br />
-                </li>
-                <li>
-                  <b>Bootstrap</b>
-                  <div>
-                    Before seeking external funding, consider funding the
-                    business yourself or with the help of friends and family.
-                    This is called bootstrapping. It shows potential investors
-                    that you are willing to take on personal risk for your
-                    business.
-                  </div>
-                  <br />
-                </li>
-
-                <li>
-                  <b>Build a Strong Team</b>
-                  <div>
-                    Investors not only invest in ideas, but also in people. A
-                    strong, dedicated, and complementary team can make your
-                    startup much more appealing to investors.
-                  </div>
-                  <br />
-                </li>
-
-                <li>
-                  <b>Create a Minimum Viable Product (MVP)</b>
-                  <div>
-                    An MVP is the simplest version of your product that still
-                    delivers your core value proposition. Launching an MVP
-                    allows you to demonstrate traction, validate your business
-                    idea, and collect user feedback – all of which can make your
-                    startup more attractive to investors.
-                  </div>
-                  <br />
-                </li>
-
-                <li>
-                  <b>Network</b>
-                  <div>
-                    Attend industry events, startup meetups, and investor
-                    meetings to build relationships with potential investors.
-                    Networking can also provide valuable feedback and advice for
-                    your startup.
-                  </div>
-                  <br />
-                </li>
-
-                <li>
-                  <b>Pitch to Investors</b>
-                  <div>
-                    Prepare a concise, compelling investor pitch that clearly
-                    explains your business idea, market size, unique value
-                    proposition, business model, marketing strategy, financial
-                    projections, and the funding you need. Be ready to answer
-                    questions and objections.
-                  </div>
-                  <br />
-                </li>
-
-                <li>
-                  <b>Consider Different Types of Funding</b>
-                  <div>
-                    There are many types of funding available to startups,
-                    including angel investors, venture capital, crowdfunding,
-                    and government grants. Research each type to understand
-                    which is the best fit for your startup.
-                  </div>{" "}
-                  <br />
-                </li>
-
-                <li>
-                  <b>Be Persistent</b>
-                  <div>
-                    Fundraising can be a long process with many rejections.
-                    Persistence is key. Use rejections as an opportunity to
-                    learn, improve your business and pitch, and come back
-                    stronger.
-                  </div>{" "}
-                  <br />
-                </li>
-              </ol>
-              <br /> <br />
-              Remember, while raising money can provide resources for growth, it
-              also often involves giving up equity and control. Therefore,
-              always consider the trade-offs, and aim to achieve a balance
-              between maintaining control and accelerating growth.
+              <div>
+                <b>Step 1: Learning to Code</b>
+                <br />
+                Begin by learning a programming language. For mobile app
+                development, consider learning:
+                <ul>
+                  <li>Swift for iOS apps 🍏</li>
+                  <li>Kotlin or Java for Android apps 🤖</li>
+                  <li>
+                    JavaScript for cross-platform apps using frameworks like
+                    React Native or Flutter 🌐
+                  </li>
+                </ul>
+                Coding is like learning a new language, so practice is key!
+                <br />
+                <br />
+              </div>
+              <div>
+                <b>Step 2: Understanding App Development</b>
+                <br />
+                Once you're comfortable with coding, start exploring the basics
+                of app development. You'll want to learn about:
+                <ul>
+                  <li>
+                    Designing user interfaces (UI) for a great user experience
+                    (UX) 🎨
+                  </li>
+                  <li>
+                    Creating and managing databases to store and retrieve data
+                    🗂️
+                  </li>
+                  <li>Implementing user authentication for security 🔐</li>
+                  <li>
+                    Connecting your app to the internet (APIs and networking) 🌐
+                  </li>
+                </ul>
+                <br />
+                <br />
+              </div>
+              <div>
+                <b>Step 3: Exploring Backend as a Service (BaaS)</b>
+                <br />
+                Next, dive into the world of BaaS. Platforms like Firebase and
+                AWS Amplify can help manage your backend services, letting you
+                focus on building the frontend.
+                <ul>
+                  <li>Learn how to integrate a BaaS into your app 🧩</li>
+                  <li>
+                    Understand how to use its features like cloud databases,
+                    authentication, and storage ☁️
+                  </li>
+                </ul>
+                <br />
+                <br />
+              </div>
+              <div>
+                <b>Step 4: Building Your App</b>
+                <br />
+                Now, you're ready to bring your app idea to life:
+                <ul>
+                  <li>Sketch out your app's features and design 📝</li>
+                  <li>
+                    Build the UI, connect to your BaaS, and test thoroughly 🧪
+                  </li>
+                  <li>
+                    Iterate based on feedback, and never be afraid to make
+                    improvements
+                  </li>
+                </ul>
+                <br />
+                <br />
+              </div>
+              <div>
+                <b>Step 5: Understanding Startup Funding</b>
+                <br />
+                Once your app is built, it's time to explore funding. Begin by
+                understanding:
+                <ul>
+                  <li>
+                    Different types of funding (like bootstrapping, angel
+                    investors, venture capital) 💼
+                  </li>
+                  <li>The basics of equity, valuation, and term sheets 📈</li>
+                </ul>
+                <br />
+                <br />
+              </div>
+              <div>
+                <b>Step 6: Learning about SAFE documents</b>
+                <br />
+                Dive deeper into the world of startup funding by understanding
+                SAFE documents. Remember, SAFE stands for Simple Agreement for
+                Future Equity.
+                <ul>
+                  <li>Learn how a SAFE works 📜</li>
+                  <li>Understand the advantages and possible drawbacks 💰</li>
+                </ul>
+                <br />
+                <br />
+              </div>
+              <div>
+                <b>Step 7: Pitching Your Startup</b>
+                <br />
+                Finally, you're ready to present your startup to potential
+                investors.
+                <ul>
+                  <li>
+                    Craft a compelling pitch that tells your startup's story 🗣️
+                  </li>
+                  <li>
+                    Practice your pitch and be ready to answer tough questions
+                    💪
+                  </li>
+                </ul>
+                <br />
+                <br />
+                Remember, my amazing students, this is a journey, and every
+                journey begins with a single step. It might seem challenging at
+                first, but with dedication, curiosity, and resilience, you can
+                achieve anything. Let's take these steps together, and turn your
+                brilliant ideas into reality! 🌟💖
+              </div>
             </div>
           ),
           spanish: ``,
@@ -3010,7 +3222,8 @@ app.listen(8000, () => console.log('Server running on port 8000'));
           request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
             `Lesson 4 Building Apps`
           )} in exactly one sentence?`,
-          response: `Building a startup involves identifying a unique business idea or problem to solve, conducting market research, developing a business plan, assembling a team, securing necessary financing, creating a product or service, launching it to the market, and continuously iterating and growing based on customer feedback and market dynamics.`,
+          response:
+            "Listening to your customers is crucial in building a tech startup because it's their needs, feedback, and experiences that will guide you to create a product that truly solves a problem and adds value to their lives. 🎯💖",
           spanish: ``,
           tooltip: ``,
         },
@@ -3024,27 +3237,57 @@ app.listen(8000, () => console.log('Server running on port 8000'));
           )}?`,
           response: (
             <div>
-              What factors should you consider when choosing third-party APIs to
-              integrate into your startup's product or service?
+              My ambitious students! 🌟 Here's a quiz to help you think deeply
+              about what you've learned about building a tech startup. I
+              encourage you to discuss your answers with each other and learn
+              from each other's perspectives. Let's go! 🚀✍️
               <br />
               <br />
-              How would you approach evaluating the trade-offs between building
-              a feature in-house versus using an API service?
-              <br />
-              <br />
-              Describe a situation where using an API might add significant
-              value to a startup's service or product, and explain why.
-              <br />
-              <br />
-              Discuss the potential security concerns a startup should consider
-              when integrating third-party APIs and how you might mitigate these
-              risks.
-              <br />
-              <br />
-              How can the effective use of APIs accelerate a startup's time to
-              market and scalability, and can you provide examples to illustrate
-              your points?
-              <br />
+              <ol>
+                <li>
+                  <b>Question 1:</b>
+                  Imagine you're creating your first app using a Backend as a
+                  Service (BaaS). What are the key considerations when choosing
+                  a BaaS provider, and how would these considerations influence
+                  your decision? 🧩🌐
+                </li>
+                <br />
+                <li>
+                  <b>Question 2:</b>
+                  You have an innovative app idea that solves a problem in your
+                  community. Describe how you would design a user-friendly
+                  interface that makes your app accessible and enjoyable to use.
+                  Consider elements of UI and UX design in your response. 🎨📱
+                </li>
+                <br />
+                <li>
+                  <b>Question 3:</b>
+                  Discuss how you would approach gathering user feedback on your
+                  app. Why is this feedback important, and how would you use it
+                  to improve your app? 🗣️🔍
+                </li>
+                <br />
+                <li>
+                  <b>Question 4:</b>
+                  You're preparing to pitch your startup to potential investors.
+                  Outline your pitch and explain your strategy for making it
+                  compelling and persuasive. Remember to consider elements such
+                  as your startup's story, the problem you're solving, your
+                  unique solution, and your plan for growth. 📈🗣️
+                </li>
+                <br />
+                <li>
+                  <b>Question 5: </b>
+                  You've decided to raise funds using a SAFE document. What are
+                  the potential advantages and drawbacks of this funding method,
+                  and how would it affect both you as the startup founder and
+                  your potential investors? 💰📜
+                </li>
+                <br />
+              </ol>
+              My. DEAR. STUDENTS! There's no single correct answer to these
+              questions. The goal is to stimulate deep thinking and meaningful
+              discussions. I'm excited to hear your brilliant thoughts! 🎉💖
             </div>
           ),
           spanish: ``,
@@ -5692,7 +5935,6 @@ app.listen(8000, () => console.log('Server running on port 8000'));
       header: `10. Database Foundations`,
       fileSource:
         "https://res.cloudinary.com/eduprojectsil/video/upload/v1688976542/video_13_kz1ogx.mp4", // may not need
-
       prompts: {
         patreon: {
           completed: false,

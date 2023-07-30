@@ -251,7 +251,8 @@ export let textBlock = (
   backgroundColor,
   shadowSize = 4,
   borderRadius = 4,
-  color = "white"
+  color = "white",
+  boxShadow = "0px 0px 0px 0px rgba(0,0,0, 1);"
 ) => {
   return {
     backgroundColor: backgroundColor,
@@ -259,5 +260,6 @@ export let textBlock = (
     padding: 16,
     textShadow: `${shadowSize}px ${shadowSize}px ${shadowSize || 10}px black`,
     color: color,
+    boxShadow: boxShadow,
   };
 };
