@@ -354,6 +354,7 @@ function App() {
       });
     }
   };
+
   useEffect(() => {
     if (params?.moduleID) {
       mountDataForRoute(params?.moduleID);
