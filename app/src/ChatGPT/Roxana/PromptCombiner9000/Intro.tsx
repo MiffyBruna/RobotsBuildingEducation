@@ -133,10 +133,13 @@ export const Intro = ({
           </div>
         );
       }
+      console.log("has custom 18923412783784189142389148793", patreonObject);
       return (
         <div>
           {patreonObject?.header === "Indocumentadofy" ? (
             "¡¡Hola!! Soy miss roxana, una maestra construida con OpenAI. Ayudo a Sheilfer a construir RO.B.E ayudándote a aprender más con indicaciones útiles hola!! 😊"
+          ) : !isEmpty(patreonObject?.prompts?.welcome) ? (
+            <div>{patreonObject?.prompts?.welcome?.response}</div>
           ) : (
             <div>
               i'm ms. roxana, I'm built with various robots made by Apple,
@@ -181,9 +184,10 @@ export const Intro = ({
                     alignItems: "center",
 
                     textAlign: "center",
+                    border: "1px solid red",
                   }}
                 >
-                  <div>$3 advertisement</div>
+                  <div>$3 advertisement asdfasd</div>
                   <h3>{patreonObject?.prompts?.intro?.response}</h3>
                   <h4>{patreonObject?.prompts?.intro?.advertisementPitch}</h4>
                   <a

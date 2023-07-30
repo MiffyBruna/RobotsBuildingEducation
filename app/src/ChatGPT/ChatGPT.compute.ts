@@ -60,8 +60,8 @@ export let computeResponseList = (patreonObject, promptType) => {
       },
       {
         response: patreonObject?.prompts["guide"]?.response,
-        type: "roadmap & study guide",
-        icon: "🤝",
+        type: "roadmap",
+        icon: "🗺️",
       },
       {
         response: patreonObject?.prompts["quiz"]?.response,

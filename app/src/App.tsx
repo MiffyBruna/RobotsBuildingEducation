@@ -97,11 +97,16 @@ function App() {
   // ui schema result
   const [currentPath, setCurrentPath] = useState("");
 
+  // copy of currentPath probably for analytics reasons and not UI ones
   const [currentPathForAnalytics, setCurrentPathForAnalytics] = useState("");
 
+  // calculates impact from all modules
   const [proofOfWorkFromModules, setProofOfWorkFromModules] = useState(0);
 
+  //demo flag
   const [isDemo, setIsDemo] = useState(true);
+
+  // ui state
   const [moduleName, setModuleName] = useState("");
 
   const [visibilityMap, setVisibilityMap] = useState({
@@ -145,12 +150,6 @@ function App() {
     });
     setModuleName(moduleName);
     setCurrentPath("");
-    setVisibilityMap({
-      Engineer: false,
-      "RO.₿.E": false,
-      Creator: false,
-      Business: false,
-    });
   };
 
   const handleZeroKnowledgePassword = (event) => {
@@ -355,6 +354,7 @@ function App() {
       });
     }
   };
+
   useEffect(() => {
     if (params?.moduleID) {
       mountDataForRoute(params?.moduleID);

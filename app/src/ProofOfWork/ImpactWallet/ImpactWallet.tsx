@@ -94,6 +94,25 @@ export const ImpactWallet = ({
       <div>
         {!isDemo ? (
           <Button
+            disabled={true}
+            style={{ textShadow: "2px 2px 12px black" }}
+            onClick={() => {
+              handlePathSelection({ target: { id: "Boss Mode" } });
+              logEvent(analytics, "select_content", {
+                content_type: "button",
+                item_id: "Boss Mode Button",
+              });
+              // setIsImpactWalletOpen(true);
+            }}
+            variant="secondary"
+            id="Boss Mode"
+          >
+            🐉
+          </Button>
+        ) : null}
+        &nbsp; &nbsp;
+        {!isDemo ? (
+          <Button
             style={{ textShadow: "2px 2px 12px black" }}
             onClick={() => {
               handlePathSelection({ target: { id: "RO.₿.E" } });
@@ -123,25 +142,7 @@ export const ImpactWallet = ({
             🏦
           </Button>
         </Link>
-        &nbsp; &nbsp;
-        {!isDemo ? (
-          <Button
-            style={{ textShadow: "2px 2px 12px black" }}
-            onClick={() => {
-              handlePathSelection({ target: { id: "Boss Mode" } });
-              logEvent(analytics, "select_content", {
-                content_type: "button",
-                item_id: "Boss Mode Button",
-              });
-              // setIsImpactWalletOpen(true);
-            }}
-            variant="secondary"
-            id="Boss Mode"
-          >
-            🐉
-          </Button>
-        ) : null}
-        &nbsp;{" "}
+        &nbsp; &nbsp; &nbsp;{" "}
         {databaseUserDocumentCopy?.impact || databaseUserDocument?.impact || 0}{" "}
         <div>
           <ProgressBar
@@ -188,8 +189,8 @@ export const ImpactWallet = ({
               width: "100%",
             }}
           >
-            <h1>Impact</h1>
-            <p style={{ textAlign: "left", maxWidth: 720 }}>
+            {/* <h1>Impact</h1> */}
+            {/* <p style={{ textAlign: "left", maxWidth: 720 }}>
               Proof of work is a system in which the worker proves to verifiers
               that a certain amount of effort has been expended. Verifiers can
               be machines or they can be represented by people like teachers
@@ -200,14 +201,14 @@ export const ImpactWallet = ({
               You can think of impact as the result created by the robots or a
               currency system that records learning attempted and turns it into
               financial impact for someone else.
-            </p>
-            <hr />
+            </p> */}
+            {/* <hr /> */}
             <h4>Scholarships Created: {globalScholarshipCounter}</h4>
             <p>
               Work Done By You
               <br />
               {databaseUserDocumentCopy?.impact ||
-                databaseUserDocument.impact ||
+                databaseUserDocument?.impact ||
                 15200}{" "}
               / {getGlobalImpact()}
               <ProgressBar
@@ -255,7 +256,7 @@ export const ImpactWallet = ({
               <hr />
             </p>
 
-            <div>
+            {/* <div>
               <h1>Real Estate</h1>
               <p style={{ maxWidth: 720 }}>
                 Under Development. In the meantime, expect material on
@@ -269,7 +270,7 @@ export const ImpactWallet = ({
                 <li>Market Theory</li>
               </ul>
               <br />
-            </div>
+            </div> */}
             <div>
               <h1>The Reserve</h1>
               <h3>invested {globalReserveObject?.invested || "N/A"}</h3>

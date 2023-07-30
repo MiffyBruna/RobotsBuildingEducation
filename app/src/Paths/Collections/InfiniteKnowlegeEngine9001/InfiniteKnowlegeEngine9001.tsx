@@ -449,7 +449,7 @@ export const InfiniteKnowledgeEngine9001 = ({
                   Tone
                 </h1>
                 <div style={{ width: "fit-content" }}>
-                  <h6>create an awesome tone for your robot</h6>
+                  <h6>create voice tone for the robot</h6>
                   <br />
 
                   <div style={{ maxWidth: 300 }}>
@@ -605,7 +605,7 @@ export const InfiniteKnowledgeEngine9001 = ({
                     </h1>
                     <div style={{ width: "fit-content" }}>
                       <h6>
-                        create a course with a few simple key descriptions
+                        create a module with a few simple key descriptions
                       </h6>
                       <br />
 
@@ -649,7 +649,7 @@ export const InfiniteKnowledgeEngine9001 = ({
                         }
                         onClick={handleCourseGeneration}
                       >
-                        {didGptFailTask ? "Try again" : "Create impact"}
+                        {didGptFailTask ? "Try again" : "Create module"}
                       </Button>
                       <br />
                       <br />
