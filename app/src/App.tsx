@@ -175,7 +175,6 @@ function App() {
         if (doc.data()) {
           modulesSet.push(doc.data());
         } else {
-          console.log("gone");
         }
       });
 
@@ -192,7 +191,6 @@ function App() {
         if (doc.data()) {
           modulesSet.push(doc.data());
         } else {
-          console.log("gone");
         }
       });
       setGlobalUserModulesFromDB(modulesSet);
@@ -254,7 +252,7 @@ function App() {
 
         const globalReserveDocRef = doc(database, "global", "reserve");
         getDoc(globalReserveDocRef).then((res) => {
-          console.log("res", res.data());
+          "res", res.data();
 
           setGlobalScholarshipCounter(res.data().scholarships);
           setGobalReserveObject(res.data());
@@ -301,12 +299,12 @@ function App() {
                   setDatabaseUserDocument(response.data());
                 });
             } else {
-              console.log("ELSE");
+              ("ELSE");
 
               setDatabaseUserDocument(res.data());
             }
           })
-          .catch((error) => console.log("ERROR"));
+          .catch((error) => "ERROR");
 
         getDoc(globalImpactDocRef).then((res) => {
           setGlobalImpactCounter(res.data().total);
@@ -314,7 +312,7 @@ function App() {
         const globalReserveDocRef = doc(database, "global", "reserve");
 
         getDoc(globalReserveDocRef).then((res) => {
-          console.log("res", res.data());
+          "res", res.data();
 
           setGlobalScholarshipCounter(res.data().scholarships);
         });
@@ -360,7 +358,7 @@ function App() {
       mountDataForRoute(params?.moduleID);
       setIsLoadingRoute(false);
     } else {
-      console.log("no data");
+      ("no data");
     }
   }, [params]);
 

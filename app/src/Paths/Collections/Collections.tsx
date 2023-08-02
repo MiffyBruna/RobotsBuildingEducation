@@ -6,6 +6,7 @@ import { auth } from "../../database/firebaseResources";
 import {
   StyledCollectionContainer,
   StyledModule,
+  japaneseThemePalette,
 } from "../../styles/lazyStyles";
 
 import { InfiniteKnowledgeEngine9001 } from "./InfiniteKnowlegeEngine9001/InfiniteKnowlegeEngine9001";
@@ -60,12 +61,26 @@ export const Collections = ({
 
     let display = collections.map((collection) => {
       let modules = Object.keys(path[collection]);
-
+      "COLLECTIONCOLLECTIONCOLLECTIONCOLLECTIONCOLLECTIONCOLLECTIONCOLLECTION",
+        collection;
       if (modules?.length) {
         return (
           <div>
             <br />
-            <h3>{collection}</h3>
+            <h3>
+              {collection == "Coding Crash Course Version 3" ? (
+                <img
+                  alt="Coding Crash Course Version 3"
+                  title="Coding Crash Course Version 3"
+                  style={{
+                    boxShadow: `10px 10px 0px 0px ${japaneseThemePalette.TokyoTwilight}`,
+                  }}
+                  src="https://res.cloudinary.com/eduprojectsil/image/upload/v1690739354/Collection_Banners_zlhvjw.gif"
+                />
+              ) : (
+                collection
+              )}
+            </h3>
 
             <br />
             <div></div>
@@ -96,6 +111,7 @@ export const Collections = ({
       }
     };
 
+    "COLLECTION", collection;
     return (
       <>
         <div

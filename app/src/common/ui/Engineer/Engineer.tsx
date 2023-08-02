@@ -10,6 +10,8 @@ export const Engineer = {
   "Coding Crash Course Version 3": {
     "Introduction To RO.B.E": {
       documentID: ``,
+      backgroundImgSrc:
+        "https://res.cloudinary.com/eduprojectsil/image/upload/v1690785616/Module_Buttons_1_ixnitr.gif",
       hasCode: true,
       hasCustomIntro: true,
       filler: ``,
@@ -436,7 +438,7 @@ app.post("/task", async (request, response) => {
     });
 
   } catch (error) {
-    console.log("error", error);
+    ("error", error);
   }
 
 });
@@ -597,6 +599,8 @@ exports.app = functions.https.onRequest(app);
     },
     "Lesson 1 Coding Fundamentals": {
       documentID: ``,
+      backgroundImgSrc:
+        "https://res.cloudinary.com/eduprojectsil/image/upload/v1690787599/Module_Buttons_3_ynndpa.gif",
       hasCode: true,
       hasCustomIntro: true,
       filler: ``,
@@ -756,7 +760,7 @@ class Student {
   }
 
   study() {
-      console.log("$\{this.name} is studying.");
+      ("$\{this.name} is studying.");
   }
 }
 
@@ -779,7 +783,7 @@ class Athlete extends Student {
   }
 
   play() {
-      console.log("$\{this.name} is playing $\{this.sport}.");
+      ("$\{this.name} is playing $\{this.sport}.");
   }
 }
 
@@ -802,7 +806,7 @@ class Artist extends Student {
   }
 
   study() {
-      console.log("$\{this.name} is studying $\{this.artForm}.");
+      ("$\{this.name} is studying $\{this.artForm}.");
   }
 }
 
@@ -840,7 +844,7 @@ class Student {
 
 let luis = new Student("Luis", 14, "9th Grade");
 luis.name = "Luis Miguel";  // We can safely change the name
-console.log(luis.name);  // Outputs: "Luis Miguel"
+(luis.name);  // Outputs: "Luis Miguel"
 `}
               />
               <br />
@@ -911,7 +915,7 @@ let student = {
   name: 'Juan',
   age: 18,
   greet: function() {
-    console.log("Hello, my name is $\{this.name}!");
+    ("Hello, my name is $\{this.name}!");
   }
 };
 
@@ -937,7 +941,7 @@ class Student {
   }
 
   greet() {
-    console.log("Hello, my name is $\{this.name}!");
+    ("Hello, my name is $\{this.name}!");
   }
 }
 
@@ -962,7 +966,7 @@ class Person {
   }
 
   greet() {
-    console.log("Hello, my name is $\{this.name}!");
+    ("Hello, my name is $\{this.name}!");
   }
 }
 
@@ -973,7 +977,7 @@ class Student extends Person {
   }
 
   study() {
-    console.log("$\{this.name} is studying.");
+    ("$\{this.name} is studying.");
   }
 }
 
@@ -1345,6 +1349,8 @@ print(rihanna.perform("at the Grammy Awards"))
     },
     "Lesson 2 Frontend Programming": {
       documentID: ``,
+      backgroundImgSrc:
+        "https://res.cloudinary.com/eduprojectsil/image/upload/v1690817709/Module_Buttons_4_n2grll.gif",
       hasCode: true,
       filler: ``,
       highValue: false,
@@ -1983,6 +1989,8 @@ export default LoginForm;
     },
     "Lesson 3 Backend Engineering": {
       documentID: ``,
+      backgroundImgSrc:
+        "https://res.cloudinary.com/eduprojectsil/image/upload/v1690874123/Module_Buttons_5_vulvwr.gif",
       hasCode: true,
       filler: ``,
       highValue: false,
@@ -3207,7 +3215,7 @@ app.post('/create-subscription', async (req, res) => {
   res.send(subscription);
 });
 
-app.listen(8000, () => console.log('Server running on port 8000'));
+app.listen(8000, () => ('Server running on port 8000'));
 
 
           `,
@@ -4715,7 +4723,7 @@ app.listen(8000, () => console.log('Server running on port 8000'));
           action: `demonstrate`,
           icon: `🎨`,
           request: `ms. roxana, can you please show me an example of a common tree or graph algorithm in javascript?`,
-          response: `\n\nTree Algorithm:\n\nfunction traverse(node) {\n  if (node === null) {\n    return;\n  }\n  console.log(node.data);\n  traverse(node.left);\n  traverse(node.right);\n}\n\nGraph Algorithm:\n\nfunction visit(vertex) {\n  if (visited[vertex]) {\n    return;\n  }\n  visited[vertex] = true;\n  console.log(vertex);\n  for (let neighbor of neighbors[vertex]) {\n    visit(neighbor);\n  }\n}`,
+          response: `\n\nTree Algorithm:\n\nfunction traverse(node) {\n  if (node === null) {\n    return;\n  }\n  (node.data);\n  traverse(node.left);\n  traverse(node.right);\n}\n\nGraph Algorithm:\n\nfunction visit(vertex) {\n  if (visited[vertex]) {\n    return;\n  }\n  visited[vertex] = true;\n  (vertex);\n  for (let neighbor of neighbors[vertex]) {\n    visit(neighbor);\n  }\n}`,
           spanish: ``,
           tooltip: ``,
         },
@@ -4848,7 +4856,7 @@ app.listen(8000, () => console.log('Server running on port 8000'));
             `Lesson 1`
           )} with no other text in javascript?`,
           response:
-            "// Example of basic coding logic in JavaScript\nlet x = 5;\nlet y = 10;\n\nif (x < y) {\n  console.log(`x is less than y`);\n} else {\n  console.log(`x is greater than or equal to y`);\n}",
+            "// Example of basic coding logic in JavaScript\nlet x = 5;\nlet y = 10;\n\nif (x < y) {\n  (`x is less than y`);\n} else {\n  (`x is greater than or equal to y`);\n}",
           spanish: ``,
           tooltip: ``,
           dynamicContent: false,
@@ -5250,7 +5258,7 @@ app.listen(8000, () => console.log('Server running on port 8000'));
           request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
             `Lesson 4`
           )} with no other text in javascript to create a transaction with Stripe?`,
-          response: `\n\nYes, you can use the following code example to create a transaction with Stripe in JavaScript:\n\n// Create the transaction with Stripe \nconst Stripe = require('stripe');\nconst stripe = new Stripe('<YOUR_STRIPE_SECRET_KEY>'); \n\n//Create the transaction details\nconst transactionDetails = {\n  amount: 10.00,\n  currency: 'usd',\n  source: '<token generated by Stripe.js>'\n};\n\n//Submit the transaction details to Stripe\nstripe.charges.create(transactionDetails, (err, charge) => {\n  if (err) {\n    console.log(err); \n  } else { \n    console.log('Transaction successful');\n  }\n});`,
+          response: `\n\nYes, you can use the following code example to create a transaction with Stripe in JavaScript:\n\n// Create the transaction with Stripe \nconst Stripe = require('stripe');\nconst stripe = new Stripe('<YOUR_STRIPE_SECRET_KEY>'); \n\n//Create the transaction details\nconst transactionDetails = {\n  amount: 10.00,\n  currency: 'usd',\n  source: '<token generated by Stripe.js>'\n};\n\n//Submit the transaction details to Stripe\nstripe.charges.create(transactionDetails, (err, charge) => {\n  if (err) {\n    (err); \n  } else { \n    ('Transaction successful');\n  }\n});`,
           spanish: ``,
           tooltip: ``,
         },
@@ -5757,7 +5765,7 @@ app.listen(8000, () => console.log('Server running on port 8000'));
           request: `ms. roxana, can you please show me an example of a "login with Google" button in ${ultimateEffeciencyJutsu(
             `Lesson 8`
           )} with no other text in React?`,
-          response: `\n\nYes, here is an example of a \"Login with Google\" button in React programming, with no other text:\n\nimport React from \"react\";\nimport { GoogleLogin } from 'react-google-login';\n \nconst LoginComponent = () => {\n  const responseGoogle = (response) => {\n      console.log(response);\n  }\n \n  return (\n    <GoogleLogin\n        clientId=\"YOUR_CLIENT_ID\"\n        buttonText=\"Login with Google\"\n        onSuccess={responseGoogle}\n        onFailure={responseGoogle}\n        cookiePolicy={'single_host_origin'}\n    />\n  );\n}\n \nexport default LoginComponent;`,
+          response: `\n\nYes, here is an example of a \"Login with Google\" button in React programming, with no other text:\n\nimport React from \"react\";\nimport { GoogleLogin } from 'react-google-login';\n \nconst LoginComponent = () => {\n  const responseGoogle = (response) => {\n      (response);\n  }\n \n  return (\n    <GoogleLogin\n        clientId=\"YOUR_CLIENT_ID\"\n        buttonText=\"Login with Google\"\n        onSuccess={responseGoogle}\n        onFailure={responseGoogle}\n        cookiePolicy={'single_host_origin'}\n    />\n  );\n}\n \nexport default LoginComponent;`,
           spanish: ``,
           tooltip: ``,
         },
@@ -6386,7 +6394,7 @@ app.listen(8000, () => console.log('Server running on port 8000'));
             `Lesson 13`
           )} with basic npm commands?`,
           response:
-            "// Example of basic coding logic in JavaScript\nlet x = 5;\nlet y = 10;\n\nif (x < y) {\n  console.log(`x is less than y`);\n} else {\n  console.log(`x is greater than or equal to y`);\n}",
+            "// Example of basic coding logic in JavaScript\nlet x = 5;\nlet y = 10;\n\nif (x < y) {\n  (`x is less than y`);\n} else {\n  (`x is greater than or equal to y`);\n}",
           spanish: ``,
           tooltip: ``,
         },

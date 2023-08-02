@@ -28,7 +28,7 @@ app.post("/prompt", async (req, res) => {
       bot: completion.data.choices[0].message,
     });
   } catch (error) {
-    console.log("post error", error);
+    ("post error", error);
     res.status(500).send({ error });
   }
 });

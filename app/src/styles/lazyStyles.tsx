@@ -40,8 +40,8 @@ export const StyledCollectionContainer = styled.div`
 `;
 export const StyledModule = styled.button`
   border: 1px solid #636366;
-  background-color: black;
-  background-size: cover;
+  // background-color: black;
+  // background-size: cover;
   box-sizing: border-box;
   margin: 8px;
   width: 140px;
@@ -71,7 +71,7 @@ export const StyledModule = styled.button`
     }};
 
   text-shadow: 1px 1px 5px black;
-  background-color: ${(props) => {
+  /* background-color: ${(props) => {
     return props.patreonObject.isModuleDisabled
       ? "#11220E"
       : props.patreonObject.header === "Boss Mode"
@@ -85,7 +85,7 @@ export const StyledModule = styled.button`
       : props.patreonObject.underConstruction
       ? "#6A74B4"
       : "#F099AD";
-  }};
+  }}; */
 
   /* cursor: ${(props) => {
     return props.patreonObject.isModuleDisabled ? "not-allowed" : "grab";
@@ -98,6 +98,11 @@ export const StyledModule = styled.button`
       return props.patreonObject.isModuleDisabled ? "#48464A" : "#f5befa";
     }};
   }
+
+  background-image: url(${(props) => props.patreonObject.backgroundImgSrc});
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 `;
 
 export const ComingSoonModule = styled.button`

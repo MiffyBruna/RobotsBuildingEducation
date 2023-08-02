@@ -157,10 +157,8 @@ export const Module = ({
     return el;
   }
 
-  console.log(
-    "Current moduleCurrent moduleCurrent moduleCurrent moduleCurrent moduleCurrent moduleCurrent moduleCurrent moduleCurrent moduleCurrent moduleCurrent moduleCurrent moduleCurrent moduleCurrent moduleCurrent moduleCurrent module",
-    currentModule
-  );
+  "Current moduleCurrent moduleCurrent moduleCurrent moduleCurrent moduleCurrent moduleCurrent moduleCurrent moduleCurrent moduleCurrent moduleCurrent moduleCurrent moduleCurrent moduleCurrent moduleCurrent moduleCurrent module",
+    currentModule;
   if (currentModule?.underConstruction && currentModule?.isModuleDisabled) {
     return (
       <ComingSoonModule

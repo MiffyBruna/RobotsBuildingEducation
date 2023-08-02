@@ -611,7 +611,7 @@ export const Entrepeneur = {
     //         `Bitcoin x Social Technology`
     //       )}?`,
     //       response:
-    //         "// Example of basic coding logic in JavaScript\nlet x = 5;\nlet y = 10;\n\nif (x < y) {\n  console.log(`x is less than y`);\n} else {\n  console.log(`x is greater than or equal to y`);\n}",
+    //         "// Example of basic coding logic in JavaScript\nlet x = 5;\nlet y = 10;\n\nif (x < y) {\n  (`x is less than y`);\n} else {\n  (`x is greater than or equal to y`);\n}",
     //       spanish: ``,
     //       tooltip: ``,
     //     },
@@ -1646,7 +1646,7 @@ export const Entrepeneur = {
     //         `Mexican-American Trade Investing`
     //       )}?`,
     //       response:
-    //         "// Example of basic coding logic in JavaScript\nlet x = 5;\nlet y = 10;\n\nif (x < y) {\n  console.log(`x is less than y`);\n} else {\n  console.log(`x is greater than or equal to y`);\n}",
+    //         "// Example of basic coding logic in JavaScript\nlet x = 5;\nlet y = 10;\n\nif (x < y) {\n  (`x is less than y`);\n} else {\n  (`x is greater than or equal to y`);\n}",
     //       spanish: ``,
     //       tooltip: ``,
     //     },
@@ -1774,7 +1774,7 @@ export const Entrepeneur = {
     //         `Infrastructure Investing`
     //       )}?`,
     //       response:
-    //         "// Example of basic coding logic in JavaScript\nlet x = 5;\nlet y = 10;\n\nif (x < y) {\n  console.log(`x is less than y`);\n} else {\n  console.log(`x is greater than or equal to y`);\n}",
+    //         "// Example of basic coding logic in JavaScript\nlet x = 5;\nlet y = 10;\n\nif (x < y) {\n  (`x is less than y`);\n} else {\n  (`x is greater than or equal to y`);\n}",
     //       spanish: ``,
     //       tooltip: ``,
     //     },

@@ -25,7 +25,7 @@ export const ImpactWallet = ({
   isDemo,
   globalReserveObject,
 }) => {
-  console.log("xy", databaseUserDocument);
+  "xy", databaseUserDocument;
   let [databaseUserDocumentCopy, setDatabaseUserDocumentCopy] = useState({});
 
   let params = useParams();
@@ -38,21 +38,21 @@ export const ImpactWallet = ({
 
   useEffect(() => {
     // mountWallet();
-    console.log("user auth", userAuthObject);
-    console.log("params", params);
+    "user auth", userAuthObject;
+    "params", params;
     if (params?.profileID && params?.profileID !== userAuthObject?.uid) {
       const docRef = doc(database, "users", params?.profileID);
       getDoc(docRef).then((res) => {
         if (!res?.data()) {
           // unsafe case?
         } else {
-          console.log("rest", res);
+          "rest", res;
           setDatabaseUserDocumentCopy(res?.data());
           setIsImpactWalletOpen(true);
         }
       });
     } else {
-      console.log("user's own profile");
+      ("user's own profile");
       setDatabaseUserDocumentCopy(databaseUserDocument);
     }
   }, []);
@@ -86,8 +86,8 @@ export const ImpactWallet = ({
     }
   };
 
-  console.log("wtf", databaseUserDocumentCopy);
-  console.log("wtf", globalReserveObject);
+  "wtf", databaseUserDocumentCopy;
+  "wtf", globalReserveObject;
 
   return (
     <>

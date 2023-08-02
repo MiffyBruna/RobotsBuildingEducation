@@ -29,7 +29,7 @@ export let BossModeGPT = ({
   globalDocumentReference,
 }) => {
   // implement generally and reference this for animation score https://codepen.io/DLewin/pen/pBQQyb
-  console.log("patreonobject", patreonObject);
+  "patreonobject", patreonObject;
   let RoxanaLoadingAnimation = () => {
     return (
       <div>
@@ -45,13 +45,11 @@ export let BossModeGPT = ({
   };
 
   let handleSubmitAnswer = async () => {
-    console.log("answering...", databaseUserDocument);
-    console.log(
-      "result",
+    "answering...", databaseUserDocument;
+    "result",
       databaseUserDocument?.level
         ? parseInt(databaseUserDocument?.level) + 1
-        : 1
-    );
+        : 1;
 
     if (
       (!isEmpty(databaseUserDocument) || !isEmpty(userDocumentReference)) &&

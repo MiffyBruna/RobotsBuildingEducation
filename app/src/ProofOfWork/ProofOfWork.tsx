@@ -54,7 +54,7 @@ export const ProofOfWork = ({
     );
   }
 
-  console.log("database user doc", databaseUserDocument);
+  "database user doc", databaseUserDocument;
 
   return (
     <div

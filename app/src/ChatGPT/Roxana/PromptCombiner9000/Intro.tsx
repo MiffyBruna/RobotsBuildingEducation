@@ -133,7 +133,7 @@ export const Intro = ({
           </div>
         );
       }
-      console.log("has custom 18923412783784189142389148793", patreonObject);
+      "has custom 18923412783784189142389148793", patreonObject;
       return (
         <div>
           {patreonObject?.header === "Indocumentadofy" ? (
