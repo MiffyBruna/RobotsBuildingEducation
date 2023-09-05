@@ -61,8 +61,7 @@ export const Collections = ({
 
     let display = collections.map((collection) => {
       let modules = Object.keys(path[collection]);
-      "COLLECTIONCOLLECTIONCOLLECTIONCOLLECTIONCOLLECTIONCOLLECTIONCOLLECTION",
-        collection;
+
       if (modules?.length) {
         return (
           <div>
@@ -75,7 +74,7 @@ export const Collections = ({
                   style={{
                     boxShadow: `10px 10px 0px 0px ${japaneseThemePalette.TokyoTwilight}`,
                   }}
-                  src="https://res.cloudinary.com/eduprojectsil/image/upload/v1690739354/Collection_Banners_zlhvjw.gif"
+                  src="https://res.cloudinary.com/dtkeyccga/image/upload/v1691640371/ROBE_assets/Collection_Banners_zlhvjw_pcb0io.gif"
                 />
               ) : (
                 collection
@@ -111,7 +110,6 @@ export const Collections = ({
       }
     };
 
-    "COLLECTION", collection;
     return (
       <>
         <div
@@ -147,7 +145,7 @@ export const Collections = ({
           <br />
           {currentPath === "RO.₿.E" && hasZeroKnowledgeAccess ? (
             <Button
-              variant="light"
+              variant="dark"
               onClick={() => setIsInfiniteKnowledgeEngine9001open(true)}
             >
               Activate InfiniteKnowledgeEngine9001

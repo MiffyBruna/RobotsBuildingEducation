@@ -29,7 +29,7 @@ export let BossModeGPT = ({
   globalDocumentReference,
 }) => {
   // implement generally and reference this for animation score https://codepen.io/DLewin/pen/pBQQyb
-  "patreonobject", patreonObject;
+
   let RoxanaLoadingAnimation = () => {
     return (
       <div>
@@ -45,12 +45,6 @@ export let BossModeGPT = ({
   };
 
   let handleSubmitAnswer = async () => {
-    "answering...", databaseUserDocument;
-    "result",
-      databaseUserDocument?.level
-        ? parseInt(databaseUserDocument?.level) + 1
-        : 1;
-
     if (
       (!isEmpty(databaseUserDocument) || !isEmpty(userDocumentReference)) &&
       !isDemo
@@ -203,11 +197,7 @@ export let BossModeGPT = ({
           <br />
 
           {/* basic submit input,prob itsown component based on patreon object/lesson number */}
-          <Button
-            variant="success"
-            onClick={handleSubmitAnswer}
-            disabled={true}
-          >
+          <Button variant="dark" onClick={handleSubmitAnswer} disabled={true}>
             Check Answer
           </Button>
         </div>

@@ -73,7 +73,7 @@ export let words = {
       //modules (tbd)
 
       // engineer - version 3 crash course
-      "16": "Introduction To RO.B.E",
+      "16": "Learning Mindset & Perspective",
       "17": "Lesson 1 Coding Fundamentals",
       "18": "Lesson 2 Frontend Programming",
       "19": "Lesson 3 Backend Engineering",

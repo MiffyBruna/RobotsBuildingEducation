@@ -230,11 +230,10 @@ export const InfiniteKnowledgeEngine9001 = ({
   const FirestoreAutoId = () => {
     const chars =
       "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-    "Return id",
-      Array.from({ length: 20 }).reduce(
-        (acc) =>
-          `${acc}${chars.charAt(Math.floor(Math.random() * chars.length))}`
-      );
+
+    Array.from({ length: 20 }).reduce(
+      (acc) => `${acc}${chars.charAt(Math.floor(Math.random() * chars.length))}`
+    );
     return Array.from({ length: 20 })
       .reduce(
         (acc) =>
@@ -266,10 +265,7 @@ export const InfiniteKnowledgeEngine9001 = ({
             prompt: `I'm going to send a JSON value that describes a set of questions being asked to you. Please parse it and answer them as a warm and energetic person imitating ${currentRoleModel?.toLocaleLowerCase()} as an educator in order to best facilitate learning. Answer each question found in the key defined as 'request' and fill out the 'response' key with your answer as a string. Please only change the response and return a valid JSON string that can be parsed with JSON.parse(answer). ${promptGenerate()}`,
           }),
         }
-      ).catch((error) => {
-        "error", error;
-        "err", { error };
-      });
+      ).catch((error) => {});
 
       let json = await response.json();
 
@@ -277,7 +273,6 @@ export const InfiniteKnowledgeEngine9001 = ({
       //    bot: "\n\n{\n    \"patreon\": {\"request\": \"ms. roxana, can you please generate a short essay on the importance of modern US History in 15 sentences?\", \"response\": \"Modern US History is important to understand as it serves as the foundation for understanding the current state of the nation. It helps explain the roots of some national issues and can teach us valuable lessons on how to better address current and future issues. Further, it gives us the tools and critical thinking skills to better appreciate the current political climate. It can help inform us around decisions related to civil liberties, minorities, and the role of the nation in world affairs. Studying Modern US History also gives us context around our own identities, as it can help us uncover the strength of our cultural heritage. By considering the history of government, economics and social issues, we can gain a better understanding of our nation’s progress over time and how our efforts today will shape the future for future generations. It allows us to debate on a number of critical topics, including the power of public opinion and the responsibilities of our government. Moreover, it enables us to contemplate on how to build a more equitable society. Finally, studying Modern US History puts us in better position to be informed citizens, able to make informed decisions when it comes to voting or other political actions.\"},\n    \"inspire\": {\"request\": \"ms. roxana, can you please share a brief inspiring story about the importance of modern US History?\", \"response\": \"One inspiring story of the importance of modern US History is that of Fred Korematsu. Fred was an American citizen of Japanese descent and in 1942 was ordered to evacuate California with the rest of Japanese Americans due to US policy regarding Pearl Harbor. Fred refused to comply and was arrested, jailed and later brought to court under the charge of violating military orders. He eventually lost the trial, where the supreme court ruled for the government, citing national security as a reason for the evacuation. Later, Fred’s conviction was overturned in 1983 as the court determined that the executive branch had misled the supreme court during Fred’s original case. Fred became a prominent civil rights activist, and is an inspiring example of the power of civil liberties in the US – a story that can be traced from modern US History.\"},\n    \"summarize\": {\"request\": \"ms. roxana, can you please quickly summarize the basics of the importance of modern US History in a 3 sentence paragraph?\", \"response\": \"Modern US History is important to understand as it can help inform our views on current and pressing national issues. It provides key tools to be informed and effective citizens, by considering the history of government, economics and social issues. Additionally, it enables us to appreciate the strength of our cultural heritage, and to build a more equitable society.\"},\n    \"ask\": {\"request\": \"ms. roxana, can you please show me three frequently asked beginner questions about the importance of modern US History with one sentence answers?\", \"response\": \"Q: What is modern US History? A: Modern US History is the study of the history of the United States from the end of the 19th century to today. Q: Why is modern US History important? A: Modern US History is important to understand as it can help inform us around decisions related to civil liberties, minorities, and the role of the nation in world affairs. Q: How can studying modern US History help us? A: Studying modern US History can help us gain a better understanding of our nation’s progress over time, builds critical thinking and debating skills, and helps to develop an informed citizenry.\"},\n    \"guide\": {\"request\": \"ms. roxana, can you please create a 10 point study study guide for the importance of modern US History?\", \"response\": \"1. Identify the key elements of Modern US History. 2. Learn about the civil liberties, and how they have impacted social reform in the US. 3. Understand the role of minorities in US Politics. 4. Study the development of the federal government and the three branches. 5. Research the key events of the 20th century, and how they shaped Modern US History. 6. Evaluate the impact of economic theories on everyday life. 7. Explore the history of social movements and their role in society. 8. Compare the roles of the President in domestic and foreign policies. 9. Learn about the struggles of civil rights and civil liberties in the US. 10. Develop an understanding of the influence of foreign powers and international relations on US History. \"},\n    \"demonstrate\": {\"request\": \"ms. roxana, what's an example of the importance of modern US History?\", \"response\": \"An example of the importance of modern US History is the Civil Rights Movement, which was a struggle for racial justice that took place throughout the 1950s and 1960s. This movement changed the face of modern US History as it not only helped secure equal rights to African Americans, but also gave other minority groups hope for a better tomorrow.\"}, \n    \"define\": {\"request\": \"ms. roxana, can you please define the importance of modern US History in exactly one sentence?\", \"response\": \"The importance of Modern US History lies in its ability to provide political and social context for understanding our current national issues and helping us develop into informed citizens.\"}, \n    \"quiz\": {\"request\": \"ms. roxana, can you please write a 3 question quiz for beginners that's challenging about the importance of modern US History?\", \"response\": \"Q1: What political event took place in the 1950s and 1960s that changed modern US History? A1: The Civil Rights Movement. Q2: What economic theory had a major impact on the growth of the nation in the 20th century? A2: Keynesian economics. Q3: What happened to Fred Korematsu after he was arrested for refusing to evacuate California in 1942? A3: His conviction was overturned in 1983 by the Supreme Court.\"}\n}"
       // };
 
-      "JSON", json;
       let data = JSON.parse(json.bot?.content);
 
       let demoCopy = demo;
@@ -295,7 +290,6 @@ export const InfiniteKnowledgeEngine9001 = ({
       // for every key found in the first key set of demo
       Object.keys(demoCopy[Object.keys(demoCopy)[0]].prompts).forEach(
         (prompt) => {
-          "data", demoCopy[Object.keys(demoCopy)[0]].prompts[prompt].request;
           demoCopy[Object.keys(demoCopy)[0]].prompts[prompt].request =
             data[prompt]?.request || "e";
           demoCopy[Object.keys(demoCopy)[0]].prompts[prompt].response =
@@ -311,8 +305,6 @@ export const InfiniteKnowledgeEngine9001 = ({
       //   demo[Object.keys(demo)[0]].request = parsedData[prompt].request
       //   demo[prompt].response = demo[prompt].response
       // })
-
-      "copy", demoCopy;
 
       setDemo(demoCopy);
       setGptResponse(data);
@@ -336,7 +328,6 @@ export const InfiniteKnowledgeEngine9001 = ({
         if (docSnap.exists()) {
         } else {
           // doc.data() will be undefined in this case
-          ("No such document!");
         }
 
         await updateDoc(userDocumentReference, {
@@ -362,8 +353,7 @@ export const InfiniteKnowledgeEngine9001 = ({
       setIsDisabled(true);
     } catch (error) {
       //release try again buttonthe importance of modern US history after civil rights
-      "error", error;
-      "{error}", { error };
+
       setDidGptFailTask(true);
       setIsResponseGenerating(false);
       setGptResponse({});
@@ -636,6 +626,7 @@ export const InfiniteKnowledgeEngine9001 = ({
 
                     <div>
                       <Button
+                        variant="dark"
                         disabled={
                           currentPrompt?.length < 1 ||
                           currentTitle?.length < 1 ||
@@ -733,7 +724,7 @@ export const InfiniteKnowledgeEngine9001 = ({
       </Modal.Body>
       <Modal.Footer style={{ backgroundColor: "black", color: "white" }}>
         <Button
-          variant="secondary"
+          variant="dark"
           onClick={() => {
             setCurrentRoleModel("Professor");
             setCurrentTitle("");

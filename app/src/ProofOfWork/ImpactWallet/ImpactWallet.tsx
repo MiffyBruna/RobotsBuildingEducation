@@ -9,6 +9,7 @@ import { analytics, database } from "../../database/firebaseResources";
 import { DiscordButton } from "../../ChatGPT/Prompts/DiscordButton/DiscordButton";
 import { doc, getDoc, getDocs } from "firebase/firestore";
 import { Link, useParams } from "react-router-dom";
+import { EmotionalIntelligence } from "./EmotionalIntelligence/EmotionalIntelligence";
 
 export const ImpactWallet = ({
   globalScholarshipCounter,
@@ -24,8 +25,10 @@ export const ImpactWallet = ({
   handlePathSelection,
   isDemo,
   globalReserveObject,
+
+  isEmotionalIntelligenceOpen,
+  setIsEmotionalIntelligenceOpen,
 }) => {
-  "xy", databaseUserDocument;
   let [databaseUserDocumentCopy, setDatabaseUserDocumentCopy] = useState({});
 
   let params = useParams();
@@ -38,21 +41,18 @@ export const ImpactWallet = ({
 
   useEffect(() => {
     // mountWallet();
-    "user auth", userAuthObject;
-    "params", params;
+
     if (params?.profileID && params?.profileID !== userAuthObject?.uid) {
       const docRef = doc(database, "users", params?.profileID);
       getDoc(docRef).then((res) => {
         if (!res?.data()) {
           // unsafe case?
         } else {
-          "rest", res;
           setDatabaseUserDocumentCopy(res?.data());
           setIsImpactWalletOpen(true);
         }
       });
     } else {
-      ("user's own profile");
       setDatabaseUserDocumentCopy(databaseUserDocument);
     }
   }, []);
@@ -86,9 +86,6 @@ export const ImpactWallet = ({
     }
   };
 
-  "wtf", databaseUserDocumentCopy;
-  "wtf", globalReserveObject;
-
   return (
     <>
       <div>
@@ -108,6 +105,22 @@ export const ImpactWallet = ({
             id="Boss Mode"
           >
             🐉
+          </Button>
+        ) : null}
+        &nbsp; &nbsp;
+        {!isDemo ? (
+          <Button
+            style={{ textShadow: "2px 2px 12px black" }}
+            onClick={() => {
+              logEvent(analytics, "select_content", {
+                content_type: "button",
+                item_id: "Therapy Session",
+              });
+              setIsEmotionalIntelligenceOpen(true);
+            }}
+            variant="secondary"
+          >
+            🫶🏽
           </Button>
         ) : null}
         &nbsp; &nbsp;
@@ -301,6 +314,7 @@ export const ImpactWallet = ({
                 style={{ transition: "0.3s all ease-in-out" }}
               >
                 <Button
+                  variant="dark"
                   onClick={() => animateBorderLoading("bitcoin")}
                   style={borderStateForBitcoinButton}
                 >
@@ -323,6 +337,7 @@ export const ImpactWallet = ({
                 style={{ transition: "0.3s all ease-in-out" }}
               >
                 <Button
+                  variant="dark"
                   style={borderStateForLightningButton}
                   onClick={() => animateBorderLoading("lightning")}
                 >
@@ -338,15 +353,17 @@ export const ImpactWallet = ({
         </Modal.Body>
         <Modal.Footer style={{ backgroundColor: "black", color: "white" }}>
           <Link to={`/`}>
-            <Button
-              variant="secondary"
-              onClick={() => setIsImpactWalletOpen(false)}
-            >
+            <Button variant="dark" onClick={() => setIsImpactWalletOpen(false)}>
               Back to app
             </Button>
           </Link>
         </Modal.Footer>
       </Modal>
+
+      <EmotionalIntelligence
+        isEmotionalIntelligenceOpen={isEmotionalIntelligenceOpen}
+        setIsEmotionalIntelligenceOpen={setIsEmotionalIntelligenceOpen}
+      />
     </>
   );
 };

@@ -15,7 +15,7 @@ export const LearnMore = ({ auth }) => {
   return (
     <>
       <Button
-        variant="success"
+        variant="dark"
         style={{
           color: "white",
           textShadow: "0px 0px 4px black",
@@ -623,7 +623,7 @@ export const LearnMore = ({ auth }) => {
           </div>
         </Modal.Body>
         <Modal.Footer style={{ backgroundColor: "black", color: "white" }}>
-          <Button variant="secondary" onClick={() => setIsModalOpen(false)}>
+          <Button variant="dark" onClick={() => setIsModalOpen(false)}>
             Exit
           </Button>
         </Modal.Footer>

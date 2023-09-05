@@ -123,6 +123,7 @@ interface IModule {
 
     // advertising agreements with patrons
     shop: IPrompt;
+    practice?: IPrompt;
     intro?: IPrompt;
 
     //in the future: translate. Dropdown/search + translate Module

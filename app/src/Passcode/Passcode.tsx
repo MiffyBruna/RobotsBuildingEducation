@@ -57,11 +57,11 @@ export const Passcode = ({
           computePercentage={computePercentage}
           patreonObject={
             ui()["Engineer"]["Coding Crash Course Version 3"][
-              "Introduction To RO.B.E"
+              "Learning Mindset & Perspective"
             ]
           }
           isDemo={true}
-          demoName={"Demo: Introduction To RO.B.E"}
+          demoName={"Demo: Learning Mindset & Perspective"}
         />
       ) : null}
     </div>

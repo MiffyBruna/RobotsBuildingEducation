@@ -1750,7 +1750,7 @@ export const Creator = {
       button: `Philosophy @ RO.B.E`, // may not need - `name`
       header: `Philosophy @ RO.B.E`,
       fileSource:
-        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674721556/IMG_9188_iewsh4.mov", // may not need
+        "https://res.cloudinary.com/dtkeyccga/video/upload/v1691867474/legacy/IMG_9188_iewsh4_bzwwxi.mov", // may not need
 
       prompts: {
         patreon: {
@@ -2378,7 +2378,7 @@ export const Creator = {
       button: `Human-Computer Interaction`, // may not need - `name`
       header: `Human Computer Interaction`,
       fileSource:
-        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674721527/IMG_9182_ao3yio.mov", // may not need
+        "https://res.cloudinary.com/dtkeyccga/video/upload/v1691867533/legacy/IMG_9182_ao3yio_f5f8ue.mov", // may not need
 
       prompts: {
         patreon: {

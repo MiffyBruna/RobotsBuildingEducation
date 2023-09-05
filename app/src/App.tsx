@@ -109,6 +109,12 @@ function App() {
   // ui state
   const [moduleName, setModuleName] = useState("");
 
+  // ui state
+  const [pathSelectionAnimationData, setPathSelectionAnimationData] = useState({
+    boxShadow: null,
+    path: null,
+  });
+
   const [visibilityMap, setVisibilityMap] = useState({
     Engineer: false,
     "RO.₿.E": false,
@@ -116,6 +122,7 @@ function App() {
     Business: false,
   });
 
+  // basic control for visual state - may be converted to animated route
   const handlePathSelection = (event) => {
     logEvent(analytics, "select_item", {
       item_list_id: `RO.B.E_paths|${event.target.id}`,
@@ -130,10 +137,17 @@ function App() {
     setVisibilityMap(controlPathVisibilityMap(visibilityMap, event.target.id));
     setCurrentPath(event.target.id);
     setCurrentPathForAnalytics(event.target.id);
+
     setPatreonObject({});
     setModuleName("");
+
+    setPathSelectionAnimationData({
+      boxShadow: "1px 2px 14px 8px rgba(0,255,140,1)",
+      path: event.target.id,
+    });
   };
 
+  // basic control for visual state - may be converted to animated route
   const handleModuleSelection = (module, moduleName) => {
     // can redefine this as module object rather than patreon object. low priority
     setPatreonObject(module);
@@ -152,6 +166,7 @@ function App() {
     setCurrentPath("");
   };
 
+  // basic control for visual state - may be converted to animated route
   const handleZeroKnowledgePassword = (event) => {
     if (
       event.target.value === import.meta.env.VITE_PATREON_PASSCODE ||
@@ -241,6 +256,7 @@ function App() {
                   setDatabaseUserDocument(response.data());
                 });
             } else {
+              console.log("user", res.data());
               setDatabaseUserDocument(res.data());
             }
           })
@@ -252,8 +268,6 @@ function App() {
 
         const globalReserveDocRef = doc(database, "global", "reserve");
         getDoc(globalReserveDocRef).then((res) => {
-          "res", res.data();
-
           setGlobalScholarshipCounter(res.data().scholarships);
           setGobalReserveObject(res.data());
         });
@@ -274,10 +288,10 @@ function App() {
         //   let sum = 0;
         //   querySnapshot.forEach((doc) => {
         //     if (doc.data().impact) {
-        //       sum = doc.data().impact + sum;
+        //       sum = Number(doc.data().impact) + sum;
         //     }
         //   });
-
+        //   console.log("sum", sum);
         //   setGlobalImpactCounter(sum);
         // });
       } else {
@@ -299,8 +313,6 @@ function App() {
                   setDatabaseUserDocument(response.data());
                 });
             } else {
-              ("ELSE");
-
               setDatabaseUserDocument(res.data());
             }
           })
@@ -312,8 +324,6 @@ function App() {
         const globalReserveDocRef = doc(database, "global", "reserve");
 
         getDoc(globalReserveDocRef).then((res) => {
-          "res", res.data();
-
           setGlobalScholarshipCounter(res.data().scholarships);
         });
 
@@ -358,7 +368,6 @@ function App() {
       mountDataForRoute(params?.moduleID);
       setIsLoadingRoute(false);
     } else {
-      ("no data");
     }
   }, [params]);
 
@@ -429,7 +438,10 @@ function App() {
         ) : null}
         {isZeroKnowledgeUser ? (
           <>
-            <Paths handlePathSelection={handlePathSelection} />
+            <Paths
+              handlePathSelection={handlePathSelection}
+              pathSelectionAnimationData={pathSelectionAnimationData}
+            />
 
             <Collections
               usersCoursesCollectionReference={usersCoursesCollectionReference}
