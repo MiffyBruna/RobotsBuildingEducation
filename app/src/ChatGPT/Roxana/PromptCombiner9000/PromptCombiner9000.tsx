@@ -89,7 +89,7 @@ export const PromptCombiner9000 = ({
               // minWidth: loadingStates.demonstrate ? "100%" : "75%",
             }}
           >
-            <div style={{ display: "flex" }}>
+            <div style={{ display: "flex", width: "100%" }}>
               {loadingMessage.length < 1 &&
               chatGptResponse.response &&
               chatGptResponse.type === "patreon" ? (

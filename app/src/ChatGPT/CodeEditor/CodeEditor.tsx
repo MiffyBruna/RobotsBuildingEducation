@@ -1,15 +1,17 @@
 import { useState, useEffect } from "react";
 
 const CodeEditor = ({ patreonObject }) => {
-  const originalText =
+  const [originalText, setOriginalText] = useState(
     patreonObject?.prompts?.practice?.input ||
-    "I have 3 lines\nthis is my second line\nthis is the last line";
+      "I have 3 lines\nthis is my second line\nthis is the last line"
+  );
   const originalLines = originalText.split("\n");
   const [userInput, setUserInput] = useState("");
   const [charValidity, setCharValidity] = useState([]);
   const [remainingLines, setRemainingLines] = useState([...originalLines]);
   const [completedPercent, setCompletedPercent] = useState(0);
   const [canSubmit, setCanSubmit] = useState(false);
+  const [hasSubmit, setHasSubmit] = useState(false);
 
   const finalDisplay = patreonObject?.prompts?.practice?.displayCode;
 
@@ -32,7 +34,6 @@ const CodeEditor = ({ patreonObject }) => {
 
     if (remainingLines.length === 0) {
       setCompletedPercent(100); // Ensure it is capped at 100%
-      setRemainingLines(finalDisplay); // Reset the text to original
       setCharValidity([]); // Reset charValidity to start anew
       setUserInput(""); // Reset userInput for a new session
     } else if (remainingLines[0] === lastInputLine) {
@@ -50,18 +51,36 @@ const CodeEditor = ({ patreonObject }) => {
     }
   };
 
+  const handleSubmit = () => {
+    setRemainingLines(finalDisplay); // Reset the text to original
+    setHasSubmit(true);
+    setOriginalText(finalDisplay);
+  };
+
+  //   useEffect(() => {
+  //     if(hasSubmit){
+
+  //     }
+  //   }, [hasSubmit])
+
+  console.log(
+    "patreonObject?.prompts?.practice?.reward",
+    patreonObject?.prompts?.practice?.reward
+  );
+
   return (
     <div
       style={{
         color: "#696969",
         backgroundColor: "#faf3e0",
-        minWidth: 350,
-        maxWidth: "100vw",
+        // minWidth: 350,
+        // maxWidth: 600,
+        width: "100%",
         padding: 20,
-        border: "1px solid red",
         wordBreak: "break-word",
         display: "flex",
         flexDirection: "column",
+        borderRadius: 15,
       }}
     >
       <div>{completedPercent}%</div>
@@ -75,31 +94,44 @@ const CodeEditor = ({ patreonObject }) => {
           }}
         ></div>
       </div>
+      {patreonObject?.prompts?.practice?.context ? (
+        <div style={{ marginTop: 6 }}>
+          {patreonObject?.prompts?.practice?.context}
+        </div>
+      ) : null}
+
       <br />
+      {}
       <textarea
         autoFocus={false}
         value={userInput}
         onChange={handleChange}
         style={{ fontFamily: "monospace", width: "100%" }}
       />
+      <br />
       <button
         disabled={!canSubmit}
         style={{
           backgroundColor: canSubmit ? "#a8d5ba" : "#d789d7", // Matcha green or sakura pink
           color: canSubmit ? "#f5fffc" : "#ffeffd", // Very light green or very light pink
         }}
+        onClick={handleSubmit}
       >
         Submit
       </button>
 
       <br />
 
+      {hasSubmit && patreonObject?.prompts?.practice?.reward
+        ? patreonObject?.prompts?.practice?.reward
+        : null}
+
       <pre>
-        {canSubmit
+        {hasSubmit
           ? originalText.split("").map((char, index) => (
               <span
                 key={index}
-                style={{ backgroundColor: "#a8d5ba", color: "#f5fffc" }}
+                style={{ textShadow: "0px 0px 1px black", color: "#1aba41" }}
               >
                 {char}
               </span>

@@ -4,7 +4,8 @@ import compSciLib from "../../media/images/compSciLib.jpeg";
 import metaphysicalMuse from "../../media/images/metaphysicalMuse.jpeg";
 import { japaneseThemePalette, textBlock } from "../../../styles/lazyStyles";
 import { MessageBlock } from "../MessageBlock/MessageBlock";
-import { CodeBlock } from "../CodeBlock/CodeBlock";
+import { CodeBlock } from "../Displays/CodeBlock/CodeBlock";
+import { CuteGradient } from "../Displays/CuteGradient/CuteGradient";
 
 export const Engineer = {
   "Coding Crash Course Version 3": {
@@ -2083,6 +2084,103 @@ export default LoginForm;
           spanish: ``,
           tooltip: ``,
         },
+        practice: {
+          completed: false,
+          impact: 750,
+          action: `practice`,
+          icon: `🥋`,
+          request: `Let's practice!`,
+          context: `Let's create a cool background.`,
+          reward: <CuteGradient />,
+          displayCode: `import { useState, useEffect } 
+  from "react";
+
+export const CuteGradient = () => {
+  const [offsetX, setOffsetX] = 
+    useState(0);
+  const [offsetY, setOffsetY] = 
+    useState(0);
+
+  useEffect(() => {
+    const startTime = Date.now();
+    
+    const animateGradient = () => {
+      const elapsedTime = 
+        Date.now() - startTime;
+      setOffsetX(
+        50 + 25 * 
+        Math.sin(elapsedTime * 0.001)
+      );
+      setOffsetY(
+        50 + 25 * 
+        Math.cos(elapsedTime * 0.0015)
+      );
+      requestAnimationFrame(
+        animateGradient
+      );
+    };
+
+    requestAnimationFrame(animateGradient);
+  }, []);
+
+  const gradientStyle = {
+    background: \`radial-gradient(
+      circle at \${offsetX}% \${offsetY}%,
+      pink, lightpink, hotpink, 
+      deepPink
+    )\`,
+    width: "600px",
+    height: "400px",
+  };
+
+  return <div style={gradientStyle}></div>
+};`,
+          input: `import { useState, useEffect }
+from "react";
+export const CuteGradient = () => {
+const [offsetX, setOffsetX] =
+useState(0);
+const [offsetY, setOffsetY] =
+useState(0);
+useEffect(() => {
+const startTime = Date.now();
+const animateGradient = () => {
+const elapsedTime =
+Date.now() - startTime;
+setOffsetX(
+50 + 25 *
+Math.sin(elapsedTime * 0.001)
+);
+setOffsetY(
+50 + 25 *
+Math.cos(elapsedTime * 0.0015)
+);
+requestAnimationFrame(
+animateGradient
+);
+};
+requestAnimationFrame(
+animateGradient
+);
+}, []);
+const gradientStyle = {
+background: \`radial-gradient(
+circle at
+\${offsetX}%
+\${offsetY}%,
+pink, lightpink, hotpink,
+deepPink
+)\`,
+width: "600px",
+height: "400px",
+};
+return <div style={gradientStyle}>
+</div>;
+};`,
+          response: <div>good job grasshopper!</div>,
+          spanish: ``,
+          tooltip: ``,
+        },
       },
     },
     "Lesson 3 Backend Engineering": {
@@ -2745,6 +2843,102 @@ if __name__ == '__main__':
               diverse founders bring to the table.
             </div>
           ),
+          spanish: ``,
+          tooltip: ``,
+        },
+        practice: {
+          completed: false,
+          impact: 750,
+          action: `practice`,
+          icon: `🥋`,
+          request: `Let's practice!`,
+          context: `Let's take a look at how OpenAI works.`,
+          displayCode: `const functions = require("firebase-functions");
+const express = require("express");
+const cors = require("cors");
+const dotenv = require("dotenv");
+const bodyParser = require("body-parser");
+const { 
+  Configuration, 
+  OpenAIApi 
+} = require("openai");
+
+dotenv.config();
+
+const configuration = new Configuration({
+  apiKey: process.env.OPENAI_API_KEY,
+});
+
+const openai = new OpenAIApi(configuration);
+
+const app = express();
+
+app.use(cors());
+app.use(express.json());
+app.use(bodyParser.json());
+
+app.post("/prompt", async (req, res) => {
+  try {
+    const prompt = req.body.prompt;
+    const completion = await openai
+      .createChatCompletion({
+        model: "gpt-4",
+        messages: [
+          { role: "user", content: prompt }
+        ],
+      });
+    res.status(200).send({
+      bot: completion.data.choices[0]
+        .message,
+    });
+  } catch (error) {
+    res.status(500).send({ error });
+  }
+});
+
+exports.app = functions
+  .https
+  .onRequest(app);`,
+          input: `const functions = require("firebase-functions");
+const express = require("express");
+const cors = require("cors");
+const dotenv = require("dotenv");
+const bodyParser = require("body-parser");
+const {
+Configuration,
+OpenAIApi
+} = require("openai");
+dotenv.config();
+const configuration = new Configuration({
+apiKey: process.env.OPENAI_API_KEY,
+});
+const openai = new OpenAIApi(configuration);
+const app = express();
+app.use(cors());
+app.use(express.json());
+app.use(bodyParser.json());
+app.post("/prompt", async (req, res) => {
+try {
+const prompt = req.body.prompt;
+const completion = await openai
+.createChatCompletion({
+model: "gpt-4",
+messages: [
+{ role: "user", content: prompt }
+],
+});
+res.status(200).send({
+bot: completion.data.choices[0]
+.message,
+});
+} catch (error) {
+res.status(500).send({ error });
+}
+});
+exports.app = functions
+.https
+.onRequest(app);`,
+          response: <div>good job grasshopper!</div>,
           spanish: ``,
           tooltip: ``,
         },
@@ -3493,6 +3687,153 @@ app.listen(8000, () => console.log('Server running on port 8000'));
           spanish: ``,
           tooltip: ``,
         },
+        practice: {
+          completed: false,
+          impact: 750,
+          action: `practice`,
+          icon: `🥋`,
+          request: `Let's practice!`,
+          context: `Let's wire up OpenAI to create a user experience`,
+          displayCode: `import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import { auth, db } from './firebaseConfig';
+
+const OpenAIComponent = () => {
+  const [input, setInput] = useState('');
+  const [userId, setUserId] = useState(null);
+
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      if (user) {
+        setUserId(user.uid);
+      } else {
+        setUserId(null);
+      }
+    });
+
+    // Clean up subscription
+    return () => unsubscribe();
+  }, []);
+
+  const callOpenAI = async () => {
+    if (!userId) {
+      console.log("User not logged in");
+      return;
+    }
+
+    const apiKey = process.env.REACT_APP_OPENAI_API_KEY;
+    try {
+      const response = await axios.post(
+        'https://api.openai.com/v1/engines/davinci-codex/completions',
+        {
+          prompt: input,
+          max_tokens: 100,
+        },
+        {
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': \`Bearer \${apiKey}\`,
+          },
+        }
+      );
+      const generatedText = response.data.choices[0].text;
+      saveToFirestore(userId, generatedText);
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  const saveToFirestore = async (userId, text) => {
+    const docRef = db.collection('users').doc(userId);
+    await docRef.collection('responses').add({
+      generatedText: text,
+      timestamp: new Date(),
+    });
+  };
+
+  return (
+    <div>
+      <input
+        type="text"
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
+      />
+      <button onClick={callOpenAI}>
+        Generate and Save
+      </button>
+    </div>
+  );
+};
+
+export default OpenAIComponent;`,
+          input: `import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import { auth, db } from './firebaseConfig';
+const OpenAIComponent = () => {
+const [input, setInput] = useState('');
+const [userId, setUserId] = useState(null);
+useEffect(() => {
+const unsubscribe = auth.onAuthStateChanged((user) => {
+if (user) {
+setUserId(user.uid);
+} else {
+setUserId(null);
+}
+});
+// Clean up subscription
+return () => unsubscribe();
+}, []);
+const callOpenAI = async () => {
+if (!userId) {
+console.log("User not logged in");
+return;
+}
+const apiKey = process.env.REACT_APP_OPENAI_API_KEY;
+try {
+const response = await axios.post(
+'https://api.openai.com/v1/engines/davinci-codex/completions',
+{
+prompt: input,
+max_tokens: 100,
+},
+{
+headers: {
+'Content-Type': 'application/json',
+'Authorization': \`Bearer \${apiKey}\`,
+},
+}
+);
+const generatedText = response.data.choices[0].text;
+saveToFirestore(userId, generatedText);
+} catch (err) {
+console.error(err);
+}
+};
+const saveToFirestore = async (userId, text) => {
+const docRef = db.collection('users').doc(userId);
+await docRef.collection('responses').add({
+generatedText: text,
+timestamp: new Date(),
+});
+};
+return (
+<div>
+<input
+type="text"
+value={input}
+onChange={(e) => setInput(e.target.value)}
+/>
+<button onClick={callOpenAI}>
+Generate and Save
+</button>
+</div>
+);
+};
+export default OpenAIComponent;`,
+          response: <div>good job grasshopper!</div>,
+          spanish: ``,
+          tooltip: ``,
+        },
       },
     },
     "Lesson 5 Computer Science": {
@@ -4078,6 +4419,115 @@ if (result !== null) {
               diverse founders bring to the table.
             </div>
           ),
+          spanish: ``,
+          tooltip: ``,
+        },
+        practice: {
+          completed: false,
+          impact: 750,
+          action: `practice`,
+          icon: `🥋`,
+          request: `Let's practice!`,
+          context: `Let's write an algorithm a lot of computer science are challenged by`,
+          displayCode: `function dijkstra(graph, start) {
+const visited = new Set();
+const dist = {};
+
+for (let node in graph) {
+  dist[node] = Infinity;
+}
+
+dist[start] = 0;
+
+while (visited.size < 
+        Object.keys(graph).length) {
+  let minNode = getMinNode(
+    dist, visited
+  );
+  
+  visited.add(minNode);
+
+  for (let n in graph[minNode]) {
+    let alt = dist[minNode] + 
+              graph[minNode][n];
+
+    if (alt < dist[n]) {
+      dist[n] = alt;
+    }
+  }
+}
+
+return dist;
+}
+
+function getMinNode(dist, visited) {
+let min = Infinity;
+let minNode = null;
+
+for (let node in dist) {
+  if (dist[node] < min && 
+      !visited.has(node)) {
+    min = dist[node];
+    minNode = node;
+  }
+}
+
+return minNode;
+}
+
+const graph = {
+A: { B: 1, C: 4 },
+B: { A: 1, C: 2, D: 5 },
+C: { A: 4, B: 2, D: 1 },
+D: { B: 5, C: 1 }
+};
+
+const dist = dijkstra(graph, 'A');
+console.log(dist);`,
+          input: `function dijkstra(graph, start) {
+const visited = new Set();
+const dist = {};
+for (let node in graph) {
+  dist[node] = Infinity;
+}
+dist[start] = 0;
+while (visited.size <
+        Object.keys(graph).length) {
+  let minNode = getMinNode(
+    dist, visited
+  );
+  visited.add(minNode);
+  for (let n in graph[minNode]) {
+    let alt = dist[minNode] +
+              graph[minNode][n];
+    if (alt < dist[n]) {
+      dist[n] = alt;
+    }
+  }
+}
+return dist;
+}
+function getMinNode(dist, visited) {
+let min = Infinity;
+let minNode = null;
+for (let node in dist) {
+  if (dist[node] < min &&
+      !visited.has(node)) {
+    min = dist[node];
+    minNode = node;
+  }
+}
+return minNode;
+}
+const graph = {
+A: { B: 1, C: 4 },
+B: { A: 1, C: 2, D: 5 },
+C: { A: 4, B: 2, D: 1 },
+D: { B: 5, C: 1 }
+};
+const dist = dijkstra(graph, 'A');
+console.log(dist);`,
+          response: <div>good job grasshopper!</div>,
           spanish: ``,
           tooltip: ``,
         },
