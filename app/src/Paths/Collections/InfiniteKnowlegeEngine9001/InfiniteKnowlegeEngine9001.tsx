@@ -378,7 +378,7 @@ export const InfiniteKnowledgeEngine9001 = ({
   return (
     <Modal centered show={isInfiniteKnowledgeEngine9001open} fullscreen>
       <Modal.Header
-        closeButton
+        // closeButton
         style={{ backgroundColor: "black", color: "white" }}
       >
         <Modal.Title>InfiniteKnowledgeEngine9001</Modal.Title>

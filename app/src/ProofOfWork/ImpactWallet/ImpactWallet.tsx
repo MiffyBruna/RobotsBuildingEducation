@@ -28,6 +28,9 @@ export const ImpactWallet = ({
 
   isEmotionalIntelligenceOpen,
   setIsEmotionalIntelligenceOpen,
+  usersEmotionsCollectionReference,
+  usersEmotionsFromDB,
+  documentProcForUsersEmotions,
 }) => {
   let [databaseUserDocumentCopy, setDatabaseUserDocumentCopy] = useState({});
 
@@ -363,6 +366,9 @@ export const ImpactWallet = ({
       <EmotionalIntelligence
         isEmotionalIntelligenceOpen={isEmotionalIntelligenceOpen}
         setIsEmotionalIntelligenceOpen={setIsEmotionalIntelligenceOpen}
+        usersEmotionsCollectionReference={usersEmotionsCollectionReference}
+        usersEmotionsFromDB={usersEmotionsFromDB}
+        documentProcForUsersEmotions={documentProcForUsersEmotions}
       />
     </>
   );

@@ -2,56 +2,122 @@ import { useEffect, useState } from "react";
 import { Button, Modal } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { EmotionButton } from "./EmotionalIntelligence.styles";
+import { FieldValue, Timestamp, addDoc } from "firebase/firestore";
 
 export const EmotionalIntelligence = ({
   isEmotionalIntelligenceOpen,
   setIsEmotionalIntelligenceOpen,
+  userAuthObject,
+  usersEmotionsCollectionReference,
+  usersEmotionsFromDB,
+  documentProcForUsersEmotions,
 }) => {
   const [selectedEmotion, setSelectedEmotion] = useState("");
   const [disabled, setDisabled] = useState(false);
 
   const lowEnergyFeelings = [
     {
-      header: <span>Pleasant &nbsp;&nbsp;&nbsp;&nbsp;</span>,
-      feelings: [
-        { label: "Peaceful", emoji: "(˘⌣˘)", color: "#f9a8d4" },
-        { label: "Content", emoji: "(＾▽＾)", color: "#f9a8d4" },
-      ],
+      label: "Peaceful",
+      emoji: "(˘⌣˘)",
+      color: "#00A3AF",
+      colorHover: "#00919D",
     },
     {
-      header: "Unpleasant",
-      feelings: [
-        { label: "Sad", emoji: "(╥﹏╥)", color: "#a8c1ff" },
-        { label: "Tired", emoji: "(-_-) zzZ", color: "#a8c1ff" },
-      ],
+      label: "Content",
+      emoji: "(＾▽＾)",
+      color: "#00A3AF",
+      colorHover: "#00919D",
+    },
+    { label: "Sad", emoji: "(╥﹏╥)", color: "#87CEEB", colorHover: "#76BADB" },
+    {
+      label: "Tired",
+      emoji: "(-_-) zzZ",
+      color: "#87CEEB",
+      colorHover: "#76BADB",
     },
   ];
 
   const highEnergyFeelings = [
     {
-      header: <span>Pleasant &nbsp;&nbsp;&nbsp;&nbsp;</span>,
-      feelings: [
-        { label: "Motivated", emoji: "(｡•̀ᴗ-)✧", color: "#d4a5a5" },
-        { label: "Excited", emoji: "(*^‿^*)", color: "#d4a5a5" },
-      ],
+      label: "Motivated",
+      emoji: "(｡•̀ᴗ-)✧",
+      color: "#FF91A4",
+      colorHover: "#FF7F95",
     },
     {
-      header: "Unpleasant",
-      feelings: [
-        { label: "Stressed", emoji: "(；￣Д￣)", color: "#ffd3b6" },
-        { label: "Anxious", emoji: "(⁄ ⁄•⁄ω⁄•⁄ ⁄)", color: "#ffd3b6" },
-      ],
+      label: "Excited",
+      emoji: "(*^‿^*)",
+      color: "#FF91A4",
+      colorHover: "#FF7F95",
+    },
+    {
+      label: "Stressed",
+      emoji: "(；￣Д￣)",
+      color: "#FFB3A7",
+      colorHover: "#FF9F93",
+    },
+    {
+      label: "Anxious",
+      emoji: "(⁄ ⁄•⁄ω⁄•⁄ ⁄)",
+      color: "#FFB3A7",
+      colorHover: "#FF9F93",
     },
   ];
 
-  const handleEmotionSelection = (event) => {
-    alert("data");
-    console.log("data");
+  const theme = {
+    colors: {
+      highEnergyPleasant: "#FF91A4",
+      highEnergyPleasantHover: "#FF7F95",
+      highEnergyUnpleasant: "#FFB3A7",
+      highEnergyUnpleasantHover: "#FF9F93",
+      lowEnergyPleasant: "#00A3AF",
+      lowEnergyPleasantHover: "#00919D",
+      lowEnergyUnpleasant: "#87CEEB",
+      lowEnergyUnpleasantHover: "#76BADB",
+    },
+    styles: {
+      highEnergyPleasant: {
+        backgroundColor: "#FF91A4",
+        "&:hover": {
+          backgroundColor: "#FF7F95",
+        },
+      },
+      highEnergyUnpleasant: {
+        backgroundColor: "#FFB3A7",
+        "&:hover": {
+          backgroundColor: "#FF9F93",
+        },
+      },
+      lowEnergyPleasant: {
+        backgroundColor: "#00A3AF",
+        "&:hover": {
+          backgroundColor: "#00919D",
+        },
+      },
+      lowEnergyUnpleasant: {
+        backgroundColor: "#87CEEB",
+        "&:hover": {
+          backgroundColor: "#76BADB",
+        },
+      },
+    },
+  };
+
+  const handleEmotionSelection = async (event, item) => {
+    console.log("data", item);
 
     setSelectedEmotion(event.target.id);
     // const disableUntil = new Date().getTime() + 12 * 60 * 60 * 1000; // 12 hours from now
     // localStorage.setItem("disableUntil", disableUntil);
     // setDisabled(true);
+
+    const docRef = await addDoc(usersEmotionsCollectionReference, {
+      ...item,
+      timestamp: Date.now(),
+    });
+
+    documentProcForUsersEmotions(usersEmotionsCollectionReference);
+    // console.log("User Emotion Document written with ID: ", docRef?.id);
   };
 
   // Check if buttons should be disabled on component mount
@@ -62,111 +128,155 @@ export const EmotionalIntelligence = ({
     }
   }, []);
 
+  const sortedEmotions =
+    usersEmotionsFromDB?.length > 0
+      ? usersEmotionsFromDB?.sort((a, b) => a?.timestamp - b?.timestamp)
+      : [];
+
   return (
     <Modal centered show={isEmotionalIntelligenceOpen} fullscreen>
       <Modal.Header
-        closeButton
-        style={{ backgroundColor: "black", color: "white" }}
+        // closeButton
+        style={{
+          backgroundColor: "#32CD32",
+          color: "white",
+          textShadow: "1px 1px 5px black",
+          borderBottom: "1px solid transparent",
+        }}
       >
+        {/* 00FF7F */}
         <Modal.Title>Emotional Intelligence</Modal.Title>
       </Modal.Header>
       <Modal.Body
         onHide={() => setIsEmotionalIntelligenceOpen(false)}
-        style={{ backgroundColor: "black", color: "white" }}
+        style={{
+          backgroundColor: "#32CD32",
+          color: "white",
+          textShadow: "1px 1px 5px black",
+        }}
       >
-        How do you feel today?
-        <div
+        <h1
           style={{
+            backgroundColor: "#32CD32",
+            textAlign: "center",
             display: "flex",
-            flexDirection: "row",
-            flexWrap: "wrap",
             justifyContent: "center",
-            alignItems: "center",
-            width: "80%",
-            margin: "0 auto",
+            padding: 20,
+            textShadow: "1px 1px 5px black",
           }}
         >
           <div
             style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "space-between",
-              //   width: "40%",
-              padding: "10px",
+              backgroundColor: "#228B22",
+              padding: 24,
+              borderRadius: 24,
             }}
           >
-            <h4>High Energy</h4>
-            {highEnergyFeelings.map((group, index) => (
-              <div
-                key={index}
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                  padding: "5px",
-                }}
-              >
-                <h5>{group.header}</h5>
-                {group.feelings.map((feeling, i) => (
-                  <EmotionButton
-                    key={i}
-                    feeling={feeling}
-                    label={feeling.label}
-                    emoji={feeling.emoji}
-                    disabled={disabled}
-                    onClick={handleEmotionSelection}
-                  >
-                    {feeling.label}
-                    <br />
-                    {feeling.emoji}
-                  </EmotionButton>
-                ))}
-              </div>
-            ))}
+            How do you feel today?
           </div>
+        </h1>
+        <br />
+        <br />
+        <div
+          style={{
+            backgroundColor: "#228B22",
+            padding: 24,
+            borderRadius: "36px",
+          }}
+        >
+          <h3 style={{ textShadow: "1px 1px 5px black" }}>High Energy</h3>
           <div
             style={{
               display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "space-between",
-              //   width: "40%",
-              padding: "10px",
+              textAlign: "center",
+              justifyContent: "center",
+              flexWrap: "wrap",
             }}
           >
-            <h4>Low Energy</h4>
-            {lowEnergyFeelings.map((group, index) => (
-              <div
-                key={index}
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  justifyContent: "space-between",
-                  padding: "5px",
-                }}
+            {highEnergyFeelings?.map((item) => (
+              <EmotionButton
+                disabled={disabled}
+                color={item.color}
+                colorHover={item.colorHover}
+                onClick={(event) => handleEmotionSelection(event, item)}
               >
-                <h5>{group.header}</h5>
-                {group.feelings.map((feeling, i) => (
-                  <EmotionButton
-                    key={i}
-                    feeling={feeling}
-                    label={feeling.label}
-                    emoji={feeling.emoji}
-                    disabled={disabled}
-                    onClick={handleEmotionSelection}
-                  >
-                    {feeling.label}
-                    <br />
-                    {feeling.emoji}
-                  </EmotionButton>
-                ))}
-              </div>
+                {item?.label}
+                <br />
+                {item?.emoji}
+              </EmotionButton>
+            ))}
+          </div>
+          <h3 style={{ textShadow: "1px 1px 5px black" }}>Low Energy</h3>
+          <div
+            style={{
+              display: "flex",
+              textAlign: "center",
+              justifyContent: "center",
+              flexWrap: "wrap",
+            }}
+          >
+            {lowEnergyFeelings?.map((item) => (
+              <EmotionButton
+                disabled={disabled}
+                color={item.color}
+                colorHover={item.colorHover}
+                onClick={(event) => handleEmotionSelection(event, item)}
+              >
+                {item?.label}
+                <br />
+                {item?.emoji}
+              </EmotionButton>
             ))}
           </div>
         </div>
+
+        {sortedEmotions?.length > 0 ? (
+          <>
+            <h1
+              style={{
+                backgroundColor: "#32CD32",
+                textAlign: "center",
+                display: "flex",
+                justifyContent: "center",
+                padding: 20,
+                textShadow: "1px 1px 5px black",
+              }}
+            >
+              <div
+                style={{
+                  backgroundColor: "#228B22",
+                  padding: 24,
+                  borderRadius: 24,
+                }}
+              >
+                MY EMOTIONAL JOURNEY 🥲🥹
+              </div>
+            </h1>
+            <div
+              style={{
+                backgroundColor: "#228B22",
+                padding: 24,
+                borderRadius: "36px",
+                display: "flex",
+                textAlign: "center",
+                justifyContent: "center",
+                flexWrap: "wrap",
+              }}
+            >
+              {sortedEmotions?.map((item) => (
+                <EmotionButton
+                  disabled={false}
+                  color={item?.color}
+                  colorHover={""}
+                >
+                  {item?.label}
+                  <br />
+                  {item?.emoji}
+                </EmotionButton>
+              ))}
+            </div>
+          </>
+        ) : null}
       </Modal.Body>
       <Modal.Footer style={{ backgroundColor: "black", color: "white" }}>
         <Button

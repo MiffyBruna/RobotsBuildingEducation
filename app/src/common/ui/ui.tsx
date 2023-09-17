@@ -86,6 +86,10 @@ export let ultimateEffeciencyJutsu = (key) => {
 
     ["Human-Computer Interaction"]:
       "human-computer interaction, search engine optimization and influence",
+
+    ["The Psychology Of Self-esteem"]:
+      "the psychology of self-esteem and emotional health",
+    ["Memes"]: "cook and season birds for dinner",
   };
   return map[key] || "null";
 };

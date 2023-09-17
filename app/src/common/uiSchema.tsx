@@ -211,7 +211,7 @@ export let getGlobalImpact = () => {
 
   const ignorePath = ["Boss Mode", "RO.₿.E"];
 
-  const ignoreModule = ["Lesson 5 Computer Science", "Self-esteem"];
+  const ignoreModule = ["Memes", "Self-esteem"];
 
   const ignorePrompt = ["welcome", "intro"];
 

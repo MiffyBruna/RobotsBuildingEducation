@@ -19,6 +19,9 @@ export const ProofOfWork = ({
   handlePathSelection,
   isDemo,
   globalReserveObject,
+  usersEmotionsCollectionReference,
+  usersEmotionsFromDB,
+  documentProcForUsersEmotions,
 }) => {
   const [isImpactWalletOpen, setIsImpactWalletOpen] = useState(false);
   const [isEmotionalIntelligenceOpen, setIsEmotionalIntelligenceOpen] =
@@ -85,6 +88,9 @@ export const ProofOfWork = ({
         globalReserveObject={globalReserveObject}
         setIsEmotionalIntelligenceOpen={setIsEmotionalIntelligenceOpen}
         isEmotionalIntelligenceOpen={isEmotionalIntelligenceOpen}
+        usersEmotionsCollectionReference={usersEmotionsCollectionReference}
+        usersEmotionsFromDB={usersEmotionsFromDB}
+        documentProcForUsersEmotions={documentProcForUsersEmotions}
       />
       {/* <a onClick={() => auth.signOut()}>Sign-out</a> */}
     </div>

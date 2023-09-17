@@ -153,7 +153,6 @@ export const Entrepeneur = {
       button: `Focus Investing`, // may not need - `name`
       header: `Focus Investing`,
       fileSource: await import("../../markdowns/focusInvesting.md?raw"), // may not need
-
       prompts: {
         welcome: {
           response: (
