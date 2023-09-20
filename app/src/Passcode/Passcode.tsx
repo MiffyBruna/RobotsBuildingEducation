@@ -56,10 +56,12 @@ export const Passcode = ({
           setGlobalImpactCounter={setGlobalImpactCounter}
           computePercentage={computePercentage}
           patreonObject={
-            ui()["Engineer"]["Crash Course Version 3"]["Introduction To RO.B.E"]
+            ui()["Engineer"]["Coding Crash Course Version 3"][
+              "Learning Mindset & Perspective"
+            ]
           }
           isDemo={true}
-          demoName={"Demo: Introduction To RO.B.E"}
+          demoName={"Demo: Learning Mindset & Perspective"}
         />
       ) : null}
     </div>

@@ -54,7 +54,8 @@ export let ultimateEffeciencyJutsu = (key) => {
       "how computer science is intersectional with any subject of interest",
     ["Creating Competitive Entry Level Resumes"]:
       "how to write and effective one-page resume",
-    ["Focus Investing"]: "Charlie Munger's views on focus investing",
+    ["Focus Investing"]:
+      "resource allocation with the focused investing discipline",
 
     // ["Financial Technology Investing"]:
     //   "the pros and cons of investing in financial technology",
@@ -78,11 +79,17 @@ export let ultimateEffeciencyJutsu = (key) => {
       "the foundations of backend engineering, cloud computing and big data",
 
     ["Lesson 4 Building Apps"]: "how to build a startup and raise investment",
+    ["Lesson 5 Computer Science"]:
+      "the foundations of data structures and algorithms",
     ["SEO: Search Engine Optimization"]:
       "understanding search engine optimization",
 
     ["Human-Computer Interaction"]:
       "human-computer interaction, search engine optimization and influence",
+
+    ["The Psychology Of Self-esteem"]:
+      "the psychology of self-esteem and emotional health",
+    ["Memes"]: "cook and season birds for dinner",
   };
   return map[key] || "null";
 };

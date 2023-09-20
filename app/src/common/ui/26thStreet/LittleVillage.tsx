@@ -110,7 +110,7 @@ export const LittleVillage = (globalUserModulesFromDB = []) => {
                 `Lesson 1`
               )} with no other text in javascript?`,
               response:
-                "// Example of basic coding logic in JavaScript\nlet x = 5;\nlet y = 10;\n\nif (x < y) {\n  console.log(`x is less than y`);\n} else {\n  console.log(`x is greater than or equal to y`);\n}",
+                "// Example of basic coding logic in JavaScript\nlet x = 5;\nlet y = 10;\n\nif (x < y) {\n  console.log(`x is less than y`);\n} else {\n  (`x is greater than or equal to y`);\n}",
               spanish: ``,
               tooltip: ``,
               dynamicContent: false,

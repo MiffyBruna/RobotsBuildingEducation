@@ -133,7 +133,7 @@ export const Intro = ({
           </div>
         );
       }
-      console.log("has custom 18923412783784189142389148793", patreonObject);
+
       return (
         <div>
           {patreonObject?.header === "Indocumentadofy" ? (
@@ -249,6 +249,7 @@ export const Intro = ({
               {promptSelection === "patreon" ? "⚡🎨►✍️" : null}
               {promptSelection === "guide" ? "📚🔮🤝🧿🧪" : null}
               {promptSelection === "shop" ? "🛍️" : null}
+              {promptSelection === "practice" ? "🥋" : null}
             </h2>
           ) : (
             <RoxanaIntroText />

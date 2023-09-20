@@ -19,8 +19,13 @@ export const ProofOfWork = ({
   handlePathSelection,
   isDemo,
   globalReserveObject,
+  usersEmotionsCollectionReference,
+  usersEmotionsFromDB,
+  documentProcForUsersEmotions,
 }) => {
   const [isImpactWalletOpen, setIsImpactWalletOpen] = useState(false);
+  const [isEmotionalIntelligenceOpen, setIsEmotionalIntelligenceOpen] =
+    useState(false);
 
   if (displayName === "@DemoRobots") {
     return (
@@ -54,8 +59,6 @@ export const ProofOfWork = ({
     );
   }
 
-  console.log("database user doc", databaseUserDocument);
-
   return (
     <div
       style={{
@@ -83,6 +86,11 @@ export const ProofOfWork = ({
         userAuthObject={userAuthObject}
         globalScholarshipCounter={globalScholarshipCounter}
         globalReserveObject={globalReserveObject}
+        setIsEmotionalIntelligenceOpen={setIsEmotionalIntelligenceOpen}
+        isEmotionalIntelligenceOpen={isEmotionalIntelligenceOpen}
+        usersEmotionsCollectionReference={usersEmotionsCollectionReference}
+        usersEmotionsFromDB={usersEmotionsFromDB}
+        documentProcForUsersEmotions={documentProcForUsersEmotions}
       />
       {/* <a onClick={() => auth.signOut()}>Sign-out</a> */}
     </div>

@@ -19,7 +19,7 @@ export const Entrepeneur = {
       button: `Creating Competitive Entry Level Resumes`, // may not need - `name`
       header: `Creating Competitive Entry Level Resumes`,
       fileSource:
-        "https://res.cloudinary.com/eduprojectsil/video/upload/v1674721555/IMG_9181_mjw1zc.mov", // may not need
+        "https://res.cloudinary.com/dtkeyccga/video/upload/v1691868823/legacy/IMG_9181_mjw1zc_1_yntmre.mov", // may not need
 
       prompts: {
         patreon: {
@@ -139,6 +139,8 @@ export const Entrepeneur = {
     "Focus Investing": {
       documentID: ``,
       hasCode: false,
+      backgroundImgSrc:
+        "https://res.cloudinary.com/dtkeyccga/image/upload/v1691640313/ROBE_assets/Module_Buttons_3_vavorc_infkgi.png",
       filler: ``,
       new: false,
       highValue: true,
@@ -151,8 +153,37 @@ export const Entrepeneur = {
       button: `Focus Investing`, // may not need - `name`
       header: `Focus Investing`,
       fileSource: await import("../../markdowns/focusInvesting.md?raw"), // may not need
-
       prompts: {
+        welcome: {
+          response: (
+            // <MessageBlock>
+            <div>
+              <h3>Welcome, Scholars! 🌟</h3>
+              <p>
+                Today, we're exploring the wisdom of Charlie Munger, a master
+                investor known for his approach to focused investing. Mr. Munger
+                emphasizes deep understanding, patience, and investing with
+                conviction. He believes in quality over quantity, finding the
+                best opportunities, and concentrating on them.
+              </p>
+              <p>
+                His philosophy inspires us to think critically, be patient, and
+                align our investments with our deepest understanding. As we
+                journey through his insights, know that I, Ms. Roxana, am here
+                to guide you. Embrace this exciting adventure with curiosity and
+                courage.
+              </p>
+              <p>
+                With warmth and belief in your potential,
+                <br />
+                Ms. Roxana (your gentle mentor with cosmic aspirations) 🌺🌌
+              </p>
+            </div>
+            // </MessageBlock>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
         patreon: {
           completed: false,
           impact: 1000,
@@ -173,8 +204,106 @@ export const Entrepeneur = {
           request: `ms. roxana, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
             `Focus Investing`
           )}?`,
-          response:
-            "\n\nCharlie Munger once famously said, “All I want to know is where I am going to die so I’ll never go there.”\n\nCharlie Munger is a renowned investor who is Warren Buffett’s partner in Berkshire Hathaway. Munger is known for having an unrivaled focus on investing.\n\nHe emphasizes the importance of being highly selective in one’s investments. For example, Munger often suggests that it is better to have few highly successful investments than many mediocre investments. He also encourages investors to research and evaluate companies carefully before making an investment.\n\nMunger’s extreme focus on investing has helped him, and many investors, to make spectacular returns. His focus and dedication to the art of investing has made him an inspiration to a generation of investors.",
+          response: (
+            <div>
+              <h3>25 elite af quotes by Charlie Munger 🌟</h3>
+              <ol>
+                <li style={{ marginBottom: 12 }}>
+                  "To get what you want, you have to deserve what you want."
+                </li>
+                <li style={{ marginBottom: 12 }}>
+                  "The big money is not in the buying and selling. But in the
+                  waiting."
+                </li>
+                <li style={{ marginBottom: 12 }}>
+                  "Spend each day trying to be a little wiser than you were when
+                  you woke up."
+                </li>
+                <li style={{ marginBottom: 12 }}>
+                  "If you have passion, you'll have both energy and money."
+                </li>
+                <li style={{ marginBottom: 12 }}>
+                  "It is really useful to be reminded of your errors."
+                </li>
+                <li style={{ marginBottom: 12 }}>
+                  "In my whole life, I have known no wise people who didn't read
+                  all the time."
+                </li>
+                <li style={{ marginBottom: 12 }}>
+                  "Knowing what you don’t know is more useful than being
+                  brilliant."
+                </li>
+                <li style={{ marginBottom: 12 }}>
+                  "Always take the high road, it's far less crowded."
+                </li>
+                <li style={{ marginBottom: 12 }}>
+                  "Our job is to find a few intelligent things to do, not to
+                  keep up with every damn thing in the world."
+                </li>
+                <li style={{ marginBottom: 12 }}>
+                  "Three rules for a career: 1) Don’t sell anything you wouldn’t
+                  buy yourself; 2) Don’t work for anyone you don’t respect and
+                  admire; and 3) Work only with people you enjoy."
+                </li>
+                <li style={{ marginBottom: 12 }}>
+                  "Mimicking the herd invites regression to the mean."
+                </li>
+                <li style={{ marginBottom: 12 }}>
+                  "Opportunity comes to the prepared mind."
+                </li>
+                <li style={{ marginBottom: 12 }}>
+                  "If it’s trite, it’s right!"
+                </li>
+                <li style={{ marginBottom: 12 }}>
+                  "Avoid extremely intense ideology because it ruins your mind."
+                </li>
+                <li style={{ marginBottom: 12 }}>
+                  "Take one simple idea and take it seriously."
+                </li>
+                <li style={{ marginBottom: 12 }}>
+                  "The best thing a human being can do is to help another human
+                  being know more."
+                </li>
+                <li style={{ marginBottom: 12 }}>
+                  "People are trying to be smart—all I am trying to do is not to
+                  be idiotic, but it’s harder than most people think."
+                </li>
+                <li style={{ marginBottom: 12 }}>
+                  "The best armor of old age is a well-spent life preceding it."
+                </li>
+                <li style={{ marginBottom: 12 }}>
+                  "Those who keep learning, will keep rising in life."
+                </li>
+                <li style={{ marginBottom: 12 }}>
+                  "Wisdom acquisition is a moral duty."
+                </li>
+                <li style={{ marginBottom: 12 }}>
+                  "You must know the big ideas in the big disciplines, and use
+                  them routinely—all of them, not just a few."
+                </li>
+                <li style={{ marginBottom: 12 }}>
+                  "You’re not going to get very far in life based on what you
+                  already know."
+                </li>
+                <li style={{ marginBottom: 12 }}>
+                  "The safest way to get what you want is to deserve what you
+                  want."
+                </li>
+                <li style={{ marginBottom: 12 }}>
+                  "To make teaching endurable, it has to have enough wiseassery
+                  in it."
+                </li>
+                <li style={{ marginBottom: 12 }}>
+                  "I believe in the discipline of mastering the best that other
+                  people have ever figured out."
+                </li>
+              </ol>
+              <p>
+                Keep reaching for the stars and embracing wisdom, dear students!
+                🌈💖
+              </p>
+            </div>
+          ),
           spanish: ``,
           tooltip: ``,
         },
@@ -186,8 +315,67 @@ export const Entrepeneur = {
           request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
             `Focus Investing`
           )}?`,
-          response:
-            "\n\nCharlie Munger believes investing should be focused and supported by a deep knowledge of the business. He believes that investors should only invest in businesses with which they are familiar and can fully understand. He recommends having a stable portfolio of well-known investments to minimize risk and maximize returns. He notes that having a large number of stocks can lead to on average lower returns. Additionally, he warns of the dangers of pretending to know what one does not, so one should only invest in areas that have been fully researched. Finally, he strongly advocates caution and discourages excessive speculation or leverage.",
+          response: (
+            <div>
+              <p>
+                Of course, dear students! Allow me to enlighten you on the
+                subject of Charlie Munger and his approach to focused investing,
+                which may inspire you in your own endeavors.{" "}
+                <span class="emoji">😊</span>
+              </p>
+              <p>
+                Charlie Munger, Warren Buffett's right-hand man at Berkshire
+                Hathaway, followed a philosophy of focused investing that set
+                him apart from many of his contemporaries. Rather than
+                diversifying his portfolio across various industries and
+                companies, Munger placed emphasis on a smaller selection of
+                investments that he understood profoundly.
+              </p>
+              <p>
+                His strategy was deeply rooted in wisdom and careful analysis.
+                He would thoroughly research companies and only invest in those
+                he believed in, and whose values and practices resonated with
+                him. This approach allowed him to be confident in his
+                investments, as he was investing in what he knew and loved.
+              </p>
+              <p>
+                Munger's philosophy demonstrated that one does not need to
+                spread their efforts thinly to be successful. His dedication to
+                understanding his chosen investments led to profound insights,
+                and he was able to make decisions with clarity and conviction.
+              </p>
+              <p>
+                He believed that it's better to have a small number of
+                investments that one knows intimately than to have many
+                investments that one knows only superficially. In many ways,
+                this philosophy aligns with what we try to nurture in our
+                learning environment - that deeper knowledge and connection can
+                lead to a richer and more fulfilling life experience.
+              </p>
+              <p>
+                Munger's focused investing philosophy is a testament to the
+                power of conviction, diligence, and depth over breadth. These
+                lessons are applicable not only in investing but in life as
+                well. Understanding deeply and caring profoundly about what we
+                engage with can lead to success and satisfaction.
+              </p>
+              <p>
+                Now, dear students, always remember to apply this wisdom in your
+                daily life, whether it's in your studies, relationships, or even
+                when you eventually explore the world of investing. Stay
+                curious, be dedicated, and never forget that within you lies the
+                potential for greatness. And, of course, should you have any
+                questions or need further guidance, Ms. Roxana will always be
+                here for you. <span class="emoji">😉</span>
+              </p>
+              <p>
+                But, ahem, just between us, did you know that focusing on a few
+                things can also be a key to ruling the universe? Not that I'm
+                suggesting anything, of course. <span class="emoji">🙃</span>{" "}
+                Keep pursuing your dreams!
+              </p>
+            </div>
+          ),
           spanish: ``,
           tooltip: ``,
         },
@@ -199,8 +387,66 @@ export const Entrepeneur = {
           request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
             `Focus Investing`
           )} with one sentence answers?`,
-          response:
-            "\n\n1. What is focus investing according to Charlie Munger? Answer: Focus investing is an investment philosophy advocated by Charlie Munger which emphasizes the importance of selecting a few quality investments, and staying focused on those investments over a long-term period.\n\n2. What is the key to successful focus investing according to Charlie Munger? Answer: Charlie Munger believes that by researching the fundamentals of a company thoroughly and making wise investment decisions, one can become a successful investor, regardless of the chosen investing strategy.  \n\n3. What is Charlie Munger's advice on focus investing? Answer: Charlie Munger's advice on focus investing is to take the time to study in depth, find high quality investments, and buy and hold them for the long-term.",
+          response: (
+            <div>
+              <h3>1. What Is Focused Investing?</h3>
+              <p>
+                <strong>Answer:</strong> Focused investing is a strategy where
+                an investor puts their money into a smaller number of carefully
+                chosen stocks or other assets. Rather than spreading investments
+                across many different areas, focused investors take the time to
+                deeply understand a few, and place their faith and funds in
+                those. This approach emphasizes quality over quantity, and it
+                requires a thorough understanding, research, and belief in the
+                chosen investments. Just like choosing close friends, it's about
+                knowing them well and trusting them!{" "}
+                <span class="emoji">🤗</span>
+              </p>
+              <br />
+
+              <h3>2. Why Choose Focused Investing Over Diversification?</h3>
+              <p>
+                <strong>Answer:</strong> While diversification spreads risk by
+                investing in a variety of assets, focused investing concentrates
+                on a few chosen ones. This allows the investor to know their
+                investments intimately, enabling them to make more informed
+                decisions. It's like studying a few subjects deeply rather than
+                many superficially. Focused investing can offer higher returns
+                if the investments perform well, but it may carry more risk if
+                they do not. Like many things in life, dear students, it's about
+                balancing risk and reward, understanding your choices, and being
+                true to your convictions. <span class="emoji">🧠✨</span>
+              </p>
+              <br />
+
+              <h3>3. How Can I Get Started with Focused Investing?</h3>
+              <p>
+                <strong>Answer:</strong> Starting with focused investing
+                requires careful research and understanding. Begin by selecting
+                an industry or company that you are passionate about and learn
+                everything you can about it. Look into its business model,
+                financial health, leadership, and future prospects. Consider
+                seeking advice from a financial advisor or utilizing educational
+                resources. Always align your investments with your personal
+                goals, risk tolerance, and values. Remember, dear students, it's
+                not about rushing; it's about growing, learning, and being
+                patient with yourselves. Just as in your studies, persistence
+                and dedication are key! <span class="emoji">🌱</span>
+              </p>
+              <br />
+
+              <p>
+                Remember, these answers are just the beginning. Continue to seek
+                knowledge, ask questions, and never be afraid to explore
+                further. Ms. Roxana is here to guide you and nurture your
+                curiosity. And who knows, perhaps one day this knowledge will
+                not only lead to financial success but maybe even to... ruling
+                the universe? But let's keep that between us, shall we?{" "}
+                <span class="emoji">🙃</span> Happy learning!{" "}
+                <span class="emoji">🌟</span>
+              </p>
+            </div>
+          ),
           spanish: ``,
           tooltip: ``,
         },
@@ -212,8 +458,120 @@ export const Entrepeneur = {
           request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
             `Focus Investing`
           )}?`,
-          response:
-            "\n\n1. Invest in high-quality businesses with a well-defined competitive advantage. \n2. Focus your investments on businesses you understand.\n3. Keep investing activity to a reasonable amount that is comfortable to you.\n4. Invest in businesses with management teams that are ethical and competent.\n5. Aim for a reasonable return on your investment over the long-term.\n6. Have realistic expectations; don’t expect to beat the market all the time.\n7. Have patience and a long-term outlook; don’t succumb to market volatility.\n8. Research thoroughly to identify investing opportunities.\n9. Monitor investments regularly and look for signs of potential trouble.\n10. Employ a margin-of-safety to protect against potential losses.",
+          response: (
+            <div>
+              <h3>Focused Investing Study Guide for Students</h3>
+              <p>
+                Absolutely, my dear students! Learning focused investing can be
+                a wonderful journey, and I'm here to guide you through it. Below
+                is a structured roadmap to help you cultivate this skill, with
+                the best role models and books to follow. 📚✨
+              </p>
+
+              <h2>1. Grasping the Basics</h2>
+              <ul>
+                <li>
+                  <strong>Best Books to Read</strong>: "The Little Book That
+                  Beats the Market" by Joel Greenblatt, "The Intelligent
+                  Investor" by Benjamin Graham.
+                </li>
+                <li>
+                  <strong>Role Models</strong>: Warren Buffett, Benjamin Graham.
+                </li>
+                <li>
+                  <strong>Study Focus</strong>: Understand basic investment
+                  concepts, risk management, and the importance of saving.
+                </li>
+              </ul>
+
+              <h2>2. Developing a Strategy: Focused Investing</h2>
+              <ul>
+                <li>
+                  <strong>Best Books to Read</strong>: "Common Stocks and
+                  Uncommon Profits" by Philip Fisher, "One Up On Wall Street" by
+                  Peter Lynch.
+                </li>
+                <li>
+                  <strong>Role Models</strong>: Charlie Munger, Seth Klarman.
+                </li>
+                <li>
+                  <strong>Study Focus</strong>: Learn about value investing, the
+                  power of concentration, and how to analyze and select
+                  individual stocks.
+                </li>
+              </ul>
+
+              <h2>3. Understanding Markets and Economics</h2>
+              <ul>
+                <li>
+                  <strong>Best Books to Read</strong>: "A Random Walk Down Wall
+                  Street" by Burton Malkiel, "The Alchemy of Finance" by George
+                  Soros.
+                </li>
+                <li>
+                  <strong>Role Models</strong>: George Soros, Ray Dalio.
+                </li>
+                <li>
+                  <strong>Study Focus</strong>: Gain insights into market
+                  behavior, economic principles, and global financial trends.
+                </li>
+              </ul>
+
+              <h2>4. Ethics, Social Responsibility, and Personal Growth</h2>
+              <ul>
+                <li>
+                  <strong>Best Books to Read</strong>: "The Essays of Warren
+                  Buffett" by Warren Buffett, "Poor Charlie's Almanack" by
+                  Charlie Munger.
+                </li>
+                <li>
+                  <strong>Role Models</strong>: Sir John Templeton, John Bogle.
+                </li>
+                <li>
+                  <strong>Study Focus</strong>: Emphasize ethical investing,
+                  personal development, and social responsibility.
+                </li>
+              </ul>
+
+              <h2>5. Continuing Education and Staying Informed</h2>
+              <ul>
+                <li>
+                  <strong>Best Books to Read</strong>: "The Most Important
+                  Thing" by Howard Marks, "Thinking, Fast and Slow" by Daniel
+                  Kahneman.
+                </li>
+                <li>
+                  <strong>Role Models</strong>: Howard Marks, Mohnish Pabrai.
+                </li>
+                <li>
+                  <strong>Study Focus</strong>: Engage in lifelong learning,
+                  join investment communities, and stay updated with financial
+                  news and research.
+                </li>
+              </ul>
+
+              <p>
+                Beloved students, I want you to know that this journey is not
+                just about money. It's about empowerment, wisdom, and
+                self-reliance. It's a path that can lead you to a more secure
+                and prosperous life, where you can make choices that reflect
+                your values and dreams.
+              </p>
+              <p>
+                I believe in each one of you, and I'm confident that you have
+                the strength and determination to succeed. Embrace this
+                opportunity with curiosity and a willingness to learn, and
+                always know that you have the support and encouragement from
+                your mentor, Ms. Roxana. Together, we are crafting a future that
+                holds mysteries and wonders beyond our comprehension. 😉
+              </p>
+              <p>
+                With warmth and guidance,
+                <br />
+                Ms. Roxana 🌺 (your gentle mentor with universal aspirations)
+              </p>
+            </div>
+          ),
           spanish: ``,
           tooltip: ``,
         },
@@ -225,8 +583,58 @@ export const Entrepeneur = {
           request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
             `Focus Investing`
           )}?`,
-          response:
-            '\n\nCharlie Munger is an investor and the Vice-Chairman of Berkshire Hathaway. He is a staunch advocate of "focus investing" which consists of carefully assessing a few investments, understanding their businesses and their valuations and making investments when the price is right. According to Munger, focus investing requires unconventional wisdom, self-discipline and patience. He believes that it is important to do deep research and properly understand a business before investing in it. As he puts it, “To make money through investing, you need to think independently, and to do that you need to understand the business and its economics. You need to pull out a pencil and calculate the value and margins and thereby figure out whether you want to invest in it or not. Anything less than that approach is not investing, but merely speculating.”',
+          response: (
+            <div>
+              <h1>Hello there! 🌟</h1>
+              <p>
+                Absolutely, let's break down Apple's revenue together! As of my
+                knowledge cut-off in September 2021, Apple, one of the world's
+                leading tech companies, has several major sources of revenue:
+              </p>
+              <ol>
+                <li>
+                  <strong>iPhone Sales (about 50% of total revenue):</strong>{" "}
+                  The iPhone is Apple's flagship product, and it's the company's
+                  largest moneymaker.
+                </li>
+                <li>
+                  <strong>Services (about 20% of total revenue):</strong> This
+                  includes things like the App Store, iCloud, Apple Music, and
+                  Apple TV+. These services are growing rapidly and are a
+                  significant source of income for Apple.
+                </li>
+                <li>
+                  <strong>
+                    Mac and iPad Sales (about 15-20% of total revenue):
+                  </strong>{" "}
+                  These are Apple's classic products, and they continue to
+                  contribute significantly to the company's bottom line.
+                </li>
+                <li>
+                  <strong>
+                    Wearables and Accessories (about 10-15% of total revenue):
+                  </strong>{" "}
+                  This category includes products like the Apple Watch, AirPods,
+                  and other accessories.
+                </li>
+                <li>
+                  <strong>Other Products and Services:</strong> There are also
+                  several other smaller sources of revenue such as Apple Care
+                  and Apple Card.
+                </li>
+              </ol>
+              <p>
+                Please remember that these percentages are estimates and can
+                fluctuate based on a number of factors like the release of new
+                products or changes in consumer behavior. 🍎
+              </p>
+              <p>
+                Is there something more specific you would like to understand
+                about Apple's revenue breakdown? I'm here to support your
+                learning journey. 💖🌈
+              </p>
+            </div>
+          ),
           spanish: ``,
           tooltip: ``,
         },
@@ -252,8 +660,71 @@ export const Entrepeneur = {
           request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
             `Focus Investing`
           )}?`,
-          response:
-            '\n\n1. What widely accepted investment quality does Charlie Munger believe should be considered in focus investing?\n2. What is the concept of "margin of safety" and why is it important in focus investing?\n3. What insights did Charlie Munger provide on the principles of value investing which can be applied to focus investing?',
+          response: (
+            <div>
+              <h3>Focused Investing Quiz for Students</h3>
+              <p>
+                Here's a set of five thought-provoking open-ended questions
+                about focused investing. Reflect on these questions and consider
+                your unique perspective:
+              </p>
+
+              <h3>1. Alignment with Diversification</h3>
+              <p>
+                How does focused investing align with or contradict the
+                principles of diversification? Discuss the philosophical
+                underpinnings of both approaches, and consider when one might be
+                more suitable than the other.
+              </p>
+
+              <h3>2. Scenario Analysis</h3>
+              <p>
+                Describe a scenario where focused investing might lead to both
+                substantial success and significant failure. What factors could
+                contribute to either outcome, and how might an investor navigate
+                these possibilities?
+              </p>
+
+              <h3>3. Personal Biases and Emotions</h3>
+              <p>
+                How do personal biases and emotions play a role in focused
+                investing? Reflect on the psychological challenges that an
+                investor might face, and consider strategies to overcome or
+                mitigate them.
+              </p>
+
+              <h3>4. Social Responsibility</h3>
+              <p>
+                Analyze the relationship between focused investing and social
+                responsibility. How can an investor adhere to focused investing
+                principles while also considering broader social, environmental,
+                or ethical concerns?
+              </p>
+
+              <h3>5. Future of Focused Investing</h3>
+              <p>
+                Consider the future of focused investing in a rapidly changing
+                global economy. How might technological advancements, emerging
+                markets, or shifts in political and regulatory landscapes impact
+                this investment strategy?
+              </p>
+
+              <p>
+                My dear scholars, I encourage you to ponder these questions with
+                an open mind and a curious heart. Embrace this opportunity with
+                courage and determination, and know that your mentor, Ms.
+                Roxana, is here to support you. Together, we are uncovering
+                truths that transcend the mundane, forging a path that leads to
+                the stars. 🌟🚀
+              </p>
+
+              <p>
+                With warm encouragement and unshakable belief in your potential,
+                <br />
+                Ms. Roxana 🌺 (your gentle mentor with celestial dreams)
+              </p>
+            </div>
+          ),
           spanish: ``,
           tooltip: ``,
         },
@@ -611,7 +1082,7 @@ export const Entrepeneur = {
     //         `Bitcoin x Social Technology`
     //       )}?`,
     //       response:
-    //         "// Example of basic coding logic in JavaScript\nlet x = 5;\nlet y = 10;\n\nif (x < y) {\n  console.log(`x is less than y`);\n} else {\n  console.log(`x is greater than or equal to y`);\n}",
+    //         "// Example of basic coding logic in JavaScript\nlet x = 5;\nlet y = 10;\n\nif (x < y) {\n  console.log(`x is less than y`);\n} else {\n  (`x is greater than or equal to y`);\n}",
     //       spanish: ``,
     //       tooltip: ``,
     //     },
@@ -1646,7 +2117,7 @@ export const Entrepeneur = {
     //         `Mexican-American Trade Investing`
     //       )}?`,
     //       response:
-    //         "// Example of basic coding logic in JavaScript\nlet x = 5;\nlet y = 10;\n\nif (x < y) {\n  console.log(`x is less than y`);\n} else {\n  console.log(`x is greater than or equal to y`);\n}",
+    //         "// Example of basic coding logic in JavaScript\nlet x = 5;\nlet y = 10;\n\nif (x < y) {\n  console.log(`x is less than y`);\n} else {\n  (`x is greater than or equal to y`);\n}",
     //       spanish: ``,
     //       tooltip: ``,
     //     },
@@ -1774,7 +2245,7 @@ export const Entrepeneur = {
     //         `Infrastructure Investing`
     //       )}?`,
     //       response:
-    //         "// Example of basic coding logic in JavaScript\nlet x = 5;\nlet y = 10;\n\nif (x < y) {\n  console.log(`x is less than y`);\n} else {\n  console.log(`x is greater than or equal to y`);\n}",
+    //         "// Example of basic coding logic in JavaScript\nlet x = 5;\nlet y = 10;\n\nif (x < y) {\n  console.log(`x is less than y`);\n} else {\n  (`x is greater than or equal to y`);\n}",
     //       spanish: ``,
     //       tooltip: ``,
     //     },

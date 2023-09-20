@@ -15,7 +15,7 @@ let Patreon = ({
       return (
         <>
           <video
-            poster="https://res.cloudinary.com/eduprojectsil/image/upload/v1553407947/tryout_hwrjji.png"
+            poster="https://res.cloudinary.com/dtkeyccga/image/upload/v1691891520/ROBE_assets/videoFill_hokslw.png"
             style={{
               width: "100%",
               borderRadius: "30px",

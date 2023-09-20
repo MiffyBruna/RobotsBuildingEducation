@@ -58,6 +58,7 @@ export const ChatGPT = ({
     inspire: false,
     patreon: false,
     shop: false,
+    practice: false,
     journey: false,
   });
 
@@ -84,6 +85,7 @@ export const ChatGPT = ({
       patreon: false,
       inspire: false,
       shop: false,
+      practice: false,
       journey: false,
     });
     setChatGptResponse("");
@@ -192,9 +194,6 @@ export const ChatGPT = ({
   };
 
   let handleBossModeGptRequest = async (event) => {
-    console.log("the event", event);
-    console.log("therequest", bossModeGptHelperRequest);
-
     // this API has a $5 limit. Please configure your own setup to test in a seperate location.
     const response = await fetch(
       "https://us-central1-learn-robotsbuildingeducation.cloudfunctions.net/app/prompt",
@@ -207,15 +206,11 @@ export const ChatGPT = ({
           prompt: bossModeGptHelperRequest,
         }),
       }
-    ).catch((error) => {
-      console.log("error", error);
-      console.log("err", { error });
-    });
+    ).catch((error) => {});
 
     let data = await response.json();
     let parsedData = data.bot.trim();
 
-    console.log("parsedData", parsedData);
     setBossModeGptHelperResponse(parsedData);
 
     if (
@@ -266,7 +261,7 @@ export const ChatGPT = ({
     isBossMode = false
   ) => {
     event.preventDefault();
-    console.log("promptType", promptType);
+
     if (isBossMode) {
       // do boss mode thing
       handleBossMode(promptType);
@@ -295,8 +290,7 @@ export const ChatGPT = ({
       //     }),
       //   }
       // ).catch((error) => {
-      //   console.log("error", error);
-      //   console.log("err", { error });
+
       // });
 
       // let data = await response.json();
@@ -327,7 +321,13 @@ export const ChatGPT = ({
           response: computeResponseList(patreonObject, promptType), //compute
           impact: computeTotalImpactFromPrompt(patreonObject, promptType), // compute
         };
+      } else if (promptType === "practice") {
+        result = {
+          response: computeResponseList(patreonObject, promptType), //compute
+          impact: computeTotalImpactFromPrompt(patreonObject, promptType), // compute
+        };
       }
+
       setChatGptResponse(prompt?.response);
       setChatGptResponseList(result?.response);
 
@@ -381,13 +381,6 @@ export const ChatGPT = ({
     setLoadingMessage("");
   };
 
-  // useEffect(() => {}, []);
-
-  // useEffect(() =>{
-  //   return () = > {}
-  // }, [])
-
-  console.log("moduleName", moduleName);
   return (
     <div
       onSubmit={handleSubmit}

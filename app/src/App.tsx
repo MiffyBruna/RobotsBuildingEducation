@@ -66,6 +66,11 @@ function App() {
   const [usersModulesCollectionReference, setUsersModulesCollectionReference] =
     useState({});
 
+  const [
+    usersEmotionsCollectionReference,
+    setUsersEmotionsCollectionReference,
+  ] = useState({});
+
   //**important 🤪: "usersCoursesCollectionReference" this can be removed. It will be developed better in the future
   const [usersCoursesCollectionReference, setUsersCoursesCollectionReference] =
     useState({});
@@ -78,6 +83,8 @@ function App() {
 
   //this is the set of data inside of modules belonging to a user meant for UI.
   const [usersModulesFromDB, setUsersModulesFromDB] = useState([]);
+
+  const [usersEmotionsFromDB, setUsersEmotionsFromDB] = useState([]);
 
   // //**important 🤪: this displays all AI course templates in an not scalable way. this is the set of data inside of global meant for UI.
   const [globalUserModulesFromDB, setGlobalUserModulesFromDB] = useState([]);
@@ -109,6 +116,12 @@ function App() {
   // ui state
   const [moduleName, setModuleName] = useState("");
 
+  // ui state
+  const [pathSelectionAnimationData, setPathSelectionAnimationData] = useState({
+    boxShadow: null,
+    path: null,
+  });
+
   const [visibilityMap, setVisibilityMap] = useState({
     Engineer: false,
     "RO.₿.E": false,
@@ -116,6 +129,7 @@ function App() {
     Business: false,
   });
 
+  // basic control for visual state - may be converted to animated route
   const handlePathSelection = (event) => {
     logEvent(analytics, "select_item", {
       item_list_id: `RO.B.E_paths|${event.target.id}`,
@@ -130,10 +144,17 @@ function App() {
     setVisibilityMap(controlPathVisibilityMap(visibilityMap, event.target.id));
     setCurrentPath(event.target.id);
     setCurrentPathForAnalytics(event.target.id);
+
     setPatreonObject({});
     setModuleName("");
+
+    setPathSelectionAnimationData({
+      boxShadow: "1px 2px 14px 8px rgba(0,255,140,1)",
+      path: event.target.id,
+    });
   };
 
+  // basic control for visual state - may be converted to animated route
   const handleModuleSelection = (module, moduleName) => {
     // can redefine this as module object rather than patreon object. low priority
     setPatreonObject(module);
@@ -152,10 +173,12 @@ function App() {
     setCurrentPath("");
   };
 
+  // basic control for visual state - may be converted to animated route
   const handleZeroKnowledgePassword = (event) => {
     if (
       event.target.value === import.meta.env.VITE_PATREON_PASSCODE ||
       event.target.value === import.meta.env.VITE_FREE_PROMO_PASSCODE ||
+      event.target.value === import.meta.env.VITE_FREE_BLACK_COMMUNITY ||
       event.target.value === import.meta.env.VITE_FOREVER_FREE
     ) {
       localStorage.setItem("patreonPasscode", event.target.value);
@@ -175,7 +198,6 @@ function App() {
         if (doc.data()) {
           modulesSet.push(doc.data());
         } else {
-          console.log("gone");
         }
       });
 
@@ -192,10 +214,23 @@ function App() {
         if (doc.data()) {
           modulesSet.push(doc.data());
         } else {
-          console.log("gone");
         }
       });
       setGlobalUserModulesFromDB(modulesSet);
+    });
+  };
+
+  let documentProcForUsersEmotions = async (collectionRef) => {
+    await getDocs(collectionRef).then((querySnapshot) => {
+      let modulesSet = [];
+
+      querySnapshot.forEach((doc) => {
+        if (doc.data()) {
+          modulesSet.push(doc.data());
+        } else {
+        }
+      });
+      setUsersEmotionsFromDB(modulesSet);
     });
   };
 
@@ -243,6 +278,7 @@ function App() {
                   setDatabaseUserDocument(response.data());
                 });
             } else {
+              console.log("user", res.data());
               setDatabaseUserDocument(res.data());
             }
           })
@@ -254,21 +290,22 @@ function App() {
 
         const globalReserveDocRef = doc(database, "global", "reserve");
         getDoc(globalReserveDocRef).then((res) => {
-          console.log("res", res.data());
-
           setGlobalScholarshipCounter(res.data().scholarships);
           setGobalReserveObject(res.data());
         });
 
         setUserDocumentReference(docRef);
         const usersModulesCollectionRef = collection(docRef, "modules");
+        const usersEmotionsCollectionRef = collection(docRef, "emotions");
         const usersCoursesCollectionRef = collection(docRef, "courses");
         setGlobalDocumentReference(globalImpactDocRef);
         setGlobalModulesCollectionReference(globalModulesCollectionRef);
         setUsersModulesCollectionReference(usersModulesCollectionRef);
+        setUsersEmotionsCollectionReference(usersEmotionsCollectionRef);
         setUsersCoursesCollectionReference(usersCoursesCollectionRef);
 
         documentProcForUsersModules(usersModulesCollectionRef);
+        documentProcForUsersEmotions(usersEmotionsCollectionRef);
         documentProcForGlobalModules(globalModulesCollectionRef);
 
         // used to count total global count. used to get all work done before this global counter was implemented.
@@ -276,10 +313,10 @@ function App() {
         //   let sum = 0;
         //   querySnapshot.forEach((doc) => {
         //     if (doc.data().impact) {
-        //       sum = doc.data().impact + sum;
+        //       sum = Number(doc.data().impact) + sum;
         //     }
         //   });
-
+        //   console.log("sum", sum);
         //   setGlobalImpactCounter(sum);
         // });
       } else {
@@ -301,12 +338,10 @@ function App() {
                   setDatabaseUserDocument(response.data());
                 });
             } else {
-              console.log("ELSE");
-
               setDatabaseUserDocument(res.data());
             }
           })
-          .catch((error) => console.log("ERROR"));
+          .catch((error) => "ERROR");
 
         getDoc(globalImpactDocRef).then((res) => {
           setGlobalImpactCounter(res.data().total);
@@ -314,8 +349,6 @@ function App() {
         const globalReserveDocRef = doc(database, "global", "reserve");
 
         getDoc(globalReserveDocRef).then((res) => {
-          console.log("res", res.data());
-
           setGlobalScholarshipCounter(res.data().scholarships);
         });
 
@@ -360,7 +393,6 @@ function App() {
       mountDataForRoute(params?.moduleID);
       setIsLoadingRoute(false);
     } else {
-      console.log("no data");
     }
   }, [params]);
 
@@ -380,6 +412,8 @@ function App() {
     );
   }
 
+  console.log("usersEmotionsFromDB", usersEmotionsFromDB);
+
   return (
     <>
       <div className="App" style={{ minHeight: "100vh" }}>
@@ -393,7 +427,6 @@ function App() {
           setGlobalImpactCounter={setGlobalImpactCounter}
           computePercentage={computePercentage}
         />
-
         {typeof isSignedIn === "string" ||
         (!isSignedIn && isZeroKnowledgeUser) ? (
           <div
@@ -415,7 +448,6 @@ function App() {
             />
           </div>
         ) : null}
-
         {!isZeroKnowledgeUser ? (
           <Passcode
             patreonObject={patreonObject}
@@ -429,9 +461,83 @@ function App() {
             computePercentage={computePercentage}
           />
         ) : null}
+
+        {localStorage.getItem("patreonPasscode") ===
+        import.meta.env.VITE_FREE_BLACK_COMMUNITY ? (
+          <div>
+            <div
+              style={{
+                boxSizing: "border-box",
+                padding: 12,
+                display: "flex",
+                justifyContent: "center",
+              }}
+            >
+              <div
+                style={{
+                  backgroundColor: "#FFF4CA",
+                  color: "black",
+                  boxSizing: "border-box",
+                  width: "375px",
+                  padding: 12,
+                  display: "flex",
+                  justifyContent: "center",
+                }}
+              >
+                Looks like you used the passcode BLCK.
+                <br />
+                Feel welcome to use subscriber services <br />
+                for free 🙂
+              </div>
+            </div>
+            <br />
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                flexWrap: "wrap",
+              }}
+            >
+              <button
+                onClick={() =>
+                  window.open(
+                    "https://calendly.com/robotsbuildingeducation/patreon"
+                  )
+                }
+                style={{ margin: 6, width: 190 }}
+              >
+                Schedule a 1-on-1
+              </button>
+              <button
+                onClick={() =>
+                  window.open(
+                    "https://github.com/RobotsBuildingEducation/RobotsBuildingEducation/issues"
+                  )
+                }
+                style={{ margin: 6, width: 190 }}
+              >
+                Get Experience
+              </button>
+              <button
+                onClick={() =>
+                  window.open(
+                    "https://github.com/RobotsBuildingEducation/Educate/tree/main/newsletter%2B%2B"
+                  )
+                }
+                style={{ margin: 6, width: 190 }}
+              >
+                Newsletter++
+              </button>
+            </div>
+          </div>
+        ) : null}
+
         {isZeroKnowledgeUser ? (
           <>
-            <Paths handlePathSelection={handlePathSelection} />
+            <Paths
+              handlePathSelection={handlePathSelection}
+              pathSelectionAnimationData={pathSelectionAnimationData}
+            />
 
             <Collections
               usersCoursesCollectionReference={usersCoursesCollectionReference}
@@ -521,9 +627,12 @@ function App() {
             globalImpactCounter={globalImpactCounter}
             usersModulesCollectionReference={usersModulesCollectionReference}
             usersModulesFromDB={usersModulesFromDB}
+            usersEmotionsCollectionReference={usersEmotionsCollectionReference}
+            usersEmotionsFromDB={usersEmotionsFromDB}
             globalScholarshipCounter={globalScholarshipCounter}
             handlePathSelection={handlePathSelection}
             globalReserveObject={globalReserveObject}
+            documentProcForUsersEmotions={documentProcForUsersEmotions}
           />
         ) : null}
       </div>

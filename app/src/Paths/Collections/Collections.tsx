@@ -6,6 +6,7 @@ import { auth } from "../../database/firebaseResources";
 import {
   StyledCollectionContainer,
   StyledModule,
+  japaneseThemePalette,
 } from "../../styles/lazyStyles";
 
 import { InfiniteKnowledgeEngine9001 } from "./InfiniteKnowlegeEngine9001/InfiniteKnowlegeEngine9001";
@@ -65,7 +66,20 @@ export const Collections = ({
         return (
           <div>
             <br />
-            <h3>{collection}</h3>
+            <h3>
+              {collection == "Coding Crash Course Version 3" ? (
+                <img
+                  alt="Coding Crash Course Version 3"
+                  title="Coding Crash Course Version 3"
+                  style={{
+                    boxShadow: `10px 10px 0px 0px ${japaneseThemePalette.TokyoTwilight}`,
+                  }}
+                  src="https://res.cloudinary.com/dtkeyccga/image/upload/v1691640371/ROBE_assets/Collection_Banners_zlhvjw_pcb0io.gif"
+                />
+              ) : (
+                collection
+              )}
+            </h3>
 
             <br />
             <div></div>
@@ -131,7 +145,7 @@ export const Collections = ({
           <br />
           {currentPath === "RO.₿.E" && hasZeroKnowledgeAccess ? (
             <Button
-              variant="light"
+              variant="dark"
               onClick={() => setIsInfiniteKnowledgeEngine9001open(true)}
             >
               Activate InfiniteKnowledgeEngine9001

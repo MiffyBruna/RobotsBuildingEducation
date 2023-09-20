@@ -1,5 +1,5 @@
 import { renderWithTooltip, ui } from "../../../common/uiSchema";
-import { StyledModule } from "../../../styles/lazyStyles";
+import { ComingSoonModule, StyledModule } from "../../../styles/lazyStyles";
 import Badge from "react-bootstrap/Badge";
 import { OverlayTrigger, Tooltip } from "react-bootstrap";
 import { Link, useParams } from "react-router-dom";
@@ -157,9 +157,40 @@ export const Module = ({
     return el;
   }
 
+  if (currentModule?.underConstruction && currentModule?.isModuleDisabled) {
+    return (
+      <ComingSoonModule
+        patreonObject={currentModule}
+        key={currentModule.button}
+        onClick={() => {
+          !currentModule?.isModuleDisabled
+            ? handleModuleSelection(currentModule, module)
+            : null;
+        }}
+      >
+        {currentModule.sourceType === "video" ? (
+          <span>
+            {" "}
+            &#9658;
+            <br /> {currentModule.button}
+          </span>
+        ) : (
+          ""
+        )}
+        {currentModule.sourceType === "markdown" ? (
+          <span>
+            📄 <br /> {currentModule.button}
+          </span>
+        ) : (
+          ""
+        )}
+      </ComingSoonModule>
+    );
+  }
+
   return (
     <StyledModule
-      patreonObject={ui(globalUserModulesFromDB)[path][collection][module]}
+      patreonObject={currentModule}
       key={currentModule.button}
       onClick={() => {
         !currentModule?.isModuleDisabled

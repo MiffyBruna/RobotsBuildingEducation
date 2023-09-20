@@ -40,8 +40,8 @@ export const StyledCollectionContainer = styled.div`
 `;
 export const StyledModule = styled.button`
   border: 1px solid #636366;
-  background-color: black;
-  background-size: cover;
+  // background-color: black;
+  // background-size: cover;
   box-sizing: border-box;
   margin: 8px;
   width: 140px;
@@ -71,7 +71,7 @@ export const StyledModule = styled.button`
     }};
 
   text-shadow: 1px 1px 5px black;
-  background-color: ${(props) => {
+  /* background-color: ${(props) => {
     return props.patreonObject.isModuleDisabled
       ? "#11220E"
       : props.patreonObject.header === "Boss Mode"
@@ -85,7 +85,7 @@ export const StyledModule = styled.button`
       : props.patreonObject.underConstruction
       ? "#6A74B4"
       : "#F099AD";
-  }};
+  }}; */
 
   /* cursor: ${(props) => {
     return props.patreonObject.isModuleDisabled ? "not-allowed" : "grab";
@@ -98,56 +98,146 @@ export const StyledModule = styled.button`
       return props.patreonObject.isModuleDisabled ? "#48464A" : "#f5befa";
     }};
   }
+
+  background-image: url(${(props) => props.patreonObject.backgroundImgSrc});
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+`;
+
+export const ComingSoonModule = styled.button`
+  border: 1px solid #636366;
+  background-color: black;
+  background-size: cover;
+  box-sizing: border-box;
+  margin: 8px;
+  width: 140px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
+  color: white;
+  transition: 0.15s all ease-in-out;
+  border: 5px dashed
+    ${(props) => {
+      return props.patreonObject.isModuleDisabled
+        ? japaneseThemePalette.SakuraMochiPink
+        : props.patreonObject.rare
+        ? "#DA830D"
+        : props.patreonObject.highValue
+        ? "#F8B125"
+        : props.patreonObject.new
+        ? "#f9c4ff"
+        : props.patreonObject.underConstruction
+        ? "#6A74B4"
+        : "#B271D1";
+    }};
+
+  text-shadow: 1px 1px 5px black;
+  background-color: ${(props) => {
+    return props.patreonObject.isModuleDisabled
+      ? "black"
+      : props.patreonObject.header === "Boss Mode"
+      ? "#590f04"
+      : props.patreonObject.rare
+      ? "#DA830D"
+      : props.patreonObject.highValue
+      ? "#F8B125"
+      : props.patreonObject.new
+      ? "#f6a3ff"
+      : props.patreonObject.underConstruction
+      ? "#6A74B4"
+      : "#F099AD";
+  }};
+
+  cursor: ${(props) => {
+    return props.patreonObject.isModuleDisabled
+      ? "not-allowed!important"
+      : "grab";
+  }};
+
+  &:hover {
+    transform: scale(1.1);
+
+    background: ${(props) => {
+      return props.patreonObject.isModuleDisabled ? "black" : "#f5befa";
+    }};
+  }
 `;
 
 export const StyledLink = styled(Link)`
-  background-color: ${(props) => {
-    return props.isBot ? "#8672B7" : "#B271D1";
+  &:hover {
+    cursor: ${(props) => {
+      return props.active ? "grab" : "not-allowed";
+    }};
+    transform: ${(props) => {
+      return props.active &&
+        props.pathSelectionAnimationData.path === props.path
+        ? "scale(0.95)"
+        : props.active &&
+          !(props.pathSelectionAnimationData.path === props.path)
+        ? "scale(1.02)"
+        : "";
+    }};
+
+    background: ${(props) => {
+      return props.active &&
+        props.pathSelectionAnimationData.path === props.path
+        ? "#ff64ff"
+        : props.active &&
+          !(props.pathSelectionAnimationData.path === props.path)
+        ? "#ff64ff;"
+        : "";
+    }};
+
+    text-shadow: 1px 1px 5px black;
+    color: white;
+  }
+
+  background: ${(props) => {
+    return props.active && props.pathSelectionAnimationData.path === props.path
+      ? // ? "url('https://res.cloudinary.com/dtkeyccga/image/upload/v1692091181/Untitled_200_125_px_qy8kp0.png')"
+        "#FF64FF"
+      : props.active && !(props.pathSelectionAnimationData.path === props.path)
+      ? "#b271d1;"
+      : "";
   }};
 
   border: 2px solid hotpink;
-  /* max-width: 200px; */
-  width: ${(props) => {
-    return props.isBot ? "300px" : "200px";
-  }};
-  /* width: 200px !important; */
+
+  width: 200px;
+
   height: 125px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 16px;
-  /* margin: 12px; */
-  /* border-radius: 46%; */
+  margin: 6px;
+
   color: white;
   transition: 0.15s all ease-in-out;
   text-shadow: 1px 1px 5px black;
-  color: #f5befa;
+  // color: #f5befa;
+
+  box-shadow: ${(props) => {
+    return props.pathSelectionAnimationData.path === props.path
+      ? "1px 1px 17px 6px rgba(255,100,255,1);"
+      : "";
+  }};
 
   /* cursor: ${(props) => {
     return props.active ? "grab" : "not-allowed";
   }}; */
 
-  &:hover {
-    cursor: ${(props) => {
-      return props.active ? "grab" : "not-allowed";
-    }};
-
-    &:hover {
-      transform: ${(props) => {
-        return props.active ? "scale(1.1)" : "";
-      }};
-
-      /* background: #B993D6;  /* fallback for old browsers */
-      /* background: -webkit-linear-gradient(to top, #8CA6DB, #B993D6);  Chrome 10-25, Safari 5.1-6 */
-      /* background: linear-gradient(to top, #8CA6DB, #B993D6);  */
-      background-color: ${(props) => {
-        return props.isBot ? "#27092D" : "#FF64FF";
-      }};
-      text-shadow: 1px 1px 5px black;
-      color: white;
-      /* box-shadow: 0 14px 28px #340627e0, 0 10px 10px rgba(0, 0, 0, 0.22); */
-    }
-  }
+  transform: ${(props) => {
+    return props.pathSelectionAnimationData.path === props.path
+      ? "scale(0.95)"
+      : "";
+  }};
 `;
 //
 

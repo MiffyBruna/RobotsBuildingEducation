@@ -76,7 +76,7 @@ export const Apply = ({
   return (
     <>
       <Button
-        variant="success"
+        variant="dark"
         onClick={() => {
           logEvent(analytics, "select_content", {
             content_type: "button",
@@ -153,6 +153,7 @@ export const Apply = ({
               >
                 <br />
                 <Button
+                  variant="dark"
                   onClick={() => animateBorderLoading("email")}
                   style={borderStateForBitcoinButton}
                 >
@@ -231,6 +232,7 @@ export const Apply = ({
                   style={{ transition: "0.3s all ease-in-out" }}
                 >
                   <Button
+                    variant="dark"
                     onClick={() => animateBorderLoading("bitcoin")}
                     style={borderStateForBitcoinButton}
                   >
@@ -253,6 +255,7 @@ export const Apply = ({
                   style={{ transition: "0.3s all ease-in-out" }}
                 >
                   <Button
+                    variant="dark"
                     style={borderStateForLightningButton}
                     onClick={() => animateBorderLoading("lightning")}
                   >
@@ -290,7 +293,7 @@ export const Apply = ({
           </p>
         </Modal.Body>
         <Modal.Footer style={{ backgroundColor: "black", color: "white" }}>
-          <Button variant="secondary" onClick={() => setIsModalOpen(false)}>
+          <Button variant="dark" onClick={() => setIsModalOpen(false)}>
             Exit
           </Button>
         </Modal.Footer>

@@ -121,7 +121,31 @@ export const Prompts = ({
                 📚 &nbsp;study
               </a>
             </StyledPromptButton>,
-
+            ...(patreonObject.prompts.practice
+              ? [
+                  <StyledPromptButton
+                    tabindex="0"
+                    style={{ display: loadingMessage ? "none" : "flex" }}
+                    borderHighlight={borderHighlight}
+                    loadingMessage={loadingMessage}
+                    onClick={(event) => {
+                      if (loadingMessage) {
+                      } else {
+                        handleSubmit(
+                          event,
+                          patreonObject.prompts["practice"],
+                          "practice"
+                        );
+                      }
+                    }}
+                  >
+                    <a style={{ color: "white" }}>
+                      {patreonObject.prompts["practice"]?.icon} &nbsp;
+                      {patreonObject.prompts["practice"]?.action}
+                    </a>
+                  </StyledPromptButton>,
+                ]
+              : []),
             <StyledPromptButton
               tabindex="0"
               style={{ display: loadingMessage ? "none" : "flex" }}
@@ -275,7 +299,7 @@ export const Prompts = ({
             </div>
           </Modal.Body>
           <Modal.Footer style={{ color: "white", backgroundColor: "black" }}>
-            <Button variant="secondary" onClick={() => setIsModalOpen(false)}>
+            <Button variant="dark" onClick={() => setIsModalOpen(false)}>
               Back to app
             </Button>
           </Modal.Footer>

@@ -2,10 +2,10 @@ import React, { useState } from "react";
 
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { a11yDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
-import { japaneseThemePalette, textBlock } from "../../../styles/lazyStyles";
+import { japaneseThemePalette, textBlock } from "../../../../styles/lazyStyles";
 import sheilferBitcoin from "../../media/images/sheilferBitcoin.jpeg";
 import { Modal } from "react-bootstrap";
-import { MessageBlock } from "../MessageBlock/MessageBlock";
+import { MessageBlock } from "../../MessageBlock/MessageBlock";
 
 export let CodeBlock = ({ code }) => {
   return (
