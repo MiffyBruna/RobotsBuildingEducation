@@ -2846,6 +2846,8 @@ export const Creator = {
     },
     "The Psychology Of Self-esteem": {
       documentID: ``,
+      backgroundImgSrc:
+        "https://res.cloudinary.com/sheilfer/image/upload/v1695548485/Module_Buttons_10_u50oik.gif",
       filler: ``,
       new: false,
       highValue: false,
@@ -2854,10 +2856,11 @@ export const Creator = {
       rare: true,
       needsImprovement: false,
       tooltip: ``,
-      sourceType: `markdown`, // may not need
+      sourceType: `video`, // may not need
       button: `The Psychology Of Self-esteem`, // may not need - `name`
       header: `The Psychology Of Self-esteem`,
-      fileSource: await import("../../markdowns/psychologyOfSelfEsteem.md?raw"), // may not need
+      fileSource:
+        "https://res.cloudinary.com/dtkeyccga/video/upload/v1695379551/kw8utz8affjpot9acemp.mov", // may not need
       prompts: {
         welcome: {
           response: (
@@ -2910,9 +2913,9 @@ export const Creator = {
           response: `null`,
           spanish: ``,
           tooltip: ``,
-          // additionalContent: await import(
-          //   "../../markdowns/psychologyOfSelfEsteem.md?raw"
-          // ),
+          additionalContent: await import(
+            "../../markdowns/selfEsteemAddendum.md?raw"
+          ),
         },
         inspire: {
           completed: false,

@@ -290,9 +290,9 @@ export const ImpactWallet = ({
             <div>
               <h1>The Reserve</h1>
               <h3>invested {globalReserveObject?.invested || "N/A"}</h3>
-              <h6>gain {globalReserveObject?.profit}</h6>
-              <h6>total value {globalReserveObject?.total}</h6>
-              <h6>total gain {globalReserveObject?.percent_gained}</h6>
+              {/* <h6>gain {globalReserveObject?.profit}</h6> */}
+              {/* <h6>total value {globalReserveObject?.total}</h6>
+              <h6>total gain {globalReserveObject?.percent_gained}</h6> */}
               <h6>last updated {globalReserveObject?.last_updated}</h6>
               <div></div>
               <img src={sheilferBitcoin} width={300} height={350} />
