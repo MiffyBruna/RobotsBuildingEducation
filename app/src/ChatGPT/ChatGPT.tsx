@@ -266,6 +266,8 @@ export const ChatGPT = ({
       // do boss mode thing
       handleBossMode(promptType);
       const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+      //wtf
       await delay(1500);
     } else {
       // change discover/study
@@ -298,7 +300,7 @@ export const ChatGPT = ({
 
       // x
       const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-      await delay(1500);
+      await delay(250);
 
       // x
 
