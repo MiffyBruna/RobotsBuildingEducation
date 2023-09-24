@@ -1,5 +1,5 @@
 import { ultimateEffeciencyJutsu } from "../ui";
-
+// delete all unnecessary code.
 // add a collapse feature
 
 export const Creator = {
