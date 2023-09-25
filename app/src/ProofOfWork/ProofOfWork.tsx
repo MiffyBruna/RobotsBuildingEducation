@@ -1,8 +1,4 @@
-import { doc } from "firebase/firestore";
 import { useState } from "react";
-import { Button, ProgressBar } from "react-bootstrap";
-import { getGlobalImpact, renderWithTooltip } from "../common/uiSchema";
-import { database } from "../database/firebaseResources";
 import { ImpactWallet } from "./ImpactWallet/ImpactWallet";
 
 export const ProofOfWork = ({
@@ -92,7 +88,6 @@ export const ProofOfWork = ({
         usersEmotionsFromDB={usersEmotionsFromDB}
         documentProcForUsersEmotions={documentProcForUsersEmotions}
       />
-      {/* <a onClick={() => auth.signOut()}>Sign-out</a> */}
     </div>
   );
 };

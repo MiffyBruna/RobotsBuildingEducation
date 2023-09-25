@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { Button, Modal, ProgressBar } from "react-bootstrap";
 import { getGlobalImpact } from "../../common/uiSchema";
 import sheilferBitcoin from "../../common/media/images/sheilferBitcoin.jpeg";
-import bitcoinReserve from "../../common/media/images/bitcoinReserve.jpeg";
 import cashAppCard from "../../common/media/images/cashAppCard.jpeg";
 import { logEvent } from "firebase/analytics";
 import { analytics, database } from "../../database/firebaseResources";
@@ -94,25 +93,6 @@ export const ImpactWallet = ({
       <div>
         {!isDemo ? (
           <Button
-            disabled={true}
-            style={{ textShadow: "2px 2px 12px black" }}
-            onClick={() => {
-              handlePathSelection({ target: { id: "Boss Mode" } });
-              logEvent(analytics, "select_content", {
-                content_type: "button",
-                item_id: "Boss Mode Button",
-              });
-              // setIsImpactWalletOpen(true);
-            }}
-            variant="secondary"
-            id="Boss Mode"
-          >
-            🐉
-          </Button>
-        ) : null}
-        &nbsp; &nbsp;
-        {!isDemo ? (
-          <Button
             style={{ textShadow: "2px 2px 12px black" }}
             onClick={() => {
               logEvent(analytics, "select_content", {
@@ -124,22 +104,6 @@ export const ImpactWallet = ({
             variant="secondary"
           >
             🫶🏽
-          </Button>
-        ) : null}
-        &nbsp; &nbsp;
-        {!isDemo ? (
-          <Button
-            style={{ textShadow: "2px 2px 12px black" }}
-            onClick={() => {
-              handlePathSelection({ target: { id: "RO.₿.E" } });
-              logEvent(analytics, "select_content", {
-                content_type: "button",
-                item_id: "Robots Building Education Button",
-              });
-            }}
-            variant="secondary"
-          >
-            🤖
           </Button>
         ) : null}
         &nbsp; &nbsp;
@@ -205,20 +169,6 @@ export const ImpactWallet = ({
               width: "100%",
             }}
           >
-            {/* <h1>Impact</h1> */}
-            {/* <p style={{ textAlign: "left", maxWidth: 720 }}>
-              Proof of work is a system in which the worker proves to verifiers
-              that a certain amount of effort has been expended. Verifiers can
-              be machines or they can be represented by people like teachers
-              grading your homework! Our proof of work system creates something
-              called <b>Impact</b>.
-              <br />
-              <br />
-              You can think of impact as the result created by the robots or a
-              currency system that records learning attempted and turns it into
-              financial impact for someone else.
-            </p> */}
-            {/* <hr /> */}
             <h4>Scholarships Created: {globalScholarshipCounter}</h4>
             <p>
               Work Done By You
@@ -272,27 +222,10 @@ export const ImpactWallet = ({
               <hr />
             </p>
 
-            {/* <div>
-              <h1>Real Estate</h1>
-              <p style={{ maxWidth: 720 }}>
-                Under Development. In the meantime, expect material on
-              </p>
-
-              <ul>
-                <li>Credit</li>
-                <li>401ks</li>
-                <li>IRAs</li>
-                <li>FHA loans</li>
-                <li>Market Theory</li>
-              </ul>
-              <br />
-            </div> */}
             <div>
               <h1>The Reserve</h1>
               <h3>invested {globalReserveObject?.invested || "N/A"}</h3>
-              {/* <h6>gain {globalReserveObject?.profit}</h6> */}
-              {/* <h6>total value {globalReserveObject?.total}</h6>
-              <h6>total gain {globalReserveObject?.percent_gained}</h6> */}
+
               <h6>last updated {globalReserveObject?.last_updated}</h6>
               <div></div>
               <img src={sheilferBitcoin} width={300} height={350} />
