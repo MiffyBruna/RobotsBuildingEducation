@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import { Button, Modal } from "react-bootstrap";
 import { isEmpty } from "lodash";
 import ReactJson from "react-json-view";
-import { renderWithTooltip } from "../../common/uiSchema";
 import { analytics } from "../../database/firebaseResources";
 import { ProofOfWork } from "../../ProofOfWork/ProofOfWork";
 import { StyledPromptButton } from "../../styles/lazyStyles";
@@ -161,64 +160,6 @@ export const Prompts = ({
               </a>
             </StyledPromptButton>,
           ];
-    // let promptMap = promptKeys.map((prompt) => {
-
-    //     if (prompt === "intro") {
-    //       return null;
-    //     }
-    //     return (
-    //       <StyledPromptButton
-    //         tabindex="0"
-    //         style={{ display: loadingMessage ? "none" : "flex" }}
-    //         borderHighlight={borderHighlight}
-    //         loadingMessage={loadingMessage}
-    //         onClick={(event) => {
-    //           if (loadingMessage) {
-    //           } else {
-    //             handleSubmit(event, patreonObject.prompts[prompt], prompt);
-    //           }
-    //         }}
-    //       >
-    //         <a style={{ color: "white" }}>
-    //           {patreonObject.prompts[prompt]?.icon}{" "}
-    //           {patreonObject.prompts[prompt].action}
-    //         </a>
-    //       </StyledPromptButton>
-    //     );
-
-    // });
-    //render with tooltips : TBD
-    // let promptMap = promptKeys.map((prompt) =>
-    //   renderWithTooltip(
-    //     <StyledPromptButton
-    //       loadingMessage={loadingMessage}
-    //       onClick={(event) => {
-    //         if (loadingMessage) {
-    //         } else {
-    //           handleSubmit(event, patreonObject.prompts[prompt], prompt);
-    //         }
-    //       }}
-    //     >
-    //       {patreonObject.prompts[prompt].icon}{" "}
-    //       {patreonObject.prompts[prompt].action}
-    //     </StyledPromptButton>,
-    //     <div style={{ border: "1px solid pink" }}>
-    //       <h3>Prompt Engineering</h3>
-    //       <h5 style={{ border: "1px solid green" }}>
-    //         Request&nbsp;{patreonObject.prompts[prompt].icon}
-    //         <br />
-    //         <div>{patreonObject.prompts[prompt].action}</div>
-    //       </h5>
-    //     </div>,
-    //     "left",
-    //     {
-    //       display: "flex",
-    //       justifyContent: "center",
-    //       marginRight: "24px",
-    //       border: "1px solid red",
-    //     }
-    //   )
-    // );
 
     return (
       <div

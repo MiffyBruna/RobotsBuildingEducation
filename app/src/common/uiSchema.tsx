@@ -1,5 +1,3 @@
-// export const schemaUpdater = (ui) => {};
-
 import { OverlayTrigger, Spinner, Tooltip } from "react-bootstrap";
 
 import { Creator } from "./ui/Creator/Creator";
@@ -7,11 +5,6 @@ import { Engineer } from "./ui/Engineer/Engineer";
 import { Entrepeneur } from "./ui/Entrepeneur/Entrepeneur";
 import roxanaGif from "./media/images/roxanaGif.gif";
 import { BossMode } from "./ui/BossMode/BossMode";
-
-//source of truth for views
-
-// ui[path][collection][module]{...}
-// ui['coding']['projects & experience']['indocumentadofy']{...}
 
 interface IPrompt {
   // has the user selected? when database is passed into ui()
@@ -172,24 +165,6 @@ export let controlPathVisibilityMap = (visibilityMap, selectedPath) => {
   });
   result[selectedPath] = true;
   return result;
-};
-
-export let renderWithTooltip = (
-  element: any,
-  tooltip: any,
-  renderingDirection: any,
-  style = null
-) => {
-  return (
-    <OverlayTrigger
-      //setting trigger to click basically makes it impossible to use
-      trigger="click"
-      placement={renderingDirection}
-      overlay={<Tooltip style={style}>{tooltip}</Tooltip>}
-    >
-      {element}
-    </OverlayTrigger>
-  );
 };
 
 /**

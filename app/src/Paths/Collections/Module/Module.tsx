@@ -1,6 +1,5 @@
-import { renderWithTooltip, ui } from "../../../common/uiSchema";
+import { ui } from "../../../common/uiSchema";
 import { ComingSoonModule, StyledModule } from "../../../styles/lazyStyles";
-import { Link } from "react-router-dom";
 
 export const Module = ({
   handleModuleSelection,
