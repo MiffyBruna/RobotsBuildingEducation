@@ -1,7 +1,7 @@
 // export const schemaUpdater = (ui) => {};
 
 import { OverlayTrigger, Spinner, Tooltip } from "react-bootstrap";
-import { LittleVillage } from "./ui/26thStreet/LittleVillage";
+
 import { Creator } from "./ui/Creator/Creator";
 import { Engineer } from "./ui/Engineer/Engineer";
 import { Entrepeneur } from "./ui/Entrepeneur/Entrepeneur";
@@ -139,21 +139,19 @@ interface IPath {
   Engineer: ICollection;
   Creator: ICollection;
   Entrepeneur: ICollection;
-  "RO.₿.E": ICollection;
   "Boss Mode": ICollection | Record<string, any>;
   // "Raise Ur Hand": ICollection | Record<string, any>;
 }
 
 // be pro customization. Redundancy is fine if it allows for more customization.
 // start uniform. Adjust ChatGPT settings in sandbox and adjust UX here.
-export const ui = (globalUserModulesFromDB = {}): IPath => {
+export const ui = (): IPath => {
   // can branch this further to reduce JSON size computed when invoked.
 
   return {
     Engineer: Engineer,
     Creator: Creator,
     Entrepeneur: Entrepeneur,
-    "RO.₿.E": LittleVillage(globalUserModulesFromDB), // get database sets
     "Boss Mode": BossMode,
     // "Raise Ur Hand": {},
   };
@@ -162,7 +160,6 @@ export let uiPaths = [
   "Engineer",
   "Creator",
   "Entrepeneur",
-  "RO.₿.E",
   "Boss Mode",
   // "Raise Ur Hand",
 ];
@@ -209,7 +206,7 @@ export let getGlobalImpact = () => {
     "Crash Course Version 2 (older version)",
   ];
 
-  const ignorePath = ["Boss Mode", "RO.₿.E"];
+  const ignorePath = ["Boss Mode"];
 
   const ignoreModule = ["Memes", "Self-esteem"];
 
@@ -243,40 +240,6 @@ export let getGlobalImpact = () => {
   });
 
   return sum;
-};
-
-// this is a function that handles devilish things
-// configure it with arguments if you need to get each lesson and do something with it :)
-export const randomLessonGeneratorMachine444 = (globalUserModulesFromDB) => {
-  let schema = ui(globalUserModulesFromDB);
-
-  let setOfPaths = [];
-
-  Object.entries(schema).forEach((path) => {
-    setOfPaths.push(path[1]);
-  });
-
-  let setOfCollections = [];
-
-  setOfPaths.forEach((path) => {
-    Object.entries(path).forEach((collection) => {
-      setOfCollections.push(collection[1]);
-    });
-  });
-
-  let setOfModules = [];
-
-  setOfCollections.forEach((collection) => {
-    Object.entries(collection).forEach((module) => {
-      // module 1 = title, may need this
-      setOfModules.push(module[1]);
-    });
-  });
-
-  let randomResult =
-    setOfModules[Math.floor(Math.random() * setOfModules.length)];
-
-  return randomResult;
 };
 
 export let RoxanaLoadingAnimation = () => {

@@ -9,8 +9,6 @@ export const ProofOfWork = ({
   computePercentage,
   globalImpactCounter,
   isModule = false,
-  usersModulesCollectionReference = null,
-  usersModulesFromDB,
 
   handlePathSelection,
   isDemo,
@@ -45,8 +43,6 @@ export const ProofOfWork = ({
           globalImpactCounter={globalImpactCounter}
           isImpactWalletOpen={isImpactWalletOpen}
           setIsImpactWalletOpen={setIsImpactWalletOpen}
-          usersModulesCollectionReference={usersModulesCollectionReference}
-          usersModulesFromDB={usersModulesFromDB}
           globalScholarshipCounter={globalScholarshipCounter}
           isDemo={isDemo}
           globalReserveObject={globalReserveObject}
@@ -77,8 +73,6 @@ export const ProofOfWork = ({
         globalImpactCounter={globalImpactCounter}
         isImpactWalletOpen={isImpactWalletOpen}
         setIsImpactWalletOpen={setIsImpactWalletOpen}
-        usersModulesCollectionReference={usersModulesCollectionReference}
-        usersModulesFromDB={usersModulesFromDB}
         userAuthObject={userAuthObject}
         globalScholarshipCounter={globalScholarshipCounter}
         globalReserveObject={globalReserveObject}

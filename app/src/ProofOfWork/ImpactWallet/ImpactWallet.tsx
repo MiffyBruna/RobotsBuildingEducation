@@ -17,8 +17,6 @@ export const ImpactWallet = ({
   globalImpactCounter,
   isImpactWalletOpen,
   setIsImpactWalletOpen,
-  usersModulesCollectionReference,
-  usersModulesFromDB,
 
   userAuthObject = { uid: "demo" },
   handlePathSelection,

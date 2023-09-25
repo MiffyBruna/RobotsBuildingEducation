@@ -8,10 +8,7 @@ import { Paths } from "./Paths/Paths";
 import {
   controlPathVisibilityMap,
   getGlobalImpact,
-  randomLessonGeneratorMachine444,
-  renderWithTooltip,
   RoxanaLoadingAnimation,
-  ui,
 } from "./common/uiSchema";
 import { Collections } from "./Paths/Collections/Collections";
 import { Header } from "./Header/Header";
@@ -24,14 +21,7 @@ import {
   analytics,
 } from "./database/firebaseResources";
 import { onAuthStateChanged } from "firebase/auth";
-import {
-  collection,
-  doc,
-  getDoc,
-  getDocs,
-  setDoc,
-  updateDoc,
-} from "firebase/firestore";
+import { collection, doc, getDoc, getDocs, setDoc } from "firebase/firestore";
 import { Spinner } from "react-bootstrap";
 import { logEvent } from "firebase/analytics";
 import { useParams } from "react-router-dom";
@@ -62,32 +52,12 @@ function App() {
   //it's due for a refactor, see globalReserveObject. It may be redundant.
   const [globalDocumentReference, setGlobalDocumentReference] = useState({});
 
-  // this GETs is a set of modules that belongs to a user. Not in use in the UI, but may be useful some other day.
-  const [usersModulesCollectionReference, setUsersModulesCollectionReference] =
-    useState({});
-
   const [
     usersEmotionsCollectionReference,
     setUsersEmotionsCollectionReference,
   ] = useState({});
 
-  //**important 🤪: "usersCoursesCollectionReference" this can be removed. It will be developed better in the future
-  const [usersCoursesCollectionReference, setUsersCoursesCollectionReference] =
-    useState({});
-
-  //**important 🤪: this GETs all AI course templates in an not scalable way.
-  const [
-    globalModulesCollectionReference,
-    setGlobalModulesCollectionReference,
-  ] = useState({});
-
-  //this is the set of data inside of modules belonging to a user meant for UI.
-  const [usersModulesFromDB, setUsersModulesFromDB] = useState([]);
-
   const [usersEmotionsFromDB, setUsersEmotionsFromDB] = useState([]);
-
-  // //**important 🤪: this displays all AI course templates in an not scalable way. this is the set of data inside of global meant for UI.
-  const [globalUserModulesFromDB, setGlobalUserModulesFromDB] = useState([]);
 
   // used to count total global count. used to get all work done before this global counter was implemented.
   const [globalImpactCounter, setGlobalImpactCounter] = useState(0);
@@ -124,7 +94,7 @@ function App() {
 
   const [visibilityMap, setVisibilityMap] = useState({
     Engineer: false,
-    "RO.₿.E": false,
+
     Creator: false,
     Business: false,
   });
@@ -189,48 +159,17 @@ function App() {
     }
   };
 
-  // gets the user's modules created by RO.B.E
-  let documentProcForUsersModules = async (collectionRef) => {
-    await getDocs(collectionRef).then((querySnapshot) => {
-      let modulesSet = [];
-
-      querySnapshot.forEach((doc) => {
-        if (doc.data()) {
-          modulesSet.push(doc.data());
-        } else {
-        }
-      });
-
-      setUsersModulesFromDB(modulesSet);
-    });
-  };
-
-  // gets the global modules created by RO.B.E
-  let documentProcForGlobalModules = async (collectionRef) => {
-    await getDocs(collectionRef).then((querySnapshot) => {
-      let modulesSet = [];
-
-      querySnapshot.forEach((doc) => {
-        if (doc.data()) {
-          modulesSet.push(doc.data());
-        } else {
-        }
-      });
-      setGlobalUserModulesFromDB(modulesSet);
-    });
-  };
-
   let documentProcForUsersEmotions = async (collectionRef) => {
     await getDocs(collectionRef).then((querySnapshot) => {
-      let modulesSet = [];
+      let emotionSet = [];
 
       querySnapshot.forEach((doc) => {
         if (doc.data()) {
-          modulesSet.push(doc.data());
+          emotionSet.push(doc.data());
         } else {
         }
       });
-      setUsersEmotionsFromDB(modulesSet);
+      setUsersEmotionsFromDB(emotionSet);
     });
   };
 
@@ -260,7 +199,6 @@ function App() {
         setIsDemo(false);
         const docRef = doc(database, "users", user.uid);
         const globalImpactDocRef = doc(database, "global", "impact");
-        const globalModulesCollectionRef = collection(database, "modules");
 
         getDoc(docRef)
           .then((res) => {
@@ -295,18 +233,13 @@ function App() {
         });
 
         setUserDocumentReference(docRef);
-        const usersModulesCollectionRef = collection(docRef, "modules");
         const usersEmotionsCollectionRef = collection(docRef, "emotions");
-        const usersCoursesCollectionRef = collection(docRef, "courses");
-        setGlobalDocumentReference(globalImpactDocRef);
-        setGlobalModulesCollectionReference(globalModulesCollectionRef);
-        setUsersModulesCollectionReference(usersModulesCollectionRef);
-        setUsersEmotionsCollectionReference(usersEmotionsCollectionRef);
-        setUsersCoursesCollectionReference(usersCoursesCollectionRef);
 
-        documentProcForUsersModules(usersModulesCollectionRef);
+        setGlobalDocumentReference(globalImpactDocRef);
+
+        setUsersEmotionsCollectionReference(usersEmotionsCollectionRef);
+
         documentProcForUsersEmotions(usersEmotionsCollectionRef);
-        documentProcForGlobalModules(globalModulesCollectionRef);
 
         // used to count total global count. used to get all work done before this global counter was implemented.
         // getDocs(collection(database, "users")).then((querySnapshot) => {
@@ -355,46 +288,11 @@ function App() {
         setUserDocumentReference(docRef);
         setGlobalDocumentReference(globalImpactDocRef);
         setIsDemo(true);
-        const globalModulesCollectionRef = collection(database, "modules");
-        setGlobalModulesCollectionReference(globalModulesCollectionRef);
-        documentProcForGlobalModules(globalModulesCollectionRef);
       }
     });
 
     setProofOfWorkFromModules(getGlobalImpact());
-    if (params?.moduleID) {
-    } else if (localStorage.getItem("patreonPasscode")?.length > 0) {
-    } else {
-      setPatreonObject(
-        isDemo ? randomLessonGeneratorMachine444(globalUserModulesFromDB) : {}
-      );
-    }
   }, []);
-
-  let mountDataForRoute = async (moddy) => {
-    setIsLoadingRoute(true);
-
-    if (params?.moduleID) {
-      // setCurrentPath("RO.₿.E");
-      setCurrentPathForAnalytics("RO.₿.E");
-      const docRef = doc(database, "modules", moddy);
-      getDoc(docRef).then((res) => {
-        if (!res?.data()) {
-        } else {
-          setPatreonObject(res?.data()[Object.keys(res.data())[0]]);
-          setCurrentPath("");
-        }
-      });
-    }
-  };
-
-  useEffect(() => {
-    if (params?.moduleID) {
-      mountDataForRoute(params?.moduleID);
-      setIsLoadingRoute(false);
-    } else {
-    }
-  }, [params]);
 
   //
 
@@ -411,8 +309,6 @@ function App() {
       </>
     );
   }
-
-  console.log("usersEmotionsFromDB", usersEmotionsFromDB);
 
   return (
     <>
@@ -540,7 +436,6 @@ function App() {
             />
 
             <Collections
-              usersCoursesCollectionReference={usersCoursesCollectionReference}
               userAuthObject={userAuthObject}
               visibilityMap={visibilityMap}
               handleModuleSelection={handleModuleSelection}
@@ -556,11 +451,6 @@ function App() {
               computePercentage={computePercentage}
               isDemo={isDemo}
               moduleName={moduleName}
-              globalModulesCollectionReference={
-                globalModulesCollectionReference
-              }
-              globalUserModulesFromDB={globalUserModulesFromDB}
-              documentProcForGlobalModules={documentProcForGlobalModules}
             />
 
             <br />
@@ -594,10 +484,6 @@ function App() {
                       computePercentage={computePercentage}
                       isDemo={isDemo}
                       moduleName={moduleName}
-                      usersModulesCollectionReference={
-                        usersModulesCollectionReference
-                      }
-                      usersModulesFromDB={usersModulesFromDB}
                       userAuthObject={userAuthObject}
                     />
                   </>
@@ -625,8 +511,6 @@ function App() {
             databaseUserDocument={databaseUserDocument}
             computePercentage={computePercentage}
             globalImpactCounter={globalImpactCounter}
-            usersModulesCollectionReference={usersModulesCollectionReference}
-            usersModulesFromDB={usersModulesFromDB}
             usersEmotionsCollectionReference={usersEmotionsCollectionReference}
             usersEmotionsFromDB={usersEmotionsFromDB}
             globalScholarshipCounter={globalScholarshipCounter}

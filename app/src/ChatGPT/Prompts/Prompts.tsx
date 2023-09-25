@@ -17,9 +17,6 @@ export const Prompts = ({
   patreonObject,
   handleSubmit,
   userDocumentReference,
-  usersModulesCollectionReference,
-
-  usersModulesFromDB,
 
   //pow
   displayName,
@@ -256,8 +253,6 @@ export const Prompts = ({
             databaseUserDocument={databaseUserDocument}
             computePercentage={computePercentage}
             globalImpactCounter={globalImpactCounter}
-            usersModulesCollectionReference={usersModulesCollectionReference}
-            usersModulesFromDB={usersModulesFromDB}
             globalScholarshipCounter={globalScholarshipCounter}
             isDemo={isDemo}
           />

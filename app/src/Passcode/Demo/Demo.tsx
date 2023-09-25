@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { ChatGPT } from "../../ChatGPT/ChatGPT";
-import { randomLessonGeneratorMachine444, ui } from "../../common/uiSchema";
 
 export const Demo = ({
   userDocumentReference,
@@ -20,13 +19,6 @@ export const Demo = ({
         {demoName ? demoName : patreonObject.button}
       </h2>
       <ChatGPT
-        // patreonObject={patreonObject}
-        // userDocumentReference={userDocumentReference}
-        // databaseUserDocument={databaseUserDocument}
-        // setDatabaseUserDocument={setDatabaseUserDocument}
-        // globalDocumentReference={globalDocumentReference}
-        // globalImpactCounter={globalImpactCounter}
-        // setGlobalImpactCounter={setGlobalImpactCounter}
         patreonObject={patreonObject}
         userDocumentReference={userDocumentReference}
         databaseUserDocument={databaseUserDocument}
