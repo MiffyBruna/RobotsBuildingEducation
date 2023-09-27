@@ -80,12 +80,6 @@ export let computeResponseList = (patreonObject, promptType) => {
             },
           ]
         : []),
-
-      ...(patreonObject?.prompts?.['practice']?.response ? [{
-        response: patreonObject?.prompts?.["furtherReading"]?.response,
-        type: "practice",
-        icon: "🥋",
-      }] : []),
     ];
   } else if (promptType === "practice") {
     list = [

@@ -571,42 +571,7 @@ export const LearnMore = ({ auth }) => {
             </div>
             <br />
             <br />
-            <div
-              style={{
-                ...textBlock(japaneseThemePalette.SakuraMochiPink, 0, 24),
-              }}
-            >
-              <h3>Boss Mode</h3>
-              <i>theme: testing</i>
-              <p style={{ maxWidth: "100%", width: 700 }}>
-                Boss Mode will create a challenging testing environment where
-                you can be assisted by AI to reinforce learning. Think of it of
-                it like Duolingo meets Bowser. You will be taught to fail
-                forward.
-              </p>
-            </div>
-            <br />
-            <br />
-            <div
-              style={{
-                ...textBlock(japaneseThemePalette.DeepCherryBlossomPink, 0, 24),
-              }}
-            >
-              <h2>RO.₿.E</h2>
-              <i>theme: intelligent assistance</i>
-              <p style={{ maxWidth: "100%", width: 700 }}>
-                Robots Building Education will be tools built for teachers and
-                students so that they can create content for a classroom. Right
-                now, you can generate "courses" in my style and share them
-                publicly. In the future, you will have this feature available
-                for private classrooms, so that students can create content for
-                class when they're too nervous to ask questions. Eventually,
-                full customization will be allowed to add more human touch to
-                the content created (like my course).
-              </p>
-            </div>
-            <br />
-            <br />
+
             <div
               style={{
                 ...textBlock(japaneseThemePalette.SakuraMochiPink, 0, 24),

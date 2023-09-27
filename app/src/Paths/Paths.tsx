@@ -20,9 +20,6 @@ export const Paths = ({
   // active prop will handle some styling to display restricted or blocked access
 
   const top = ["Engineer", "Creator", "Entrepeneur"];
-  const bot = ["RO.₿.E", "Boss Mode"];
-
-  console.log("pathSelectionAnimationData", pathSelectionAnimationData);
 
   let displayTop = top.map((path) => (
     <StyledLink
@@ -37,23 +34,9 @@ export const Paths = ({
     </StyledLink>
   ));
 
-  let displayBot = bot.map((path) => (
-    <StyledLink
-      active
-      to="/"
-      path={path}
-      id={path}
-      onClick={handlePathSelection}
-      isBot
-    >
-      {path !== "Entrepeneur" ? path : "Dealer"}
-    </StyledLink>
-  ));
-
   return (
     <>
       <StyledNavigationContainer>{displayTop}</StyledNavigationContainer>
-      {/* <StyledNavigationContainer>{displayBot}</StyledNavigationContainer> */}
     </>
   );
 };

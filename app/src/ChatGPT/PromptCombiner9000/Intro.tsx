@@ -1,33 +1,21 @@
 import { logEvent } from "firebase/analytics";
 import { Spinner } from "react-bootstrap";
 import { isEmpty } from "lodash";
-import lionel from "../../../common/media/images/lionel.png";
-import roxanaGif from "../../../common/media/images/roxanaGif.gif";
-import { analytics } from "../../../database/firebaseResources";
+import lionel from "../../common/media/images/lionel.png";
+import roxanaGif from "../../common/media/images/roxanaGif.gif";
+import { analytics } from "../../database/firebaseResources";
+import { RoxanaLoadingAnimation } from "../../common/uiSchema";
 
 export const Intro = ({
   isDemo,
   moduleName,
   patreonObject,
   loadingMessage,
-  chatGptResponse,
+  isResponseActive,
   promptSelection,
   shouldRenderIntro,
 }) => {
   if (!isEmpty(patreonObject)) {
-    let RoxanaLoadingAnimation = () => {
-      return (
-        <div>
-          <Spinner animation="grow" variant="info" size="sm">
-            <span className="visually-hidden">Loading...</span>
-          </Spinner>
-          <img width="150px" src={roxanaGif} />
-          <Spinner animation="grow" variant="primary" size="sm">
-            <span className="visually-hidden">Loading...</span>
-          </Spinner>
-        </div>
-      );
-    };
     let RoxanaIntroText = () => {
       if (isDemo && shouldRenderIntro) {
         return (
@@ -232,24 +220,17 @@ export const Intro = ({
           borderTopLeftRadius: 30,
           borderTopRightRadius: 30,
           borderBottomRightRadius: 30,
-          //  border:'1px solid #252930'
-
-          // overflow: "auto",
-          // maxWidth: "80%",
-          // maxWidth: 300,
-          // maxWidth: loadingStates.demonstrate ? "100%" : "75%",
-          // minWidth: loadingStates.demonstrate ? "100%" : "75%",
         }}
       >
         <div style={{ display: "flex" }}>
           {loadingMessage ? (
             <RoxanaLoadingAnimation />
-          ) : chatGptResponse ? (
+          ) : isResponseActive ? (
             <h2>
-              {promptSelection === "patreon" ? "⚡🎨►✍️" : null}
-              {promptSelection === "guide" ? "📚🔮🤝🧿🧪" : null}
-              {promptSelection === "shop" ? "🛍️" : null}
-              {promptSelection === "practice" ? "🥋" : null}
+              {promptSelection === "patreon" ? "Discover ►✍️⚡🎨" : null}
+              {promptSelection === "guide" ? "Guide 🧿📚🔮🗺️🧪" : null}
+              {promptSelection === "shop" ? "Shop 🛍️" : null}
+              {promptSelection === "practice" ? "Practice 🥋" : null}
             </h2>
           ) : (
             <RoxanaIntroText />

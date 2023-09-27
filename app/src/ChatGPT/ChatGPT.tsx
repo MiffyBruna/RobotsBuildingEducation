@@ -7,12 +7,12 @@ import { Prompts } from "./Prompts/Prompts";
 
 import { analytics } from "../database/firebaseResources";
 import { logEvent } from "firebase/analytics";
-import { PromptCombiner9000 } from "./Roxana/PromptCombiner9000/PromptCombiner9000";
+import { PromptCombiner9000 } from "./PromptCombiner9000/PromptCombiner9000";
 import {
   computeResponseList,
   computeTotalImpactFromPrompt,
 } from "./ChatGPT.compute";
-import { Intro } from "./Roxana/PromptCombiner9000/Intro";
+import { Intro } from "./PromptCombiner9000/Intro";
 
 export const ChatGPT = ({
   globalScholarshipCounter,
@@ -37,7 +37,7 @@ export const ChatGPT = ({
   const [promptMessage, setPromptMessage] = useState("");
   const [isSpanishActive, setIsSpanishActive] = useState(false);
   const [loadingMessage, setLoadingMessage] = useState("");
-  const [chatGptResponse, setChatGptResponse] = useState("");
+  const [isResponseActive, setIsResponseActive] = useState(false);
   const [chatGptResponseList, setChatGptResponseList] = useState([]);
   const [promptSelection, setPromptSelection] = useState("");
 
@@ -45,7 +45,7 @@ export const ChatGPT = ({
   useEffect(() => {
     // this is legacy code when all prompts
 
-    setChatGptResponse("");
+    setIsResponseActive(false);
     setPromptMessage("");
     setChatGptResponseList([]);
   }, [patreonObject]);
@@ -92,6 +92,7 @@ export const ChatGPT = ({
   };
 
   const handleSubmit = async (event, prompt = null, promptType = null) => {
+    console.log("prompt...", prompt);
     event.preventDefault();
 
     // change discover/study
@@ -154,7 +155,7 @@ export const ChatGPT = ({
       };
     }
 
-    setChatGptResponse(prompt?.response);
+    setIsResponseActive(true);
     setChatGptResponseList(result?.response);
 
     // setChatGptResponse(parsedData);
@@ -210,8 +211,6 @@ export const ChatGPT = ({
     <div
       onSubmit={handleSubmit}
       style={{
-        // width: "fit-content",
-
         transition: "0.3s all ease-in-out",
         color: "white",
       }}
@@ -229,9 +228,10 @@ export const ChatGPT = ({
           moduleName={moduleName}
           patreonObject={patreonObject}
           loadingMessage={loadingMessage}
-          chatGptResponse={chatGptResponse}
+          isResponseActive={isResponseActive}
           promptSelection={promptSelection}
         />
+
         {chatGptResponseList?.map((response) => (
           <PromptCombiner9000
             loadingMessage={loadingMessage}
@@ -240,7 +240,6 @@ export const ChatGPT = ({
             patreonObject={patreonObject}
             isDemo={false}
             moduleName={moduleName}
-            promptSelection={promptSelection}
             isGeneratedDemo={isGeneratedDemo}
           />
         ))}

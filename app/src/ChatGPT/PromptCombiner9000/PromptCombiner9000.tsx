@@ -3,19 +3,15 @@ import React from "react";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { a11yDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import { isEmpty } from "lodash";
-import Spinner from "react-bootstrap/Spinner";
-import Patreon from "../../Patreon/Patreon";
-import puesFuckIt from "../../../common/media/images/puesFuckIt.jpeg";
-import { analytics } from "../../../database/firebaseResources";
 import { logEvent } from "firebase/analytics";
-import lionel from "../../../common/media/images/lionel.png";
-import roxanaGif from "../../../common/media/images/roxanaGif.gif";
-import "../Roxana.css";
-import { Sketching } from "./Sketching";
-import CodeEditor from "../../CodeEditor/CodeEditor";
-// import CanvasComponent from "./CanvasComponent";
 
-// This is an archived version of a set of 9 prompts.
+import Patreon from "../Patreon/Patreon";
+import { analytics } from "../../database/firebaseResources";
+
+// import { Sketching } from "./Sketching";
+// import CanvasComponent from "./CanvasComponent";
+import CodeEditor from "../CodeEditor/CodeEditor";
+
 export const PromptCombiner9000 = ({
   loadingMessage,
 
@@ -23,30 +19,8 @@ export const PromptCombiner9000 = ({
   patreonObject,
   isDemo,
   moduleName = "demo",
-  promptSelection,
   isGeneratedDemo,
 }) => {
-  // if(promptType === 'patreon'){
-  //    list = [
-  //     patreonObject?.prompts['inspire'].response,
-  //     patreonObject?.prompts['patreon'].response,
-  //     patreonObject?.prompts['demonstrate'].response,
-  //   ];
-
-  // }else if(promptType === 'guide'){
-  //    list = [
-  //     patreonObject?.prompts['define'].response,
-  //     patreonObject?.prompts['summarize'].response,
-  //     patreonObject?.prompts['ask'].response,
-  //           patreonObject?.prompts['guide'].response,
-  //                 patreonObject?.prompts['quiz'].response,
-  //   ]
-  // }else if(promptType==='shop'){
-  //   list = [
-  //     patreonObject?.prompts['shop'].response,
-  //   ]
-  // }
-
   if (!isEmpty(patreonObject)) {
     return (
       <>
@@ -193,50 +167,6 @@ export const PromptCombiner9000 = ({
                     <img
                       src={patreonObject?.prompts?.shop?.advertisementImageSrc}
                       style={patreonObject?.prompts?.shop?.backgroundStyles}
-                    />
-                  </a>
-                </div>
-              ) : loadingMessage.length < 1 &&
-                chatGptResponse.response &&
-                chatGptResponse.type === "shop" &&
-                isDemo ? (
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-
-                    textAlign: "center",
-                  }}
-                >
-                  <h3>The PF Collections</h3>
-                  <h5>
-                    {
-                      "👕👚➡️# A journey to Street Fashion🔞 bold style for Los Chingones 🔥Frisco 415🔥"
-                    }
-                  </h5>
-                  <a
-                    onClick={() =>
-                      logEvent(analytics, "select_promotion", {
-                        creative_name: "https://thepfcollections.com/",
-                        creative_slot: "Demo Shop Slot",
-                        promotion_id: "The PF Collection",
-                        promotion_name: "advertising_launch",
-                      })
-                    }
-                    href="https://thepfcollections.com/"
-                    target={"_blank"}
-                  >
-                    <img
-                      src={puesFuckIt}
-                      style={{
-                        boxShadow:
-                          "0 10px 20px rgba(0,0,0,1), 0 6px 6px rgba(0,0,0,1)",
-                        height: 150,
-                        width: 150,
-                        borderRadius: "12px",
-                        marginTop: 12,
-                      }}
                     />
                   </a>
                 </div>

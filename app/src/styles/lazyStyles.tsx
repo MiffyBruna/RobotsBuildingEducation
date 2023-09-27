@@ -71,21 +71,6 @@ export const StyledModule = styled.button`
     }};
 
   text-shadow: 1px 1px 5px black;
-  /* background-color: ${(props) => {
-    return props.patreonObject.isModuleDisabled
-      ? "#11220E"
-      : props.patreonObject.header === "Boss Mode"
-      ? "#590f04"
-      : props.patreonObject.rare
-      ? "#DA830D"
-      : props.patreonObject.highValue
-      ? "#F8B125"
-      : props.patreonObject.new
-      ? "#f6a3ff"
-      : props.patreonObject.underConstruction
-      ? "#6A74B4"
-      : "#F099AD";
-  }}; */
 
   /* cursor: ${(props) => {
     return props.patreonObject.isModuleDisabled ? "not-allowed" : "grab";
@@ -141,8 +126,6 @@ export const ComingSoonModule = styled.button`
   background-color: ${(props) => {
     return props.patreonObject.isModuleDisabled
       ? "black"
-      : props.patreonObject.header === "Boss Mode"
-      ? "#590f04"
       : props.patreonObject.rare
       ? "#DA830D"
       : props.patreonObject.highValue

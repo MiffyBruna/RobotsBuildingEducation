@@ -32,7 +32,7 @@ export const Prompts = ({
     let promptKeys = Object.keys(patreonObject.prompts);
     let borderHighlight = "#48484a";
     let promptMap =
-      currentPath === "Boss Mode"
+      currentPath === ""
         ? [
             !isRaidActive ? (
               <StyledPromptButton

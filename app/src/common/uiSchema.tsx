@@ -1,10 +1,9 @@
-import { OverlayTrigger, Spinner, Tooltip } from "react-bootstrap";
+import { Spinner } from "react-bootstrap";
 
 import { Creator } from "./ui/Creator/Creator";
 import { Engineer } from "./ui/Engineer/Engineer";
 import { Entrepeneur } from "./ui/Entrepeneur/Entrepeneur";
 import roxanaGif from "./media/images/roxanaGif.gif";
-import { BossMode } from "./ui/BossMode/BossMode";
 
 interface IPrompt {
   // has the user selected? when database is passed into ui()
@@ -132,8 +131,6 @@ interface IPath {
   Engineer: ICollection;
   Creator: ICollection;
   Entrepeneur: ICollection;
-  "Boss Mode": ICollection | Record<string, any>;
-  // "Raise Ur Hand": ICollection | Record<string, any>;
 }
 
 // be pro customization. Redundancy is fine if it allows for more customization.
@@ -145,17 +142,9 @@ export const ui = (): IPath => {
     Engineer: Engineer,
     Creator: Creator,
     Entrepeneur: Entrepeneur,
-    "Boss Mode": BossMode,
-    // "Raise Ur Hand": {},
   };
 };
-export let uiPaths = [
-  "Engineer",
-  "Creator",
-  "Entrepeneur",
-  "Boss Mode",
-  // "Raise Ur Hand",
-];
+export let uiPaths = ["Engineer", "Creator", "Entrepeneur"];
 
 // this manages the view when selected `engineer, creator, business or 26th street`
 export let controlPathVisibilityMap = (visibilityMap, selectedPath) => {
@@ -181,7 +170,8 @@ export let getGlobalImpact = () => {
     "Crash Course Version 2 (older version)",
   ];
 
-  const ignorePath = ["Boss Mode"];
+  //used to be boss mode
+  const ignorePath = [];
 
   const ignoreModule = ["Memes", "Self-esteem"];
 

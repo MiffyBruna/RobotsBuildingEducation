@@ -21,7 +21,6 @@ export let words = {
         "4": "Engineer",
         "5": "Creator",
         "6": "Dealer",
-        "7": "Boss Mode",
         "8": "RO.B.E.",
         "9": "Frequently Asked Questions",
         "10": "What kind of computer do I need?",
@@ -68,7 +67,7 @@ export let words = {
       "12": "Creator",
       "13": "Dealer",
       "14": "RO.₿.E",
-      "15": "Boss Mode",
+
 
       //modules (tbd)
 
