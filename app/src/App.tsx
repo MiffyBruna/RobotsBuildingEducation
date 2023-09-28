@@ -502,6 +502,8 @@ function App() {
           bottom: 0,
           width: "100%",
           backgroundColor: "rgba(28,28,30,0.75)",
+          // border: "5px solid red",
+          // height: "75px",
         }}
       >
         {databaseUserDocument && isSignedIn && isZeroKnowledgeUser ? (

@@ -40,7 +40,7 @@ export const StyledCollectionContainer = styled.div`
 `;
 export const StyledModule = styled.button`
   border: 1px solid #636366;
-  // background-color: black;
+  background-color: black;
   // background-size: cover;
   box-sizing: border-box;
   margin: 8px;

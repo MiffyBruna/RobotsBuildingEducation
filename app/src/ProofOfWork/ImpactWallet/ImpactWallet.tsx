@@ -133,6 +133,7 @@ export const ImpactWallet = ({
               backgroundColor: "black",
               borderRadius: "0px",
               margin: 6,
+              height: 6,
             }}
             variant="success"
             now={Math.floor(computePercentage * 100)}

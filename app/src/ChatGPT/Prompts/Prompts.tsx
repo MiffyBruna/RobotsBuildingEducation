@@ -8,23 +8,7 @@ import { ProofOfWork } from "../../ProofOfWork/ProofOfWork";
 import { StyledPromptButton } from "../../styles/lazyStyles";
 // import { DiscordButton } from "./DiscordButton/DiscordButton";
 
-export const Prompts = ({
-  globalScholarshipCounter,
-  currentPath,
-  //roxana
-  loadingMessage,
-  patreonObject,
-  handleSubmit,
-
-  //pow
-  displayName,
-  databaseUserDocument,
-  computePercentage,
-  globalImpactCounter,
-  userAuthObject,
-
-  isDemo,
-}) => {
+export const Prompts = ({ loadingMessage, patreonObject, handleSubmit }) => {
   if (!isEmpty(patreonObject)) {
     const [isModalOpen, setIsModalOpen] = useState(false);
     let borderHighlight = "#48484a";
@@ -133,18 +117,6 @@ export const Prompts = ({
         >
           💗 Roxana
         </Button>
-        <br />
-        {isDemo ? (
-          <ProofOfWork
-            userAuthObject={userAuthObject}
-            displayName={displayName}
-            databaseUserDocument={databaseUserDocument}
-            computePercentage={computePercentage}
-            globalImpactCounter={globalImpactCounter}
-            globalScholarshipCounter={globalScholarshipCounter}
-            isDemo={isDemo}
-          />
-        ) : null}
 
         <br />
         <br />

@@ -253,14 +253,6 @@ export const ChatGPT = ({
         patreonObject={patreonObject}
         handleSubmit={handleSubmit}
         userDocumentReference={userDocumentReference}
-        displayName={displayName}
-        databaseUserDocument={databaseUserDocument}
-        computePercentage={computePercentage}
-        globalImpactCounter={globalImpactCounter}
-        userAuthObject={userAuthObject}
-        currentPath={currentPath}
-        globalScholarshipCounter={globalScholarshipCounter}
-        isDemo={isDemo}
 
         //pow
       />

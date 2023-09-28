@@ -11,7 +11,6 @@ export const ProofOfWork = ({
   isModule = false,
 
   handlePathSelection,
-  isDemo,
   globalReserveObject,
   usersEmotionsCollectionReference,
   usersEmotionsFromDB,

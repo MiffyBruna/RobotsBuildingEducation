@@ -262,34 +262,10 @@ export const Apply = ({
                     ⚡ Copy Lightning Address
                   </Button>
                 </div>
-                {/* <p style={{ maxWidth: 720 }}>
-                <br />
-                100% of subscriptions are stored as Bitcoin as a reserve system
-                for RO.B.E. This reserve is designed to position Robots Building
-                Education for growth. You're encouraged to send Bitcoin as
-                another way to support the growth of RO.B.E without
-                subscriptions. This is currently the <b>only</b> way I'm
-                monetizing on RO.B.E
-              </p> */}
-
                 <br />
               </div>
             </p>
             <br />
-            {/* <Demo
-              userDocumentReference={userDocumentReference}
-              databaseUserDocument={databaseUserDocument}
-              setDatabaseUserDocument={setDatabaseUserDocument}
-              globalDocumentReference={globalDocumentReference}
-              globalImpactCounter={globalImpactCounter}
-              setGlobalImpactCounter={setGlobalImpactCounter}
-              computePercentage={computePercentage}
-              patreonObject={
-                ui()["Creator"]["Communication Science"]["Philosophy"]
-              }
-              isDemo={true}
-              demoName={"Demo: Philosophy @ RO.B.E"}
-            /> */}
           </p>
         </Modal.Body>
         <Modal.Footer style={{ backgroundColor: "black", color: "white" }}>
