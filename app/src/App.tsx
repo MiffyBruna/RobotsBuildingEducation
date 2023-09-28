@@ -30,24 +30,23 @@ logEvent(analytics, "page_view", {
   page_location: "https://learn-robotsbuildingeducation.firebaseapp.com/",
 });
 
-function App() {
-  let params = useParams();
-
-  // auth state
-  const [isSignedIn, setIsSignedIn] = useState("start"); // Local signed-in state.
+const useAuthState = () => {
+  const [isSignedIn, setIsSignedIn] = useState("start");
   const [isZeroKnowledgeUser, setIsZeroKnowledgeUser] = useState(false);
   const [userAuthObject, setUserAuthObject] = useState({});
+  return {
+    isSignedIn,
+    setIsSignedIn,
+    isZeroKnowledgeUser,
+    setIsZeroKnowledgeUser,
+    userAuthObject,
+    setUserAuthObject,
+  };
+};
 
-  // this is the actual data inside a user document for UI
+const useUserDocument = () => {
   const [databaseUserDocument, setDatabaseUserDocument] = useState({});
-
-  // this is a document object reference for a user collection
   const [userDocumentReference, setUserDocumentReference] = useState({});
-
-  //**important 🤪: this is a terrible reference. It's used to process the "impact" document found inside of the "global" collection
-  //it's due for a refactor, see globalReserveObject. It may be redundant.
-  const [globalDocumentReference, setGlobalDocumentReference] = useState({});
-
   const [
     usersEmotionsCollectionReference,
     setUsersEmotionsCollectionReference,
@@ -55,45 +54,123 @@ function App() {
 
   const [usersEmotionsFromDB, setUsersEmotionsFromDB] = useState([]);
 
-  // used to count total global count. used to get all work done before this global counter was implemented.
+  return {
+    databaseUserDocument,
+    setDatabaseUserDocument,
+    userDocumentReference,
+    setUserDocumentReference,
+    usersEmotionsCollectionReference,
+    setUsersEmotionsCollectionReference,
+    usersEmotionsFromDB,
+    setUsersEmotionsFromDB,
+  };
+};
+
+const useGlobalStates = () => {
+  const [globalDocumentReference, setGlobalDocumentReference] = useState({});
   const [globalImpactCounter, setGlobalImpactCounter] = useState(0);
-
-  // ui db data result
   const [globalScholarshipCounter, setGlobalScholarshipCounter] = useState(0);
-
-  // ui db data result
   const [globalReserveObject, setGobalReserveObject] = useState({});
+  return {
+    globalDocumentReference,
+    setGlobalDocumentReference,
+    globalImpactCounter,
+    setGlobalImpactCounter,
+    globalScholarshipCounter,
+    setGlobalScholarshipCounter,
+    globalReserveObject,
+    setGobalReserveObject,
+  };
+};
 
-  // ui schema result
-  const [patreonObject, setPatreonObject] = useState<Record<string, any>>({});
-
-  // ui schema result
+const useUIStates = () => {
+  const [patreonObject, setPatreonObject] = useState({});
   const [currentPath, setCurrentPath] = useState("");
-
-  // copy of currentPath probably for analytics reasons and not UI ones
   const [currentPathForAnalytics, setCurrentPathForAnalytics] = useState("");
-
-  // calculates impact from all modules
+  const [moduleName, setModuleName] = useState("");
+  const [pathSelectionAnimationData, setPathSelectionAnimationData] = useState(
+    {}
+  );
+  const [visibilityMap, setVisibilityMap] = useState({});
+  const [isDemo, setIsDemo] = useState(true);
   const [proofOfWorkFromModules, setProofOfWorkFromModules] = useState(0);
 
-  //demo flag
-  const [isDemo, setIsDemo] = useState(true);
+  return {
+    patreonObject,
+    setPatreonObject,
+    currentPath,
+    setCurrentPath,
+    currentPathForAnalytics,
+    setCurrentPathForAnalytics,
+    moduleName,
+    setModuleName,
+    pathSelectionAnimationData,
+    setPathSelectionAnimationData,
+    visibilityMap,
+    setVisibilityMap,
+    isDemo,
+    setIsDemo,
+    proofOfWorkFromModules,
+    setProofOfWorkFromModules,
+  };
+};
 
-  // ui state
-  const [moduleName, setModuleName] = useState("");
+function App() {
+  let params = useParams();
 
-  // ui state
-  const [pathSelectionAnimationData, setPathSelectionAnimationData] = useState({
-    boxShadow: null,
-    path: null,
-  });
+  // handles passcode, google sign in and registered user info
+  const {
+    isSignedIn,
+    setIsSignedIn,
+    isZeroKnowledgeUser,
+    setIsZeroKnowledgeUser,
+    userAuthObject,
+    setUserAuthObject,
+  } = useAuthState();
 
-  const [visibilityMap, setVisibilityMap] = useState({
-    Engineer: false,
+  let {
+    // this is the actual data inside a user document for UI
+    databaseUserDocument,
+    setDatabaseUserDocument,
 
-    Creator: false,
-    Business: false,
-  });
+    // this is a document object reference for a user collection
+    userDocumentReference,
+    setUserDocumentReference,
+    usersEmotionsCollectionReference,
+    setUsersEmotionsCollectionReference,
+    usersEmotionsFromDB,
+    setUsersEmotionsFromDB,
+  } = useUserDocument();
+
+  let {
+    globalDocumentReference,
+    setGlobalDocumentReference,
+    globalImpactCounter,
+    setGlobalImpactCounter,
+    globalScholarshipCounter,
+    setGlobalScholarshipCounter,
+    globalReserveObject,
+    setGobalReserveObject,
+  } = useGlobalStates();
+
+  let {
+    patreonObject,
+    setPatreonObject,
+    currentPath,
+    setCurrentPath,
+    currentPathForAnalytics,
+    setCurrentPathForAnalytics,
+    moduleName,
+    setModuleName,
+    pathSelectionAnimationData,
+    setPathSelectionAnimationData,
+    visibilityMap,
+    setVisibilityMap,
+    isDemo,
+    setIsDemo,
+    proofOfWorkFromModules,
+    setProofOfWorkFromModules,
+  } = useUIStates();
 
   // basic control for visual state - may be converted to animated route
   const handlePathSelection = (event) => {
