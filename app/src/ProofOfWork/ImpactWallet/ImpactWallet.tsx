@@ -18,7 +18,7 @@ export const ImpactWallet = ({
   isImpactWalletOpen,
   setIsImpactWalletOpen,
 
-  userAuthObject = { uid: "demo" },
+  userAuthObject = { uid: "null" },
   handlePathSelection,
   isDemo,
   globalReserveObject,

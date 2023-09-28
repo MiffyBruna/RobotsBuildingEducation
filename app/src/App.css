@@ -54,3 +54,17 @@
 .modal-footer {
   border-top: 1px solid black;
 }
+
+.firebaseui-idp-button {
+  background-color: black!important;
+  transition: 0.23s all ease-in-out;
+
+}
+.firebaseui-idp-button:hover {
+  transform: scale(1.05);
+    box-shadow: 0px 0px 25px 0px rgba(60,60,60,1);
+  }
+
+.firebaseui-idp-text{
+  color: white!important;
+}

@@ -1,22 +1,10 @@
 import { Button } from "react-bootstrap";
-import { useEffect, useState, useReducer } from "react";
-import { Demo } from "./Demo/Demo";
 import { logEvent } from "firebase/analytics";
 import { analytics } from "../database/firebaseResources";
 import { ui } from "../common/uiSchema";
+import ChatGPT from "../ChatGPT/ChatGPT";
 
-export const Passcode = ({
-  handleZeroKnowledgePassword,
-
-  userDocumentReference,
-  databaseUserDocument,
-  setDatabaseUserDocument,
-  globalDocumentReference,
-  globalImpactCounter,
-  setGlobalImpactCounter,
-  computePercentage,
-  patreonObject,
-}) => {
+export const Passcode = ({ handleZeroKnowledgePassword, patreonObject }) => {
   return (
     <div>
       <h2>Enter Passcode</h2>
@@ -47,22 +35,20 @@ export const Passcode = ({
       <br />
       <br />
       {patreonObject ? (
-        <Demo
-          userDocumentReference={userDocumentReference}
-          databaseUserDocument={databaseUserDocument}
-          setDatabaseUserDocument={setDatabaseUserDocument}
-          globalDocumentReference={globalDocumentReference}
-          globalImpactCounter={globalImpactCounter}
-          setGlobalImpactCounter={setGlobalImpactCounter}
-          computePercentage={computePercentage}
-          patreonObject={
-            ui()["Engineer"]["Coding Crash Course Version 3"][
-              "Learning Mindset & Perspective"
-            ]
-          }
-          isDemo={true}
-          demoName={"Demo: Learning Mindset & Perspective"}
-        />
+        <div>
+          <h2 style={{ color: "white", marginTop: 12 }}>
+            {/* Lesson 1 - Coding &amp; Logic */}
+            Demo: {patreonObject.header}
+          </h2>
+          <ChatGPT
+            patreonObject={
+              ui()["Engineer"]["Coding Crash Course Version 3"][
+                "Learning Mindset & Perspective"
+              ]
+            }
+            isDemo={true}
+          />
+        </div>
       ) : null}
     </div>
   );

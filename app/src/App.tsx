@@ -33,9 +33,6 @@ logEvent(analytics, "page_view", {
 function App() {
   let params = useParams();
 
-  // mounts data from route - needs refactoring/rearchitecting
-  const [isLoadingRoute, setIsLoadingRoute] = useState(false);
-
   // auth state
   const [isSignedIn, setIsSignedIn] = useState("start"); // Local signed-in state.
   const [isZeroKnowledgeUser, setIsZeroKnowledgeUser] = useState(false);
@@ -253,39 +250,6 @@ function App() {
         // });
       } else {
         setIsSignedIn(false);
-        const docRef = doc(database, "users", "demoUsers");
-        const globalImpactDocRef = doc(database, "global", "impact");
-        getDoc(docRef)
-          .then((res) => {
-            if (!res?.data()) {
-              // first time user logs in. set up proof of work in their user document
-              setDoc(docRef, {
-                impact: 0,
-                userAuthObj: { uid: userAuthObject.uid },
-              })
-                .then(() => {
-                  return getDoc(docRef);
-                })
-                .then((response) => {
-                  setDatabaseUserDocument(response.data());
-                });
-            } else {
-              setDatabaseUserDocument(res.data());
-            }
-          })
-          .catch((error) => "ERROR");
-
-        getDoc(globalImpactDocRef).then((res) => {
-          setGlobalImpactCounter(res.data().total);
-        });
-        const globalReserveDocRef = doc(database, "global", "reserve");
-
-        getDoc(globalReserveDocRef).then((res) => {
-          setGlobalScholarshipCounter(res.data().scholarships);
-        });
-
-        setUserDocumentReference(docRef);
-        setGlobalDocumentReference(globalImpactDocRef);
         setIsDemo(true);
       }
     });
@@ -312,16 +276,10 @@ function App() {
   return (
     <>
       <div className="App" style={{ minHeight: "100vh" }}>
-        <Header
-          auth={auth}
-          patreonObject={patreonObject}
-          userDocumentReference={userDocumentReference}
-          databaseUserDocument={databaseUserDocument}
-          setDatabaseUserDocument={setDatabaseUserDocument}
-          globalImpactCounter={globalImpactCounter}
-          setGlobalImpactCounter={setGlobalImpactCounter}
-          computePercentage={computePercentage}
-        />
+        <Header />
+
+        {/* User enters passcode, and sees a google login button */}
+        {/* typeof string is checked because initial state is "start" but then uses booleans */}
         {typeof isSignedIn === "string" ||
         (!isSignedIn && isZeroKnowledgeUser) ? (
           <div
@@ -336,24 +294,21 @@ function App() {
               logEvent(analytics, "login", { method: "Google" });
             }}
           >
+            Access all features:
             <AuthComponent
               id="firebaseui-auth-container"
               uiConfig={uiConfig}
               firebaseAuth={auth}
+              style={{ backgroundColor: "black" }}
             />
           </div>
         ) : null}
+
+        {/* If the user hasn't submitted a passcode, the user sees a passcode field */}
         {!isZeroKnowledgeUser ? (
           <Passcode
             patreonObject={patreonObject}
             handleZeroKnowledgePassword={handleZeroKnowledgePassword}
-            userDocumentReference={userDocumentReference}
-            databaseUserDocument={databaseUserDocument}
-            setDatabaseUserDocument={setDatabaseUserDocument}
-            globalDocumentReference={globalDocumentReference}
-            globalImpactCounter={globalImpactCounter}
-            setGlobalImpactCounter={setGlobalImpactCounter}
-            computePercentage={computePercentage}
           />
         ) : null}
 
@@ -435,29 +390,16 @@ function App() {
             />
 
             <Collections
-              userAuthObject={userAuthObject}
-              visibilityMap={visibilityMap}
               handleModuleSelection={handleModuleSelection}
               currentPath={currentPath}
-              patreonObject={patreonObject}
-              userDocumentReference={userDocumentReference}
-              databaseUserDocument={databaseUserDocument}
-              setDatabaseUserDocument={setDatabaseUserDocument}
-              globalDocumentReference={globalDocumentReference}
-              globalImpactCounter={globalImpactCounter}
-              setGlobalImpactCounter={setGlobalImpactCounter}
-              displayName={auth?.currentUser?.displayName || "@DemoRobots"}
-              computePercentage={computePercentage}
-              isDemo={isDemo}
-              moduleName={moduleName}
             />
 
             <br />
 
-            {!isEmpty(patreonObject.button) ? (
+            {/* this is a header after selecting a lecture module */}
+            {!isEmpty(patreonObject.header) ? (
               <h2 style={{ color: "white", marginTop: 12 }}>
-                {" "}
-                {patreonObject?.button || ""}{" "}
+                {patreonObject?.header || ""}{" "}
               </h2>
             ) : null}
 
@@ -468,7 +410,6 @@ function App() {
                 {isEmpty(patreonObject) && !isDemo ? null : (
                   <>
                     <ChatGPT
-                      globalScholarshipCounter={globalScholarshipCounter}
                       currentPath={currentPathForAnalytics}
                       patreonObject={patreonObject}
                       userDocumentReference={userDocumentReference}
@@ -477,13 +418,7 @@ function App() {
                       globalDocumentReference={globalDocumentReference}
                       globalImpactCounter={globalImpactCounter}
                       setGlobalImpactCounter={setGlobalImpactCounter}
-                      displayName={
-                        auth?.currentUser?.displayName || "@DemoRobots"
-                      }
-                      computePercentage={computePercentage}
-                      isDemo={isDemo}
                       moduleName={moduleName}
-                      userAuthObject={userAuthObject}
                     />
                   </>
                 )}
@@ -508,7 +443,7 @@ function App() {
         {databaseUserDocument && isSignedIn && isZeroKnowledgeUser ? (
           <ProofOfWork
             userAuthObject={userAuthObject}
-            displayName={auth?.currentUser?.displayName || "@DemoRobots"}
+            displayName={auth?.currentUser?.displayName}
             databaseUserDocument={databaseUserDocument}
             computePercentage={computePercentage}
             globalImpactCounter={globalImpactCounter}

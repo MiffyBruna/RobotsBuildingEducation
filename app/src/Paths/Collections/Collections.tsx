@@ -11,7 +11,6 @@ import { Module } from "./Module/Module";
 
 export const Collections = ({
   handleModuleSelection,
-
   currentPath,
 }): JSX.Element | null => {
   if (currentPath) {

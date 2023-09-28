@@ -40,15 +40,10 @@ const Advertisement = styled.div`
   text-align: center;
 `;
 
-const renderContent = (type, response, patreonObject, isGeneratedDemo) => {
+const renderContent = (type, response, patreonObject) => {
   switch (type) {
     case "patreon":
-      return (
-        <Patreon
-          patreonObject={patreonObject}
-          isGeneratedDemo={isGeneratedDemo}
-        />
-      );
+      return <Patreon patreonObject={patreonObject} />;
     case "practice":
       return <CodeEditor patreonObject={patreonObject} />;
     case "demonstrate":
@@ -80,9 +75,6 @@ export const PromptCombiner9000 = ({
   loadingMessage,
   chatGptResponse,
   patreonObject,
-
-  moduleName = "demo",
-  isGeneratedDemo,
 }) => {
   if (isEmpty(patreonObject)) {
     return null;
@@ -102,7 +94,7 @@ export const PromptCombiner9000 = ({
         <FlexBox>
           {loadingMessage.length < 1 &&
             response &&
-            renderContent(type, response, patreonObject, isGeneratedDemo)}
+            renderContent(type, response, patreonObject)}
         </FlexBox>
       </MessageContainer>
     </Wrapper>

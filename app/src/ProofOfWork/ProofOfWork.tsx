@@ -15,12 +15,13 @@ export const ProofOfWork = ({
   usersEmotionsCollectionReference,
   usersEmotionsFromDB,
   documentProcForUsersEmotions,
+  isDemo,
 }) => {
   const [isImpactWalletOpen, setIsImpactWalletOpen] = useState(false);
   const [isEmotionalIntelligenceOpen, setIsEmotionalIntelligenceOpen] =
     useState(false);
 
-  if (displayName === "@DemoRobots") {
+  if (isDemo) {
     return null;
   }
 

@@ -10,7 +10,7 @@ import { DiscordButton } from "../../ChatGPT/Prompts/DiscordButton/DiscordButton
 import { words } from "../../common/words/words";
 import { japaneseThemePalette, textBlock } from "../../styles/lazyStyles";
 
-export const LearnMore = ({ auth }) => {
+export const LearnMore = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <>

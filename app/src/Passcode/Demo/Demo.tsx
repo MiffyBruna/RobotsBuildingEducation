@@ -1,34 +1,14 @@
 import { useEffect, useState } from "react";
 import ChatGPT from "../../ChatGPT/ChatGPT";
 
-export const Demo = ({
-  userDocumentReference,
-  databaseUserDocument,
-  setDatabaseUserDocument,
-  globalDocumentReference,
-  globalImpactCounter,
-  setGlobalImpactCounter,
-  computePercentage,
-  patreonObject,
-  demoName = "",
-}) => {
+export const Demo = ({ patreonObject }) => {
   return (
     <div>
       <h2 style={{ color: "white", marginTop: 12 }}>
         {/* Lesson 1 - Coding &amp; Logic */}
-        {demoName ? demoName : patreonObject.button}
+        Demo: {patreonObject.header}
       </h2>
-      <ChatGPT
-        patreonObject={patreonObject}
-        userDocumentReference={userDocumentReference}
-        databaseUserDocument={databaseUserDocument}
-        setDatabaseUserDocument={setDatabaseUserDocument}
-        globalDocumentReference={globalDocumentReference}
-        globalImpactCounter={globalImpactCounter}
-        computePercentage={computePercentage}
-        setGlobalImpactCounter={setGlobalImpactCounter}
-        isDemo={true}
-      />
+      <ChatGPT patreonObject={patreonObject} isDemo={true} />
     </div>
   );
 };

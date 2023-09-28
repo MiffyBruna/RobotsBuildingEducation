@@ -1,10 +1,8 @@
+import React, { useState, useEffect } from "react";
 import { updateDoc } from "firebase/firestore";
-import { useState, useEffect } from "react";
 import { isEmpty } from "lodash";
-
 import { PromptMessage } from "./PromptMessage/PromptMessage";
 import { Prompts } from "./Prompts/Prompts";
-
 import { analytics } from "../database/firebaseResources";
 import { logEvent } from "firebase/analytics";
 import { PromptCombiner9000 } from "./PromptCombiner9000/PromptCombiner9000";
@@ -14,8 +12,21 @@ import {
 } from "./ChatGPT.compute";
 import { Intro } from "./PromptCombiner9000/Intro";
 
+const logAnalyticsEvent = (item_list_id, item_id, item_name) => {
+  logEvent(analytics, "select_item", {
+    item_list_id,
+    item_list_name: item_list_id,
+    items: [
+      {
+        item_id,
+        item_name,
+      },
+    ],
+  });
+};
+
 const ChatGPT = ({
-  currentPath = "demo",
+  currentPath,
   patreonObject,
   userDocumentReference,
   databaseUserDocument,
@@ -24,150 +35,47 @@ const ChatGPT = ({
   globalImpactCounter,
   setGlobalImpactCounter,
   isDemo = false,
-
-  moduleName = "demo",
-
-  isGeneratedDemo = false,
-}) => {
+  moduleName,
+}: Record<string, any>) => {
   const [shouldRenderIntro, setShouldRenderIntro] = useState(true);
   const [promptMessage, setPromptMessage] = useState("");
-
   const [loadingMessage, setLoadingMessage] = useState("");
   const [isResponseActive, setIsResponseActive] = useState(false);
   const [chatGptResponseList, setChatGptResponseList] = useState([]);
   const [promptSelection, setPromptSelection] = useState("");
 
-  // patreon, shop,
   useEffect(() => {
-    // this is legacy code when all prompts
-
     setIsResponseActive(false);
     setPromptMessage("");
     setChatGptResponseList([]);
   }, [patreonObject]);
 
   const handlePromptSelection = (promptType) => {
-    logEvent(analytics, "select_item", {
-      item_list_id: "RO.B.E_prompt",
-      item_list_name: "RO.B.E_prompt",
-      items: [
-        {
-          item_id: promptType,
-          item_name: promptType,
-        },
-      ],
-    });
-    logEvent(analytics, "select_item", {
-      item_list_id: `RO.B.E_prompt|${promptType}`,
-      item_list_name: `RO.B.E_prompt|${promptType}`,
-      items: [
-        {
-          item_id: `RO.B.E_prompt|${promptType}`,
-          item_name: `RO.B.E_prompt|${promptType}`,
-        },
-      ],
-    });
-
-    logEvent(analytics, "select_item", {
-      item_list_id: `RO.B.E_prompt|${promptType}|${moduleName}|${currentPath}`,
-      item_list_name: `RO.B.E_prompt|${promptType}|${moduleName}|${currentPath}`,
-      items: [
-        {
-          item_id: `RO.B.E_prompt|${promptType}|${moduleName}|${currentPath}`,
-          item_name: `RO.B.E_prompt|${promptType}|${moduleName}|${currentPath}`,
-        },
-      ],
-    });
-
-    // discover/study
-
+    const itemListId = `RO.B.E_prompt|${promptType}|${moduleName}|${currentPath}`;
+    logAnalyticsEvent(itemListId, itemListId, itemListId);
     setPromptSelection(promptType);
     setShouldRenderIntro(false);
-
     setLoadingMessage("...");
   };
 
   const handleSubmit = async (event, prompt = null, promptType = null) => {
-    console.log("prompt...", prompt);
     event.preventDefault();
-
-    // change discover/study
     setPromptMessage(prompt?.request);
-
     handlePromptSelection(promptType);
+    await new Promise((resolve) => setTimeout(resolve, 500));
 
-    // x
-    const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-    await delay(500);
-
-    // x
-
-    // change to a function that gets multiple responsesor components discover/study
-    // setChatGptResponseList([]);
-
-    let result = prompt;
-    if (promptType === "patreon") {
-      result = {
-        response: computeResponseList(patreonObject, promptType), //compute
-        impact: computeTotalImpactFromPrompt(patreonObject, promptType), // compute
-      };
-    } else if (promptType === "guide") {
-      result = {
-        response: computeResponseList(patreonObject, promptType), //compute
-        impact: computeTotalImpactFromPrompt(patreonObject, promptType), // compute
-      };
-    } else if (promptType === "shop") {
-      result = {
-        response: computeResponseList(patreonObject, promptType), //compute
-        impact: computeTotalImpactFromPrompt(patreonObject, promptType), // compute
-      };
-    } else if (promptType === "practice") {
-      result = {
-        response: computeResponseList(patreonObject, promptType), //compute
-        impact: computeTotalImpactFromPrompt(patreonObject, promptType), // compute
-      };
-    }
+    let result = computeResult(promptType, patreonObject);
 
     setIsResponseActive(true);
     setChatGptResponseList(result?.response);
 
-    // setChatGptResponse(parsedData);
-
-    // update proof of work
-
-    if (
-      (!isEmpty(databaseUserDocument) || !isEmpty(userDocumentReference)) &&
-      !isDemo
-    ) {
-      //doesnt return obj, so update firebase and react seperately
-      await updateDoc(userDocumentReference, {
-        impact: databaseUserDocument?.impact + result.impact,
-      });
-
-      // update global work
-      await updateDoc(globalDocumentReference, {
-        total: globalImpactCounter + result.impact,
-      });
-
-      //copy it to react
-      let docCopy = databaseUserDocument;
-      docCopy.impact = databaseUserDocument?.impact + result.impact;
-      setDatabaseUserDocument(docCopy);
-
-      let globalCopy = globalImpactCounter;
-      globalCopy = globalImpactCounter + result.impact;
-      setGlobalImpactCounter(globalCopy);
-    } else {
-      //copy it to react
-
-      let docCopy = databaseUserDocument;
-      docCopy.impact = databaseUserDocument?.impact + result.impact;
-      setDatabaseUserDocument(docCopy);
-
-      let globalCopy = globalImpactCounter;
-      globalCopy = globalImpactCounter + result.impact;
-      setGlobalImpactCounter(globalCopy);
-    }
+    await updateImpact(
+      result.impact,
+      databaseUserDocument,
+      userDocumentReference,
+      globalImpactCounter,
+      globalDocumentReference
+    );
 
     logEvent(analytics, "spend_virtual_currency", {
       value: result.impact,
@@ -175,56 +83,75 @@ const ChatGPT = ({
       item_name: `${currentPath}|${moduleName}|${promptType}`,
     });
 
-    // setLoadingMessage("");
-
     setLoadingMessage("");
+  };
+
+  const computeResult = (promptType, patreonObject) => {
+    return {
+      response: computeResponseList(patreonObject, promptType),
+      impact: computeTotalImpactFromPrompt(patreonObject, promptType),
+    };
+  };
+
+  const updateImpact = async (
+    impact,
+    databaseUserDocument,
+    userDocumentReference,
+    globalImpactCounter,
+    globalDocumentReference
+  ) => {
+    if (
+      (!isEmpty(databaseUserDocument) || !isEmpty(userDocumentReference)) &&
+      !isDemo
+    ) {
+      await updateDoc(userDocumentReference, {
+        impact: databaseUserDocument?.impact + impact,
+      });
+      await updateDoc(globalDocumentReference, {
+        total: globalImpactCounter + impact,
+      });
+      setDatabaseUserDocument((prevDoc) => ({
+        ...prevDoc,
+        impact: prevDoc?.impact + impact,
+      }));
+      setGlobalImpactCounter((prevCounter) => prevCounter + impact);
+    } else {
+    }
   };
 
   return (
     <div
       onSubmit={handleSubmit}
-      style={{
-        transition: "0.3s all ease-in-out",
-        color: "white",
-      }}
+      style={{ transition: "0.3s all ease-in-out", color: "white" }}
     >
-      <div>
-        <PromptMessage
-          promptMessage={promptMessage}
-          patreonObject={patreonObject}
-        />
-        <br />
-
-        <Intro
-          shouldRenderIntro={shouldRenderIntro}
-          moduleName={moduleName}
-          patreonObject={patreonObject}
-          loadingMessage={loadingMessage}
-          isResponseActive={isResponseActive}
-          promptSelection={promptSelection}
-        />
-
-        {chatGptResponseList?.map((response) => (
-          <PromptCombiner9000
-            loadingMessage={loadingMessage}
-            chatGptResponse={response}
-            patreonObject={patreonObject}
-            moduleName={moduleName}
-            isGeneratedDemo={isGeneratedDemo}
-          />
-        ))}
-      </div>
-
+      <PromptMessage
+        promptMessage={promptMessage}
+        patreonObject={patreonObject}
+      />
       <br />
-      {/* prompts */}
+      <Intro
+        shouldRenderIntro={shouldRenderIntro}
+        moduleName={moduleName}
+        patreonObject={patreonObject}
+        loadingMessage={loadingMessage}
+        isResponseActive={isResponseActive}
+        promptSelection={promptSelection}
+      />
+      {chatGptResponseList?.map((response, index) => (
+        <PromptCombiner9000
+          key={index}
+          loadingMessage={loadingMessage}
+          chatGptResponse={response}
+          patreonObject={patreonObject}
+          moduleName={moduleName}
+        />
+      ))}
       <Prompts
-        //roxana
         loadingMessage={loadingMessage}
         patreonObject={patreonObject}
         handleSubmit={handleSubmit}
         userDocumentReference={userDocumentReference}
       />
-      <br />
     </div>
   );
 };
