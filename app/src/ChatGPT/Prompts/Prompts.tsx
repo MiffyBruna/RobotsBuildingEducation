@@ -15,7 +15,6 @@ export const Prompts = ({
   loadingMessage,
   patreonObject,
   handleSubmit,
-  userDocumentReference,
 
   //pow
   displayName,
@@ -23,61 +22,50 @@ export const Prompts = ({
   computePercentage,
   globalImpactCounter,
   userAuthObject,
-  isRaidActive,
-  globalReserve,
+
   isDemo,
 }) => {
   if (!isEmpty(patreonObject)) {
     const [isModalOpen, setIsModalOpen] = useState(false);
-    let promptKeys = Object.keys(patreonObject.prompts);
     let borderHighlight = "#48484a";
-    let promptMap =
-      currentPath === ""
+    let promptMap = [
+      <StyledPromptButton
+        tabindex="0"
+        style={{ display: loadingMessage ? "none" : "flex" }}
+        borderHighlight={borderHighlight}
+        loadingMessage={loadingMessage}
+        onClick={(event) => {
+          if (loadingMessage) {
+          } else {
+            handleSubmit(event, patreonObject.prompts["patreon"], "patreon");
+          }
+        }}
+      >
+        <a style={{ color: "white" }}>
+          {patreonObject.prompts["patreon"]?.icon} &nbsp;
+          {/* {patreonObject.prompts['patreon'].action} */}
+          discover
+        </a>
+      </StyledPromptButton>,
+      <StyledPromptButton
+        tabindex="0"
+        style={{ display: loadingMessage ? "none" : "flex" }}
+        borderHighlight={borderHighlight}
+        loadingMessage={loadingMessage}
+        onClick={(event) => {
+          if (loadingMessage) {
+          } else {
+            handleSubmit(event, patreonObject.prompts["guide"], "guide");
+          }
+        }}
+      >
+        <a style={{ color: "white" }}>
+          {/* {patreonObject.prompts['guide'].icon}{" "} */}
+          📚 &nbsp;study
+        </a>
+      </StyledPromptButton>,
+      ...(patreonObject.prompts.practice
         ? [
-            !isRaidActive ? (
-              <StyledPromptButton
-                tabindex="0"
-                style={{ display: loadingMessage ? "none" : "flex" }}
-                borderHighlight={borderHighlight}
-                loadingMessage={loadingMessage}
-                onClick={(event) => {
-                  if (loadingMessage) {
-                  } else {
-                    handleSubmit(
-                      event,
-                      patreonObject.prompts["patreon"],
-                      "patreon",
-                      true
-                    );
-                  }
-                }}
-              >
-                <a style={{ color: "white" }}>
-                  🦉 &nbsp;
-                  {/* {patreonObject.prompts['patreon'].action} */}
-                  journey
-                </a>
-              </StyledPromptButton>
-            ) : null,
-            // <StyledPromptButton
-            //       tabindex="0"
-            //       style={{ display: loadingMessage ? "none" : "flex" }}
-            //       borderHighlight={borderHighlight}
-            //       loadingMessage={loadingMessage}
-            //       onClick={(event) => {
-            //         if (loadingMessage) {
-            //         } else {
-            //           handleSubmit(event, patreonObject.prompts['shop'], 'shop');
-            //         }
-            //       }}
-            //     >
-            //       <a style={{ color: "white" }}>
-            //         {patreonObject.prompts['shop']?.icon}{" "}&nbsp;
-            //         {patreonObject.prompts['shop']?.action}
-            //       </a>
-            // </StyledPromptButton>,
-          ]
-        : [
             <StyledPromptButton
               tabindex="0"
               style={{ display: loadingMessage ? "none" : "flex" }}
@@ -88,78 +76,38 @@ export const Prompts = ({
                 } else {
                   handleSubmit(
                     event,
-                    patreonObject.prompts["patreon"],
-                    "patreon"
+                    patreonObject.prompts["practice"],
+                    "practice"
                   );
                 }
               }}
             >
               <a style={{ color: "white" }}>
-                {patreonObject.prompts["patreon"]?.icon} &nbsp;
-                {/* {patreonObject.prompts['patreon'].action} */}
-                discover
+                {patreonObject.prompts["practice"]?.icon} &nbsp;
+                {patreonObject.prompts["practice"]?.action}
               </a>
             </StyledPromptButton>,
-            <StyledPromptButton
-              tabindex="0"
-              style={{ display: loadingMessage ? "none" : "flex" }}
-              borderHighlight={borderHighlight}
-              loadingMessage={loadingMessage}
-              onClick={(event) => {
-                if (loadingMessage) {
-                } else {
-                  handleSubmit(event, patreonObject.prompts["guide"], "guide");
-                }
-              }}
-            >
-              <a style={{ color: "white" }}>
-                {/* {patreonObject.prompts['guide'].icon}{" "} */}
-                📚 &nbsp;study
-              </a>
-            </StyledPromptButton>,
-            ...(patreonObject.prompts.practice
-              ? [
-                  <StyledPromptButton
-                    tabindex="0"
-                    style={{ display: loadingMessage ? "none" : "flex" }}
-                    borderHighlight={borderHighlight}
-                    loadingMessage={loadingMessage}
-                    onClick={(event) => {
-                      if (loadingMessage) {
-                      } else {
-                        handleSubmit(
-                          event,
-                          patreonObject.prompts["practice"],
-                          "practice"
-                        );
-                      }
-                    }}
-                  >
-                    <a style={{ color: "white" }}>
-                      {patreonObject.prompts["practice"]?.icon} &nbsp;
-                      {patreonObject.prompts["practice"]?.action}
-                    </a>
-                  </StyledPromptButton>,
-                ]
-              : []),
-            <StyledPromptButton
-              tabindex="0"
-              style={{ display: loadingMessage ? "none" : "flex" }}
-              borderHighlight={borderHighlight}
-              loadingMessage={loadingMessage}
-              onClick={(event) => {
-                if (loadingMessage) {
-                } else {
-                  handleSubmit(event, patreonObject.prompts["shop"], "shop");
-                }
-              }}
-            >
-              <a style={{ color: "white" }}>
-                {patreonObject.prompts["shop"]?.icon} &nbsp;
-                {patreonObject.prompts["shop"]?.action}
-              </a>
-            </StyledPromptButton>,
-          ];
+          ]
+        : []),
+
+      <StyledPromptButton
+        tabindex="0"
+        style={{ display: loadingMessage ? "none" : "flex" }}
+        borderHighlight={borderHighlight}
+        loadingMessage={loadingMessage}
+        onClick={(event) => {
+          if (loadingMessage) {
+          } else {
+            handleSubmit(event, patreonObject.prompts["shop"], "shop");
+          }
+        }}
+      >
+        <a style={{ color: "white" }}>
+          {patreonObject.prompts["shop"]?.icon} &nbsp;
+          {patreonObject.prompts["shop"]?.action}
+        </a>
+      </StyledPromptButton>,
+    ];
 
     return (
       <div
@@ -171,7 +119,6 @@ export const Prompts = ({
         }}
       >
         {promptMap}
-        <br /> <br />
         <br />
         <Button
           variant="dark"
@@ -198,7 +145,7 @@ export const Prompts = ({
             isDemo={isDemo}
           />
         ) : null}
-        {/* <DiscordButton /> */}
+
         <br />
         <br />
         <Modal

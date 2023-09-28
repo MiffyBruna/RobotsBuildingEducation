@@ -86,6 +86,11 @@ export const ImpactWallet = ({
     }
   };
 
+  let impactResult =
+    databaseUserDocumentCopy?.impact ||
+    databaseUserDocument?.impact ||
+    15200 / getGlobalImpact();
+
   return (
     <>
       <div>
@@ -171,10 +176,7 @@ export const ImpactWallet = ({
             <p>
               Work Done By You
               <br />
-              {databaseUserDocumentCopy?.impact ||
-                databaseUserDocument?.impact ||
-                15200}{" "}
-              / {getGlobalImpact()}
+              {impactResult}
               <ProgressBar
                 style={{
                   backgroundColor: "black",

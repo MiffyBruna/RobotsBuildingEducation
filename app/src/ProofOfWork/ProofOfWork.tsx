@@ -22,33 +22,7 @@ export const ProofOfWork = ({
     useState(false);
 
   if (displayName === "@DemoRobots") {
-    return (
-      <div
-        style={{
-          border: "1px solid #1C1C1E",
-          width: "fit-content",
-
-          backgroundColor: "#1C1C1E",
-          marginBottom: "48px",
-          maxWidth: "600px",
-          minWidth: "300px",
-          padding: 12,
-          textAlign: "center",
-        }}
-      >
-        <p>👾 {displayName}</p>
-        <ImpactWallet
-          databaseUserDocument={databaseUserDocument}
-          computePercentage={computePercentage}
-          globalImpactCounter={globalImpactCounter}
-          isImpactWalletOpen={isImpactWalletOpen}
-          setIsImpactWalletOpen={setIsImpactWalletOpen}
-          globalScholarshipCounter={globalScholarshipCounter}
-          isDemo={isDemo}
-          globalReserveObject={globalReserveObject}
-        />
-      </div>
-    );
+    return null;
   }
 
   return (
