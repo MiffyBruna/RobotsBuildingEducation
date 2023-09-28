@@ -235,7 +235,6 @@ export const ChatGPT = ({
         {chatGptResponseList?.map((response) => (
           <PromptCombiner9000
             loadingMessage={loadingMessage}
-            // loadingStates={loadingStates}
             chatGptResponse={response}
             patreonObject={patreonObject}
             isDemo={false}
@@ -253,8 +252,6 @@ export const ChatGPT = ({
         patreonObject={patreonObject}
         handleSubmit={handleSubmit}
         userDocumentReference={userDocumentReference}
-
-        //pow
       />
       <br />
     </div>
