@@ -80,7 +80,7 @@ export const PromptCombiner9000 = ({
   loadingMessage,
   chatGptResponse,
   patreonObject,
-  isDemo,
+
   moduleName = "demo",
   isGeneratedDemo,
 }) => {
@@ -97,6 +97,7 @@ export const PromptCombiner9000 = ({
           {type === "patreon" ? "generate" : type} {icon}
         </Heading>
       )}
+
       <MessageContainer loading={loadingMessage}>
         <FlexBox>
           {loadingMessage.length < 1 &&

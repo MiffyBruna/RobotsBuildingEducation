@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
 import { isEmpty } from "lodash";
-
 import "./App.css";
-import { ChatGPT } from "./ChatGPT/ChatGPT";
 
 import { Paths } from "./Paths/Paths";
 import {
@@ -26,6 +24,7 @@ import { Spinner } from "react-bootstrap";
 import { logEvent } from "firebase/analytics";
 import { useParams } from "react-router-dom";
 import { ProofOfWork } from "./ProofOfWork/ProofOfWork";
+import ChatGPT from "./ChatGPT/ChatGPT";
 
 logEvent(analytics, "page_view", {
   page_location: "https://learn-robotsbuildingeducation.firebaseapp.com/",

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { ChatGPT } from "../../ChatGPT/ChatGPT";
+import ChatGPT from "../../ChatGPT/ChatGPT";
 
 export const Demo = ({
   userDocumentReference,

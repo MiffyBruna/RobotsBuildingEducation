@@ -17,6 +17,25 @@ app.use(cors());
 app.use(express.json());
 app.use(bodyParser.json());
 
+// frontend
+// const response = await fetch(
+//   "https://us-central1-learn-robotsbuildingeducation.cloudfunctions.net/app/prompt",
+//   {
+//     method: "POST",
+//     headers: {
+//       "Content-Type": "application/json",
+//     },
+//     body: JSON.stringify({
+//       prompt: prompt.request,
+//     }),
+//   }
+// ).catch((error) => {
+
+// });
+
+// let data = await response.json();
+// let parsedData = data.bot.trim();
+
 app.post("/prompt", async (req, res) => {
   try {
     const prompt = req.body.prompt;
@@ -24,6 +43,7 @@ app.post("/prompt", async (req, res) => {
       model: "gpt-3.5-turbo-16k",
       messages: [{ role: "user", content: prompt }],
     });
+
     res.status(200).send({
       bot: completion.data.choices[0].message,
     });

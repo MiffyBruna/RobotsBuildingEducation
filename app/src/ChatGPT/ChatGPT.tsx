@@ -14,8 +14,7 @@ import {
 } from "./ChatGPT.compute";
 import { Intro } from "./PromptCombiner9000/Intro";
 
-export const ChatGPT = ({
-  globalScholarshipCounter,
+const ChatGPT = ({
   currentPath = "demo",
   patreonObject,
   userDocumentReference,
@@ -26,16 +25,13 @@ export const ChatGPT = ({
   setGlobalImpactCounter,
   isDemo = false,
 
-  displayName = "@DemoRobots",
   moduleName = "demo",
-  computePercentage,
-  isGeneratedDemo = false,
 
-  userAuthObject,
+  isGeneratedDemo = false,
 }) => {
   const [shouldRenderIntro, setShouldRenderIntro] = useState(true);
   const [promptMessage, setPromptMessage] = useState("");
-  const [isSpanishActive, setIsSpanishActive] = useState(false);
+
   const [loadingMessage, setLoadingMessage] = useState("");
   const [isResponseActive, setIsResponseActive] = useState(false);
   const [chatGptResponseList, setChatGptResponseList] = useState([]);
@@ -98,34 +94,11 @@ export const ChatGPT = ({
     // change discover/study
     setPromptMessage(prompt?.request);
 
-    if (promptType === "languageToggle") {
-      setIsSpanishActive(!isSpanishActive);
-    } else {
-      handlePromptSelection(promptType);
-    }
-
-    // this API has a $5 limit. Please configure your own setup to test in a seperate location.
-    // const response = await fetch(
-    //   "https://us-central1-learn-robotsbuildingeducation.cloudfunctions.net/app/prompt",
-    //   {
-    //     method: "POST",
-    //     headers: {
-    //       "Content-Type": "application/json",
-    //     },
-    //     body: JSON.stringify({
-    //       prompt: prompt.request,
-    //     }),
-    //   }
-    // ).catch((error) => {
-
-    // });
-
-    // let data = await response.json();
-    // let parsedData = data.bot.trim();
+    handlePromptSelection(promptType);
 
     // x
     const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-    await delay(250);
+    await delay(500);
 
     // x
 
@@ -224,7 +197,6 @@ export const ChatGPT = ({
 
         <Intro
           shouldRenderIntro={shouldRenderIntro}
-          isDemo={false}
           moduleName={moduleName}
           patreonObject={patreonObject}
           loadingMessage={loadingMessage}
@@ -237,7 +209,6 @@ export const ChatGPT = ({
             loadingMessage={loadingMessage}
             chatGptResponse={response}
             patreonObject={patreonObject}
-            isDemo={false}
             moduleName={moduleName}
             isGeneratedDemo={isGeneratedDemo}
           />
@@ -257,3 +228,5 @@ export const ChatGPT = ({
     </div>
   );
 };
+
+export default ChatGPT;

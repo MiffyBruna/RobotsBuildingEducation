@@ -7,7 +7,6 @@ import { analytics } from "../../database/firebaseResources";
 import { RoxanaLoadingAnimation } from "../../common/uiSchema";
 
 export const Intro = ({
-  isDemo,
   moduleName,
   patreonObject,
   loadingMessage,
@@ -17,116 +16,9 @@ export const Intro = ({
 }) => {
   if (!isEmpty(patreonObject)) {
     let RoxanaIntroText = () => {
-      if (isDemo && shouldRenderIntro) {
-        return (
-          <div>
-            i'm ms. roxana, I'm built with various robots made by Apple, Tiktok
-            and OpenAI and I help Sheilfer build RO.B.E 😊
-            <br />
-            <br />
-            If you want to help us build Robots Building Education, please read
-            more in your Impact Wallet &nbsp;🏦
-            <br />
-            <br />
-            If you want to plug your business with a &nbsp;🛍️ shopping tab or
-            slot, please contact me inside of&nbsp;{" "}
-            <a
-              onClick={() => {
-                logEvent(analytics, "select_promotion", {
-                  creative_name: `https://www.patreon.com/RobotsBuildingEducation`,
-                  creative_slot: `${moduleName} Intro Slot`,
-                  promotion_id: `Robots Building Education`,
-                  promotion_name: "advertising_launch",
-                });
-                window.open("https://www.patreon.com/RobotsBuildingEducation");
-              }}
-              target="_blank"
-              style={{
-                color: "white",
-                textDecoration: "underline",
-                cursor: "grab",
-              }}
-            >
-              Patreon
-            </a>
-            .
-            <br />
-            {isDemo ? (
-              <div
-                style={{
-                  width: "100%",
-                  textAlign: "center",
-                }}
-              >
-                <br />
-                <h3>#100Devs</h3>
-                <h5>
-                  {
-                    "Hi there, I'm Leon 👋🏽 By day, I help people of color unlock high growth careers as software engineers at Resilient Coders"
-                  }
-                </h5>
-                <a
-                  onClick={() => {
-                    logEvent(analytics, "select_promotion", {
-                      creative_name: "https://leonnoel.com/100devs/",
-                      creative_slot: "demo Intro Slot",
-                      promotion_id: "#100devs",
-                      promotion_name: "advertising_launch",
-                    });
-                    window.open("https://leonnoel.com/100devs/");
-                  }}
-                  target="_blank"
-                  style={{
-                    color: "white",
-                    textDecoration: "underline",
-                    cursor: "pointer",
-                    display: "flex",
-                    alignItems: "center",
-                    flexDirection: "column",
-                  }}
-                >
-                  {/* https://leonnoel.com/100devs/ */}
-                  <img
-                    src={lionel}
-                    style={{
-                      boxShadow:
-                        "0 10px 20px rgba(0,0,0,1), 0 6px 6px rgba(0,0,0,1)",
-                      height: 150,
-                      width: 150,
-                      borderRadius: "12px",
-                      marginTop: 12,
-                    }}
-                  />
-                </a>
-              </div>
-            ) : (
-              <span>
-                If you want to advertise on RO.B.E, please contact me in
-                <a
-                  onClick={() =>
-                    logEvent(analytics, "select_promotion", {
-                      creative_name: `https://www.patreon.com/RobotsBuildingEducation`,
-                      creative_slot: `${moduleName} Intro Slot`,
-                      promotion_id: `Robots Building Education`,
-                      promotion_name: "advertising_launch",
-                    })
-                  }
-                  href="https://www.patreon.com/RobotsBuildingEducation"
-                >
-                  Patreon
-                </a>
-              </span>
-            )}
-            <br />
-          </div>
-        );
-      }
-
       return (
         <div>
-          {patreonObject?.header === "Indocumentadofy" ? (
-            "¡¡Hola!! Soy miss roxana, una maestra construida con OpenAI. Ayudo a Sheilfer a construir RO.B.E ayudándote a aprender más con indicaciones útiles hola!! 😊"
-          ) : !isEmpty(patreonObject?.prompts?.welcome) ? (
+          {!isEmpty(patreonObject?.prompts?.welcome) ? (
             <div>{patreonObject?.prompts?.welcome?.response}</div>
           ) : (
             <div>
@@ -222,16 +114,20 @@ export const Intro = ({
           borderBottomRightRadius: 30,
         }}
       >
+        <br />
+        <br />
         <div style={{ display: "flex" }}>
           {loadingMessage ? (
             <RoxanaLoadingAnimation />
           ) : isResponseActive ? (
-            <h2>
-              {promptSelection === "patreon" ? "Discover ►✍️⚡🎨" : null}
-              {promptSelection === "guide" ? "Guide 🧿📚🔮🗺️🧪" : null}
-              {promptSelection === "shop" ? "Shop 🛍️" : null}
-              {promptSelection === "practice" ? "Practice 🥋" : null}
-            </h2>
+            <>
+              <h2>
+                {promptSelection === "patreon" ? "Discover ►✍️⚡🎨" : null}
+                {promptSelection === "guide" ? "Guide 🧿📚🔮🗺️🧪" : null}
+                {promptSelection === "shop" ? "Shop 🛍️" : null}
+                {promptSelection === "practice" ? "Practice 🥋" : null}
+              </h2>
+            </>
           ) : (
             <RoxanaIntroText />
           )}
