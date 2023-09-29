@@ -5,7 +5,6 @@ import "./App.css";
 import { Paths } from "./Paths/Paths";
 import {
   controlPathVisibilityMap,
-  getGlobalImpact,
   RoxanaLoadingAnimation,
 } from "./common/uiSchema";
 import { Collections } from "./Paths/Collections/Collections";
@@ -14,12 +13,11 @@ import { Passcode } from "./Passcode/Passcode";
 import {
   auth,
   AuthComponent,
-  database,
   uiConfig,
   analytics,
 } from "./database/firebaseResources";
 import { onAuthStateChanged } from "firebase/auth";
-import { collection, doc, getDoc, getDocs, setDoc } from "firebase/firestore";
+import { getDocs } from "firebase/firestore";
 import { Spinner } from "react-bootstrap";
 import { logEvent } from "firebase/analytics";
 import { useParams } from "react-router-dom";
@@ -32,6 +30,7 @@ import {
   useUserDocument,
 } from "./App.hooks";
 import { handleUserAuthentication } from "./App.compute";
+import { validPasscodes } from "./App.constants";
 
 logEvent(analytics, "page_view", {
   page_location: "https://learn-robotsbuildingeducation.firebaseapp.com/",
@@ -97,13 +96,6 @@ function App() {
 
   // basic control for visual state - may be converted to animated route
   const handleZeroKnowledgePassword = (event) => {
-    const validPasscodes = [
-      import.meta.env.VITE_PATREON_PASSCODE,
-      import.meta.env.VITE_FREE_PROMO_PASSCODE,
-      import.meta.env.VITE_FREE_BLACK_COMMUNITY,
-      import.meta.env.VITE_FOREVER_FREE,
-    ];
-
     if (validPasscodes.includes(event.target.value)) {
       localStorage.setItem("patreonPasscode", event.target.value);
       uiStateReference.setPatreonObject({});
@@ -128,13 +120,6 @@ function App() {
 
   useEffect(() => {
     //check local storage
-
-    const validPasscodes = [
-      import.meta.env.VITE_PATREON_PASSCODE,
-      import.meta.env.VITE_FREE_PROMO_PASSCODE,
-      import.meta.env.VITE_FREE_BLACK_COMMUNITY,
-      import.meta.env.VITE_FOREVER_FREE,
-    ];
 
     const storedPasscode = localStorage.getItem("patreonPasscode");
     authStateReference.setIsZeroKnowledgeUser(

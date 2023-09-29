@@ -143,14 +143,12 @@ const ChatGPT = ({
           loadingMessage={loadingMessage}
           chatGptResponse={response}
           patreonObject={patreonObject}
-          moduleName={moduleName}
         />
       ))}
       <Prompts
         loadingMessage={loadingMessage}
         patreonObject={patreonObject}
         handleSubmit={handleSubmit}
-        userDocumentReference={userDocumentReference}
       />
     </div>
   );
