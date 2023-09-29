@@ -6,7 +6,7 @@ import phillyd from "./media/phillyd.jpeg";
 import elkhanmigo from "../../common/media/images/elkhanmigo.jpg";
 import { logEvent } from "firebase/analytics";
 import { analytics } from "../../database/firebaseResources";
-import { DiscordButton } from "../../ChatGPT/Prompts/DiscordButton/DiscordButton";
+import { DiscordButton } from "../../common/ui/DiscordButton/DiscordButton";
 import { words } from "../../common/words/words";
 import { japaneseThemePalette, textBlock } from "../../styles/lazyStyles";
 

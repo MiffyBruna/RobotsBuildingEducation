@@ -5,7 +5,7 @@ import sheilferBitcoin from "../../common/media/images/sheilferBitcoin.jpeg";
 import cashAppCard from "../../common/media/images/cashAppCard.jpeg";
 import { logEvent } from "firebase/analytics";
 import { analytics, database } from "../../database/firebaseResources";
-import { DiscordButton } from "../../ChatGPT/Prompts/DiscordButton/DiscordButton";
+import { DiscordButton } from "../../common/ui/DiscordButton/DiscordButton";
 import { doc, getDoc } from "firebase/firestore";
 import { Link, useParams } from "react-router-dom";
 import { EmotionalIntelligence } from "./EmotionalIntelligence/EmotionalIntelligence";
