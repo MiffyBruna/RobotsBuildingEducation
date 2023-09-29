@@ -38,7 +38,7 @@ export const Passcode = ({ handleZeroKnowledgePassword, patreonObject }) => {
         <div>
           <h2 style={{ color: "white", marginTop: 12 }}>
             {/* Lesson 1 - Coding &amp; Logic */}
-            Demo: {patreonObject.header}
+            Demo: Learning Mindset & Perspective
           </h2>
           <ChatGPT
             patreonObject={

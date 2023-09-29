@@ -104,8 +104,6 @@ export const EmotionalIntelligence = ({
   };
 
   const handleEmotionSelection = async (event, item) => {
-    console.log("data", item);
-
     setSelectedEmotion(event.target.id);
     // const disableUntil = new Date().getTime() + 12 * 60 * 60 * 1000; // 12 hours from now
     // localStorage.setItem("disableUntil", disableUntil);
@@ -263,7 +261,7 @@ export const EmotionalIntelligence = ({
                 flexWrap: "wrap",
               }}
             >
-              {sortedEmotions?.map((item) => (
+              {sortedEmotions?.reverse().map((item) => (
                 <EmotionButton
                   disabled={false}
                   color={item?.color}

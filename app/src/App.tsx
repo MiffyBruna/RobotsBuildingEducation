@@ -25,152 +25,29 @@ import { logEvent } from "firebase/analytics";
 import { useParams } from "react-router-dom";
 import { ProofOfWork } from "./ProofOfWork/ProofOfWork";
 import ChatGPT from "./ChatGPT/ChatGPT";
+import {
+  useAuthState,
+  useGlobalStates,
+  useUIStates,
+  useUserDocument,
+} from "./App.hooks";
+import { handleUserAuthentication } from "./App.compute";
 
 logEvent(analytics, "page_view", {
   page_location: "https://learn-robotsbuildingeducation.firebaseapp.com/",
 });
 
-const useAuthState = () => {
-  const [isSignedIn, setIsSignedIn] = useState("start");
-  const [isZeroKnowledgeUser, setIsZeroKnowledgeUser] = useState(false);
-  const [userAuthObject, setUserAuthObject] = useState({});
-  return {
-    isSignedIn,
-    setIsSignedIn,
-    isZeroKnowledgeUser,
-    setIsZeroKnowledgeUser,
-    userAuthObject,
-    setUserAuthObject,
-  };
-};
-
-const useUserDocument = () => {
-  const [databaseUserDocument, setDatabaseUserDocument] = useState({});
-  const [userDocumentReference, setUserDocumentReference] = useState({});
-  const [
-    usersEmotionsCollectionReference,
-    setUsersEmotionsCollectionReference,
-  ] = useState({});
-
-  const [usersEmotionsFromDB, setUsersEmotionsFromDB] = useState([]);
-
-  return {
-    databaseUserDocument,
-    setDatabaseUserDocument,
-    userDocumentReference,
-    setUserDocumentReference,
-    usersEmotionsCollectionReference,
-    setUsersEmotionsCollectionReference,
-    usersEmotionsFromDB,
-    setUsersEmotionsFromDB,
-  };
-};
-
-const useGlobalStates = () => {
-  const [globalDocumentReference, setGlobalDocumentReference] = useState({});
-  const [globalImpactCounter, setGlobalImpactCounter] = useState(0);
-  const [globalScholarshipCounter, setGlobalScholarshipCounter] = useState(0);
-  const [globalReserveObject, setGobalReserveObject] = useState({});
-  return {
-    globalDocumentReference,
-    setGlobalDocumentReference,
-    globalImpactCounter,
-    setGlobalImpactCounter,
-    globalScholarshipCounter,
-    setGlobalScholarshipCounter,
-    globalReserveObject,
-    setGobalReserveObject,
-  };
-};
-
-const useUIStates = () => {
-  const [patreonObject, setPatreonObject] = useState({});
-  const [currentPath, setCurrentPath] = useState("");
-  const [currentPathForAnalytics, setCurrentPathForAnalytics] = useState("");
-  const [moduleName, setModuleName] = useState("");
-  const [pathSelectionAnimationData, setPathSelectionAnimationData] = useState(
-    {}
-  );
-  const [visibilityMap, setVisibilityMap] = useState({});
-  const [isDemo, setIsDemo] = useState(true);
-  const [proofOfWorkFromModules, setProofOfWorkFromModules] = useState(0);
-
-  return {
-    patreonObject,
-    setPatreonObject,
-    currentPath,
-    setCurrentPath,
-    currentPathForAnalytics,
-    setCurrentPathForAnalytics,
-    moduleName,
-    setModuleName,
-    pathSelectionAnimationData,
-    setPathSelectionAnimationData,
-    visibilityMap,
-    setVisibilityMap,
-    isDemo,
-    setIsDemo,
-    proofOfWorkFromModules,
-    setProofOfWorkFromModules,
-  };
-};
-
 function App() {
   let params = useParams();
 
   // handles passcode, google sign in and registered user info
-  const {
-    isSignedIn,
-    setIsSignedIn,
-    isZeroKnowledgeUser,
-    setIsZeroKnowledgeUser,
-    userAuthObject,
-    setUserAuthObject,
-  } = useAuthState();
+  const { authStateReference } = useAuthState();
 
-  let {
-    // this is the actual data inside a user document for UI
-    databaseUserDocument,
-    setDatabaseUserDocument,
+  let { userStateReference } = useUserDocument();
 
-    // this is a document object reference for a user collection
-    userDocumentReference,
-    setUserDocumentReference,
-    usersEmotionsCollectionReference,
-    setUsersEmotionsCollectionReference,
-    usersEmotionsFromDB,
-    setUsersEmotionsFromDB,
-  } = useUserDocument();
+  let { globalStateReference } = useGlobalStates();
 
-  let {
-    globalDocumentReference,
-    setGlobalDocumentReference,
-    globalImpactCounter,
-    setGlobalImpactCounter,
-    globalScholarshipCounter,
-    setGlobalScholarshipCounter,
-    globalReserveObject,
-    setGobalReserveObject,
-  } = useGlobalStates();
-
-  let {
-    patreonObject,
-    setPatreonObject,
-    currentPath,
-    setCurrentPath,
-    currentPathForAnalytics,
-    setCurrentPathForAnalytics,
-    moduleName,
-    setModuleName,
-    pathSelectionAnimationData,
-    setPathSelectionAnimationData,
-    visibilityMap,
-    setVisibilityMap,
-    isDemo,
-    setIsDemo,
-    proofOfWorkFromModules,
-    setProofOfWorkFromModules,
-  } = useUIStates();
+  let { uiStateReference } = useUIStates();
 
   // basic control for visual state - may be converted to animated route
   const handlePathSelection = (event) => {
@@ -184,14 +61,16 @@ function App() {
         },
       ],
     });
-    setVisibilityMap(controlPathVisibilityMap(visibilityMap, event.target.id));
-    setCurrentPath(event.target.id);
-    setCurrentPathForAnalytics(event.target.id);
+    uiStateReference.setVisibilityMap(
+      controlPathVisibilityMap(uiStateReference.visibilityMap, event.target.id)
+    );
+    uiStateReference.setCurrentPath(event.target.id);
+    uiStateReference.setCurrentPathForAnalytics(event.target.id);
 
-    setPatreonObject({});
-    setModuleName("");
+    uiStateReference.setPatreonObject({});
+    uiStateReference.setModuleName("");
 
-    setPathSelectionAnimationData({
+    uiStateReference.setPathSelectionAnimationData({
       boxShadow: "1px 2px 14px 8px rgba(0,255,140,1)",
       path: event.target.id,
     });
@@ -200,7 +79,7 @@ function App() {
   // basic control for visual state - may be converted to animated route
   const handleModuleSelection = (module, moduleName) => {
     // can redefine this as module object rather than patreon object. low priority
-    setPatreonObject(module);
+    uiStateReference.setPatreonObject(module);
 
     logEvent(analytics, "select_item", {
       item_list_id: `RO.B.E_module|${moduleName}`,
@@ -212,22 +91,23 @@ function App() {
         },
       ],
     });
-    setModuleName(moduleName);
-    setCurrentPath("");
+    uiStateReference.setModuleName(moduleName);
+    uiStateReference.setCurrentPath("");
   };
 
   // basic control for visual state - may be converted to animated route
   const handleZeroKnowledgePassword = (event) => {
-    if (
-      event.target.value === import.meta.env.VITE_PATREON_PASSCODE ||
-      event.target.value === import.meta.env.VITE_FREE_PROMO_PASSCODE ||
-      event.target.value === import.meta.env.VITE_FREE_BLACK_COMMUNITY ||
-      event.target.value === import.meta.env.VITE_FOREVER_FREE
-    ) {
-      localStorage.setItem("patreonPasscode", event.target.value);
-      setPatreonObject({});
-      setIsZeroKnowledgeUser(true);
+    const validPasscodes = [
+      import.meta.env.VITE_PATREON_PASSCODE,
+      import.meta.env.VITE_FREE_PROMO_PASSCODE,
+      import.meta.env.VITE_FREE_BLACK_COMMUNITY,
+      import.meta.env.VITE_FOREVER_FREE,
+    ];
 
+    if (validPasscodes.includes(event.target.value)) {
+      localStorage.setItem("patreonPasscode", event.target.value);
+      uiStateReference.setPatreonObject({});
+      authStateReference.setIsZeroKnowledgeUser(true);
       logEvent(analytics, "login", { method: "zeroKnowledge" });
     }
   };
@@ -242,111 +122,58 @@ function App() {
         } else {
         }
       });
-      setUsersEmotionsFromDB(emotionSet);
+      userStateReference.setUsersEmotionsFromDB(emotionSet);
     });
   };
 
   useEffect(() => {
     //check local storage
 
-    if (
-      localStorage.getItem("patreonPasscode") ===
-        import.meta.env.VITE_PATREON_PASSCODE ||
-      localStorage.getItem("patreonPasscode") ===
-        import.meta.env.VITE_FREE_PROMO_PASSCODE ||
-      localStorage.getItem("patreonPasscode") ===
-        import.meta.env.VITE_FOREVER_FREE
-    ) {
-      setIsZeroKnowledgeUser(true);
-    } else {
-      setIsZeroKnowledgeUser(false);
-    }
+    const validPasscodes = [
+      import.meta.env.VITE_PATREON_PASSCODE,
+      import.meta.env.VITE_FREE_PROMO_PASSCODE,
+      import.meta.env.VITE_FREE_BLACK_COMMUNITY,
+      import.meta.env.VITE_FOREVER_FREE,
+    ];
+
+    const storedPasscode = localStorage.getItem("patreonPasscode");
+    authStateReference.setIsZeroKnowledgeUser(
+      validPasscodes.includes(storedPasscode)
+    );
 
     onAuthStateChanged(auth, (user) => {
       // Check for user status
       //probably a better option than displayName.
 
       if (user?.displayName) {
-        setUserAuthObject(user);
-        setIsSignedIn(true);
-        setIsDemo(false);
-        const docRef = doc(database, "users", user.uid);
-        const globalImpactDocRef = doc(database, "global", "impact");
-
-        getDoc(docRef)
-          .then((res) => {
-            if (!res?.data()) {
-              // first time user logs in. set up proof of work in their user document
-
-              setDoc(docRef, {
-                impact: 0,
-                userAuthObj: { uid: user.uid },
-              })
-                .then(() => {
-                  return getDoc(docRef);
-                })
-                .then((response) => {
-                  setDatabaseUserDocument(response.data());
-                });
-            } else {
-              console.log("user", res.data());
-              setDatabaseUserDocument(res.data());
-            }
-          })
-          .catch((error) => console.log("ERROR", error));
-
-        getDoc(globalImpactDocRef).then((res) => {
-          setGlobalImpactCounter(res.data().total);
+        handleUserAuthentication(user, {
+          authStateReference,
+          uiStateReference,
+          userStateReference,
+          globalStateReference,
+          documentProcForUsersEmotions,
+        }).catch((error) => {
+          console.error("Error handling user authentication:", error);
         });
-
-        const globalReserveDocRef = doc(database, "global", "reserve");
-        getDoc(globalReserveDocRef).then((res) => {
-          setGlobalScholarshipCounter(res.data().scholarships);
-          setGobalReserveObject(res.data());
-        });
-
-        setUserDocumentReference(docRef);
-        const usersEmotionsCollectionRef = collection(docRef, "emotions");
-
-        setGlobalDocumentReference(globalImpactDocRef);
-
-        setUsersEmotionsCollectionReference(usersEmotionsCollectionRef);
-
-        documentProcForUsersEmotions(usersEmotionsCollectionRef);
-
-        // used to count total global count. used to get all work done before this global counter was implemented.
-        // getDocs(collection(database, "users")).then((querySnapshot) => {
-        //   let sum = 0;
-        //   querySnapshot.forEach((doc) => {
-        //     if (doc.data().impact) {
-        //       sum = Number(doc.data().impact) + sum;
-        //     }
-        //   });
-        //   console.log("sum", sum);
-        //   setGlobalImpactCounter(sum);
-        // });
       } else {
-        setIsSignedIn(false);
-        setIsDemo(true);
+        authStateReference.setIsSignedIn(false);
+        uiStateReference.setIsDemo(true);
       }
     });
-
-    setProofOfWorkFromModules(getGlobalImpact());
   }, []);
 
-  //
-
   let computePercentage =
-    (databaseUserDocument.impact || 0) / (proofOfWorkFromModules || 77500);
+    (userStateReference.databaseUserDocument.impact || 0) /
+    (uiStateReference.proofOfWorkFromModules || 77500);
 
-  if (typeof isSignedIn == "string") {
+  if (typeof authStateReference.isSignedIn == "string") {
     return (
-      <>
+      <div>
         <Spinner animation="grow" variant="light" />
         <br />
         <br />
         <RoxanaLoadingAnimation />
-      </>
+      </div>
     );
   }
 
@@ -357,8 +184,9 @@ function App() {
 
         {/* User enters passcode, and sees a google login button */}
         {/* typeof string is checked because initial state is "start" but then uses booleans */}
-        {typeof isSignedIn === "string" ||
-        (!isSignedIn && isZeroKnowledgeUser) ? (
+        {typeof authStateReference.isSignedIn === "string" ||
+        (!authStateReference.isSignedIn &&
+          authStateReference.isZeroKnowledgeUser) ? (
           <div
             style={{
               border: "1px solid #1C1C1E",
@@ -382,9 +210,9 @@ function App() {
         ) : null}
 
         {/* If the user hasn't submitted a passcode, the user sees a passcode field */}
-        {!isZeroKnowledgeUser ? (
+        {!authStateReference.isZeroKnowledgeUser ? (
           <Passcode
-            patreonObject={patreonObject}
+            patreonObject={uiStateReference.patreonObject}
             handleZeroKnowledgePassword={handleZeroKnowledgePassword}
           />
         ) : null}
@@ -459,24 +287,26 @@ function App() {
           </div>
         ) : null}
 
-        {isZeroKnowledgeUser ? (
+        {authStateReference.isZeroKnowledgeUser ? (
           <>
             <Paths
               handlePathSelection={handlePathSelection}
-              pathSelectionAnimationData={pathSelectionAnimationData}
+              pathSelectionAnimationData={
+                uiStateReference.pathSelectionAnimationData
+              }
             />
 
             <Collections
               handleModuleSelection={handleModuleSelection}
-              currentPath={currentPath}
+              currentPath={uiStateReference.currentPath}
             />
 
             <br />
 
             {/* this is a header after selecting a lecture module */}
-            {!isEmpty(patreonObject.header) ? (
+            {!isEmpty(uiStateReference.patreonObject.header) ? (
               <h2 style={{ color: "white", marginTop: 12 }}>
-                {patreonObject?.header || ""}{" "}
+                {uiStateReference.patreonObject?.header || ""}{" "}
               </h2>
             ) : null}
 
@@ -484,18 +314,31 @@ function App() {
 
             <div style={{ width: "100%" }}>
               <div>
-                {isEmpty(patreonObject) && !isDemo ? null : (
+                {isEmpty(uiStateReference.patreonObject) &&
+                !uiStateReference.isDemo ? null : (
                   <>
                     <ChatGPT
-                      currentPath={currentPathForAnalytics}
-                      patreonObject={patreonObject}
-                      userDocumentReference={userDocumentReference}
-                      databaseUserDocument={databaseUserDocument}
-                      setDatabaseUserDocument={setDatabaseUserDocument}
-                      globalDocumentReference={globalDocumentReference}
-                      globalImpactCounter={globalImpactCounter}
-                      setGlobalImpactCounter={setGlobalImpactCounter}
-                      moduleName={moduleName}
+                      currentPath={uiStateReference.currentPathForAnalytics}
+                      patreonObject={uiStateReference.patreonObject}
+                      userDocumentReference={
+                        userStateReference.userDocumentReference
+                      }
+                      databaseUserDocument={
+                        userStateReference.databaseUserDocument
+                      }
+                      setDatabaseUserDocument={
+                        userStateReference.setDatabaseUserDocument
+                      }
+                      globalDocumentReference={
+                        globalStateReference.globalDocumentReference
+                      }
+                      globalImpactCounter={
+                        globalStateReference.globalImpactCounter
+                      }
+                      setGlobalImpactCounter={
+                        globalStateReference.setGlobalImpactCounter
+                      }
+                      moduleName={uiStateReference.moduleName}
                     />
                   </>
                 )}
@@ -517,18 +360,24 @@ function App() {
           // height: "75px",
         }}
       >
-        {databaseUserDocument && isSignedIn && isZeroKnowledgeUser ? (
+        {userStateReference.databaseUserDocument &&
+        authStateReference.isSignedIn &&
+        authStateReference.isZeroKnowledgeUser ? (
           <ProofOfWork
-            userAuthObject={userAuthObject}
+            userAuthObject={authStateReference.userAuthObject}
             displayName={auth?.currentUser?.displayName}
-            databaseUserDocument={databaseUserDocument}
+            databaseUserDocument={userStateReference.databaseUserDocument}
             computePercentage={computePercentage}
-            globalImpactCounter={globalImpactCounter}
-            usersEmotionsCollectionReference={usersEmotionsCollectionReference}
-            usersEmotionsFromDB={usersEmotionsFromDB}
-            globalScholarshipCounter={globalScholarshipCounter}
+            globalImpactCounter={globalStateReference.globalImpactCounter}
+            usersEmotionsCollectionReference={
+              userStateReference.usersEmotionsCollectionReference
+            }
+            usersEmotionsFromDB={userStateReference.usersEmotionsFromDB}
+            globalScholarshipCounter={
+              globalStateReference.globalScholarshipCounter
+            }
             handlePathSelection={handlePathSelection}
-            globalReserveObject={globalReserveObject}
+            globalReserveObject={globalStateReference.globalReserveObject}
             documentProcForUsersEmotions={documentProcForUsersEmotions}
           />
         ) : null}
