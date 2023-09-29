@@ -364,6 +364,7 @@ function App() {
             handlePathSelection={handlePathSelection}
             globalReserveObject={globalStateReference.globalReserveObject}
             documentProcForUsersEmotions={documentProcForUsersEmotions}
+            isDemo={uiStateReference.isDemo}
           />
         ) : null}
       </div>

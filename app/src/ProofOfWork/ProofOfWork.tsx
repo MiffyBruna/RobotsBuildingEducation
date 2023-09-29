@@ -8,8 +8,6 @@ export const ProofOfWork = ({
   databaseUserDocument,
   computePercentage,
   globalImpactCounter,
-  isModule = false,
-
   handlePathSelection,
   globalReserveObject,
   usersEmotionsCollectionReference,
