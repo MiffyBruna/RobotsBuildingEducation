@@ -19,6 +19,7 @@ export const EmotionalIntelligence = ({
   const [selectedEmotion, setSelectedEmotion] = useState("");
   const [emotionNote, setEmotionNote] = useState("");
   const [disabled, setDisabled] = useState(false);
+  const [shouldRenderSaveButton, setShouldRenderSaveButton] = useState(false);
 
   const [isAiResponseLoading, setIsAiResponseLoading] = useState(false);
   const [chatGptResponse, setChatGptResponse] = useState("");
@@ -83,14 +84,17 @@ export const EmotionalIntelligence = ({
       timestamp: Date.now(),
     };
 
+    if (item?.ai) {
+      itemWithDate.ai = item.ai;
+    }
+
     setSelectedEmotion(itemWithDate);
     // const disableUntil = new Date().getTime() + 12 * 60 * 60 * 1000; // 12 hours from now
     // localStorage.setItem("disableUntil", disableUntil);
     // setDisabled(true);
 
     if (shouldRunDatabase) {
-      await addDoc(usersEmotionsCollectionReference, itemWithDate);
-      documentProcForUsersEmotions(usersEmotionsCollectionReference);
+      setShouldRenderSaveButton(true);
     }
 
     if (shouldOpenModal) {
@@ -140,6 +144,22 @@ export const EmotionalIntelligence = ({
       setChatGptResponse(data?.bot?.content || "");
     }
   };
+
+  const saveEmotionData = async () => {
+    let savedData = selectedEmotion;
+
+    if (chatGptResponse) {
+      savedData = {
+        ...savedData,
+        ai: chatGptResponse,
+      };
+    }
+    await addDoc(usersEmotionsCollectionReference, savedData);
+    documentProcForUsersEmotions(usersEmotionsCollectionReference);
+    setOpenEmotion(false);
+    setChatGptResponse("");
+    setShouldRenderSaveButton(false);
+  };
   // Check if buttons should be disabled on component mount
   useEffect(() => {
     const disableUntil = localStorage.getItem("disableUntil");
@@ -153,9 +173,6 @@ export const EmotionalIntelligence = ({
       ? usersEmotionsFromDB?.sort((a, b) => a?.timestamp - b?.timestamp)
       : [];
 
-  console.log("emotionNote", emotionNote);
-
-  console.log("selectedEmotion", selectedEmotion);
   return (
     <>
       <Modal centered show={isEmotionalIntelligenceOpen} fullscreen>
@@ -227,7 +244,7 @@ export const EmotionalIntelligence = ({
                   disabled={disabled}
                   color={item.color}
                   colorHover={item.colorHover}
-                  onClick={(event) => handleEmotionSelection(event, item)}
+                  onClick={(event) => handleEmotionSelection(event, item, true)}
                 >
                   {item?.label}
                   <br />
@@ -249,7 +266,7 @@ export const EmotionalIntelligence = ({
                   disabled={disabled}
                   color={item.color}
                   colorHover={item.colorHover}
-                  onClick={(event) => handleEmotionSelection(event, item)}
+                  onClick={(event) => handleEmotionSelection(event, item, true)}
                 >
                   {item?.label}
                   <br />
@@ -368,37 +385,40 @@ export const EmotionalIntelligence = ({
                 <br />
                 {selectedEmotion?.emoji}
               </EmotionButton>
-
               <br />
-              <Form.Control
-                as="textarea"
-                rows={3}
-                placeholder={"Feel welcome to share how you feel :)"}
-                onChange={handleEmotionNote}
-                style={{ width: "300px", height: "125px", margin: 5 }}
-              />
+              {shouldRenderSaveButton ? (
+                <Form.Control
+                  as="textarea"
+                  rows={3}
+                  placeholder={"Feel welcome to share how you feel :)"}
+                  onChange={handleEmotionNote}
+                  style={{ width: "300px", height: "125px", margin: 5 }}
+                />
+              ) : null}
             </div>
 
-            <Button
-              variant="light"
-              style={{
-                width: "100%",
-                marginTop: 6,
-                paddingTop: 12,
-                paddingBottom: 12,
-              }}
-              onClick={generateAdviceOrWisdom}
-              disabled={isAiResponseLoading}
-            >
-              generate insight {isAiResponseLoading ? "🚫" : " 💌"}
-            </Button>
+            {shouldRenderSaveButton ? (
+              <Button
+                variant="light"
+                style={{
+                  width: "100%",
+                  marginTop: 6,
+                  paddingTop: 12,
+                  paddingBottom: 12,
+                }}
+                onClick={generateAdviceOrWisdom}
+                disabled={isAiResponseLoading}
+              >
+                generate insight {isAiResponseLoading ? "🚫" : " 💌"}
+              </Button>
+            ) : null}
           </div>
           {isAiResponseLoading ? (
             <div style={{ textAlign: "center" }}>
               <RoxanaLoadingAnimation />
             </div>
           ) : null}
-          {chatGptResponse ? (
+          {chatGptResponse || selectedEmotion?.ai ? (
             <div
               style={{
                 backgroundColor: "black",
@@ -421,7 +441,7 @@ export const EmotionalIntelligence = ({
                   borderBottomRightRadius: 30,
                 }}
               >
-                {chatGptResponse}
+                {chatGptResponse || selectedEmotion?.ai}
               </div>
             </div>
           ) : null}
@@ -436,9 +456,22 @@ export const EmotionalIntelligence = ({
             borderBottom: "5px solid lavender",
           }}
         >
-          <Button variant="light" onClick={() => setOpenEmotion(false)}>
+          <Button
+            variant="light"
+            onClick={() => {
+              setOpenEmotion(false);
+              setChatGptResponse("");
+              setShouldRenderSaveButton(false);
+            }}
+          >
             Exit
           </Button>
+
+          {shouldRenderSaveButton ? (
+            <Button variant="light" onClick={saveEmotionData}>
+              Save
+            </Button>
+          ) : null}
         </Modal.Footer>
       </Modal>
     </>
