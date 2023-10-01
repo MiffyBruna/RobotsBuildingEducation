@@ -27,7 +27,7 @@ export const ImpactWallet = ({
   setIsEmotionalIntelligenceOpen,
   usersEmotionsCollectionReference,
   usersEmotionsFromDB,
-  documentProcForUsersEmotions,
+  updateUserEmotions,
 }) => {
   let [databaseUserDocumentCopy, setDatabaseUserDocumentCopy] = useState({});
 
@@ -302,7 +302,7 @@ export const ImpactWallet = ({
         setIsEmotionalIntelligenceOpen={setIsEmotionalIntelligenceOpen}
         usersEmotionsCollectionReference={usersEmotionsCollectionReference}
         usersEmotionsFromDB={usersEmotionsFromDB}
-        documentProcForUsersEmotions={documentProcForUsersEmotions}
+        updateUserEmotions={updateUserEmotions}
       />
     </>
   );

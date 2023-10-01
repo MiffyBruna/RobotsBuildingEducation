@@ -104,7 +104,7 @@ function App() {
     }
   };
 
-  let documentProcForUsersEmotions = async (collectionRef) => {
+  let updateUserEmotions = async (collectionRef) => {
     await getDocs(collectionRef).then((querySnapshot) => {
       let emotionSet = [];
 
@@ -136,7 +136,7 @@ function App() {
           uiStateReference,
           userStateReference,
           globalStateReference,
-          documentProcForUsersEmotions,
+          updateUserEmotions,
         }).catch((error) => {
           console.error("Error handling user authentication:", error);
         });
@@ -363,7 +363,7 @@ function App() {
             }
             handlePathSelection={handlePathSelection}
             globalReserveObject={globalStateReference.globalReserveObject}
-            documentProcForUsersEmotions={documentProcForUsersEmotions}
+            updateUserEmotions={updateUserEmotions}
             isDemo={uiStateReference.isDemo}
           />
         ) : null}

@@ -1,10 +1,8 @@
 //@ts-nocheck
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Button, Modal } from "react-bootstrap";
 import {
   EmotionButton,
-  EmotionalIntelligenceBodyStyles,
-  EmotionalIntelligenceHeaderStyles,
   EmotionalIntelligenceStyles,
 } from "./EmotionalIntelligence.styles";
 import { addDoc } from "firebase/firestore";
@@ -15,18 +13,21 @@ import {
   lowEnergyFeelings,
   postInstructions,
 } from "./EmotionalIntelligence.data";
+import {
+  customInstructions,
+  formatEmotionItem,
+} from "./EmotionalIntelligence.compute";
 
 export const EmotionalIntelligence = ({
   isEmotionalIntelligenceOpen,
   setIsEmotionalIntelligenceOpen,
   usersEmotionsCollectionReference,
   usersEmotionsFromDB,
-  documentProcForUsersEmotions,
+  updateUserEmotions,
 }) => {
-  const [openEmotion, setOpenEmotion] = useState(false);
+  const [isEmotionModalOpen, setIsEmotionModalOpen] = useState(false);
   const [selectedEmotion, setSelectedEmotion] = useState("");
   const [emotionNote, setEmotionNote] = useState("");
-  const [disabled, setDisabled] = useState(false);
   const [shouldRenderSaveButton, setShouldRenderSaveButton] = useState(false);
 
   const [isAiResponseLoading, setIsAiResponseLoading] = useState(false);
@@ -37,23 +38,24 @@ export const EmotionalIntelligence = ({
     shouldRunDatabase = true,
     shouldOpenModal = true
   ) => {
-    let formattedItem = {
-      ...item,
-      timestamp: Date.now(),
-    };
-
-    if (item?.ai) {
-      formattedItem.ai = item.ai;
-    }
+    let formattedItem = formatEmotionItem(
+      {
+        ...item,
+        timestamp: Date.now(),
+      },
+      item?.ai,
+      "ai"
+    );
 
     if (shouldRunDatabase) {
       setShouldRenderSaveButton(true);
     }
 
     if (shouldOpenModal) {
-      setOpenEmotion(true);
+      setIsEmotionModalOpen(true);
     }
 
+    console.log("item", formattedItem);
     setSelectedEmotion(formattedItem);
   };
 
@@ -82,17 +84,11 @@ export const EmotionalIntelligence = ({
   };
 
   const saveEmotionData = async () => {
-    let savedData = selectedEmotion;
+    let savedData = formatEmotionItem(selectedEmotion, chatGptResponse, "ai");
 
-    if (chatGptResponse) {
-      savedData = {
-        ...savedData,
-        ai: chatGptResponse,
-      };
-    }
     await addDoc(usersEmotionsCollectionReference, savedData);
-    documentProcForUsersEmotions(usersEmotionsCollectionReference);
-    setOpenEmotion(false);
+    updateUserEmotions(usersEmotionsCollectionReference);
+    setIsEmotionModalOpen(false);
     setChatGptResponse("");
     setShouldRenderSaveButton(false);
   };
@@ -120,7 +116,6 @@ export const EmotionalIntelligence = ({
             <div style={EmotionalIntelligenceStyles.RowWrapCenter}>
               {highEnergyFeelings.map((item) => (
                 <EmotionButton
-                  disabled={disabled}
                   color={item.color}
                   colorHover={item.colorHover}
                   onClick={() => handleEmotionSelection(item, true)}
@@ -135,7 +130,6 @@ export const EmotionalIntelligence = ({
             <div style={EmotionalIntelligenceStyles.RowWrapCenter}>
               {lowEnergyFeelings.map((item) => (
                 <EmotionButton
-                  disabled={disabled}
                   color={item.color}
                   colorHover={item.colorHover}
                   onClick={() => handleEmotionSelection(item, true)}
@@ -158,7 +152,6 @@ export const EmotionalIntelligence = ({
               <div style={EmotionalIntelligenceStyles.JourneyContainer}>
                 {sortedEmotions?.reverse().map((item) => (
                   <EmotionButton
-                    disabled={false}
                     color={item?.color}
                     colorHover={item.colorHover}
                     onClick={() => handleEmotionSelection(item, false)}
@@ -182,7 +175,7 @@ export const EmotionalIntelligence = ({
         </Modal.Footer>
       </Modal>
 
-      <Modal show={openEmotion} centered>
+      <Modal show={isEmotionModalOpen} centered>
         <Modal.Header
           closeButton
           style={EmotionalIntelligenceStyles.EmotionHeader}
@@ -192,7 +185,7 @@ export const EmotionalIntelligence = ({
         <Modal.Body style={EmotionalIntelligenceStyles.EmotionBody}>
           <div style={{ marginBottom: 12 }}>
             <div style={EmotionalIntelligenceStyles.RowJustifyCenter}>
-              <EmotionButton color={selectedEmotion?.color}>
+              <EmotionButton color={selectedEmotion?.color} noClick={true}>
                 {selectedEmotion?.label}
                 <br />
                 {selectedEmotion?.emoji}
@@ -237,7 +230,7 @@ export const EmotionalIntelligence = ({
           <Button
             variant="light"
             onClick={() => {
-              setOpenEmotion(false);
+              setIsEmotionModalOpen(false);
               setChatGptResponse("");
               setShouldRenderSaveButton(false);
             }}

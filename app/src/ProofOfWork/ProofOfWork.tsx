@@ -12,7 +12,7 @@ export const ProofOfWork = ({
   globalReserveObject,
   usersEmotionsCollectionReference,
   usersEmotionsFromDB,
-  documentProcForUsersEmotions,
+  updateUserEmotions,
   isDemo,
 }) => {
   const [isImpactWalletOpen, setIsImpactWalletOpen] = useState(false);
@@ -56,7 +56,7 @@ export const ProofOfWork = ({
         isEmotionalIntelligenceOpen={isEmotionalIntelligenceOpen}
         usersEmotionsCollectionReference={usersEmotionsCollectionReference}
         usersEmotionsFromDB={usersEmotionsFromDB}
-        documentProcForUsersEmotions={documentProcForUsersEmotions}
+        updateUserEmotions={updateUserEmotions}
       />
     </div>
   );

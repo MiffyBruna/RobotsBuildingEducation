@@ -43,6 +43,6 @@ export const updateGlobalCounters = async (globalImpactDocRef, globalReserveDocR
     
     appFunctions.globalStateReference.setGlobalDocumentReference(globalImpactDocRef);
     appFunctions.userStateReference.setUsersEmotionsCollectionReference(usersEmotionsCollectionRef);
-    appFunctions.documentProcForUsersEmotions(usersEmotionsCollectionRef);
+    appFunctions.updateUserEmotions(usersEmotionsCollectionRef);
     appFunctions.uiStateReference.setProofOfWorkFromModules(getGlobalImpact());
   };

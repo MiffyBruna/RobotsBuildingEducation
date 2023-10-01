@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const EmotionButton = styled.button`
   //   background-color: #000f89;
   background-color: ${(props) => {
-    return props.disabled ? "gray" : props.color;
+    return props.color ? props.color : props.color;
   }};
   border: none;
   height: 125px;
@@ -13,9 +13,15 @@ export const EmotionButton = styled.button`
   margin: 5px;
   text-shadow: 2px 2px 10px black;
   color: white;
+
   &:hover {
     background-color: ${(props) => {
-      return props.disabled ? "black" : props.colorHover;
+      return props.colorHover ? props.colorHover : props.color;
+    }};
+
+    cursor: ${(props) => {
+      console.log("propsnoClick", props.noClick);
+      return props.noClick ? "unset" : "pointer";
     }};
   }
 `;
@@ -94,7 +100,7 @@ export const EmotionalIntelligenceStyles = {
     borderRight: "5px solid lavender",
     borderLeft: "5px solid lavender",
     borderBottom: "5px solid lavender",
-  }
+  },
 
   EmotionNote: { width: 300, height: 125, margin: 5 },
 
