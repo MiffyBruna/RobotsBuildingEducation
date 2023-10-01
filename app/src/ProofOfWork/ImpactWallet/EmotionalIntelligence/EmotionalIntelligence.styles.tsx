@@ -62,6 +62,7 @@ export const EmotionalIntelligenceStyles = {
   RowJustifyCenter: {
     display: "flex",
     justifyContent: "center",
+    alignItems: "center",
   },
 
   JourneyContainer: {

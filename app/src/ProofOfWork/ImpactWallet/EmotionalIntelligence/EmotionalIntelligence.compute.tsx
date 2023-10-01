@@ -25,3 +25,19 @@ export let formatEmotionItem = (item, extraData, key) => {
 
   return result;
 };
+
+export const formatFriendlyDate = (timestamp) => {
+  const date = new Date(timestamp);
+
+  const options = {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: true,
+  };
+  const friendlyDate = new Intl.DateTimeFormat("en-US", options).format(date);
+  return friendlyDate;
+};

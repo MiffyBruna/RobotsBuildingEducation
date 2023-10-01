@@ -16,7 +16,11 @@ import {
 import {
   customInstructions,
   formatEmotionItem,
+  formatFriendlyDate,
 } from "./EmotionalIntelligence.compute";
+
+import roxanaFocusing from "../../../common/media/images/roxanaFocusing.png";
+import roxanaKind from "../../../common/media/images/roxanaKind.png";
 
 export const EmotionalIntelligence = ({
   isEmotionalIntelligenceOpen,
@@ -33,11 +37,7 @@ export const EmotionalIntelligence = ({
   const [isAiResponseLoading, setIsAiResponseLoading] = useState(false);
   const [chatGptResponse, setChatGptResponse] = useState("");
 
-  const handleEmotionSelection = async (
-    item,
-    shouldRunDatabase = true,
-    shouldOpenModal = true
-  ) => {
+  const handleEmotionSelection = async (item, shouldRunDatabase = true) => {
     let formattedItem = formatEmotionItem(
       {
         ...item,
@@ -51,11 +51,7 @@ export const EmotionalIntelligence = ({
       setShouldRenderSaveButton(true);
     }
 
-    if (shouldOpenModal) {
-      setIsEmotionModalOpen(true);
-    }
-
-    console.log("item", formattedItem);
+    setIsEmotionModalOpen(true);
     setSelectedEmotion(formattedItem);
   };
 
@@ -85,6 +81,7 @@ export const EmotionalIntelligence = ({
 
   const saveEmotionData = async () => {
     let savedData = formatEmotionItem(selectedEmotion, chatGptResponse, "ai");
+    savedData = formatEmotionItem(selectedEmotion, emotionNote, "note");
 
     await addDoc(usersEmotionsCollectionReference, savedData);
     updateUserEmotions(usersEmotionsCollectionReference);
@@ -97,6 +94,8 @@ export const EmotionalIntelligence = ({
     usersEmotionsFromDB?.length > 0
       ? usersEmotionsFromDB?.sort((a, b) => a?.timestamp - b?.timestamp)
       : [];
+
+  console.log("selected", selectedEmotion);
 
   return (
     <>
@@ -180,7 +179,13 @@ export const EmotionalIntelligence = ({
           closeButton
           style={EmotionalIntelligenceStyles.EmotionHeader}
         >
-          <Modal.Title>How You Feel</Modal.Title>
+          <Modal.Title>
+            <img
+              src={shouldRenderSaveButton ? roxanaFocusing : roxanaKind}
+              width={50}
+            />{" "}
+            How You Feel
+          </Modal.Title>
         </Modal.Header>
         <Modal.Body style={EmotionalIntelligenceStyles.EmotionBody}>
           <div style={{ marginBottom: 12 }}>
@@ -200,17 +205,31 @@ export const EmotionalIntelligence = ({
                   style={EmotionalIntelligenceStyles.EmotionNote}
                 />
               ) : null}
+              {selectedEmotion?.note ? (
+                <div style={{ padding: 10, height: 150, overflow: "scroll" }}>
+                  <div>
+                    You said the following on <br />
+                    {formatFriendlyDate(selectedEmotion?.timestamp)}
+                  </div>
+                  <br />
+                  <div style={{ wordBreak: "break-word" }}>
+                    {selectedEmotion?.note}{" "}
+                  </div>
+                </div>
+              ) : null}
             </div>
 
             {shouldRenderSaveButton ? (
-              <Button
-                variant="light"
-                style={EmotionalIntelligenceStyles.GenerateInsightButton}
-                onClick={generateAdviceOrWisdom}
-                disabled={isAiResponseLoading}
-              >
-                generate insight 💌
-              </Button>
+              <div>
+                <Button
+                  variant="light"
+                  style={EmotionalIntelligenceStyles.GenerateInsightButton}
+                  onClick={generateAdviceOrWisdom}
+                  disabled={isAiResponseLoading}
+                >
+                  generate insight 💌
+                </Button>
+              </div>
             ) : null}
           </div>
           {isAiResponseLoading ? (
@@ -218,6 +237,7 @@ export const EmotionalIntelligence = ({
               <RoxanaLoadingAnimation />
             </div>
           ) : null}
+
           {chatGptResponse || selectedEmotion?.ai ? (
             <div style={EmotionalIntelligenceStyles.AiResponseContainer}>
               <div style={EmotionalIntelligenceStyles.AiResponseMessage}>
