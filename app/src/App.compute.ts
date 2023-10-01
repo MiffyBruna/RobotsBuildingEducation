@@ -3,7 +3,7 @@ import { database } from "./database/firebaseResources";
 import { getGlobalImpact } from "./common/uiSchema";
 
 export const sortEmotionsByDate = (usersEmotionsFromDB) => {
-    let insertTestDate = [...usersEmotionsFromDB, { timestamp: 1696089614, color: "#FF91A4",colorHover: "#FF7F95",emoji: "(｡•̀ᴗ-)✧",label: "Motivated",note: "data"}]
+    let insertTestDate = usersEmotionsFromDB;
     let sortedDates = insertTestDate?.length > 0
       ? insertTestDate?.sort((a, b) => a?.timestamp - b?.timestamp)
       : [];

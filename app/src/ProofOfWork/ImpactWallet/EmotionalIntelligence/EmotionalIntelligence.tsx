@@ -132,12 +132,6 @@ export const EmotionalIntelligence = ({
             </div>
           </div>
 
-          {/*     //   Object.keys(groupedByMonthYear).map(key => {
-
-
-    
-    //     console.log(groupedByMonthYear[key]);
-    //   }); */}
           {!isEmpty(usersEmotionsFromDB) ? (
             <>
               <h1 style={EmotionalIntelligenceStyles.Banner}>

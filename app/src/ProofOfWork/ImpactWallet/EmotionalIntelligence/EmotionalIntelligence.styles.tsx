@@ -45,6 +45,7 @@ export const EmotionalIntelligenceStyles = {
     backgroundColor: "rgba(50, 50, 50, 0.85)",
     padding: 24,
     borderRadius: 24,
+    marginTop: 48,
   },
 
   EnergyLevelContainer: {
