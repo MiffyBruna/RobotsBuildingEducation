@@ -17,6 +17,7 @@ import {
   customInstructions,
   formatEmotionItem,
   formatFriendlyDate,
+  sortEmotionsByDate,
 } from "./EmotionalIntelligence.compute";
 
 import roxanaFocusing from "../../../common/media/images/roxanaFocusing.png";
@@ -90,13 +91,6 @@ export const EmotionalIntelligence = ({
     setShouldRenderSaveButton(false);
   };
 
-  const sortedEmotions =
-    usersEmotionsFromDB?.length > 0
-      ? usersEmotionsFromDB?.sort((a, b) => a?.timestamp - b?.timestamp)
-      : [];
-
-  console.log("selected", selectedEmotion);
-
   return (
     <>
       <Modal centered show={isEmotionalIntelligenceOpen} fullscreen>
@@ -141,7 +135,7 @@ export const EmotionalIntelligence = ({
             </div>
           </div>
 
-          {sortedEmotions?.length > 0 ? (
+          {sortEmotionsByDate(usersEmotionsFromDB)?.length > 0 ? (
             <>
               <h1 style={EmotionalIntelligenceStyles.Banner}>
                 <div style={EmotionalIntelligenceStyles.BannerBackground}>
@@ -149,17 +143,19 @@ export const EmotionalIntelligence = ({
                 </div>
               </h1>
               <div style={EmotionalIntelligenceStyles.JourneyContainer}>
-                {sortedEmotions?.reverse().map((item) => (
-                  <EmotionButton
-                    color={item?.color}
-                    colorHover={item.colorHover}
-                    onClick={() => handleEmotionSelection(item, false)}
-                  >
-                    {item?.label}
-                    <br />
-                    {item?.emoji}
-                  </EmotionButton>
-                ))}
+                {sortEmotionsByDate(usersEmotionsFromDB)
+                  ?.reverse()
+                  .map((item) => (
+                    <EmotionButton
+                      color={item?.color}
+                      colorHover={item.colorHover}
+                      onClick={() => handleEmotionSelection(item, false)}
+                    >
+                      {item?.label}
+                      <br />
+                      {item?.emoji}
+                    </EmotionButton>
+                  ))}
               </div>
             </>
           ) : null}

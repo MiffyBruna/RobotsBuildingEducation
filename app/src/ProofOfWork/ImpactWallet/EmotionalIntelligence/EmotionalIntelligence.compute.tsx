@@ -41,3 +41,9 @@ export const formatFriendlyDate = (timestamp) => {
   const friendlyDate = new Intl.DateTimeFormat("en-US", options).format(date);
   return friendlyDate;
 };
+
+export const sortEmotionsByDate = (usersEmotionsFromDB) => {
+  return usersEmotionsFromDB?.length > 0
+    ? usersEmotionsFromDB?.sort((a, b) => a?.timestamp - b?.timestamp)
+    : [];
+};
