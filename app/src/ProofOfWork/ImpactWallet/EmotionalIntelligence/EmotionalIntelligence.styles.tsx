@@ -48,7 +48,9 @@ export const EmotionalIntelligenceStyles = {
   },
 
   EnergyLevelContainer: {
-    padding: 24,
+    paddingTop: 24,
+    PaddingBottom: 24,
+    paddingRight: 24,
   },
 
   RowWrapCenter: {

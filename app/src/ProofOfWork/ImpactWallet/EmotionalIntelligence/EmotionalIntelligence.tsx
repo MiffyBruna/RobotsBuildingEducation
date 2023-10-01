@@ -101,7 +101,7 @@ export const EmotionalIntelligence = ({
           </h1>
 
           <div style={EmotionalIntelligenceStyles.EnergyLevelContainer}>
-            <h3>High Energy</h3>
+            <h3 style={{ textAlign: "left", width: "100vw" }}>High Energy</h3>
             <div style={EmotionalIntelligenceStyles.RowWrapCenter}>
               {highEnergyFeelings.map((item) => (
                 <EmotionButton
@@ -115,7 +115,8 @@ export const EmotionalIntelligence = ({
                 </EmotionButton>
               ))}
             </div>
-            <h3>Low Energy</h3>
+            <br />
+            <h3 style={{ textAlign: "left", width: "100vw" }}>Low Energy</h3>
             <div style={EmotionalIntelligenceStyles.RowWrapCenter}>
               {lowEnergyFeelings.map((item) => (
                 <EmotionButton
@@ -149,7 +150,15 @@ export const EmotionalIntelligence = ({
                 {Object.keys(usersEmotionsFromDB)?.map((item) => (
                   <div>
                     <br />
-                    <h3>{item}</h3>
+                    <h3
+                      style={{
+                        textAlign: "left",
+                        width: "100vw",
+                        paddingLeft: 16,
+                      }}
+                    >
+                      {item}
+                    </h3>
                     {usersEmotionsFromDB[item]
                       .map((emotion) => (
                         <EmotionButton
