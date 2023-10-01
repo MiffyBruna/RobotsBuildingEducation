@@ -1,5 +1,6 @@
 //@ts-nocheck
 import { useState } from "react";
+import { isEmpty } from "lodash";
 import { Button, Modal } from "react-bootstrap";
 import {
   EmotionButton,
@@ -17,7 +18,6 @@ import {
   customInstructions,
   formatEmotionItem,
   formatFriendlyDate,
-  sortEmotionsByDate,
 } from "./EmotionalIntelligence.compute";
 
 import roxanaFocusing from "../../../common/media/images/roxanaFocusing.png";
@@ -39,14 +39,8 @@ export const EmotionalIntelligence = ({
   const [chatGptResponse, setChatGptResponse] = useState("");
 
   const handleEmotionSelection = async (item, shouldRunDatabase = true) => {
-    let formattedItem = formatEmotionItem(
-      {
-        ...item,
-        timestamp: Date.now(),
-      },
-      item?.ai,
-      "ai"
-    );
+    let formattedItem = formatEmotionItem(item, Date.now(), "timestamp");
+    formattedItem = formatEmotionItem(formattedItem, item?.ai, "ai");
 
     if (shouldRunDatabase) {
       setShouldRenderSaveButton(true);
@@ -82,7 +76,7 @@ export const EmotionalIntelligence = ({
 
   const saveEmotionData = async () => {
     let savedData = formatEmotionItem(selectedEmotion, chatGptResponse, "ai");
-    savedData = formatEmotionItem(selectedEmotion, emotionNote, "note");
+    savedData = formatEmotionItem(savedData, emotionNote, "note");
 
     await addDoc(usersEmotionsCollectionReference, savedData);
     updateUserEmotions(usersEmotionsCollectionReference);
@@ -90,6 +84,8 @@ export const EmotionalIntelligence = ({
     setChatGptResponse("");
     setShouldRenderSaveButton(false);
   };
+
+  console.log("user emotions", usersEmotionsFromDB);
 
   return (
     <>
@@ -135,27 +131,40 @@ export const EmotionalIntelligence = ({
             </div>
           </div>
 
-          {sortEmotionsByDate(usersEmotionsFromDB)?.length > 0 ? (
+          {/*     //   Object.keys(groupedByMonthYear).map(key => {
+
+
+    
+    //     console.log(groupedByMonthYear[key]);
+    //   }); */}
+          {!isEmpty(usersEmotionsFromDB) ? (
             <>
               <h1 style={EmotionalIntelligenceStyles.Banner}>
                 <div style={EmotionalIntelligenceStyles.BannerBackground}>
                   MY EMOTIONAL JOURNEY 🌦️
                 </div>
               </h1>
+
               <div style={EmotionalIntelligenceStyles.JourneyContainer}>
-                {sortEmotionsByDate(usersEmotionsFromDB)
-                  ?.reverse()
-                  .map((item) => (
-                    <EmotionButton
-                      color={item?.color}
-                      colorHover={item.colorHover}
-                      onClick={() => handleEmotionSelection(item, false)}
-                    >
-                      {item?.label}
-                      <br />
-                      {item?.emoji}
-                    </EmotionButton>
-                  ))}
+                {Object.keys(usersEmotionsFromDB)?.map((item) => (
+                  <div>
+                    <br />
+                    <h3>{item}</h3>
+                    {usersEmotionsFromDB[item]
+                      .map((emotion) => (
+                        <EmotionButton
+                          color={emotion?.color}
+                          colorHover={emotion.colorHover}
+                          onClick={() => handleEmotionSelection(emotion, false)}
+                        >
+                          {emotion?.label}
+                          <br />
+                          {emotion?.emoji}
+                        </EmotionButton>
+                      ))
+                      .reverse()}
+                  </div>
+                ))}
               </div>
             </>
           ) : null}
@@ -201,7 +210,7 @@ export const EmotionalIntelligence = ({
                   style={EmotionalIntelligenceStyles.EmotionNote}
                 />
               ) : null}
-              {selectedEmotion?.note ? (
+              {selectedEmotion?.note && !shouldRenderSaveButton ? (
                 <div style={{ padding: 10, height: 150, overflow: "scroll" }}>
                   <div>
                     You said the following on <br />
@@ -249,6 +258,7 @@ export const EmotionalIntelligence = ({
               setIsEmotionModalOpen(false);
               setChatGptResponse("");
               setShouldRenderSaveButton(false);
+              setEmotionNote("");
             }}
           >
             Exit

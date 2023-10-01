@@ -2,7 +2,41 @@ import { collection, doc, getDoc, getDocs, setDoc } from "firebase/firestore";
 import { database } from "./database/firebaseResources";
 import { getGlobalImpact } from "./common/uiSchema";
 
+export const sortEmotionsByDate = (usersEmotionsFromDB) => {
+    let insertTestDate = [...usersEmotionsFromDB, { timestamp: 1696089614, color: "#FF91A4",colorHover: "#FF7F95",emoji: "(｡•̀ᴗ-)✧",label: "Motivated",note: "data"}]
+    let sortedDates = insertTestDate?.length > 0
+      ? insertTestDate?.sort((a, b) => a?.timestamp - b?.timestamp)
+      : [];
 
+      const monthNames = [
+        "January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"
+      ];
+
+      const groupedByMonthYear = {};
+
+      sortedDates.forEach(item => {
+        const date = new Date(item.timestamp);
+        const month = date.getMonth(); // JavaScript months are 0-based
+        const year = date.getFullYear();
+        
+        const key = `${monthNames[month]} ${year}`;
+
+
+        
+        if (!groupedByMonthYear[key]) {
+          groupedByMonthYear[key] = [];
+        }
+        
+        groupedByMonthYear[key].push(item);
+      });
+      
+
+      return groupedByMonthYear
+
+      
+
+  };
   
 export const setupUserDocument = async (docRef, userStateReference) => {
     const res = await getDoc(docRef);

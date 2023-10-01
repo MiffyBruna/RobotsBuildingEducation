@@ -20,7 +20,6 @@ export const EmotionButton = styled.button`
     }};
 
     cursor: ${(props) => {
-      console.log("propsnoClick", props.noClick);
       return props.noClick ? "unset" : "pointer";
     }};
   }
@@ -70,7 +69,7 @@ export const EmotionalIntelligenceStyles = {
     textAlign: "center",
     justifyContent: "center",
     flexWrap: "wrap",
-    marginTop: 48,
+    marginTop: 12,
   },
 
   Footer: {

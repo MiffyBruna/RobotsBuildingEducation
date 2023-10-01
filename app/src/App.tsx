@@ -29,7 +29,7 @@ import {
   useUIStates,
   useUserDocument,
 } from "./App.hooks";
-import { handleUserAuthentication } from "./App.compute";
+import { handleUserAuthentication, sortEmotionsByDate } from "./App.compute";
 import { validPasscodes } from "./App.constants";
 
 logEvent(analytics, "page_view", {
@@ -114,6 +114,7 @@ function App() {
         } else {
         }
       });
+      emotionSet = sortEmotionsByDate(emotionSet);
       userStateReference.setUsersEmotionsFromDB(emotionSet);
     });
   };
