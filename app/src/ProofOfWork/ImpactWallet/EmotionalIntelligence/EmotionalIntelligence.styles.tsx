@@ -42,7 +42,8 @@ export const EmotionalIntelligenceStyles = {
   },
 
   BannerBackground: {
-    backgroundColor: "rgba(50, 50, 50, 0.85)",
+    backgroundColor: "rgba(220, 208, 255, 1)",
+    textShadow: "0px 0px 25px black",
     padding: 24,
     borderRadius: 24,
     marginTop: 48,

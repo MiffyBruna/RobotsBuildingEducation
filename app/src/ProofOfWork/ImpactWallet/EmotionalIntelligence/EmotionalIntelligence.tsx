@@ -85,8 +85,6 @@ export const EmotionalIntelligence = ({
     setShouldRenderSaveButton(false);
   };
 
-  console.log("user emotions", usersEmotionsFromDB);
-
   return (
     <>
       <Modal centered show={isEmotionalIntelligenceOpen} fullscreen>
@@ -96,12 +94,12 @@ export const EmotionalIntelligence = ({
         <Modal.Body style={EmotionalIntelligenceStyles.Body}>
           <h1 style={EmotionalIntelligenceStyles.Banner}>
             <div style={EmotionalIntelligenceStyles.BannerBackground}>
-              🌌 How do you feel today?
+              🌌 how do you feel today?
             </div>
           </h1>
 
           <div style={EmotionalIntelligenceStyles.EnergyLevelContainer}>
-            <h3 style={{ textAlign: "left", width: "100vw" }}>High Energy</h3>
+            <h3 style={{ textAlign: "center" }}>High Energy</h3>
             <div style={EmotionalIntelligenceStyles.RowWrapCenter}>
               {highEnergyFeelings.map((item) => (
                 <EmotionButton
@@ -116,7 +114,7 @@ export const EmotionalIntelligence = ({
               ))}
             </div>
             <br />
-            <h3 style={{ textAlign: "left", width: "100vw" }}>Low Energy</h3>
+            <h3 style={{ textAlign: "center" }}>Low Energy</h3>
             <div style={EmotionalIntelligenceStyles.RowWrapCenter}>
               {lowEnergyFeelings.map((item) => (
                 <EmotionButton
@@ -136,7 +134,7 @@ export const EmotionalIntelligence = ({
             <>
               <h1 style={EmotionalIntelligenceStyles.Banner}>
                 <div style={EmotionalIntelligenceStyles.BannerBackground}>
-                  MY EMOTIONAL JOURNEY 🌦️
+                  the journey 🌦️
                 </div>
               </h1>
 
@@ -146,9 +144,8 @@ export const EmotionalIntelligence = ({
                     <br />
                     <h3
                       style={{
-                        textAlign: "left",
+                        textAlign: "center",
                         width: "100vw",
-                        paddingLeft: 16,
                       }}
                     >
                       {item}
