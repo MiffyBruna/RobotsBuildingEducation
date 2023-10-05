@@ -4,6 +4,7 @@ import { getGlobalImpact } from "./common/uiSchema";
 
 export const sortEmotionsByDate = (usersEmotionsFromDB) => {
     let insertTestDate = usersEmotionsFromDB;
+    
     let sortedDates = insertTestDate?.length > 0
       ? insertTestDate?.sort((a, b) => a?.timestamp - b?.timestamp)
       : [];
@@ -60,7 +61,7 @@ export const updateGlobalCounters = async (globalImpactDocRef, globalReserveDocR
     globalStateReference.setGobalReserveObject(globalReserveRes.data());
   };
 
-  export const handleUserAuthentication = async (user, appFunctions) => {
+export const handleUserAuthentication = async (user, appFunctions) => {
     appFunctions.authStateReference.setUserAuthObject(user);
     appFunctions.authStateReference.setIsSignedIn(true);
     appFunctions.uiStateReference.setIsDemo(false);
@@ -79,4 +80,20 @@ export const updateGlobalCounters = async (globalImpactDocRef, globalReserveDocR
     appFunctions.userStateReference.setUsersEmotionsCollectionReference(usersEmotionsCollectionRef);
     appFunctions.updateUserEmotions(usersEmotionsCollectionRef);
     appFunctions.uiStateReference.setProofOfWorkFromModules(getGlobalImpact());
-  };
+};
+
+
+export const checkSignInStates = ({ authStateReference }) => {
+  if( typeof authStateReference.isSignedIn === "string" || (!authStateReference.isSignedIn && authStateReference.isZeroKnowledgeUser))
+    return true
+  else
+    return false
+}
+
+
+export const checkActiveUserStates = ({ userStateReference, authStateReference }) =>{
+  if(userStateReference.databaseUserDocument && authStateReference.isSignedIn && authStateReference.isZeroKnowledgeUser)
+    return true
+  else
+    return false
+}

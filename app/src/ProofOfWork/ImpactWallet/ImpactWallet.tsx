@@ -9,7 +9,6 @@ import { DiscordButton } from "../../common/ui/DiscordButton/DiscordButton";
 import { doc, getDoc } from "firebase/firestore";
 import { Link, useParams } from "react-router-dom";
 import { EmotionalIntelligence } from "./EmotionalIntelligence/EmotionalIntelligence";
-import { sortEmotionsByDate } from "./EmotionalIntelligence/EmotionalIntelligence.compute";
 
 export const ImpactWallet = ({
   globalScholarshipCounter,

@@ -3,7 +3,7 @@ import { ultimateEffeciencyJutsu } from "../ui";
 import compSciLib from "../../media/images/compSciLib.jpeg";
 import metaphysicalMuse from "../../media/images/metaphysicalMuse.jpeg";
 import { japaneseThemePalette, textBlock } from "../../../styles/lazyStyles";
-import { MessageBlock } from "../MessageBlock/MessageBlock";
+import { ChatBlock } from "../ChatBlock/ChatBlock";
 import { CodeBlock } from "../Displays/CodeBlock/CodeBlock";
 import { CuteGradient } from "../Displays/CuteGradient/CuteGradient";
 
@@ -31,7 +31,7 @@ export const Engineer = {
         // should we add impact to selecting a course? adding it to "welcome" would achieve this.
         welcome: {
           response: (
-            // <MessageBlock>
+            // <ChatBlock type={"quiz"}>
             <div>
               Dear Innovators &amp; Bright Minds 🌟,
               <br />
@@ -55,7 +55,7 @@ export const Engineer = {
               <br />
               Ms. Roxana
             </div>
-            // </MessageBlock>
+            // </ChatBlock>
           ),
           spanish: ``,
           tooltip: ``,
@@ -471,7 +471,7 @@ exports.app = functions.https.onRequest(app);
             `Learn Coding`
           )}?`,
           response: (
-            <MessageBlock>
+            <ChatBlock type={"quiz"}>
               🌐Geography & Computer Science: How can computer science and GIS
               (Geographic Information System) technologies be combined to help
               combat climate change?
@@ -499,7 +499,7 @@ exports.app = functions.https.onRequest(app);
               These questions encourage the exploration of the
               multi-disciplinary applications of computer science, sparking
               creativity and stimulating critical thinking. 💡🚀
-            </MessageBlock>
+            </ChatBlock>
           ),
           spanish: ``,
           tooltip: ``,
@@ -620,7 +620,7 @@ exports.app = functions.https.onRequest(app);
       prompts: {
         welcome: {
           response: (
-            // <MessageBlock>
+            // <ChatBlock type={"quiz"}>
             <div>
               ¡Hola, estudiantes! 🌸
               <br />
@@ -640,7 +640,7 @@ exports.app = functions.https.onRequest(app);
               <br />
               Ms. Roxana 🌟
             </div>
-            // </MessageBlock>
+            // </ChatBlock>
           ),
           spanish: ``,
           tooltip: ``,
@@ -1467,7 +1467,7 @@ throw new Error(
       prompts: {
         welcome: {
           response: (
-            // <MessageBlock>
+            // <ChatBlock type={"quiz"}>
             <div>
               Exceptional students! 🌟
               <br />
@@ -1493,7 +1493,7 @@ throw new Error(
               extraordinary. So, get ready, let your creativity bloom, and let
               your brilliance light up the world! 🌼🌟
             </div>
-            // </MessageBlock>
+            // </ChatBlock>
           ),
           spanish: ``,
           tooltip: ``,
@@ -2204,7 +2204,7 @@ return <div style={gradientStyle}>
       prompts: {
         welcome: {
           response: (
-            // <MessageBlock>
+            // <ChatBlock type={"quiz"}>
             <div>
               Hello my wonderful students! 😊
               <br />
@@ -2224,7 +2224,7 @@ return <div style={gradientStyle}>
               Si se puede! Let's dive into the wonderful world of technology
               together. 🚀💖🌈
             </div>
-            // </MessageBlock>
+            // </ChatBlock>
           ),
           spanish: ``,
           tooltip: ``,
@@ -2965,7 +2965,7 @@ exports.app = functions
       prompts: {
         welcome: {
           response: (
-            // <MessageBlock>
+            // <ChatBlock type={"quiz"}>
             <div>
               Hello my brave students! 🌟
               <br /> <br />
@@ -2989,7 +2989,7 @@ exports.app = functions
               ready to make a mark in the world. So, buckle up, my dear
               students, and let your brilliance illuminate the path ahead! 🎉💖
             </div>
-            // </MessageBlock>
+            // </ChatBlock>
           ),
           spanish: ``,
           tooltip: ``,
@@ -3857,7 +3857,7 @@ export default OpenAIComponent;`,
       prompts: {
         welcome: {
           response: (
-            // <MessageBlock>
+            // <ChatBlock type={"quiz"}>
             <div>
               🌟 Welcome to today's exciting journey through the world of
               Computer Science, where we'll dive into the essential topics of
@@ -3878,7 +3878,7 @@ export default OpenAIComponent;`,
               unique perspectives and experiences. 🌈 Ready to code your dreams
               into reality? Let's do this! 💻🚀
             </div>
-            // </MessageBlock>
+            // </ChatBlock>
           ),
           spanish: ``,
           tooltip: ``,

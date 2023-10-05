@@ -220,3 +220,11 @@ export let RoxanaLoadingAnimation = () => {
     </div>
   );
 };
+
+export const postInstructions = {
+  url: "https://us-central1-learn-robotsbuildingeducation.cloudfunctions.net/app/prompt",
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+};

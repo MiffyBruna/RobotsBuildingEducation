@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react";
-
 import { ui } from "../../common/uiSchema";
 
 import {

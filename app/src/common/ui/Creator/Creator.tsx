@@ -1130,7 +1130,7 @@ export const Creator = {
       prompts: {
         welcome: {
           response: (
-            // <MessageBlock>
+            // <ChatBlock type={"quiz"}>
             <div>
               Hello, my bright stars 🌟! Welcome to today's lecture on the
               fascinating topic of the Psychology of Self-Esteem. I'm so excited
@@ -1163,7 +1163,7 @@ export const Creator = {
               <br />
               Ready? Let's get started! 🚀
             </div>
-            // </MessageBlock>
+            // </ChatBlock>
           ),
           spanish: ``,
           tooltip: ``,
@@ -1615,7 +1615,7 @@ export const Creator = {
       //   prompts: {
       //     welcome: {
       //       response: (
-      //         // <MessageBlock>
+      //         // <ChatBlock type={"quiz"}>
       //         <div>
       //           Hello, my bright students!
       //           <br />
@@ -1628,7 +1628,7 @@ export const Creator = {
       //           and let's take a quick but delicious journey back in time! 🕰🍴
       //           Ready? Let's go! 🌟💖
       //         </div>
-      //         // </MessageBlock>
+      //         // </ChatBlock>
       //       ),
       //       spanish: ``,
       //       tooltip: ``,

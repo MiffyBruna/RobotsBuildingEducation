@@ -5,7 +5,7 @@ import { a11yDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import { japaneseThemePalette, textBlock } from "../../../../styles/lazyStyles";
 import sheilferBitcoin from "../../media/images/sheilferBitcoin.jpeg";
 import { Modal } from "react-bootstrap";
-import { MessageBlock } from "../../MessageBlock/MessageBlock";
+import { ChatBlock } from "../../ChatBlock/ChatBlock";
 
 export let CodeBlock = ({ code }) => {
   return (

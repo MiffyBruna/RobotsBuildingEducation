@@ -175,7 +175,7 @@ export const Entrepeneur = {
                 Ms. Roxana (your gentle mentor with cosmic aspirations) 🌺🌌
               </p>
             </div>
-            // </MessageBlock>
+            // </ChatBlock>
           ),
           spanish: ``,
           tooltip: ``,

@@ -1,9 +1,13 @@
 import { useState } from "react";
 import { japaneseThemePalette, textBlock } from "../../../styles/lazyStyles";
-import sheilferBitcoin from "../../media/images/sheilferBitcoin.jpeg";
 import { Modal } from "react-bootstrap";
+import { ConversationGrader } from "./ConversationGrader/ConversationGrader";
+import {
+  customInstructions,
+  gatherConversationContext,
+} from "./ChatBlock.compute";
 
-export let MessageBlock = ({ children }) => {
+export let ChatBlock = ({ children, type = "quiz" }) => {
   let [data, setData] = useState(false);
 
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -11,11 +15,15 @@ export let MessageBlock = ({ children }) => {
     "10px 10px 5px 0px rgba(0,0,0,0.75)"
   );
 
+  let messageContext = gatherConversationContext(children);
+
+  let instructions = customInstructions({ type, messageContext });
+
   return (
     <div
       style={{
         ...textBlock(
-          japaneseThemePalette.SakuraMochiPink,
+          japaneseThemePalette.PowerPurple,
           0,
           12,
           "white",
@@ -25,16 +33,14 @@ export let MessageBlock = ({ children }) => {
     >
       <button
         onMouseEnter={() => {
-          setBoxShadow(
-            `10px 10px 5px 0px ${japaneseThemePalette.SakuraMochiPink}`
-          );
+          setBoxShadow(`10px 10px 5px 0px ${japaneseThemePalette.PowerPurple}`);
         }}
         onMouseLeave={() => {
           setBoxShadow("10px 10px 5px 0px rgba(0,0,0,0.75)");
         }}
         style={{
           boxShadow: boxShadow,
-          backgroundColor: japaneseThemePalette.DeepCherryBlossomPink,
+          backgroundColor: japaneseThemePalette.PowerPink,
         }}
         onClick={() => {
           setIsModalOpen(true);
@@ -64,10 +70,7 @@ export let MessageBlock = ({ children }) => {
           }}
         >
           something cool is being made here 🙂
-          <br />
-          <br />
-          send me bitcoin or i will go to jail 🙂🙂🙂🙂🙂🙂🙂
-          <img src={sheilferBitcoin} width={300} height={350} />
+          <ConversationGrader type={type} />
         </Modal.Body>
       </Modal>
       <br /> <br />

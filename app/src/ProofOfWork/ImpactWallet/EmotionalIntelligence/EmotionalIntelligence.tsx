@@ -8,11 +8,13 @@ import {
 } from "./EmotionalIntelligence.styles";
 import { addDoc } from "firebase/firestore";
 import Form from "react-bootstrap/Form";
-import { RoxanaLoadingAnimation } from "../../../common/uiSchema";
+import {
+  RoxanaLoadingAnimation,
+  postInstructions,
+} from "../../../common/uiSchema";
 import {
   highEnergyFeelings,
   lowEnergyFeelings,
-  postInstructions,
 } from "./EmotionalIntelligence.data";
 import {
   customInstructions,

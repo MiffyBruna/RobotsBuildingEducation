@@ -2,13 +2,7 @@ import { useEffect, useState } from "react";
 import { initializeApp } from "firebase/app";
 import { getAnalytics, logEvent } from "firebase/analytics";
 import { getAuth, GoogleAuthProvider } from "firebase/auth";
-import {
-  getFirestore,
-  // collection,
-  // query,
-  // where,
-  // getDocs,
-} from "firebase/firestore";
+import { getFirestore } from "firebase/firestore";
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
 
 export const AuthComponent = (StyledFirebaseAuth as any).default
@@ -23,8 +17,6 @@ export const firebaseConfig = {
   messagingSenderId: "1016937880040",
   appId: "1:1016937880040:web:e9b478e361cafc4e61ec5d",
   measurementId: "G-N0MK759NHN",
-
-  //G-5P3ZGB53XW
 };
 
 export const app = initializeApp(firebaseConfig);

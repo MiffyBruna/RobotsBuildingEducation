@@ -29,26 +29,45 @@ import {
   useUIStates,
   useUserDocument,
 } from "./App.hooks";
-import { handleUserAuthentication, sortEmotionsByDate } from "./App.compute";
+import {
+  checkActiveUserStates,
+  checkSignInStates,
+  handleUserAuthentication,
+  sortEmotionsByDate,
+} from "./App.compute";
 import { validPasscodes } from "./App.constants";
+import { AuthDisplay } from "./AuthDisplay/AuthDisplay";
+import { LectureHeader } from "./LectureHeader/LectureHeader";
+import { ChatGptWrapper } from "./ChatGPT/ChatGptWrapper";
+import { ProofOfWorkWrapper } from "./ProofOfWork/ProofOfWorkWrapper";
 
 logEvent(analytics, "page_view", {
   page_location: "https://learn-robotsbuildingeducation.firebaseapp.com/",
 });
 
 function App() {
-  let params = useParams();
-
   // handles passcode, google sign in and registered user info
   const { authStateReference } = useAuthState();
 
+  // handles database data from the "users" collection
   let { userStateReference } = useUserDocument();
 
+  // handles database data from the "global" collection
   let { globalStateReference } = useGlobalStates();
 
+  // handles ui data
   let { uiStateReference } = useUIStates();
 
-  // basic control for visual state - may be converted to animated route
+  /**
+   *
+   * @param event click event
+   * @description a function used to navigate the app
+   * - adds event to analytics
+   * - handles the selection and visibility of Engineer, Creator and Dealer paths.
+   * - clears any existing patreon and module content displayed in the app
+   * - creates a small animation for the path button selected
+   *
+   */
   const handlePathSelection = (event) => {
     logEvent(analytics, "select_item", {
       item_list_id: `RO.B.E_paths|${event.target.id}`,
@@ -75,7 +94,16 @@ function App() {
     });
   };
 
-  // basic control for visual state - may be converted to animated route
+  /**
+   *
+   * @param module the block of data containing content and information about a lecture
+   * @param moduleName the name of the lecture selected
+   * @description a function used to navigate the app
+   * - adds event to analytics
+   * - handles the selection and visibility of the lecture or module selected
+   * - clears the path selected
+   *
+   */
   const handleModuleSelection = (module, moduleName) => {
     // can redefine this as module object rather than patreon object. low priority
     uiStateReference.setPatreonObject(module);
@@ -94,7 +122,15 @@ function App() {
     uiStateReference.setCurrentPath("");
   };
 
-  // basic control for visual state - may be converted to animated route
+  /**
+   *
+   * @param event A typing event
+   * @description a process that checks when a user has submitted a valid passcode
+   * - stores passcode to local storage
+   * - clears patreon lecture selected
+   * - sets success password flag to true
+   * - logs event to anlytics
+   */
   const handleZeroKnowledgePassword = (event) => {
     if (validPasscodes.includes(event.target.value)) {
       localStorage.setItem("patreonPasscode", event.target.value);
@@ -104,6 +140,14 @@ function App() {
     }
   };
 
+  /**
+   *
+   * @param collectionRef A collection object used to retrieve or processdatabase data
+   * @description gets each emotion document in a user's collection of emotions and prepares them for display
+   * - gets user's data from database
+   * - sorts emotions by timestamp date
+   * - sets emotions for display
+   */
   let updateUserEmotions = async (collectionRef) => {
     await getDocs(collectionRef).then((querySnapshot) => {
       let emotionSet = [];
@@ -119,18 +163,16 @@ function App() {
     });
   };
 
+  /**
+   * @description check if the user has been logged in
+   */
   useEffect(() => {
-    //check local storage
-
     const storedPasscode = localStorage.getItem("patreonPasscode");
     authStateReference.setIsZeroKnowledgeUser(
       validPasscodes.includes(storedPasscode)
     );
 
     onAuthStateChanged(auth, (user) => {
-      // Check for user status
-      //probably a better option than displayName.
-
       if (user?.displayName) {
         handleUserAuthentication(user, {
           authStateReference,
@@ -148,19 +190,8 @@ function App() {
     });
   }, []);
 
-  let computePercentage =
-    (userStateReference.databaseUserDocument.impact || 0) /
-    (uiStateReference.proofOfWorkFromModules || 77500);
-
   if (typeof authStateReference.isSignedIn == "string") {
-    return (
-      <div>
-        <Spinner animation="grow" variant="light" />
-        <br />
-        <br />
-        <RoxanaLoadingAnimation />
-      </div>
-    );
+    return <RoxanaLoadingAnimation />;
   }
 
   return (
@@ -168,109 +199,13 @@ function App() {
       <div className="App" style={{ minHeight: "100vh" }}>
         <Header />
 
-        {/* User enters passcode, and sees a google login button */}
-        {/* typeof string is checked because initial state is "start" but then uses booleans */}
-        {typeof authStateReference.isSignedIn === "string" ||
-        (!authStateReference.isSignedIn &&
-          authStateReference.isZeroKnowledgeUser) ? (
-          <div
-            style={{
-              border: "1px solid #1C1C1E",
-              width: "fit-content",
-              margin: "auto",
-              backgroundColor: "#1C1C1E",
-              marginBottom: "48px",
-            }}
-            onClick={() => {
-              logEvent(analytics, "login", { method: "Google" });
-            }}
-          >
-            Access all features:
-            <AuthComponent
-              id="firebaseui-auth-container"
-              uiConfig={uiConfig}
-              firebaseAuth={auth}
-              style={{ backgroundColor: "black" }}
-            />
-          </div>
-        ) : null}
+        {checkSignInStates({ authStateReference }) ? <AuthDisplay /> : null}
 
-        {/* If the user hasn't submitted a passcode, the user sees a passcode field */}
         {!authStateReference.isZeroKnowledgeUser ? (
           <Passcode
             patreonObject={uiStateReference.patreonObject}
             handleZeroKnowledgePassword={handleZeroKnowledgePassword}
           />
-        ) : null}
-
-        {localStorage.getItem("patreonPasscode") ===
-        import.meta.env.VITE_FREE_BLACK_COMMUNITY ? (
-          <div>
-            <div
-              style={{
-                boxSizing: "border-box",
-                padding: 12,
-                display: "flex",
-                justifyContent: "center",
-              }}
-            >
-              <div
-                style={{
-                  backgroundColor: "#FFF4CA",
-                  color: "black",
-                  boxSizing: "border-box",
-                  width: "375px",
-                  padding: 12,
-                  display: "flex",
-                  justifyContent: "center",
-                }}
-              >
-                Looks like you used the passcode BLCK.
-                <br />
-                Feel welcome to use subscriber services <br />
-                for free 🙂
-              </div>
-            </div>
-            <br />
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                flexWrap: "wrap",
-              }}
-            >
-              <button
-                onClick={() =>
-                  window.open(
-                    "https://calendly.com/robotsbuildingeducation/patreon"
-                  )
-                }
-                style={{ margin: 6, width: 190 }}
-              >
-                Schedule a 1-on-1
-              </button>
-              <button
-                onClick={() =>
-                  window.open(
-                    "https://github.com/RobotsBuildingEducation/RobotsBuildingEducation/issues"
-                  )
-                }
-                style={{ margin: 6, width: 190 }}
-              >
-                Get Experience
-              </button>
-              <button
-                onClick={() =>
-                  window.open(
-                    "https://github.com/RobotsBuildingEducation/Educate/tree/main/newsletter%2B%2B"
-                  )
-                }
-                style={{ margin: 6, width: 190 }}
-              >
-                Newsletter++
-              </button>
-            </div>
-          </div>
         ) : null}
 
         {authStateReference.isZeroKnowledgeUser ? (
@@ -287,88 +222,27 @@ function App() {
               currentPath={uiStateReference.currentPath}
             />
 
-            <br />
+            <LectureHeader uiStateReference={uiStateReference} />
 
-            {/* this is a header after selecting a lecture module */}
-            {!isEmpty(uiStateReference.patreonObject.header) ? (
-              <h2 style={{ color: "white", marginTop: 12 }}>
-                {uiStateReference.patreonObject?.header || ""}{" "}
-              </h2>
-            ) : null}
-
-            <br />
-
-            <div style={{ width: "100%" }}>
-              <div>
-                {isEmpty(uiStateReference.patreonObject) &&
-                !uiStateReference.isDemo ? null : (
-                  <>
-                    <ChatGPT
-                      currentPath={uiStateReference.currentPathForAnalytics}
-                      patreonObject={uiStateReference.patreonObject}
-                      userDocumentReference={
-                        userStateReference.userDocumentReference
-                      }
-                      databaseUserDocument={
-                        userStateReference.databaseUserDocument
-                      }
-                      setDatabaseUserDocument={
-                        userStateReference.setDatabaseUserDocument
-                      }
-                      globalDocumentReference={
-                        globalStateReference.globalDocumentReference
-                      }
-                      globalImpactCounter={
-                        globalStateReference.globalImpactCounter
-                      }
-                      setGlobalImpactCounter={
-                        globalStateReference.setGlobalImpactCounter
-                      }
-                      moduleName={uiStateReference.moduleName}
-                    />
-                  </>
-                )}
-              </div>
-            </div>
+            <ChatGptWrapper
+              uiStateReference={uiStateReference}
+              userStateReference={userStateReference}
+              globalStateReference={globalStateReference}
+            />
           </>
         ) : null}
       </div>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          position: "sticky",
-          bottom: 0,
-          width: "100%",
-          backgroundColor: "rgba(28,28,30,0.75)",
-          // border: "5px solid red",
-          // height: "75px",
-        }}
-      >
-        {userStateReference.databaseUserDocument &&
-        authStateReference.isSignedIn &&
-        authStateReference.isZeroKnowledgeUser ? (
-          <ProofOfWork
-            userAuthObject={authStateReference.userAuthObject}
-            displayName={auth?.currentUser?.displayName}
-            databaseUserDocument={userStateReference.databaseUserDocument}
-            computePercentage={computePercentage}
-            globalImpactCounter={globalStateReference.globalImpactCounter}
-            usersEmotionsCollectionReference={
-              userStateReference.usersEmotionsCollectionReference
-            }
-            usersEmotionsFromDB={userStateReference.usersEmotionsFromDB}
-            globalScholarshipCounter={
-              globalStateReference.globalScholarshipCounter
-            }
-            handlePathSelection={handlePathSelection}
-            globalReserveObject={globalStateReference.globalReserveObject}
-            updateUserEmotions={updateUserEmotions}
-            isDemo={uiStateReference.isDemo}
-          />
-        ) : null}
-      </div>
+
+      {checkActiveUserStates({ userStateReference, authStateReference }) ? (
+        <ProofOfWorkWrapper
+          userStateReference={userStateReference}
+          authStateReference={authStateReference}
+          globalStateReference={globalStateReference}
+          handlePathSelection={handlePathSelection}
+          updateUserEmotions={updateUserEmotions}
+          uiStateReference={uiStateReference}
+        />
+      ) : null}
     </>
   );
 }

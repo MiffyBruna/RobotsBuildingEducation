@@ -1,10 +1,4 @@
-import { Link } from "react-router-dom";
-import { uiPaths } from "../common/uiSchema";
-import {
-  StyledNavigationContainer,
-  StyledPath,
-  StyledLink,
-} from "../styles/lazyStyles";
+import { StyledNavigationContainer, StyledLink } from "../styles/lazyStyles";
 
 /**
  *

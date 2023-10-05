@@ -317,6 +317,9 @@ export let japaneseThemePalette = {
   StrongRed: "#DC143C", // Japanese Flag Red
   StrongBlue: "#00008B", // Indigo Blue Textile
   DarkMetallicSilver: "#5A5A5A", // Darkened Steel Samurai Sword
+  Lavender: "rgba(220,205,255, 1)",
+  PowerPurple: "rgba(102, 3, 252, 1)",
+  PowerPink: "#f7059d",
 };
 
 // opinionated

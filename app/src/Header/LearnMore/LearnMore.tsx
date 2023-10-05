@@ -3,11 +3,11 @@ import { Button, Modal } from "react-bootstrap";
 import khanac from "./media/khanac.jpeg";
 import snow from "./media/snow.jpeg";
 import phillyd from "./media/phillyd.jpeg";
-import elkhanmigo from "../../common/media/images/elkhanmigo.jpg";
+
 import { logEvent } from "firebase/analytics";
 import { analytics } from "../../database/firebaseResources";
 import { DiscordButton } from "../../common/ui/DiscordButton/DiscordButton";
-import { words } from "../../common/words/words";
+
 import { japaneseThemePalette, textBlock } from "../../styles/lazyStyles";
 
 export const LearnMore = () => {
@@ -31,16 +31,6 @@ export const LearnMore = () => {
         Learn more & FAQs
       </Button>
 
-      {/* <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-        }}
-      >
-        <DiscordButton />
-      </div> */}
-      {/* <br />
-      <br /> */}
       {/* <Button
         variant="danger"
         onClick={() => {
