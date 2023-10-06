@@ -255,7 +255,7 @@ export const EmotionalIntelligence = ({
         </Modal.Body>
         <Modal.Footer style={EmotionalIntelligenceStyles.EmotionFooter}>
           <Button
-            variant="light"
+            variant="dark"
             onClick={() => {
               setIsEmotionModalOpen(false);
               setChatGptResponse("");
@@ -267,7 +267,7 @@ export const EmotionalIntelligence = ({
           </Button>
 
           {shouldRenderSaveButton ? (
-            <Button variant="light" onClick={saveEmotionData}>
+            <Button variant="dark" onClick={saveEmotionData}>
               Save
             </Button>
           ) : null}
