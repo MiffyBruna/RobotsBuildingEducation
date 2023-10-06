@@ -575,11 +575,24 @@ export const LearnMore = () => {
                 that transforms learning events, scholarships and credentials.
               </p>
             </div>
+
+            <div
+              style={{
+                ...textBlock(japaneseThemePalette.SakuraMochiPink, 0, 24),
+              }}
+            >
+              <h2>Emotional Intelligence</h2>
+              <i>theme: mental health</i>
+              <p style={{ maxWidth: "100%", width: 700 }}>
+                A tool that lets you track your emotions over time for personal
+                betterment paired with a lowkey AI to assist you along the way.
+              </p>
+            </div>
           </div>
         </Modal.Body>
         <Modal.Footer style={{ backgroundColor: "black", color: "white" }}>
           <Button variant="dark" onClick={() => setIsModalOpen(false)}>
-            Exit
+            Back to app
           </Button>
         </Modal.Footer>
       </Modal>
