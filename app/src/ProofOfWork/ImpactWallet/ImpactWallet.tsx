@@ -9,6 +9,7 @@ import { DiscordButton } from "../../common/ui/DiscordButton/DiscordButton";
 import { doc, getDoc } from "firebase/firestore";
 import { Link, useParams } from "react-router-dom";
 import { EmotionalIntelligence } from "./EmotionalIntelligence/EmotionalIntelligence";
+import { japaneseThemePalette, textBlock } from "../../styles/lazyStyles";
 
 export const ImpactWallet = ({
   globalScholarshipCounter,
@@ -173,6 +174,32 @@ export const ImpactWallet = ({
               width: "100%",
             }}
           >
+            <h4> The Proof Of Work System</h4>
+            <p
+              style={{
+                maxWidth: 700,
+                ...textBlock(japaneseThemePalette.KyotoPurple, 0, 24),
+              }}
+            >
+              Robots Building Education uses a system called Proof Of Work to
+              measure success. Very simply, when you put robots to work, you're
+              engaging in educational content and that should benefit you and
+              your community in some meaningful way. You can think of this
+              system as some kind of engine for universal basic income! 😁
+            </p>
+
+            <p
+              style={{
+                maxWidth: 700,
+                ...textBlock(japaneseThemePalette.FujiSanBlue, 0, 24),
+              }}
+            >
+              The long-term vision for this is to turn this into a decentralized
+              protocol. I believe these units of work will be recorded more and
+              more by AI systems and user interfaces should allow us to consume
+              and use education subscriptions and content for a new era of
+              software.
+            </p>
             <h4>Scholarships Created: {globalScholarshipCounter}</h4>
             <p>
               Work Done By You
@@ -183,8 +210,9 @@ export const ImpactWallet = ({
                   backgroundColor: "black",
                   borderRadius: "0px",
                   margin: 12,
+                  borderRadius: 5,
                 }}
-                variant="success"
+                // variant="success"
                 now={Math.floor(computePercentage * 100)}
               />
               <br />
@@ -210,6 +238,7 @@ export const ImpactWallet = ({
                   backgroundColor: "black",
                   borderRadius: "0px",
                   margin: 12,
+                  borderRadius: 5,
                 }}
                 variant="warning"
                 now={Math.floor(
