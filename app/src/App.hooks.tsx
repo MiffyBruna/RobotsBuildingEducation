@@ -14,15 +14,7 @@ export const useAuthState = () => {
     setUserAuthObject,
   };
 
-  return {
-    authStateReference,
-    isSignedIn,
-    setIsSignedIn,
-    isZeroKnowledgeUser,
-    setIsZeroKnowledgeUser,
-    userAuthObject,
-    setUserAuthObject,
-  };
+  return { authStateReference };
 };
 
 export const useUserDocument = () => {
@@ -46,17 +38,7 @@ export const useUserDocument = () => {
     setUsersEmotionsFromDB,
   };
 
-  return {
-    userStateReference,
-    databaseUserDocument,
-    setDatabaseUserDocument,
-    userDocumentReference,
-    setUserDocumentReference,
-    usersEmotionsCollectionReference,
-    setUsersEmotionsCollectionReference,
-    usersEmotionsFromDB,
-    setUsersEmotionsFromDB,
-  };
+  return { userStateReference };
 };
 
 export const useGlobalStates = () => {
@@ -76,17 +58,7 @@ export const useGlobalStates = () => {
     setGobalReserveObject,
   };
 
-  return {
-    globalStateReference,
-    globalDocumentReference,
-    setGlobalDocumentReference,
-    globalImpactCounter,
-    setGlobalImpactCounter,
-    globalScholarshipCounter,
-    setGlobalScholarshipCounter,
-    globalReserveObject,
-    setGobalReserveObject,
-  };
+  return { globalStateReference };
 };
 
 export const useUIStates = () => {
@@ -120,23 +92,5 @@ export const useUIStates = () => {
     setProofOfWorkFromModules,
   };
 
-  return {
-    uiStateReference,
-    patreonObject,
-    setPatreonObject,
-    currentPath,
-    setCurrentPath,
-    currentPathForAnalytics,
-    setCurrentPathForAnalytics,
-    moduleName,
-    setModuleName,
-    pathSelectionAnimationData,
-    setPathSelectionAnimationData,
-    visibilityMap,
-    setVisibilityMap,
-    isDemo,
-    setIsDemo,
-    proofOfWorkFromModules,
-    setProofOfWorkFromModules,
-  };
+  return { uiStateReference };
 };

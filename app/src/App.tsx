@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react";
-import { isEmpty } from "lodash";
+import { useEffect } from "react";
 import "./App.css";
 
 import { Paths } from "./Paths/Paths";
@@ -10,19 +9,12 @@ import {
 import { Collections } from "./Paths/Collections/Collections";
 import { Header } from "./Header/Header";
 import { Passcode } from "./Passcode/Passcode";
-import {
-  auth,
-  AuthComponent,
-  uiConfig,
-  analytics,
-} from "./database/firebaseResources";
+import { auth, analytics } from "./database/firebaseResources";
 import { onAuthStateChanged } from "firebase/auth";
 import { getDocs } from "firebase/firestore";
-import { Spinner } from "react-bootstrap";
+
 import { logEvent } from "firebase/analytics";
-import { useParams } from "react-router-dom";
-import { ProofOfWork } from "./ProofOfWork/ProofOfWork";
-import ChatGPT from "./ChatGPT/ChatGPT";
+
 import {
   useAuthState,
   useGlobalStates,
