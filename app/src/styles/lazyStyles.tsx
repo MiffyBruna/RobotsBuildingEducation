@@ -1,6 +1,22 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { isEmpty } from "lodash";
 import { Link } from "react-router-dom";
+
+export const sineWave = keyframes`
+0%, 100% {
+  border-radius: 25% 75% 25% 75%;
+}
+25% {
+  border-radius: 37.5% 62.5% 62.5% 37.5%;
+}
+50% {
+  border-radius: 25% 75% 25% 75%;
+}
+75% {
+  border-radius: 62.5% 37.5% 37.5% 62.5%;
+}
+`;
+
 export const StyledNavigationContainer = styled.div`
   display: flex;
   justify-content: center;
@@ -82,6 +98,8 @@ export const StyledModule = styled.button`
     background: ${(props) => {
       return props.patreonObject.isModuleDisabled ? "#48464A" : "#f5befa";
     }};
+
+    animation: ${sineWave} 3s infinite ease-in-out;
   }
 
   background-image: url(${(props) => props.patreonObject.backgroundImgSrc});
@@ -176,6 +194,8 @@ export const StyledLink = styled(Link)`
         ? "#ff64ff;"
         : "";
     }};
+
+    animation: ${sineWave} 3s infinite ease-in-out;
 
     text-shadow: 1px 1px 5px black;
     color: white;
