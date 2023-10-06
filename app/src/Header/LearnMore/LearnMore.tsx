@@ -575,7 +575,8 @@ export const LearnMore = () => {
                 that transforms learning events, scholarships and credentials.
               </p>
             </div>
-
+            <br />
+            <br />
             <div
               style={{
                 ...textBlock(japaneseThemePalette.SakuraMochiPink, 0, 24),
