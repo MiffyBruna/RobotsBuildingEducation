@@ -1,3 +1,4 @@
+import { ChatBlock } from "../ChatBlock/ChatBlock";
 import { ultimateEffeciencyJutsu } from "../ui";
 
 export const Creator = {
@@ -552,68 +553,72 @@ export const Creator = {
             `Philosophy`
           )} without any answers?`,
           response: (
-            <div>
-              <ol>
-                <li>
-                  <b>What does philosophy have to do with computer science?</b>
+            <ChatBlock type={"quiz"}>
+              <div>
+                <ol>
+                  <li>
+                    <b>
+                      What does philosophy have to do with computer science?
+                    </b>
 
-                  <br />
-                  <br />
-                </li>
-                <li>
-                  <b>
-                    How does the design and development of algorithms and AI
-                    systems, often created by predominantly white or asian and
-                    male teams, potentially reinforce existing racial biases and
-                    systemic inequalities? How can these be mitigated?
-                  </b>
-                  <br />
-                  <br />
-                </li>
-                <li>
-                  <b>
-                    In what ways can critical race theory inform our
-                    understanding of the digital divide, and how can it guide
-                    the creation of more equitable access to technology and
-                    digital resources?
-                  </b>
-                  <br />
-                  <br />
-                </li>
-                <li>
-                  <b>
-                    How might concepts from critical race theory help to
-                    critique and reshape current practices in data collection
-                    and interpretation in computer science, particularly with
-                    respect to racial and ethnic categories?
-                  </b>
-                  <br />
-                  <br />
-                </li>
-                <li>
-                  <b>
-                    How can we apply a critical race theory lens to the
-                    discourse around digital privacy and surveillance,
-                    especially considering the differential impacts on various
-                    racial and ethnic groups?
-                  </b>
-                  <br />
-                  <br />
-                </li>
-                <li>
-                  <b>
-                    What role can philosophy and computer science play in
-                    helping to dismantle systemic racism as identified and
-                    outlined by critical race theory? For example, how can
-                    philosophical notions of ethics and justice inform the
-                    development and use of technology in a way that promotes
-                    racial justice?
-                  </b>
-                  <br />
-                  <br />
-                </li>
-              </ol>
-            </div>
+                    <br />
+                    <br />
+                  </li>
+                  <li>
+                    <b>
+                      How does the design and development of algorithms and AI
+                      systems, often created by predominantly white or asian and
+                      male teams, potentially reinforce existing racial biases
+                      and systemic inequalities? How can these be mitigated?
+                    </b>
+                    <br />
+                    <br />
+                  </li>
+                  <li>
+                    <b>
+                      In what ways can critical race theory inform our
+                      understanding of the digital divide, and how can it guide
+                      the creation of more equitable access to technology and
+                      digital resources?
+                    </b>
+                    <br />
+                    <br />
+                  </li>
+                  <li>
+                    <b>
+                      How might concepts from critical race theory help to
+                      critique and reshape current practices in data collection
+                      and interpretation in computer science, particularly with
+                      respect to racial and ethnic categories?
+                    </b>
+                    <br />
+                    <br />
+                  </li>
+                  <li>
+                    <b>
+                      How can we apply a critical race theory lens to the
+                      discourse around digital privacy and surveillance,
+                      especially considering the differential impacts on various
+                      racial and ethnic groups?
+                    </b>
+                    <br />
+                    <br />
+                  </li>
+                  <li>
+                    <b>
+                      What role can philosophy and computer science play in
+                      helping to dismantle systemic racism as identified and
+                      outlined by critical race theory? For example, how can
+                      philosophical notions of ethics and justice inform the
+                      development and use of technology in a way that promotes
+                      racial justice?
+                    </b>
+                    <br />
+                    <br />
+                  </li>
+                </ol>
+              </div>
+            </ChatBlock>
           ),
           spanish: ``,
           tooltip: ``,
@@ -1056,44 +1061,46 @@ export const Creator = {
             `Human-Computer Interaction`
           )} without any answers?`,
           response: (
-            <div>
-              <h1>Challenging Open-Ended Questions</h1>
+            <ChatBlock type={"quiz"}>
+              <div>
+                <h1>Challenging Open-Ended Questions</h1>
 
-              <h2>Question 1</h2>
-              <p>
-                How do you envision the evolution of human-computer interaction
-                with the advancement of emerging technologies such as virtual
-                reality and artificial intelligence?
-              </p>
+                <h2>Question 1</h2>
+                <p>
+                  How do you envision the evolution of human-computer
+                  interaction with the advancement of emerging technologies such
+                  as virtual reality and artificial intelligence?
+                </p>
 
-              <h2>Question 2</h2>
-              <p>
-                As search engines evolve to understand context and user intent,
-                how do you foresee the strategies for search engine optimization
-                changing?
-              </p>
+                <h2>Question 2</h2>
+                <p>
+                  As search engines evolve to understand context and user
+                  intent, how do you foresee the strategies for search engine
+                  optimization changing?
+                </p>
 
-              <h2>Question 3</h2>
-              <p>
-                How does the increasing influence of social media on user
-                behavior impact the design principles of human-computer
-                interaction?
-              </p>
+                <h2>Question 3</h2>
+                <p>
+                  How does the increasing influence of social media on user
+                  behavior impact the design principles of human-computer
+                  interaction?
+                </p>
 
-              <h2>Question 4</h2>
-              <p>
-                In what ways do you think search engine algorithms should adapt
-                to better capture and understand individual and societal
-                expressions across the internet?
-              </p>
+                <h2>Question 4</h2>
+                <p>
+                  In what ways do you think search engine algorithms should
+                  adapt to better capture and understand individual and societal
+                  expressions across the internet?
+                </p>
 
-              <h2>Question 5</h2>
-              <p>
-                How can the principles of human-computer interaction be adapted
-                to accommodate the diverse ways in which different cultures
-                express themselves digitally?
-              </p>
-            </div>
+                <h2>Question 5</h2>
+                <p>
+                  How can the principles of human-computer interaction be
+                  adapted to accommodate the diverse ways in which different
+                  cultures express themselves digitally?
+                </p>
+              </div>
+            </ChatBlock>
           ),
           spanish: ``,
           tooltip: ``,
@@ -1130,7 +1137,6 @@ export const Creator = {
       prompts: {
         welcome: {
           response: (
-            // <ChatBlock type={"quiz"}>
             <div>
               Hello, my bright stars 🌟! Welcome to today's lecture on the
               fascinating topic of the Psychology of Self-Esteem. I'm so excited
@@ -1163,7 +1169,6 @@ export const Creator = {
               <br />
               Ready? Let's get started! 🚀
             </div>
-            // </ChatBlock>
           ),
           spanish: ``,
           tooltip: ``,
@@ -1550,37 +1555,40 @@ export const Creator = {
             `The Psychology Of Self-esteem`
           )} without any answers?`,
           response: (
-            <div>
-              <h4>Challenging Quiz on Self-Esteem Psychology 🌟</h4>
+            <ChatBlock type={"quiz"}>
+              <div>
+                <h4>Challenging Quiz on Self-Esteem Psychology 🌟</h4>
 
-              <h4>Question 1</h4>
-              <p>
-                How does the "looking-glass self" theory relate to self-esteem?
-              </p>
+                <h4>Question 1</h4>
+                <p>
+                  How does the "looking-glass self" theory relate to
+                  self-esteem?
+                </p>
 
-              <h4>Question 2</h4>
-              <p>
-                Discuss the impact of social media on adolescent self-esteem.
-              </p>
+                <h4>Question 2</h4>
+                <p>
+                  Discuss the impact of social media on adolescent self-esteem.
+                </p>
 
-              <h4>Question 3</h4>
-              <p>
-                Explain how cognitive behavioral therapy (CBT) can be used to
-                improve self-esteem.
-              </p>
+                <h4>Question 3</h4>
+                <p>
+                  Explain how cognitive behavioral therapy (CBT) can be used to
+                  improve self-esteem.
+                </p>
 
-              <h4>Question 4</h4>
-              <p>
-                What role does self-compassion play in the development of
-                healthy self-esteem?
-              </p>
+                <h4>Question 4</h4>
+                <p>
+                  What role does self-compassion play in the development of
+                  healthy self-esteem?
+                </p>
 
-              <h4>Question 5</h4>
-              <p>
-                Analyze the relationship between self-esteem and academic
-                performance.
-              </p>
-            </div>
+                <h4>Question 5</h4>
+                <p>
+                  Analyze the relationship between self-esteem and academic
+                  performance.
+                </p>
+              </div>
+            </ChatBlock>
           ),
           spanish: ``,
           tooltip: ``,
@@ -1615,7 +1623,7 @@ export const Creator = {
       //   prompts: {
       //     welcome: {
       //       response: (
-      //         // <ChatBlock type={"quiz"}>
+
       //         <div>
       //           Hello, my bright students!
       //           <br />
@@ -1628,7 +1636,7 @@ export const Creator = {
       //           and let's take a quick but delicious journey back in time! 🕰🍴
       //           Ready? Let's go! 🌟💖
       //         </div>
-      //         // </ChatBlock>
+
       //       ),
       //       spanish: ``,
       //       tooltip: ``,

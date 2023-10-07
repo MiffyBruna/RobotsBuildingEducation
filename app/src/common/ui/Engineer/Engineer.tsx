@@ -6,6 +6,7 @@ import { japaneseThemePalette, textBlock } from "../../../styles/lazyStyles";
 import { ChatBlock } from "../ChatBlock/ChatBlock";
 import { CodeBlock } from "../Displays/CodeBlock/CodeBlock";
 import { CuteGradient } from "../Displays/CuteGradient/CuteGradient";
+import { Chat } from "../ChatBlock/ConversationGrader/Chat/Chat";
 
 export const Engineer = {
   "Coding Crash Course Version 3": {
@@ -31,7 +32,6 @@ export const Engineer = {
         // should we add impact to selecting a course? adding it to "welcome" would achieve this.
         welcome: {
           response: (
-            // <ChatBlock type={"quiz"}>
             <div>
               Dear Innovators &amp; Bright Minds 🌟,
               <br />
@@ -55,7 +55,6 @@ export const Engineer = {
               <br />
               Ms. Roxana
             </div>
-            // </ChatBlock>
           ),
           spanish: ``,
           tooltip: ``,
@@ -620,7 +619,6 @@ exports.app = functions.https.onRequest(app);
       prompts: {
         welcome: {
           response: (
-            // <ChatBlock type={"quiz"}>
             <div>
               ¡Hola, estudiantes! 🌸
               <br />
@@ -640,7 +638,6 @@ exports.app = functions.https.onRequest(app);
               <br />
               Ms. Roxana 🌟
             </div>
-            // </ChatBlock>
           ),
           spanish: ``,
           tooltip: ``,
@@ -1206,49 +1203,51 @@ print(rihanna.perform("at the Grammy Awards"))
             `Lesson 1 Coding Fundamentals`
           )}?`,
           response: (
-            <div>
-              Object Oriented Programming is a beautiful world filled with
-              abstract concepts and logical relationships. Let's dive in and
-              explore this together, there's no need to worry - remember, there
-              are no wrong answers, only learning experiences! 😊
-              <br />
-              <br />
-              Imagine you're explaining it to a friend who's never heard of it:
-              what is Object-Oriented Programming (OOP) and how is it different
-              from other programming paradigms? 🤔
-              <br />
-              <br />
-              In OOP, we often talk about classes and objects. Can you describe
-              the relationship between them, as if they were elements in a story
-              you're telling? 📖💡
-              <br />
-              <br />
-              Let's imagine a real-world scenario: a public library system. What
-              might be some of the classes you'd design, and what attributes and
-              methods would they have? Don't forget to include the relationships
-              between these classes too! 📚
-              <br />
-              <br />
-              You've likely heard of the principles of OOP: encapsulation,
-              inheritance, and polymorphism. Can you give an example of each,
-              using a context that interests you, perhaps a favorite hobby or
-              passion? ⚽
-              <br />
-              <br />
-              Often in programming, we encounter problems that require a nuanced
-              understanding of OOP. Let's say you have a class Bird and a class
-              Airplane. Both can fly, but they're quite different in other
-              respects. How might you use OOP principles to handle this
-              situation without code duplication? 🐝
-              <br />
-              <br />
+            <ChatBlock type={"quiz"}>
               <div>
-                Remember, each question is an opportunity to explore, learn, and
-                understand better. Take your time, dig deep into your
-                creativity, and most importantly, have fun with it! You're all
-                capable of brilliant things, I have faith in you! ✨
+                Object Oriented Programming is a beautiful world filled with
+                abstract concepts and logical relationships. Let's dive in and
+                explore this together, there's no need to worry - remember,
+                there are no wrong answers, only learning experiences! 😊
+                <br />
+                <br />
+                Imagine you're explaining it to a friend who's never heard of
+                it: what is Object-Oriented Programming (OOP) and how is it
+                different from other programming paradigms? 🤔
+                <br />
+                <br />
+                In OOP, we often talk about classes and objects. Can you
+                describe the relationship between them, as if they were elements
+                in a story you're telling? 📖💡
+                <br />
+                <br />
+                Let's imagine a real-world scenario: a public library system.
+                What might be some of the classes you'd design, and what
+                attributes and methods would they have? Don't forget to include
+                the relationships between these classes too! 📚
+                <br />
+                <br />
+                You've likely heard of the principles of OOP: encapsulation,
+                inheritance, and polymorphism. Can you give an example of each,
+                using a context that interests you, perhaps a favorite hobby or
+                passion? ⚽
+                <br />
+                <br />
+                Often in programming, we encounter problems that require a
+                nuanced understanding of OOP. Let's say you have a class Bird
+                and a class Airplane. Both can fly, but they're quite different
+                in other respects. How might you use OOP principles to handle
+                this situation without code duplication? 🐝
+                <br />
+                <br />
+                <div>
+                  Remember, each question is an opportunity to explore, learn,
+                  and understand better. Take your time, dig deep into your
+                  creativity, and most importantly, have fun with it! You're all
+                  capable of brilliant things, I have faith in you! ✨
+                </div>
               </div>
-            </div>
+            </ChatBlock>
           ),
           spanish: ``,
           tooltip: ``,
@@ -1467,7 +1466,6 @@ throw new Error(
       prompts: {
         welcome: {
           response: (
-            // <ChatBlock type={"quiz"}>
             <div>
               Exceptional students! 🌟
               <br />
@@ -1493,7 +1491,6 @@ throw new Error(
               extraordinary. So, get ready, let your creativity bloom, and let
               your brilliance light up the world! 🌼🌟
             </div>
-            // </ChatBlock>
           ),
           spanish: ``,
           tooltip: ``,
@@ -1910,84 +1907,87 @@ export default LoginForm;
             `Lesson 2 Frontend Event-Driven Programming`
           )}?`,
           response: (
-            <div>
-              Dear explorers of the digital universe! 🌌 The best way to learn
-              is by questioning and digging deeper. Let's see how you engage
-              with these challenging open-ended questions. Remember, there are
-              no wrong answers here. This is all about your understanding and
-              perspective! 🧠🎈
-              <br />
-              <br />
-              <ol>
-                <li>
-                  <b>Event-Driven Programming: ✨</b>
+            <ChatBlock type={"quiz"}>
+              <div>
+                Dear explorers of the digital universe! 🌌 The best way to learn
+                is by questioning and digging deeper. Let's see how you engage
+                with these challenging open-ended questions. Remember, there are
+                no wrong answers here. This is all about your understanding and
+                perspective! 🧠🎈
+                <br />
+                <br />
+                <ol>
+                  <li>
+                    <b>Event-Driven Programming: ✨</b>
 
-                  <div>
-                    Describe a real-world situation or system that functions
-                    similarly to an event-driven programming model. How does
-                    this system react to different "events"? How might
-                    understanding this real-world example help someone new to
-                    event-driven programming grasp the concept?
-                  </div>
-                  <br />
-                </li>
-                <li>
-                  <b>User-Centered Design: 🎨</b>
+                    <div>
+                      Describe a real-world situation or system that functions
+                      similarly to an event-driven programming model. How does
+                      this system react to different "events"? How might
+                      understanding this real-world example help someone new to
+                      event-driven programming grasp the concept?
+                    </div>
+                    <br />
+                  </li>
+                  <li>
+                    <b>User-Centered Design: 🎨</b>
 
-                  <div>
-                    If you were tasked with designing an educational app for
-                    your fellow students, what would be some key considerations
-                    you'd keep in mind? How would you ensure the design is truly
-                    user-centered?
-                  </div>
-                  <br />
-                </li>
-                <li>
-                  <b>Component Architecture: 🏗️</b>
+                    <div>
+                      If you were tasked with designing an educational app for
+                      your fellow students, what would be some key
+                      considerations you'd keep in mind? How would you ensure
+                      the design is truly user-centered?
+                    </div>
+                    <br />
+                  </li>
+                  <li>
+                    <b>Component Architecture: 🏗️</b>
 
-                  <div>
-                    Imagine you are explaining the concept of component
-                    architecture to a child. How would you describe what it is
-                    and why it is important in software development?
-                  </div>
-                  <br />
-                </li>
-                <li>
-                  <b>Synthesizing Concepts: 🌟</b>
+                    <div>
+                      Imagine you are explaining the concept of component
+                      architecture to a child. How would you describe what it is
+                      and why it is important in software development?
+                    </div>
+                    <br />
+                  </li>
+                  <li>
+                    <b>Synthesizing Concepts: 🌟</b>
 
-                  <div>
-                    How can concepts from event-driven programming and component
-                    architecture be used to improve the user experience in a web
-                    application? Can you think of an example?
-                  </div>
-                  <br />
-                </li>
-                <li>
-                  <b>Looking Ahead: 🚀</b>
+                    <div>
+                      How can concepts from event-driven programming and
+                      component architecture be used to improve the user
+                      experience in a web application? Can you think of an
+                      example?
+                    </div>
+                    <br />
+                  </li>
+                  <li>
+                    <b>Looking Ahead: 🚀</b>
 
-                  <div>
-                    As you learn about these different aspects of programming
-                    and design, how do you see them influencing the future of
-                    how we interact with digital spaces, especially with the
-                    emergence of technologies like virtual reality (VR) and
-                    augmented reality (AR)?
-                  </div>
-                  <br />
-                </li>
-              </ol>
-              <br />
-              These questions are meant to stretch your thinking and enhance
-              your understanding. I can't wait to hear your answers and engage
-              in some enlightening discussions! The journey of learning is
-              filled with challenges, but those challenges are what make it
-              exciting and rewarding. Stay curious, keep questioning, and above
-              all, believe in your incredible potential. 🎈💡🌈
-              <br />
-              <br />
-              Warmly,
-              <br />
-              Ms. Roxana
-            </div>
+                    <div>
+                      As you learn about these different aspects of programming
+                      and design, how do you see them influencing the future of
+                      how we interact with digital spaces, especially with the
+                      emergence of technologies like virtual reality (VR) and
+                      augmented reality (AR)?
+                    </div>
+                    <br />
+                  </li>
+                </ol>
+                <br />
+                These questions are meant to stretch your thinking and enhance
+                your understanding. I can't wait to hear your answers and engage
+                in some enlightening discussions! The journey of learning is
+                filled with challenges, but those challenges are what make it
+                exciting and rewarding. Stay curious, keep questioning, and
+                above all, believe in your incredible potential. 🎈💡🌈
+                <br />
+                <br />
+                Warmly,
+                <br />
+                Ms. Roxana
+              </div>
+            </ChatBlock>
           ),
           spanish: ``,
           tooltip: ``,
@@ -2204,7 +2204,6 @@ return <div style={gradientStyle}>
       prompts: {
         welcome: {
           response: (
-            // <ChatBlock type={"quiz"}>
             <div>
               Hello my wonderful students! 😊
               <br />
@@ -2224,7 +2223,6 @@ return <div style={gradientStyle}>
               Si se puede! Let's dive into the wonderful world of technology
               together. 🚀💖🌈
             </div>
-            // </ChatBlock>
           ),
           spanish: ``,
           tooltip: ``,
@@ -2685,71 +2683,73 @@ if __name__ == '__main__':
             `Lesson 3 Understanding Backend Engineering`
           )}?`,
           response: (
-            <div>
+            <ChatBlock type={"quiz"}>
               <div>
-                Here are five open-ended questions designed to challenge your
-                understanding of backend engineering, cloud computing, and big
-                data. There are no right or wrong answers, it's all about your
-                thoughtful analysis and understanding. 😊🎓🔍
-              </div>
-              <br />
-              <br />
-
-              <ol>
-                <li>
-                  <b>Backend Engineering:</b>
-                  Consider an online shopping website. Can you describe how a
-                  backend engineer would design a system to handle and process
-                  an order? Consider factors like product availability, payment
-                  processing, and order tracking. 🛒🔧
-                </li>
-                <br />
-                <li>
-                  <b>Cloud Computing: </b>
-                  Cloud computing has become a key player in the growth of many
-                  businesses. Can you identify and explain an example of a
-                  real-world application that heavily relies on cloud computing?
-                  Describe how this application uses cloud computing to its
-                  advantage. ☁️💼
-                </li>
-                <br />
-                <li>
-                  <b>Big Data: </b>
-                  Imagine you're working with a large dataset that contains
-                  millions of rows of user data for a popular mobile app. How
-                  would you use big data analysis techniques to extract
-                  meaningful insights about user behavior from this dataset?
-                  📊📲
-                </li>
-                <br />
-                <li>
-                  <b>Cloud Computing & Computer Ethics: </b>
-                  Cloud services allow for unprecedented access to data and
-                  resources. However, this convenience can also lead to ethical
-                  challenges. Can you think of a potential ethical issue that
-                  could arise from widespread use of cloud computing and how it
-                  could be mitigated? ☁️⚖️
-                </li>
-                <br />
-                <li>
-                  <b>Big Data, Cloud Computing & Critical Race Theory:</b>
-                  Consider a hypothetical scenario where a cloud-based big data
-                  project is being used to guide city planning. How might
-                  critical race theory inform the use and analysis of this data
-                  to ensure that the development benefits marginalized
-                  communities equitably and doesn't reinforce existing
-                  inequities? ☁️🌆🤝
-                </li>
-                <br />
                 <div>
-                  These questions allow us to reflect on how technology
-                  intertwines with societal and ethical concerns. Remember, it's
-                  not just about how we build, but why we build and who we build
-                  for. Stay curious, empathetic, and mindful in your tech
-                  journey. Si se puede! 🚀🌈💖
+                  Here are five open-ended questions designed to challenge your
+                  understanding of backend engineering, cloud computing, and big
+                  data. There are no right or wrong answers, it's all about your
+                  thoughtful analysis and understanding. 😊🎓🔍
                 </div>
-              </ol>
-            </div>
+                <br />
+                <br />
+
+                <ol>
+                  <li>
+                    <b>Backend Engineering:</b>
+                    Consider an online shopping website. Can you describe how a
+                    backend engineer would design a system to handle and process
+                    an order? Consider factors like product availability,
+                    payment processing, and order tracking. 🛒🔧
+                  </li>
+                  <br />
+                  <li>
+                    <b>Cloud Computing: </b>
+                    Cloud computing has become a key player in the growth of
+                    many businesses. Can you identify and explain an example of
+                    a real-world application that heavily relies on cloud
+                    computing? Describe how this application uses cloud
+                    computing to its advantage. ☁️💼
+                  </li>
+                  <br />
+                  <li>
+                    <b>Big Data: </b>
+                    Imagine you're working with a large dataset that contains
+                    millions of rows of user data for a popular mobile app. How
+                    would you use big data analysis techniques to extract
+                    meaningful insights about user behavior from this dataset?
+                    📊📲
+                  </li>
+                  <br />
+                  <li>
+                    <b>Cloud Computing & Computer Ethics: </b>
+                    Cloud services allow for unprecedented access to data and
+                    resources. However, this convenience can also lead to
+                    ethical challenges. Can you think of a potential ethical
+                    issue that could arise from widespread use of cloud
+                    computing and how it could be mitigated? ☁️⚖️
+                  </li>
+                  <br />
+                  <li>
+                    <b>Big Data, Cloud Computing & Critical Race Theory:</b>
+                    Consider a hypothetical scenario where a cloud-based big
+                    data project is being used to guide city planning. How might
+                    critical race theory inform the use and analysis of this
+                    data to ensure that the development benefits marginalized
+                    communities equitably and doesn't reinforce existing
+                    inequities? ☁️🌆🤝
+                  </li>
+                  <br />
+                  <div>
+                    These questions allow us to reflect on how technology
+                    intertwines with societal and ethical concerns. Remember,
+                    it's not just about how we build, but why we build and who
+                    we build for. Stay curious, empathetic, and mindful in your
+                    tech journey. Si se puede! 🚀🌈💖
+                  </div>
+                </ol>
+              </div>
+            </ChatBlock>
           ),
           spanish: ``,
           tooltip: ``,
@@ -2965,7 +2965,6 @@ exports.app = functions
       prompts: {
         welcome: {
           response: (
-            // <ChatBlock type={"quiz"}>
             <div>
               Hello my brave students! 🌟
               <br /> <br />
@@ -3538,59 +3537,63 @@ app.listen(8000, () => console.log('Server running on port 8000'));
             `Lesson 4 Building Apps`
           )}?`,
           response: (
-            <div>
-              My ambitious students! 🌟 Here's a quiz to help you think deeply
-              about what you've learned about building a tech startup. I
-              encourage you to discuss your answers with each other and learn
-              from each other's perspectives. Let's go! 🚀✍️
-              <br />
-              <br />
-              <ol>
-                <li>
-                  <b>Question 1:</b>
-                  Imagine you're creating your first app using a Backend as a
-                  Service (BaaS). What are the key considerations when choosing
-                  a BaaS provider, and how would these considerations influence
-                  your decision? 🧩🌐
-                </li>
+            <ChatBlock type={"quiz"}>
+              <div>
+                My ambitious students! 🌟 Here's a quiz to help you think deeply
+                about what you've learned about building a tech startup. I
+                encourage you to discuss your answers with each other and learn
+                from each other's perspectives. Let's go! 🚀✍️
                 <br />
-                <li>
-                  <b>Question 2:</b>
-                  You have an innovative app idea that solves a problem in your
-                  community. Describe how you would design a user-friendly
-                  interface that makes your app accessible and enjoyable to use.
-                  Consider elements of UI and UX design in your response. 🎨📱
-                </li>
                 <br />
-                <li>
-                  <b>Question 3:</b>
-                  Discuss how you would approach gathering user feedback on your
-                  app. Why is this feedback important, and how would you use it
-                  to improve your app? 🗣️🔍
-                </li>
-                <br />
-                <li>
-                  <b>Question 4:</b>
-                  You're preparing to pitch your startup to potential investors.
-                  Outline your pitch and explain your strategy for making it
-                  compelling and persuasive. Remember to consider elements such
-                  as your startup's story, the problem you're solving, your
-                  unique solution, and your plan for growth. 📈🗣️
-                </li>
-                <br />
-                <li>
-                  <b>Question 5: </b>
-                  You've decided to raise funds using a SAFE document. What are
-                  the potential advantages and drawbacks of this funding method,
-                  and how would it affect both you as the startup founder and
-                  your potential investors? 💰📜
-                </li>
-                <br />
-              </ol>
-              My. DEAR. STUDENTS! There's no single correct answer to these
-              questions. The goal is to stimulate deep thinking and meaningful
-              discussions. I'm excited to hear your brilliant thoughts! 🎉💖
-            </div>
+                <ol>
+                  <li>
+                    <b>Question 1:</b>
+                    Imagine you're creating your first app using a Backend as a
+                    Service (BaaS). What are the key considerations when
+                    choosing a BaaS provider, and how would these considerations
+                    influence your decision? 🧩🌐
+                  </li>
+                  <br />
+                  <li>
+                    <b>Question 2:</b>
+                    You have an innovative app idea that solves a problem in
+                    your community. Describe how you would design a
+                    user-friendly interface that makes your app accessible and
+                    enjoyable to use. Consider elements of UI and UX design in
+                    your response. 🎨📱
+                  </li>
+                  <br />
+                  <li>
+                    <b>Question 3:</b>
+                    Discuss how you would approach gathering user feedback on
+                    your app. Why is this feedback important, and how would you
+                    use it to improve your app? 🗣️🔍
+                  </li>
+                  <br />
+                  <li>
+                    <b>Question 4:</b>
+                    You're preparing to pitch your startup to potential
+                    investors. Outline your pitch and explain your strategy for
+                    making it compelling and persuasive. Remember to consider
+                    elements such as your startup's story, the problem you're
+                    solving, your unique solution, and your plan for growth.
+                    📈🗣️
+                  </li>
+                  <br />
+                  <li>
+                    <b>Question 5: </b>
+                    You've decided to raise funds using a SAFE document. What
+                    are the potential advantages and drawbacks of this funding
+                    method, and how would it affect both you as the startup
+                    founder and your potential investors? 💰📜
+                  </li>
+                  <br />
+                </ol>
+                My. DEAR. STUDENTS! There's no single correct answer to these
+                questions. The goal is to stimulate deep thinking and meaningful
+                discussions. I'm excited to hear your brilliant thoughts! 🎉💖
+              </div>
+            </ChatBlock>
           ),
           spanish: ``,
           tooltip: ``,
@@ -3857,7 +3860,6 @@ export default OpenAIComponent;`,
       prompts: {
         welcome: {
           response: (
-            // <ChatBlock type={"quiz"}>
             <div>
               🌟 Welcome to today's exciting journey through the world of
               Computer Science, where we'll dive into the essential topics of
@@ -3878,7 +3880,6 @@ export default OpenAIComponent;`,
               unique perspectives and experiences. 🌈 Ready to code your dreams
               into reality? Let's do this! 💻🚀
             </div>
-            // </ChatBlock>
           ),
           spanish: ``,
           tooltip: ``,
@@ -4288,44 +4289,46 @@ if (result !== null) {
             `Lesson 5 Computer Science`
           )}?`,
           response: (
-            <div>
-              <h2>Question 1: Arrays vs Linked Lists</h2>
-              <p>
-                Why might you choose an array over a linked list when
-                implementing a certain data structure? Provide at least two
-                reasons and discuss the trade-offs.
-              </p>
+            <ChatBlock type={"quiz"}>
+              <div>
+                <h2>Question 1: Arrays vs Linked Lists</h2>
+                <p>
+                  Why might you choose an array over a linked list when
+                  implementing a certain data structure? Provide at least two
+                  reasons and discuss the trade-offs.
+                </p>
 
-              <h2>Question 2: Importance of Big O Notation</h2>
-              <p>
-                Explain the importance of Big O notation in algorithm analysis.
-                How does it help software engineers make decisions about which
-                algorithms to use?
-              </p>
+                <h2>Question 2: Importance of Big O Notation</h2>
+                <p>
+                  Explain the importance of Big O notation in algorithm
+                  analysis. How does it help software engineers make decisions
+                  about which algorithms to use?
+                </p>
 
-              <h2>Question 3: Hash Tables</h2>
-              <p>
-                Hash tables can experience collisions. What are collisions in
-                the context of hash tables, and what are some strategies to
-                resolve them?
-              </p>
+                <h2>Question 3: Hash Tables</h2>
+                <p>
+                  Hash tables can experience collisions. What are collisions in
+                  the context of hash tables, and what are some strategies to
+                  resolve them?
+                </p>
 
-              <h2>Question 4: Graph Algorithms</h2>
-              <p>
-                Discuss a real-world application where graph algorithms like
-                Dijkstra's or A* would be particularly useful. Explain why you
-                would choose one algorithm over the other for this specific
-                application.
-              </p>
+                <h2>Question 4: Graph Algorithms</h2>
+                <p>
+                  Discuss a real-world application where graph algorithms like
+                  Dijkstra's or A* would be particularly useful. Explain why you
+                  would choose one algorithm over the other for this specific
+                  application.
+                </p>
 
-              <h2>Question 5: Dynamic Programming</h2>
-              <p>
-                What is dynamic programming, and how does it differ from a
-                regular divide-and-conquer approach? Can you think of a
-                real-world problem that can be efficiently solved using dynamic
-                programming?
-              </p>
-            </div>
+                <h2>Question 5: Dynamic Programming</h2>
+                <p>
+                  What is dynamic programming, and how does it differ from a
+                  regular divide-and-conquer approach? Can you think of a
+                  real-world problem that can be efficiently solved using
+                  dynamic programming?
+                </p>
+              </div>
+            </ChatBlock>
           ),
           spanish: ``,
           tooltip: ``,
