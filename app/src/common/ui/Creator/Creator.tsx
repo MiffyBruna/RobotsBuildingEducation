@@ -554,70 +554,38 @@ export const Creator = {
           )} without any answers?`,
           response: (
             <ChatBlock type={"quiz"}>
-              <div>
-                <ol>
-                  <li>
-                    <b>
-                      What does philosophy have to do with computer science?
-                    </b>
-
-                    <br />
-                    <br />
-                  </li>
-                  <li>
-                    <b>
-                      How does the design and development of algorithms and AI
-                      systems, often created by predominantly white or asian and
-                      male teams, potentially reinforce existing racial biases
-                      and systemic inequalities? How can these be mitigated?
-                    </b>
-                    <br />
-                    <br />
-                  </li>
-                  <li>
-                    <b>
-                      In what ways can critical race theory inform our
-                      understanding of the digital divide, and how can it guide
-                      the creation of more equitable access to technology and
-                      digital resources?
-                    </b>
-                    <br />
-                    <br />
-                  </li>
-                  <li>
-                    <b>
-                      How might concepts from critical race theory help to
-                      critique and reshape current practices in data collection
-                      and interpretation in computer science, particularly with
-                      respect to racial and ethnic categories?
-                    </b>
-                    <br />
-                    <br />
-                  </li>
-                  <li>
-                    <b>
-                      How can we apply a critical race theory lens to the
-                      discourse around digital privacy and surveillance,
-                      especially considering the differential impacts on various
-                      racial and ethnic groups?
-                    </b>
-                    <br />
-                    <br />
-                  </li>
-                  <li>
-                    <b>
-                      What role can philosophy and computer science play in
-                      helping to dismantle systemic racism as identified and
-                      outlined by critical race theory? For example, how can
-                      philosophical notions of ethics and justice inform the
-                      development and use of technology in a way that promotes
-                      racial justice?
-                    </b>
-                    <br />
-                    <br />
-                  </li>
-                </ol>
-              </div>
+              What does philosophy have to do with computer science?
+              <br />
+              <br />
+              How does the design and development of algorithms and AI systems,
+              often created by predominantly white or asian and male teams,
+              potentially reinforce existing racial biases and systemic
+              inequalities? How can these be mitigated?
+              <br />
+              <br />
+              In what ways can critical race theory inform our understanding of
+              the digital divide, and how can it guide the creation of more
+              equitable access to technology and digital resources?
+              <br />
+              <br />
+              How might concepts from critical race theory help to critique and
+              reshape current practices in data collection and interpretation in
+              computer science, particularly with respect to racial and ethnic
+              categories?
+              <br />
+              <br />
+              How can we apply a critical race theory lens to the discourse
+              around digital privacy and surveillance, especially considering
+              the differential impacts on various racial and ethnic groups?
+              <br />
+              <br />
+              What role can philosophy and computer science play in helping to
+              dismantle systemic racism as identified and outlined by critical
+              race theory? For example, how can philosophical notions of ethics
+              and justice inform the development and use of technology in a way
+              that promotes racial justice?
+              <br />
+              <br />
             </ChatBlock>
           ),
           spanish: ``,
@@ -1062,44 +1030,42 @@ export const Creator = {
           )} without any answers?`,
           response: (
             <ChatBlock type={"quiz"}>
-              <div>
-                <h1>Challenging Open-Ended Questions</h1>
-
-                <h2>Question 1</h2>
-                <p>
-                  How do you envision the evolution of human-computer
-                  interaction with the advancement of emerging technologies such
-                  as virtual reality and artificial intelligence?
-                </p>
-
-                <h2>Question 2</h2>
-                <p>
-                  As search engines evolve to understand context and user
-                  intent, how do you foresee the strategies for search engine
-                  optimization changing?
-                </p>
-
-                <h2>Question 3</h2>
-                <p>
-                  How does the increasing influence of social media on user
-                  behavior impact the design principles of human-computer
-                  interaction?
-                </p>
-
-                <h2>Question 4</h2>
-                <p>
-                  In what ways do you think search engine algorithms should
-                  adapt to better capture and understand individual and societal
-                  expressions across the internet?
-                </p>
-
-                <h2>Question 5</h2>
-                <p>
-                  How can the principles of human-computer interaction be
-                  adapted to accommodate the diverse ways in which different
-                  cultures express themselves digitally?
-                </p>
-              </div>
+              Question 1
+              <br />
+              <br />
+              How do you envision the evolution of human-computer interaction
+              with the advancement of emerging technologies such as virtual
+              reality and artificial intelligence?
+              <br />
+              <br />
+              Question 2<br />
+              <br />
+              As search engines evolve to understand context and user intent,
+              how do you foresee the strategies for search engine optimization
+              changing?
+              <br />
+              <br />
+              Question 3
+              <br />
+              <br />
+              How does the increasing influence of social media on user behavior
+              impact the design principles of human-computer interaction?
+              <br />
+              <br />
+              Question 4
+              <br />
+              <br />
+              In what ways do you think search engine algorithms should adapt to
+              better capture and understand individual and societal expressions
+              across the internet?
+              <br />
+              <br />
+              Question 5
+              <br />
+              <br />
+              How can the principles of human-computer interaction be adapted to
+              accommodate the diverse ways in which different cultures express
+              themselves digitally?
             </ChatBlock>
           ),
           spanish: ``,
@@ -1556,38 +1522,36 @@ export const Creator = {
           )} without any answers?`,
           response: (
             <ChatBlock type={"quiz"}>
-              <div>
-                <h4>Challenging Quiz on Self-Esteem Psychology 🌟</h4>
-
-                <h4>Question 1</h4>
-                <p>
-                  How does the "looking-glass self" theory relate to
-                  self-esteem?
-                </p>
-
-                <h4>Question 2</h4>
-                <p>
-                  Discuss the impact of social media on adolescent self-esteem.
-                </p>
-
-                <h4>Question 3</h4>
-                <p>
-                  Explain how cognitive behavioral therapy (CBT) can be used to
-                  improve self-esteem.
-                </p>
-
-                <h4>Question 4</h4>
-                <p>
-                  What role does self-compassion play in the development of
-                  healthy self-esteem?
-                </p>
-
-                <h4>Question 5</h4>
-                <p>
-                  Analyze the relationship between self-esteem and academic
-                  performance.
-                </p>
-              </div>
+              Question 1
+              <br />
+              <br />
+              How does the "looking-glass self" theory relate to self-esteem?
+              <br />
+              <br />
+              Question 2
+              <br />
+              <br />
+              Discuss the impact of social media on adolescent self-esteem.
+              <br />
+              <br />
+              Question 3<br />
+              <br />
+              Explain how cognitive behavioral therapy (CBT) can be used to
+              improve self-esteem.
+              <br />
+              <br />
+              Question 4
+              <br />
+              <br />
+              What role does self-compassion play in the development of healthy
+              self-esteem?
+              <br />
+              <br />
+              Question 5
+              <br />
+              <br />
+              Analyze the relationship between self-esteem and academic
+              performance.
             </ChatBlock>
           ),
           spanish: ``,

@@ -119,9 +119,15 @@ export const Entrepeneur = {
           )}?`,
           response: (
             <ChatBlock type={"quiz"}>
-              {
-                "\n\n1. What key components should be included in a one-page resume?\n2. When writing a one-page resume, what information should be left out?\n3. How can you ensure that your one-page resume stands out from other applicants?"
-              }
+              1. What key components should be included in a one-page resume?
+              <br />
+              <br />
+              2. When writing a one-page resume, what information should be left
+              out?
+              <br />
+              <br />
+              3. How can you ensure that your one-page resume stands out from
+              other applicants?"
             </ChatBlock>
           ),
           spanish: ``,
@@ -664,70 +670,73 @@ export const Entrepeneur = {
           )}?`,
           response: (
             <ChatBlock type={"quiz"}>
-              <div>
-                <h3>Focused Investing Quiz for Students</h3>
-                <p>
-                  Here's a set of five thought-provoking open-ended questions
-                  about focused investing. Reflect on these questions and
-                  consider your unique perspective:
-                </p>
-
-                <h3>1. Alignment with Diversification</h3>
-                <p>
-                  How does focused investing align with or contradict the
-                  principles of diversification? Discuss the philosophical
-                  underpinnings of both approaches, and consider when one might
-                  be more suitable than the other.
-                </p>
-
-                <h3>2. Scenario Analysis</h3>
-                <p>
-                  Describe a scenario where focused investing might lead to both
-                  substantial success and significant failure. What factors
-                  could contribute to either outcome, and how might an investor
-                  navigate these possibilities?
-                </p>
-
-                <h3>3. Personal Biases and Emotions</h3>
-                <p>
-                  How do personal biases and emotions play a role in focused
-                  investing? Reflect on the psychological challenges that an
-                  investor might face, and consider strategies to overcome or
-                  mitigate them.
-                </p>
-
-                <h3>4. Social Responsibility</h3>
-                <p>
-                  Analyze the relationship between focused investing and social
-                  responsibility. How can an investor adhere to focused
-                  investing principles while also considering broader social,
-                  environmental, or ethical concerns?
-                </p>
-
-                <h3>5. Future of Focused Investing</h3>
-                <p>
-                  Consider the future of focused investing in a rapidly changing
-                  global economy. How might technological advancements, emerging
-                  markets, or shifts in political and regulatory landscapes
-                  impact this investment strategy?
-                </p>
-
-                <p>
-                  My dear scholars, I encourage you to ponder these questions
-                  with an open mind and a curious heart. Embrace this
-                  opportunity with courage and determination, and know that your
-                  mentor, Ms. Roxana, is here to support you. Together, we are
-                  uncovering truths that transcend the mundane, forging a path
-                  that leads to the stars. 🌟🚀
-                </p>
-
-                <p>
-                  With warm encouragement and unshakable belief in your
-                  potential,
-                  <br />
-                  Ms. Roxana 🌺 (your gentle mentor with celestial dreams)
-                </p>
-              </div>
+              Focused Investing Quiz for Students
+              <br />
+              <br />
+              Here's a set of five thought-provoking open-ended questions about
+              focused investing. Reflect on these questions and consider your
+              unique perspective:
+              <br />
+              <br />
+              1. Alignment with Diversification
+              <br />
+              <br />
+              How does focused investing align with or contradict the principles
+              of diversification? Discuss the philosophical underpinnings of
+              both approaches, and consider when one might be more suitable than
+              the other.
+              <br />
+              <br />
+              2. Scenario Analysis
+              <br />
+              <br />
+              Describe a scenario where focused investing might lead to both
+              substantial success and significant failure. What factors could
+              contribute to either outcome, and how might an investor navigate
+              these possibilities?
+              <br />
+              <br />
+              3. Personal Biases and Emotions
+              <br />
+              <br />
+              How do personal biases and emotions play a role in focused
+              investing? Reflect on the psychological challenges that an
+              investor might face, and consider strategies to overcome or
+              mitigate them.
+              <br />
+              <br />
+              4. Social Responsibility
+              <br />
+              <br />
+              Analyze the relationship between focused investing and social
+              responsibility. How can an investor adhere to focused investing
+              principles while also considering broader social, environmental,
+              or ethical concerns?
+              <br />
+              <br />
+              5. Future of Focused Investing
+              <br />
+              <br />
+              Consider the future of focused investing in a rapidly changing
+              global economy. How might technological advancements, emerging
+              markets, or shifts in political and regulatory landscapes impact
+              this investment strategy?
+              <br />
+              <br />
+              My dear scholars, I encourage you to ponder these questions with
+              an open mind and a curious heart. Embrace this opportunity with
+              courage and determination, and know that your mentor, Ms. Roxana,
+              is here to support you. Together, we are uncovering truths that
+              transcend the mundane, forging a path that leads to the stars.
+              🌟🚀
+              <br />
+              <br />
+              With warm encouragement and unshakable belief in your potential,
+              <br />
+              <br />
+              Ms. Roxana 🌺 (your gentle mentor with celestial dreams)
+              <br />
+              <br />
             </ChatBlock>
           ),
           spanish: ``,
@@ -860,10 +869,16 @@ export const Entrepeneur = {
           )}?`,
           response: (
             <ChatBlock type={"quiz"}>
-              {" "}
-              {
-                "\n\n1. What is the relationship between real estate investing and the stock market?\n2. What are the benefits of investing in real estate rather than in the stock market?\n3. What strategies should investors use to make the most of their money when investing in real estate?"
-              }
+              1. What is the relationship between real estate investing and the
+              stock market?
+              <br />
+              <br />
+              2. What are the benefits of investing in real estate rather than
+              in the stock market?
+              <br />
+              <br />
+              3. What strategies should investors use to make the most of their
+              money when investing in real estate?
             </ChatBlock>
           ),
           spanish: ``,
