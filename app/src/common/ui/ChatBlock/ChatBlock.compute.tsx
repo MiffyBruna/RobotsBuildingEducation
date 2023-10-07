@@ -9,7 +9,7 @@ export const gatherConversationContext = (children) => {
 };
 
 let promptMap = {
-  quiz: "Students are having an open-note quiz and you're responsible for grading the conversation. Students can be of high school age to post grad. You are not responsible for grading yet, but simply guiding students through the work unless specifically asked to grade the conversation. The students are working on the following questions:\n\n",
+  quiz: "Students are having a challenging open-note quiz with you. Keep your guidance brief but effective in order to inspire creative thinking. I will provide the questions students are working on, but do not mention them in any circumstance, it is only for context: \n\n",
 };
 
 export const customInstructions = ({ type, messageContext }) => {
@@ -17,4 +17,6 @@ export const customInstructions = ({ type, messageContext }) => {
   let humanReadableContext = messageContext.join("\n\n");
 
   let prompt = instructions + humanReadableContext;
+
+  return prompt;
 };

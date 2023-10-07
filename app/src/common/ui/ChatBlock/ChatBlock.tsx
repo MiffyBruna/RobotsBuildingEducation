@@ -1,16 +1,23 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { japaneseThemePalette, textBlock } from "../../../styles/lazyStyles";
-import { Modal } from "react-bootstrap";
+import { Button, Modal } from "react-bootstrap";
 import { ConversationGrader } from "./ConversationGrader/ConversationGrader";
 import {
   customInstructions,
   gatherConversationContext,
 } from "./ChatBlock.compute";
+import { postInstructions } from "../../uiSchema";
 
 export let ChatBlock = ({ children, type = "quiz" }) => {
-  let [data, setData] = useState(false);
+  const [conversationInput, setConversationInput] = useState("");
+  const [conversation, setConversation] = useState([]);
+  const [isAiResponseLoading, setIsAiResponseLoading] = useState(false);
+  const [chatGptResponse, setChatGptResponse] = useState("");
 
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [gradeResult, setGradeResult] = useState("");
+  const [isGrading, setIsGrading] = useState(false);
+
   let [boxShadow, setBoxShadow] = useState(
     "10px 10px 5px 0px rgba(0,0,0,0.75)"
   );
@@ -18,6 +25,95 @@ export let ChatBlock = ({ children, type = "quiz" }) => {
   let messageContext = gatherConversationContext(children);
 
   let instructions = customInstructions({ type, messageContext });
+
+  let handleConversation = async (grade = false) => {
+    let convoData = "";
+    let prompt = "";
+    if (!grade) {
+      setConversation([
+        ...conversation,
+        { request: conversationInput, response: "" },
+      ]);
+
+      setIsAiResponseLoading(true);
+      let convoData =
+        conversation?.length > 0
+          ? `This is the stringified JSON of conversation so far: ${JSON.stringify(
+              conversation
+            )}. Answer this input only: ${conversationInput}`
+          : `Answer this input only: ${conversationInput}`;
+      prompt = instructions + convoData;
+    }
+
+    setConversationInput("");
+    if (grade) {
+      setIsGrading(true);
+      setConversation([
+        ...conversation,
+        { request: "pls grade our conversation 🙏", response: "" },
+      ]);
+
+      setIsAiResponseLoading(true);
+      prompt = `This is the quiz ${messageContext.join(
+        ""
+      )}. This quiz is for context only. This is the stringified JSON of the conversation ${JSON.stringify(
+        conversation
+      )}. Please grade the conversation only with a score 0-10. Do not weigh the original quiz content under any circumstance. Be a tough grader. Strongly weigh the quality of the requests AND responses. The requests should be thoughtful and complete inquries. All questions in the quiz should be specifically talked about in the conversation. The amount of conversation indexes should match or exceed the amount of questions or topics asked in the quiz. If not, students should get points heavily deducted for that section. Report back what was done well and what could have been done better, outlining each question. Each question or topic is worth 10 points, for a total of the total amount of questions or topics. If questions or topics go unanswered, give a score of 0 and add it to the overall result.`;
+    }
+
+    const response = await fetch(postInstructions.url, {
+      method: postInstructions.method,
+      headers: postInstructions.headers,
+      body: JSON.stringify({ prompt }),
+    }).catch(() => {
+      setIsAiResponseLoading(false);
+    });
+
+    if (response && !grade) {
+      let data = await response.json();
+      setIsAiResponseLoading(false);
+      setChatGptResponse(data?.bot?.content || "");
+    } else if (response && grade) {
+      let data = await response.json();
+
+      setIsAiResponseLoading(false);
+      setGradeResult(data?.bot?.content);
+    }
+  };
+
+  useEffect(() => {
+    if (chatGptResponse) {
+      let lastConvoIndex = conversation[conversation.length - 1];
+
+      let conversationCopy = conversation;
+      conversationCopy.pop();
+
+      setConversation([
+        ...conversationCopy,
+        { request: lastConvoIndex?.request, response: chatGptResponse },
+      ]);
+    }
+  }, [chatGptResponse]);
+
+  useEffect(() => {
+    if (isGrading) {
+      let lastConvoIndex = conversation[conversation.length - 1];
+
+      let conversationCopy = conversation;
+      conversationCopy.pop();
+
+      setConversation([
+        ...conversationCopy,
+        {
+          request: lastConvoIndex?.request,
+          response: gradeResult,
+          grade: true,
+        },
+      ]);
+
+      setIsGrading(false);
+    }
+  }, [gradeResult]);
 
   return (
     <div
@@ -52,13 +148,31 @@ export let ChatBlock = ({ children, type = "quiz" }) => {
         centered
         fullscreen={false}
         show={isModalOpen}
+        // show={true}
         onHide={() => setIsModalOpen(false)}
       >
         <Modal.Header
           closeButton
-          style={{ backgroundColor: "black", color: "white" }}
+          style={{
+            backgroundColor: "black",
+            color: "white",
+            display: "flex",
+            justifyContent: "space-between",
+            width: "100%",
+            borderTop: "5px solid lavender",
+            borderLeft: "5px solid lavender",
+            borderRight: "5px solid lavender",
+          }}
         >
-          <Modal.Title>Under development</Modal.Title>
+          <Modal.Title>Conversation Grader</Modal.Title>
+          &nbsp;&nbsp; &nbsp;
+          <Button
+            variant="primary"
+            onClick={() => handleConversation(true)}
+            disabled={isGrading || isAiResponseLoading}
+          >
+            Grade
+          </Button>
         </Modal.Header>
         <Modal.Body
           //   onHide={() => setIsModalOpen(false)}
@@ -67,11 +181,55 @@ export let ChatBlock = ({ children, type = "quiz" }) => {
             backgroundColor: "black",
             color: "white",
             padding: 24,
+            borderLeft: "5px solid lavender",
+            borderRight: "5px solid lavender",
           }}
         >
-          something cool is being made here 🙂
-          <ConversationGrader type={type} />
+          <div
+            style={{
+              border: "3px solid pink",
+              ...textBlock(japaneseThemePalette.FujiSanBlue, 0, 12),
+            }}
+          >
+            {conversation?.length < 1
+              ? "Ask Ms. Roxana for assistance on your quiz! Grade your conversation and see how you can improve =)"
+              : null}
+          </div>
+          <ConversationGrader
+            type={type}
+            instructions={instructions}
+            conversationInput={conversationInput}
+            setConversationInput={setConversationInput}
+            conversation={conversation}
+            gradeResult={gradeResult}
+          />
         </Modal.Body>
+        <Modal.Footer
+          style={{
+            backgroundColor: "black",
+            borderBottom: "5px solid lavender",
+            borderLeft: "5px solid lavender",
+            borderRight: "5px solid lavender",
+          }}
+        >
+          <Button
+            variant="dark"
+            onClick={() => {
+              setIsModalOpen(false);
+            }}
+            disabled={isGrading || isAiResponseLoading}
+          >
+            Exit
+          </Button>
+
+          <Button
+            variant="dark"
+            onClick={() => handleConversation(false)}
+            disabled={isGrading || isAiResponseLoading}
+          >
+            Add to conversation
+          </Button>
+        </Modal.Footer>
       </Modal>
       <br /> <br />
       {children}

@@ -1,13 +1,28 @@
-import { Button } from "react-bootstrap";
+import { Button, Form } from "react-bootstrap";
 import { logEvent } from "firebase/analytics";
 import { analytics } from "../../../../database/firebaseResources";
 import { ui } from "../../../uiSchema";
+import { useState } from "react";
+import { Chat } from "./Chat/Chat";
 
-export const ConversationGrader = ({ type }) => {
+// export const get;
+export const ConversationGrader = ({
+  type,
+  instructions,
+  conversationInput,
+  setConversationInput,
+  conversation,
+  gradeResult,
+}) => {
   return (
     <>
-      <h3>Conversation Grader 4444</h3>
-      <div>{type}</div>
+      <Chat conversation={conversation} gradeResult={gradeResult} />
+      <Form.Control
+        as="textarea"
+        rows={3}
+        onChange={(event) => setConversationInput(event.target.value)}
+        value={conversationInput}
+      />
     </>
   );
 };
