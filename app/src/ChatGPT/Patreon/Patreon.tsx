@@ -12,7 +12,7 @@ let Patreon = ({
       return (
         <>
           <video
-            poster="https://res.cloudinary.com/dtkeyccga/image/upload/v1691891520/ROBE_assets/videoFill_hokslw.png"
+            poster="https://res.cloudinary.com/dtkeyccga/image/upload/v1696725598/Untitled_design_3_r5rq6o.png"
             style={{
               width: "100%",
               borderRadius: "30px",
