@@ -258,19 +258,20 @@ export const StyledLink = styled(Link)`
 
   border: 2px solid hotpink;
 
-  width: 200px;
+  width: 125px;
 
   height: 125px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 16px;
-  margin: 6px;
+  margin: 12px;
 
   color: white;
   transition: 0.15s all ease-in-out;
   text-shadow: 1px 1px 5px black;
   // color: #f5befa;
+  border-radius: 44%;
 
   box-shadow: ${(props) => {
     return props.pathSelectionAnimationData.path === props.path
@@ -386,6 +387,7 @@ export let japaneseThemePalette = {
   Lavender: "rgba(220,205,255, 1)",
   PowerPurple: "rgba(102, 3, 252, 1)",
   PowerPink: "#f7059d",
+  iphoneBlue: "",
 };
 
 // opinionated
