@@ -7,8 +7,11 @@ import {
   gatherConversationContext,
 } from "./ChatBlock.compute";
 import { postInstructions } from "../../uiSchema";
+import { EmotionalIntelligenceStyles } from "../../../ProofOfWork/ImpactWallet/EmotionalIntelligence/EmotionalIntelligence.styles";
 
 export let ChatBlock = ({ children, type = "quiz" }) => {
+  const [isConversationContextWindowOpen, setIsConversationContextWindowOpen] =
+    useState(false);
   const [conversationInput, setConversationInput] = useState("");
   const [conversation, setConversation] = useState([]);
   const [isAiResponseLoading, setIsAiResponseLoading] = useState(false);
@@ -188,12 +191,16 @@ export let ChatBlock = ({ children, type = "quiz" }) => {
           <div
             style={{
               border: "3px solid pink",
+              cursor: "pointer",
+
               ...textBlock(japaneseThemePalette.FujiSanBlue, 0, 12),
+              boxShadow: " -4px -5px 0px 0px rgba(9,0,255,1)",
             }}
+            onClick={() => setIsConversationContextWindowOpen(true)}
           >
             {conversation?.length < 1
               ? "Ask Ms. Roxana for assistance on your quiz! Grade your conversation and see how you can improve =)"
-              : null}
+              : "View quiz"}
           </div>
           <ConversationGrader
             type={type}
@@ -228,6 +235,25 @@ export let ChatBlock = ({ children, type = "quiz" }) => {
             disabled={isGrading || isAiResponseLoading}
           >
             Add to conversation
+          </Button>
+        </Modal.Footer>
+      </Modal>
+      <Modal show={isConversationContextWindowOpen} centered>
+        <Modal.Header
+          closeButton
+          style={EmotionalIntelligenceStyles.EmotionHeader}
+        >
+          <Modal.Title>The Quiz</Modal.Title>
+        </Modal.Header>
+        <Modal.Body style={EmotionalIntelligenceStyles.EmotionBody}>
+          {children}
+        </Modal.Body>
+        <Modal.Footer style={EmotionalIntelligenceStyles.EmotionFooter}>
+          <Button
+            variant="dark"
+            onClick={() => setIsConversationContextWindowOpen(false)}
+          >
+            Exit
           </Button>
         </Modal.Footer>
       </Modal>
