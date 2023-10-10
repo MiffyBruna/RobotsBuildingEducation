@@ -1,3 +1,4 @@
+// Import required modules
 import { logEvent } from "firebase/analytics";
 import {
   auth,
@@ -6,26 +7,34 @@ import {
   analytics,
 } from "../database/firebaseResources";
 
-export let AuthDisplay = () => {
+// Define constants for styling
+const containerStyle = {
+  border: "1px solid #1C1C1E",
+  width: "fit-content",
+  margin: "auto",
+  backgroundColor: "#1C1C1E",
+  marginBottom: "48px",
+};
+
+const authComponentStyle = {
+  backgroundColor: "black",
+};
+
+// Event Handler Function
+const handleOnClick = () => {
+  logEvent(analytics, "login", { method: "Google" });
+};
+
+// AuthDisplay Component
+export const AuthDisplay = () => {
   return (
-    <div
-      style={{
-        border: "1px solid #1C1C1E",
-        width: "fit-content",
-        margin: "auto",
-        backgroundColor: "#1C1C1E",
-        marginBottom: "48px",
-      }}
-      onClick={() => {
-        logEvent(analytics, "login", { method: "Google" });
-      }}
-    >
+    <div style={containerStyle} onClick={handleOnClick}>
       Access all features:
       <AuthComponent
         id="firebaseui-auth-container"
         uiConfig={uiConfig}
         firebaseAuth={auth}
-        style={{ backgroundColor: "black" }}
+        style={authComponentStyle}
       />
     </div>
   );

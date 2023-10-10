@@ -4,6 +4,39 @@ import { analytics } from "../database/firebaseResources";
 import { ui } from "../common/uiSchema";
 import ChatGPT from "../ChatGPT/ChatGPT";
 
+// Styles
+const whiteTextColor = { color: "white" };
+const buttonStyle = { width: "250px", height: "50px" };
+
+// Functions
+const logPromotionEvent = () => {
+  logEvent(analytics, "select_promotion", {
+    creative_name: "https://www.patreon.com/RobotsBuildingEducation",
+    creative_slot: "Get Passcode Slot",
+    promotion_id: "Robots Building Education",
+    promotion_name: "advertising_launch",
+  });
+};
+
+const renderPatreonContent = (patreonObject) => {
+  if (!patreonObject) return null;
+
+  const patreonData =
+    ui()["Engineer"]["Coding Crash Course Version 3"][
+      "Learning Mindset & Perspective"
+    ];
+
+  return (
+    <div>
+      <h2 style={{ ...whiteTextColor, marginTop: 12 }}>
+        Demo: Learning Mindset & Perspective
+      </h2>
+      <ChatGPT patreonObject={patreonData} isDemo={true} />
+    </div>
+  );
+};
+
+// Main Component
 export const Passcode = ({ handleZeroKnowledgePassword, patreonObject }) => {
   return (
     <div>
@@ -13,43 +46,19 @@ export const Passcode = ({ handleZeroKnowledgePassword, patreonObject }) => {
       <br />
 
       <a
-        onClick={() =>
-          logEvent(analytics, "select_promotion", {
-            creative_name: `https://www.patreon.com/RobotsBuildingEducation`,
-            creative_slot: `Get Passcode Slot`,
-            promotion_id: `Robots Building Education`,
-            promotion_name: "advertising_launch",
-          })
-        }
+        onClick={logPromotionEvent}
         target={"_blank"}
         href="https://www.patreon.com/RobotsBuildingEducation"
-        style={{ color: "white" }}
+        style={whiteTextColor}
       >
-        <Button variant="dark" style={{ width: "250px", height: "50px" }}>
+        <Button variant="dark" style={buttonStyle}>
           &nbsp; Get Subscriber Passcode
         </Button>
       </a>
       <br />
       <br />
 
-      <br />
-      <br />
-      {patreonObject ? (
-        <div>
-          <h2 style={{ color: "white", marginTop: 12 }}>
-            {/* Lesson 1 - Coding &amp; Logic */}
-            Demo: Learning Mindset & Perspective
-          </h2>
-          <ChatGPT
-            patreonObject={
-              ui()["Engineer"]["Coding Crash Course Version 3"][
-                "Learning Mindset & Perspective"
-              ]
-            }
-            isDemo={true}
-          />
-        </div>
-      ) : null}
+      {renderPatreonContent(patreonObject)}
     </div>
   );
 };

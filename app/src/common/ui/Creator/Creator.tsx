@@ -603,7 +603,7 @@ export const Creator = {
         },
       },
     },
-    "Human-Computer Interaction": {
+    "Interactions & Design": {
       documentID: ``,
       filler: ``,
       new: false,
@@ -614,8 +614,8 @@ export const Creator = {
       needsImprovement: false,
       tooltip: ``,
       sourceType: `video`, // may not need
-      button: `Human-Computer Interaction`, // may not need - `name`
-      header: `Human Computer Interaction`,
+      button: `Interactions & Design`, // may not need - `name`
+      header: `Interactions & Design`,
       fileSource:
         "https://res.cloudinary.com/dtkeyccga/video/upload/v1691867533/legacy/IMG_9182_ao3yio_f5f8ue.mov", // may not need
 
@@ -845,7 +845,7 @@ export const Creator = {
           )}?`,
           response: (
             <div>
-              <h1>Human-Computer Interaction (HCI) Study Guide and Roadmap</h1>
+              <h3>Human-Computer Interaction (HCI) Study Guide and Roadmap</h3>
 
               <h2>Step 1: Foundations</h2>
               <p>
