@@ -29,7 +29,7 @@ export const Collections = ({
       return (
         <div>
           <br />
-          <h3>
+          {/* <h3>
             {isSpecialCollection ? (
               <img
                 alt={collection}
@@ -40,7 +40,7 @@ export const Collections = ({
             ) : (
               collection
             )}
-          </h3>
+          </h3> */}
           <StyledCollectionContainer>
             {modules.map((module) => (
               <Module

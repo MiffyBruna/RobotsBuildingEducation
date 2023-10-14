@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 
 import { Paths } from "./Paths/Paths";
@@ -32,6 +32,7 @@ import { AuthDisplay } from "./AuthDisplay/AuthDisplay";
 import { LectureHeader } from "./LectureHeader/LectureHeader";
 import { ChatGptWrapper } from "./ChatGPT/ChatGptWrapper";
 import { ProofOfWorkWrapper } from "./ProofOfWork/ProofOfWorkWrapper";
+import { words } from "./common/words/words";
 
 logEvent(analytics, "page_view", {
   page_location: "https://learn-robotsbuildingeducation.firebaseapp.com/",
@@ -49,6 +50,9 @@ function App() {
 
   // handles ui data
   let { uiStateReference } = useUIStates();
+
+  // handles language switching
+  let [languageMode, setLanguageMode] = useState(words["English"]);
 
   /**
    *
@@ -182,6 +186,8 @@ function App() {
     });
   }, []);
 
+  console.log("language mode", languageMode);
+
   if (typeof authStateReference.isSignedIn == "string") {
     return <RoxanaLoadingAnimation />;
   }
@@ -189,7 +195,7 @@ function App() {
   return (
     <>
       <div className="App" style={{ minHeight: "100vh" }}>
-        <Header />
+        <Header languageMode={languageMode} setLanguageMode={setLanguageMode} />
 
         {checkSignInStates({ authStateReference }) ? <AuthDisplay /> : null}
 

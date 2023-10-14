@@ -10,7 +10,7 @@ import { DiscordButton } from "../../common/ui/DiscordButton/DiscordButton";
 
 import { japaneseThemePalette, textBlock } from "../../styles/lazyStyles";
 
-export const LearnMore = () => {
+export const LearnMore = ({ languageMode }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <>
@@ -28,7 +28,7 @@ export const LearnMore = () => {
           setIsModalOpen(true);
         }}
       >
-        Learn more & FAQs
+        {languageMode.buttons["9"]}
       </Button>
 
       {/* <Button
@@ -47,7 +47,8 @@ export const LearnMore = () => {
           closeButton
           style={{ backgroundColor: "black", color: "white" }}
         >
-          <Modal.Title>Learn More</Modal.Title>
+          {/* Learn More */}
+          <Modal.Title>{languageMode.modals.titles["1"]}</Modal.Title>
         </Modal.Header>
         <Modal.Body
           onHide={() => setIsModalOpen(false)}
@@ -119,7 +120,7 @@ export const LearnMore = () => {
           <br />
           <br />
           <div style={{ maxWidth: "100%", width: 700 }}>
-            <h2>Testimonials</h2>
+            <h1>Testimonials</h1>
             <p
               style={{
                 maxWidth: "100%",
@@ -567,7 +568,7 @@ export const LearnMore = () => {
                 ...textBlock(japaneseThemePalette.SakuraMochiPink, 0, 24),
               }}
             >
-              <h2>Impact Wallet</h2>
+              <h2>Proof of Work</h2>
               <i>theme: decentralized technology</i>
               <p style={{ maxWidth: "100%", width: 700 }}>
                 One of the motivating goals is to create a proper system for

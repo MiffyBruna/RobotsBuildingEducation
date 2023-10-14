@@ -369,6 +369,10 @@ export let prettyColorPalette = {
   softYellowGlow: "#FFF5CA",
 };
 
+// holy ghost palette
+export const kanyeColorPalette = {};
+
+// zen garden palette
 export let japaneseThemePalette = {
   CherryBlossomPink: "#FFB7C5", // Cherry Blossom
   KyotoPurple: "#663399", // Sweet Potato Purple

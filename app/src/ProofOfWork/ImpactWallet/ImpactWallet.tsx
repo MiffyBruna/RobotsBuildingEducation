@@ -117,7 +117,7 @@ export const ImpactWallet = ({
             onClick={() => {
               logEvent(analytics, "select_content", {
                 content_type: "button",
-                item_id: "Impact Wallet",
+                item_id: "Proof of Work",
               });
               setIsImpactWalletOpen(true);
             }}
@@ -148,7 +148,7 @@ export const ImpactWallet = ({
           style={{ backgroundColor: "black", color: "white" }}
         >
           <Modal.Title>
-            Impact Wallet @{params?.profileID || userAuthObject?.uid}
+            Proof of Work @{params?.profileID || userAuthObject?.uid}
           </Modal.Title>
         </Modal.Header>
         <Modal.Body
@@ -174,7 +174,7 @@ export const ImpactWallet = ({
               width: "100%",
             }}
           >
-            <h4> The Proof Of Work System</h4>
+            <h4> The Proof of Work System</h4>
             <p
               style={{
                 maxWidth: 700,

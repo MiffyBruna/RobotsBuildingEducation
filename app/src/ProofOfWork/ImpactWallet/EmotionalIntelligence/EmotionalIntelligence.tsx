@@ -96,7 +96,7 @@ export const EmotionalIntelligence = ({
         <Modal.Body style={EmotionalIntelligenceStyles.Body}>
           <h1 style={EmotionalIntelligenceStyles.Banner}>
             <div style={EmotionalIntelligenceStyles.BannerBackground}>
-              🌌 how do you feel today?
+              🌌&nbsp;How do you feel today?
             </div>
           </h1>
 
@@ -136,7 +136,7 @@ export const EmotionalIntelligence = ({
             <>
               <h1 style={EmotionalIntelligenceStyles.Banner}>
                 <div style={EmotionalIntelligenceStyles.BannerBackground}>
-                  the journey 🌦️
+                  The journey 🌦️
                 </div>
               </h1>
 

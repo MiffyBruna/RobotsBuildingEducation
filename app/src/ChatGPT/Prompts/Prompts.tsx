@@ -68,7 +68,7 @@ export const Prompts = ({ loadingMessage, patreonObject, handleSubmit }) => {
       })}
 
       <br />
-      <Button
+      {/* <Button
         variant="dark"
         onClick={() => {
           logEvent(analytics, "select_content", {
@@ -79,7 +79,7 @@ export const Prompts = ({ loadingMessage, patreonObject, handleSubmit }) => {
         }}
       >
         💗 Roxana
-      </Button>
+      </Button> */}
       <br />
       <br />
       <Modal
