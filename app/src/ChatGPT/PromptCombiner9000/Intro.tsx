@@ -37,7 +37,7 @@ export const Intro = ({
           <br />
           <br />
           Want to help me build Robots Building Education? Please read more in
-          your Proof of Work Wallet 🏦.
+          your Proof of Work 🏦.
           <br />
           <br />
           Want to plug your business? Contact me inside of&nbsp;

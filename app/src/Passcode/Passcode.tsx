@@ -18,7 +18,7 @@ const logPromotionEvent = () => {
   });
 };
 
-const renderPatreonContent = (patreonObject) => {
+const renderPatreonContent = (patreonObject, languageMode) => {
   if (!patreonObject) return null;
 
   const patreonData =
