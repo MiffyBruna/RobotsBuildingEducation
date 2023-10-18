@@ -382,7 +382,7 @@ export let japaneseThemePalette = {
   WisteriaPurple: "#89729E", // Wisteria Flower
   GoldenAccent: "#bf8902", // Gold in Japanese Art
   WoodenArchitectureBrown: "#d3a86f", // Japanese Wood Architecture
-  BambooForestGreen: "#6fd3bc", // Bamboo Forest
+  BambooForestGreen: "#4aa89c", // Bamboo Forest
   DeepCherryBlossomPink: "#C71585", // Deep Cherry Blossom
   ProsperityEmeraldGreen: "#88d36f", // Symbol of Wealth
   StrongRed: "#DC143C", // Japanese Flag Red

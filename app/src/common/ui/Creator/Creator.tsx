@@ -16,8 +16,10 @@ export const Creator = {
       sourceType: `video`, // may not need
       button: `Philosophy @ RO.B.E`, // may not need - `name`
       header: `Philosophy @ RO.B.E`,
+      backgroundImgSrc:
+        "https://res.cloudinary.com/sheilfer/image/upload/v1697449875/Module_Buttons_12_h28xxn.gif",
       fileSource:
-        "https://res.cloudinary.com/dtkeyccga/video/upload/v1691867474/legacy/IMG_9188_iewsh4_bzwwxi.mov", // may not need
+        "https://res.cloudinary.com/sheilfer/video/upload/v1697492158/IMG_9002_sfq8dw.mov", // may not need
 
       prompts: {
         patreon: {
@@ -616,8 +618,10 @@ export const Creator = {
       sourceType: `video`, // may not need
       button: `Interactions & Design`, // may not need - `name`
       header: `Interactions & Design`,
+      backgroundImgSrc:
+        "https://res.cloudinary.com/sheilfer/image/upload/v1697448652/Module_Buttons_11_fcepaw.gif",
       fileSource:
-        "https://res.cloudinary.com/dtkeyccga/video/upload/v1691867533/legacy/IMG_9182_ao3yio_f5f8ue.mov", // may not need
+        "https://res.cloudinary.com/sheilfer/video/upload/v1697403810/IMG_8966_gt4s4s.mov", // may not need
 
       prompts: {
         patreon: {

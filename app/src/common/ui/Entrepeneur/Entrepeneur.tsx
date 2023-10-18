@@ -3,7 +3,7 @@ import { ultimateEffeciencyJutsu } from "../ui";
 
 export const Entrepeneur = {
   "Understanding Business": {
-    "Creating Competitive Entry Level Resumes": {
+    "Resume Writing": {
       documentID: ``,
       hasCode: false,
       filler: ``,
@@ -14,8 +14,10 @@ export const Entrepeneur = {
       needsImprovement: false,
       tooltip: ``,
       sourceType: `video`, // may not need
-      button: `Creating Competitive Entry Level Resumes`, // may not need - `name`
-      header: `Creating Competitive Entry Level Resumes`,
+      button: `Resume Writing`, // may not need - `name`
+      header: `Resume Writing`,
+      backgroundImgSrc:
+        "https://res.cloudinary.com/sheilfer/image/upload/v1697450736/Module_Buttons_13_sictcc.gif",
       fileSource:
         "https://res.cloudinary.com/dtkeyccga/video/upload/v1691868823/legacy/IMG_9181_mjw1zc_1_yntmre.mov", // may not need
 
@@ -149,7 +151,7 @@ export const Entrepeneur = {
       documentID: ``,
       hasCode: false,
       backgroundImgSrc:
-        "https://res.cloudinary.com/dtkeyccga/image/upload/v1691640313/ROBE_assets/Module_Buttons_3_vavorc_infkgi.png",
+        "https://res.cloudinary.com/sheilfer/image/upload/v1697448653/Module_Buttons_10_ynvvtv.gif",
       filler: ``,
       new: false,
       highValue: true,
@@ -755,20 +757,20 @@ export const Entrepeneur = {
       },
     },
 
-    "Wealth Management": {
+    "Resource Allocation": {
       documentID: ``,
       hasCode: false,
       filler: ``,
       new: false,
       highValue: true,
-      underConstruction: false,
+      underConstruction: true,
       completed: false,
       needsImprovement: false,
-      isModuleDisabled: false,
+      isModuleDisabled: true,
       tooltip: ``,
       sourceType: `markdown`, // may not need
-      button: `Wealth Management`, // may not need - `name`
-      header: `Wealth Management`,
+      button: `Resource Allocation`, // may not need - `name`
+      header: `Resource Allocation`,
       fileSource: await import("../../markdowns/wealthManagement.md?raw"), // may not need
 
       prompts: {

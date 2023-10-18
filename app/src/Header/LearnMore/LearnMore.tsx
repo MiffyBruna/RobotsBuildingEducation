@@ -79,7 +79,7 @@ export const LearnMore = ({ languageMode }) => {
               This program focuses on creating a powerful first mile for
               learning. It's meant to embolden and encourage your ambitions by
               showing you how quickly you can accomplish a challenging goal or
-              barrier with the right network.
+              overcome a barrier with the right network.
               <br />
               <br />
               My hopes and dreams with the product include the ability to
