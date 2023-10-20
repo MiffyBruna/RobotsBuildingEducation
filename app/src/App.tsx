@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+
 import "./App.css";
 
 import { Paths } from "./Paths/Paths";
@@ -162,7 +163,15 @@ function App() {
   /**
    * @description check if the user has been logged in
    */
+
+  const connectDID = async () => {
+    const { web5, did: aliceDid } = await Web5.connect();
+
+    console.log("DID", aliceDid);
+  };
   useEffect(() => {
+    connectDID();
+
     const storedPasscode = localStorage.getItem("patreonPasscode");
     authStateReference.setIsZeroKnowledgeUser(
       validPasscodes.includes(storedPasscode)
@@ -186,7 +195,7 @@ function App() {
     });
   }, []);
 
-  console.log("language mode", languageMode);
+  // console.log("language mode", languageMode);
 
   if (typeof authStateReference.isSignedIn == "string") {
     return <RoxanaLoadingAnimation />;

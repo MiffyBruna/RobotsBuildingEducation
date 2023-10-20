@@ -19,7 +19,7 @@ export const Entrepeneur = {
       backgroundImgSrc:
         "https://res.cloudinary.com/sheilfer/image/upload/v1697450736/Module_Buttons_13_sictcc.gif",
       fileSource:
-        "https://res.cloudinary.com/dtkeyccga/video/upload/v1691868823/legacy/IMG_9181_mjw1zc_1_yntmre.mov", // may not need
+        "https://res.cloudinary.com/dtkeyccga/video/upload/v1697778816/IMG_9248_o1eyss.mov", // may not need
 
       prompts: {
         patreon: {

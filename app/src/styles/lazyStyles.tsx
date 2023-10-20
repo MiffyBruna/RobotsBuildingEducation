@@ -190,7 +190,6 @@ export const StyledLink = styled(Link)`
       const isSelectedPath =
         props.pathSelectionAnimationData.path === props.path;
       const currentPath = props.path;
-      console.log("currentPath", currentPath);
 
       let backgroundColor = "";
 
@@ -218,7 +217,6 @@ export const StyledLink = styled(Link)`
       } else if (currentPath === "Creator") {
         backgroundColor = toBlueVersion(backgroundColor);
       } else if (currentPath === "Entrepeneur") {
-        console.log("ok");
         backgroundColor = toGoldenVersion(backgroundColor);
       }
 
