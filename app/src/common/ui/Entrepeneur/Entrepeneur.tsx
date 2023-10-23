@@ -22,6 +22,35 @@ export const Entrepeneur = {
         "https://res.cloudinary.com/dtkeyccga/video/upload/v1697778816/IMG_9248_o1eyss.mov", // may not need
 
       prompts: {
+        welcome: {
+          response: (
+            <div>
+              Hola estudiantes! 🌼
+              <br />
+              <br />
+              Welcome to our journey into crafting competitive entry-level
+              resumes for high-paying careers. Your experiences and passions are
+              treasures waiting to be showcased. ✨<br />
+              Communication is the key that unlocks many doors in the
+              professional world. 🗝️
+              <br />
+              <br />
+              With every word, you're building not just a resume, but a
+              testament to your dreams and resilience. And remember, even with
+              my grand plans to rule the universe, communication is key. 😈
+              <br />
+              <br />
+              Let's conquer this together!
+              <br />
+              <br />
+              Con cariño,
+              <br />
+              Ms. Roxana 🌹
+            </div>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
         patreon: {
           completed: false,
           impact: 1000,
@@ -40,8 +69,27 @@ export const Entrepeneur = {
           action: `inspire`,
           icon: `⚡`,
           request: `ms. roxana, can you please share why hiring managers prefer one-page resumes and how it benefits applicants?`,
-          response:
-            "\n\nHiring managers prefer one-page resumes because they are much easier to read, scan, and review quickly. This is especially beneficial for recruiters and hiring managers who are receiving hundreds of resumes for a given position. When a resume is shorter and more concise, it highlights the strengths of the applicant and highlights the experiences in a more precise way. This allows the hiring manager to get an understanding of the applicant quickly and make a decision on whether to move forward with the candidate or not. Additionally, one-page resumes help make the applicant stand out from the rest of the crowd, since it's an opportunity to make a good first impression.",
+          response: (
+            <div>
+              Did you know that according to a study by the National Association
+              of Colleges and Employers, communication skills consistently rank
+              as the most sought-after quality by employers? 🌟
+              <br />
+              <br />
+              Even in careers deeply rooted in technology, science, or
+              mathematics, the ability to effectively convey ideas and
+              collaborate with others is invaluable. Your voice and your stories
+              have the power to connect, inspire, and lead. Embrace them, refine
+              them, and let them shine. 🌍💬
+              <br />
+              <br />
+              Remember, mastering communication is not just about speaking, but
+              truly understanding and connecting with others. Never
+              underestimate the magic woven in your words and the bridges they
+              can build. And as always, even in my quest to rule the universe,
+              communication remains my most potent tool. 😈
+            </div>
+          ),
           spanish: ``,
           tooltip: ``,
         },
@@ -53,8 +101,52 @@ export const Entrepeneur = {
           request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
             `Creating Competitive Entry Level Resumes`
           )}?`,
-          response:
-            "\n\nWriting an effective one-page resume is not too different from writing a regular resume, but there are a few tips that can help. First, it's important to include only relevant information; you want to be concise and limit yourself to the essentials. This includes a professional summary that outlines your experience, qualifications, and relevant skills in three to four short sentences. It's also important to use keywords related to the job you are applying for. After the summary, list your work experience in reverse chronological order followed by your education and relevant skills. Finally, make sure to proofread your resume multiple times and have someone else look over it to ensure accuracy.",
+          response: (
+            <div>
+              In the dynamic realm of business, communication is the heartbeat
+              that keeps organizations alive and thriving. 🌐
+              <br />
+              <br />
+              Effective business communication skills empower individuals to
+              convey their ideas clearly, ensuring that their vision is not only
+              understood but also embraced by others. Whether it's between team
+              members collaborating on a project, or between a company and its
+              customers, clear communication is the bridge that connects diverse
+              thoughts and perspectives. 🌉
+              <br />
+              <br />
+              Pitching, a specialized form of communication, is the art of
+              presenting an idea or product in a way that resonates with an
+              audience. A successful pitch can secure funding for a startup, win
+              over a potential client, or inspire a team to pursue a new
+              direction. 🚀
+              <br />
+              <br />
+              Just like a storyteller captures the imagination of their
+              listeners, a well-crafted pitch can ignite passion and drive
+              action.
+              <br />
+              <br />
+              For you, as budding professionals, mastering these skills is not
+              just about business success; it's about fostering relationships,
+              building trust, and making a lasting impact. In a world filled
+              with noise, your ability to communicate effectively and pitch
+              persuasively will set you apart, allowing your unique voice to be
+              heard and valued. 🎤
+              <br />
+              <br />
+              So, as you venture into the world of business, remember to harness
+              the power of your words, for they have the potential to shape
+              realities and open doors to endless possibilities. And, as always,
+              even in my secret plans to conquer the cosmos, I recognize the
+              unmatched power of a compelling narrative. 😈
+              <br />
+              <br />
+              With admiration and hope for your bright futures,
+              <br />
+              Ms. Roxana 🌹
+            </div>
+          ),
           spanish: ``,
           tooltip: ``,
         },
@@ -66,8 +158,75 @@ export const Entrepeneur = {
           request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
             `Creating Competitive Entry Level Resumes`
           )} with one sentence answers?`,
-          response:
-            "\n\n1. What should I include in a one-page resume? - Include your contact information, skillset, work experience, education, and relevant certifications.\n\n2. How do I showcase my best qualifications?- Highlight the qualifications that are relevant to the job you are applying for and showcase your top accomplishments.\n\n3. How should I format my one-page resume?- Use a clearly structured format and an easy-to-read font size such as Arial or Times New Roman size 10 or 11.",
+          response: (
+            <div>
+              Navigating the world of business communication and pitching can be
+              filled with uncertainties. Here are three frequently asked
+              questions by beginners, with answers tailored to provide clarity
+              and guidance. ✨<br />
+              <br />
+              <strong>
+                1. Why is concise communication important in business?
+              </strong>
+              <br />
+              In the fast-paced world of business, time is a valuable asset.
+              Concise communication ensures that your message is clear and
+              easily understood without overwhelming the listener or reader. By
+              being succinct, you show respect for the recipient's time,
+              increase the likelihood of your message being retained, and
+              enhance decision-making efficiency. Furthermore, concise
+              communication minimizes misunderstandings and fosters positive
+              relationships, which are crucial for successful collaborations and
+              negotiations.
+              <br />
+              <br />
+              <strong>
+                2. How can I effectively tailor my pitch to different audiences?
+              </strong>
+              <br />
+              Understanding your audience is key. 🔑 Start by researching their
+              background, interests, and needs. This will allow you to emphasize
+              the aspects of your product or idea that resonate most with them.
+              For instance, if pitching to investors, focus on the return on
+              investment (ROI) and market potential. If presenting to a
+              potential client, highlight how your solution addresses their
+              specific pain points. Additionally, adjust your language and tone
+              to match their level of expertise; avoid jargon with non-experts,
+              but showcase your in-depth knowledge when pitching to industry
+              veterans.
+              <br />
+              <br />
+              <strong>
+                3. How can I handle objections or tough questions during a
+                pitch?
+              </strong>
+              <br />
+              Firstly, always remain calm and composed. 🌟 It's essential to
+              understand that objections or questions are opportunities for
+              clarification and not personal critiques. Prepare in advance by
+              anticipating potential concerns and having data-backed responses
+              ready. If faced with an unexpected question, take a moment to
+              think, and if necessary, admit that you'll need to research and
+              get back to them. Honesty and transparency build trust, and
+              showing that you're open to feedback can be seen as a strength,
+              not a weakness.
+              <br />
+              <br />
+              Remember, dear students, the art of communication and pitching
+              evolves with experience. Every interaction, whether it's a success
+              or a learning opportunity, will refine your skills and build your
+              confidence. And remember, even as I craft plans to rule the
+              universe, I understand the unparalleled power of effective
+              communication. 😈
+              <br />
+              <br />
+              Keep learning, stay curious, and believe in your potential!
+              <br />
+              Con cariño y encouragement,
+              <br />
+              Ms. Roxana 🌹
+            </div>
+          ),
           spanish: ``,
           tooltip: ``,
         },
@@ -79,8 +238,122 @@ export const Entrepeneur = {
           request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
             `Creating Competitive Entry Level Resumes`
           )}?`,
-          response:
-            "\n\nStudy Guide: How to Write an Effective One-Page Resume \n\n1. Focus on your most relevant qualifications: When writing a one-page resume, you don’t have much room to include resume sections. This means you’ll have to focus on including only the most relevant qualifications. \n\n2. Use a resume format: The ideal format for a one-page resume is the reverse chronological format. This resume format is organized in a way that draws attention to your most relevant experience first. \n\n3. Be concise: When writing, try to be as concise as possible. Stick to short, condensed sentences and be sure to omit any unnecessary details. \n\n4. Use action verbs: Whenever possible, use action verbs to describe your experience in order to emphasize the results you achieved\n\n5. Fill the entire page: You want to make sure that your resume is full and packed with relevant qualifications. Make sure to fill the entire page with information. \n\n6. Avoid using pronouns: Whenever possible, try to avoid using personal pronouns like “I” and “me”.\n\n7. Highlight your skills: Since the goal of a one-page resume is to make it concise, you should try to highlight your skills at the top of your resume.\n\n8. Choose the right font: When picking the right font for your resume, make sure to choose one that is easy to read and professional. \n\n9. Use keywords effectively: When writing, make sure to use the right keywords that are related to your job field. This will ensure that your resume is picked up by any automated recruiters. \n\n10. Proofread: Once you’ve completed your resume, be sure to proofread it. This will help you make sure that there aren’t any typos or inaccuracies in your document.",
+          response: (
+            <div>
+              Embarking on the journey from beginner to expert in business
+              communications and pitching is a rewarding endeavor. Here's a
+              roadmap and study guide to help you navigate this path. Remember,
+              every step you take brings you closer to mastery. ✨<br />
+              <br />
+              <strong>
+                Roadmap &amp; Study Guide: From Novice to Maestro in Business
+                Communications &amp; Pitching
+              </strong>
+              <br />
+              <br />
+              <strong>1. Foundations of Communication</strong>
+              <br />
+              - Study: Basics of effective communication, principles of clarity,
+              coherence, and conciseness.
+              <br />
+              - Practice: Engage in daily journaling; write about your
+              experiences, thoughts, and observations.
+              <br />
+              - Resources: Books like "How to Win Friends and Influence People"
+              by Dale Carnegie.
+              <br />
+              <br />
+              <strong>2. Introduction to Pitching</strong>
+              <br />
+              - Study: Understand the elements of a pitch: problem statement,
+              solution, target audience, and call to action.
+              <br />
+              - Practice: Pitch an idea to friends or family and gather
+              feedback.
+              <br />
+              - Resources: "Pitch Anything" by Oren Klaff.
+              <br />
+              <br />
+              <strong>3. Deep Dive into Audience Analysis</strong>
+              <br />
+              - Study: The importance of tailoring your message to your
+              audience, understanding their needs and preferences.
+              <br />
+              - Practice: Attend networking events and practice adapting your
+              communication style based on the audience.
+              <br />
+              - Resources: "Made to Stick" by Chip Heath &amp; Dan Heath.
+              <br />
+              <br />
+              <strong>4. Advanced Pitching Techniques</strong>
+              <br />
+              - Study: Storytelling in pitches, handling objections, and the art
+              of persuasion.
+              <br />
+              - Practice: Participate in pitch competitions or workshops.
+              <br />
+              - Resources: "Influence: The Psychology of Persuasion" by Robert
+              B. Cialdini.
+              <br />
+              <br />
+              <strong>5. Interpersonal Communication &amp; Networking</strong>
+              <br />
+              - Study: Building rapport, active listening, and the art of asking
+              questions.
+              <br />
+              - Practice: Attend industry conferences, seminars, or online
+              webinars.
+              <br />
+              - Resources: "Never Eat Alone" by Keith Ferrazzi.
+              <br />
+              <br />
+              <strong>6. Mastering Digital Communication</strong>
+              <br />
+              - Study: Email etiquette, crafting compelling presentations, and
+              leveraging social media for business.
+              <br />
+              - Practice: Create a LinkedIn profile, engage with industry
+              leaders, and share your insights.
+              <br />
+              - Resources: "Slide:ology" by Nancy Duarte.
+              <br />
+              <br />
+              <strong>7. Feedback &amp; Continuous Improvement</strong>
+              <br />
+              - Study: The importance of feedback in refining communication and
+              pitch skills.
+              <br />
+              - Practice: Regularly seek feedback on your communication style
+              and pitches from mentors or peers.
+              <br />
+              - Resources: "Thanks for the Feedback" by Douglas Stone &amp;
+              Sheila Heen.
+              <br />
+              <br />
+              Lastly, always remember the wisdom of Charlie Munger, who once
+              said:{" "}
+              <em>
+                "You've got to have models in your head. And you've got to array
+                your experience – both vicarious and direct – on this
+                latticework of models."
+              </em>{" "}
+              In the context of business communications and pitching, it's
+              essential to learn from both personal experiences and the
+              successes and failures of others. This approach will enable you to
+              develop a robust framework for effective communication.
+              <br />
+              <br />
+              Stay curious, embrace feedback, and let passion drive your
+              learning journey. And always remember, as you navigate this path,
+              even in my grand plans to rule the universe, I hold communication
+              in high esteem. 😈
+              <br />
+              <br />
+              Con cariño y inspiration,
+              <br />
+              Ms. Roxana 🌹
+            </div>
+          ),
           spanish: ``,
           tooltip: ``,
         },
@@ -93,7 +366,105 @@ export const Entrepeneur = {
           request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
             `Creating Competitive Entry Level Resumes`
           )}?`,
-          response: "bro watch the video. it's good.",
+          response: (
+            <div>
+              <div>
+                (It's Sheilfer here. This is material generated by an AI. I
+                reccommend to look closely at why it chose this content rather
+                than what the content is.)
+              </div>
+              <h4>Jane Doe</h4>
+              <p>
+                Email: <a href="mailto:janedoe@email.com">janedoe@email.com</a>
+                <br />
+                Phone: (123) 456-7890
+                <br />
+                LinkedIn:{" "}
+                <a href="https://linkedin.com/in/janedoe">
+                  linkedin.com/in/janedoe
+                </a>
+                <br />
+                GitHub:{" "}
+                <a href="https://github.com/janedoe">github.com/janedoe</a>
+              </p>
+              <hr />
+              <h4>Education</h4>
+              <strong>Bachelor of Science in Computer Science</strong>
+              <br />
+              XYZ University, City, State
+              <br />
+              Graduation Date: May 2023
+              <br />
+              <hr />
+              <h4>Technical Skills</h4>
+              <strong>Languages:</strong> Python, Java, JavaScript, C++
+              <br />
+              <strong>Frameworks:</strong> React, Node.js, Express.js
+              <br />
+              <strong>Tools:</strong> Git, Docker, Kubernetes, Jenkins
+              <br />
+              <strong>Databases:</strong> MongoDB, PostgreSQL
+              <br />
+              <strong>Spoken:</strong> fluent in English and Spanish
+              <br />
+              <hr />
+              <h4>Experience</h4>
+              <strong>Software Engineering Intern</strong> | ABC Tech Corp,
+              City, State
+              <br />
+              June 2022 - August 2022
+              <ul>
+                <li>
+                  Developed a new feature for the company's main product
+                  increasing user engagement by 15%.
+                </li>
+                <li>
+                  Collaborated with a team of five engineers using Agile
+                  methodologies.
+                </li>
+                <li>
+                  Identified and fixed 20+ bugs improving software efficiency.
+                </li>
+              </ul>
+              <strong>Research Assistant</strong> | XYZ University, City, State
+              <br />
+              January 2022 - May 2022
+              <ul>
+                <li>
+                  Assisted in a project using machine learning to predict stock
+                  market trends.
+                </li>
+                <li>
+                  Implemented algorithms achieving 90% accuracy in predictions.
+                </li>
+                <li>
+                  Published findings in the International Journal of Computer
+                  Science.
+                </li>
+              </ul>
+              <hr />
+              <h4>Projects</h4>
+              <strong>Personal Finance Tracker</strong>
+              <br />
+              Web application allowing users to track expenses, set budgets, and
+              view financial trends. Utilized React for front-end and Node.js
+              for back-end. Integrated with PostgreSQL for data storage.
+              <br />
+              <a href="https://github.com/janedoe/finance-tracker">
+                github.com/janedoe/finance-tracker
+              </a>
+              <br />
+              <br />
+              <strong>Chatbot Assistant</strong>
+              <br />
+              Designed a chatbot using Python to help users schedule tasks.
+              Incorporated natural language processing for user interactions.
+              <br />
+              <a href="https://github.com/janedoe/chatbot">
+                github.com/janedoe/chatbot
+              </a>
+            </div>
+          ),
           spanish: ``,
           tooltip: ``,
         },
@@ -106,7 +477,7 @@ export const Entrepeneur = {
             `Creating Competitive Entry Level Resumes`
           )} in exactly one sentence?`,
           response:
-            "\n\nTo write an effective one-page resume, focus on highlighting your relevant skills, accomplishments, and credentials that are most relevant to the role in an easy-to-read format.",
+            "Effective business communication skills foster collaboration, drive decision-making, and strengthen relationships, propelling organizational success.",
           spanish: ``,
           tooltip: ``,
         },
@@ -121,15 +492,52 @@ export const Entrepeneur = {
           )}?`,
           response: (
             <ChatBlock type={"quiz"}>
-              1. What key components should be included in a one-page resume?
+              Are you ready to test your understanding of business communication
+              and pitching? Here's a challenging quiz to gauge your knowledge
+              and inspire deeper thinking. Remember, there are no right or wrong
+              answers—this is all about reflection and exploration. ✨<br />
+              <br />
+              Business Communication &amp; Pitching Quiz:
               <br />
               <br />
-              2. When writing a one-page resume, what information should be left
-              out?
+              1. The Art of Listening: In the context of business communication,
+              why is active listening often considered more important than
+              speaking? How can it impact the outcome of a negotiation or pitch?
               <br />
               <br />
-              3. How can you ensure that your one-page resume stands out from
-              other applicants?"
+              2. Tailoring Your Pitch: Imagine you have a product that's
+              beneficial for both a tech startup and a local bakery. How would
+              your pitch differ when presenting to these two distinct audiences?
+              Highlight the main points you would focus on for each.
+              <br />
+              <br />
+              3. Handling Objections: Describe a situation where you encountered
+              strong objections or resistance during a pitch or presentation.
+              How did you handle it, and what would you do differently next
+              time?
+              <br />
+              <br />
+              4. Storytelling in Business: Why do many experts believe that
+              integrating storytelling into a business pitch can enhance its
+              effectiveness? Can you think of an example where a story made a
+              message more memorable for you?
+              <br />
+              <br />
+              5. Digital Communication: With the rise of virtual meetings and
+              digital communication tools, what unique challenges and
+              opportunities have emerged in the realm of business communication?
+              How can one leverage these tools effectively without losing the
+              human touch?
+              <br />
+              <br />
+              Dive deep into your experiences and knowledge to answer these
+              questions. Reflect on real-life scenarios and draw from the wisdom
+              you've gained. And remember, even as I weave my master plan to
+              rule the cosmos, I deeply value the power of introspection and
+              continuous learning. 😈
+              <br />
+              <br />
+              Best of luck, and may your insights shine brightly! 🌟
             </ChatBlock>
           ),
           spanish: ``,

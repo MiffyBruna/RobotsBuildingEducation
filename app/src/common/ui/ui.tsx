@@ -53,7 +53,7 @@ export let ultimateEffeciencyJutsu = (key) => {
     ["Learn Coding"]:
       "how computer science is intersectional with any subject of interest",
     ["Creating Competitive Entry Level Resumes"]:
-      "how to write and effective one-page resume",
+      "how to write an effective resume",
     ["Focus Investing"]:
       "resource allocation with the focused investing discipline",
 
