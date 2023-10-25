@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { a11yDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
@@ -7,6 +7,7 @@ import { logEvent } from "firebase/analytics";
 import Patreon from "../Patreon/Patreon";
 import CodeEditor from "../CodeEditor/CodeEditor";
 import { analytics } from "../../database/firebaseResources";
+import { Button } from "react-bootstrap";
 
 const Wrapper = styled.div`
   text-align: left;
@@ -26,6 +27,7 @@ const MessageContainer = styled.div`
   max-width: 600px;
   border-radius: 30px;
   margin: 24px 0 12px 0;
+  transition: 0.2s all ease-in-out;
 `;
 
 const FlexBox = styled.div`
@@ -38,6 +40,16 @@ const Advertisement = styled.div`
   flex-direction: column;
   align-items: center;
   text-align: center;
+`;
+
+const StyledPromptHeaderButton = styled.button`
+  background-color: transparent;
+  border-radius: 8px;
+  border-top: 1px solid transparent;
+  border-right: 1px solid transparent;
+  border-left: 2px solid white;
+  border-bottom: 2px solid white;
+  color: white;
 `;
 
 const renderContent = (type, response, patreonObject) => {
@@ -76,21 +88,50 @@ export const PromptCombiner9000 = ({
   chatGptResponse,
   patreonObject,
 }) => {
+  const [promptVisibility, setPromptVisibility] = useState("flex");
   if (isEmpty(patreonObject)) {
     return null;
   }
 
   const { type, response, icon } = chatGptResponse;
 
+  console.log("type of prompt", type);
+
+  const handlePromptHeaderVisibility = (event) => {
+    console.log(event.target.id);
+
+    if (promptVisibility === "none") {
+      setPromptVisibility("flex");
+    } else {
+      setPromptVisibility("none");
+    }
+  };
+
   return (
     <Wrapper>
       {loadingMessage.length < 1 && (
-        <Heading>
-          {type === "patreon" ? "generate" : type} {icon}
+        <Heading
+          id={type}
+          onClick={handlePromptHeaderVisibility}
+          // style={{
+          //   border:
+          //     promptVisibility === "flex"
+          //       ? "1px solid transparent"
+          //       : "1px solid white",
+          // }}
+        >
+          <StyledPromptHeaderButton variant="dark">
+            {type === "patreon" ? "generate" : type} {icon}
+          </StyledPromptHeaderButton>
         </Heading>
       )}
 
-      <MessageContainer loading={loadingMessage}>
+      <MessageContainer
+        loading={loadingMessage}
+        style={{
+          display: promptVisibility,
+        }}
+      >
         <FlexBox>
           {loadingMessage.length < 1 &&
             response &&
