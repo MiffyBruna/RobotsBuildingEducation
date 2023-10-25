@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { a11yDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
@@ -27,7 +27,6 @@ const MessageContainer = styled.div`
   max-width: 600px;
   border-radius: 30px;
   margin: 24px 0 12px 0;
-  transition: 0.2s all ease-in-out;
 `;
 
 const FlexBox = styled.div`
@@ -84,9 +83,12 @@ const renderContent = (type, response, patreonObject) => {
 };
 
 export const PromptCombiner9000 = ({
+  key,
   loadingMessage,
   chatGptResponse,
   patreonObject,
+  parentVisibility,
+  setParentVisibility,
 }) => {
   const [promptVisibility, setPromptVisibility] = useState("flex");
   if (isEmpty(patreonObject)) {
@@ -95,10 +97,8 @@ export const PromptCombiner9000 = ({
 
   const { type, response, icon } = chatGptResponse;
 
-  console.log("type of prompt", type);
-
   const handlePromptHeaderVisibility = (event) => {
-    console.log(event.target.id);
+    setParentVisibility(false);
 
     if (promptVisibility === "none") {
       setPromptVisibility("flex");
@@ -106,6 +106,12 @@ export const PromptCombiner9000 = ({
       setPromptVisibility("none");
     }
   };
+
+  useEffect(() => {
+    if (parentVisibility) {
+      setPromptVisibility("flex");
+    }
+  }, [parentVisibility]);
 
   return (
     <Wrapper>
@@ -128,6 +134,7 @@ export const PromptCombiner9000 = ({
 
       <MessageContainer
         loading={loadingMessage}
+        id={key + type}
         style={{
           display: promptVisibility,
         }}
