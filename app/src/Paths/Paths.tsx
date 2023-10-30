@@ -1,59 +1,45 @@
-import { Link } from "react-router-dom";
-import { uiPaths } from "../common/uiSchema";
-import {
-  StyledNavigationContainer,
-  StyledPath,
-  StyledLink,
-} from "../styles/lazyStyles";
+import { StyledNavigationContainer, StyledLink } from "../styles/lazyStyles";
+
+// Helper function to create display elements
+const createDisplayTop = (topPaths, handlePathSelection, animationData) => {
+  return topPaths.map((path) => {
+    const displayText = path !== "Entrepeneur" ? path : "Dealer";
+
+    return (
+      <StyledLink
+        active
+        to="/"
+        pathSelectionAnimationData={animationData}
+        path={path}
+        id={path}
+        onClick={handlePathSelection}
+      >
+        {displayText}
+      </StyledLink>
+    );
+  });
+};
 
 /**
+ * Paths Component
  *
- * @props
- *   @param handlePathSelection some event to determine which collections to render.
- * @returns a JSX.Element
+ * @param handlePathSelection Function to handle path selection
+ * @param pathSelectionAnimationData Data for path selection animation
+ * @returns JSX.Element
  */
 export const Paths = ({
   handlePathSelection,
   pathSelectionAnimationData,
 }): JSX.Element => {
-  // no exceptions to active prop currently.
-  // active prop will handle some styling to display restricted or blocked access
+  // Define the top paths
+  const topPaths = ["Engineer", "Creator", "Entrepeneur"];
 
-  const top = ["Engineer", "Creator", "Entrepeneur"];
-  const bot = ["RO.₿.E", "Boss Mode"];
-
-  console.log("pathSelectionAnimationData", pathSelectionAnimationData);
-
-  let displayTop = top.map((path) => (
-    <StyledLink
-      active
-      to="/"
-      pathSelectionAnimationData={pathSelectionAnimationData}
-      path={path}
-      id={path}
-      onClick={handlePathSelection}
-    >
-      {path !== "Entrepeneur" ? path : "Dealer"}
-    </StyledLink>
-  ));
-
-  let displayBot = bot.map((path) => (
-    <StyledLink
-      active
-      to="/"
-      path={path}
-      id={path}
-      onClick={handlePathSelection}
-      isBot
-    >
-      {path !== "Entrepeneur" ? path : "Dealer"}
-    </StyledLink>
-  ));
-
-  return (
-    <>
-      <StyledNavigationContainer>{displayTop}</StyledNavigationContainer>
-      {/* <StyledNavigationContainer>{displayBot}</StyledNavigationContainer> */}
-    </>
+  // Generate the display elements for the top paths
+  const displayTop = createDisplayTop(
+    topPaths,
+    handlePathSelection,
+    pathSelectionAnimationData
   );
+
+  return <StyledNavigationContainer>{displayTop}</StyledNavigationContainer>;
 };

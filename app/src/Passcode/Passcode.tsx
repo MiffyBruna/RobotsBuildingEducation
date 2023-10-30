@@ -1,22 +1,43 @@
 import { Button } from "react-bootstrap";
-import { useEffect, useState, useReducer } from "react";
-import { Demo } from "./Demo/Demo";
 import { logEvent } from "firebase/analytics";
 import { analytics } from "../database/firebaseResources";
 import { ui } from "../common/uiSchema";
+import ChatGPT from "../ChatGPT/ChatGPT";
 
-export const Passcode = ({
-  handleZeroKnowledgePassword,
+// Styles
+const whiteTextColor = { color: "white" };
+const buttonStyle = { width: "250px", height: "50px" };
 
-  userDocumentReference,
-  databaseUserDocument,
-  setDatabaseUserDocument,
-  globalDocumentReference,
-  globalImpactCounter,
-  setGlobalImpactCounter,
-  computePercentage,
-  patreonObject,
-}) => {
+// Functions
+const logPromotionEvent = () => {
+  logEvent(analytics, "select_promotion", {
+    creative_name: "https://www.patreon.com/RobotsBuildingEducation",
+    creative_slot: "Get Passcode Slot",
+    promotion_id: "Robots Building Education",
+    promotion_name: "advertising_launch",
+  });
+};
+
+const renderPatreonContent = (patreonObject, languageMode) => {
+  if (!patreonObject) return null;
+
+  const patreonData =
+    ui()["Engineer"]["Coding Crash Course Version 3"][
+      "Learning Mindset & Perspective"
+    ];
+
+  return (
+    <div>
+      <h2 style={{ ...whiteTextColor, marginTop: 12 }}>
+        Demo: Learning Mindset & Perspective
+      </h2>
+      <ChatGPT patreonObject={patreonData} isDemo={true} />
+    </div>
+  );
+};
+
+// Main Component
+export const Passcode = ({ handleZeroKnowledgePassword, patreonObject }) => {
   return (
     <div>
       <h2>Enter Passcode</h2>
@@ -25,45 +46,19 @@ export const Passcode = ({
       <br />
 
       <a
-        onClick={() =>
-          logEvent(analytics, "select_promotion", {
-            creative_name: `https://www.patreon.com/RobotsBuildingEducation`,
-            creative_slot: `Get Passcode Slot`,
-            promotion_id: `Robots Building Education`,
-            promotion_name: "advertising_launch",
-          })
-        }
+        onClick={logPromotionEvent}
         target={"_blank"}
         href="https://www.patreon.com/RobotsBuildingEducation"
-        style={{ color: "white" }}
+        style={whiteTextColor}
       >
-        <Button variant="dark" style={{ width: "250px", height: "50px" }}>
+        <Button variant="dark" style={buttonStyle}>
           &nbsp; Get Subscriber Passcode
         </Button>
       </a>
       <br />
       <br />
 
-      <br />
-      <br />
-      {patreonObject ? (
-        <Demo
-          userDocumentReference={userDocumentReference}
-          databaseUserDocument={databaseUserDocument}
-          setDatabaseUserDocument={setDatabaseUserDocument}
-          globalDocumentReference={globalDocumentReference}
-          globalImpactCounter={globalImpactCounter}
-          setGlobalImpactCounter={setGlobalImpactCounter}
-          computePercentage={computePercentage}
-          patreonObject={
-            ui()["Engineer"]["Coding Crash Course Version 3"][
-              "Learning Mindset & Perspective"
-            ]
-          }
-          isDemo={true}
-          demoName={"Demo: Learning Mindset & Perspective"}
-        />
-      ) : null}
+      {renderPatreonContent(patreonObject)}
     </div>
   );
 };

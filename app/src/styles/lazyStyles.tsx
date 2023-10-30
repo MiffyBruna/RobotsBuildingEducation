@@ -1,6 +1,22 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { isEmpty } from "lodash";
 import { Link } from "react-router-dom";
+
+export const sineWave = keyframes`
+0%, 100% {
+  border-radius: 25% 75% 25% 75%;
+}
+25% {
+  border-radius: 37.5% 62.5% 62.5% 37.5%;
+}
+50% {
+  border-radius: 25% 75% 25% 75%;
+}
+75% {
+  border-radius: 62.5% 37.5% 37.5% 62.5%;
+}
+`;
+
 export const StyledNavigationContainer = styled.div`
   display: flex;
   justify-content: center;
@@ -40,7 +56,7 @@ export const StyledCollectionContainer = styled.div`
 `;
 export const StyledModule = styled.button`
   border: 1px solid #636366;
-  // background-color: black;
+  background-color: black;
   // background-size: cover;
   box-sizing: border-box;
   margin: 8px;
@@ -71,21 +87,6 @@ export const StyledModule = styled.button`
     }};
 
   text-shadow: 1px 1px 5px black;
-  /* background-color: ${(props) => {
-    return props.patreonObject.isModuleDisabled
-      ? "#11220E"
-      : props.patreonObject.header === "Boss Mode"
-      ? "#590f04"
-      : props.patreonObject.rare
-      ? "#DA830D"
-      : props.patreonObject.highValue
-      ? "#F8B125"
-      : props.patreonObject.new
-      ? "#f6a3ff"
-      : props.patreonObject.underConstruction
-      ? "#6A74B4"
-      : "#F099AD";
-  }}; */
 
   /* cursor: ${(props) => {
     return props.patreonObject.isModuleDisabled ? "not-allowed" : "grab";
@@ -97,6 +98,8 @@ export const StyledModule = styled.button`
     background: ${(props) => {
       return props.patreonObject.isModuleDisabled ? "#48464A" : "#f5befa";
     }};
+
+    animation: ${sineWave} 3s infinite ease-in-out;
   }
 
   background-image: url(${(props) => props.patreonObject.backgroundImgSrc});
@@ -141,8 +144,6 @@ export const ComingSoonModule = styled.button`
   background-color: ${(props) => {
     return props.patreonObject.isModuleDisabled
       ? "black"
-      : props.patreonObject.header === "Boss Mode"
-      ? "#590f04"
       : props.patreonObject.rare
       ? "#DA830D"
       : props.patreonObject.highValue
@@ -185,43 +186,92 @@ export const StyledLink = styled(Link)`
     }};
 
     background: ${(props) => {
-      return props.active &&
-        props.pathSelectionAnimationData.path === props.path
-        ? "#ff64ff"
-        : props.active &&
-          !(props.pathSelectionAnimationData.path === props.path)
-        ? "#ff64ff;"
-        : "";
+      const isActive = props.active;
+      const isSelectedPath =
+        props.pathSelectionAnimationData.path === props.path;
+      const currentPath = props.path;
+      console.log("currentPath", currentPath);
+
+      let backgroundColor = "";
+
+      // Function to convert a hex color to its blue version
+      const toBlueVersion = (color) => {
+        // Implement your logic to convert to blue version
+        return "#64ddff"; // Example
+      };
+
+      // Function to convert a hex color to its golden version
+      const toGoldenVersion = (color) => {
+        // Implement your logic to convert to golden version
+        return "#ffd164"; // Example
+      };
+
+      if (isActive && isSelectedPath) {
+        backgroundColor = "#ff64ff";
+      } else if (isActive && !isSelectedPath) {
+        backgroundColor = "#ff64ff;";
+      }
+
+      // Adjust color based on path
+      if (currentPath === "Engineer") {
+        // Colors remain the same
+      } else if (currentPath === "Creator") {
+        backgroundColor = toBlueVersion(backgroundColor);
+      } else if (currentPath === "Entrepeneur") {
+        console.log("ok");
+        backgroundColor = toGoldenVersion(backgroundColor);
+      }
+
+      return backgroundColor;
     }};
+
+    animation: ${sineWave} 3s infinite ease-in-out;
 
     text-shadow: 1px 1px 5px black;
     color: white;
   }
 
   background: ${(props) => {
-    return props.active && props.pathSelectionAnimationData.path === props.path
-      ? // ? "url('https://res.cloudinary.com/dtkeyccga/image/upload/v1692091181/Untitled_200_125_px_qy8kp0.png')"
-        "#FF64FF"
-      : props.active && !(props.pathSelectionAnimationData.path === props.path)
-      ? "#b271d1;"
-      : "";
+    const isActive = props.active;
+    const isSelectedPath = props.pathSelectionAnimationData.path === props.path;
+    const currentPath = props.path;
+
+    let backgroundColor = "";
+
+    if (isActive && isSelectedPath) {
+      backgroundColor = "#FF64FF"; // Original color for selected path
+    } else if (isActive && !isSelectedPath) {
+      backgroundColor = "#b271d1"; // Original color for non-selected path
+    }
+
+    // Adjust color based on path
+    if (currentPath === "Engineer") {
+      // Colors remain the same
+    } else if (currentPath === "Creator") {
+      backgroundColor = backgroundColor === "#FF64FF" ? "#6495ff" : "#6495ff"; // Blue versions
+    } else if (currentPath === "Entrepeneur") {
+      backgroundColor = backgroundColor === "#FF64FF" ? "#ffb264" : "#ffb264"; // Golden versions
+    }
+
+    return backgroundColor;
   }};
 
   border: 2px solid hotpink;
 
-  width: 200px;
+  width: 125px;
 
   height: 125px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 16px;
-  margin: 6px;
+  margin: 12px;
 
   color: white;
   transition: 0.15s all ease-in-out;
   text-shadow: 1px 1px 5px black;
   // color: #f5befa;
+  border-radius: 44%;
 
   box-shadow: ${(props) => {
     return props.pathSelectionAnimationData.path === props.path
@@ -319,6 +369,10 @@ export let prettyColorPalette = {
   softYellowGlow: "#FFF5CA",
 };
 
+// holy ghost palette
+export const kanyeColorPalette = {};
+
+// zen garden palette
 export let japaneseThemePalette = {
   CherryBlossomPink: "#FFB7C5", // Cherry Blossom
   KyotoPurple: "#663399", // Sweet Potato Purple
@@ -334,6 +388,10 @@ export let japaneseThemePalette = {
   StrongRed: "#DC143C", // Japanese Flag Red
   StrongBlue: "#00008B", // Indigo Blue Textile
   DarkMetallicSilver: "#5A5A5A", // Darkened Steel Samurai Sword
+  Lavender: "rgba(220,205,255, 1)",
+  PowerPurple: "rgba(102, 3, 252, 1)",
+  PowerPink: "#f7059d",
+  iphoneBlue: "",
 };
 
 // opinionated

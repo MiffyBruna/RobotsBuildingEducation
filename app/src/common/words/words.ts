@@ -4,25 +4,26 @@
 //additional descriptions can be handled by comments. that's right, comments as code.
 
 export let words = {
-  english: {
+  English: {
     modals: {
       titles: {
-        //learn more & FAQs modal
         "1": "Learn More",
         "2": "Apply",
-        "3": "AI Task Engineering",
-        "4": "Impact Wallet",
+        "3": "Emotional Intelligence",
+        "4": "How You Feel",
+        "5": "Proof of Work",
+        "6": "Conversation Grader",
+        "7": "The Quiz"
       },
       headers: {
-        //learn more & FAQs
         "1": "RO.B.E",
         "2": "Testimonials",
         "3": "Content",
         "4": "Engineer",
         "5": "Creator",
         "6": "Dealer",
-        "7": "Boss Mode",
-        "8": "RO.B.E.",
+        "8": "Proof of Work",
+        "8.1": "Emotional Intelligence",
         "9": "Frequently Asked Questions",
         "10": "What kind of computer do I need?",
         "11": "Is programming hard? Do I have to be good at math?",
@@ -32,15 +33,21 @@ export let words = {
         "15": "Hey what about cybersecurity, data analytics or these certificates?",
         "16": "Did I go to school?",
 
-        //apply to scholarship
-        "17": "Scholarships 1.0",
 
-        //roxana prompts
-        "19": "What is this?",
-
-        //impact wallet
-        "20": "Impact",
+        //proof of work wallet
+        "20": "The Proof of Work System",
         "21": "Scholarships Created: ",
+        "22": "The Reserve",
+        "22.1": "invested ",
+
+        //emotional intelligence
+        "23": "How do you feel today?",
+        "24": "The journey",
+        "25": "High energy",
+        "26": "Low energy",
+
+        // TODO: get the header titles from ui(). need to remove the "Coding" image
+
       },
     },
 
@@ -53,6 +60,8 @@ export let words = {
 
       //modal exit
       "5": "Back to app",
+      "5.1": "Exit",
+      "5.2": "Save",
 
       //email/money address
       "6": "Copy Email Address",
@@ -60,15 +69,13 @@ export let words = {
       "8": "Copy Lightning Address",
 
       //intro
-      "9": "Learn More & FAQs",
-      "10": "Apply To Scholarship",
+      "9": "Learn more",
 
       //paths
       "11": "Engineer",
       "12": "Creator",
       "13": "Dealer",
-      "14": "RO.₿.E",
-      "15": "Boss Mode",
+
 
       //modules (tbd)
 
@@ -78,64 +85,62 @@ export let words = {
       "18": "Lesson 2 Frontend Programming",
       "19": "Lesson 3 Backend Engineering",
       "20": "Lesson 4 Building An App",
-
-      // engineer - get experience
-      "21": "Robots Building Education",
-      "22": "Indocumentadofy",
-
-      // engineer - computer science
-      "23": "Programming Language",
-      "24": "Recursion",
-      "25": "Linked Lists",
-      "26": "Link Traversal",
-      "27": "Link Swapping",
-      "28": "Algorithms",
+      "21": "Lesson 5 Computer Science",
 
       // creator - communication science
-      "29": "Creating Purpose",
-      "30": "The Drug War",
       "31": "Philosophy @ RO.B.E",
-      "32": "User Experiences",
-      "33": "Content Review (20M+ views)",
-      "34": "SEO: Search Engine Optimization",
-      "35": "Influence & Expression",
-      "36": "Abraham Lincoln",
+      "32": "Interactions & Design",
+      "36": "The Psychology Of Self-esteem",
 
       // dealer - Understanding Business
       "37": "Creating Competitive Entry Level Resumes",
       "38": "Focus Investing",
       "39": "Wealth Management",
-      "40": "Financial Technology Investing",
-      "41": "Social Media Investing",
-      "42": "Education Technology Investing",
 
       //prompts
-      "43": "► discover",
-      "44": "📚 study",
-      "45": "🛍️ shop",
+      "40": "generate",
+      "43": "discover",
+      "44": "guide",
+      "45": "shop",
 
-      //ai task engineering
-      "46": "💗 roxana",
 
-      //impact wallet
-      "47": "🤖",
-      "48": "🏦",
+      // emotional intelligence
+      "46": "Motivated",
+      "48": "Excited", 
+      "49": "Stressed", 
+      "50": "Anxious", 
+
+      "51": "Peaceful",
+      "52": "Content", 
+      "53": "Sad", 
+      "54": "Tired", 
+      "55": "generate insight",
+
+      // conversation grader
+      "56": "Grade",
+      "57": "Add to conversation",
+      "58":"Ask Ms. Roxana for assistance on your quiz! Grade your conversation and see how you can improve =)",
+
+      //switches
+      "59": "Zen Garden",
+      "60": "Holy Ghost"
+
+
+
+
     },
 
-    content: {
-      // tbd
-      headers: {}
-      text: {}
-    }
   },
-
-    spanish: {
+  Español: {
     modals: {
       titles: {
-        "1": "Aprende Más",
+        "1": "Aprender Más",
         "2": "Aplicar",
-        "3": "Ingeniería de Tareas de IA",
-        "4": "Cartera de Impacto",
+        "3": "Inteligencia Emocional",
+        "4": "Cómo Te Sientes",
+        "5": "Prueba de Trabajo",
+        "6": "Evaluador de Conversación",
+        "7": "El Cuestionario"
       },
       headers: {
         "1": "RO.B.E",
@@ -143,93 +148,73 @@ export let words = {
         "3": "Contenido",
         "4": "Ingeniero",
         "5": "Creador",
-        "6": "Concesionario",
-        "7": "Modo Jefe",
-        "8": "RO.B.E",
+        "6": "Comerciante",
+        "8": "Prueba de Trabajo",
+        "8.1": "Inteligencia Emocional",
         "9": "Preguntas Frecuentes",
         "10": "¿Qué tipo de computadora necesito?",
-        "11": "¿Es difícil programar? ¿Tengo que ser bueno en matemáticas?",
-        "12": "¿Qué lenguaje de programación debería elegir?",
+        "11": "¿Es difícil programar? ¿Debo ser bueno en matemáticas?",
+        "12": "¿Qué lenguaje de programación debo elegir?",
         "13": "¿Vale la pena el bootcamp?",
         "14": "¿Qué es la programación y qué puedo hacer con ella?",
-        "15": "Oye, ¿qué pasa con la ciberseguridad, el análisis de datos o estos certificados?",
+        "15": "¿Y qué hay de ciberseguridad, análisis de datos o estos certificados?",
         "16": "¿Fui a la escuela?",
-
-        "17": "Becas 1.0",
-
-        "19": "¿Qué es esto?",
-
-        "20": "Impacto",
+        "20": "El Sistema de Prueba de Trabajo",
         "21": "Becas Creadas: ",
+        "22": "La Reserva",
+        "22.1": "invertido ",
+        "23": "¿Cómo te sientes hoy?",
+        "24": "El viaje",
+        "25": "Alta energía",
+        "26": "Baja energía",
       },
     },
-
     buttons: {
       "1": "Suscribirse",
       "2": "Red",
       "3": "Contacto",
       "4": "OpenAI",
-
       "5": "Volver a la aplicación",
-
-      "6": "Copiar dirección de correo electrónico",
-      "7": "Copiar dirección de Bitcoin",
-      "8": "Copiar dirección de Lightning",
-
-      "9": "Aprende Más & Preguntas Frecuentes",
-      "10": "Aplicar a la Beca",
-
+      "5.1": "Salir",
+      "5.2": "Guardar",
+      "6": "Copiar Dirección de Correo",
+      "7": "Copiar Dirección de Bitcoin",
+      "8": "Copiar Dirección de Lightning",
+      "9": "Aprender más",
       "11": "Ingeniero",
       "12": "Creador",
-      "13": "Concesionario",
-      "14": "RO.₿.E",
-      "15": "Modo Jefe",
-
-      "16": "Introducción a RO.B.E",
+      "13": "Comerciante",
+      "16": "Mentalidad y Perspectiva para Aprender",
       "17": "Lección 1 Fundamentos de Programación",
       "18": "Lección 2 Programación Frontend",
       "19": "Lección 3 Ingeniería Backend",
-      "20": "Lección 4 Construcción de una Aplicación",
+      "20": "Lección 4 Construyendo una Aplicación",
+      "21": "Lección 5 Ciencias de la Computación",
+      "31": "Filosofía en RO.B.E",
+      "32": "Interacciones y Diseño",
+      "36": "La Psicología de la Autoestima",
+      "37": "Creando Resumes Competitivos de Nivel de Entrada",
+      "38": "Inversión de Enfoque",
+      "39": "Gestión de Patrimonio",
+      "40": "generar",
+      "43": "descubrir",
+      "44": "guiar",
+      "45": "comprar",
+      "46": "Motivado",
+      "48": "Emocionado",
+      "49": "Estresado",
+      "50": "Ansioso",
+      "51": "Tranquilo",
+      "52": "Contento",
+      "53": "Triste",
+      "54": "Cansado",
+      "55": "generar perspectiva",
+      "56": "Calificar",
+      "57": "Añadir a la conversación",
+      "58": "Pide asistencia a Ms. Roxana para tu cuestionario! Califica tu conversación y descubre cómo puedes mejorar =)",
 
-      "21": "Robots Construyendo Educación",
-      "22": "Indocumentadofy",
-
-      "23": "Lenguaje de Programación",
-      "24": "Recursión",
-      "25": "Listas Enlazadas",
-      "26": "Recorrido de Enlaces",
-      "27": "Intercambio de Enlaces",
-      "28": "Algoritmos",
-
-      "29": "Creando Propósito",
-      "30": "La Guerra de las Drogas",
-      "31": "Filosofía @ RO.B.E",
-      "32": "Experiencias de Usuario",
-      "33": "Revisión de Contenido (20M+ vistas)",
-      "34": "SEO: Optimización de Motores de Búsqueda",
-      "35": "Influencia & Expresión",
-      "36": "Abraham Lincoln",
-
-      "37": "Creando CVs Competitivos para Niveles Iniciales",
-      "38": "Inversión Focalizada",
-      "39": "Gestión de Riqueza",
-      "40": "Inversión en Tecnología Financiera",
-      "41": "Inversión en Medios Sociales",
-      "42": "Inversión en Tecnología Educativa",
-
-      "43": "► descubrir",
-      "44": "📚 estudiar",
-      "45": "🛍️ comprar",
-
-      "46": "💗 roxana",
-
-      "47": "🤖",
-      "48": "🏦",
+      "59": "Jardín zen",
+      "60": "Espíritu Santo",
     },
-
-    content: {
-      headers: {}
-      text: {}
-    }
   },
 };

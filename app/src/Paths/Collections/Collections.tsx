@@ -1,181 +1,66 @@
-import { collection, doc, getDocs } from "firebase/firestore";
-import { useEffect, useState } from "react";
-import { Button, FloatingLabel, Form, InputGroup } from "react-bootstrap";
-import { renderWithTooltip, ui, uiPaths } from "../../common/uiSchema";
-import { auth } from "../../database/firebaseResources";
+import { ui } from "../../common/uiSchema";
 import {
   StyledCollectionContainer,
-  StyledModule,
   japaneseThemePalette,
 } from "../../styles/lazyStyles";
-
-import { InfiniteKnowledgeEngine9001 } from "./InfiniteKnowlegeEngine9001/InfiniteKnowlegeEngine9001";
 import { Module } from "./Module/Module";
 
 export const Collections = ({
   handleModuleSelection,
-  visibilityMap,
   currentPath,
-
-  patreonObject,
-  userDocumentReference,
-  databaseUserDocument,
-  setDatabaseUserDocument,
-  globalDocumentReference,
-  globalImpactCounter,
-  setGlobalImpactCounter,
-  displayName,
-  computePercentage,
-  isDemo,
-  moduleName,
-  globalModulesCollectionReference,
-  globalUserModulesFromDB,
-  documentProcForGlobalModules,
-  usersCoursesCollectionReference,
-  userAuthObject,
 }): JSX.Element | null => {
-  let [
-    isInfiniteKnowledgeEngine9001open,
-    setIsInfiniteKnowledgeEngine9001open,
-  ] = useState(false);
+  const pathData = ui();
 
-  let [hasZeroKnowledgeAccess, setHasZeroKnowledgeAccess] = useState(false);
+  // Check if the currentPath exists in the data
+  if (!currentPath || !pathData || !pathData[currentPath]) return null;
 
-  useEffect(() => {
-    if (
-      localStorage.getItem("infiniteKnowledgePasscode") ===
-        import.meta.env.VITE_INFINITE_KNOWLEDGE_PASSCODE ||
-      localStorage.getItem("infiniteKnowledgePasscode") ===
-        import.meta.env.VITE_SHEILF
-    ) {
-      setHasZeroKnowledgeAccess(true);
-    } else {
-      setHasZeroKnowledgeAccess(false);
-    }
-  }, []);
+  const collections = Object.keys(pathData[currentPath]);
 
-  if (currentPath) {
-    let path = ui(globalUserModulesFromDB)[currentPath]; // Engineer: {}
+  const displayCollections = collections.map((collection) => {
+    const modules = Object.keys(pathData[currentPath][collection]);
 
-    let collections = Object.keys(path); // []]
+    if (modules && modules.length > 0) {
+      const isSpecialCollection =
+        collection === "Coding Crash Course Version 3";
+      const boxShadowStyle = {
+        boxShadow: `10px 10px 0px 0px ${japaneseThemePalette.TokyoTwilight}`,
+      };
 
-    let display = collections.map((collection) => {
-      let modules = Object.keys(path[collection]);
-
-      if (modules?.length) {
-        return (
-          <div>
-            <br />
-            <h3>
-              {collection == "Coding Crash Course Version 3" ? (
-                <img
-                  alt="Coding Crash Course Version 3"
-                  title="Coding Crash Course Version 3"
-                  style={{
-                    boxShadow: `10px 10px 0px 0px ${japaneseThemePalette.TokyoTwilight}`,
-                  }}
-                  src="https://res.cloudinary.com/dtkeyccga/image/upload/v1691640371/ROBE_assets/Collection_Banners_zlhvjw_pcb0io.gif"
-                />
-              ) : (
-                collection
-              )}
-            </h3>
-
-            <br />
-            <div></div>
-            <StyledCollectionContainer>
-              {modules.map((module) => (
-                <Module
-                  path={currentPath}
-                  collection={collection}
-                  module={module}
-                  handleModuleSelection={handleModuleSelection}
-                  globalUserModulesFromDB={globalUserModulesFromDB}
-                />
-              ))}
-            </StyledCollectionContainer>
-          </div>
-        );
-      }
-    });
-
-    let handleZeroKnowledge = (event) => {
-      if (
-        event.target.value ===
-          import.meta.env.VITE_INFINITE_KNOWLEDGE_PASSCODE ||
-        event.target.value === import.meta.env.VITE_SHEILF
-      ) {
-        setHasZeroKnowledgeAccess(true);
-        localStorage.setItem("infiniteKnowledgePasscode", event.target.value);
-      }
-    };
-
-    return (
-      <>
-        <div
-          style={{
-            transition: "0.23s all ease-in-out",
-          }}
-        >
+      return (
+        <div>
           <br />
-          {currentPath === "RO.₿.E" && !hasZeroKnowledgeAccess ? (
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-              }}
-            >
-              <div style={{ width: "100%" }}>
-                <h3>access IKE9001</h3>
-              </div>
-              <div style={{ width: 250 }}>
-                <InputGroup size="lg">
-                  {/* <InputGroup.Text id="inputGroup-sizing-lg">Impact</InputGroup.Text> */}
-
-                  <Form.Control
-                    // aria-label="Large"
-                    aria-describedby="inputGroup-sizing-sm"
-                    onChange={handleZeroKnowledge}
-                  />
-                </InputGroup>
-              </div>
-            </div>
-          ) : null}
-          <br />
-          {currentPath === "RO.₿.E" && hasZeroKnowledgeAccess ? (
-            <Button
-              variant="dark"
-              onClick={() => setIsInfiniteKnowledgeEngine9001open(true)}
-            >
-              Activate InfiniteKnowledgeEngine9001
-            </Button>
-          ) : null}
-
-          {display}
+          {/* <h3>
+            {isSpecialCollection ? (
+              <img
+                alt={collection}
+                title={collection}
+                style={boxShadowStyle}
+                src="https://res.cloudinary.com/dtkeyccga/image/upload/v1691640371/ROBE_assets/Collection_Banners_zlhvjw_pcb0io.gif"
+              />
+            ) : (
+              collection
+            )}
+          </h3> */}
+          <StyledCollectionContainer>
+            {modules.map((module) => (
+              <Module
+                path={currentPath}
+                collection={collection}
+                module={module}
+                handleModuleSelection={handleModuleSelection}
+              />
+            ))}
+          </StyledCollectionContainer>
         </div>
+      );
+    }
 
-        <InfiniteKnowledgeEngine9001
-          currentPath={currentPath}
-          patreonObject={patreonObject}
-          userDocumentReference={userDocumentReference}
-          databaseUserDocument={databaseUserDocument}
-          setDatabaseUserDocument={setDatabaseUserDocument}
-          globalDocumentReference={globalDocumentReference}
-          globalImpactCounter={globalImpactCounter}
-          setGlobalImpactCounter={setGlobalImpactCounter}
-          displayName={auth?.currentUser?.displayName || "@DemoRobots"}
-          computePercentage={computePercentage}
-          isDemo={isDemo}
-          moduleName={moduleName}
-          setIsInfiniteKnowledgeEngine9001open={
-            setIsInfiniteKnowledgeEngine9001open
-          }
-          isInfiniteKnowledgeEngine9001open={isInfiniteKnowledgeEngine9001open}
-          globalModulesCollectionReference={globalModulesCollectionReference}
-          documentProcForGlobalModules={documentProcForGlobalModules}
-        />
-      </>
-    );
-  }
+    return null;
+  });
+
+  return (
+    <div style={{ transition: "0.23s all ease-in-out" }}>
+      {displayCollections}
+    </div>
+  );
 };

@@ -1,312 +1,108 @@
-import { logEvent } from "firebase/analytics";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Button, Modal } from "react-bootstrap";
 import { isEmpty } from "lodash";
 import ReactJson from "react-json-view";
-import { renderWithTooltip } from "../../common/uiSchema";
+import { logEvent } from "firebase/analytics";
 import { analytics } from "../../database/firebaseResources";
-import { ProofOfWork } from "../../ProofOfWork/ProofOfWork";
 import { StyledPromptButton } from "../../styles/lazyStyles";
-// import { DiscordButton } from "./DiscordButton/DiscordButton";
 
-export const Prompts = ({
-  globalScholarshipCounter,
-  currentPath,
-  //roxana
-  loadingMessage,
-  patreonObject,
-  handleSubmit,
-  userDocumentReference,
-  usersModulesCollectionReference,
+// Reusable Button Component
+const PromptButton = ({ icon, action, type, loading, onClick }) => (
+  <StyledPromptButton
+    tabindex="0"
+    borderHighlight={"#48484a"}
+    style={{ display: loading ? "none" : "flex" }}
+    onClick={onClick}
+  >
+    <a style={{ color: "white" }}>
+      {icon} &nbsp;{action || type}
+    </a>
+  </StyledPromptButton>
+);
 
-  usersModulesFromDB,
+// Modal Content as a separate component
+const ModalContent = ({ patreonObject }) => (
+  <>
+    <h3>What is this?</h3>
+    <p>
+      This is for students and teachers who are curious of how the AI is
+      prompted and fine-tuned over time.
+    </p>
+    <ReactJson
+      theme="threezerotwofour"
+      enableClipboard
+      src={patreonObject}
+      quotesOnKeys={false}
+    />
+  </>
+);
 
-  //pow
-  displayName,
-  databaseUserDocument,
-  computePercentage,
-  globalImpactCounter,
-  userAuthObject,
-  isRaidActive,
-  globalReserve,
-  isDemo,
-}) => {
-  if (!isEmpty(patreonObject)) {
-    const [isModalOpen, setIsModalOpen] = useState(false);
-    let promptKeys = Object.keys(patreonObject.prompts);
-    let borderHighlight = "#48484a";
-    let promptMap =
-      currentPath === "Boss Mode"
-        ? [
-            !isRaidActive ? (
-              <StyledPromptButton
-                tabindex="0"
-                style={{ display: loadingMessage ? "none" : "flex" }}
-                borderHighlight={borderHighlight}
-                loadingMessage={loadingMessage}
-                onClick={(event) => {
-                  if (loadingMessage) {
-                  } else {
-                    handleSubmit(
-                      event,
-                      patreonObject.prompts["patreon"],
-                      "patreon",
-                      true
-                    );
-                  }
-                }}
-              >
-                <a style={{ color: "white" }}>
-                  🦉 &nbsp;
-                  {/* {patreonObject.prompts['patreon'].action} */}
-                  journey
-                </a>
-              </StyledPromptButton>
-            ) : null,
-            // <StyledPromptButton
-            //       tabindex="0"
-            //       style={{ display: loadingMessage ? "none" : "flex" }}
-            //       borderHighlight={borderHighlight}
-            //       loadingMessage={loadingMessage}
-            //       onClick={(event) => {
-            //         if (loadingMessage) {
-            //         } else {
-            //           handleSubmit(event, patreonObject.prompts['shop'], 'shop');
-            //         }
-            //       }}
-            //     >
-            //       <a style={{ color: "white" }}>
-            //         {patreonObject.prompts['shop']?.icon}{" "}&nbsp;
-            //         {patreonObject.prompts['shop']?.action}
-            //       </a>
-            // </StyledPromptButton>,
-          ]
-        : [
-            <StyledPromptButton
-              tabindex="0"
-              style={{ display: loadingMessage ? "none" : "flex" }}
-              borderHighlight={borderHighlight}
-              loadingMessage={loadingMessage}
-              onClick={(event) => {
-                if (loadingMessage) {
-                } else {
-                  handleSubmit(
-                    event,
-                    patreonObject.prompts["patreon"],
-                    "patreon"
-                  );
-                }
-              }}
-            >
-              <a style={{ color: "white" }}>
-                {patreonObject.prompts["patreon"]?.icon} &nbsp;
-                {/* {patreonObject.prompts['patreon'].action} */}
-                discover
-              </a>
-            </StyledPromptButton>,
-            <StyledPromptButton
-              tabindex="0"
-              style={{ display: loadingMessage ? "none" : "flex" }}
-              borderHighlight={borderHighlight}
-              loadingMessage={loadingMessage}
-              onClick={(event) => {
-                if (loadingMessage) {
-                } else {
-                  handleSubmit(event, patreonObject.prompts["guide"], "guide");
-                }
-              }}
-            >
-              <a style={{ color: "white" }}>
-                {/* {patreonObject.prompts['guide'].icon}{" "} */}
-                📚 &nbsp;study
-              </a>
-            </StyledPromptButton>,
-            ...(patreonObject.prompts.practice
-              ? [
-                  <StyledPromptButton
-                    tabindex="0"
-                    style={{ display: loadingMessage ? "none" : "flex" }}
-                    borderHighlight={borderHighlight}
-                    loadingMessage={loadingMessage}
-                    onClick={(event) => {
-                      if (loadingMessage) {
-                      } else {
-                        handleSubmit(
-                          event,
-                          patreonObject.prompts["practice"],
-                          "practice"
-                        );
-                      }
-                    }}
-                  >
-                    <a style={{ color: "white" }}>
-                      {patreonObject.prompts["practice"]?.icon} &nbsp;
-                      {patreonObject.prompts["practice"]?.action}
-                    </a>
-                  </StyledPromptButton>,
-                ]
-              : []),
-            <StyledPromptButton
-              tabindex="0"
-              style={{ display: loadingMessage ? "none" : "flex" }}
-              borderHighlight={borderHighlight}
-              loadingMessage={loadingMessage}
-              onClick={(event) => {
-                if (loadingMessage) {
-                } else {
-                  handleSubmit(event, patreonObject.prompts["shop"], "shop");
-                }
-              }}
-            >
-              <a style={{ color: "white" }}>
-                {patreonObject.prompts["shop"]?.icon} &nbsp;
-                {patreonObject.prompts["shop"]?.action}
-              </a>
-            </StyledPromptButton>,
-          ];
-    // let promptMap = promptKeys.map((prompt) => {
+export const Prompts = ({ loadingMessage, patreonObject, handleSubmit }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-    //     if (prompt === "intro") {
-    //       return null;
-    //     }
-    //     return (
-    //       <StyledPromptButton
-    //         tabindex="0"
-    //         style={{ display: loadingMessage ? "none" : "flex" }}
-    //         borderHighlight={borderHighlight}
-    //         loadingMessage={loadingMessage}
-    //         onClick={(event) => {
-    //           if (loadingMessage) {
-    //           } else {
-    //             handleSubmit(event, patreonObject.prompts[prompt], prompt);
-    //           }
-    //         }}
-    //       >
-    //         <a style={{ color: "white" }}>
-    //           {patreonObject.prompts[prompt]?.icon}{" "}
-    //           {patreonObject.prompts[prompt].action}
-    //         </a>
-    //       </StyledPromptButton>
-    //     );
+  if (isEmpty(patreonObject)) return null;
 
-    // });
-    //render with tooltips : TBD
-    // let promptMap = promptKeys.map((prompt) =>
-    //   renderWithTooltip(
-    //     <StyledPromptButton
-    //       loadingMessage={loadingMessage}
-    //       onClick={(event) => {
-    //         if (loadingMessage) {
-    //         } else {
-    //           handleSubmit(event, patreonObject.prompts[prompt], prompt);
-    //         }
-    //       }}
-    //     >
-    //       {patreonObject.prompts[prompt].icon}{" "}
-    //       {patreonObject.prompts[prompt].action}
-    //     </StyledPromptButton>,
-    //     <div style={{ border: "1px solid pink" }}>
-    //       <h3>Prompt Engineering</h3>
-    //       <h5 style={{ border: "1px solid green" }}>
-    //         Request&nbsp;{patreonObject.prompts[prompt].icon}
-    //         <br />
-    //         <div>{patreonObject.prompts[prompt].action}</div>
-    //       </h5>
-    //     </div>,
-    //     "left",
-    //     {
-    //       display: "flex",
-    //       justifyContent: "center",
-    //       marginRight: "24px",
-    //       border: "1px solid red",
-    //     }
-    //   )
-    // );
+  const promptTypes = ["patreon", "guide", "practice", "shop"];
 
-    return (
-      <div
-        style={{
-          display: "flex",
+  return (
+    <div
+      style={{
+        display: "flex",
+        alignItems: "flex-end",
+        flexDirection: "column",
+      }}
+    >
+      {promptTypes.map((type) => {
+        const prompt = patreonObject.prompts[type];
+        if (!prompt) return null;
+        return (
+          <PromptButton
+            key={type}
+            icon={prompt?.icon}
+            action={prompt?.action}
+            type={type}
+            loading={!!loadingMessage}
+            onClick={(e) => !loadingMessage && handleSubmit(e, prompt, type)}
+          />
+        );
+      })}
 
-          alignItems: "flex-end",
-          flexDirection: "column",
+      <br />
+      {/* <Button
+        variant="dark"
+        onClick={() => {
+          logEvent(analytics, "select_content", {
+            content_type: "button",
+            item_id: "View Roxana",
+          });
+          setIsModalOpen(true);
         }}
       >
-        {promptMap}
-        <br /> <br />
-        <br />
-        <Button
-          variant="dark"
-          onClick={() => {
-            logEvent(analytics, "select_content", {
-              content_type: "button",
-              item_id: "View Roxana",
-            });
-
-            setIsModalOpen(true);
-          }}
+        💗 Roxana
+      </Button> */}
+      <br />
+      <br />
+      <Modal
+        centered
+        fullscreen
+        show={isModalOpen}
+        onHide={() => setIsModalOpen(false)}
+      >
+        <Modal.Header
+          closeButton
+          style={{ color: "white", backgroundColor: "black" }}
         >
-          💗 Roxana
-        </Button>
-        <br />
-        {isDemo ? (
-          <ProofOfWork
-            userAuthObject={userAuthObject}
-            displayName={displayName}
-            databaseUserDocument={databaseUserDocument}
-            computePercentage={computePercentage}
-            globalImpactCounter={globalImpactCounter}
-            usersModulesCollectionReference={usersModulesCollectionReference}
-            usersModulesFromDB={usersModulesFromDB}
-            globalScholarshipCounter={globalScholarshipCounter}
-            isDemo={isDemo}
-          />
-        ) : null}
-        {/* <DiscordButton /> */}
-        <br />
-        <br />
-        <Modal
-          centered
-          fullscreen={true}
-          show={isModalOpen}
-          onHide={() => setIsModalOpen(false)}
-        >
-          <Modal.Header
-            closeButton
-            style={{ color: "white", backgroundColor: "black" }}
-          >
-            <Modal.Title>AI Prompt Engineering</Modal.Title>
-          </Modal.Header>
-          <Modal.Body style={{ backgroundColor: "black", color: "white" }}>
-            <div
-              style={{
-                width: "100%",
-                wordBreak: "break-word",
-              }}
-            >
-              <h3>What is this?</h3>
-              <p>
-                This is for students and teachers who are curious of how the AI
-                is prompted and fine-tuned over time.
-              </p>
-
-              <ReactJson
-                theme={"threezerotwofour"}
-                enableClipboard
-                src={patreonObject}
-                quotesOnKeys={false}
-              />
-            </div>
-          </Modal.Body>
-          <Modal.Footer style={{ color: "white", backgroundColor: "black" }}>
-            <Button variant="dark" onClick={() => setIsModalOpen(false)}>
-              Back to app
-            </Button>
-          </Modal.Footer>
-        </Modal>
-      </div>
-    );
-  } else {
-    return null;
-  }
+          <Modal.Title>AI Prompt Engineering</Modal.Title>
+        </Modal.Header>
+        <Modal.Body style={{ backgroundColor: "black", color: "white" }}>
+          <ModalContent patreonObject={patreonObject} />
+        </Modal.Body>
+        <Modal.Footer style={{ color: "white", backgroundColor: "black" }}>
+          <Button variant="dark" onClick={() => setIsModalOpen(false)}>
+            Back to app
+          </Button>
+        </Modal.Footer>
+      </Modal>
+    </div>
+  );
 };

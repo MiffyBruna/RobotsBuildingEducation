@@ -3,14 +3,14 @@ import { Button, Modal } from "react-bootstrap";
 import khanac from "./media/khanac.jpeg";
 import snow from "./media/snow.jpeg";
 import phillyd from "./media/phillyd.jpeg";
-import elkhanmigo from "../../common/media/images/elkhanmigo.jpg";
+
 import { logEvent } from "firebase/analytics";
 import { analytics } from "../../database/firebaseResources";
-import { DiscordButton } from "../../ChatGPT/Prompts/DiscordButton/DiscordButton";
-import { words } from "../../common/words/words";
+import { DiscordButton } from "../../common/ui/DiscordButton/DiscordButton";
+
 import { japaneseThemePalette, textBlock } from "../../styles/lazyStyles";
 
-export const LearnMore = ({ auth }) => {
+export const LearnMore = ({ languageMode }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <>
@@ -28,19 +28,9 @@ export const LearnMore = ({ auth }) => {
           setIsModalOpen(true);
         }}
       >
-        Learn more & FAQs
+        {languageMode.buttons["9"]}
       </Button>
 
-      {/* <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-        }}
-      >
-        <DiscordButton />
-      </div> */}
-      {/* <br />
-      <br /> */}
       {/* <Button
         variant="danger"
         onClick={() => {
@@ -57,7 +47,8 @@ export const LearnMore = ({ auth }) => {
           closeButton
           style={{ backgroundColor: "black", color: "white" }}
         >
-          <Modal.Title>Learn More</Modal.Title>
+          {/* Learn More */}
+          <Modal.Title>{languageMode.modals.titles["1"]}</Modal.Title>
         </Modal.Header>
         <Modal.Body
           onHide={() => setIsModalOpen(false)}
@@ -129,7 +120,7 @@ export const LearnMore = ({ auth }) => {
           <br />
           <br />
           <div style={{ maxWidth: "100%", width: 700 }}>
-            <h2>Testimonials</h2>
+            <h1>Testimonials</h1>
             <p
               style={{
                 maxWidth: "100%",
@@ -571,48 +562,13 @@ export const LearnMore = ({ auth }) => {
             </div>
             <br />
             <br />
+
             <div
               style={{
                 ...textBlock(japaneseThemePalette.SakuraMochiPink, 0, 24),
               }}
             >
-              <h3>Boss Mode</h3>
-              <i>theme: testing</i>
-              <p style={{ maxWidth: "100%", width: 700 }}>
-                Boss Mode will create a challenging testing environment where
-                you can be assisted by AI to reinforce learning. Think of it of
-                it like Duolingo meets Bowser. You will be taught to fail
-                forward.
-              </p>
-            </div>
-            <br />
-            <br />
-            <div
-              style={{
-                ...textBlock(japaneseThemePalette.DeepCherryBlossomPink, 0, 24),
-              }}
-            >
-              <h2>RO.₿.E</h2>
-              <i>theme: intelligent assistance</i>
-              <p style={{ maxWidth: "100%", width: 700 }}>
-                Robots Building Education will be tools built for teachers and
-                students so that they can create content for a classroom. Right
-                now, you can generate "courses" in my style and share them
-                publicly. In the future, you will have this feature available
-                for private classrooms, so that students can create content for
-                class when they're too nervous to ask questions. Eventually,
-                full customization will be allowed to add more human touch to
-                the content created (like my course).
-              </p>
-            </div>
-            <br />
-            <br />
-            <div
-              style={{
-                ...textBlock(japaneseThemePalette.SakuraMochiPink, 0, 24),
-              }}
-            >
-              <h2>Impact Wallet</h2>
+              <h2>Proof of Work</h2>
               <i>theme: decentralized technology</i>
               <p style={{ maxWidth: "100%", width: 700 }}>
                 One of the motivating goals is to create a proper system for
@@ -620,11 +576,25 @@ export const LearnMore = ({ auth }) => {
                 that transforms learning events, scholarships and credentials.
               </p>
             </div>
+            <br />
+            <br />
+            <div
+              style={{
+                ...textBlock(japaneseThemePalette.SakuraMochiPink, 0, 24),
+              }}
+            >
+              <h2>Emotional Intelligence</h2>
+              <i>theme: mental health</i>
+              <p style={{ maxWidth: "100%", width: 700 }}>
+                A tool that lets you track your emotions over time for personal
+                betterment paired with a lowkey AI to assist you along the way.
+              </p>
+            </div>
           </div>
         </Modal.Body>
         <Modal.Footer style={{ backgroundColor: "black", color: "white" }}>
           <Button variant="dark" onClick={() => setIsModalOpen(false)}>
-            Exit
+            Back to app
           </Button>
         </Modal.Footer>
       </Modal>

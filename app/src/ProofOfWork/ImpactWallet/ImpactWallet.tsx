@@ -2,14 +2,14 @@ import { useEffect, useState } from "react";
 import { Button, Modal, ProgressBar } from "react-bootstrap";
 import { getGlobalImpact } from "../../common/uiSchema";
 import sheilferBitcoin from "../../common/media/images/sheilferBitcoin.jpeg";
-import bitcoinReserve from "../../common/media/images/bitcoinReserve.jpeg";
 import cashAppCard from "../../common/media/images/cashAppCard.jpeg";
 import { logEvent } from "firebase/analytics";
 import { analytics, database } from "../../database/firebaseResources";
-import { DiscordButton } from "../../ChatGPT/Prompts/DiscordButton/DiscordButton";
-import { doc, getDoc, getDocs } from "firebase/firestore";
+import { DiscordButton } from "../../common/ui/DiscordButton/DiscordButton";
+import { doc, getDoc } from "firebase/firestore";
 import { Link, useParams } from "react-router-dom";
 import { EmotionalIntelligence } from "./EmotionalIntelligence/EmotionalIntelligence";
+import { japaneseThemePalette, textBlock } from "../../styles/lazyStyles";
 
 export const ImpactWallet = ({
   globalScholarshipCounter,
@@ -18,10 +18,8 @@ export const ImpactWallet = ({
   globalImpactCounter,
   isImpactWalletOpen,
   setIsImpactWalletOpen,
-  usersModulesCollectionReference,
-  usersModulesFromDB,
 
-  userAuthObject = { uid: "demo" },
+  userAuthObject = { uid: "null" },
   handlePathSelection,
   isDemo,
   globalReserveObject,
@@ -30,7 +28,7 @@ export const ImpactWallet = ({
   setIsEmotionalIntelligenceOpen,
   usersEmotionsCollectionReference,
   usersEmotionsFromDB,
-  documentProcForUsersEmotions,
+  updateUserEmotions,
 }) => {
   let [databaseUserDocumentCopy, setDatabaseUserDocumentCopy] = useState({});
 
@@ -89,28 +87,14 @@ export const ImpactWallet = ({
     }
   };
 
+  let impactResult =
+    databaseUserDocumentCopy?.impact ||
+    databaseUserDocument?.impact ||
+    15200 / getGlobalImpact();
+
   return (
     <>
       <div>
-        {!isDemo ? (
-          <Button
-            disabled={true}
-            style={{ textShadow: "2px 2px 12px black" }}
-            onClick={() => {
-              handlePathSelection({ target: { id: "Boss Mode" } });
-              logEvent(analytics, "select_content", {
-                content_type: "button",
-                item_id: "Boss Mode Button",
-              });
-              // setIsImpactWalletOpen(true);
-            }}
-            variant="secondary"
-            id="Boss Mode"
-          >
-            🐉
-          </Button>
-        ) : null}
-        &nbsp; &nbsp;
         {!isDemo ? (
           <Button
             style={{ textShadow: "2px 2px 12px black" }}
@@ -127,29 +111,13 @@ export const ImpactWallet = ({
           </Button>
         ) : null}
         &nbsp; &nbsp;
-        {!isDemo ? (
-          <Button
-            style={{ textShadow: "2px 2px 12px black" }}
-            onClick={() => {
-              handlePathSelection({ target: { id: "RO.₿.E" } });
-              logEvent(analytics, "select_content", {
-                content_type: "button",
-                item_id: "Robots Building Education Button",
-              });
-            }}
-            variant="secondary"
-          >
-            🤖
-          </Button>
-        ) : null}
-        &nbsp; &nbsp;
         <Link to={`/profile/${params?.profileID || userAuthObject?.uid}`}>
           <Button
             style={{ textShadow: "2px 2px 12px black" }}
             onClick={() => {
               logEvent(analytics, "select_content", {
                 content_type: "button",
-                item_id: "Impact Wallet",
+                item_id: "Proof of Work",
               });
               setIsImpactWalletOpen(true);
             }}
@@ -166,6 +134,7 @@ export const ImpactWallet = ({
               backgroundColor: "black",
               borderRadius: "0px",
               margin: 6,
+              height: 6,
             }}
             variant="success"
             now={Math.floor(computePercentage * 100)}
@@ -179,7 +148,7 @@ export const ImpactWallet = ({
           style={{ backgroundColor: "black", color: "white" }}
         >
           <Modal.Title>
-            Impact Wallet @{params?.profileID || userAuthObject?.uid}
+            Proof of Work @{params?.profileID || userAuthObject?.uid}
           </Modal.Title>
         </Modal.Header>
         <Modal.Body
@@ -205,35 +174,45 @@ export const ImpactWallet = ({
               width: "100%",
             }}
           >
-            {/* <h1>Impact</h1> */}
-            {/* <p style={{ textAlign: "left", maxWidth: 720 }}>
-              Proof of work is a system in which the worker proves to verifiers
-              that a certain amount of effort has been expended. Verifiers can
-              be machines or they can be represented by people like teachers
-              grading your homework! Our proof of work system creates something
-              called <b>Impact</b>.
-              <br />
-              <br />
-              You can think of impact as the result created by the robots or a
-              currency system that records learning attempted and turns it into
-              financial impact for someone else.
-            </p> */}
-            {/* <hr /> */}
+            <h4> The Proof of Work System</h4>
+            <p
+              style={{
+                maxWidth: 700,
+                ...textBlock(japaneseThemePalette.KyotoPurple, 0, 24),
+              }}
+            >
+              Robots Building Education uses a system called Proof Of Work to
+              measure success. Very simply, when you put robots to work, you're
+              engaging in educational content and that should benefit you and
+              your community in some meaningful way. You can think of this
+              system as some kind of engine for universal basic income! 😁
+            </p>
+
+            <p
+              style={{
+                maxWidth: 700,
+                ...textBlock(japaneseThemePalette.FujiSanBlue, 0, 24),
+              }}
+            >
+              The long-term vision for this is to turn this into a decentralized
+              protocol. I believe these units of work will be recorded more and
+              more by AI systems and user interfaces should allow us to consume
+              and use education subscriptions and content for a new era of
+              software.
+            </p>
             <h4>Scholarships Created: {globalScholarshipCounter}</h4>
             <p>
               Work Done By You
               <br />
-              {databaseUserDocumentCopy?.impact ||
-                databaseUserDocument?.impact ||
-                15200}{" "}
-              / {getGlobalImpact()}
+              {impactResult}
               <ProgressBar
                 style={{
                   backgroundColor: "black",
                   borderRadius: "0px",
                   margin: 12,
+                  borderRadius: 5,
                 }}
-                variant="success"
+                // variant="success"
                 now={Math.floor(computePercentage * 100)}
               />
               <br />
@@ -259,6 +238,7 @@ export const ImpactWallet = ({
                   backgroundColor: "black",
                   borderRadius: "0px",
                   margin: 12,
+                  borderRadius: 5,
                 }}
                 variant="warning"
                 now={Math.floor(
@@ -272,27 +252,10 @@ export const ImpactWallet = ({
               <hr />
             </p>
 
-            {/* <div>
-              <h1>Real Estate</h1>
-              <p style={{ maxWidth: 720 }}>
-                Under Development. In the meantime, expect material on
-              </p>
-
-              <ul>
-                <li>Credit</li>
-                <li>401ks</li>
-                <li>IRAs</li>
-                <li>FHA loans</li>
-                <li>Market Theory</li>
-              </ul>
-              <br />
-            </div> */}
             <div>
               <h1>The Reserve</h1>
               <h3>invested {globalReserveObject?.invested || "N/A"}</h3>
-              {/* <h6>gain {globalReserveObject?.profit}</h6> */}
-              {/* <h6>total value {globalReserveObject?.total}</h6>
-              <h6>total gain {globalReserveObject?.percent_gained}</h6> */}
+
               <h6>last updated {globalReserveObject?.last_updated}</h6>
               <div></div>
               <img src={sheilferBitcoin} width={300} height={350} />
@@ -368,7 +331,7 @@ export const ImpactWallet = ({
         setIsEmotionalIntelligenceOpen={setIsEmotionalIntelligenceOpen}
         usersEmotionsCollectionReference={usersEmotionsCollectionReference}
         usersEmotionsFromDB={usersEmotionsFromDB}
-        documentProcForUsersEmotions={documentProcForUsersEmotions}
+        updateUserEmotions={updateUserEmotions}
       />
     </>
   );
