@@ -52,9 +52,9 @@ export let computeResponseList = (patreonObject, promptType) => {
         icon: "🧿",
       },
       {
-        response: patreonObject?.prompts["summarize"]?.response,
-        type: "summarize",
-        icon: "📚",
+        response: patreonObject?.prompts["quiz"]?.response,
+        type: "quiz",
+        icon: "🧪",
       },
       {
         response: patreonObject?.prompts["ask"]?.response,
@@ -62,15 +62,16 @@ export let computeResponseList = (patreonObject, promptType) => {
         icon: "🔮",
       },
       {
+        response: patreonObject?.prompts["summarize"]?.response,
+        type: "summarize",
+        icon: "📚",
+      },
+      {
         response: patreonObject?.prompts["guide"]?.response,
         type: "roadmap",
         icon: "🗺️",
       },
-      {
-        response: patreonObject?.prompts["quiz"]?.response,
-        type: "quiz",
-        icon: "🧪",
-      },
+
       ...(patreonObject?.prompts?.["furtherReading"]?.response
         ? [
             {

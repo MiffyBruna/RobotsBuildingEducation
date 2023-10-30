@@ -43,6 +43,7 @@ const ChatGPT = ({
   const [isResponseActive, setIsResponseActive] = useState(false);
   const [chatGptResponseList, setChatGptResponseList] = useState([]);
   const [promptSelection, setPromptSelection] = useState("");
+  const [parentVisibility, setParentVisibility] = useState(true);
 
   useEffect(() => {
     setIsResponseActive(false);
@@ -60,9 +61,11 @@ const ChatGPT = ({
 
   const handleSubmit = async (event, prompt = null, promptType = null) => {
     event.preventDefault();
+    setParentVisibility(true);
+
     setPromptMessage(prompt?.request);
     handlePromptSelection(promptType);
-    await new Promise((resolve) => setTimeout(resolve, 500));
+    await new Promise((resolve) => setTimeout(resolve, 7500));
 
     let result = computeResult(promptType, patreonObject);
 
@@ -143,6 +146,8 @@ const ChatGPT = ({
           loadingMessage={loadingMessage}
           chatGptResponse={response}
           patreonObject={patreonObject}
+          parentVisibility={parentVisibility}
+          setParentVisibility={setParentVisibility}
         />
       ))}
       <Prompts

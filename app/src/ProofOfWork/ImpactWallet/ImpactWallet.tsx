@@ -182,10 +182,11 @@ export const ImpactWallet = ({
               }}
             >
               Robots Building Education uses a system called Proof Of Work to
-              measure success. Very simply, when you put robots to work, you're
-              engaging in educational content and that should benefit you and
-              your community in some meaningful way. You can think of this
-              system as some kind of engine for universal basic income! 😁
+              measure learning. When you use the application, you're putting
+              robots to work! That work produces outcomes that should be
+              meaningful to communities, like improved finance for
+              under-resourced schools or homes. You can think of this system as
+              some kind of engine for universal basic income! 😁
             </p>
 
             <p
@@ -194,11 +195,9 @@ export const ImpactWallet = ({
                 ...textBlock(japaneseThemePalette.FujiSanBlue, 0, 24),
               }}
             >
-              The long-term vision for this is to turn this into a decentralized
-              protocol. I believe these units of work will be recorded more and
-              more by AI systems and user interfaces should allow us to consume
-              and use education subscriptions and content for a new era of
-              software.
+              The vision is to turn this into a decentralized protocol. Systems
+              and interfaces should allow us to rewire education services,
+              finance and content for a new era of software.
             </p>
             <h4>Scholarships Created: {globalScholarshipCounter}</h4>
             <p>

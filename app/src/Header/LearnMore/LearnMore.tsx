@@ -79,7 +79,7 @@ export const LearnMore = ({ languageMode }) => {
               This program focuses on creating a powerful first mile for
               learning. It's meant to embolden and encourage your ambitions by
               showing you how quickly you can accomplish a challenging goal or
-              barrier with the right network.
+              overcome a barrier with the right network.
               <br />
               <br />
               My hopes and dreams with the product include the ability to
@@ -119,61 +119,6 @@ export const LearnMore = ({ languageMode }) => {
           <DiscordButton />
           <br />
           <br />
-          <div style={{ maxWidth: "100%", width: 700 }}>
-            <h1>Testimonials</h1>
-            <p
-              style={{
-                maxWidth: "100%",
-                width: 700,
-                ...textBlock(japaneseThemePalette.FujiSanBlue, 0, null),
-              }}
-            >
-              I have not collected testimonials. I'm working hard on creating a
-              word-of-mouth worthy platform. Here are some relationships I'm
-              proud to have created organically through media. Khan Academy was
-              what inspired me many years ago, so I'm happy to be a rival AI
-              company to "Khanmigo" today 😊
-              <br />
-              <br />
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
-                {/* <img width={350} src={elkhanmigo} /> */}
-                <br />
-                <img
-                  width={350}
-                  src={khanac}
-                  style={{
-                    boxShadow: `1px 4px 5px 5px rgba(0,0,0,1)`,
-                  }}
-                />
-                <br />
-
-                <img
-                  width={350}
-                  src={snow}
-                  style={{
-                    boxShadow: "1px 4px 5px 5px rgba(0,0,0,1)",
-                  }}
-                />
-
-                <br />
-                <img
-                  width={350}
-                  src={phillyd}
-                  style={{
-                    boxShadow: "1px 4px 5px 5px rgba(0,0,0,1)",
-                  }}
-                />
-              </div>
-              &nbsp;&nbsp;
-            </p>
-          </div>
           <br />
           <br />
           <div style={{ maxWidth: "100%", width: 700 }}>

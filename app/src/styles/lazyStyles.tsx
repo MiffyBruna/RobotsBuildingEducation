@@ -190,7 +190,6 @@ export const StyledLink = styled(Link)`
       const isSelectedPath =
         props.pathSelectionAnimationData.path === props.path;
       const currentPath = props.path;
-      console.log("currentPath", currentPath);
 
       let backgroundColor = "";
 
@@ -218,7 +217,6 @@ export const StyledLink = styled(Link)`
       } else if (currentPath === "Creator") {
         backgroundColor = toBlueVersion(backgroundColor);
       } else if (currentPath === "Entrepeneur") {
-        console.log("ok");
         backgroundColor = toGoldenVersion(backgroundColor);
       }
 
@@ -382,7 +380,7 @@ export let japaneseThemePalette = {
   WisteriaPurple: "#89729E", // Wisteria Flower
   GoldenAccent: "#bf8902", // Gold in Japanese Art
   WoodenArchitectureBrown: "#d3a86f", // Japanese Wood Architecture
-  BambooForestGreen: "#6fd3bc", // Bamboo Forest
+  BambooForestGreen: "#4aa89c", // Bamboo Forest
   DeepCherryBlossomPink: "#C71585", // Deep Cherry Blossom
   ProsperityEmeraldGreen: "#88d36f", // Symbol of Wealth
   StrongRed: "#DC143C", // Japanese Flag Red

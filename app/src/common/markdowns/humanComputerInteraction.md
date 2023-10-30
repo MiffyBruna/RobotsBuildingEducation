@@ -1,4 +1,4 @@
-## Storytelling
+### Storytelling Recipe
 
 Explore ideas at a high level. These concepts can be applied to essays, videos, stories, musical orchestrations and so forth. They’re recursions of each other.
 
@@ -95,7 +95,7 @@ Negativity: It plays a role, especially in political landscapes.
 
 Radical Speech: It can be impactful and resonate with many, but should be used cautiously given its double-edged nature.
 
-## Interaction & Design
+<!-- ## Interaction & Design
 
 So first and foremost, UI/UX is short for user interfaces and user experiences. It’s a multi-disciplinary research and design skill based on the study of human-computer interaction. It’s an excellent skill to have as it can take many different shapes and sizes. For our intents and purposes, let’s define this skill as “Interaction Design” or simply “Design”.
 
@@ -161,7 +161,7 @@ I also recommend using the resources available at nngroup.com, which is the Niel
 
 If you’re curious to see what real-world UX research looks like, you’re encouraged to join Bitcoin.design, which is an open-source platform that supports usability research & development for Bitcoin.
 
-These three resources in combination will provide a deeper introduction into the process andd perspective of a designer.
+These three resources in combination will provide a deeper introduction into the process andd perspective of a designer. -->
 
 <!--
 
