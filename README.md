@@ -1,4 +1,4 @@
-# The Original AI Tutor & Mentor In Your Pocket
+#  AI Tutor & Mentor
 
 ## Contact
 
