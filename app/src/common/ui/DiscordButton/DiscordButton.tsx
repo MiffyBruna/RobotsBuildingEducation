@@ -113,13 +113,13 @@ export const DiscordButton = () => (
     <a
       onClick={() =>
         logEvent(analytics, "select_promotion", {
-          creative_name: `https://chat.openai.com`,
+          creative_name: `https://chat.openai.com/g/g-09h5uQiFC-ms-roxana`,
           creative_slot: `OpenAI Slot`,
           promotion_id: `Robots Building Education OpenAI`,
           promotion_name: "advertising_launch",
         })
       }
-      href={"https://chat.openai.com"}
+      href={"https://chat.openai.com/g/g-09h5uQiFC-ms-roxana"}
       target={"_blank"}
       style={{ color: "white" }}
     >

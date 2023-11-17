@@ -1,4 +1,9 @@
 import { useState, useEffect } from "react";
+import Editor from "react-simple-code-editor";
+import { highlight, languages } from "prismjs/components/prism-core";
+import "prismjs/components/prism-clike";
+import "prismjs/components/prism-javascript";
+import "prismjs/themes/prism.css";
 
 const CodeEditor = ({ patreonObject }) => {
   const [originalText, setOriginalText] = useState(
@@ -13,6 +18,8 @@ const CodeEditor = ({ patreonObject }) => {
   const [canSubmit, setCanSubmit] = useState(false);
   const [hasSubmit, setHasSubmit] = useState(false);
 
+  const [code, setCode] = useState(`function add(a, b) {\n  return a + b;\n}`);
+
   const finalDisplay = patreonObject?.prompts?.practice?.displayCode;
 
   useEffect(() => {
@@ -22,7 +29,8 @@ const CodeEditor = ({ patreonObject }) => {
   }, [completedPercent]);
 
   const handleChange = (e) => {
-    const input = e.target.value;
+    console.log("E", e);
+    const input = e;
     const lastInputLine = input.split("\n").pop();
 
     let newCharValidity = [];
@@ -102,11 +110,20 @@ const CodeEditor = ({ patreonObject }) => {
 
       <br />
       {}
-      <textarea
-        autoFocus={false}
+      {/* <textarea autoFocus={false} value={userInput} /> */}
+      <Editor
         value={userInput}
-        onChange={handleChange}
-        style={{ fontFamily: "monospace", width: "100%" }}
+        onValueChange={handleChange}
+        highlight={(userInput) => highlight(userInput, languages.js)}
+        padding={10}
+        style={{
+          fontFamily: '"Fira code", "Fira Mono", monospace',
+          fontSize: 12,
+          width: "100%",
+          border: "1px solid black",
+          borderRadius: 7,
+        }}
+        autoFocus
       />
       <br />
       <button
@@ -119,6 +136,7 @@ const CodeEditor = ({ patreonObject }) => {
       >
         Submit
       </button>
+      <br />
 
       <br />
 
@@ -127,36 +145,50 @@ const CodeEditor = ({ patreonObject }) => {
         : null}
 
       <pre>
-        {hasSubmit
-          ? originalText.split("").map((char, index) => (
-              <span
-                key={index}
-                style={{ textShadow: "0px 0px 1px black", color: "#1aba41" }}
-              >
-                {char}
-              </span>
-            ))
-          : remainingLines[0]?.split("").map((char, index) => (
-              <span
-                key={index}
-                style={{
-                  backgroundColor:
-                    charValidity[index] === undefined
-                      ? "#faf3e0"
-                      : charValidity[index]
-                      ? "#a8d5ba"
-                      : "#d789d7",
-                  color:
-                    charValidity[index] === undefined
-                      ? "#696969"
-                      : charValidity[index]
-                      ? "#f5fffc"
-                      : "#ffeffd",
-                }}
-              >
-                {char}
-              </span>
-            ))}
+        {hasSubmit ? (
+          <Editor
+            value={originalText}
+            // onValueChange={handleChange}
+            highlight={(userInput) => highlight(originalText, languages.js)}
+            padding={10}
+            style={{
+              fontFamily: '"Fira code", "Fira Mono", monospace',
+              fontSize: 12,
+              width: "100%",
+              border: "1px solid black",
+            }}
+          />
+        ) : (
+          // ? originalText.split("").map((char, index) => (
+          //     <span
+          //       key={index}
+          //       style={{ textShadow: "0px 0px 1px black", color: "#1aba41" }}
+          //     >
+          //       {char}
+          //     </span>
+          //   ))
+          remainingLines[0]?.split("").map((char, index) => (
+            <span
+              key={index}
+              style={{
+                backgroundColor:
+                  charValidity[index] === undefined
+                    ? "#faf3e0"
+                    : charValidity[index]
+                    ? "#a8d5ba"
+                    : "#d789d7",
+                color:
+                  charValidity[index] === undefined
+                    ? "#696969"
+                    : charValidity[index]
+                    ? "#f5fffc"
+                    : "#ffeffd",
+              }}
+            >
+              {char}
+            </span>
+          ))
+        )}
       </pre>
     </div>
   );
