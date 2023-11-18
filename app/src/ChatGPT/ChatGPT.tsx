@@ -65,7 +65,7 @@ const ChatGPT = ({
 
     setPromptMessage(prompt?.request);
     handlePromptSelection(promptType);
-    await new Promise((resolve) => setTimeout(resolve, 7500));
+    await new Promise((resolve) => setTimeout(resolve, 750));
 
     let result = computeResult(promptType, patreonObject);
 

@@ -215,7 +215,8 @@ function App() {
           />
         ) : null}
 
-        {authStateReference.isZeroKnowledgeUser ? (
+        {authStateReference.isZeroKnowledgeUser &&
+        checkActiveUserStates({ userStateReference, authStateReference }) ? (
           <>
             <Paths
               handlePathSelection={handlePathSelection}

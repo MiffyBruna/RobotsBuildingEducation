@@ -108,7 +108,7 @@ export const Intro = ({
         ) : isResponseActive ? (
           <h2>
             {promptSelection === "patreon" && "Discover ►✍️⚡🎨"}
-            {promptSelection === "guide" && "Guide 🧿📚🔮🗺️🧪"}
+            {promptSelection === "guide" && "Guide 🧿📚🔮🗓🧪"}
             {promptSelection === "shop" && "Shop 🛍️"}
             {promptSelection === "practice" && "Practice 🥋"}
           </h2>

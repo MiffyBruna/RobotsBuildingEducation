@@ -68,6 +68,7 @@ export const Header = ({ languageMode, setLanguageMode }) => {
           >
             <Form.Switch>
               <Form.Check
+                disabled
                 type="switch"
                 id="custom-switch-lang"
                 label={languageModeLabel}

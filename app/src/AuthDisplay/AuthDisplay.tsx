@@ -9,10 +9,11 @@ import {
 
 // Define constants for styling
 const containerStyle = {
-  border: "1px solid #1C1C1E",
+  border: "2px solid #1C1C1E",
+  borderRadius: "10px",
   width: "fit-content",
   margin: "auto",
-  backgroundColor: "#1C1C1E",
+  backgroundColor: "black",
   marginBottom: "48px",
 };
 
@@ -29,6 +30,7 @@ const handleOnClick = () => {
 export const AuthDisplay = () => {
   return (
     <div style={containerStyle} onClick={handleOnClick}>
+      <br />
       Access all features:
       <AuthComponent
         id="firebaseui-auth-container"
