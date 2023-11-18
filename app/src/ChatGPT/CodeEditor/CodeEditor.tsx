@@ -6,83 +6,57 @@ import "prismjs/components/prism-javascript";
 import "prismjs/themes/prism.css";
 
 const CodeEditor = ({ patreonObject }) => {
-  const [originalText, setOriginalText] = useState(
-    patreonObject?.prompts?.practice?.input ||
-      "I have 3 lines\nthis is my second line\nthis is the last line"
-  );
-  const originalLines = originalText.split("\n");
+  const stepMap = patreonObject?.prompts?.practice?.steps || [
+    {
+      code: "const express = require('express');",
+      guidance: (
+        <div style={{ border: "1px solid red" }}>
+          ok this does a explain thing blah blah
+        </div>
+      ),
+    },
+    {
+      code: "const cors = require('cors');",
+      guidance: (
+        <div style={{ border: "1px solid red" }}>we be explaining stuff</div>
+      ),
+    },
+    // Add more steps as needed
+  ];
+
+  const codeSteps = stepMap.map((item) => item.code);
+
+  const [currentStep, setCurrentStep] = useState(0);
   const [userInput, setUserInput] = useState("");
-  const [charValidity, setCharValidity] = useState([]);
-  const [remainingLines, setRemainingLines] = useState([...originalLines]);
-  const [completedPercent, setCompletedPercent] = useState(0);
-  const [canSubmit, setCanSubmit] = useState(false);
-  const [hasSubmit, setHasSubmit] = useState(false);
-
-  const [code, setCode] = useState(`function add(a, b) {\n  return a + b;\n}`);
-
-  const finalDisplay = patreonObject?.prompts?.practice?.displayCode;
+  const [isValid, setIsValid] = useState(false);
+  const isComplete = currentStep === codeSteps.length && isValid;
+  const progressPercent = (currentStep / codeSteps.length) * 100;
 
   useEffect(() => {
-    if (completedPercent === 100) {
-      setCanSubmit(true);
-    }
-  }, [completedPercent]);
+    setUserInput("");
+    setIsValid(false);
+  }, [currentStep]);
 
-  const handleChange = (e) => {
-    console.log("E", e);
-    const input = e;
-    const lastInputLine = input.split("\n").pop();
-
-    let newCharValidity = [];
-    for (let i = 0; i < input.length; i++) {
-      newCharValidity.push(remainingLines.join("\n")[i] === input[i]);
-    }
-
-    setCharValidity(newCharValidity);
-
-    if (remainingLines.length === 0) {
-      setCompletedPercent(100); // Ensure it is capped at 100%
-      setCharValidity([]); // Reset charValidity to start anew
-      setUserInput(""); // Reset userInput for a new session
-    } else if (remainingLines[0] === lastInputLine) {
-      setRemainingLines((prevLines) => prevLines.slice(1));
-      setCompletedPercent((prevPercent) => {
-        const nextPercent = parseFloat(
-          (prevPercent + 100 / originalLines.length).toFixed(2)
-        );
-        return nextPercent > 100 ? 100 : nextPercent;
-      });
-      setUserInput(""); // Clear the textarea for the next line
-      setCharValidity([]); // Clear the charValidity array
-    } else {
-      setUserInput(input); // Keep the existing input intact if no line is completed
-    }
+  const handleChange = (input) => {
+    setUserInput(input);
+    setIsValid(input === codeSteps[currentStep]);
   };
 
   const handleSubmit = () => {
-    setRemainingLines(finalDisplay); // Reset the text to original
-    setHasSubmit(true);
-    setOriginalText(finalDisplay);
+    if (isValid) {
+      if (currentStep < codeSteps.length - 1) {
+        setCurrentStep(currentStep + 1);
+      } else if (currentStep === codeSteps.length - 1) {
+        setCurrentStep(currentStep + 1); // Increment to signify completion
+      }
+    }
   };
-
-  //   useEffect(() => {
-  //     if(hasSubmit){
-
-  //     }
-  //   }, [hasSubmit])
-
-  console.log(
-    "patreonObject?.prompts?.practice?.reward",
-    patreonObject?.prompts?.practice?.reward
-  );
 
   return (
     <div
       style={{
         color: "#696969",
         backgroundColor: "#faf3e0",
-        // minWidth: 350,
-        // maxWidth: 600,
         width: "100%",
         padding: 20,
         wordBreak: "break-word",
@@ -91,105 +65,107 @@ const CodeEditor = ({ patreonObject }) => {
         borderRadius: 15,
       }}
     >
-      <div>{completedPercent}%</div>
-      <div style={{ width: "100%", backgroundColor: "#ccc" }}>
+      <div style={{ width: "100%", backgroundColor: "#ccc", marginBottom: 20 }}>
         <div
           style={{
-            width: `${completedPercent > 100 ? 100 : completedPercent}%`,
+            width: `${progressPercent}%`,
             height: "10px",
-            backgroundColor: "#a8d5ba", // Japanese green color
-            transition: "width 0.4s ease", // Smooth animation
+            backgroundColor: isComplete ? "#a8d5ba" : "aquamarine",
+            transition: "width 0.4s ease",
           }}
         ></div>
       </div>
-      {patreonObject?.prompts?.practice?.context ? (
-        <div style={{ marginTop: 6 }}>
-          {patreonObject?.prompts?.practice?.context}
-        </div>
-      ) : null}
 
-      <br />
-      {}
-      {/* <textarea autoFocus={false} value={userInput} /> */}
-      <Editor
-        value={userInput}
-        onValueChange={handleChange}
-        highlight={(userInput) => highlight(userInput, languages.js)}
-        padding={10}
-        style={{
-          fontFamily: '"Fira code", "Fira Mono", monospace',
-          fontSize: 12,
-          width: "100%",
-          border: "1px solid black",
-          borderRadius: 7,
-        }}
-        autoFocus
-      />
-      <br />
+      {stepMap
+        .slice(0, Math.min(currentStep, stepMap.length - 1) + 1)
+        .map((step, index) => (
+          <div key={index} style={{ marginBottom: 20 }}>
+            {step.guidance}
+            <br />
+            <pre
+              style={{
+                // backgroundColor:
+                //   index === currentStep
+                //     ? isValid
+                //       ? "#a8d5ba"
+                //       : "rgba(215,137,215, 0.7)"
+                //     : "#faf3e0",
+                padding: 10,
+                borderRadius: 7,
+                border:
+                  index === currentStep
+                    ? isValid
+                      ? "4px solid #a8d5ba"
+                      : "4px solid rgba(215,137,215, 1)"
+                    : "4px solid #a8d5ba",
+              }}
+            >
+              <Editor
+                value={step.code}
+                // onValueChange={handleChange}
+                highlight={(input) => highlight(input, languages.js)}
+                padding={10}
+                style={{
+                  fontFamily: '"Fira code", "Fira Mono", monospace',
+                  fontSize: 12,
+                  width: "100%",
+                  // border: "1px solid black",
+                  borderRadius: 7,
+                }}
+                disabled
+              />
+              {/* {step} */}
+            </pre>
+            {index === currentStep && (
+              <Editor
+                value={userInput}
+                onValueChange={handleChange}
+                highlight={(input) => highlight(input, languages.js)}
+                padding={10}
+                style={{
+                  fontFamily: '"Fira code", "Fira Mono", monospace',
+                  fontSize: 12,
+                  width: "100%",
+                  border: "1px solid black",
+                  borderRadius: 7,
+                }}
+                autoFocus
+              />
+            )}
+          </div>
+        ))}
+
       <button
-        disabled={!canSubmit}
+        disabled={!isValid || isComplete}
         style={{
-          backgroundColor: canSubmit ? "#a8d5ba" : "#d789d7", // Matcha green or sakura pink
-          color: canSubmit ? "#f5fffc" : "#ffeffd", // Very light green or very light pink
+          backgroundColor: isValid && !isComplete ? "#a8d5ba" : "#d789d7",
+          color: isValid && !isComplete ? "#f5fffc" : "#ffeffd",
+          marginTop: 10,
         }}
         onClick={handleSubmit}
       >
         Submit
       </button>
-      <br />
 
-      <br />
-
-      {hasSubmit && patreonObject?.prompts?.practice?.reward
-        ? patreonObject?.prompts?.practice?.reward
-        : null}
-
-      <pre>
-        {hasSubmit ? (
+      {progressPercent === 100 && (
+        <div style={{ marginTop: 20, color: "#4e9a06", fontSize: "1.2em" }}>
+          {/* {patreonObject?.prompts?.practice?.reward ||
+            "Congratulations on completing the challenge!"} */}
           <Editor
-            value={originalText}
+            value={patreonObject?.prompts?.practice?.displayCode}
             // onValueChange={handleChange}
-            highlight={(userInput) => highlight(originalText, languages.js)}
+            highlight={(input) => highlight(input, languages.js)}
             padding={10}
             style={{
               fontFamily: '"Fira code", "Fira Mono", monospace',
               fontSize: 12,
               width: "100%",
               border: "1px solid black",
+              borderRadius: 7,
             }}
           />
-        ) : (
-          // ? originalText.split("").map((char, index) => (
-          //     <span
-          //       key={index}
-          //       style={{ textShadow: "0px 0px 1px black", color: "#1aba41" }}
-          //     >
-          //       {char}
-          //     </span>
-          //   ))
-          remainingLines[0]?.split("").map((char, index) => (
-            <span
-              key={index}
-              style={{
-                backgroundColor:
-                  charValidity[index] === undefined
-                    ? "#faf3e0"
-                    : charValidity[index]
-                    ? "#a8d5ba"
-                    : "#d789d7",
-                color:
-                  charValidity[index] === undefined
-                    ? "#696969"
-                    : charValidity[index]
-                    ? "#f5fffc"
-                    : "#ffeffd",
-              }}
-            >
-              {char}
-            </span>
-          ))
-        )}
-      </pre>
+        </div>
+      )}
     </div>
   );
 };
