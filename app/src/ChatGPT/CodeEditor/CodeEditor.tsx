@@ -4,6 +4,7 @@ import { highlight, languages } from "prismjs/components/prism-core";
 import "prismjs/components/prism-clike";
 import "prismjs/components/prism-javascript";
 import "prismjs/themes/prism.css";
+import RandomCharacter from "../../common/ui/RandomCharacter/RandomCharacter";
 
 const CodeEditor = ({ patreonObject }) => {
   const stepMap = patreonObject?.prompts?.practice?.steps || [
@@ -65,23 +66,18 @@ const CodeEditor = ({ patreonObject }) => {
         borderRadius: 15,
       }}
     >
-      <div style={{ width: "100%", backgroundColor: "#ccc", marginBottom: 20 }}>
-        <div
-          style={{
-            width: `${progressPercent}%`,
-            height: "10px",
-            backgroundColor: isComplete ? "#a8d5ba" : "aquamarine",
-            transition: "width 0.4s ease",
-          }}
-        ></div>
-      </div>
-
       {stepMap
         .slice(0, Math.min(currentStep, stepMap.length - 1) + 1)
         .map((step, index) => (
           <div key={index} style={{ marginBottom: 20 }}>
-            {step.guidance}
-            <br />
+            <div> {step.guidance}</div>
+
+            <div style={{ padding: "10px 10px 0px 10px" }}>
+              {" "}
+              {step.knowledge}
+              <RandomCharacter />
+            </div>
+
             <pre
               style={{
                 // backgroundColor:
@@ -90,7 +86,7 @@ const CodeEditor = ({ patreonObject }) => {
                 //       ? "#a8d5ba"
                 //       : "rgba(215,137,215, 0.7)"
                 //     : "#faf3e0",
-                padding: 10,
+                padding: 0,
                 borderRadius: 7,
                 border:
                   index === currentStep
@@ -135,36 +131,55 @@ const CodeEditor = ({ patreonObject }) => {
           </div>
         ))}
 
-      <button
-        disabled={!isValid || isComplete}
-        style={{
-          backgroundColor: isValid && !isComplete ? "#a8d5ba" : "#d789d7",
-          color: isValid && !isComplete ? "#f5fffc" : "#ffeffd",
-          marginTop: 10,
-        }}
-        onClick={handleSubmit}
-      >
-        Submit
-      </button>
+      <div style={{ width: "100%", backgroundColor: "#ccc", marginBottom: 0 }}>
+        <div
+          style={{
+            width: `${progressPercent}%`,
+            height: "10px",
+            backgroundColor: isComplete ? "#a8d5ba" : "aquamarine",
+            transition: "width 0.4s ease",
+          }}
+        ></div>
+      </div>
+      <div> {progressPercent.toFixed(2)}%</div>
+
+      {progressPercent !== 100 ? (
+        <button
+          disabled={!isValid || isComplete}
+          style={{
+            backgroundColor: isValid && !isComplete ? "#a8d5ba" : "#d789d7",
+            color: isValid && !isComplete ? "#f5fffc" : "#ffeffd",
+            marginTop: 10,
+          }}
+          onClick={handleSubmit}
+        >
+          Submit
+        </button>
+      ) : null}
 
       {progressPercent === 100 && (
-        <div style={{ marginTop: 20, color: "#4e9a06", fontSize: "1.2em" }}>
-          {/* {patreonObject?.prompts?.practice?.reward ||
+        <>
+          {patreonObject?.prompts?.practice?.reward
+            ? patreonObject?.prompts?.practice?.reward
+            : null}
+          <div style={{ marginTop: 20, color: "#4e9a06", fontSize: "1.2em" }}>
+            {/* {patreonObject?.prompts?.practice?.reward ||
             "Congratulations on completing the challenge!"} */}
-          <Editor
-            value={patreonObject?.prompts?.practice?.displayCode}
-            // onValueChange={handleChange}
-            highlight={(input) => highlight(input, languages.js)}
-            padding={10}
-            style={{
-              fontFamily: '"Fira code", "Fira Mono", monospace',
-              fontSize: 12,
-              width: "100%",
-              border: "1px solid black",
-              borderRadius: 7,
-            }}
-          />
-        </div>
+            <Editor
+              value={patreonObject?.prompts?.practice?.displayCode}
+              // onValueChange={handleChange}
+              highlight={(input) => highlight(input, languages.js)}
+              padding={10}
+              style={{
+                fontFamily: '"Fira code", "Fira Mono", monospace',
+                fontSize: 12,
+                width: "100%",
+                border: "1px solid black",
+                borderRadius: 7,
+              }}
+            />
+          </div>
+        </>
       )}
     </div>
   );
