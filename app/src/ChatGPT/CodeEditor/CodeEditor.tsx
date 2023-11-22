@@ -6,6 +6,21 @@ import "prismjs/components/prism-javascript";
 import "prismjs/themes/prism.css";
 import RandomCharacter from "../../common/ui/RandomCharacter/RandomCharacter";
 
+import styled from "styled-components";
+
+const CopyButton = styled.button`
+  /* default styles */
+  background-color: transparent;
+  width: fit-content;
+  margin-bottom: 16px;
+
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  &:hover {
+    /* hover styles */
+    background-color: white;
+  }
+`;
+
 const CodeEditor = ({ patreonObject }) => {
   const stepMap = patreonObject?.prompts?.practice?.steps || [
     {
@@ -37,6 +52,12 @@ const CodeEditor = ({ patreonObject }) => {
     setUserInput("");
     setIsValid(false);
   }, [currentStep]);
+
+  const handleAutoComplete = () => {
+    const currentCode = codeSteps[currentStep];
+    setUserInput(currentCode);
+    setIsValid(true); // Assuming auto-completion always provides valid input
+  };
 
   const handleChange = (input) => {
     setUserInput(input);
@@ -112,6 +133,7 @@ const CodeEditor = ({ patreonObject }) => {
               />
               {/* {step} */}
             </pre>
+
             {index === currentStep && (
               <Editor
                 value={userInput}
@@ -124,12 +146,26 @@ const CodeEditor = ({ patreonObject }) => {
                   width: "100%",
                   border: "1px solid black",
                   borderRadius: 7,
+                  marginTop: 12,
                 }}
                 autoFocus
               />
             )}
           </div>
         ))}
+
+      <CopyButton
+        onClick={handleAutoComplete}
+        // style={{
+        //   width: "fit-content",
+        //   marginBottom: 16,
+        //   backgroundColor: "transparent",
+        //   border: "1px solid rgba(0,0,0,0.05)",
+        //   // Add your styling for the button here
+        // }}
+      >
+        🪄
+      </CopyButton>
 
       <div style={{ width: "100%", backgroundColor: "#ccc", marginBottom: 0 }}>
         <div
@@ -141,6 +177,7 @@ const CodeEditor = ({ patreonObject }) => {
           }}
         ></div>
       </div>
+
       <div> {progressPercent.toFixed(2)}%</div>
 
       {progressPercent !== 100 ? (
