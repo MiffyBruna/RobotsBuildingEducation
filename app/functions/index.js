@@ -10,39 +10,31 @@ const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
 
-// const openai = new OpenAIApi(configuration);
-
 const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(bodyParser.json());
 
-// frontend
-// const response = await fetch(
-//   "https://us-central1-learn-robotsbuildingeducation.cloudfunctions.net/app/prompt",
-//   {
-//     method: "POST",
-//     headers: {
-//       "Content-Type": "application/json",
-//     },
-//     body: JSON.stringify({
-//       prompt: prompt.request,
-//     }),
-//   }
-// ).catch((error) => {
-
-// });
-
-// let data = await response.json();
-// let parsedData = data.bot.trim();
-
 app.post("/prompt", async (req, res) => {
   try {
     const prompt = req.body.prompt;
-    const completion = await openai.chat.completions.create({
-      model: "gpt-4",
+    let constructor = {
+      model: "gpt-4-1106-preview",
       messages: [{ role: "user", content: prompt }],
-    });
+    }
+
+    if(req?.body?.isJsonMode){
+      constructor.response_format = { type: "json_object" };
+      constructor.messages = [
+        {
+          role: "system",
+          content: "You are a helpful assistant designed to output JSON.",
+        },
+        { role: "user", content: prompt }
+      ]
+    }
+
+    const completion = await openai.chat.completions.create(constructor);
 
     res.status(200).send({
       bot: completion.choices[0].message,
