@@ -23,6 +23,7 @@ export const Engineer = {
       underConstruction: false,
       completed: false,
       needsImprovement: false,
+      credential: "Introduction to Engineering",
       tooltip: ``,
       sourceType: `video`, // may not need
       button: `Learning Mindset & Perspective`, // may not need - `name`
@@ -609,6 +610,7 @@ exports.app = functions.https.onRequest(app);
       underConstruction: false,
       completed: false,
       needsImprovement: false,
+      credential: "Programming Fundamentals",
       new: true,
       tooltip: ``,
       sourceType: `video`, // may not need
@@ -1699,6 +1701,7 @@ throw new Error(
       underConstruction: false,
       completed: false,
       needsImprovement: false,
+      credential: "Frontend Software Engineering",
       new: true,
       tooltip: ``,
       sourceType: `video`, // may not need
@@ -2552,6 +2555,7 @@ return <div style={gradientStyle}>
       underConstruction: false,
       completed: false,
       needsImprovement: false,
+      credential: "Backend Software Engineering",
       new: true,
       tooltip: ``,
       sourceType: `video`, // may not need
@@ -3509,6 +3513,7 @@ exports.app = functions
       sourceType: `video`, // may not need
       button: `Lesson 4 Building Apps`, // may not need - `name`
       header: `Lesson 4 Building Apps`,
+      credential: "Full-stack Software Engineering",
       fileSource:
         "https://res.cloudinary.com/dtkeyccga/video/upload/v1691867426/v3/CODING_LESSON_4_BUILD_APPS_COMPRESSED_ewvr2c.mov", // may not need
 
@@ -4549,6 +4554,7 @@ export default OpenAIComponent;`,
       sourceType: `video`, // may not need
       button: `Lesson 5 Computer Science`, // may not need - `name`
       header: `Lesson 5 Computer Science`,
+      credential: "Data Structures & Algorithms",
       fileSource:
         "https://res.cloudinary.com/sheilfer/video/upload/v1693469552/IMG_6826_ioqdfm_hxzxsl.mov", // may not need
 
@@ -5500,4 +5506,16 @@ console.log(dist);`,
       },
     },
   },
+};
+
+let set = {
+  "Philosophy of Critical Theory & Technology": false,
+  "Human-Computer Interaction": false,
+  "The Psychology Of Self-esteem": false,
+  "Introduction to Engineering": false,
+  "Programming Fundamentals": false,
+  "Frontend Software Engineering": false,
+  "Backend Software Engineering": false,
+  "Full-stack Software Engineering": false,
+  "Data Structures & Algorithms": false,
 };

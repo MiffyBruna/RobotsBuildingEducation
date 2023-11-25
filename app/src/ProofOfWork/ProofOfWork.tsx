@@ -14,10 +14,15 @@ export const ProofOfWork = ({
   usersEmotionsFromDB,
   updateUserEmotions,
   isDemo,
+  //some redundancy since I haven't refactored these values yet.
+  userStateReference,
+  showStars,
 }) => {
   const [isImpactWalletOpen, setIsImpactWalletOpen] = useState(false);
   const [isEmotionalIntelligenceOpen, setIsEmotionalIntelligenceOpen] =
     useState(false);
+
+  const [isSchedulerOpen, setIsSchedulerOpen] = useState(false);
 
   if (isDemo) {
     return null;
@@ -57,6 +62,10 @@ export const ProofOfWork = ({
         usersEmotionsCollectionReference={usersEmotionsCollectionReference}
         usersEmotionsFromDB={usersEmotionsFromDB}
         updateUserEmotions={updateUserEmotions}
+        setIsSchedulerOpen={setIsSchedulerOpen}
+        isSchedulerOpen={isSchedulerOpen}
+        userStateReference={userStateReference}
+        showStars={showStars}
       />
     </div>
   );

@@ -198,9 +198,7 @@ export let ChatBlock = ({ children, type = "quiz" }) => {
             }}
             onClick={() => setIsConversationContextWindowOpen(true)}
           >
-            {conversation?.length < 1
-              ? "Ask Ms. Roxana for assistance on your quiz! Grade your conversation and see how you can improve =)"
-              : "View quiz"}
+            View quiz
           </div>
           <ConversationGrader
             type={type}
@@ -243,7 +241,7 @@ export let ChatBlock = ({ children, type = "quiz" }) => {
           closeButton
           style={EmotionalIntelligenceStyles.EmotionHeader}
         >
-          <Modal.Title>The Quiz</Modal.Title>
+          <Modal.Title>ConversationGrader4444</Modal.Title>
         </Modal.Header>
         <Modal.Body style={EmotionalIntelligenceStyles.EmotionBody}>
           {children}
