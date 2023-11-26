@@ -24,6 +24,8 @@ export const ProofOfWork = ({
 
   const [isSchedulerOpen, setIsSchedulerOpen] = useState(false);
 
+  const [isCofounderOpen, setIsCofounderOpen] = useState(false);
+
   if (isDemo) {
     return null;
   }
@@ -66,6 +68,8 @@ export const ProofOfWork = ({
         isSchedulerOpen={isSchedulerOpen}
         userStateReference={userStateReference}
         showStars={showStars}
+        isCofounderOpen={isCofounderOpen}
+        setIsCofounderOpen={setIsCofounderOpen}
       />
     </div>
   );

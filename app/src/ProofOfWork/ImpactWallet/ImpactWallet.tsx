@@ -16,6 +16,7 @@ import { japaneseThemePalette, textBlock } from "../../styles/lazyStyles";
 import { Scheduler } from "./Scheduler/Scheduler";
 import { decentralizedEducationTranscript } from "../../App.constants";
 import { Star, StarsContainer } from "./ImpactWallet.styles";
+import { Cofounder } from "./Cofounder/Cofounder";
 
 const renderTranscriptAwards = (profileData) => {
   if (isEmpty(profileData)) {
@@ -126,6 +127,8 @@ export const ImpactWallet = ({
   isSchedulerOpen,
   userStateReference,
   showStars,
+  isCofounderOpen,
+  setIsCofounderOpen,
 }) => {
   let [databaseUserDocumentCopy, setDatabaseUserDocumentCopy] = useState({});
 
@@ -186,10 +189,25 @@ export const ImpactWallet = ({
 
   let impactResult = databaseUserDocumentCopy?.impact;
 
-  console.log("f", computePercentage);
   return (
     <>
       <div>
+        {!isDemo ? (
+          <Button
+            style={{ textShadow: "2px 2px 12px black" }}
+            onClick={() => {
+              logEvent(analytics, "select_content", {
+                content_type: "button",
+                item_id: "Cofounder",
+              });
+              setIsCofounderOpen(true);
+            }}
+            variant="secondary"
+          >
+            🌀
+          </Button>
+        ) : null}
+        &nbsp; &nbsp;
         {!isDemo ? (
           <Button
             style={{ textShadow: "2px 2px 12px black" }}
@@ -510,6 +528,12 @@ export const ImpactWallet = ({
       <Scheduler
         isSchedulerOpen={isSchedulerOpen}
         setIsSchedulerOpen={setIsSchedulerOpen}
+        userStateReference={userStateReference}
+      />
+
+      <Cofounder
+        isCofounderOpen={isCofounderOpen}
+        setIsCofounderOpen={setIsCofounderOpen}
         userStateReference={userStateReference}
       />
     </>
