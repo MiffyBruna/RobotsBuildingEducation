@@ -16,6 +16,7 @@ export const Entrepeneur = {
       sourceType: `video`, // may not need
       button: `Resume Writing`, // may not need - `name`
       header: `Resume Writing`,
+      credential: "Business Writing",
       backgroundImgSrc:
         "https://res.cloudinary.com/sheilfer/image/upload/v1697450736/Module_Buttons_13_sictcc.gif",
       fileSource:
@@ -571,6 +572,7 @@ export const Entrepeneur = {
       sourceType: `markdown`, // may not need
       button: `Focus Investing`, // may not need - `name`
       header: `Focus Investing`,
+      credential: "Introduction to Finance",
       fileSource: await import("../../markdowns/focusInvesting.md?raw"), // may not need
       prompts: {
         welcome: {

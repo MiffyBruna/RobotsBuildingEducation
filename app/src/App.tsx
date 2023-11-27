@@ -12,7 +12,7 @@ import { Header } from "./Header/Header";
 import { Passcode } from "./Passcode/Passcode";
 import { auth, analytics } from "./database/firebaseResources";
 import { onAuthStateChanged } from "firebase/auth";
-import { getDocs } from "firebase/firestore";
+import { getDocs, updateDoc } from "firebase/firestore";
 
 import { logEvent } from "firebase/analytics";
 
@@ -54,6 +54,7 @@ function App() {
 
   // handles language switching
   let [languageMode, setLanguageMode] = useState(words["English"]);
+  const [showStars, setShowStars] = useState(false);
 
   /**
    *
@@ -165,9 +166,8 @@ function App() {
    */
 
   const connectDID = async () => {
-    const { web5, did: aliceDid } = await Web5.connect();
-
-    console.log("DID", aliceDid);
+    // const { web5, did: aliceDid } = await Web5.connect();
+    // console.log("DID", aliceDid);
   };
   useEffect(() => {
     connectDID();
@@ -200,6 +200,50 @@ function App() {
   if (typeof authStateReference.isSignedIn == "string") {
     return <RoxanaLoadingAnimation />;
   }
+
+  const handleScheduler = async (scheduleEvent) => {
+    let locationOfHeader = uiStateReference.patreonObject.credential;
+
+    let data = {};
+
+    let profile = {
+      ...userStateReference.databaseUserDocument.profile,
+      [locationOfHeader]: true,
+    };
+
+    console.log("PROFILE", profile);
+    await updateDoc(userStateReference.userDocumentReference, {
+      profile,
+    });
+
+    userStateReference.setDatabaseUserDocument((prevDoc) => ({
+      ...prevDoc,
+      profile,
+    }));
+
+    setShowStars(true);
+
+    // Randomize animation properties for each star
+    document.querySelectorAll(".star").forEach((star) => {
+      const scale = Math.random() * 1.5; // Random scale
+      const x = Math.random() * 200 - 100; // Random x-position
+      const y = Math.random() * 200 - 100; // Random y-position
+      const duration = Math.random() * 1 + 0.5; // Random duration
+
+      star.style.opacity = 1;
+      star.style.transform = `scale(${scale}) translate(${x}px, ${y}px)`;
+      star.style.transition = `transform ${duration}s ease-in-out, opacity ${duration}s ease-in-out`;
+
+      // Reset the star after the animation
+      setTimeout(() => {
+        star.style.opacity = 0;
+        star.style.transform = "none";
+      }, duration * 1000);
+    });
+
+    // Reset the whole animation after some time
+    setTimeout(() => setShowStars(false), 3000);
+  };
 
   return (
     <>
@@ -236,6 +280,7 @@ function App() {
               uiStateReference={uiStateReference}
               userStateReference={userStateReference}
               globalStateReference={globalStateReference}
+              handleScheduler={handleScheduler}
             />
           </>
         ) : null}
@@ -249,6 +294,7 @@ function App() {
           handlePathSelection={handlePathSelection}
           updateUserEmotions={updateUserEmotions}
           uiStateReference={uiStateReference}
+          showStars={showStars}
         />
       ) : null}
     </>

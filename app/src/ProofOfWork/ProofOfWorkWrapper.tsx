@@ -24,6 +24,7 @@ export const ProofOfWorkWrapper = ({
   handlePathSelection,
   updateUserEmotions,
   uiStateReference,
+  showStars,
 }) => {
   const userImpact = userStateReference.databaseUserDocument?.impact;
   const proofOfWork = uiStateReference.proofOfWorkFromModules;
@@ -67,6 +68,8 @@ export const ProofOfWorkWrapper = ({
         globalReserveObject={globalReserveObject}
         updateUserEmotions={updateUserEmotions}
         isDemo={isDemo}
+        userStateReference={userStateReference}
+        showStars={showStars}
       />
     </div>
   );

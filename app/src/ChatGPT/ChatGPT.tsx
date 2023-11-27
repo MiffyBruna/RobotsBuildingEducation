@@ -36,6 +36,7 @@ const ChatGPT = ({
   setGlobalImpactCounter,
   isDemo = false,
   moduleName,
+  handleScheduler,
 }: Record<string, any>) => {
   const [shouldRenderIntro, setShouldRenderIntro] = useState(true);
   const [promptMessage, setPromptMessage] = useState("");
@@ -148,6 +149,7 @@ const ChatGPT = ({
           patreonObject={patreonObject}
           parentVisibility={parentVisibility}
           setParentVisibility={setParentVisibility}
+          handleScheduler={handleScheduler}
         />
       ))}
       <Prompts

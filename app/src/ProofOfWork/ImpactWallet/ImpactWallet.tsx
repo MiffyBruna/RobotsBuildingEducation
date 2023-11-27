@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
-import { Button, Modal, ProgressBar } from "react-bootstrap";
+import isEmpty from "lodash/isEmpty";
+import { Button, Form, Modal, ProgressBar } from "react-bootstrap";
 import { getGlobalImpact } from "../../common/uiSchema";
 import sheilferBitcoin from "../../common/media/images/sheilferBitcoin.jpeg";
 import cashAppCard from "../../common/media/images/cashAppCard.jpeg";
+import roxanaChat from "../../common/media/images/roxanaChat.png";
 import { logEvent } from "firebase/analytics";
 import { analytics, database } from "../../database/firebaseResources";
 import { DiscordButton } from "../../common/ui/DiscordButton/DiscordButton";
@@ -10,6 +12,98 @@ import { doc, getDoc } from "firebase/firestore";
 import { Link, useParams } from "react-router-dom";
 import { EmotionalIntelligence } from "./EmotionalIntelligence/EmotionalIntelligence";
 import { japaneseThemePalette, textBlock } from "../../styles/lazyStyles";
+
+import { Scheduler } from "./Scheduler/Scheduler";
+import { decentralizedEducationTranscript } from "../../App.constants";
+import { Star, StarsContainer } from "./ImpactWallet.styles";
+import { Cofounder } from "./Cofounder/Cofounder";
+
+const renderTranscriptAwards = (profileData) => {
+  if (isEmpty(profileData)) {
+    return (
+      <div>
+        No data is available. <br />
+        <br />
+      </div>
+    );
+  }
+
+  let awards = [];
+  console.log(
+    "decentralizedEducationTranscript",
+    decentralizedEducationTranscript
+  );
+
+  console.log("profileData", profileData);
+  let decentralizedEducationTranscriptCopy = decentralizedEducationTranscript;
+  for (const key in decentralizedEducationTranscript) {
+    console.log(key);
+    console.log(decentralizedEducationTranscript[key]);
+
+    awards.push(
+      <div
+        id={`${key}`}
+        label={`${key}`}
+        style={{
+          width: 125,
+          height: 125,
+          backgroundColor: profileData[key]
+            ? "rgba(13,41,179, 1)"
+            : "rgba(206, 206, 214,0.3)",
+          margin: 2,
+          border: profileData[key]
+            ? "5px solid rgba(0,0,255, 1)"
+            : "5px solid gray",
+          borderRadius: "20%",
+          padding: 5,
+        }}
+      >
+        {key}
+      </div>
+    );
+  }
+
+  return awards;
+};
+const renderCheckboxes = (profileData) => {
+  let checkboxes = [];
+
+  if (isEmpty(profileData)) {
+    return (
+      <div>
+        No data is available. <br />
+        <br />
+      </div>
+    );
+  }
+
+  for (const key in profileData) {
+    console.log(key);
+    console.log(profileData[key]);
+    if (profileData[key]) {
+      checkboxes.push(
+        <Form.Check
+          type="checkbox"
+          id={`${key}`}
+          label={`${key}`}
+          checked={profileData[key]}
+          readOnly
+        />
+      );
+    }
+  }
+
+  if (checkboxes.length < 1) {
+    return (
+      <div>
+        Ms. Roxana doesn't see any proof of work yet. Have you not studied
+        yet?😠 <br />
+      </div>
+    );
+  }
+
+  return checkboxes;
+};
 
 export const ImpactWallet = ({
   globalScholarshipCounter,
@@ -29,6 +123,12 @@ export const ImpactWallet = ({
   usersEmotionsCollectionReference,
   usersEmotionsFromDB,
   updateUserEmotions,
+  setIsSchedulerOpen,
+  isSchedulerOpen,
+  userStateReference,
+  showStars,
+  isCofounderOpen,
+  setIsCofounderOpen,
 }) => {
   let [databaseUserDocumentCopy, setDatabaseUserDocumentCopy] = useState({});
 
@@ -87,14 +187,67 @@ export const ImpactWallet = ({
     }
   };
 
-  let impactResult =
-    databaseUserDocumentCopy?.impact ||
-    databaseUserDocument?.impact ||
-    15200 / getGlobalImpact();
+  let impactResult = databaseUserDocumentCopy?.impact;
 
   return (
     <>
       <div>
+        {!isDemo ? (
+          <Button
+            style={{ textShadow: "2px 2px 12px black" }}
+            onClick={() => {
+              logEvent(analytics, "select_content", {
+                content_type: "button",
+                item_id: "Cofounder",
+              });
+              setIsCofounderOpen(true);
+            }}
+            variant="secondary"
+          >
+            🌀
+          </Button>
+        ) : null}
+        &nbsp; &nbsp;
+        {!isDemo ? (
+          <Button
+            style={{ textShadow: "2px 2px 12px black" }}
+            onClick={() => {
+              logEvent(analytics, "select_content", {
+                content_type: "button",
+                item_id: "Scheduler",
+              });
+              setIsSchedulerOpen(true);
+            }}
+            variant="secondary"
+          >
+            🖊️
+          </Button>
+        ) : null}
+        &nbsp; &nbsp;
+        {!isDemo ? (
+          <Button
+            style={{ textShadow: "2px 2px 12px black" }}
+            onClick={() => {
+              logEvent(analytics, "select_content", {
+                content_type: "button",
+                item_id: "Scheduler",
+              });
+            }}
+            variant="secondary"
+          >
+            <a
+              href="https://chat.openai.com/g/g-09h5uQiFC-ms-roxana"
+              target="_blank"
+            >
+              <img
+                src={roxanaChat}
+                width="16"
+                style={{ borderRadius: "50%", boxShadow: "2px 2px 12px black" }}
+              />
+            </a>
+          </Button>
+        ) : null}
+        &nbsp; &nbsp;
         {!isDemo ? (
           <Button
             style={{ textShadow: "2px 2px 12px black" }}
@@ -124,6 +277,13 @@ export const ImpactWallet = ({
             variant="secondary"
           >
             🏦
+            <StarsContainer className={showStars ? "animate" : ""}>
+              {[...Array(10)].map((_, index) => (
+                <Star className="star" key={index}>
+                  ✨
+                </Star>
+              ))}
+            </StarsContainer>
           </Button>
         </Link>
         &nbsp; &nbsp; &nbsp;{" "}
@@ -164,8 +324,6 @@ export const ImpactWallet = ({
             backgroundAttachment: "fixed",
           }}
         >
-          <DiscordButton />
-
           <div
             style={{
               backgroundColor: "rgba(0,0,0,0.8)",
@@ -174,31 +332,39 @@ export const ImpactWallet = ({
               width: "100%",
             }}
           >
-            <h4> The Proof of Work System</h4>
-            <p
+            <h4>Your Decentralized Transcript</h4>
+            <div
               style={{
-                maxWidth: 700,
-                ...textBlock(japaneseThemePalette.KyotoPurple, 0, 24),
+                borderRadius: "12px",
+                width: "fit-content",
+                padding: 12,
+                color: "black",
+                backgroundColor: "rgba(252, 233, 177, 1)",
+                // textShadow: "0px 0px 20px black",
               }}
             >
-              Robots Building Education uses a system called Proof Of Work to
-              measure learning. When you use the application, you're putting
-              robots to work! That work produces outcomes that should be
-              meaningful to communities, like improved finance for
-              under-resourced schools or homes. You can think of this system as
-              some kind of engine for universal basic income! 😁
-            </p>
+              <Form>
+                {renderCheckboxes(
+                  userStateReference.databaseUserDocument.profile
+                )}
+              </Form>
+            </div>
+            <br />
+            <h4>Transcript Awards</h4>
 
-            <p
+            <div
               style={{
-                maxWidth: 700,
-                ...textBlock(japaneseThemePalette.FujiSanBlue, 0, 24),
+                width: "100%",
+                display: "flex",
+                flexWrap: "wrap",
               }}
             >
-              The vision is to turn this into a decentralized protocol. Systems
-              and interfaces should allow us to rewire education services,
-              finance and content for a new era of software.
-            </p>
+              {renderTranscriptAwards(
+                userStateReference.databaseUserDocument.profile
+              )}
+            </div>
+            <br />
+
             <h4>Scholarships Created: {globalScholarshipCounter}</h4>
             <p>
               Work Done By You
@@ -228,7 +394,7 @@ export const ImpactWallet = ({
                     0) /
                     globalImpactCounter) *
                   100
-                ).toFixed(2)}
+                ).toFixed(2) || "0"}
                 %
               </b>
               &nbsp;of the work 😳
@@ -249,6 +415,32 @@ export const ImpactWallet = ({
                 )}
               />
               <hr />
+            </p>
+            <br />
+            <h4> The Proof of Work System</h4>
+            <p
+              style={{
+                maxWidth: 700,
+                ...textBlock(japaneseThemePalette.KyotoPurple, 0, 24),
+              }}
+            >
+              Robots Building Education uses a system called Proof Of Work to
+              measure learning. When you use the application, you're putting
+              robots to work! That work produces outcomes that should be
+              meaningful to communities, like improved finance for
+              under-resourced schools or homes. You can think of this system as
+              some kind of engine for universal basic income! 😁
+            </p>
+
+            <p
+              style={{
+                maxWidth: 700,
+                ...textBlock(japaneseThemePalette.FujiSanBlue, 0, 24),
+              }}
+            >
+              The vision is to turn this into a decentralized protocol. Systems
+              and interfaces should allow us to rewire education services,
+              finance and content for a new era of software.
             </p>
 
             <div>
@@ -331,6 +523,18 @@ export const ImpactWallet = ({
         usersEmotionsCollectionReference={usersEmotionsCollectionReference}
         usersEmotionsFromDB={usersEmotionsFromDB}
         updateUserEmotions={updateUserEmotions}
+      />
+
+      <Scheduler
+        isSchedulerOpen={isSchedulerOpen}
+        setIsSchedulerOpen={setIsSchedulerOpen}
+        userStateReference={userStateReference}
+      />
+
+      <Cofounder
+        isCofounderOpen={isCofounderOpen}
+        setIsCofounderOpen={setIsCofounderOpen}
+        userStateReference={userStateReference}
       />
     </>
   );

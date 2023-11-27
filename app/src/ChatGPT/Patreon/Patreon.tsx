@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from "react";
 import MarkdownRenderer from "./MarkdownRenderer/MarkdownRenderer";
 
 // Style object for the video element
@@ -13,13 +14,14 @@ const markdownStyle = {
 };
 
 // Function to display video content
-const renderVideo = (patreonObject, isAutoPlay) => (
+const renderVideo = (patreonObject, isAutoPlay, videoRef) => (
   <>
     <video
       poster="https://res.cloudinary.com/dtkeyccga/image/upload/v1696725598/Untitled_design_3_r5rq6o.png"
       style={videoStyle}
       controls
       autoPlay={isAutoPlay}
+      ref={videoRef}
     >
       <source src={patreonObject.fileSource} type="video/mp4" />
       <source src={patreonObject.fileSource} type="video/mov" />
@@ -37,26 +39,64 @@ const renderVideo = (patreonObject, isAutoPlay) => (
 const renderGif = (patreonObject) => <img src={patreonObject.fileSource} />;
 
 // Function to display Markdown content
-const renderMarkdown = (patreonObject) => (
+const renderMarkdown = (patreonObject, handleScheduler) => (
   <div style={markdownStyle}>
     <MarkdownRenderer
       file={patreonObject?.fileSource}
       patreonObject={patreonObject}
+      handleScheduler={handleScheduler}
     />
   </div>
 );
 
 // Main Patreon component
-const Patreon = ({ patreonObject, isAutoPlay = false }) => {
+const Patreon = ({ patreonObject, isAutoPlay = false, handleScheduler }) => {
+  const videoRef = useRef(null);
+  let [videoDurationDetection, setVideoDurationDetection] = useState(false);
+
+  useEffect(() => {
+    const videoElement = videoRef.current;
+    const handlePlay = () => {
+      console.log("Video is playing", patreonObject);
+    };
+
+    const checkVideoProgress = () => {
+      if (videoRef.current) {
+        const videoElement = videoRef.current;
+        const ninetyPercentDuration = videoElement.duration * 0.9;
+
+        if (videoElement.currentTime >= ninetyPercentDuration) {
+          console.log("Video has reached 90% completion");
+          setVideoDurationDetection(true);
+          handleScheduler("video");
+        }
+      }
+    };
+
+    if (videoElement) {
+      videoElement.addEventListener("play", handlePlay);
+      if (!videoDurationDetection)
+        videoElement.addEventListener("timeupdate", checkVideoProgress);
+    }
+
+    // Cleanup
+    return () => {
+      if (videoElement) {
+        videoElement.removeEventListener("play", handlePlay);
+        videoElement.removeEventListener("timeupdate", checkVideoProgress);
+      }
+    };
+  }, [videoDurationDetection]);
+
   // Function to determine which type of content to display
   const determineFileView = () => {
     if (patreonObject.sourceType === "video") {
-      return renderVideo(patreonObject, isAutoPlay);
+      return renderVideo(patreonObject, isAutoPlay, videoRef);
     }
     if (patreonObject.sourceType === "gif") {
       return renderGif(patreonObject);
     }
-    return renderMarkdown(patreonObject);
+    return renderMarkdown(patreonObject, handleScheduler);
   };
 
   return <div key={patreonObject.button}>{determineFileView()}</div>;

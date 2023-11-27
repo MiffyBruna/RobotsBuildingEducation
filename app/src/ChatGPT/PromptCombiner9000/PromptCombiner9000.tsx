@@ -8,6 +8,11 @@ import Patreon from "../Patreon/Patreon";
 import CodeEditor from "../CodeEditor/CodeEditor";
 import { analytics } from "../../database/firebaseResources";
 import { Button } from "react-bootstrap";
+import Editor from "react-simple-code-editor";
+import { highlight, languages } from "prismjs/components/prism-core";
+import "prismjs/components/prism-clike";
+import "prismjs/components/prism-javascript";
+import "prismjs/themes/prism.css";
 
 const Wrapper = styled.div`
   text-align: left;
@@ -51,27 +56,34 @@ const StyledPromptHeaderButton = styled.button`
   color: white;
 `;
 
-const renderContent = (type, response, patreonObject) => {
+const renderContent = (type, response, patreonObject, handleScheduler) => {
   switch (type) {
     case "patreon":
-      return <Patreon patreonObject={patreonObject} />;
+      return (
+        <Patreon
+          patreonObject={patreonObject}
+          handleScheduler={handleScheduler}
+        />
+      );
     case "practice":
       return <CodeEditor patreonObject={patreonObject} />;
     case "demonstrate":
       if (patreonObject?.hasCode) {
         return (
-          <SyntaxHighlighter
-            language={patreonObject?.prompts?.demonstrate?.request
-              ?.split(" ")
-              .slice(-1)[0]
-              ?.slice(0, -1)}
-            style={a11yDark}
-            wrapLines={true}
-            wrapLongLines={true}
-            customStyle={{ width: "100%" }}
-          >
-            {response}
-          </SyntaxHighlighter>
+          <Editor
+            value={response}
+            // onValueChange={handleChange}
+            highlight={(input) => highlight(input, languages.js)}
+            padding={10}
+            style={{
+              fontFamily: '"Fira code", "Fira Mono", monospace',
+              fontSize: 12,
+              width: "100%",
+              // border: "1px solid black",
+              borderRadius: 7,
+            }}
+            disabled
+          />
         );
       } else {
         return <div>{response}</div>;
@@ -89,6 +101,7 @@ export const PromptCombiner9000 = ({
   patreonObject,
   parentVisibility,
   setParentVisibility,
+  handleScheduler,
 }) => {
   const [promptVisibility, setPromptVisibility] = useState("flex");
   if (isEmpty(patreonObject)) {
@@ -142,7 +155,7 @@ export const PromptCombiner9000 = ({
         <FlexBox>
           {loadingMessage.length < 1 &&
             response &&
-            renderContent(type, response, patreonObject)}
+            renderContent(type, response, patreonObject, handleScheduler)}
         </FlexBox>
       </MessageContainer>
     </Wrapper>
