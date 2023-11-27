@@ -45,4 +45,31 @@ app.post("/prompt", async (req, res) => {
   }
 });
 
+app.post("/create-image", async (req, res) => {
+  try {
+    // Extract the image prompt from the request body
+    const imagePrompt = req.body.imagePrompt;
+
+    // Set up the request data for DALL-E
+    const imageRequest = {
+      model: "dall-e-2",
+      prompt: imagePrompt,
+      n: 1, // Number of images to generate
+      size: "512x512" // Image resolution
+    };
+
+    // Request DALL-E to create the image
+    const imageResponse = await openai.images.generate(imageRequest);
+
+    // Send the generated image or image URL in the response
+    res.status(200).send({
+      imageUrl: imageResponse.data // Assuming the response contains the URL of the generated image
+    });
+  } catch (error) {
+    // Handle errors
+    res.status(500).send({ error: error.message });
+  }
+});
+
+
 exports.app = functions.https.onRequest(app);
