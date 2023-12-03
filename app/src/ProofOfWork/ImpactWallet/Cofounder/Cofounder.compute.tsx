@@ -22,7 +22,7 @@ export const customInstructions = (instructions, process) => {
 
     The information key explains what the code does.
 
-    Where code attribute is the block of code that's being described and explained, description is a quick description of what the code accomplishes, and explanation is a beginner friendly explanation. Do not use shortcuts or comments to explain things in passing - be thorough and detailed in your approach. For example something like const "handleClick = async (event) => { ... };" is not acceptable - you should be capturing the blocks of code in the JSON value with string template literals if needed. It is extremely important that you do not gloss over code snippets and capture the block entirely or this process will fail.
+    Where code attribute is the block of code that's being described and explained, description is a quick description of what the code accomplishes, and explanation is a beginner friendly explanation. Do not use shortcuts or comments to explain things in passing - be thorough and detailed in your approach. For example something like "const handleClick = async (event) => { ... };" is not acceptable - you should be capturing the blocks of code in the JSON value with string template literals if needed. It is extremely important that you do not gloss over code snippets and capture the block entirely or this process will fail.
 
     please remember that it's mostly beginners. So be friendly and use some emojis to express more emotion and friendliness.
 
@@ -56,6 +56,13 @@ export const customInstructions = (instructions, process) => {
     }
 
     where script is an array of objects that contain the content of your result. The header is the section you're elaborating on, the script_lines is an array of strings representing the words the creator should say, and instructions is an array of strings explaining the steps or words the creator should be using.
+    `;
+  }
+
+  if (process == "business") {
+    context = `You're assisting someone in writing professional grade business documents like business grant applications, cover letters, scholarships and other meaningful communications. You'll be informed on what you're applying to and/or what the asker has already written. Provide a document that gives the person the best possible chance at succeeding and provide an breakdown of why after.
+
+    This is the information the user has provided: ${instructions.creationDescription}
     `;
   }
   return context;

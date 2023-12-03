@@ -1,4 +1,18 @@
-export let creatorKnowledge = `   Storytelling Recipe
+
+//this is getting sloppy
+export const aiDescription = {
+    creator: "Create a content script based on viral video research.",
+    coder: "Generate a live software examples and explanations.",
+    business: "Write business documents for grants, scholarships or investment."
+}
+
+export const aiPlaceholderDescription = {
+    creator: "Let's create a viral video about aliens and dinosaurs!",
+    coder: "I want to create a cool landing page using a canvas element like the crypto websites do for my AI therapist company building.",
+    business: "I need to write an application for a business grant."
+}
+
+export let creatorKnowledge = `Storytelling Recipe
 Explore ideas at a high level. These concepts can be applied to essays, videos, stories, musical orchestrations and so forth. They’re recursions of each other.
 
 

@@ -18,6 +18,7 @@ import Editor from "react-simple-code-editor";
 import "prismjs/components/prism-clike";
 import "prismjs/components/prism-javascript";
 import "prismjs/themes/prism.css";
+import { aiDescription, aiPlaceholderDescription } from "./Cofounder.data";
 const Container = styled.div`
   font-family: "Arial", sans-serif;
   color: #4a4a4a;
@@ -122,6 +123,57 @@ const Instruction = styled.li`
   margin-bottom: 5px;
 `;
 
+const LetterContainer = styled.div`
+  font-family: "Arial", sans-serif;
+
+  max-width: 800px;
+  //   margin: 40px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: scroll;
+`;
+
+const Paragraph = styled.p`
+  margin-bottom: 16px;
+  line-height: 1.5;
+  font-size: 16px;
+  color: black;
+`;
+
+const LetterHeader = styled.div`
+  text-align: center;
+  margin-bottom: 30px;
+`;
+
+const LetterFooter = styled.div`
+  text-align: center;
+  margin-top: 30px;
+`;
+
+const GrantApplicationLetter = ({ letterText }) => {
+  const renderParagraphs = (text) => {
+    return text
+      .split("\n")
+      .map((paragraph, index) => (
+        <Paragraph key={index}>{paragraph}</Paragraph>
+      ));
+  };
+
+  return (
+    <LetterContainer>
+      {/* <LetterHeader> */}
+      {/* Dynamic header content can be inserted here */}
+      {/* </LetterHeader> */}
+      {renderParagraphs(letterText)}
+      {/* <LetterFooter> */}
+      {/* Dynamic footer content can be inserted here */}
+      {/* </LetterFooter> */}
+    </LetterContainer>
+  );
+};
+
 function executeComponentString(componentString) {
   // Transpile the JSX string to JavaScript
   const { code } = transform(componentString, { presets: ["react"] });
@@ -166,7 +218,7 @@ export const Cofounder = ({
 }) => {
   const [formData, setFormData] = useState({
     creationDescription: "",
-    placeholder: "",
+    placeholder: aiPlaceholderDescription?.creator,
     assistant: "creator",
   });
 
@@ -181,9 +233,23 @@ export const Cofounder = ({
   const [thumbnail, setThumbnail] = useState("");
   const [contentScript, setContentScript] = useState("");
   const [isContentScriptLoading, setIsContentScriptLoading] = useState(false);
+  const [assistantDescription, setAssistantDescription] = useState(
+    aiDescription["creator"]
+  );
+  const [placeholderDescription, setPlaceholderDescription] = useState(
+    aiPlaceholderDescription?.["creator"]
+  );
+
+  const [businessWriting, setBusinessWriting] = useState("");
+  const [isBusinessWritingLoading, setIsBusinessWritingLoading] =
+    useState(false);
 
   const handleInputChange = (event) => {
     setFormData({ ...formData, [event.target.name]: event.target.value });
+    if (event.target.name === "assistant") {
+      setAssistantDescription(aiDescription[event.target.value]);
+      setPlaceholderDescription(aiPlaceholderDescription[event.target.value]);
+    }
   };
 
   const handleClearResults = () => {
@@ -191,6 +257,7 @@ export const Cofounder = ({
     setThumbnail("");
     setContentScript("");
     setCofounder("");
+    setBusinessWriting("");
   };
 
   const handleSubmit = async () => {
@@ -302,20 +369,65 @@ export const Cofounder = ({
     handleContentScriptGenerator();
   };
 
+  const handleBusinessWriting = async () => {
+    handleClearResults();
+    event.preventDefault();
+    setHasError(false);
+    setIsCofounderLoading(true);
+
+    let prompt = customInstructions(formData, "business");
+
+    const response = await fetch(postInstructions.url, {
+      method: postInstructions.method,
+      headers: postInstructions.headers,
+      body: JSON.stringify({ prompt }),
+    }).catch(() => {
+      setHasError(true);
+    });
+
+    if (response) {
+      let data = await response.json();
+      //   let result = JSON.parse(data?.bot?.content);
+      console.log("data result", data?.bot?.content);
+      //   let outcome = result.schedule;
+      let outcome = data?.bot?.content;
+      setBusinessWriting(outcome);
+    }
+    setIsCofounderLoading(false);
+  };
   return (
     <>
       <Modal centered show={isCofounderOpen} fullscreen>
         <Modal.Header style={{ backgroundColor: "black", color: "white" }}>
           <Modal.Title>Co-founder</Modal.Title>
         </Modal.Header>
+
         <Modal.Body
           style={{
             backgroundColor: "black",
             color: "white",
           }}
         >
+          <h4>
+            Select an assistant to create software components or social media
+            scripts
+          </h4>
+          <p style={{ maxWidth: "800px" }}>{assistantDescription}</p>
+
           <Form style={{ maxWidth: 700 }}>
             <Form.Group className="mb-3">
+              <Form.Group className="mb-3">
+                <Form.Label>Assistant</Form.Label>
+                <Form.Select
+                  name="assistant"
+                  value={formData.assistant}
+                  onChange={handleInputChange}
+                >
+                  <option value="coder">Coder</option>
+                  <option value="creator">Creator</option>
+                  <option value="business">Business</option>
+                </Form.Select>
+              </Form.Group>
               <Form.Label>What are we building today?</Form.Label>
               <Form.Control
                 as="textarea"
@@ -323,20 +435,10 @@ export const Cofounder = ({
                 name="creationDescription"
                 value={formData.creationDescription}
                 onChange={handleInputChange}
-                placeholder="I want a canvas component that animates a sine wave"
+                placeholder={placeholderDescription}
               />
             </Form.Group>
-            <Form.Group className="mb-3">
-              <Form.Label>Assistant</Form.Label>
-              <Form.Select
-                name="assistant"
-                value={formData.assistant}
-                onChange={handleInputChange}
-              >
-                <option value="coder">Coder</option>
-                <option value="creator">Creator</option>
-              </Form.Select>
-            </Form.Group>
+
             <Button
               variant="primary"
               type="submit"
@@ -344,6 +446,8 @@ export const Cofounder = ({
               onClick={() => {
                 formData.assistant === "creator"
                   ? handleImageGenerator()
+                  : formData.assistant === "business"
+                  ? handleBusinessWriting()
                   : handleSubmit();
               }}
             >
@@ -358,6 +462,12 @@ export const Cofounder = ({
           <br />
           {/* {thumbnail ? <img src={thumbnail} /> : null} */}
 
+          <br />
+          {businessWriting ? (
+            <div>
+              <GrantApplicationLetter letterText={businessWriting} />
+            </div>
+          ) : null}
           <br />
           {contentScript ? (
             <div>
