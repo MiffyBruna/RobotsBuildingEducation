@@ -32,7 +32,7 @@ You will need to set up a firebase project. A tutorial [can be found on Patreon]
 4. Functions
 5. Analytics
 
-### API Keys
+### API Keys 🔐
 
 1. You'll need to create an account with OpenAI's API. The key definition can be found as `OPENAI_API_KEY` in a `.env` file that you have to create under `/app/functions`
 
