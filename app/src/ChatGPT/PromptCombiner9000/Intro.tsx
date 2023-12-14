@@ -95,8 +95,8 @@ export const Intro = ({
         justifyContent: "flex-start",
         textAlign: "left",
         padding: 20,
-        maxWidth:
-          patreonObject.prompts.patreon?.icon === "►" ? "617.5px" : "82.5%",
+        maxWidth: "70.5%",
+
         borderTopLeftRadius: 30,
         borderTopRightRadius: 30,
         borderBottomRightRadius: 30,

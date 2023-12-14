@@ -8,7 +8,7 @@ const messageContainerStyle = {
   flexDirection: "column",
   textAlign: "left",
   padding: 20,
-  maxWidth: "82.5%",
+  maxWidth: "70.5%",
   minWidth: "fit-content",
   borderTopLeftRadius: 30,
   borderTopRightRadius: 30,
@@ -33,8 +33,10 @@ export const PromptMessage = ({ promptMessage, patreonObject }) => {
 
   return (
     <div style={mainContainerStyle}>
-      <div style={messageContainerStyle} id={"scrollPoint"}>
-        {displayMessage}
+      <div style={{ maxWidth: "70.5%" }}>
+        <div style={messageContainerStyle} id={"scrollPoint"}>
+          {displayMessage}
+        </div>
       </div>
     </div>
   );

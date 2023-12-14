@@ -246,8 +246,22 @@ function App() {
   };
 
   return (
-    <>
-      <div className="App" style={{ minHeight: "100vh" }}>
+    <div
+      style={{
+        margin: "auto",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+      }}
+    >
+      <div
+        className="App"
+        style={{
+          minHeight: "100dvh",
+          width: 640,
+          maxWidth: "100%",
+        }}
+      >
         <Header languageMode={languageMode} setLanguageMode={setLanguageMode} />
 
         {checkSignInStates({ authStateReference }) ? <AuthDisplay /> : null}
@@ -297,7 +311,7 @@ function App() {
           showStars={showStars}
         />
       ) : null}
-    </>
+    </div>
   );
 }
 

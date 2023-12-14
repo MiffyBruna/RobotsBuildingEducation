@@ -48,7 +48,7 @@ export const Passcode = ({ handleZeroKnowledgePassword, patreonObject }) => {
       <a
         onClick={logPromotionEvent}
         target={"_blank"}
-        href="https://www.patreon.com/RobotsBuildingEducation"
+        href="https://www.patreon.com/posts/syllabus-getting-86153437?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=postshare_creator&utm_content=join_link"
         style={whiteTextColor}
       >
         <Button variant="dark" style={buttonStyle}>

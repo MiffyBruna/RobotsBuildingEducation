@@ -17,6 +17,13 @@ import { Scheduler } from "./Scheduler/Scheduler";
 import { decentralizedEducationTranscript } from "../../App.constants";
 import { Star, StarsContainer } from "./ImpactWallet.styles";
 import { Cofounder } from "./Cofounder/Cofounder";
+import {
+  Button as AlbyButton,
+  Modal as AlbyModal,
+  launchModal as albyLaunchModal,
+  closeModal as albyCloseModal,
+} from "@getalby/bitcoin-connect-react";
+import { BitcoinManager } from "./BitcoinManager/BitcoinManager";
 
 const renderTranscriptAwards = (profileData) => {
   if (isEmpty(profileData)) {
@@ -207,7 +214,7 @@ export const ImpactWallet = ({
             🌀
           </Button>
         ) : null}
-        &nbsp; &nbsp;
+        {/* &nbsp; &nbsp;
         {!isDemo ? (
           <Button
             style={{ textShadow: "2px 2px 12px black" }}
@@ -222,7 +229,7 @@ export const ImpactWallet = ({
           >
             🖊️
           </Button>
-        ) : null}
+        ) : null} */}
         &nbsp; &nbsp;
         {!isDemo ? (
           <Button
@@ -332,6 +339,10 @@ export const ImpactWallet = ({
               width: "100%",
             }}
           >
+            <div>
+              {/* <AlbyButton onConnect={() => alert("Connected!")}></AlbyButton> */}
+              {/* <BitcoinManager /> */}
+            </div>
             <h4>Your Decentralized Transcript</h4>
             <div
               style={{
