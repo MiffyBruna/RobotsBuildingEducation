@@ -18,12 +18,14 @@ import {
 } from "./EmotionalIntelligence.data";
 import {
   customInstructions,
+  emotionSummarizer,
   formatEmotionItem,
   formatFriendlyDate,
 } from "./EmotionalIntelligence.compute";
 
 import roxanaFocusing from "../../../common/media/images/roxanaFocusing.png";
 import roxanaKind from "../../../common/media/images/roxanaKind.png";
+import { SunsetCanvas } from "./SunsetCanvas";
 
 export const EmotionalIntelligence = ({
   isEmotionalIntelligenceOpen,
@@ -38,7 +40,10 @@ export const EmotionalIntelligence = ({
   const [shouldRenderSaveButton, setShouldRenderSaveButton] = useState(false);
 
   const [isAiResponseLoading, setIsAiResponseLoading] = useState(false);
+  const [isSummarizerLoading, setIsSummarizerLoading] = useState(false);
   const [chatGptResponse, setChatGptResponse] = useState("");
+
+  const [summarizerResponse, setSummarizerResponse] = useState("");
 
   const handleEmotionSelection = async (item, shouldRunDatabase = true) => {
     let formattedItem = formatEmotionItem(item, Date.now(), "timestamp");
@@ -87,6 +92,27 @@ export const EmotionalIntelligence = ({
     setShouldRenderSaveButton(false);
   };
 
+  const reviewJourney = async () => {
+    console.log("usersEmotionsFromDB", usersEmotionsFromDB);
+    setIsSummarizerLoading(true);
+    let prompt = emotionSummarizer(JSON.stringify(usersEmotionsFromDB));
+    console.log("prompt", prompt);
+    const response = await fetch(postInstructions.url, {
+      method: postInstructions.method,
+      headers: postInstructions.headers,
+      body: JSON.stringify({ prompt }),
+    }).catch(() => {
+      setIsSummarizerLoading(false);
+    });
+
+    if (response) {
+      let data = await response.json();
+
+      setIsSummarizerLoading(false);
+      setSummarizerResponse(data?.bot?.content || "");
+    }
+  };
+
   return (
     <>
       <Modal centered show={isEmotionalIntelligenceOpen} fullscreen>
@@ -96,7 +122,7 @@ export const EmotionalIntelligence = ({
         <Modal.Body style={EmotionalIntelligenceStyles.Body}>
           <h1 style={EmotionalIntelligenceStyles.Banner}>
             <div style={EmotionalIntelligenceStyles.BannerBackground}>
-              🌌&nbsp;How do you feel today?
+              🌌&nbsp;how do you feel today?
             </div>
           </h1>
 
@@ -136,9 +162,33 @@ export const EmotionalIntelligence = ({
             <>
               <h1 style={EmotionalIntelligenceStyles.Banner}>
                 <div style={EmotionalIntelligenceStyles.BannerBackground}>
-                  The journey 🌦️
+                  the journey &nbsp;
+                  <Button variant="light" onClick={reviewJourney}>
+                    💌
+                  </Button>
                 </div>
               </h1>
+              {isSummarizerLoading ? (
+                <div style={{ textAlign: "center" }}>
+                  <RoxanaLoadingAnimation />
+                </div>
+              ) : null}
+              {!isEmpty(summarizerResponse) ? (
+                <div
+                  style={
+                    EmotionalIntelligenceStyles.SummarizerResponseContainer
+                  }
+                >
+                  <div
+                    style={{
+                      ...EmotionalIntelligenceStyles.AiResponseMessage,
+                      maxWidth: 600,
+                    }}
+                  >
+                    {summarizerResponse}
+                  </div>
+                </div>
+              ) : null}
 
               <div style={EmotionalIntelligenceStyles.JourneyContainer}>
                 {Object.keys(usersEmotionsFromDB)?.map((item) => (
@@ -240,16 +290,53 @@ export const EmotionalIntelligence = ({
             ) : null}
           </div>
           {isAiResponseLoading ? (
-            <div style={EmotionalIntelligenceStyles.TextAlignCenter}>
+            <div
+              style={{
+                ...EmotionalIntelligenceStyles.TextAlignCenter,
+
+                height: "400px",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+              }}
+            >
               <RoxanaLoadingAnimation />
             </div>
           ) : null}
 
-          {chatGptResponse || selectedEmotion?.ai ? (
+          {(chatGptResponse || selectedEmotion?.ai) && !isAiResponseLoading ? (
             <div style={EmotionalIntelligenceStyles.AiResponseContainer}>
               <div style={EmotionalIntelligenceStyles.AiResponseMessage}>
-                {chatGptResponse || selectedEmotion?.ai}
+                {chatGptResponse || selectedEmotion.ai}
               </div>
+            </div>
+          ) : !isAiResponseLoading && !selectedEmotion?.note ? (
+            <div
+              style={{
+                // backgroundColor: "rgba(0, 0, 0,1)",'
+
+                height: "400px",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              {/* take a deep breath and think positively :) */}
+              <SunsetCanvas />
+            </div>
+          ) : !shouldRenderSaveButton ? (
+            <div
+              style={{
+                height: "400px",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              {selectedEmotion.ai
+                ? selectedEmotion?.ai
+                : "AI assistance was not used."}
             </div>
           ) : null}
         </Modal.Body>

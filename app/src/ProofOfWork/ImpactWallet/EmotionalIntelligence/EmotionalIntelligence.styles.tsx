@@ -99,6 +99,7 @@ export const EmotionalIntelligenceStyles = {
     color: "white",
     borderRight: "5px solid lavender",
     borderLeft: "5px solid lavender",
+    height: 625,
   },
 
   EmotionFooter: {
@@ -126,12 +127,20 @@ export const EmotionalIntelligenceStyles = {
     justifyContent: "center",
     padding: 20,
     textShadow: "1px 1px 5px black",
-    height: 300,
+    height: 425,
+    overflow: "scroll",
+  },
+  SummarizerResponseContainer: {
+    display: "flex",
+    justifyContent: "center",
+    padding: 20,
+    textShadow: "1px 1px 5px black",
+    minHeight: 350,
     overflow: "scroll",
   },
 
   AiResponseMessage: {
-    backgroundColor: "#0C84FF",
+    backgroundColor: "#2C2C2E",
     height: "fit-content",
     padding: 15,
     borderTopLeftRadius: 30,

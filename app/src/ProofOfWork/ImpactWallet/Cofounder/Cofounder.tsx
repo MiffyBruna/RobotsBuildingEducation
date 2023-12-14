@@ -1,5 +1,6 @@
 //@ts-nocheck
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import isEmpty from "lodash/isEmpty";
 import { Button, Modal, Form } from "react-bootstrap";
 import {
   RoxanaLoadingAnimation,
@@ -18,7 +19,11 @@ import Editor from "react-simple-code-editor";
 import "prismjs/components/prism-clike";
 import "prismjs/components/prism-javascript";
 import "prismjs/themes/prism.css";
-import { aiDescription, aiPlaceholderDescription } from "./Cofounder.data";
+import {
+  aiDescription,
+  aiPlaceholderDescription,
+  executiveAssistantKnowledge,
+} from "./Cofounder.data";
 const Container = styled.div`
   font-family: "Arial", sans-serif;
   color: #4a4a4a;
@@ -220,8 +225,10 @@ export const Cofounder = ({
     creationDescription: "",
     placeholder: aiPlaceholderDescription?.creator,
     assistant: "creator",
+    pace: "quarterly",
   });
 
+  // console.log("databaseUserDocument", userStateReference);
   const [cofounder, setCofounder] = useState(``);
   const [isCofounderLoading, setIsCofounderLoading] = useState(false);
 
@@ -243,6 +250,11 @@ export const Cofounder = ({
   const [businessWriting, setBusinessWriting] = useState("");
   const [isBusinessWritingLoading, setIsBusinessWritingLoading] =
     useState(false);
+
+  const [schedule, setSchedule] = useState([]);
+
+  const [isScheduleLoading, setIsScheduleLoading] = useState(false);
+  const [isSaveLoading, setIsSaveLoading] = useState(false);
 
   const handleInputChange = (event) => {
     setFormData({ ...formData, [event.target.name]: event.target.value });
@@ -266,12 +278,17 @@ export const Cofounder = ({
     setHasError(false);
     setIsCofounderLoading(true);
 
-    let prompt = customInstructions(formData, "cofounder");
+    let assistantType =
+      formData.assistant === "assistant" ? "assistant" : "cofounder";
+    let prompt = customInstructions(formData, assistantType);
 
     const response = await fetch(postInstructions.url, {
       method: postInstructions.method,
       headers: postInstructions.headers,
-      body: JSON.stringify({ prompt }),
+      body: JSON.stringify({
+        prompt,
+        isJsonMode: formData.assistant === "assistant",
+      }),
     }).catch(() => {
       setHasError(true);
     });
@@ -279,7 +296,7 @@ export const Cofounder = ({
     if (response) {
       let data = await response.json();
       //   let result = JSON.parse(data?.bot?.content);
-      console.log("data result", data?.bot?.content);
+
       //   let outcome = result.schedule;
       let outcome = data?.bot?.content;
       setCofounder(outcome);
@@ -328,7 +345,7 @@ export const Cofounder = ({
     if (response) {
       let data = await response.json();
       let result = JSON.parse(data?.bot?.content);
-      console.log("RESULT", result);
+
       let outcome = result.result.script;
       setContentScript(outcome);
     }
@@ -388,13 +405,67 @@ export const Cofounder = ({
     if (response) {
       let data = await response.json();
       //   let result = JSON.parse(data?.bot?.content);
-      console.log("data result", data?.bot?.content);
+
       //   let outcome = result.schedule;
       let outcome = data?.bot?.content;
       setBusinessWriting(outcome);
     }
     setIsCofounderLoading(false);
   };
+
+  const handleSubmitSchedule = async () => {
+    handleClearResults();
+    event.preventDefault();
+    setHasError(false);
+    setIsCofounderLoading(true);
+
+    let prompt = customInstructions(formData, "assistant");
+
+    const response = await fetch(postInstructions.url, {
+      method: postInstructions.method,
+      headers: postInstructions.headers,
+      body: JSON.stringify({
+        prompt,
+        isJsonMode: true,
+      }),
+    }).catch(() => {
+      setHasError(true);
+    });
+
+    if (response) {
+      let data = await response.json();
+      let result = JSON.parse(data?.bot?.content);
+      let outcome = result.schedule;
+      setSchedule(outcome);
+    }
+    setIsCofounderLoading(false);
+  };
+
+  const handleSaveSchedule = async () => {
+    setIsSaveLoading(true);
+
+    let document = userStateReference.databaseUserDocument;
+
+    await updateDoc(userStateReference.userDocumentReference, {
+      ...document,
+      schedule: schedule,
+    });
+
+    userStateReference.setDatabaseUserDocument((prevDoc) => ({
+      ...prevDoc,
+      schedule: schedule,
+    }));
+
+    setIsSaveLoading(false);
+  };
+
+  let mapping =
+    schedule?.length > 0
+      ? schedule
+      : userStateReference?.databaseUserDocument?.schedule;
+
+  // console.log("schedule", schedule);
+  // console.log("map", mapping);
   return (
     <>
       <Modal centered show={isCofounderOpen} fullscreen>
@@ -409,8 +480,7 @@ export const Cofounder = ({
           }}
         >
           <h4>
-            Select an assistant to create software components or social media
-            scripts
+            Select an assistant to help you solve business problems quickly.
           </h4>
           <p style={{ maxWidth: "800px" }}>{assistantDescription}</p>
 
@@ -425,9 +495,11 @@ export const Cofounder = ({
                 >
                   <option value="coder">Coder</option>
                   <option value="creator">Creator</option>
-                  <option value="business">Business</option>
+                  <option value="business">Business Writer</option>
+                  <option value="assistant">Executive Assistant</option>
                 </Form.Select>
               </Form.Group>
+
               <Form.Label>What are we building today?</Form.Label>
               <Form.Control
                 as="textarea"
@@ -439,6 +511,22 @@ export const Cofounder = ({
               />
             </Form.Group>
 
+            {formData?.assistant === "assistant" ? (
+              <Form.Group className="mb-3">
+                <Form.Label>Choose your pace</Form.Label>
+                <Form.Select
+                  name="pace"
+                  value={formData.pace}
+                  onChange={handleInputChange}
+                >
+                  <option value="ASAP">ASAP</option>
+                  <option value="weekly">Weekly</option>
+                  <option value="monthly">Monthly</option>
+                  <option value="quarterly">Quarterly</option>
+                </Form.Select>
+              </Form.Group>
+            ) : null}
+
             <Button
               variant="primary"
               type="submit"
@@ -448,6 +536,8 @@ export const Cofounder = ({
                   ? handleImageGenerator()
                   : formData.assistant === "business"
                   ? handleBusinessWriting()
+                  : formData.assistant === "assistant"
+                  ? handleSubmitSchedule()
                   : handleSubmit();
               }}
             >
@@ -460,8 +550,42 @@ export const Cofounder = ({
             ? "An error occurred trying to retrieve data from OpenAI. Pls try again"
             : ""}
           <br />
-          {/* {thumbnail ? <img src={thumbnail} /> : null} */}
 
+          {!schedule ? (
+            <div className="learning-path">
+              {schedule?.length > 0 ? (
+                <Button
+                  onClick={() => handleSaveSchedule()}
+                  disabled={isSaveLoading}
+                >
+                  Save Schedule
+                </Button>
+              ) : null}
+              <br />
+
+              {isSaveLoading ? <RoxanaLoadingAnimation /> : ""}
+              <br />
+              {formData?.assistant === "assistant" &&
+                mapping?.map((module, index) => (
+                  <div key={index} className="module">
+                    <br />
+                    <h2 className="module-title">{module.subject}</h2>
+                    <b>Why:</b>&nbsp;
+                    <span className="reason">{module.reason}</span>
+                    <br />
+                    <div className="module-meta">
+                      <b>
+                        {" "}
+                        Duration:{" "}
+                        <span className="duration">{module.duration}</span>
+                      </b>
+                      <br /> <br />
+                      <p className="module-details">{module.details}</p>
+                    </div>
+                  </div>
+                ))}
+            </div>
+          ) : null}
           <br />
           {businessWriting ? (
             <div>
@@ -469,6 +593,7 @@ export const Cofounder = ({
             </div>
           ) : null}
           <br />
+          {/* {thumbnail ? <img src={thumbnail} /> : null} */}
           {contentScript ? (
             <div>
               We don't have access to DALL-E-3 yet, and DALL-E-2 is really bad

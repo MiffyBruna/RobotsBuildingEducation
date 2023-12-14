@@ -29,7 +29,8 @@ const MessageContainer = styled.div`
   justify-content: flex-start;
   padding: 20px;
   min-width: 350px;
-  max-width: 600px;
+  // max-width: 600px;
+  max-width: 70.5%;
   border-radius: 30px;
   margin: 24px 0 12px 0;
 `;
