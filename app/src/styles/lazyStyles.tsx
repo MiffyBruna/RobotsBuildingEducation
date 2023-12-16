@@ -409,3 +409,21 @@ export let textBlock = (
     boxShadow: boxShadow,
   };
 };
+
+//lol
+export let textBlock2 = (
+  backgroundColor,
+  shadowSize = 0,
+  borderRadius = 4,
+  color = "white",
+  boxShadow = null
+) => {
+  return {
+    backgroundColor: backgroundColor,
+    borderRadius: borderRadius,
+    padding: 16,
+    textShadow: `${shadowSize}px ${shadowSize}px ${shadowSize || 0}px black`,
+    color: color,
+    boxShadow: boxShadow,
+  };
+};

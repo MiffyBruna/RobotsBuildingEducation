@@ -3,7 +3,7 @@ import { LightningAddress } from "@getalby/lightning-tools";
 import { Button, Modal, launchModal } from "@getalby/bitcoin-connect-react";
 import toast, { Toaster } from "react-hot-toast";
 
-export const BitcoinManager = ({ handleZeroKnowledgePassword }) => {
+export const WalletAuth = ({ handleZeroKnowledgePassword }) => {
   const [invoice, setInvoice] = React.useState<string | undefined>(undefined);
   const [preimage, setPreimage] = React.useState<string | undefined>(undefined);
 
@@ -16,7 +16,7 @@ export const BitcoinManager = ({ handleZeroKnowledgePassword }) => {
           (
             await ln.requestInvoice({
               satoshi: 1,
-              comment: "Paid with Bitcoin Connect",
+              comment: "To Robots Building Education",
             })
           ).paymentRequest
         );
@@ -35,6 +35,7 @@ export const BitcoinManager = ({ handleZeroKnowledgePassword }) => {
         throw new Error("No invoice available");
       }
       const result = await window.webln.sendPayment(invoice);
+      console.log("payment result", result);
       setPreimage(result?.preimage);
       if (!result?.preimage) {
         throw new Error("Payment failed. Please try again");
@@ -44,16 +45,19 @@ export const BitcoinManager = ({ handleZeroKnowledgePassword }) => {
     }
   }
 
+  console.log("window webln", window?.webln);
   return (
     <>
       <Toaster />
 
       <Button
         appName="Robots Building Education"
-        onConnect={() => toast("Connected!")}
-        onDisconnect={() => handleZeroKnowledgePassword(null, true, null)}
+        onConnect={() => {
+          localStorage.setItem("patreonPasscode", "bitcoin");
+          toast("Connected!");
+          handleZeroKnowledgePassword(null, null, true);
+        }}
       />
-      <br />
     </>
   );
 };

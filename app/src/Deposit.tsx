@@ -3,7 +3,7 @@ import { LightningAddress } from "@getalby/lightning-tools";
 import { Button, Modal, launchModal } from "@getalby/bitcoin-connect-react";
 import toast, { Toaster } from "react-hot-toast";
 
-export const BitcoinManager = ({ handleZeroKnowledgePassword }) => {
+export const Deposit = (depositAmount) => {
   const [invoice, setInvoice] = React.useState<string | undefined>(undefined);
   const [preimage, setPreimage] = React.useState<string | undefined>(undefined);
 
@@ -15,8 +15,8 @@ export const BitcoinManager = ({ handleZeroKnowledgePassword }) => {
         setInvoice(
           (
             await ln.requestInvoice({
-              satoshi: 1,
-              comment: "Paid with Bitcoin Connect",
+              satoshi: depositAmount || 1,
+              comment: "To Robots Building Education",
             })
           ).paymentRequest
         );
@@ -26,7 +26,7 @@ export const BitcoinManager = ({ handleZeroKnowledgePassword }) => {
     })();
   }, []);
 
-  async function payInvoice() {
+  let payInvoice = async () => {
     try {
       if (!window.webln || !window.webln) {
         throw new Error("Please connect your wallet");
@@ -35,25 +35,18 @@ export const BitcoinManager = ({ handleZeroKnowledgePassword }) => {
         throw new Error("No invoice available");
       }
       const result = await window.webln.sendPayment(invoice);
-      setPreimage(result?.preimage);
+
       if (!result?.preimage) {
         throw new Error("Payment failed. Please try again");
       }
+
+      return result;
     } catch (error) {
-      alert(error);
+      alert(
+        "Unable to complete Bitcoin transaction. Make sure you're connected and have deposits available."
+      );
     }
-  }
+  };
 
-  return (
-    <>
-      <Toaster />
-
-      <Button
-        appName="Robots Building Education"
-        onConnect={() => toast("Connected!")}
-        onDisconnect={() => handleZeroKnowledgePassword(null, true, null)}
-      />
-      <br />
-    </>
-  );
+  return payInvoice;
 };

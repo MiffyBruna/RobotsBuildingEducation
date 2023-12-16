@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import isEmpty from "lodash/isEmpty";
 
 import "./App.css";
 
@@ -129,9 +130,31 @@ function App() {
    * - sets success password flag to true
    * - logs event to anlytics
    */
-  const handleZeroKnowledgePassword = (event) => {
-    if (validPasscodes.includes(event.target.value)) {
+  const handleZeroKnowledgePassword = (
+    event,
+    logout = false,
+    bitcoin = false
+  ) => {
+    console.log("bitcoin", bitcoin);
+
+    if (validPasscodes.includes(event?.target?.value)) {
       localStorage.setItem("patreonPasscode", event.target.value);
+      uiStateReference.setPatreonObject({});
+      authStateReference.setIsZeroKnowledgeUser(true);
+      logEvent(analytics, "login", { method: "zeroKnowledge" });
+    }
+
+    if (logout) {
+      uiStateReference.setPatreonObject({});
+      authStateReference.setIsZeroKnowledgeUser(false);
+      logEvent(analytics, "login", { method: "zeroKnowledge" });
+    }
+
+    if (bitcoin) {
+      localStorage.setItem(
+        "patreonPasscode",
+        import.meta.env.VITE_BITCOIN_PASSCODE
+      );
       uiStateReference.setPatreonObject({});
       authStateReference.setIsZeroKnowledgeUser(true);
       logEvent(analytics, "login", { method: "zeroKnowledge" });
@@ -170,11 +193,17 @@ function App() {
     // console.log("DID", aliceDid);
   };
   useEffect(() => {
-    connectDID();
+    console.log("running effect...");
+    // connectDID();
 
     const storedPasscode = localStorage.getItem("patreonPasscode");
+
     authStateReference.setIsZeroKnowledgeUser(
-      validPasscodes.includes(storedPasscode)
+      !isEmpty(window?.webln?.walletPubkey) ||
+        localStorage.getItem("patreonPasscode") ===
+          import.meta.env.VITE_PATREON_PASSCODE ||
+        localStorage.getItem("patreonPasscode") ===
+          import.meta.env.VITE_BITCOIN_PASSCODE
     );
 
     onAuthStateChanged(auth, (user) => {
@@ -262,7 +291,11 @@ function App() {
           maxWidth: "100%",
         }}
       >
-        <Header languageMode={languageMode} setLanguageMode={setLanguageMode} />
+        <Header
+          languageMode={languageMode}
+          setLanguageMode={setLanguageMode}
+          handleZeroKnowledgePassword={handleZeroKnowledgePassword}
+        />
 
         {checkSignInStates({ authStateReference }) ? <AuthDisplay /> : null}
 
@@ -309,6 +342,7 @@ function App() {
           updateUserEmotions={updateUserEmotions}
           uiStateReference={uiStateReference}
           showStars={showStars}
+          handleZeroKnowledgePassword={handleZeroKnowledgePassword}
         />
       ) : null}
     </div>

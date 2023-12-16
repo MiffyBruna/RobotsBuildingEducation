@@ -2,10 +2,20 @@ import { useState, useEffect } from "react";
 import { LearnMore } from "./LearnMore/LearnMore";
 import robe_logo from "../common/media/images/robe_logo.png";
 import { prettyColorPalette } from "../styles/lazyStyles";
-import { Form } from "react-bootstrap";
+import { Button, Form } from "react-bootstrap";
 import { words } from "../common/words/words";
+import toast from "react-hot-toast";
+import {
+  Button as WalletButton,
+  Modal,
+  launchModal,
+} from "@getalby/bitcoin-connect-react";
 
-export const Header = ({ languageMode, setLanguageMode }) => {
+export const Header = ({
+  languageMode,
+  setLanguageMode,
+  handleZeroKnowledgePassword,
+}) => {
   // State for Language mode switch
   const [isSpanishMode, setIsSpanishMode] = useState(false);
   const [languageModeLabel, setLanguageModeLabel] = useState("English");
@@ -89,6 +99,37 @@ export const Header = ({ languageMode, setLanguageMode }) => {
       </div>
       <br />
       <LearnMore languageMode={languageMode} />
+      {localStorage.getItem("patreonPasscode") ===
+      import.meta.env.VITE_PATREON_PASSCODE ? (
+        <Button
+          variant={"dark"}
+          onClick={() => {
+            localStorage.clear();
+            handleZeroKnowledgePassword(null, true, false);
+          }}
+        >
+          Log out
+        </Button>
+      ) : null}
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        {localStorage.getItem("patreonPasscode") ===
+        import.meta.env.VITE_BITCOIN_PASSCODE ? (
+          <WalletButton
+            appName={"Robots Building Education"}
+            onConnect={() => toast("Connected!")}
+            onDisconnect={() => {
+              localStorage.clear();
+              handleZeroKnowledgePassword(null, true, null);
+            }}
+          />
+        ) : null}
+      </div>
+      <br /> <br />
     </div>
   );
 };

@@ -24,6 +24,7 @@ import {
   closeModal as albyCloseModal,
 } from "@getalby/bitcoin-connect-react";
 import { BitcoinManager } from "./BitcoinManager/BitcoinManager";
+import { getAuth, signOut } from "firebase/auth";
 
 const renderTranscriptAwards = (profileData) => {
   if (isEmpty(profileData)) {
@@ -136,20 +137,13 @@ export const ImpactWallet = ({
   showStars,
   isCofounderOpen,
   setIsCofounderOpen,
+  handleZeroKnowledgePassword,
 }) => {
   let [databaseUserDocumentCopy, setDatabaseUserDocumentCopy] = useState({});
 
   let params = useParams();
 
-  let [borderStateForBitcoinButton, setBorderStateForBitcoinButton] = useState({
-    border: "1px solid blue",
-  });
-  let [borderStateForLightningButton, setBorderStateForLightningButton] =
-    useState({ border: "1px solid blue" });
-
   useEffect(() => {
-    // mountWallet();
-
     if (params?.profileID && params?.profileID !== userAuthObject?.uid) {
       const docRef = doc(database, "users", params?.profileID);
       getDoc(docRef).then((res) => {
@@ -163,39 +157,11 @@ export const ImpactWallet = ({
     } else {
       setDatabaseUserDocumentCopy(databaseUserDocument);
     }
-  }, []);
-
-  let copyToClipboard = (network) => {
-    // Get the text field
-    let addresses = {
-      bitcoin: "39JpVJoeXkCoHN3qvCytc7RyX5AYNYiWfG",
-      lightning:
-        "lnbc1pjq4u64dqdgdshx6pqg9c8qpp5xwhu3aa37yc3fyxe4wneytm85fuja3pxjkr9ptf505pkzw9pgt5qsp5tlf279qfpnc9zml558mqdw2t4dz6duf0gunnul3ulzm9wdu2lhfq9qrsgqcqpcxqy8ayqrzjqv06k0m23t593pngl0jt7n9wznp64fqngvctz7vts8nq4tukvtljqze59vqqnqcqquqqqqqqqqqqqqqq9grzjqtsjy9p55gdceevp36fvdmrkxqvzfhy8ak2tgc5zgtjtra9xlaz97zya75qq86gqqvqqqqqqqqqqqqqq9gf02ywdfg64sknwdg63m79u25jyl586g9zqgxzrhzhc034jfas3akxwmctky7rs2tgdx894l59g39lxu4436rsv5f9r8nrlf7tag8l5qqsfu06z",
-    };
-
-    // Copy the text inside the text field
-    navigator.clipboard.writeText(addresses[network]);
-  };
-
-  let animateBorderLoading = async (button) => {
-    if (button === "bitcoin") {
-      setBorderStateForBitcoinButton({ border: "1px solid gold" });
-    } else {
-      setBorderStateForLightningButton({ border: "1px solid gold" });
-    }
-
-    const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-    await delay(750);
-
-    if (button === "bitcoin") {
-      setBorderStateForBitcoinButton({ border: "1px solid blue" });
-    } else {
-      setBorderStateForLightningButton({ border: "1px solid blue" });
-    }
-  };
+  }, [databaseUserDocument]);
 
   let impactResult = databaseUserDocumentCopy?.impact;
 
+  console.log("databaseUserDocument?.impact", databaseUserDocument?.impact);
   return (
     <>
       <div>
@@ -214,22 +180,6 @@ export const ImpactWallet = ({
             🌀
           </Button>
         ) : null}
-        {/* &nbsp; &nbsp;
-        {!isDemo ? (
-          <Button
-            style={{ textShadow: "2px 2px 12px black" }}
-            onClick={() => {
-              logEvent(analytics, "select_content", {
-                content_type: "button",
-                item_id: "Scheduler",
-              });
-              setIsSchedulerOpen(true);
-            }}
-            variant="secondary"
-          >
-            🖊️
-          </Button>
-        ) : null} */}
         &nbsp; &nbsp;
         {!isDemo ? (
           <Button
@@ -309,6 +259,7 @@ export const ImpactWallet = ({
         </div>
       </div>
 
+      {/* need to conditionall render this */}
       <Modal centered show={isImpactWalletOpen} fullscreen>
         <Modal.Header
           closeButton
@@ -341,8 +292,19 @@ export const ImpactWallet = ({
           >
             <div>
               {/* <AlbyButton onConnect={() => alert("Connected!")}></AlbyButton> */}
-              {/* <BitcoinManager /> */}
+              <BitcoinManager
+                handleZeroKnowledgePassword={handleZeroKnowledgePassword}
+              />
+
+              <div>
+                <h1>The Reserve</h1>
+                <h3>invested {globalReserveObject?.invested || "N/A"}</h3>
+
+                <h6>last updated {globalReserveObject?.last_updated}</h6>
+                <div></div>
+              </div>
             </div>
+            <br />
             <h4>Your Decentralized Transcript</h4>
             <div
               style={{
@@ -381,6 +343,7 @@ export const ImpactWallet = ({
               Work Done By You
               <br />
               {impactResult}
+              {/* / {getGlobalImpact()} */}
               <ProgressBar
                 style={{
                   backgroundColor: "black",
@@ -453,68 +416,6 @@ export const ImpactWallet = ({
               and interfaces should allow us to rewire education services,
               finance and content for a new era of software.
             </p>
-
-            <div>
-              <h1>The Reserve</h1>
-              <h3>invested {globalReserveObject?.invested || "N/A"}</h3>
-
-              <h6>last updated {globalReserveObject?.last_updated}</h6>
-              <div></div>
-              <img src={sheilferBitcoin} width={300} height={350} />
-
-              <br />
-              <br />
-              <br />
-              <b>To track transaction or send without QR</b>
-              <br />
-              <br />
-              <div
-                id="bitcoin"
-                onClick={() => {
-                  logEvent(analytics, "select_promotion", {
-                    creative_name: `Bitcoin Address Button`,
-                    creative_slot: `Bitcoin Address Slot`,
-                    promotion_id: `Robots Building Education Bitcoin AddressSlot`,
-                    promotion_name: "advertising_launch",
-                  });
-                  copyToClipboard("bitcoin");
-                }}
-                style={{ transition: "0.3s all ease-in-out" }}
-              >
-                <Button
-                  variant="dark"
-                  onClick={() => animateBorderLoading("bitcoin")}
-                  style={borderStateForBitcoinButton}
-                >
-                  ₿ Copy Bitcoin Address
-                </Button>
-              </div>
-              <br />
-              <div
-                id="lightning"
-                onClick={() => {
-                  logEvent(analytics, "select_promotion", {
-                    creative_name: `Lightning Address Button`,
-                    creative_slot: `Lightning Address Slot`,
-                    promotion_id: `Robots Building Education Lightning Address Slot`,
-                    promotion_name: "advertising_launch",
-                  });
-
-                  copyToClipboard("lightning");
-                }}
-                style={{ transition: "0.3s all ease-in-out" }}
-              >
-                <Button
-                  variant="dark"
-                  style={borderStateForLightningButton}
-                  onClick={() => animateBorderLoading("lightning")}
-                >
-                  ⚡ Copy Lightning Address
-                </Button>
-              </div>
-
-              <br />
-            </div>
 
             <br />
           </div>
