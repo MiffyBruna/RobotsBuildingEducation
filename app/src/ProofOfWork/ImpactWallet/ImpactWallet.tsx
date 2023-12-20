@@ -135,6 +135,7 @@ export const ImpactWallet = ({
   isSchedulerOpen,
   userStateReference,
   showStars,
+  showZap,
   isCofounderOpen,
   setIsCofounderOpen,
   handleZeroKnowledgePassword,
@@ -238,6 +239,13 @@ export const ImpactWallet = ({
               {[...Array(10)].map((_, index) => (
                 <Star className="star" key={index}>
                   ✨
+                </Star>
+              ))}
+            </StarsContainer>
+            <StarsContainer className={showZap ? "animate" : ""}>
+              {[...Array(10)].map((_, index) => (
+                <Star className="zap" key={index}>
+                  ⚡
                 </Star>
               ))}
             </StarsContainer>

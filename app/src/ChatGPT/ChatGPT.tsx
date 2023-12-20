@@ -38,6 +38,7 @@ const ChatGPT = ({
   isDemo = false,
   moduleName,
   handleScheduler,
+  handleZap,
 }: Record<string, any>) => {
   const [shouldRenderIntro, setShouldRenderIntro] = useState(true);
   const [promptMessage, setPromptMessage] = useState("");
@@ -161,6 +162,7 @@ const ChatGPT = ({
         loadingMessage={loadingMessage}
         patreonObject={patreonObject}
         handleSubmit={handleSubmit}
+        handleZap={handleZap}
       />
     </div>
   );

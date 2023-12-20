@@ -15,7 +15,8 @@ export const Deposit = (depositAmount) => {
         setInvoice(
           (
             await ln.requestInvoice({
-              satoshi: depositAmount || 1,
+              //   satoshi: depositAmount || 1,
+              satoshi: 1,
               comment: "To Robots Building Education",
             })
           ).paymentRequest
@@ -43,7 +44,7 @@ export const Deposit = (depositAmount) => {
       return result;
     } catch (error) {
       alert(
-        "Unable to complete Bitcoin transaction. Make sure you're connected and have deposits available."
+        "Unable to complete Bitcoin transaction. Check your connection, transaction limits or your wallet's balance."
       );
     }
   };

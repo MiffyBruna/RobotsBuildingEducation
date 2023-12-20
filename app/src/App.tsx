@@ -56,6 +56,7 @@ function App() {
   // handles language switching
   let [languageMode, setLanguageMode] = useState(words["English"]);
   const [showStars, setShowStars] = useState(false);
+  const [showZap, setShowZap] = useState(false);
 
   /**
    *
@@ -274,6 +275,31 @@ function App() {
     setTimeout(() => setShowStars(false), 3000);
   };
 
+  const handleZap = async (zapEvent) => {
+    setShowZap(true);
+
+    // Randomize animation properties for each star
+    document.querySelectorAll(".zap").forEach((star) => {
+      const scale = Math.random() * 1.5; // Random scale
+      const x = Math.random() * 200 - 100; // Random x-position
+      const y = Math.random() * 200 - 100; // Random y-position
+      const duration = Math.random() * 1 + 0.5; // Random duration
+
+      star.style.opacity = 1;
+      star.style.transform = `scale(${scale}) translate(${x}px, ${y}px)`;
+      star.style.transition = `transform ${duration}s ease-in-out, opacity ${duration}s ease-in-out`;
+
+      // Reset the star after the animation
+      setTimeout(() => {
+        star.style.opacity = 0;
+        star.style.transform = "none";
+      }, duration * 1000);
+    });
+
+    // Reset the whole animation after some time
+    setTimeout(() => setShowZap(false), 3000);
+  };
+
   return (
     <div
       style={{
@@ -328,6 +354,7 @@ function App() {
               userStateReference={userStateReference}
               globalStateReference={globalStateReference}
               handleScheduler={handleScheduler}
+              handleZap={handleZap}
             />
           </>
         ) : null}
@@ -342,6 +369,7 @@ function App() {
           updateUserEmotions={updateUserEmotions}
           uiStateReference={uiStateReference}
           showStars={showStars}
+          showZap={showZap}
           handleZeroKnowledgePassword={handleZeroKnowledgePassword}
         />
       ) : null}

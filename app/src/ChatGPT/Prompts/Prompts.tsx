@@ -17,6 +17,7 @@ const PromptButton = ({
   loading,
   onClick,
   prompt,
+  handleZap,
 }) => {
   console.log("running prompt");
   if (
@@ -32,9 +33,9 @@ const PromptButton = ({
         style={{ display: loading ? "none" : "flex" }}
         onClick={(e) => {
           data().then((response) => {
-            console.log("response....", response);
             if (response?.preimage) {
               onClick(e);
+              handleZap("prompt");
             }
           });
         }}
@@ -79,7 +80,12 @@ const ModalContent = ({ patreonObject }) => (
   </>
 );
 
-export const Prompts = ({ loadingMessage, patreonObject, handleSubmit }) => {
+export const Prompts = ({
+  loadingMessage,
+  patreonObject,
+  handleSubmit,
+  handleZap,
+}) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   if (isEmpty(patreonObject)) return null;
@@ -107,6 +113,7 @@ export const Prompts = ({ loadingMessage, patreonObject, handleSubmit }) => {
             loading={!!loadingMessage}
             prompt={prompt}
             onClick={(e) => !loadingMessage && handleSubmit(e, prompt, type)}
+            handleZap={handleZap}
           />
         );
       })}
