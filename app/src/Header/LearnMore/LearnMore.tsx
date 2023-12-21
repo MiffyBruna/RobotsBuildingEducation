@@ -1,8 +1,5 @@
 import { useState } from "react";
 import { Button, Modal } from "react-bootstrap";
-import khanac from "./media/khanac.jpeg";
-import snow from "./media/snow.jpeg";
-import phillyd from "./media/phillyd.jpeg";
 
 import { logEvent } from "firebase/analytics";
 import { analytics } from "../../database/firebaseResources";

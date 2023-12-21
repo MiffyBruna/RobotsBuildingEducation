@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import isEmpty from "lodash/isEmpty";
 
 import "./App.css";
 
@@ -55,6 +56,7 @@ function App() {
   // handles language switching
   let [languageMode, setLanguageMode] = useState(words["English"]);
   const [showStars, setShowStars] = useState(false);
+  const [showZap, setShowZap] = useState(false);
 
   /**
    *
@@ -129,9 +131,31 @@ function App() {
    * - sets success password flag to true
    * - logs event to anlytics
    */
-  const handleZeroKnowledgePassword = (event) => {
-    if (validPasscodes.includes(event.target.value)) {
+  const handleZeroKnowledgePassword = (
+    event,
+    logout = false,
+    bitcoin = false
+  ) => {
+    console.log("bitcoin", bitcoin);
+
+    if (validPasscodes.includes(event?.target?.value)) {
       localStorage.setItem("patreonPasscode", event.target.value);
+      uiStateReference.setPatreonObject({});
+      authStateReference.setIsZeroKnowledgeUser(true);
+      logEvent(analytics, "login", { method: "zeroKnowledge" });
+    }
+
+    if (logout) {
+      uiStateReference.setPatreonObject({});
+      authStateReference.setIsZeroKnowledgeUser(false);
+      logEvent(analytics, "login", { method: "zeroKnowledge" });
+    }
+
+    if (bitcoin) {
+      localStorage.setItem(
+        "patreonPasscode",
+        import.meta.env.VITE_BITCOIN_PASSCODE
+      );
       uiStateReference.setPatreonObject({});
       authStateReference.setIsZeroKnowledgeUser(true);
       logEvent(analytics, "login", { method: "zeroKnowledge" });
@@ -170,11 +194,17 @@ function App() {
     // console.log("DID", aliceDid);
   };
   useEffect(() => {
-    connectDID();
+    console.log("running effect...");
+    // connectDID();
 
     const storedPasscode = localStorage.getItem("patreonPasscode");
+
     authStateReference.setIsZeroKnowledgeUser(
-      validPasscodes.includes(storedPasscode)
+      !isEmpty(window?.webln?.walletPubkey) ||
+        localStorage.getItem("patreonPasscode") ===
+          import.meta.env.VITE_PATREON_PASSCODE ||
+        localStorage.getItem("patreonPasscode") ===
+          import.meta.env.VITE_BITCOIN_PASSCODE
     );
 
     onAuthStateChanged(auth, (user) => {
@@ -245,6 +275,31 @@ function App() {
     setTimeout(() => setShowStars(false), 3000);
   };
 
+  const handleZap = async (zapEvent) => {
+    setShowZap(true);
+
+    // Randomize animation properties for each star
+    document.querySelectorAll(".zap").forEach((star) => {
+      const scale = Math.random() * 1.5; // Random scale
+      const x = Math.random() * 200 - 100; // Random x-position
+      const y = Math.random() * 200 - 100; // Random y-position
+      const duration = Math.random() * 1 + 0.5; // Random duration
+
+      star.style.opacity = 1;
+      star.style.transform = `scale(${scale}) translate(${x}px, ${y}px)`;
+      star.style.transition = `transform ${duration}s ease-in-out, opacity ${duration}s ease-in-out`;
+
+      // Reset the star after the animation
+      setTimeout(() => {
+        star.style.opacity = 0;
+        star.style.transform = "none";
+      }, duration * 1000);
+    });
+
+    // Reset the whole animation after some time
+    setTimeout(() => setShowZap(false), 3000);
+  };
+
   return (
     <div
       style={{
@@ -262,7 +317,11 @@ function App() {
           maxWidth: "100%",
         }}
       >
-        <Header languageMode={languageMode} setLanguageMode={setLanguageMode} />
+        <Header
+          languageMode={languageMode}
+          setLanguageMode={setLanguageMode}
+          handleZeroKnowledgePassword={handleZeroKnowledgePassword}
+        />
 
         {checkSignInStates({ authStateReference }) ? <AuthDisplay /> : null}
 
@@ -295,6 +354,7 @@ function App() {
               userStateReference={userStateReference}
               globalStateReference={globalStateReference}
               handleScheduler={handleScheduler}
+              handleZap={handleZap}
             />
           </>
         ) : null}
@@ -309,6 +369,8 @@ function App() {
           updateUserEmotions={updateUserEmotions}
           uiStateReference={uiStateReference}
           showStars={showStars}
+          showZap={showZap}
+          handleZeroKnowledgePassword={handleZeroKnowledgePassword}
         />
       ) : null}
     </div>

@@ -17,6 +17,8 @@ export const ProofOfWork = ({
   //some redundancy since I haven't refactored these values yet.
   userStateReference,
   showStars,
+  showZap,
+  handleZeroKnowledgePassword,
 }) => {
   const [isImpactWalletOpen, setIsImpactWalletOpen] = useState(false);
   const [isEmotionalIntelligenceOpen, setIsEmotionalIntelligenceOpen] =
@@ -68,8 +70,10 @@ export const ProofOfWork = ({
         isSchedulerOpen={isSchedulerOpen}
         userStateReference={userStateReference}
         showStars={showStars}
+        showZap={showZap}
         isCofounderOpen={isCofounderOpen}
         setIsCofounderOpen={setIsCofounderOpen}
+        handleZeroKnowledgePassword={handleZeroKnowledgePassword}
       />
     </div>
   );

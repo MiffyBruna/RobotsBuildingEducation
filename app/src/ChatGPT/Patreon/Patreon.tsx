@@ -1,6 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import MarkdownRenderer from "./MarkdownRenderer/MarkdownRenderer";
 
+import { updateImpact } from "../../App.compute";
+import { useZap } from "../../App.hooks";
+
 // Style object for the video element
 const videoStyle = {
   width: "100%",
@@ -50,14 +53,47 @@ const renderMarkdown = (patreonObject, handleScheduler) => (
 );
 
 // Main Patreon component
-const Patreon = ({ patreonObject, isAutoPlay = false, handleScheduler }) => {
+const Patreon = ({
+  patreonObject,
+  isAutoPlay = false,
+  handleScheduler,
+  userStateReference,
+  globalStateReference,
+  handleZap,
+}) => {
+  const zapAmount = 1;
+  let zap = useZap(zapAmount, "Robots Building Education Video");
   const videoRef = useRef(null);
   let [videoDurationDetection, setVideoDurationDetection] = useState(false);
 
   useEffect(() => {
     const videoElement = videoRef.current;
+    let depositInterval;
+
     const handlePlay = () => {
       console.log("Video is playing", patreonObject);
+      if (
+        localStorage.getItem("patreonPasscode") ===
+        import.meta.env.VITE_BITCOIN_PASSCODE
+      ) {
+        depositInterval = setInterval(() => {
+          zap().then((response) => {
+            if (response?.preimage) {
+              console.log("running");
+              updateImpact(zapAmount, userStateReference, globalStateReference);
+              handleZap("video");
+            }
+          });
+        }, 15000);
+      }
+    };
+
+    const handlePauseOrEnd = () => {
+      // Clear interval when the video is paused or ended)
+      if (depositInterval) {
+        console.log("clearing after play?X_X");
+        clearInterval(depositInterval);
+      }
     };
 
     const checkVideoProgress = () => {
@@ -75,18 +111,25 @@ const Patreon = ({ patreonObject, isAutoPlay = false, handleScheduler }) => {
 
     if (videoElement) {
       videoElement.addEventListener("play", handlePlay);
-      if (!videoDurationDetection)
+      videoElement.addEventListener("pause", handlePauseOrEnd);
+      videoElement.addEventListener("ended", handlePauseOrEnd);
+
+      if (!videoDurationDetection) {
         videoElement.addEventListener("timeupdate", checkVideoProgress);
+      }
     }
 
     // Cleanup
     return () => {
       if (videoElement) {
         videoElement.removeEventListener("play", handlePlay);
+        videoElement.removeEventListener("pause", handlePauseOrEnd);
+        videoElement.removeEventListener("ended", handlePauseOrEnd);
         videoElement.removeEventListener("timeupdate", checkVideoProgress);
       }
+      if (depositInterval) clearInterval(depositInterval);
     };
-  }, [videoDurationDetection]);
+  }, [videoDurationDetection, zap]);
 
   // Function to determine which type of content to display
   const determineFileView = () => {
