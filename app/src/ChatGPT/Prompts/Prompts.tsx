@@ -6,7 +6,7 @@ import { logEvent } from "firebase/analytics";
 import { analytics } from "../../database/firebaseResources";
 import { StyledPromptButton } from "../../styles/lazyStyles";
 import { computeTotalImpactFromPrompt } from "../ChatGPT.compute";
-import { Deposit } from "../../Deposit";
+import { useZap } from "../../App.hooks";
 
 // Reusable Button Component
 const PromptButton = ({
@@ -25,8 +25,8 @@ const PromptButton = ({
     import.meta.env.VITE_BITCOIN_PASSCODE
   ) {
     let satoshis = computeTotalImpactFromPrompt(patreonObject, type);
-    // let data = Deposit(satoshis);
-    let data = Deposit(1);
+    // let data = useZap(satoshis);
+    let data = useZap(1);
     return (
       <StyledPromptButton
         tabindex="0"

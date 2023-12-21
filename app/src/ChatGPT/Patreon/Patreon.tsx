@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import MarkdownRenderer from "./MarkdownRenderer/MarkdownRenderer";
-import { Deposit } from "../../Deposit";
+
 import { updateImpact } from "../../App.compute";
+import { useZap } from "../../App.hooks";
 
 // Style object for the video element
 const videoStyle = {
@@ -61,7 +62,7 @@ const Patreon = ({
   handleZap,
 }) => {
   const zapAmount = 1;
-  let zap = Deposit(zapAmount, "Robots Building Education Video");
+  let zap = useZap(zapAmount, "Robots Building Education Video");
   const videoRef = useRef(null);
   let [videoDurationDetection, setVideoDurationDetection] = useState(false);
 

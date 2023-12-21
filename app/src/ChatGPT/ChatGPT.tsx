@@ -11,7 +11,7 @@ import {
   computeTotalImpactFromPrompt,
 } from "./ChatGPT.compute";
 import { Intro } from "./PromptCombiner9000/Intro";
-import { Deposit } from "../Deposit";
+import { Deposit } from "../useZap";
 
 const logAnalyticsEvent = (item_list_id, item_id, item_name) => {
   logEvent(analytics, "select_item", {

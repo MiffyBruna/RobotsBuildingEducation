@@ -3,7 +3,7 @@ import { logEvent } from "firebase/analytics";
 import { analytics } from "../database/firebaseResources";
 import { ui } from "../common/uiSchema";
 import ChatGPT from "../ChatGPT/ChatGPT";
-import { Deposit } from "../Deposit";
+import { Deposit } from "../useZap";
 import { WalletAuth } from "../WalletAuth";
 import { japaneseThemePalette, textBlock } from "../styles/lazyStyles";
 
@@ -43,6 +43,16 @@ const renderPatreonContent = (patreonObject, languageMode) => {
 export const Passcode = ({ handleZeroKnowledgePassword, patreonObject }) => {
   return (
     <div>
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <div style={{ backgroundColor: "maroon", width: "300px", padding: 20 }}>
+          ⚠️ If you clicked the Tiktok link, please use your browser when
+          logging in or your attempt will be blocked by a browser security issue
+          from Google (big sad, ruins this aesthetic). The menu on this screen
+          should have an option to open in browser.
+        </div>
+      </div>
+      <br />
+      <br />
       <h2>Enter Passcode</h2>
       <input
         onChange={(event) => handleZeroKnowledgePassword(event, false, false)}
