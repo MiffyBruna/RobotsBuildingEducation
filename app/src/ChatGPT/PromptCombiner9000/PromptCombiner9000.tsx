@@ -57,13 +57,24 @@ const StyledPromptHeaderButton = styled.button`
   color: white;
 `;
 
-const renderContent = (type, response, patreonObject, handleScheduler) => {
+const renderContent = (
+  type,
+  response,
+  patreonObject,
+  handleScheduler,
+  userStateReference,
+  globalStateReference,
+  handleZap
+) => {
   switch (type) {
     case "patreon":
       return (
         <Patreon
           patreonObject={patreonObject}
           handleScheduler={handleScheduler}
+          userStateReference={userStateReference}
+          globalStateReference={globalStateReference}
+          handleZap={handleZap}
         />
       );
     case "practice":
@@ -103,6 +114,9 @@ export const PromptCombiner9000 = ({
   parentVisibility,
   setParentVisibility,
   handleScheduler,
+  userStateReference,
+  globalStateReference,
+  handleZap,
 }) => {
   const [promptVisibility, setPromptVisibility] = useState("flex");
   if (isEmpty(patreonObject)) {
@@ -156,7 +170,15 @@ export const PromptCombiner9000 = ({
         <FlexBox>
           {loadingMessage.length < 1 &&
             response &&
-            renderContent(type, response, patreonObject, handleScheduler)}
+            renderContent(
+              type,
+              response,
+              patreonObject,
+              handleScheduler,
+              userStateReference,
+              globalStateReference,
+              handleZap
+            )}
         </FlexBox>
       </MessageContainer>
     </Wrapper>

@@ -3,7 +3,10 @@ import { LightningAddress } from "@getalby/lightning-tools";
 import { Button, Modal, launchModal } from "@getalby/bitcoin-connect-react";
 import toast, { Toaster } from "react-hot-toast";
 
-export const Deposit = (depositAmount) => {
+export const Deposit = (
+  depositAmount = 1,
+  depositMessage = "Robots Building Education Lecture"
+) => {
   const [invoice, setInvoice] = React.useState<string | undefined>(undefined);
   const [preimage, setPreimage] = React.useState<string | undefined>(undefined);
 
@@ -15,9 +18,8 @@ export const Deposit = (depositAmount) => {
         setInvoice(
           (
             await ln.requestInvoice({
-              //   satoshi: depositAmount || 1,
-              satoshi: 1,
-              comment: "To Robots Building Education",
+              satoshi: depositAmount,
+              comment: depositMessage,
             })
           ).paymentRequest
         );
@@ -43,6 +45,8 @@ export const Deposit = (depositAmount) => {
 
       return result;
     } catch (error) {
+      console.log("error", error);
+      console.log("{error}", { error });
       alert(
         "Unable to complete Bitcoin transaction. Check your connection, transaction limits or your wallet's balance."
       );

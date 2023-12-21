@@ -44,6 +44,8 @@ export const ChatGptWrapper = ({
         moduleName={moduleName}
         handleScheduler={handleScheduler}
         handleZap={handleZap}
+        userStateReference={userStateReference}
+        globalStateReference={globalStateReference}
       />
     </div>
   );

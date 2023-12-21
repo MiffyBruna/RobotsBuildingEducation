@@ -1,4 +1,6 @@
 import { collection, doc, getDoc, getDocs, setDoc } from "firebase/firestore";
+import isEmpty from 'lodash/isEmpty';
+import { updateDoc } from "firebase/firestore";
 import { database } from "./database/firebaseResources";
 import { getGlobalImpact } from "./common/uiSchema";
 import { decentralizedEducationTranscript } from "./App.constants";
@@ -100,3 +102,31 @@ export const checkActiveUserStates = ({ userStateReference, authStateReference }
   else
     return false
 }
+
+export const updateImpact = async (
+  impact,
+  userStateReference,
+  globalStateReference,
+) => {
+  const {databaseUserDocument, userDocumentReference, setDatabaseUserDocument} = userStateReference;
+  const { globalImpactCounter,globalDocumentReference, setGlobalImpactCounter} = globalStateReference;
+  if (!isEmpty(databaseUserDocument) || !isEmpty(userDocumentReference)) {
+    console.log("running database document update...");
+
+    await updateDoc(userDocumentReference, {
+      impact: databaseUserDocument?.impact + impact,
+    });
+
+    await updateDoc(globalDocumentReference, {
+      total: globalImpactCounter + impact,
+    });
+
+    setDatabaseUserDocument((prevDoc) => ({
+      ...prevDoc,
+      impact: prevDoc?.impact + impact,
+    }));
+
+    setGlobalImpactCounter((prevCounter) => prevCounter + impact);
+  } else {
+  }
+};

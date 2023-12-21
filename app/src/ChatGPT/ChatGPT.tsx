@@ -39,6 +39,8 @@ const ChatGPT = ({
   moduleName,
   handleScheduler,
   handleZap,
+  userStateReference,
+  globalStateReference,
 }: Record<string, any>) => {
   const [shouldRenderIntro, setShouldRenderIntro] = useState(true);
   const [promptMessage, setPromptMessage] = useState("");
@@ -156,6 +158,9 @@ const ChatGPT = ({
           parentVisibility={parentVisibility}
           setParentVisibility={setParentVisibility}
           handleScheduler={handleScheduler}
+          userStateReference={userStateReference}
+          globalStateReference={globalStateReference}
+          handleZap={handleZap}
         />
       ))}
       <Prompts

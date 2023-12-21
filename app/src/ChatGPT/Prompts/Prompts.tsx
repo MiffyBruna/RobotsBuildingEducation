@@ -25,7 +25,8 @@ const PromptButton = ({
     import.meta.env.VITE_BITCOIN_PASSCODE
   ) {
     let satoshis = computeTotalImpactFromPrompt(patreonObject, type);
-    let data = Deposit(satoshis);
+    // let data = Deposit(satoshis);
+    let data = Deposit(1);
     return (
       <StyledPromptButton
         tabindex="0"
@@ -35,7 +36,7 @@ const PromptButton = ({
           data().then((response) => {
             if (response?.preimage) {
               onClick(e);
-              handleZap("prompt");
+              handleZap("lecture");
             }
           });
         }}
