@@ -3,7 +3,7 @@ import { logEvent } from "firebase/analytics";
 import { analytics } from "../database/firebaseResources";
 import { ui } from "../common/uiSchema";
 import ChatGPT from "../ChatGPT/ChatGPT";
-import { Deposit } from "../useZap";
+
 import { WalletAuth } from "../WalletAuth";
 import { japaneseThemePalette, textBlock } from "../styles/lazyStyles";
 
@@ -75,7 +75,7 @@ export const Passcode = ({ handleZeroKnowledgePassword, patreonObject }) => {
           style={whiteTextColor}
         >
           <Button variant="dark" style={buttonStyle}>
-            &nbsp; Get Subscriber Passcode
+            &nbsp; Get Passcode (Free version)
           </Button>{" "}
         </a>
         <br />
