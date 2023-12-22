@@ -65,30 +65,19 @@ const Patreon = ({
   let zap = useZap(zapAmount, "Robots Building Education Video");
   const videoRef = useRef(null);
   let [videoDurationDetection, setVideoDurationDetection] = useState(false);
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
   useEffect(() => {
     const videoElement = videoRef.current;
     let depositInterval;
 
     const handlePlay = () => {
+      setIsVideoPlaying(true);
       console.log("Video is playing", patreonObject);
-      if (
-        localStorage.getItem("patreonPasscode") ===
-        import.meta.env.VITE_BITCOIN_PASSCODE
-      ) {
-        depositInterval = setInterval(() => {
-          zap().then((response) => {
-            if (response?.preimage) {
-              console.log("running");
-              updateImpact(zapAmount, userStateReference, globalStateReference);
-              handleZap("video");
-            }
-          });
-        }, 15000);
-      }
     };
 
     const handlePauseOrEnd = () => {
+      setIsVideoPlaying(false);
       // Clear interval when the video is paused or ended)
       if (depositInterval) {
         console.log("clearing after play?X_X");
@@ -119,6 +108,22 @@ const Patreon = ({
       }
     }
 
+    if (
+      localStorage.getItem("patreonPasscode") ===
+        import.meta.env.VITE_BITCOIN_PASSCODE &&
+      isVideoPlaying
+    ) {
+      depositInterval = setInterval(() => {
+        zap().then((response) => {
+          if (response?.preimage) {
+            console.log("running");
+            updateImpact(zapAmount, userStateReference, globalStateReference);
+            handleZap("video");
+          }
+        });
+      }, 15000);
+    }
+
     // Cleanup
     return () => {
       if (videoElement) {
@@ -129,7 +134,7 @@ const Patreon = ({
       }
       if (depositInterval) clearInterval(depositInterval);
     };
-  }, [videoDurationDetection, zap]);
+  }, [videoDurationDetection, isVideoPlaying]);
 
   // Function to determine which type of content to display
   const determineFileView = () => {
