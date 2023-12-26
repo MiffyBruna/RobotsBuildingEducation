@@ -136,8 +136,6 @@ function App() {
     logout = false,
     bitcoin = false
   ) => {
-    console.log("bitcoin", bitcoin);
-
     if (validPasscodes.includes(event?.target?.value)) {
       localStorage.setItem("patreonPasscode", event.target.value);
       uiStateReference.setPatreonObject({});
@@ -194,7 +192,6 @@ function App() {
     // console.log("DID", aliceDid);
   };
   useEffect(() => {
-    console.log("running effect...");
     // connectDID();
 
     const storedPasscode = localStorage.getItem("patreonPasscode");
@@ -225,8 +222,6 @@ function App() {
     });
   }, []);
 
-  // console.log("language mode", languageMode);
-
   if (typeof authStateReference.isSignedIn == "string") {
     return <RoxanaLoadingAnimation />;
   }
@@ -241,7 +236,6 @@ function App() {
       [locationOfHeader]: true,
     };
 
-    console.log("PROFILE", profile);
     await updateDoc(userStateReference.userDocumentReference, {
       profile,
     });

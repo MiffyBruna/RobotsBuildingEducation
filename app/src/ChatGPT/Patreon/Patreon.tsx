@@ -73,14 +73,12 @@ const Patreon = ({
 
     const handlePlay = () => {
       setIsVideoPlaying(true);
-      console.log("Video is playing", patreonObject);
     };
 
     const handlePauseOrEnd = () => {
       setIsVideoPlaying(false);
       // Clear interval when the video is paused or ended)
       if (depositInterval) {
-        console.log("clearing after play?X_X");
         clearInterval(depositInterval);
       }
     };
@@ -91,7 +89,6 @@ const Patreon = ({
         const ninetyPercentDuration = videoElement.duration * 0.9;
 
         if (videoElement.currentTime >= ninetyPercentDuration) {
-          console.log("Video has reached 90% completion");
           setVideoDurationDetection(true);
           handleScheduler("video");
         }
@@ -116,7 +113,6 @@ const Patreon = ({
       depositInterval = setInterval(() => {
         zap().then((response) => {
           if (response?.preimage) {
-            console.log("running");
             updateImpact(zapAmount, userStateReference, globalStateReference);
             handleZap("video");
           }

@@ -16,6 +16,7 @@ export const ProofOfWork = ({
   isDemo,
   //some redundancy since I haven't refactored these values yet.
   userStateReference,
+  globalStateReference,
   showStars,
   showZap,
   handleZeroKnowledgePassword,
@@ -27,6 +28,8 @@ export const ProofOfWork = ({
   const [isSchedulerOpen, setIsSchedulerOpen] = useState(false);
 
   const [isCofounderOpen, setIsCofounderOpen] = useState(false);
+
+  const [isChatFrameOpen, setIsChatFrameOpen] = useState(false);
 
   if (isDemo) {
     return null;
@@ -74,6 +77,9 @@ export const ProofOfWork = ({
         isCofounderOpen={isCofounderOpen}
         setIsCofounderOpen={setIsCofounderOpen}
         handleZeroKnowledgePassword={handleZeroKnowledgePassword}
+        globalStateReference={globalStateReference}
+        isChatFrameOpen={isChatFrameOpen}
+        setIsChatFrameOpen={setIsChatFrameOpen}
       />
     </div>
   );

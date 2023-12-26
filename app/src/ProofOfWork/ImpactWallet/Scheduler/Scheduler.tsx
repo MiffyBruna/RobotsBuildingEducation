@@ -90,7 +90,7 @@ export const Scheduler = ({
 
   const handleSaveSchedule = async () => {
     setIsSaveLoading(true);
-    console.log("done...");
+
     let document = userStateReference.databaseUserDocument;
     await updateDoc(userStateReference.userDocumentReference, {
       ...document,
@@ -110,7 +110,6 @@ export const Scheduler = ({
       ? schedule
       : userStateReference?.databaseUserDocument?.schedule;
 
-  console.log("MAPPING", mapping);
   return (
     <>
       <Modal centered show={isSchedulerOpen} fullscreen>

@@ -25,6 +25,8 @@ import {
 } from "@getalby/bitcoin-connect-react";
 import { BitcoinManager } from "./BitcoinManager/BitcoinManager";
 import { getAuth, signOut } from "firebase/auth";
+import { ChatFrame } from "./ChatFrame/ChatFrame";
+import { Portfolio } from "./Portfolio/Portfolio";
 
 const renderTranscriptAwards = (profileData) => {
   if (isEmpty(profileData)) {
@@ -37,17 +39,9 @@ const renderTranscriptAwards = (profileData) => {
   }
 
   let awards = [];
-  console.log(
-    "decentralizedEducationTranscript",
-    decentralizedEducationTranscript
-  );
 
-  console.log("profileData", profileData);
   let decentralizedEducationTranscriptCopy = decentralizedEducationTranscript;
   for (const key in decentralizedEducationTranscript) {
-    console.log(key);
-    console.log(decentralizedEducationTranscript[key]);
-
     awards.push(
       <div
         id={`${key}`}
@@ -86,8 +80,6 @@ const renderCheckboxes = (profileData) => {
   }
 
   for (const key in profileData) {
-    console.log(key);
-    console.log(profileData[key]);
     if (profileData[key]) {
       checkboxes.push(
         <Form.Check
@@ -114,6 +106,8 @@ const renderCheckboxes = (profileData) => {
 };
 
 export const ImpactWallet = ({
+  isChatFrameOpen,
+  setIsChatFrameOpen,
   globalScholarshipCounter,
   databaseUserDocument,
   computePercentage,
@@ -133,12 +127,14 @@ export const ImpactWallet = ({
   updateUserEmotions,
   setIsSchedulerOpen,
   isSchedulerOpen,
-  userStateReference,
+
   showStars,
   showZap,
   isCofounderOpen,
   setIsCofounderOpen,
   handleZeroKnowledgePassword,
+  userStateReference,
+  globalStateReference,
 }) => {
   let [databaseUserDocumentCopy, setDatabaseUserDocumentCopy] = useState({});
 
@@ -162,7 +158,13 @@ export const ImpactWallet = ({
 
   let impactResult = databaseUserDocumentCopy?.impact;
 
-  console.log("databaseUserDocument?.impact", databaseUserDocument?.impact);
+  /**
+   *               {/* <iframe
+                src="https://chat.openai.com/g/g-09h5uQiFC-ms-roxana"
+                title="W3Schools Free Online Web Tutorials"
+              ></iframe> 
+  */
+
   return (
     <>
       <div>
@@ -190,6 +192,7 @@ export const ImpactWallet = ({
                 content_type: "button",
                 item_id: "Scheduler",
               });
+              // setIsChatFrameOpen(true);
             }}
             variant="secondary"
           >
@@ -310,6 +313,7 @@ export const ImpactWallet = ({
 
                 <h6>last updated {globalReserveObject?.last_updated}</h6>
                 <div></div>
+                <Portfolio />
               </div>
             </div>
             <br />
@@ -443,6 +447,8 @@ export const ImpactWallet = ({
         usersEmotionsCollectionReference={usersEmotionsCollectionReference}
         usersEmotionsFromDB={usersEmotionsFromDB}
         updateUserEmotions={updateUserEmotions}
+        userStateReference={userStateReference}
+        globalStateReference={globalStateReference}
       />
 
       <Scheduler
@@ -455,7 +461,15 @@ export const ImpactWallet = ({
         isCofounderOpen={isCofounderOpen}
         setIsCofounderOpen={setIsCofounderOpen}
         userStateReference={userStateReference}
+        globalStateReference={globalStateReference}
       />
+
+      {/* <ChatFrame
+        setIsChatFrameOpen={setIsChatFrameOpen}
+        isChatFrameOpen={isChatFrameOpen}
+        userStateReference={userStateReference}
+        globalStateReference={globalStateReference}
+      /> */}
     </>
   );
 };

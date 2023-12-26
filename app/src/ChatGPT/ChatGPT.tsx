@@ -11,7 +11,6 @@ import {
   computeTotalImpactFromPrompt,
 } from "./ChatGPT.compute";
 import { Intro } from "./PromptCombiner9000/Intro";
-import { Deposit } from "../useZap";
 
 const logAnalyticsEvent = (item_list_id, item_id, item_name) => {
   logEvent(analytics, "select_item", {
@@ -67,8 +66,6 @@ const ChatGPT = ({
   const handleSubmit = async (event, prompt = null, promptType = null) => {
     event.preventDefault();
     let result = computeResult(promptType, patreonObject);
-    console.log("result", result);
-    console.log("patreonObject", patreonObject);
 
     setParentVisibility(true);
 
@@ -79,7 +76,6 @@ const ChatGPT = ({
     setIsResponseActive(true);
     setChatGptResponseList(result?.response);
 
-    console.log("updating impact...", result);
     await updateImpact(
       result.impact,
       databaseUserDocument,
@@ -115,7 +111,6 @@ const ChatGPT = ({
       (!isEmpty(databaseUserDocument) || !isEmpty(userDocumentReference)) &&
       !isDemo
     ) {
-      console.log("running database document update...");
       await updateDoc(userDocumentReference, {
         impact: databaseUserDocument?.impact + impact,
       });

@@ -114,7 +114,7 @@ export const useZap = (
 
         // test account (things prices at 1 zap)
         const ln = new LightningAddress("talentedfriendship526161@getalby.com");
-
+        // ln.zap
         await ln.fetch();
         setInvoice(
           (
@@ -128,9 +128,10 @@ export const useZap = (
         console.error(error);
       }
     })();
-  }, []);
+  });
 
   let payInvoice = async () => {
+    console.log("window.webln", window.webln);
     try {
       if (!window.webln || !window.webln) {
         throw new Error("Please connect your wallet");
@@ -138,6 +139,8 @@ export const useZap = (
       if (!invoice) {
         throw new Error("No invoice available");
       }
+
+      console.log("invoice", invoice);
       const result = await window.webln.sendPayment(invoice);
 
       if (!result?.preimage) {
@@ -146,8 +149,8 @@ export const useZap = (
 
       return result;
     } catch (error) {
-      console.log("error", error);
       console.log("{error}", { error });
+      console.log("error", error);
       alert(
         "Unable to complete Bitcoin transaction. Check your connection, transaction limits or your wallet's balance."
       );

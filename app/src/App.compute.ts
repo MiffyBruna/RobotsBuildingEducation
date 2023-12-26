@@ -44,8 +44,7 @@ export const sortEmotionsByDate = (usersEmotionsFromDB) => {
   
 export const setupUserDocument = async (docRef, userStateReference, user) => {
     const res = await getDoc(docRef);
-    console.log("user", user);
-    console.log("userStateReference", userStateReference)
+
     if (!res?.data()) {
       await setDoc(docRef, { impact: 0, userAuthObj: { uid: user.uid }, profile: decentralizedEducationTranscript });
       const response = await getDoc(docRef);
@@ -108,10 +107,12 @@ export const updateImpact = async (
   userStateReference,
   globalStateReference,
 ) => {
+
   const {databaseUserDocument, userDocumentReference, setDatabaseUserDocument} = userStateReference;
   const { globalImpactCounter,globalDocumentReference, setGlobalImpactCounter} = globalStateReference;
+ 
   if (!isEmpty(databaseUserDocument) || !isEmpty(userDocumentReference)) {
-    console.log("running database document update...");
+
 
     await updateDoc(userDocumentReference, {
       impact: databaseUserDocument?.impact + impact,

@@ -26,6 +26,8 @@ import {
 import roxanaFocusing from "../../../common/media/images/roxanaFocusing.png";
 import roxanaKind from "../../../common/media/images/roxanaKind.png";
 import { SunsetCanvas } from "./SunsetCanvas";
+import { useZap } from "../../../App.hooks";
+import { updateImpact } from "../../../App.compute";
 
 export const EmotionalIntelligence = ({
   isEmotionalIntelligenceOpen,
@@ -33,6 +35,8 @@ export const EmotionalIntelligence = ({
   usersEmotionsCollectionReference,
   usersEmotionsFromDB,
   updateUserEmotions,
+  userStateReference,
+  globalStateReference,
 }) => {
   const [isEmotionModalOpen, setIsEmotionModalOpen] = useState(false);
   const [selectedEmotion, setSelectedEmotion] = useState("");
@@ -44,6 +48,7 @@ export const EmotionalIntelligence = ({
   const [chatGptResponse, setChatGptResponse] = useState("");
 
   const [summarizerResponse, setSummarizerResponse] = useState("");
+  let zap = useZap(1, "Robots Building Education Therapy");
 
   const handleEmotionSelection = async (item, shouldRunDatabase = true) => {
     let formattedItem = formatEmotionItem(item, Date.now(), "timestamp");
@@ -69,10 +74,29 @@ export const EmotionalIntelligence = ({
       method: postInstructions.method,
       headers: postInstructions.headers,
       body: JSON.stringify({ prompt }),
-    }).catch(() => {
-      setIsAiResponseLoading(false);
-    });
+    })
+      .then((response) => {
+        if (
+          localStorage.getItem("patreonPasscode") ===
+          import.meta.env.VITE_BITCOIN_PASSCODE
+        ) {
+          zap().then((lightningResponse) => {
+            if (lightningResponse?.preimage) {
+              console.log("running zap");
+              console.log("userStateReference", userStateReference);
+              console.log("globalStateReference", globalStateReference);
+              updateImpact(1, userStateReference, globalStateReference);
+            }
+          });
+        }
 
+        return response;
+      })
+      .catch(() => {
+        setIsAiResponseLoading(false);
+      });
+
+    console.log("response", response);
     if (response) {
       let data = await response.json();
 
@@ -93,17 +117,34 @@ export const EmotionalIntelligence = ({
   };
 
   const reviewJourney = async () => {
-    console.log("usersEmotionsFromDB", usersEmotionsFromDB);
     setIsSummarizerLoading(true);
     let prompt = emotionSummarizer(JSON.stringify(usersEmotionsFromDB));
-    console.log("prompt", prompt);
+
     const response = await fetch(postInstructions.url, {
       method: postInstructions.method,
       headers: postInstructions.headers,
       body: JSON.stringify({ prompt }),
-    }).catch(() => {
-      setIsSummarizerLoading(false);
-    });
+    })
+      .then((response) => {
+        if (
+          localStorage.getItem("patreonPasscode") ===
+          import.meta.env.VITE_BITCOIN_PASSCODE
+        ) {
+          zap().then((lightningResponse) => {
+            if (lightningResponse?.preimage) {
+              console.log("running zap");
+              console.log("userStateReference", userStateReference);
+              console.log("globalStateReference", globalStateReference);
+              updateImpact(1, userStateReference, globalStateReference);
+            }
+          });
+        }
+
+        return response;
+      })
+      .catch(() => {
+        setIsSummarizerLoading(false);
+      });
 
     if (response) {
       let data = await response.json();

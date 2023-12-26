@@ -18,7 +18,6 @@ const MarkdownRenderer = ({ file, patreonObject, handleScheduler }) => {
 
       // Check if 80% of the div is scrolled
       if (scrollPosition >= divTop + divHeight * 0.8) {
-        console.log("Scrolled through 80% of the div");
         setHasScrolledEighty(true); // Update state to prevent further checks
         handleScheduler("essay");
         // Perform any action when 80% of the div is scrolled

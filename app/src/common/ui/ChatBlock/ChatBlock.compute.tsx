@@ -1,7 +1,7 @@
 // You get an array of data containing strings and JSX elements. Parses out the strings
 export const gatherConversationContext = (children) => {
   let result = [];
-  console.log("children", children);
+
   children?.forEach((child) => {
     if (typeof child === "string") result.push(child);
   });

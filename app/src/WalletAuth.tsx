@@ -35,7 +35,7 @@ export const WalletAuth = ({ handleZeroKnowledgePassword }) => {
         throw new Error("No invoice available");
       }
       const result = await window.webln.sendPayment(invoice);
-      console.log("payment result", result);
+
       setPreimage(result?.preimage);
       if (!result?.preimage) {
         throw new Error("Payment failed. Please try again");
