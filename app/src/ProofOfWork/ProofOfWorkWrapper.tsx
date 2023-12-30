@@ -27,6 +27,7 @@ export const ProofOfWorkWrapper = ({
   showStars,
   showZap,
   handleZeroKnowledgePassword,
+  zap,
 }) => {
   const userImpact = userStateReference.databaseUserDocument?.impact;
   const proofOfWork = uiStateReference.proofOfWorkFromModules;
@@ -75,6 +76,7 @@ export const ProofOfWorkWrapper = ({
         showStars={showStars}
         showZap={showZap}
         handleZeroKnowledgePassword={handleZeroKnowledgePassword}
+        zap={zap}
       />
     </div>
   );

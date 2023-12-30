@@ -22,6 +22,7 @@ import {
   useGlobalStates,
   useUIStates,
   useUserDocument,
+  useZap,
 } from "./App.hooks";
 import {
   checkActiveUserStates,
@@ -41,6 +42,7 @@ logEvent(analytics, "page_view", {
 });
 
 function App() {
+  let zap = useZap(1, "Robots Building Education Zap");
   // handles passcode, google sign in and registered user info
   const { authStateReference } = useAuthState();
 
@@ -349,6 +351,7 @@ function App() {
               globalStateReference={globalStateReference}
               handleScheduler={handleScheduler}
               handleZap={handleZap}
+              zap={zap}
             />
           </>
         ) : null}
@@ -365,6 +368,7 @@ function App() {
           showStars={showStars}
           showZap={showZap}
           handleZeroKnowledgePassword={handleZeroKnowledgePassword}
+          zap={zap}
         />
       ) : null}
     </div>

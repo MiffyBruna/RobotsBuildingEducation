@@ -135,6 +135,7 @@ export const ImpactWallet = ({
   handleZeroKnowledgePassword,
   userStateReference,
   globalStateReference,
+  zap,
 }) => {
   let [databaseUserDocumentCopy, setDatabaseUserDocumentCopy] = useState({});
 
@@ -449,12 +450,14 @@ export const ImpactWallet = ({
         updateUserEmotions={updateUserEmotions}
         userStateReference={userStateReference}
         globalStateReference={globalStateReference}
+        zap={zap}
       />
 
       <Scheduler
         isSchedulerOpen={isSchedulerOpen}
         setIsSchedulerOpen={setIsSchedulerOpen}
         userStateReference={userStateReference}
+        zap={zap}
       />
 
       <Cofounder
@@ -462,6 +465,7 @@ export const ImpactWallet = ({
         setIsCofounderOpen={setIsCofounderOpen}
         userStateReference={userStateReference}
         globalStateReference={globalStateReference}
+        zap={zap}
       />
 
       {/* <ChatFrame

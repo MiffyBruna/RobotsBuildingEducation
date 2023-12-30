@@ -43,7 +43,7 @@ const renderPatreonContent = (patreonObject, languageMode) => {
 export const Passcode = ({ handleZeroKnowledgePassword, patreonObject }) => {
   return (
     <div>
-      <div style={{ display: "flex", justifyContent: "center" }}>
+      {/* <div style={{ display: "flex", justifyContent: "center" }}>
         <div style={{ backgroundColor: "maroon", width: "300px", padding: 20 }}>
           ⚠️ If you clicked the Tiktok link, please use your browser when
           logging in or your attempt will be blocked by a browser security issue
@@ -51,8 +51,8 @@ export const Passcode = ({ handleZeroKnowledgePassword, patreonObject }) => {
           should have an option to open in browser.
         </div>
       </div>
-      <br />
-      <br />
+      <br /> */}
+      {/* <br /> */}
       <h2>Enter Passcode</h2>
       <input
         onChange={(event) => handleZeroKnowledgePassword(event, false, false)}
@@ -153,7 +153,7 @@ export const Passcode = ({ handleZeroKnowledgePassword, patreonObject }) => {
               margin: 24,
               textDecoration: "underline",
             }}
-            href="https://www.tiktok.com/@sheilfer/playlist/RO.B.E%203-7307138853159062318?is_from_webapp=1&sender_device=pc"
+            href="https://www.tiktok.com/t/ZT8xh3t5u/"
             target="_blank"
           >
             ♪ Watch the playlist for free @ Tiktok

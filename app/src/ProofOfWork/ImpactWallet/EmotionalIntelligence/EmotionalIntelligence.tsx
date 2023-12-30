@@ -37,6 +37,7 @@ export const EmotionalIntelligence = ({
   updateUserEmotions,
   userStateReference,
   globalStateReference,
+  zap,
 }) => {
   const [isEmotionModalOpen, setIsEmotionModalOpen] = useState(false);
   const [selectedEmotion, setSelectedEmotion] = useState("");
@@ -48,7 +49,6 @@ export const EmotionalIntelligence = ({
   const [chatGptResponse, setChatGptResponse] = useState("");
 
   const [summarizerResponse, setSummarizerResponse] = useState("");
-  let zap = useZap(1, "Robots Building Education Therapy");
 
   const handleEmotionSelection = async (item, shouldRunDatabase = true) => {
     let formattedItem = formatEmotionItem(item, Date.now(), "timestamp");

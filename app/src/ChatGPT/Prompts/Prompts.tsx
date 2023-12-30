@@ -18,6 +18,7 @@ const PromptButton = ({
   onClick,
   prompt,
   handleZap,
+  zap,
 }) => {
   if (
     localStorage.getItem("patreonPasscode") ===
@@ -25,7 +26,7 @@ const PromptButton = ({
   ) {
     let satoshis = computeTotalImpactFromPrompt(patreonObject, type);
     // let data = useZap(satoshis);
-    let zap = useZap(1);
+    // let zap = useZap(1);
     return (
       <StyledPromptButton
         tabindex="0"
@@ -35,10 +36,9 @@ const PromptButton = ({
           zap()
             .then((response) => {
               console.log("response from zap", response);
-              if (response?.preimage) {
-                onClick(e);
-                handleZap("lecture");
-              }
+
+              onClick(e);
+              handleZap("lecture");
             })
             .catch((error) => {
               console.log("error", error);
@@ -91,6 +91,7 @@ export const Prompts = ({
   patreonObject,
   handleSubmit,
   handleZap,
+  zap,
 }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -120,6 +121,7 @@ export const Prompts = ({
             prompt={prompt}
             onClick={(e) => !loadingMessage && handleSubmit(e, prompt, type)}
             handleZap={handleZap}
+            zap={zap}
           />
         );
       })}

@@ -40,6 +40,7 @@ const ChatGPT = ({
   handleZap,
   userStateReference,
   globalStateReference,
+  zap,
 }: Record<string, any>) => {
   const [shouldRenderIntro, setShouldRenderIntro] = useState(true);
   const [promptMessage, setPromptMessage] = useState("");
@@ -156,6 +157,7 @@ const ChatGPT = ({
           userStateReference={userStateReference}
           globalStateReference={globalStateReference}
           handleZap={handleZap}
+          zap={zap}
         />
       ))}
       <Prompts
@@ -163,6 +165,7 @@ const ChatGPT = ({
         patreonObject={patreonObject}
         handleSubmit={handleSubmit}
         handleZap={handleZap}
+        zap={zap}
       />
     </div>
   );

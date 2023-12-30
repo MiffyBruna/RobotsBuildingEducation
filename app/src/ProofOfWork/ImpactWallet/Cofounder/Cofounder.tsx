@@ -223,6 +223,7 @@ export const Cofounder = ({
   setIsCofounderOpen,
   userStateReference,
   globalStateReference,
+  zap,
 }) => {
   const [formData, setFormData] = useState({
     creationDescription: "",
@@ -258,8 +259,6 @@ export const Cofounder = ({
 
   const [isScheduleLoading, setIsScheduleLoading] = useState(false);
   const [isSaveLoading, setIsSaveLoading] = useState(false);
-
-  let zap = useZap(1, "Robots Building Education Cofounder");
 
   const handleInputChange = (event) => {
     setFormData({ ...formData, [event.target.name]: event.target.value });

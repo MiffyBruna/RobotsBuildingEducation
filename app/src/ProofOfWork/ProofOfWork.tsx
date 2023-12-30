@@ -20,6 +20,7 @@ export const ProofOfWork = ({
   showStars,
   showZap,
   handleZeroKnowledgePassword,
+  zap,
 }) => {
   const [isImpactWalletOpen, setIsImpactWalletOpen] = useState(false);
   const [isEmotionalIntelligenceOpen, setIsEmotionalIntelligenceOpen] =
@@ -80,6 +81,7 @@ export const ProofOfWork = ({
         globalStateReference={globalStateReference}
         isChatFrameOpen={isChatFrameOpen}
         setIsChatFrameOpen={setIsChatFrameOpen}
+        zap={zap}
       />
     </div>
   );
