@@ -18,27 +18,32 @@ const PromptButton = ({
   onClick,
   prompt,
   handleZap,
+  zap,
 }) => {
-  console.log("running prompt");
   if (
     localStorage.getItem("patreonPasscode") ===
     import.meta.env.VITE_BITCOIN_PASSCODE
   ) {
     let satoshis = computeTotalImpactFromPrompt(patreonObject, type);
     // let data = useZap(satoshis);
-    let data = useZap(1);
+    // let zap = useZap(1);
     return (
       <StyledPromptButton
         tabindex="0"
         borderHighlight={"#48484a"}
         style={{ display: loading ? "none" : "flex" }}
         onClick={(e) => {
-          data().then((response) => {
-            if (response?.preimage) {
+          zap()
+            .then((response) => {
+              console.log("response from zap", response);
+
               onClick(e);
               handleZap("lecture");
-            }
-          });
+            })
+            .catch((error) => {
+              console.log("error", error);
+              console.log("{error}", { error });
+            });
         }}
       >
         <a style={{ color: "white" }}>
@@ -86,6 +91,7 @@ export const Prompts = ({
   patreonObject,
   handleSubmit,
   handleZap,
+  zap,
 }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -115,6 +121,7 @@ export const Prompts = ({
             prompt={prompt}
             onClick={(e) => !loadingMessage && handleSubmit(e, prompt, type)}
             handleZap={handleZap}
+            zap={zap}
           />
         );
       })}

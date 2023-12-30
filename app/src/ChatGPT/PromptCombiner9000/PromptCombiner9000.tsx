@@ -64,7 +64,8 @@ const renderContent = (
   handleScheduler,
   userStateReference,
   globalStateReference,
-  handleZap
+  handleZap,
+  zap
 ) => {
   switch (type) {
     case "patreon":
@@ -75,6 +76,7 @@ const renderContent = (
           userStateReference={userStateReference}
           globalStateReference={globalStateReference}
           handleZap={handleZap}
+          zap={zap}
         />
       );
     case "practice":
@@ -117,6 +119,7 @@ export const PromptCombiner9000 = ({
   userStateReference,
   globalStateReference,
   handleZap,
+  zap,
 }) => {
   const [promptVisibility, setPromptVisibility] = useState("flex");
   if (isEmpty(patreonObject)) {
@@ -177,7 +180,8 @@ export const PromptCombiner9000 = ({
               handleScheduler,
               userStateReference,
               globalStateReference,
-              handleZap
+              handleZap,
+              zap
             )}
         </FlexBox>
       </MessageContainer>

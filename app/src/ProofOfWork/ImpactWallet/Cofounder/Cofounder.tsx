@@ -24,6 +24,8 @@ import {
   aiPlaceholderDescription,
   executiveAssistantKnowledge,
 } from "./Cofounder.data";
+import { useZap } from "../../../App.hooks";
+import { updateImpact } from "../../../App.compute";
 const Container = styled.div`
   font-family: "Arial", sans-serif;
   color: #4a4a4a;
@@ -220,6 +222,8 @@ export const Cofounder = ({
   isCofounderOpen,
   setIsCofounderOpen,
   userStateReference,
+  globalStateReference,
+  zap,
 }) => {
   const [formData, setFormData] = useState({
     creationDescription: "",
@@ -289,9 +293,27 @@ export const Cofounder = ({
         prompt,
         isJsonMode: formData.assistant === "assistant",
       }),
-    }).catch(() => {
-      setHasError(true);
-    });
+    })
+      .then((response) => {
+        if (
+          localStorage.getItem("patreonPasscode") ===
+          import.meta.env.VITE_BITCOIN_PASSCODE
+        ) {
+          zap().then((lightningResponse) => {
+            if (lightningResponse?.preimage) {
+              console.log("running zap");
+              console.log("userStateReference", userStateReference);
+              console.log("globalStateReference", globalStateReference);
+              updateImpact(1, userStateReference, globalStateReference);
+            }
+          });
+        }
+
+        return response;
+      })
+      .catch(() => {
+        setHasError(true);
+      });
 
     if (response) {
       let data = await response.json();
@@ -315,9 +337,27 @@ export const Cofounder = ({
       method: postInstructions.method,
       headers: postInstructions.headers,
       body: JSON.stringify({ prompt, isJsonMode: true }),
-    }).catch(() => {
-      setHasError(true);
-    });
+    })
+      .then((response) => {
+        if (
+          localStorage.getItem("patreonPasscode") ===
+          import.meta.env.VITE_BITCOIN_PASSCODE
+        ) {
+          zap().then((lightningResponse) => {
+            if (lightningResponse?.preimage) {
+              console.log("running zap");
+              console.log("userStateReference", userStateReference);
+              console.log("globalStateReference", globalStateReference);
+              updateImpact(1, userStateReference, globalStateReference);
+            }
+          });
+        }
+
+        return response;
+      })
+      .catch(() => {
+        setHasError(true);
+      });
 
     if (response) {
       let data = await response.json();
@@ -338,9 +378,27 @@ export const Cofounder = ({
       method: postInstructions.method,
       headers: postInstructions.headers,
       body: JSON.stringify({ prompt, isJsonMode: true }),
-    }).catch(() => {
-      setHasError(true);
-    });
+    })
+      .then((response) => {
+        if (
+          localStorage.getItem("patreonPasscode") ===
+          import.meta.env.VITE_BITCOIN_PASSCODE
+        ) {
+          zap().then((lightningResponse) => {
+            if (lightningResponse?.preimage) {
+              console.log("running zap");
+              console.log("userStateReference", userStateReference);
+              console.log("globalStateReference", globalStateReference);
+              updateImpact(1, userStateReference, globalStateReference);
+            }
+          });
+        }
+
+        return response;
+      })
+      .catch(() => {
+        setHasError(true);
+      });
 
     if (response) {
       let data = await response.json();
@@ -398,9 +456,27 @@ export const Cofounder = ({
       method: postInstructions.method,
       headers: postInstructions.headers,
       body: JSON.stringify({ prompt }),
-    }).catch(() => {
-      setHasError(true);
-    });
+    })
+      .then((response) => {
+        if (
+          localStorage.getItem("patreonPasscode") ===
+          import.meta.env.VITE_BITCOIN_PASSCODE
+        ) {
+          zap().then((lightningResponse) => {
+            if (lightningResponse?.preimage) {
+              console.log("running zap");
+              console.log("userStateReference", userStateReference);
+              console.log("globalStateReference", globalStateReference);
+              updateImpact(1, userStateReference, globalStateReference);
+            }
+          });
+        }
+
+        return response;
+      })
+      .catch(() => {
+        setHasError(true);
+      });
 
     if (response) {
       let data = await response.json();
@@ -428,9 +504,27 @@ export const Cofounder = ({
         prompt,
         isJsonMode: true,
       }),
-    }).catch(() => {
-      setHasError(true);
-    });
+    })
+      .then((response) => {
+        if (
+          localStorage.getItem("patreonPasscode") ===
+          import.meta.env.VITE_BITCOIN_PASSCODE
+        ) {
+          zap().then((lightningResponse) => {
+            if (lightningResponse?.preimage) {
+              console.log("running zap");
+              console.log("userStateReference", userStateReference);
+              console.log("globalStateReference", globalStateReference);
+              updateImpact(1, userStateReference, globalStateReference);
+            }
+          });
+        }
+
+        return response;
+      })
+      .catch(() => {
+        setHasError(true);
+      });
 
     if (response) {
       let data = await response.json();

@@ -106,31 +106,8 @@ export const useZap = (
   const [invoice, setInvoice] = useState<string | undefined>(undefined);
   const [preimage, setPreimage] = useState<string | undefined>(undefined);
 
-  useEffect(() => {
-    (async () => {
-      try {
-        // robots - for real use
-        // const ln = new LightningAddress("levitatingnight182471@getalby.com");
-
-        // test account (things prices at 1 zap)
-        const ln = new LightningAddress("talentedfriendship526161@getalby.com");
-
-        await ln.fetch();
-        setInvoice(
-          (
-            await ln.requestInvoice({
-              satoshi: depositAmount,
-              comment: depositMessage,
-            })
-          ).paymentRequest
-        );
-      } catch (error) {
-        console.error(error);
-      }
-    })();
-  }, []);
-
   let payInvoice = async () => {
+    console.log("running pay invoice");
     try {
       if (!window.webln || !window.webln) {
         throw new Error("Please connect your wallet");
@@ -138,6 +115,7 @@ export const useZap = (
       if (!invoice) {
         throw new Error("No invoice available");
       }
+
       const result = await window.webln.sendPayment(invoice);
 
       if (!result?.preimage) {
@@ -146,13 +124,46 @@ export const useZap = (
 
       return result;
     } catch (error) {
-      console.log("error", error);
       console.log("{error}", { error });
+      console.log("error", error);
       alert(
         "Unable to complete Bitcoin transaction. Check your connection, transaction limits or your wallet's balance."
       );
     }
   };
 
-  return payInvoice;
+  let createZap = async () => {
+    try {
+      // robots - for real use
+      const ln = new LightningAddress("levitatingnight182471@getalby.com");
+
+      // test account (things prices at 1 zap)
+      // const ln = new LightningAddress("talentedfriendship526161@getalby.com");
+      // ln.zap
+      await ln.fetch();
+
+      let invoiceResult = (
+        await ln.requestInvoice({
+          satoshi: 1,
+          comment: "invoice requested",
+        })
+      ).paymentRequest;
+
+      console.log("invoice result", invoiceResult);
+
+      setInvoice(invoiceResult);
+      console.log("invoice?", invoice);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+  useEffect(() => {
+    // mountInvoice();
+    if (invoice) {
+      payInvoice();
+    }
+  }, [invoice]);
+
+  // console.log("invoice result", invoice);
+  return createZap;
 };

@@ -446,7 +446,7 @@ export const LearnMore = ({ languageMode }) => {
           Have fun and hope to see you around! 😊
           <br />
           <br />
-          <div style={{ maxWidth: "100%", width: 700 }}>
+          {/* <div style={{ maxWidth: "100%", width: 700 }}>
             <h1>Content</h1>
             <br />
             <br />
@@ -532,7 +532,7 @@ export const LearnMore = ({ languageMode }) => {
                 betterment paired with a lowkey AI to assist you along the way.
               </p>
             </div>
-          </div>
+          </div> */}
         </Modal.Body>
         <Modal.Footer style={{ backgroundColor: "black", color: "white" }}>
           <Button variant="dark" onClick={() => setIsModalOpen(false)}>

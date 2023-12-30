@@ -11,7 +11,6 @@ import {
   computeTotalImpactFromPrompt,
 } from "./ChatGPT.compute";
 import { Intro } from "./PromptCombiner9000/Intro";
-import { Deposit } from "../useZap";
 
 const logAnalyticsEvent = (item_list_id, item_id, item_name) => {
   logEvent(analytics, "select_item", {
@@ -41,6 +40,7 @@ const ChatGPT = ({
   handleZap,
   userStateReference,
   globalStateReference,
+  zap,
 }: Record<string, any>) => {
   const [shouldRenderIntro, setShouldRenderIntro] = useState(true);
   const [promptMessage, setPromptMessage] = useState("");
@@ -67,8 +67,6 @@ const ChatGPT = ({
   const handleSubmit = async (event, prompt = null, promptType = null) => {
     event.preventDefault();
     let result = computeResult(promptType, patreonObject);
-    console.log("result", result);
-    console.log("patreonObject", patreonObject);
 
     setParentVisibility(true);
 
@@ -79,7 +77,6 @@ const ChatGPT = ({
     setIsResponseActive(true);
     setChatGptResponseList(result?.response);
 
-    console.log("updating impact...", result);
     await updateImpact(
       result.impact,
       databaseUserDocument,
@@ -115,7 +112,6 @@ const ChatGPT = ({
       (!isEmpty(databaseUserDocument) || !isEmpty(userDocumentReference)) &&
       !isDemo
     ) {
-      console.log("running database document update...");
       await updateDoc(userDocumentReference, {
         impact: databaseUserDocument?.impact + impact,
       });
@@ -161,6 +157,7 @@ const ChatGPT = ({
           userStateReference={userStateReference}
           globalStateReference={globalStateReference}
           handleZap={handleZap}
+          zap={zap}
         />
       ))}
       <Prompts
@@ -168,6 +165,7 @@ const ChatGPT = ({
         patreonObject={patreonObject}
         handleSubmit={handleSubmit}
         handleZap={handleZap}
+        zap={zap}
       />
     </div>
   );

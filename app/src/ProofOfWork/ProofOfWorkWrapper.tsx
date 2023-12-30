@@ -19,14 +19,15 @@ const computePercentage = (userImpact, proofOfWork) => {
 
 export const ProofOfWorkWrapper = ({
   userStateReference,
-  authStateReference,
   globalStateReference,
+  authStateReference,
   handlePathSelection,
   updateUserEmotions,
   uiStateReference,
   showStars,
   showZap,
   handleZeroKnowledgePassword,
+  zap,
 }) => {
   const userImpact = userStateReference.databaseUserDocument?.impact;
   const proofOfWork = uiStateReference.proofOfWorkFromModules;
@@ -71,9 +72,11 @@ export const ProofOfWorkWrapper = ({
         updateUserEmotions={updateUserEmotions}
         isDemo={isDemo}
         userStateReference={userStateReference}
+        globalStateReference={globalStateReference}
         showStars={showStars}
         showZap={showZap}
         handleZeroKnowledgePassword={handleZeroKnowledgePassword}
+        zap={zap}
       />
     </div>
   );

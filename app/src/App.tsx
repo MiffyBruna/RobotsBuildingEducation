@@ -22,6 +22,7 @@ import {
   useGlobalStates,
   useUIStates,
   useUserDocument,
+  useZap,
 } from "./App.hooks";
 import {
   checkActiveUserStates,
@@ -41,6 +42,7 @@ logEvent(analytics, "page_view", {
 });
 
 function App() {
+  let zap = useZap(1, "Robots Building Education Zap");
   // handles passcode, google sign in and registered user info
   const { authStateReference } = useAuthState();
 
@@ -136,8 +138,6 @@ function App() {
     logout = false,
     bitcoin = false
   ) => {
-    console.log("bitcoin", bitcoin);
-
     if (validPasscodes.includes(event?.target?.value)) {
       localStorage.setItem("patreonPasscode", event.target.value);
       uiStateReference.setPatreonObject({});
@@ -194,7 +194,6 @@ function App() {
     // console.log("DID", aliceDid);
   };
   useEffect(() => {
-    console.log("running effect...");
     // connectDID();
 
     const storedPasscode = localStorage.getItem("patreonPasscode");
@@ -225,8 +224,6 @@ function App() {
     });
   }, []);
 
-  // console.log("language mode", languageMode);
-
   if (typeof authStateReference.isSignedIn == "string") {
     return <RoxanaLoadingAnimation />;
   }
@@ -241,7 +238,6 @@ function App() {
       [locationOfHeader]: true,
     };
 
-    console.log("PROFILE", profile);
     await updateDoc(userStateReference.userDocumentReference, {
       profile,
     });
@@ -355,6 +351,7 @@ function App() {
               globalStateReference={globalStateReference}
               handleScheduler={handleScheduler}
               handleZap={handleZap}
+              zap={zap}
             />
           </>
         ) : null}
@@ -371,6 +368,7 @@ function App() {
           showStars={showStars}
           showZap={showZap}
           handleZeroKnowledgePassword={handleZeroKnowledgePassword}
+          zap={zap}
         />
       ) : null}
     </div>

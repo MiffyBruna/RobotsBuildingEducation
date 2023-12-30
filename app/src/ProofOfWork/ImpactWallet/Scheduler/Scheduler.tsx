@@ -46,6 +46,8 @@ export const Scheduler = ({
   isSchedulerOpen,
   setIsSchedulerOpen,
   userStateReference,
+  zap,
+  globalStateReference,
 }) => {
   const [formData, setFormData] = useState({
     aboutYou: "",
@@ -74,10 +76,28 @@ export const Scheduler = ({
       method: postInstructions.method,
       headers: postInstructions.headers,
       body: JSON.stringify({ prompt, isJsonMode: true }),
-    }).catch(() => {
-      //   setIsAiResponseLoading(false);
-      setHasError(true);
-    });
+    })
+      .then((response) => {
+        if (
+          localStorage.getItem("patreonPasscode") ===
+          import.meta.env.VITE_BITCOIN_PASSCODE
+        ) {
+          zap().then((lightningResponse) => {
+            if (lightningResponse?.preimage) {
+              console.log("running zap");
+              console.log("userStateReference", userStateReference);
+              console.log("globalStateReference", globalStateReference);
+              updateImpact(1, userStateReference, globalStateReference);
+            }
+          });
+        }
+
+        return response;
+      })
+      .catch(() => {
+        //   setIsAiResponseLoading(false);
+        setHasError(true);
+      });
 
     if (response) {
       let data = await response.json();
@@ -90,7 +110,7 @@ export const Scheduler = ({
 
   const handleSaveSchedule = async () => {
     setIsSaveLoading(true);
-    console.log("done...");
+
     let document = userStateReference.databaseUserDocument;
     await updateDoc(userStateReference.userDocumentReference, {
       ...document,
@@ -110,7 +130,6 @@ export const Scheduler = ({
       ? schedule
       : userStateReference?.databaseUserDocument?.schedule;
 
-  console.log("MAPPING", mapping);
   return (
     <>
       <Modal centered show={isSchedulerOpen} fullscreen>
