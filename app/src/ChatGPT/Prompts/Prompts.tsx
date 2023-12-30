@@ -36,7 +36,6 @@ const PromptButton = ({
           zap()
             .then((response) => {
               console.log("response from zap", response);
-
               onClick(e);
               handleZap("lecture");
             })
