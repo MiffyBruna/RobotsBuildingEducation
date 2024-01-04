@@ -3,18 +3,32 @@ import { useState, useEffect, useRef } from "react";
 import { isEmpty } from "lodash";
 import { Button, Modal } from "react-bootstrap";
 const data = {
-  Pinterest: 0,
-  Coinbase: 0,
   Duolingo: 0,
   Cloudflare: 0,
-
-  Block: 120000,
-  "US Market": 50000,
+  Coinbase: 13000,
+  Microstrategy: 13000,
+  Bitcoin: 43000,
+  Block: 61000,
+  Pinterest: 25000,
+  "US Market": 8333,
+  "Berkshire Hathaway": 8333,
+  Apple: 8334,
 };
 
 export const Portfolio = () => {
   const canvasRef = useRef(null);
-  const colors = ["#FFF", "#FFF", "#FFF", "#FFF", "#37dec2", "#05f5a4"]; // Teal and Aquamarine colors
+  const colors = [
+    "#bab9b8",
+    "#bab9b8",
+    "#032dff",
+    "#ff030b",
+    "#F6931A",
+    "#37DCCC",
+    "#fc4e4e",
+    "#00d620",
+    "#7e02fa",
+    "#F5F5F7",
+  ]; // Teal and Aquamarine colors
 
   useEffect(() => {
     const canvas = canvasRef.current;

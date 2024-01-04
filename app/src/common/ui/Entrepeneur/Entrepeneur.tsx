@@ -1,5 +1,7 @@
 import { ChatBlock } from "../ChatBlock/ChatBlock";
+import poorCharlie from "../../media/images/poorCharlie.png";
 import { ultimateEffeciencyJutsu } from "../ui";
+import { japaneseThemePalette, textBlock } from "../../../styles/lazyStyles";
 
 export const Entrepeneur = {
   "Understanding Business": {
@@ -1160,7 +1162,58 @@ export const Entrepeneur = {
           action: `shop`,
           icon: `🛍️`,
           request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
-          response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
+          response: (
+            <div>
+              <div
+                style={{
+                  ...textBlock(
+                    japaneseThemePalette.PowerPurple,
+                    0,
+                    12,
+                    "white",
+                    "0px 0px 5px 0px rgba(0,0,0,0.75)"
+                  ),
+                }}
+              >
+                From 1733 to 1758, Ben Franklin dispensed useful and timeless
+                advice through Poor Richard's Almanack. Among the virtues
+                extolled were thrift, duty, hard work, and simplicity.
+                Subsequently, two centuries went by during which Ben's thoughts
+                on these subjects were regarded as the last word. Then Charlie
+                Munger stepped forth. – Warren Buffett From the Foreword to Poor
+                Charlie's Almanack
+              </div>
+              <div
+                style={{
+                  ...textBlock(
+                    japaneseThemePalette.ProsperityEmeraldGreen,
+                    0,
+                    12,
+                    "white",
+                    "0px 0px 5px 0px rgba(0,0,0,0.75)"
+                  ),
+                  width: "fit-content",
+                  marginTop: 4,
+                }}
+              >
+                Shopify Affiliate Commission: 7%
+              </div>
+              <br />
+
+              <a href="https://collabs.shop/zs1bwk" target="_blank">
+                <img
+                  style={{
+                    // border: "1px solid cyan",
+                    borderRadius: 12,
+                    // boxShadow: "1px 1px 3px 2px rgba(0,255,140,1)",
+                    boxShadow:
+                      "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
+                  }}
+                  src={poorCharlie}
+                />
+              </a>
+            </div>
+          ),
           spanish: ``,
           tooltip: ``,
         },
