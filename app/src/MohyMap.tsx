@@ -931,10 +931,6 @@ const GraphContainer = () => {
         <div style={{ marginTop: "20px", color: "grey" }}>{content}</div>
       )}
 
-      {responseIsLoading ? <RoxanaLoadingAnimation /> : null}
-      {chatGptResponse ? <div>{chatGptResponse}</div> : null}
-      {hasError ? <div>error loading data from openai</div> : null}
-
       <div
         style={{
           width: 400,
@@ -945,6 +941,12 @@ const GraphContainer = () => {
           .map((node, index) => <StackTile key={index} name={node} />)
           .reverse()}
       </div>
+      <br />
+      <br />
+
+      {responseIsLoading ? <RoxanaLoadingAnimation /> : null}
+      {chatGptResponse ? <div>{chatGptResponse}</div> : null}
+      {hasError ? <div>error loading data from openai</div> : null}
     </div>
   );
 };
