@@ -1,7 +1,16 @@
 import { ultimateEffeciencyJutsu } from "../ui";
 
-import compSciLib from "../../media/images/compSciLib.jpeg";
-import metaphysicalMuse from "../../media/images/metaphysicalMuse.jpeg";
+// import compSciLib from "../../media/images/compSciLib.jpeg";
+// import metaphysicalMuse from "../../media/images/metaphysicalMuse.jpeg";
+import ctci from "../../media/images/ctci.png";
+import automateTheBoring from "../../media/images/automateTheBoring.png";
+import duckett from "../../media/images/duckett.png";
+import powerLawFinance from "../../media/images/powerLawFinance.png";
+import innovatorsDilemma from "../../media/images/innovatorsDilemma.png";
+import backendScaling from "../../media/images/backendScaling.png";
+import prisonersDilemma from "../../media/images/prisonersDilemma.png";
+import grokking from "../../media/images/grokking.png";
+
 import { japaneseThemePalette, textBlock } from "../../../styles/lazyStyles";
 import { ChatBlock } from "../ChatBlock/ChatBlock";
 import { CodeBlock } from "../Displays/CodeBlock/CodeBlock";
@@ -513,85 +522,98 @@ exports.app = functions.https.onRequest(app);
           request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
           response: (
             <div>
-              This shopping slot is not being utilized yet. Please contact me in
-              Patreon to qualify. In the meantime, lets talk about the
-              socioeconomic state of Latinos in tech.
-              <br />
-              <br />
-              <p>
-                The underrepresentation of Latinos as founders of major tech
-                companies is a multifaceted issue that can be attributed to
-                various factors, including socioeconomic, educational, and
-                cultural barriers, as well as systemic biases and
-                discrimination. Here are some reasons that contribute to this
-                underrepresentation:
-              </p>
-              <br />
-              <ol>
-                <li>
-                  Educational barriers: Access to quality education is essential
-                  for success in the technology industry. However, Latinos may
-                  face challenges in accessing high-quality education due to
-                  factors such as socioeconomic status, underfunded schools, or
-                  living in areas with fewer educational resources. These
-                  challenges can limit their exposure to computer science and
-                  other STEM subjects, reducing the likelihood of pursuing
-                  careers in technology. <br />
-                </li>
-                <li>
-                  Socioeconomic factors: Socioeconomic status plays a
-                  significant role in shaping career opportunities and
-                  aspirations. Latinos, as a group, have historically faced
-                  economic disparities, which can impact their access to
-                  resources, networking opportunities, and the ability to take
-                  risks associated with entrepreneurship. <br />
-                </li>
-
-                <li>
-                  Lack of representation and role models: The technology
-                  industry has long been dominated by individuals from certain
-                  racial and ethnic backgrounds. The lack of Latino
-                  representation in leadership roles and as founders of major
-                  tech companies can make it challenging for aspiring Latino
-                  entrepreneurs to find role models and mentors, which is
-                  crucial for professional development and success. <br />
-                </li>
-                <li>
-                  Limited access to funding and resources: Starting a tech
-                  company often requires substantial financial investment and
-                  access to resources, such as networking opportunities,
-                  mentorship, and technical support. Latinos may face challenges
-                  in securing funding from investors due to unconscious bias,
-                  discrimination, or lack of connections within the industry.{" "}
-                  <br />
-                </li>
-                <li>
-                  Cultural factors: Cultural factors, such as family
-                  expectations and community norms, can also influence career
-                  choices and aspirations. In some cases, Latinos may face
-                  pressure to prioritize more traditional or stable career paths
-                  over the risks associated with entrepreneurship or founding a
-                  tech company. <br />
-                </li>
-                <li>
-                  Systemic biases and discrimination: The technology industry,
-                  like many other sectors, is not immune to systemic biases and
-                  discrimination that can create barriers for underrepresented
-                  groups, including Latinos. This can manifest in various forms,
-                  such as biased hiring practices, limited access to mentorship
-                  and resources, or unequal treatment within the workplace.
-                </li>
-              </ol>
-              <br />
-              <br />
-              Addressing these challenges and promoting diversity in the
-              technology industry requires concerted efforts from various
-              stakeholders, including educational institutions, policymakers,
-              investors, and tech companies themselves. By fostering inclusive
-              environments, providing equal opportunities, and breaking down
-              barriers for underrepresented groups, the tech industry can
-              benefit from the wealth of talent, perspectives, and ideas that
-              diverse founders bring to the table.
+              <div>
+                <div
+                  style={{
+                    ...textBlock(
+                      japaneseThemePalette.PowerPurple,
+                      0,
+                      12,
+                      "white",
+                      "0px 0px 5px 0px rgba(0,0,0,0.75)"
+                    ),
+                  }}
+                >
+                  Cracking The Coding Interview is recognized as "the bible" for
+                  interview preparation. It's an introductory text that refresh
+                  you on the subject.
+                </div>
+                <br />
+                <div
+                  style={{
+                    ...textBlock(
+                      japaneseThemePalette.ProsperityEmeraldGreen,
+                      0,
+                      12,
+                      "white",
+                      "0px 0px 5px 0px rgba(0,0,0,0.75)"
+                    ),
+                    width: "fit-content",
+                    marginTop: 4,
+                  }}
+                >
+                  Shopify Affiliate Commission: 7%
+                </div>
+                <br />
+                <a href="https://collabs.shop/hwzghy" target="_blank">
+                  <img
+                    style={{
+                      // border: "1px solid cyan",
+                      borderRadius: 12,
+                      // boxShadow: "1px 1px 3px 2px rgba(0,255,140,1)",
+                      boxShadow:
+                        "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
+                    }}
+                    src={ctci}
+                  />
+                </a>
+                <br />
+                <br />
+                <br />
+                <div
+                  style={{
+                    ...textBlock(
+                      japaneseThemePalette.PowerPurple,
+                      0,
+                      12,
+                      "white",
+                      "0px 0px 5px 0px rgba(0,0,0,0.75)"
+                    ),
+                  }}
+                >
+                  I recommend getting these books as soon as possible so that
+                  you can challenge yourself and fail faster. Some of the best
+                  learning you'll experience is when the tasks are too hard.
+                </div>
+                <div
+                  style={{
+                    ...textBlock(
+                      japaneseThemePalette.ProsperityEmeraldGreen,
+                      0,
+                      12,
+                      "white",
+                      "0px 0px 5px 0px rgba(0,0,0,0.75)"
+                    ),
+                    width: "fit-content",
+                    marginTop: 4,
+                  }}
+                >
+                  Shopify Affiliate Commission: 7%
+                </div>
+                <br />
+                <a href="https://collabs.shop/hwzghy" target="_blank">
+                  <img
+                    style={{
+                      // border: "1px solid cyan",
+                      borderRadius: 12,
+                      // boxShadow: "1px 1px 3px 2px rgba(0,255,140,1)",
+                      boxShadow:
+                        "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
+                    }}
+                    src={grokking}
+                  />
+                </a>
+              </div>
             </div>
           ),
           spanish: ``,
@@ -1259,85 +1281,51 @@ print(rihanna.perform("at the Grammy Awards"))
           request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
           response: (
             <div>
-              This shopping slot is not being utilized yet. Please contact me in
-              Patreon to qualify. In the meantime, lets talk about the
-              socioeconomic state of Latinos in tech.
+              <div
+                style={{
+                  ...textBlock(
+                    japaneseThemePalette.PowerPurple,
+                    0,
+                    12,
+                    "white",
+                    "0px 0px 5px 0px rgba(0,0,0,0.75)"
+                  ),
+                }}
+              >
+                Automate the Boring Stuff is a successful beginner's guidebook
+                to have when learning common skills like Python. These are
+                skills you can reference when working with data throughout the
+                beginning stages of your career.
+              </div>
+              <div
+                style={{
+                  ...textBlock(
+                    japaneseThemePalette.ProsperityEmeraldGreen,
+                    0,
+                    12,
+                    "white",
+                    "0px 0px 5px 0px rgba(0,0,0,0.75)"
+                  ),
+                  width: "fit-content",
+                  marginTop: 4,
+                }}
+              >
+                Shopify Affiliate Commission: 7%
+              </div>
               <br />
-              <br />
-              <p>
-                The underrepresentation of Latinos as founders of major tech
-                companies is a multifaceted issue that can be attributed to
-                various factors, including socioeconomic, educational, and
-                cultural barriers, as well as systemic biases and
-                discrimination. Here are some reasons that contribute to this
-                underrepresentation:
-              </p>
-              <br />
-              <ol>
-                <li>
-                  Educational barriers: Access to quality education is essential
-                  for success in the technology industry. However, Latinos may
-                  face challenges in accessing high-quality education due to
-                  factors such as socioeconomic status, underfunded schools, or
-                  living in areas with fewer educational resources. These
-                  challenges can limit their exposure to computer science and
-                  other STEM subjects, reducing the likelihood of pursuing
-                  careers in technology. <br />
-                </li>
-                <li>
-                  Socioeconomic factors: Socioeconomic status plays a
-                  significant role in shaping career opportunities and
-                  aspirations. Latinos, as a group, have historically faced
-                  economic disparities, which can impact their access to
-                  resources, networking opportunities, and the ability to take
-                  risks associated with entrepreneurship. <br />
-                </li>
 
-                <li>
-                  Lack of representation and role models: The technology
-                  industry has long been dominated by individuals from certain
-                  racial and ethnic backgrounds. The lack of Latino
-                  representation in leadership roles and as founders of major
-                  tech companies can make it challenging for aspiring Latino
-                  entrepreneurs to find role models and mentors, which is
-                  crucial for professional development and success. <br />
-                </li>
-                <li>
-                  Limited access to funding and resources: Starting a tech
-                  company often requires substantial financial investment and
-                  access to resources, such as networking opportunities,
-                  mentorship, and technical support. Latinos may face challenges
-                  in securing funding from investors due to unconscious bias,
-                  discrimination, or lack of connections within the industry.{" "}
-                  <br />
-                </li>
-                <li>
-                  Cultural factors: Cultural factors, such as family
-                  expectations and community norms, can also influence career
-                  choices and aspirations. In some cases, Latinos may face
-                  pressure to prioritize more traditional or stable career paths
-                  over the risks associated with entrepreneurship or founding a
-                  tech company. <br />
-                </li>
-                <li>
-                  Systemic biases and discrimination: The technology industry,
-                  like many other sectors, is not immune to systemic biases and
-                  discrimination that can create barriers for underrepresented
-                  groups, including Latinos. This can manifest in various forms,
-                  such as biased hiring practices, limited access to mentorship
-                  and resources, or unequal treatment within the workplace.
-                </li>
-              </ol>
-              <br />
-              <br />
-              Addressing these challenges and promoting diversity in the
-              technology industry requires concerted efforts from various
-              stakeholders, including educational institutions, policymakers,
-              investors, and tech companies themselves. By fostering inclusive
-              environments, providing equal opportunities, and breaking down
-              barriers for underrepresented groups, the tech industry can
-              benefit from the wealth of talent, perspectives, and ideas that
-              diverse founders bring to the table.
+              <a href="https://collabs.shop/pkyf0g" target="_blank">
+                <img
+                  style={{
+                    // border: "1px solid cyan",
+                    borderRadius: 12,
+                    // boxShadow: "1px 1px 3px 2px rgba(0,255,140,1)",
+                    boxShadow:
+                      "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
+                  }}
+                  src={automateTheBoring}
+                />
+              </a>
             </div>
           ),
           spanish: ``,
@@ -2215,85 +2203,52 @@ export default LoginForm;
           request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
           response: (
             <div>
-              This shopping slot is not being utilized yet. Please contact me in
-              Patreon to qualify. In the meantime, lets talk about the
-              socioeconomic state of Latinos in tech.
+              <div
+                style={{
+                  ...textBlock(
+                    japaneseThemePalette.PowerPurple,
+                    0,
+                    12,
+                    "white",
+                    "0px 0px 5px 0px rgba(0,0,0,0.75)"
+                  ),
+                }}
+              >
+                This book by Duckett is a frontend classic that provides visual
+                illustrations of HTML and CSS concepts. Despite the modern
+                approach to explaining frontend here, it's still important to
+                know the fundamentals of the software is responsible for the
+                look and feel of modern applications.
+              </div>
+              <div
+                style={{
+                  ...textBlock(
+                    japaneseThemePalette.ProsperityEmeraldGreen,
+                    0,
+                    12,
+                    "white",
+                    "0px 0px 5px 0px rgba(0,0,0,0.75)"
+                  ),
+                  width: "fit-content",
+                  marginTop: 4,
+                }}
+              >
+                Shopify Affiliate Commission: 7%
+              </div>
               <br />
-              <br />
-              <p>
-                The underrepresentation of Latinos as founders of major tech
-                companies is a multifaceted issue that can be attributed to
-                various factors, including socioeconomic, educational, and
-                cultural barriers, as well as systemic biases and
-                discrimination. Here are some reasons that contribute to this
-                underrepresentation:
-              </p>
-              <br />
-              <ol>
-                <li>
-                  Educational barriers: Access to quality education is essential
-                  for success in the technology industry. However, Latinos may
-                  face challenges in accessing high-quality education due to
-                  factors such as socioeconomic status, underfunded schools, or
-                  living in areas with fewer educational resources. These
-                  challenges can limit their exposure to computer science and
-                  other STEM subjects, reducing the likelihood of pursuing
-                  careers in technology. <br />
-                </li>
-                <li>
-                  Socioeconomic factors: Socioeconomic status plays a
-                  significant role in shaping career opportunities and
-                  aspirations. Latinos, as a group, have historically faced
-                  economic disparities, which can impact their access to
-                  resources, networking opportunities, and the ability to take
-                  risks associated with entrepreneurship. <br />
-                </li>
 
-                <li>
-                  Lack of representation and role models: The technology
-                  industry has long been dominated by individuals from certain
-                  racial and ethnic backgrounds. The lack of Latino
-                  representation in leadership roles and as founders of major
-                  tech companies can make it challenging for aspiring Latino
-                  entrepreneurs to find role models and mentors, which is
-                  crucial for professional development and success. <br />
-                </li>
-                <li>
-                  Limited access to funding and resources: Starting a tech
-                  company often requires substantial financial investment and
-                  access to resources, such as networking opportunities,
-                  mentorship, and technical support. Latinos may face challenges
-                  in securing funding from investors due to unconscious bias,
-                  discrimination, or lack of connections within the industry.{" "}
-                  <br />
-                </li>
-                <li>
-                  Cultural factors: Cultural factors, such as family
-                  expectations and community norms, can also influence career
-                  choices and aspirations. In some cases, Latinos may face
-                  pressure to prioritize more traditional or stable career paths
-                  over the risks associated with entrepreneurship or founding a
-                  tech company. <br />
-                </li>
-                <li>
-                  Systemic biases and discrimination: The technology industry,
-                  like many other sectors, is not immune to systemic biases and
-                  discrimination that can create barriers for underrepresented
-                  groups, including Latinos. This can manifest in various forms,
-                  such as biased hiring practices, limited access to mentorship
-                  and resources, or unequal treatment within the workplace.
-                </li>
-              </ol>
-              <br />
-              <br />
-              Addressing these challenges and promoting diversity in the
-              technology industry requires concerted efforts from various
-              stakeholders, including educational institutions, policymakers,
-              investors, and tech companies themselves. By fostering inclusive
-              environments, providing equal opportunities, and breaking down
-              barriers for underrepresented groups, the tech industry can
-              benefit from the wealth of talent, perspectives, and ideas that
-              diverse founders bring to the table.
+              <a href="https://collabs.shop/kkwfvu" target="_blank">
+                <img
+                  style={{
+                    // border: "1px solid cyan",
+                    borderRadius: 12,
+                    // boxShadow: "1px 1px 3px 2px rgba(0,255,140,1)",
+                    boxShadow:
+                      "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
+                  }}
+                  src={duckett}
+                />
+              </a>
             </div>
           ),
           spanish: ``,
@@ -3099,85 +3054,51 @@ if __name__ == '__main__':
           request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
           response: (
             <div>
-              This shopping slot is not being utilized yet. Please contact me in
-              Patreon to qualify. In the meantime, lets talk about the
-              socioeconomic state of Latinos in tech.
+              <div
+                style={{
+                  ...textBlock(
+                    japaneseThemePalette.PowerPurple,
+                    0,
+                    12,
+                    "white",
+                    "0px 0px 5px 0px rgba(0,0,0,0.75)"
+                  ),
+                }}
+              >
+                This book will introduce you to some industry level standards to
+                building large scale technology. Some of the problems
+                encountered here may not be witnessed for years into your
+                career.
+              </div>
+              <div
+                style={{
+                  ...textBlock(
+                    japaneseThemePalette.ProsperityEmeraldGreen,
+                    0,
+                    12,
+                    "white",
+                    "0px 0px 5px 0px rgba(0,0,0,0.75)"
+                  ),
+                  width: "fit-content",
+                  marginTop: 4,
+                }}
+              >
+                Shopify Affiliate Commission: 7%
+              </div>
               <br />
-              <br />
-              <p>
-                The underrepresentation of Latinos as founders of major tech
-                companies is a multifaceted issue that can be attributed to
-                various factors, including socioeconomic, educational, and
-                cultural barriers, as well as systemic biases and
-                discrimination. Here are some reasons that contribute to this
-                underrepresentation:
-              </p>
-              <br />
-              <ol>
-                <li>
-                  Educational barriers: Access to quality education is essential
-                  for success in the technology industry. However, Latinos may
-                  face challenges in accessing high-quality education due to
-                  factors such as socioeconomic status, underfunded schools, or
-                  living in areas with fewer educational resources. These
-                  challenges can limit their exposure to computer science and
-                  other STEM subjects, reducing the likelihood of pursuing
-                  careers in technology. <br />
-                </li>
-                <li>
-                  Socioeconomic factors: Socioeconomic status plays a
-                  significant role in shaping career opportunities and
-                  aspirations. Latinos, as a group, have historically faced
-                  economic disparities, which can impact their access to
-                  resources, networking opportunities, and the ability to take
-                  risks associated with entrepreneurship. <br />
-                </li>
 
-                <li>
-                  Lack of representation and role models: The technology
-                  industry has long been dominated by individuals from certain
-                  racial and ethnic backgrounds. The lack of Latino
-                  representation in leadership roles and as founders of major
-                  tech companies can make it challenging for aspiring Latino
-                  entrepreneurs to find role models and mentors, which is
-                  crucial for professional development and success. <br />
-                </li>
-                <li>
-                  Limited access to funding and resources: Starting a tech
-                  company often requires substantial financial investment and
-                  access to resources, such as networking opportunities,
-                  mentorship, and technical support. Latinos may face challenges
-                  in securing funding from investors due to unconscious bias,
-                  discrimination, or lack of connections within the industry.{" "}
-                  <br />
-                </li>
-                <li>
-                  Cultural factors: Cultural factors, such as family
-                  expectations and community norms, can also influence career
-                  choices and aspirations. In some cases, Latinos may face
-                  pressure to prioritize more traditional or stable career paths
-                  over the risks associated with entrepreneurship or founding a
-                  tech company. <br />
-                </li>
-                <li>
-                  Systemic biases and discrimination: The technology industry,
-                  like many other sectors, is not immune to systemic biases and
-                  discrimination that can create barriers for underrepresented
-                  groups, including Latinos. This can manifest in various forms,
-                  such as biased hiring practices, limited access to mentorship
-                  and resources, or unequal treatment within the workplace.
-                </li>
-              </ol>
-              <br />
-              <br />
-              Addressing these challenges and promoting diversity in the
-              technology industry requires concerted efforts from various
-              stakeholders, including educational institutions, policymakers,
-              investors, and tech companies themselves. By fostering inclusive
-              environments, providing equal opportunities, and breaking down
-              barriers for underrepresented groups, the tech industry can
-              benefit from the wealth of talent, perspectives, and ideas that
-              diverse founders bring to the table.
+              <a href="https://collabs.shop/iu3ion" target="_blank">
+                <img
+                  style={{
+                    // border: "1px solid cyan",
+                    borderRadius: 12,
+                    // boxShadow: "1px 1px 3px 2px rgba(0,255,140,1)",
+                    boxShadow:
+                      "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
+                  }}
+                  src={backendScaling}
+                />
+              </a>
             </div>
           ),
           spanish: ``,
@@ -4140,64 +4061,100 @@ app.listen(8000, () => console.log('Server running on port 8000'));
           request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
           response: (
             <div>
-              This shopping slot is not being utilized yet. Please contact me in
-              Patreon to qualify. In the meantime, lets talk about the
-              socioeconomic state of Latinos in tech.
+              <div>
+                <div
+                  style={{
+                    ...textBlock(
+                      japaneseThemePalette.PowerPurple,
+                      0,
+                      12,
+                      "white",
+                      "0px 0px 5px 0px rgba(0,0,0,0.75)"
+                    ),
+                  }}
+                >
+                  Power law finance is a concept that will help you understand
+                  how the startup industry thinks and works. The internet is a
+                  powerful tool that can take businesses to exponential heights,
+                  and this observes how these platforms are successfully built.
+                </div>
+                <div
+                  style={{
+                    ...textBlock(
+                      japaneseThemePalette.ProsperityEmeraldGreen,
+                      0,
+                      12,
+                      "white",
+                      "0px 0px 5px 0px rgba(0,0,0,0.75)"
+                    ),
+                    width: "fit-content",
+                    marginTop: 4,
+                  }}
+                >
+                  Shopify Affiliate Commission: 7%
+                </div>
+                <br />
+
+                <a href="https://collabs.shop/2kdqmy" target="_blank">
+                  <img
+                    style={{
+                      // border: "1px solid cyan",
+                      borderRadius: 12,
+                      // boxShadow: "1px 1px 3px 2px rgba(0,255,140,1)",
+                      boxShadow:
+                        "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
+                    }}
+                    src={powerLawFinance}
+                  />
+                </a>
+              </div>
               <br />
               <br />
-              The underrepresentation of Latinos as founders of major tech
-              companies is a multifaceted issue that can be attributed to
-              various factors, including socioeconomic, educational, and
-              cultural barriers, as well as systemic biases and discrimination.
-              Here are some reasons that contribute to this underrepresentation:
-              <br />
-              Educational barriers: Access to quality education is essential for
-              success in the technology industry. However, Latinos may face
-              challenges in accessing high-quality education due to factors such
-              as socioeconomic status, underfunded schools, or living in areas
-              with fewer educational resources. These challenges can limit their
-              exposure to computer science and other STEM subjects, reducing the
-              likelihood of pursuing careers in technology. <br />
-              Socioeconomic factors: Socioeconomic status plays a significant
-              role in shaping career opportunities and aspirations. Latinos, as
-              a group, have historically faced economic disparities, which can
-              impact their access to resources, networking opportunities, and
-              the ability to take risks associated with entrepreneurship. <br />
-              Lack of representation and role models: The technology industry
-              has long been dominated by individuals from certain racial and
-              ethnic backgrounds. The lack of Latino representation in
-              leadership roles and as founders of major tech companies can make
-              it challenging for aspiring Latino entrepreneurs to find role
-              models and mentors, which is crucial for professional development
-              and success. <br />
-              Limited access to funding and resources: Starting a tech company
-              often requires substantial financial investment and access to
-              resources, such as networking opportunities, mentorship, and
-              technical support. Latinos may face challenges in securing funding
-              from investors due to unconscious bias, discrimination, or lack of
-              connections within the industry. <br />
-              Cultural factors: Cultural factors, such as family expectations
-              and community norms, can also influence career choices and
-              aspirations. In some cases, Latinos may face pressure to
-              prioritize more traditional or stable career paths over the risks
-              associated with entrepreneurship or founding a tech company.{" "}
-              <br />
-              Systemic biases and discrimination: The technology industry, like
-              many other sectors, is not immune to systemic biases and
-              discrimination that can create barriers for underrepresented
-              groups, including Latinos. This can manifest in various forms,
-              such as biased hiring practices, limited access to mentorship and
-              resources, or unequal treatment within the workplace.
-              <br />
-              <br />
-              Addressing these challenges and promoting diversity in the
-              technology industry requires concerted efforts from various
-              stakeholders, including educational institutions, policymakers,
-              investors, and tech companies themselves. By fostering inclusive
-              environments, providing equal opportunities, and breaking down
-              barriers for underrepresented groups, the tech industry can
-              benefit from the wealth of talent, perspectives, and ideas that
-              diverse founders bring to the table.
+              <div>
+                <div
+                  style={{
+                    ...textBlock(
+                      japaneseThemePalette.PowerPurple,
+                      0,
+                      12,
+                      "white",
+                      "0px 0px 5px 0px rgba(0,0,0,0.75)"
+                    ),
+                  }}
+                >
+                  This book discusses how the chess board moves when large firms
+                  have to compete with rapidly growing startups.
+                </div>
+                <div
+                  style={{
+                    ...textBlock(
+                      japaneseThemePalette.ProsperityEmeraldGreen,
+                      0,
+                      12,
+                      "white",
+                      "0px 0px 5px 0px rgba(0,0,0,0.75)"
+                    ),
+                    width: "fit-content",
+                    marginTop: 4,
+                  }}
+                >
+                  Shopify Affiliate Commission: 7%
+                </div>
+                <br />
+
+                <a href="https://collabs.shop/dldeb6" target="_blank">
+                  <img
+                    style={{
+                      // border: "1px solid cyan",
+                      borderRadius: 12,
+                      // boxShadow: "1px 1px 3px 2px rgba(0,255,140,1)",
+                      boxShadow:
+                        "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
+                    }}
+                    src={innovatorsDilemma}
+                  />
+                </a>
+              </div>
             </div>
           ),
           spanish: ``,
@@ -4937,7 +4894,7 @@ function search(root, key) {
   if (root.val < key) {
     return search(root.right, key);
   }
-
+sh
   // If the key is smaller than the root's value, search the left subtree
   return search(root.left, key);
 }
@@ -5045,85 +5002,51 @@ if (result !== null) {
           request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
           response: (
             <div>
-              This shopping slot is not being utilized yet. Please contact me in
-              Patreon to qualify. In the meantime, lets talk about the
-              socioeconomic state of Latinos in tech.
+              <div
+                style={{
+                  ...textBlock(
+                    japaneseThemePalette.PowerPurple,
+                    0,
+                    12,
+                    "white",
+                    "0px 0px 5px 0px rgba(0,0,0,0.75)"
+                  ),
+                }}
+              >
+                This book introduces you to the history of modern game theory,
+                which has had enormous consequences in computing history. The
+                quality of your decisions will have to improve when your skills
+                and income improve.
+              </div>
+              <div
+                style={{
+                  ...textBlock(
+                    japaneseThemePalette.ProsperityEmeraldGreen,
+                    0,
+                    12,
+                    "white",
+                    "0px 0px 5px 0px rgba(0,0,0,0.75)"
+                  ),
+                  width: "fit-content",
+                  marginTop: 4,
+                }}
+              >
+                Shopify Affiliate Commission: 7%
+              </div>
               <br />
-              <br />
-              <p>
-                The underrepresentation of Latinos as founders of major tech
-                companies is a multifaceted issue that can be attributed to
-                various factors, including socioeconomic, educational, and
-                cultural barriers, as well as systemic biases and
-                discrimination. Here are some reasons that contribute to this
-                underrepresentation:
-              </p>
-              <br />
-              <ol>
-                <li>
-                  Educational barriers: Access to quality education is essential
-                  for success in the technology industry. However, Latinos may
-                  face challenges in accessing high-quality education due to
-                  factors such as socioeconomic status, underfunded schools, or
-                  living in areas with fewer educational resources. These
-                  challenges can limit their exposure to computer science and
-                  other STEM subjects, reducing the likelihood of pursuing
-                  careers in technology. <br />
-                </li>
-                <li>
-                  Socioeconomic factors: Socioeconomic status plays a
-                  significant role in shaping career opportunities and
-                  aspirations. Latinos, as a group, have historically faced
-                  economic disparities, which can impact their access to
-                  resources, networking opportunities, and the ability to take
-                  risks associated with entrepreneurship. <br />
-                </li>
 
-                <li>
-                  Lack of representation and role models: The technology
-                  industry has long been dominated by individuals from certain
-                  racial and ethnic backgrounds. The lack of Latino
-                  representation in leadership roles and as founders of major
-                  tech companies can make it challenging for aspiring Latino
-                  entrepreneurs to find role models and mentors, which is
-                  crucial for professional development and success. <br />
-                </li>
-                <li>
-                  Limited access to funding and resources: Starting a tech
-                  company often requires substantial financial investment and
-                  access to resources, such as networking opportunities,
-                  mentorship, and technical support. Latinos may face challenges
-                  in securing funding from investors due to unconscious bias,
-                  discrimination, or lack of connections within the industry.{" "}
-                  <br />
-                </li>
-                <li>
-                  Cultural factors: Cultural factors, such as family
-                  expectations and community norms, can also influence career
-                  choices and aspirations. In some cases, Latinos may face
-                  pressure to prioritize more traditional or stable career paths
-                  over the risks associated with entrepreneurship or founding a
-                  tech company. <br />
-                </li>
-                <li>
-                  Systemic biases and discrimination: The technology industry,
-                  like many other sectors, is not immune to systemic biases and
-                  discrimination that can create barriers for underrepresented
-                  groups, including Latinos. This can manifest in various forms,
-                  such as biased hiring practices, limited access to mentorship
-                  and resources, or unequal treatment within the workplace.
-                </li>
-              </ol>
-              <br />
-              <br />
-              Addressing these challenges and promoting diversity in the
-              technology industry requires concerted efforts from various
-              stakeholders, including educational institutions, policymakers,
-              investors, and tech companies themselves. By fostering inclusive
-              environments, providing equal opportunities, and breaking down
-              barriers for underrepresented groups, the tech industry can
-              benefit from the wealth of talent, perspectives, and ideas that
-              diverse founders bring to the table.
+              <a href="https://collabs.shop/iu3ion" target="_blank">
+                <img
+                  style={{
+                    // border: "1px solid cyan",
+                    borderRadius: 12,
+                    // boxShadow: "1px 1px 3px 2px rgba(0,255,140,1)",
+                    boxShadow:
+                      "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
+                  }}
+                  src={prisonersDilemma}
+                />
+              </a>
             </div>
           ),
           spanish: ``,

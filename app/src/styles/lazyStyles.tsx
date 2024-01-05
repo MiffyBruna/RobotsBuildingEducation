@@ -382,7 +382,7 @@ export let japaneseThemePalette = {
   WoodenArchitectureBrown: "#d3a86f", // Japanese Wood Architecture
   BambooForestGreen: "#4aa89c", // Bamboo Forest
   DeepCherryBlossomPink: "#C71585", // Deep Cherry Blossom
-  ProsperityEmeraldGreen: "#88d36f", // Symbol of Wealth
+  ProsperityEmeraldGreen: "#31d660", // Symbol of Wealth
   StrongRed: "#DC143C", // Japanese Flag Red
   StrongBlue: "#00008B", // Indigo Blue Textile
   DarkMetallicSilver: "#5A5A5A", // Darkened Steel Samurai Sword

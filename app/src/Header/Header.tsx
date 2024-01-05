@@ -78,7 +78,6 @@ export const Header = ({
           >
             <Form.Switch>
               <Form.Check
-                disabled
                 type="switch"
                 id="custom-switch-lang"
                 label={languageModeLabel}
@@ -86,7 +85,6 @@ export const Header = ({
                 checked={isSpanishMode}
               />
               <Form.Check
-                disabled
                 type="switch"
                 id="custom-switch-color"
                 label={colorPaletteLabel}
