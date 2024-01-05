@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { japaneseThemePalette, textBlock } from "./styles/lazyStyles";
 
 let mapImage = {
   // parent nodes
@@ -750,15 +751,16 @@ let mapImage = {
     },
   },
 };
+
 const NodeComponent = ({ node, onNodeSelect, isSelected }) => {
   const isLeafNode = !node.children || Object.keys(node.children).length === 0;
 
   return (
-    <div style={{ marginLeft: "20px" }}>
+    <div style={{}}>
       <button
         onClick={() => onNodeSelect(node, isLeafNode)}
         style={{
-          margin: "5px",
+          marginTop: 12,
           backgroundColor: isSelected ? "#add8e6" : "#f0f0f0",
           cursor: "pointer",
         }}
@@ -781,7 +783,23 @@ const NodeComponent = ({ node, onNodeSelect, isSelected }) => {
   );
 };
 
-export const MohyMap = () => {
+const StackTile = ({ name }) => {
+  return (
+    <div
+      style={{
+        backgroundColor: japaneseThemePalette.SakuraMochiPink, // Aquamarine color
+        color: "white",
+        padding: "10px",
+        margin: "5px",
+        borderRadius: "12px",
+      }}
+    >
+      {name}
+    </div>
+  );
+};
+
+const GraphContainer = () => {
   const [root, setRoot] = useState({
     name: "Root",
     children: mapImage,
@@ -823,7 +841,13 @@ export const MohyMap = () => {
   };
 
   return (
-    <div>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+      }}
+    >
       <NodeComponent
         node={root}
         onNodeSelect={handleNodeSelect}
@@ -834,12 +858,27 @@ export const MohyMap = () => {
           Undo
         </button>
       )}
+      <br />
+      <br />
       <button onClick={handleRestart} style={{ margin: "5px" }}>
         Restart
       </button>
       {content && (
         <div style={{ marginTop: "20px", color: "grey" }}>{content}</div>
       )}
+
+      <div
+        style={{
+          width: 400,
+          ...textBlock(japaneseThemePalette.FujiSanBlue, 0, 12),
+        }}
+      >
+        {path
+          .map((node, index) => <StackTile key={index} name={node} />)
+          .reverse()}
+      </div>
     </div>
   );
 };
+
+export default GraphContainer;

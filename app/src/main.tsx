@@ -5,7 +5,7 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import { ImpactWallet } from "./ProofOfWork/ImpactWallet/ImpactWallet";
-import { MohyMap } from "./MohyMap";
+import GraphContainer from "./MohyMap";
 
 // this is the craziest routing I ever did
 
@@ -24,7 +24,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/map",
-    element: <MohyMap />,
+    element: <GraphContainer />,
   },
 ]);
 
