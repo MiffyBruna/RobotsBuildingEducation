@@ -750,12 +750,13 @@ let mapImage = {
     },
   },
 };
-
 const NodeComponent = ({ node, onNodeSelect, isSelected }) => {
+  const isLeafNode = !node.children || Object.keys(node.children).length === 0;
+
   return (
     <div style={{ marginLeft: "20px" }}>
       <button
-        onClick={() => onNodeSelect(node)}
+        onClick={() => onNodeSelect(node, isLeafNode)}
         style={{
           margin: "5px",
           backgroundColor: isSelected ? "#add8e6" : "#f0f0f0",
@@ -774,11 +775,6 @@ const NodeComponent = ({ node, onNodeSelect, isSelected }) => {
               isSelected={false}
             />
           ))}
-          {node.content === "" && (
-            <div style={{ marginLeft: "20px", color: "grey" }}>
-              Data about your algorithm
-            </div>
-          )}
         </div>
       )}
     </div>
@@ -792,19 +788,19 @@ export const MohyMap = () => {
     isSelected: true,
   });
   const [path, setPath] = useState(["Root"]);
+  const [content, setContent] = useState("");
 
-  useEffect(() => {
-    setRoot({ name: "Root", children: mapImage, isSelected: true });
-  }, []);
-
-  const handleNodeSelect = (node) => {
+  const handleNodeSelect = (node, isLeafNode) => {
     setPath((prevPath) => [...prevPath, node.name]);
-    setRoot({
-      name: node.name,
-      children: node.children,
-      content: node.content,
-      isSelected: true,
-    });
+    setRoot({ name: node.name, children: node.children, isSelected: true });
+
+    if (isLeafNode) {
+      setContent(
+        node.content === "" ? "Data about your algorithm" : node.content
+      );
+    } else {
+      setContent("");
+    }
   };
 
   const handleUndo = () => {
@@ -815,6 +811,7 @@ export const MohyMap = () => {
       for (let name of newPath.slice(1)) {
         currentNode = currentNode[name].children;
       }
+      setRoot({ name: lastNodeName, children: currentNode, isSelected: true });
       return newPath;
     });
   };
@@ -822,6 +819,7 @@ export const MohyMap = () => {
   const handleRestart = () => {
     setPath(["Root"]);
     setRoot({ name: "Root", children: mapImage, isSelected: true });
+    setContent("");
   };
 
   return (
@@ -839,6 +837,9 @@ export const MohyMap = () => {
       <button onClick={handleRestart} style={{ margin: "5px" }}>
         Restart
       </button>
+      {content && (
+        <div style={{ marginTop: "20px", color: "grey" }}>{content}</div>
+      )}
     </div>
   );
 };
