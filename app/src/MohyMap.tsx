@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { japaneseThemePalette, textBlock } from "./styles/lazyStyles";
+import { useZap } from "./App.hooks";
+import { RoxanaLoadingAnimation, postInstructions } from "./common/uiSchema";
 
 let mapImage = {
   // parent nodes
@@ -787,7 +789,7 @@ const StackTile = ({ name }) => {
   return (
     <div
       style={{
-        backgroundColor: japaneseThemePalette.SakuraMochiPink, // Aquamarine color
+        backgroundColor: japaneseThemePalette.SakuraMochiPink,
         color: "white",
         padding: "10px",
         margin: "5px",
@@ -807,6 +809,13 @@ const GraphContainer = () => {
   });
   const [path, setPath] = useState(["Root"]);
   const [content, setContent] = useState("");
+  const [isDisplayingAI, setIsDisplayingAI] = useState(false);
+  const [hasError, setHasError] = useState(false);
+  const [responseIsLoading, setResponseIsLoading] = useState(false);
+  const [chatGptResponse, setChatGptResponse] = useState("");
+  const [code, setCode] = useState("");
+  //monetize your AI per usage
+  let zap = useZap(1, "Robots Building Education Zap");
 
   const handleNodeSelect = (node, isLeafNode) => {
     setPath((prevPath) => [...prevPath, node.name]);
@@ -816,8 +825,10 @@ const GraphContainer = () => {
       setContent(
         node.content === "" ? "Data about your algorithm" : node.content
       );
+      setIsDisplayingAI(true);
     } else {
       setContent("");
+      setIsDisplayingAI(false);
     }
   };
 
@@ -838,6 +849,44 @@ const GraphContainer = () => {
     setPath(["Root"]);
     setRoot({ name: "Root", children: mapImage, isSelected: true });
     setContent("");
+  };
+
+  const handleAI = async (event) => {
+    event.preventDefault();
+    setHasError(false);
+    setResponseIsLoading(true);
+
+    let prompt = `Someone is requesting for help so that they can solve problems related to data structures and algorithms in computer science. This is the path of problems the requester is working with to solve their problem: ${path}. This is the code they're working with: ${code}
+    
+    Provide nicely formatted assistance so that they can perform better in an interview.`;
+
+    const response = await fetch(postInstructions.url, {
+      method: postInstructions.method,
+      headers: postInstructions.headers,
+      body: JSON.stringify({
+        prompt,
+      }),
+    })
+      .then((response) => {
+        if (
+          localStorage.getItem("patreonPasscode") ===
+          import.meta.env.VITE_BITCOIN_PASSCODE
+        ) {
+          zap();
+        }
+
+        return response;
+      })
+      .catch(() => {
+        setHasError(true);
+      });
+
+    if (response) {
+      let data = await response.json();
+      let content = data?.bot?.content;
+      setChatGptResponse(content);
+    }
+    setResponseIsLoading(false);
   };
 
   return (
@@ -863,9 +912,28 @@ const GraphContainer = () => {
       <button onClick={handleRestart} style={{ margin: "5px" }}>
         Restart
       </button>
+
+      {isDisplayingAI ? (
+        <>
+          <button onClick={handleAI} style={{ margin: "5px" }}>
+            Ask 🌀
+          </button>
+
+          <textarea
+            onChange={(event) => setCode(event.target.value)}
+            style={{ margin: "5px" }}
+            placeholder="paste your code"
+          ></textarea>
+        </>
+      ) : null}
+
       {content && (
         <div style={{ marginTop: "20px", color: "grey" }}>{content}</div>
       )}
+
+      {responseIsLoading ? <RoxanaLoadingAnimation /> : null}
+      {chatGptResponse ? <div>{chatGptResponse}</div> : null}
+      {hasError ? <div>error loading data from openai</div> : null}
 
       <div
         style={{
