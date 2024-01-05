@@ -915,7 +915,11 @@ const GraphContainer = () => {
 
       {isDisplayingAI ? (
         <>
-          <button onClick={handleAI} style={{ margin: "5px" }}>
+          <button
+            onClick={handleAI}
+            style={{ margin: "5px" }}
+            disabled={responseIsLoading}
+          >
             Ask 🌀
           </button>
 
