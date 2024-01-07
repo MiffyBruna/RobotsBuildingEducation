@@ -10,23 +10,23 @@ This document helps people set up this application on their device. It also serv
 
 - Use thew app @ https://robotsbuildingeducation.com
 
-# RO.B.E
+## RO.B.E
 
 Robots Building Education is a research project centered around decentralized finance and education.
 
 In 2023, it takes the form of an AI cofounder that generates scholarships through "work" created by users interacting with AI.
 
-# Code Quality
+## Code Quality
 
 If you have joined the Patreon, you know the "Publish, Refine, Release" strategy we use here. Eventually, we want refinements to take us to a level where the code is so readable and intuitive that people on social media can casually understand it with little or no experience.
 
 So this means improving the quality of comments, variable names and data flow over time. The point isn't to write epicly awesome software - the point is to be teachable and inspiring for newcomers. The code should be good enough that it explains itself in a simple screenshot or carousel of screenshots... ideally!
 
-# Educational material
+## Educational material
 
 Learn more about the codebase here: [codebase details](https://github.com/RobotsBuildingEducation/RobotsBuildingEducation/blob/main/app/README.md)
 
-# Forking RO.B.E
+## Forking RO.B.E
 
 #### Firestore 🔥
 
