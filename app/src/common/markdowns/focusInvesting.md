@@ -72,49 +72,199 @@ So when it comes to applying these concepts, I've ultimately boiled it down to p
 4. Berkshire Hathaway
 5. Apple
 
-### Understanding Pinterest & Social Media
+# Pinterest & Social Media
 
-https://profitviz.com/PINS
+## Understanding incentives
 
-Well before going into Pinterest, let's understand the basics of social media. All of social media exists on some kind of "scale of intention" ranging from direct action to passive entertainment. So applications like Discord, Google and Pinterest are going to be geared toward pre-determined customers goals; they're social tools. Other platforms will likely be geared toward some form of entertainment like Tiktok or Instagram. They're passive tools where people enjoy spending their idle time.
+<img width="100%" alt="image" src="https://github.com/RobotsBuildingEducation/Educate/assets/65219666/fea67ddd-516d-402e-b4ea-b2032363c650">
 
-Now social media has a super set, which is the creator economy, and that's much larger in scope. The creator economy can even be inclusive of things like Roblox, AirBnB or even this simple AI tutor. A creator is a digital-first entrepeneur. There are many too many ways to measure success in the creator economy and I personally believe that millenials and younger generations should really be proud of creating such a fascinating slice of the pie.
+Understanding incentives is a subject you’ll need to question and learn in order to understand and pick apart businesses. Incentives are drivers for economic behavior.
 
-Pinterest lies in a healthy place in the creator economy. It's customers love to use the application for the right reasons and it's primarily driven by women. In short, it's a shopping application. Underneath that it's an idea search engine and a place to collect plans. This combination of things places it uniquely in the creator economy.
+Pinterest is a company I like to use to understand incentives. Immediately, many novice investors may ask questions like, “Why would you invest in Pinterest when Tiktok or Meta exists?” and I like to answer this question by asking, “What drives you to shop at Target or Costco?”. It’s there where we can start to look at different concepts like psychological bias and other economic consequences that drive our consumer behavior. So let’s ask the question, why do we use Pinterest when Meta or Tiktok exists?
 
-Let me ask the reader this - if you had to choose one tool to plan the best version of a child's birthday party; would you use Pinterest, Amazon or Google? What about a wedding, or a vacation? The thing about these question is that it's not immediately obvious, and that is economically profound when you realize that Google and Amazon are both nearly 10,000%+ or 100x+ larger than Pinterest.
+<img width="100%" alt="image" src="https://github.com/RobotsBuildingEducation/Educate/assets/65219666/2d0ae050-0ffe-4b55-8249-b828df1f2156">
 
-So despite being smaller, and theoretically more volatile, you end up in a pleasant situation where a reputable company continues to grow in a manner that is clear-sighted. Before Pinterest is concerned with social influence, it's concerned with providing it's customers a useful service. This creates a very simple business to understand and the second order effects of these relationships results in highly curated ads. Customers on Pinterest are directly interested in the ads rather than it being a competing space for time and attention.
+## The Mental Model
 
-Financially, this theory is playing out well. Pinterest has an impressive outreach of 400M-500M monthly users with a healthy balance sheet. Many other social media competitors of a similar size like Snapchat, Spotify, Discord, Reddit X seemingly struggle in comparison, and for good reason - they're incentivized around capturing attention and building an economy around it - of which Google and Meta are heavyweights.
+<img width="100%" alt="image" src="https://github.com/RobotsBuildingEducation/Educate/assets/65219666/1fa18dcb-f66e-422f-a267-16453744ba41">
 
-So the theory is ultimately pretty simple. Pinterest is a predictable business and as long as it remains highly reputable and useful, it becomes a pretty good social media investment that can responsibly manage heavy allocation.
+Let’s start with a simple mental model to understand where we are on the internet. Social networks are a subset of communication technologies and these communication platforms create a network known as the internet. Communication platforms tend to range from intention to entertainment. This spectrum isn’t linear, sometimes entertainment platforms can be intentional. Sometimes tools can be entertaining. I want us to think really abstractly about what communication even means. It’s the source of a lot of change and movement.
 
-### Understanding Block & Financial Technology
+For example, a singer like Beyoncé can clearly sing for our entertainment, but what happens if a singer is suddenly protesting some social issue? Suddenly this entertainer becomes intentful in her communications. So platforms aren’t always one-dimensional, but a lot of these platforms are going to be driven by the data that informs it. This is what we know as the algorithm. For that reason, platforms like Instagram and Pinterest tend to have more curation in their distribution while platforms like Tiktok or Snapchat may be more candid or “lo-fi” in their approach. We can ponder why that is and you’ll come up with various potential answers.
 
-https://profitviz.com/SQ
+So this is why we use different social platforms. They fulfill the needs of their customers for different reasons and they have genuine moats around those services. This is why Google, despite its size and influence, were unable to compete with the social nature of Facebook, a platform designed around connection. This may also explain why Pinterest can still perform impressively well despite sharing space with platforms like Tiktok, Google, Instagram or even Amazon.
 
-So over time, you'll notice that my investment strategy tends to revolve around the "next best opportunity" rather than the current incumbents. This means that I like trying to formulate which opportunities are likely to be the next generation of competitors. This is the reason why I tend to have seemingly random investments like Roblox. Block is one of those investments. I believe there's an opportunity that it can become the next generation "JP Morgan Chase or Visa".
+## Data & Design
 
-Investing in financial technology is honestly pretty complex. For example, if you want to understand the distribution of financial services, you need to understand the regulatory frameworks that allow those pipelines to be built. This goes back to our first principle - reading is going to lead to success. However, for now, let's make this break down the complex and then follow it with something more simple to understand.
+<img width="100%" alt="image" src="https://github.com/RobotsBuildingEducation/Educate/assets/65219666/16deabf2-3576-438d-b828-f30d6c637385">
 
-The theory here is that technology is clearly a creative facilitator and improver of previous financial systems. That part is clear as day and a simple sign of that is the improvement of large banking applications like Chase and the rise of smaller neobanks like Robinhood. The important key here is the fact that technology is a **creative** facilitator and will thus be a crucial part to the larger creator economy. Block, I believe, understands this much more clearly than its peer organizations like Paypal, Robinhood or even Shopify. It is important for me to distinguish that Block isn't the only organization that understands this, but Block understands it best.
+But how? How did Pinterest accomplish a moat? Let’s start with how the data originated. In its early days, Pinterest was a platform where content was shared, collected and curated by its users. These pins fulfilled some private and organizational needs for the users. They were popular vision boards. Plans. Over time, this need transformed into a visual search engine. This search engine became recognized as a search engine for ideas. It was at this point where Pinterest really started to grow its word-of-mouth reputation as a useful utility for people’s homes.
 
-I'll ask to the reader to really think deeply about this. What is finance? What use does it serve to the world? It's just a man made construct - it doesn't fundamentally achieve anything other than a system that we're usually in agreement with. Art is similar in that regard in the sense that it doesn't fundamentally critical for our survival like the production of food or the maintenance of clean water.
+And now, we are in the era where this platform transforms yet again, especially with the advent of creative media - where the platform seeks to transform itself into a shopping platform. So Pinterest, from the perspective of its customers, lets them discover ideas, plan and execute those ideas.
 
-But it's important to appreciate these elements of the economy. These are facilitating forces. This is actually why Block investing in TIDAL was a pretty wise thing to do, since it builds organic relationships with a critical part to the creator economy. Cultural and social capital, if wielded well, keeps an organization relevant across changes over time. Many in the industry look for the famous iPhone moment, but I would suggest to consider the iPod moments too :)
+And you might be thinking, well, doesn’t a platform like Amazon do that? And the answer is yes, which is why I see a platform like Pinteres closer to competing with organizations like Google & Amazon rather than entertainment platforms like Meta and Tiktok. Pinterest is geared toward intentional communication.
 
-Other than the cultural and regulatory complexity, let's review the simple to understand parts about financial services. Deposits and credit facilitation is important. Building deposits allows companies to create lending and credit capacity. It's a profoundly simple concept. Businesses will have various ways to incentivize customers to keep their deposits at their institution organization.
+## Macroeconomics
 
-For the sake of review - we can observe that new institutions like Robinhood incentivize their customers by offering financial instruments in the stock market. Block primarily incentivises deposits for simple app transactions on Cash App and Square incentives deposits via small business growth. Again, I encourage readers to appreciate the simplicity of these things. I would also encourage you to consider how some features like "direct deposits" is actually a deeply competitive thing - because if Cash App is getting your employer deposit, that's a whole deposit that Chase bank suddenly misses on their balance sheet!
+<img width="100%" alt="image" src="https://github.com/RobotsBuildingEducation/Educate/assets/65219666/c57a740c-e42a-44bd-a14d-d9819949ec27">
 
-It's this simplicity that actually makes financial services failure so epicly nonsensical. There is almost no case where financial institution fail unless they engage in extremely wreckless behavior, because the foundation of financial services is ultimately being a good steward of money created and distributed. This has historically been true from the fall of Silicon Valley Bank to the infamous financial market meltdown of 2008. So therein lies the reality of choosing a good financial service - they must be superb financial stewards. Keeping things simple is the right way.
+There’s a lot of potential and promise behind Pinterest’s current market value. Another moat-building outcome is that the platform is overwhelmingly used by women, such that expansion to any country almost guarantees that nearly 50% adoption of the adult population are monthly active users.
 
-Now the real meat and bones behind Block is their research behind Bitcoin. This brings us to discussions related to disruptive theories. I don't want to spend too much time their, but this is really where focused investing comes into play. There is a lot I can say about Bitcoin but I think at this point we can ultimately view it, or its consequence, as an inevitable. I believe that Block is built in such a manner that they're most likely to achieve the right outcome. Block is appopriately focused on the decentralized network aspect rather than the programmable money aspect. This focus is what may ultimately have them competing directly with financial networks like Visa, which is greater than 1000% or 10x of Block's current size.
+The only real plausible explanation for this is that Pinterest is a platform that delivers on the promise of its design and users develop a high form of trust with the platform. What this means is that the value-per-pixel in its advertising space is higher than the average of other advertising spaces; Pinterest is a platform designed around high-quality outcomes. In summary, Pinterest is a kind of business that can accomplish something once per month rather than depending on a model that depends on daily usage. It's a trade-off in the advertising world.
 
-Why am I convinced of this? Well, again, it's pretty simple. Block serves small businesses on and offline. Many small businesses today are part of this digital-first entrepeneur ethos for the creator economy. Looking back at history, we can observe how network injustices can harm businesses, ranging from the legal shutdown of Tiktok to billionaire buyouts of platforms like Twitter. At a microlevel, we can observe simple bans, restrictions or other algorithmic serving demands and their consequences on business income.
+In recent history, this theory was back tested and strongly signaled by potential acquisitions from Microsoft and Paypal for upwards 45 billion dollars. The final outcome seemingly appeared that Paypal’s COO, formerly Venmo CEO, became the new CEO of Pinterest, while the founder moved into the role of executive chairman of the board while researching the future psychological-health technology. These are significant movements toward monetization.
 
-Block isn't the only financial service that is digitally native and acutely aware of the times. Shopify is another particular company in the same realm that is arguably more successful online. But therein lies my appreciation for Blocks approach - I think there is something uniquely special about technology companies that build solutions for the real world.
+What you may notice here with Pinterest is that the story tends to just make sense. It is my belief that Pinterest remains a strong acquisition for organizations like Target or Amazon since this platform may transform into a disruptive competitor - how?
+
+## The Future
+
+<img width="100%" alt="image" src="https://github.com/RobotsBuildingEducation/Educate/assets/65219666/91ca663e-6e34-40ae-b9a3-a44f4600f134">
+
+Many investors have the habit of avoiding good opportunities or overcomplicating potential opportunities when new-fangled technology arrives to the markets. One such case is the uncertain strategies surrounding AI investments. Pinterest is one such investment. Given the nature of the platform and its history, it’s clear that Pinterest has a very real possibility of competing with global organizations like SHEIN, Tiktok Shop and other AI-powered shopping channels.
+
+This is one of the reasons I liken Pinterest to the business of Costco. Customers tend to enter and leave the platform happily. They follow an internal philosophy to achieve quality selection. The distribution is also intentional and meaningful. A quick browse just now has briefly introduced ads about Visa, Southwest Airlines and Expedia. A search for kitchen ideas presents an entire browsing section aligned with Amazon ads.
+
+Now the truth is, every business is going to experience some level of churn. We hear complaints from customers about the “old version” of services and it's a very real problem that businesses need to solve. You could survey 1000 American Tik Tok users at the beginning of the launch of Tik Tok Shops and a year later and see various different outcomes and attitudes.
+
+It is my view that Pinterest will find good ways to manage that problem and users will adapt to the changes around advertising, shopping and marketing. I think a healthy outcome would be if this combination encouraged more people to post organically, spurring the creation of successful creator businesses and an alternative yet focused service that stays away from the chaos of other social platforms.
+
+## Conclusion
+
+<img width="100%" alt="image" src="https://github.com/RobotsBuildingEducation/Educate/assets/65219666/35080d40-fe49-4a78-83b2-9e3c79442649">
+
+In short, there’s a lot of potential and promise behind Pinterest’s current market value and the total addressable market surrounding retail, advertising and payments. The history and path ahead appears well-poised for success. Its current valuation appears to reflect that of a wonderful company at a fair price. The position of the business is fundamentally sound and simple to understand. The moat it maintains relative to its titan-sized competitors is visible. I believe it’s a strong acquisition target if not a company that successfully multiplies its growth and presence as a reliable American brand. Pinterest can be a reasonable way to invest in social media, similar to buying a nice piece of real estate in the internet society. Either way, it's a good starting point to learn more about the investing in the industry.
+
+# Block & Financial Technology
+
+<img width="100%" alt="image" src="https://github.com/RobotsBuildingEducation/Educate/assets/65219666/c649c73f-ca8f-4f52-80ff-950b41a9bf72">
+
+Block is an organization that is responsible for Square, Cash App, TIDAL, TBD and Spiral. Its primarily a financial services company that provides solutions for consumers and small businesses. It also supports larger businesses, as its intention is to help smaller operations grow. They invest their money into Bitcoin research and develop software for it.
+
+---
+
+## My History With Bitcoin
+
+<img width="100%" alt="image" src="https://github.com/RobotsBuildingEducation/Educate/assets/65219666/fe2c8f13-5330-445c-a86c-009ccdec7a1d">
+ 
+The year was 2015 in Chicago and I was a computer science student in an operating systems course. I was working  in a screw manufacturer with machines and robotics. My friend had come over to consume some cannabis and we began a regular conversation over graphics cards available in the market.
+
+We had this conversation because it would often be the case that I was gaming online with old computer hardware and this would limit my experiences. This time was a little different. AMD had released some modern cards at an affordable price. We talked about how gaming was getting ubiquitous worldwide and how it made sense to improve access. Little did we know that we would see these products experience regular shortages in the future.
+
+This conversation would last for many years. We learned that you could do this process called mining to acquire these Ethereum tokens. We explored business ideas around these kinds of things. I didn’t really need to be convinced of the value of digital currency at the time. It had been 10 years of understanding that you can convert your real world money into digital tokens to purchase premium products with online games.
+
+Blockchain-based currency was different since these gaming transactions were often one-way transactions. Once I converted my money into game currency, it was almost impossible to convert it back. This invented an illicit market of “gold farmers” in many online video games, which were exchange brokers that broke the rules of the game in order to sell gaming currency for real dollars. A similar reality was true for many artists who suddenly lost revenue due to peer-to-peer sharing on unregulated networks.
+
+<img width="100%" alt="image" src="https://github.com/RobotsBuildingEducation/Educate/assets/65219666/59ae8877-7963-44c8-90d4-855f2e927abb">
+
+However, this required an unaccountable relationship of trust and security. It lead to problems for a number of industries and it was against the policies and regulations that businesses had to follow to prevent crime when operating card networks. There were many interesting economic realities that online video games and peer-networks produced, but it was clear that there were some limitations as a result of how early these institutions were to internet software. Keep in mind that these gold farming markets were in 2005! We didn’t really have a cohesive understanding with collaborating online. Most folks didn’t spend much time online.
+
+What had convinced me to adopt a long-term view was the understanding that the network depended on a collection of miners that had a strong relationship with energy and heat. I thought it was a beautifully done process. It was clear to me that there was a future where these machines would upgrade or transform. Needless to say, I found the Proof-of-Work approach fascinating in its potential, but it was also easy to view a lot of technology that way. We really didn't know what was going to happen.
+
+<img width="100%" alt="image" src="https://github.com/RobotsBuildingEducation/Educate/assets/65219666/a938a369-2e42-4057-a3a3-1293dc477740">
+ 
+One has to remember that I’m an individual that essentially aged alongside the commercial internet and folks like us are eager and driven to see changes in a number of sectors. We are hopeful for the future and the outcomes created by these solutions. Bitcoin is something that sits brightly between intersections of energy policy, robotics, social networks or even cannabis policy.
+
+That was all for some time. That was my introduction to the markets. Being a gamer and a computer science student gave me an edge in the consumer tech market. I was still this individual without much to work with so my best move was to watch and learn. Bitcoin and its associated markets were still very volatile and it wasn’t really a winning bet for me at the time regardless of what transpired in the markets. I didn’t know enough. I did know that it would be unwise to discount or discredit the invention. I still had time.
+
+I graduated from college some years later and moved to the Bay Area. I ended up working at a financial technology startup. This exposed me to the regulatory environment around banking and financial networks. My manager was also quite a believer in Bitcoin. He talked about it in relation to the principles of investing. It was a good place for me to learn things about money.
+
+<img width="100%" alt="image" src="https://github.com/RobotsBuildingEducation/Educate/assets/65219666/aec16447-d377-43fa-a17e-e4bc0c437c18">
+
+This period of my life became a peculiar intersection of events. I became a pretty battle-hardened software engineer that adapted quickly to the changes brought by the COVID lockdowns. Digital collaboration wasn’t a foreign concept for me or many folks my age. It was quietly preferred for many of us. It was crucial to the success of the economy in some ways.
+
+I became a writer on the side and started what was going to be my career as a creator. I wrote about the optimistic future of technology and the organizations that will drive us in that direction. I worked on my business. I began to understand social media, its constraints and gateways in ways I was unfamiliar with. I also began to learn a lot about the art of investing in a serious way. It was apparent that my advantage was in the tech market but I was not skilled enough yet to make big choices. It would ultimately narrow down to social media, financial and education technology investments.
+
+## The Product
+
+This all happened before and after the events that transpired with Bitcoin in 2020. It wasn’t really until closer to the year 2021 when I turned my head toward Bitcoin after the company Square had acquired TIDAL and placed Shawn “Jay-Z” Carter to the board.
+
+<img width="100%" alt="image" src="https://github.com/RobotsBuildingEducation/Educate/assets/65219666/b714b51a-b9b1-482b-a696-b17783198601">
+
+It wasn’t until 2022 that I began to appreciate the potential of Bitcoin’s future after taking some time to understand a white-paper written by Block and its approach to decentralizing networks with the company they created called TBD. That was the mysterious software ecosystem that many folks like me patiently awaited for. There wasn’t as much time anymore.
+
+<img width="100%" alt="image" src="https://github.com/RobotsBuildingEducation/Educate/assets/65219666/e4ac87c8-b3d9-4da3-972d-1f15cf8653b7">
+
+And it was in 2023 where we arrive today with the advent of generative AI and recommended social feeds. At this point, it’s pretty clear for anyone that is following what we are going to see. We’re going to see competition between networks. We’ve been seeing it.
+
+To those that like a good prediction, it’s likely that we will see the ability to transact between applications like Cash App and Coinbase. It would become a process no different than a Gmail sender being able to deliver a message to Yahoo Mail recipients.
+
+<img width="100%" alt="image" src="https://github.com/RobotsBuildingEducation/Educate/assets/65219666/4f0e4af0-f2f8-4456-9dd9-bca891c5e306">
+
+The same is built for social media. There are early signs that these mechanisms work after Instagram’s successful launch and onboarding for Threads. It’s in the best interest of the user to have these networks decentralized in a way where people are the owners of the publications and relationships rather than the platforms - since the platforms do not provide you those things - they are earned and created by people interacting. There is a non-trivial need for this, since there are a growing amount of people that depend on these communication technologies for their income.
+
+And Block is at the center of this. It wants to be a good steward of the internet and its financial networks are a gateway to achieve that. Bitcoin, at the end of the day, may be a system that most consumers aren’t interfacing with, the same way most people aren't all too concerned with the details for treasury bills when exchanging in the value of a dollar. The same could be said for sending emails. Users aren’t really concerned with the protocols underneath it that transmit the data, they’re interested in the service.
+
+That’s the foundation of financial services. You need to create incentives to entrust, transact or deposit money. Block is unique in how they’re seen as an innovative company, yet they operate in a rather simple and pragmatic manner for their day-to-day. There isn't too much risk associated with their clientele. Block is the kind of company that works when a merchant has a cardboard sign with a $cashtag address written on it. There aren’t many shiny objects.
+
+<img width="100%" alt="image" src="https://github.com/RobotsBuildingEducation/Educate/assets/65219666/69e48b26-e2b0-48dc-b00b-4239d0b5d70a">
+
+I believe that’s what Jack, the founder of Block and Twitter, means by Bitcoin being the native currency of the internet. There will be new services and ways to interface with applications without the same limitations created by centralized services, banks and card networks. These unlocks can become liberating mechanisms for consumers and merchants.
+
+## The Social
+
+The United States had recently exited the world war as a global power and went through an era of reforming global geopolitics under its influence. A lot of recent American history can be understood under that context. Oversimplifying, there were two global powers after the world war and they had competing economic policies. One can assume that the greater system would likely result in the greater or more productive military over a period of time. There’s a number of ways to opine or produce a narrative around history. Either way, the American military was more influential. Society changed in unique ways.
+
+<img width="100%" alt="image" src="https://github.com/RobotsBuildingEducation/Educate/assets/65219666/838a2873-9644-4bd4-84a0-0e21b1127de8">
+ 
+This influence relationship applied domestically and internationally. It was a time of expressing power over supply chains. In the US, it meant containment through drug war. It also suggested a reworking of monetary standards away from gold and toward dollar-based trust. These implementations were almost immediately after the Civil Rights Act, invoking a new era of control.
+
+<img width="100%" alt="image" src="https://github.com/RobotsBuildingEducation/Educate/assets/65219666/743756b6-0fb2-4af4-9a93-5bda50d09e2b">
+
+By this time, designing powerful communication networks was no longer unknown. It was rapidly applied to the financial pipelines. It was policies written in the Bank Secrecy Act that governed these transactions and thus began a long legacy of controls and monitors in the name of preventing crime. It created a network to determine and score trust amongst civilians, criminals, terrorists and enemies of state. This continues today with sophisticated algorithms to handle the level of scale these operations have become.
+
+And at this point it really isn’t much of a debate to see the consequences of these policies. Academics in humanities will typically accept the common sense premise that racism and expressions of power didn’t suddenly vanquish due to the outcomes brought by Martin Luther King and the success of the Civil Rights movement. Economics is not a simple linear progression. We can see the outcomes of Black American families that were effectively subjugated economically by these policies. It can also be similarly witnessed in the suppression of Latin American economies.
+
+<img width="100%" alt="image" src="https://github.com/RobotsBuildingEducation/Educate/assets/65219666/9159437e-e8ef-4e54-8ffc-66f2d1ae8563">
+
+This model ultimately backtracks to before the Civil Rights and after the Patriot Act . Our new financial standards created a system dependent on trust. The more trusted you were by the owners of the networks and reserves, the more access you had to capital systems. The longer you’ve participated in these networks, the more likely you’ve gathered trust. These underfunded schools, unbanked societies and our attitudes toward civil development are informed by this reality and what it incentivizes. One could eventually draw the connection that the system that produced the inequity was the same one that allowed culture to express their experiences in it through now-American staples like rap and hip-hop.
+
+But obviously, people are largely unconcerned with committing crimes with these kinds of transactions. This creates a disconnection. Using cash gives you privacy but technology and networks do not. Cash doesn’t require verification, but cards do. Cards are convenient despite this, but it’s clear that the medium of exchange is transforming. The next stage seems to be the legitimization of cards as money, and this is why Bitcoin is often referred to as true digital cash.
+
+<img width="100%" alt="image" src="https://github.com/RobotsBuildingEducation/Educate/assets/65219666/07bd8202-1b0f-4da5-b98e-3a65f0068daa">
+
+Increasing the privacy of digital transactions would thus facilitate interactions we have yet to really experience online. Our current pipelines do not allow this to happen. This is what is known as trustless interactions. The system leaves trust up to its users. Again, the user often does not see what happens or upgrades behind the scenes, but our current pipelines also do not allow for service to be built - so what happens in the background is important.
+
+This reality is what defines the vision and culture behind Block. It can create new pipelines. What drives the organization is building solutions that solve problems related to financial access and inclusion. The company can’t be understood otherwise. Its attitude toward financial services is different from other vendors. As such, it’s important to value the principles of diversity, access and history when accounting for the direction Block will take. One needs to appreciate the outcomes of working in the economics of oppression.
+
+<img width="100%" alt="image" src="https://github.com/RobotsBuildingEducation/Educate/assets/65219666/bbc4dcb7-d9c9-4e00-9a2c-0bca4aa0ab95">
+
+As a result, Block ties itself to the legacy and struggle that Black Americans and other minority groups experience, and this can be observed at all levels of the organization. Block is not your traditional Silicon Valley dream - its products are grounded by reality and the needs of main street. These seemingly random events, like the adoption of Bitcoin in El Salvador, are especially relative and share a common economic story.
+
+There is this accessibility principle that I teach about how creating access for those who need it creates access for those who didn’t ask for it. I often provide the example that designing information to be read clearly by a screen reader may benefit those who read the same information since it’s well organized. I relate it to the advent of radio and podcast and how new mediums may change the experiences we participate in or appreciate. The same could be said for restrictive or liberating laws, policies and social codes.
+
+<img width="100%" alt="image" src="https://github.com/RobotsBuildingEducation/Educate/assets/65219666/3023c021-c7c6-4662-88c3-b1275dbf9c3a">
+
+Block, in many ways, positions itself by providing solutions to alleviate the cost of poverty by developing sound solutions inspired by Bitcoin and financial services for local economies. As a result, what you saw was Cash App popularized originally in spaces where oppression economics are highest in the United States, which would be impoverished inner cities in the southern US. It was accepted and embedded into cultures that inform and influence what we recognize as “Gen Z” or younger digitally native culture.
+
+<img width="100%" alt="image" src="https://github.com/RobotsBuildingEducation/Educate/assets/65219666/27466d6d-8f27-4b91-804e-acf81e761eb6">
+
+This outcome isn’t some kind of master plan devised by someone. It’s the outcome of the simple reality that the organization started by selling hardware to accept and bridge payment cards through internet connected phones. To accept cash with technology. In some ways, developing Bitcoin software is also a revolution of the company itself, where they’re repeating the same steps they took when they started building bridges. In short, the company started solving a financial access problem and continued to expand from that founding principle. The intersection is an act of nature.
+
+<img width="100%" alt="image" src="https://github.com/RobotsBuildingEducation/Educate/assets/65219666/26b8d7d3-bbba-4b5a-a994-df73fa0bc5ea">
+
+Block capturing this market position and social reputation is nothing short of a phenomenon. It’s one that many companies don’t have the privilege of achieving. Its creative positioning is exactly what allows it to be a disruptive force over the long term. This positioning is not all too different from the gateways that Apple accessed with the iPod and its transformation into the iPhone.
+
+And thus I believe that Block’s acquisition of TIDAL and their partnership with Shawn Carter is a historic one. It’s a unique relationship between visionaries across technical and social landscapes that can’t be replicated by other financial institutions. It’s an act of legacy and an act to actualize historic outcomes for the betterment of society. You could argue that investing in TIDAL with current conditions would be like investing in the value of hip-hop.
+
+<img width="100%" alt="image" src="https://github.com/RobotsBuildingEducation/Educate/assets/65219666/41ba44e1-9437-4b5a-8c48-4a7bbd249958">
+
+I believe the typical wall street analyst undervalues the potential generated by this relationship and thus misses the point or even the purpose that drives Block’s underlying growth. Block wants to repair old economies and introduce new ones and it wants to do it from an approach that creates fairness and equilibrium. It wants to change the game.
+
+## The Future
+
+Block is a predictable business. They want to right financial wrongs. It, like many of their peers, wants to improve the internet. In the short term, you’ll see it enter nascent but influential local markets like cannabis or beauty. You’ll see them facilitate small but accessible loans or meaningful alternatives. Their advertisements will be popular, impactful and welcomed. You’ll find them from local restaurants all the way up to arena conacerts.
+
+In the long term, you’ll see them continue to apply the same financial inclusion model to continue to grow. You really have to ask what the point is at a certain level. What does it mean in the world if Block is a 300 billion dollar company that competes with organizations like Chase or Visa? Why would that outcome occur?
+
+<img width="100%" alt="image" src="https://github.com/RobotsBuildingEducation/Educate/assets/65219666/5584cf1d-30cc-41bc-ae03-38d5c4635c3a">
+
+In my view, the same financial inclusion pattern would apply at scale. They may foray into larger trust applications and solve problems related to housing or even government scale enterprise. It may be an organization as influential as Universal Music Group or other art & entertainment networks. It may capture or invent markets we are not yet aware of.
+
+Regardless, we know that the fundamentals of banking and financial services is financial stewardship. These institutions must be trusted to upkeep the financial pipelines that fuel economic activity. Block is ultimately a platform to help its customers secure wealth. It doesn’t seem all too driven by financial gains when it seeks to innovate. The organization, from its leadership down to its marketing, seems to be focused on the creation of fair playing fields, so it invokes a sense of trust for the future.
+
+## Conclusion
+
+In short, Block is an organization that unlocks new networks and focuses on securing wealth for its customers by creating useful tools and opportunities. It has a unique reputation in the market and a strong relationship with their customers. It is eager to use the trust they’ve cultivated to introduce new ideas that challenge older ways of transacting data or money across networks. For how epic the vision is, the organization takes an awfully modest approach to business-as-usual by being fairly pragmatic with innovation. The leadership and culture is visionary so it is not distracted by the shiny objects along the way. Block is a company that’s focused on building well-oiled pipelines that can play a key part in the future of US economics.
 
 ### Understanding Duolingo & Education Technology
 

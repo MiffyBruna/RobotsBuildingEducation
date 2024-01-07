@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import Editor from "react-simple-code-editor";
+import { highlight, languages } from "prismjs/components/prism-core";
 import { japaneseThemePalette, textBlock } from "./styles/lazyStyles";
 import { useZap } from "./App.hooks";
 import { RoxanaLoadingAnimation, postInstructions } from "./common/uiSchema";
@@ -815,6 +817,10 @@ const GraphContainer = () => {
   const [chatGptResponse, setChatGptResponse] = useState("");
   const [code, setCode] = useState("");
   //monetize your AI per usage
+
+  /**
+
+   */
   let zap = useZap(1, "Robots Building Education Zap");
 
   const handleNodeSelect = (node, isLeafNode) => {
@@ -858,13 +864,23 @@ const GraphContainer = () => {
 
     let prompt = `Someone is requesting for help so that they can solve problems related to data structures and algorithms in computer science. This is the path of problems the requester is working with to solve their problem: ${path}. This is the code they're working with: ${code}
     
-    Provide nicely formatted assistance so that they can perform better in an interview.`;
+    Provide nicely formatted assistance so that they can perform better in an interview using the following format:
+    
+    
+    "result": {
+        advice: string
+        implementation: string
+    }
+
+    where advice is a string formatted for markdown and implementation is string for formatted python code.
+    `;
 
     const response = await fetch(postInstructions.url, {
       method: postInstructions.method,
       headers: postInstructions.headers,
       body: JSON.stringify({
         prompt,
+        isJsonMode: true,
       }),
     })
       .then((response) => {
@@ -883,8 +899,12 @@ const GraphContainer = () => {
 
     if (response) {
       let data = await response.json();
-      let content = data?.bot?.content;
-      setChatGptResponse(content);
+      console.log("data", data);
+      let result = JSON.parse(data?.bot?.content);
+      console.log("result", result);
+      let outcome = result.result;
+      console.log("outcome", outcome);
+      setChatGptResponse(outcome);
     }
     setResponseIsLoading(false);
   };
@@ -923,11 +943,20 @@ const GraphContainer = () => {
             Ask 🌀
           </button>
 
-          <textarea
-            onChange={(event) => setCode(event.target.value)}
-            style={{ margin: "5px" }}
-            placeholder="paste your code"
-          ></textarea>
+          <Editor
+            value={code}
+            onValueChange={(input) => setCode(input)}
+            highlight={(input) => highlight(input, languages.js)}
+            padding={10}
+            style={{
+              fontFamily: '"Fira code", "Fira Mono", monospace',
+              fontSize: 12,
+              width: "100%",
+              border: "3px solid gray",
+              borderRadius: 7,
+              marginTop: 14,
+            }}
+          />
         </>
       ) : null}
 
@@ -949,7 +978,31 @@ const GraphContainer = () => {
       <br />
 
       {responseIsLoading ? <RoxanaLoadingAnimation /> : null}
-      {chatGptResponse ? <div>{chatGptResponse}</div> : null}
+      {chatGptResponse ? (
+        <div style={{ textAlign: "left" }}>
+          <h2>Interview Preparation Advice</h2>
+          <div style={{ whiteSpace: "pre-wrap" }}>
+            {chatGptResponse?.advice}
+          </div>
+          <br />
+          <br />
+          <h3>Implementation Example</h3>
+          <Editor
+            value={chatGptResponse?.implementation}
+            // onValueChange={handleChange}
+            highlight={(input) => highlight(input, languages.js)}
+            padding={10}
+            style={{
+              fontFamily: '"Fira code", "Fira Mono", monospace',
+              fontSize: 12,
+              width: "100%",
+
+              borderRadius: 7,
+            }}
+            disabled
+          />
+        </div>
+      ) : null}
       {hasError ? <div>error loading data from openai</div> : null}
     </div>
   );
