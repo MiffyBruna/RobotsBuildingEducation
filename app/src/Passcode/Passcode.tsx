@@ -75,7 +75,7 @@ export const Passcode = ({ handleZeroKnowledgePassword, patreonObject }) => {
           style={whiteTextColor}
         >
           <Button variant="dark" style={buttonStyle}>
-            &nbsp; Get Passcode (Free version)
+            &nbsp; Get Passcode
           </Button>{" "}
         </a>
         <br />

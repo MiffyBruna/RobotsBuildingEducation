@@ -48,10 +48,9 @@ export const Engineer = {
               <br />
               <br />
               🌱 Welcome to your journey through the dynamic world of computer
-              science! I'm Ms. Roxana, your guide on this path of discovery.
-              Computer science is not just coding, it's a universe where
-              creativity, problem-solving, and a multitude of disciplines
-              collide.
+              science! I'm rox, your guide on this path of discovery. Computer
+              science is not just coding, it's a universe where creativity,
+              problem-solving, and a multitude of disciplines collide.
               <br />
               <br />
               By exploring this field, you're gaining a new perspective, a tool
@@ -64,7 +63,7 @@ export const Engineer = {
               <br />
               Yours in exploration ❤️,
               <br />
-              Ms. Roxana
+              rox
             </div>
           ),
           spanish: ``,
@@ -75,7 +74,7 @@ export const Engineer = {
           impact: 1000,
           action: `generate`,
           icon: `►`, //`✍️`
-          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
+          request: `rox, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
             `Learn Coding`
           )}?`,
           response: `null`,
@@ -87,7 +86,7 @@ export const Engineer = {
           impact: 100,
           action: `inspire`,
           icon: `⚡`,
-          request: `ms. roxana, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
+          request: `rox, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
             `Learn Coding`
           )}?`,
           response: (
@@ -130,7 +129,7 @@ export const Engineer = {
           impact: 100,
           action: `summarize`,
           icon: `📚`,
-          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
+          request: `rox, can you please summarize the basics of ${ultimateEffeciencyJutsu(
             `Learn Coding`
           )}?`,
           response: (
@@ -195,7 +194,7 @@ export const Engineer = {
           impact: 100,
           action: `ask`,
           icon: `🔮`,
-          request: `ms. roxana, can you please show me three freq   uently asked beginner questions about ${ultimateEffeciencyJutsu(
+          request: `rox, can you please show me three freq   uently asked beginner questions about ${ultimateEffeciencyJutsu(
             `Learn Coding`
           )} with one sentence answers?`,
           response: (
@@ -263,7 +262,7 @@ export const Engineer = {
           impact: 100,
           action: `guide`,
           icon: `🤝`,
-          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
+          request: `rox, can you please create a study guide for ${ultimateEffeciencyJutsu(
             `Learn Coding`
           )}?`,
           response: (
@@ -408,7 +407,7 @@ export const Engineer = {
           impact: 100,
           action: `demonstrate`,
           icon: `🎨`,
-          request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
+          request: `rox, can you please show me an example of ${ultimateEffeciencyJutsu(
             `Learn Coding`
           )} in javascript?`,
           response: `
@@ -464,7 +463,7 @@ exports.app = functions.https.onRequest(app);
           impact: 100,
           action: `define`, // may not need
           icon: `🧿`, // may not need
-          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
+          request: `rox, can you please define ${ultimateEffeciencyJutsu(
             `Learn Coding`
           )} in exactly one sentence?`,
           response:
@@ -477,7 +476,7 @@ exports.app = functions.https.onRequest(app);
           impact: 100,
           action: `quiz`,
           icon: `🧪`,
-          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
+          request: `rox, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
             `Learn Coding`
           )}?`,
           response: (
@@ -648,7 +647,7 @@ exports.app = functions.https.onRequest(app);
               ¡Hola, estudiantes! 🌸
               <br />
               <br />
-              I'm Ms. Roxana, your guide through the enchanting garden of
+              I'm rox, your guide through the enchanting garden of
               Object-Oriented Programming (OOP). In this garden, we plant
               'objects', each a unique flower with its own color and fragrance,
               or in programming terms, attributes and methods. 🌹 Navigating
@@ -661,7 +660,7 @@ exports.app = functions.https.onRequest(app);
               <br />
               With all my warmth and support,
               <br />
-              Ms. Roxana 🌟
+              rox 🌟
             </div>
           ),
           spanish: ``,
@@ -672,7 +671,7 @@ exports.app = functions.https.onRequest(app);
           impact: 1000,
           action: `generate`,
           icon: `►`, //`✍️`
-          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
+          request: `rox, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
             `Lesson 1 Coding Fundamentals`
           )}?`,
           response: `null`,
@@ -684,7 +683,7 @@ exports.app = functions.https.onRequest(app);
           impact: 100,
           action: `inspire`,
           icon: `⚡`,
-          request: `ms. roxana, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
+          request: `rox, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
             `Lesson 1 Coding Fundamentals`
           )}?`,
           response: (
@@ -745,14 +744,14 @@ exports.app = functions.https.onRequest(app);
           impact: 100,
           action: `summarize`,
           icon: `📚`,
-          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
+          request: `rox, can you please summarize the basics of ${ultimateEffeciencyJutsu(
             `Lesson 1 Coding Fundamentals`
           )}?`,
           response: (
             <div>
               ¡Hola estudiantes! 🌞
               <br /> <br />
-              It's Ms. Roxana here again, ready to deepen our understanding of
+              It's rox here again, ready to deepen our understanding of
               Object-Oriented Programming (OOP) with you! 🚀🎓
               <br /> <br />
               Remember, it's completely okay if things seem challenging at
@@ -918,7 +917,7 @@ ana.markAttendance("Present");  // We don't deal with the _attendance array dire
           impact: 100,
           action: `ask`,
           icon: `🔮`,
-          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
+          request: `rox, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
             `Lesson 1 Coding Fundamentals`
           )} with one sentence answers?`,
           response: (
@@ -1016,7 +1015,7 @@ juan.study();  // Outputs: Juan is studying.
               <br />
               With all my support,
               <br />
-              Ms. Roxana 🌟
+              rox 🌟
             </div>
           ),
           spanish: ``,
@@ -1027,7 +1026,7 @@ juan.study();  // Outputs: Juan is studying.
           impact: 100,
           action: `guide`,
           icon: `🤝`,
-          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
+          request: `rox, can you please create a study guide for ${ultimateEffeciencyJutsu(
             `Lesson 1 Coding Fundamentals`
           )}?`,
           response: (
@@ -1169,7 +1168,7 @@ juan.study();  // Outputs: Juan is studying.
           impact: 100,
           action: `demonstrate`,
           icon: `🎨`,
-          request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
+          request: `rox, can you please show me an example of ${ultimateEffeciencyJutsu(
             `Lesson 1 Coding Fundamentals`
           )} in python?`,
           response: `
@@ -1212,7 +1211,7 @@ print(rihanna.perform("at the Grammy Awards"))
           impact: 100,
           action: `define`, // may not need
           icon: `🧿`, // may not need
-          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
+          request: `rox, can you please define ${ultimateEffeciencyJutsu(
             `Lesson 1 Coding Fundamentals`
           )} in exactly one sentence?`,
           response: `Object-Oriented Programming is a programming paradigm that organizes data into objects and behavior into classes, promoting code reuse through inheritance, encapsulation of data and functions together, and enabling polymorphism to allow a single interface for a general class of actions.`,
@@ -1224,7 +1223,7 @@ print(rihanna.perform("at the Grammy Awards"))
           impact: 100,
           action: `quiz`,
           icon: `🧪`,
-          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
+          request: `rox, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
             `Lesson 1 Coding Fundamentals`
           )}?`,
           response: (
@@ -1735,7 +1734,7 @@ throw new Error(
           impact: 1000,
           action: `generate`,
           icon: `►`, //`✍️`
-          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
+          request: `rox, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
             `Lesson 2 Frontend Event-Driven Programming`
           )}?`,
           response: `null`,
@@ -1747,7 +1746,7 @@ throw new Error(
           impact: 100,
           action: `inspire`,
           icon: `⚡`,
-          request: `ms. roxana, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
+          request: `rox, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
             `Lesson 2 Frontend Event-Driven Programming`
           )}?`,
           response: (
@@ -1803,7 +1802,7 @@ throw new Error(
           impact: 100,
           action: `summarize`,
           icon: `📚`,
-          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
+          request: `rox, can you please summarize the basics of ${ultimateEffeciencyJutsu(
             `Lesson 2 Frontend Event-Driven Programming`
           )}?`,
           response: (
@@ -1845,7 +1844,7 @@ throw new Error(
           impact: 100,
           action: `ask`,
           icon: `🔮`,
-          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
+          request: `rox, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
             `Lesson 2 Frontend Event-Driven Programming`
           )} with one sentence answers?`,
           response: (
@@ -1911,7 +1910,7 @@ throw new Error(
           impact: 100,
           action: `guide`,
           icon: `🤝`,
-          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
+          request: `rox, can you please create a study guide for ${ultimateEffeciencyJutsu(
             `Lesson 1 Coding Fundamentals`
           )}?`,
           response: (
@@ -2046,7 +2045,7 @@ throw new Error(
           impact: 100,
           action: `demonstrate`,
           icon: `🎨`,
-          request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
+          request: `rox, can you please show me an example of ${ultimateEffeciencyJutsu(
             `Lesson 2 Frontend Event-Driven Programming`
           )} in javascript?`,
           response: `
@@ -2125,7 +2124,7 @@ export default LoginForm;
           impact: 100,
           action: `define`, // may not need
           icon: `🧿`, // may not need
-          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
+          request: `rox, can you please define ${ultimateEffeciencyJutsu(
             `Lesson 2 Frontend Event-Driven Programming`
           )} in exactly one sentence?`,
           response: `Event-driven programming is about writing code that responds to user actions or system events, user-centered design focuses on tailoring the design based on user needs and feedback, and component architecture involves building a system from separate parts, each encapsulating a specific functionality, that work together seamlessly.`,
@@ -2138,7 +2137,7 @@ export default LoginForm;
           impact: 100,
           action: `quiz`,
           icon: `🧪`,
-          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
+          request: `rox, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
             `Lesson 2 Frontend Event-Driven Programming`
           )}?`,
           response: (
@@ -2189,7 +2188,7 @@ export default LoginForm;
               <br />
               Warmly,
               <br />
-              Ms. Roxana
+              rox
             </ChatBlock>
           ),
           spanish: ``,
@@ -2550,7 +2549,7 @@ return <div style={gradientStyle}>
           impact: 1000,
           action: `generate`,
           icon: `►`, //`✍️`
-          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
+          request: `rox, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
             `Lesson 3 Understanding Backend Engineering`
           )}?`,
           response: `null`,
@@ -2562,7 +2561,7 @@ return <div style={gradientStyle}>
           impact: 100,
           action: `inspire`,
           icon: `⚡`,
-          request: `ms. roxana, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
+          request: `rox, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
             `Lesson 3 Understanding Backend Engineering`
           )}?`,
           response: (
@@ -2641,7 +2640,7 @@ return <div style={gradientStyle}>
           impact: 100,
           action: `summarize`,
           icon: `📚`,
-          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
+          request: `rox, can you please summarize the basics of ${ultimateEffeciencyJutsu(
             `Lesson 3 Understanding Backend Engineering`
           )}?`,
           response: (
@@ -2703,7 +2702,7 @@ return <div style={gradientStyle}>
           impact: 100,
           action: `ask`,
           icon: `🔮`,
-          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
+          request: `rox, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
             `Lesson 3 Understanding Backend Engineering`
           )} with one sentence answers?`,
           response: (
@@ -2774,7 +2773,7 @@ return <div style={gradientStyle}>
           impact: 100,
           action: `guide`,
           icon: `🤝`,
-          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
+          request: `rox, can you please create a study guide for ${ultimateEffeciencyJutsu(
             `Lesson 3 Understanding Backend Engineering`
           )}?`,
           response: (
@@ -2914,7 +2913,7 @@ return <div style={gradientStyle}>
           impact: 100,
           action: `demonstrate`,
           icon: `🎨`,
-          request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
+          request: `rox, can you please show me an example of ${ultimateEffeciencyJutsu(
             `Lesson 3 Understanding Backend Engineering`
           )} in javascript?`,
           response: `
@@ -2985,7 +2984,7 @@ if __name__ == '__main__':
           impact: 100,
           action: `define`, // may not need
           icon: `🧿`, // may not need
-          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
+          request: `rox, can you please define ${ultimateEffeciencyJutsu(
             `Lesson 3 Understanding Backend Engineering`
           )} in exactly one sentence?`,
           response: `Backend engineering builds the hidden machinery that powers our apps and websites, cloud computing uses the internet to access and store data instead of a local computer, and big data refers to processing vast amounts of information to uncover patterns and insights. `,
@@ -2997,7 +2996,7 @@ if __name__ == '__main__':
           impact: 100,
           action: `quiz`,
           icon: `🧪`,
-          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
+          request: `rox, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
             `Lesson 3 Understanding Backend Engineering`
           )}?`,
           response: (
@@ -3474,7 +3473,7 @@ exports.app = functions
           impact: 1000,
           action: `generate`,
           icon: `►`, //`✍️`
-          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
+          request: `rox, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
             `Lesson 4 Building Apps`
           )}?`,
           response: `null`,
@@ -3486,15 +3485,15 @@ exports.app = functions
           impact: 100,
           action: `inspire`,
           icon: `⚡`,
-          request: `ms. roxana, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
+          request: `rox, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
             `Lesson 4 Building Apps`
           )}?`,
           response: (
             <div>
               <div>
-                Hello again, my creative students! 🌟 This is Ms. Roxana, and
-                today we're going to dive into an exciting topic that shows just
-                how possible it is for you to turn your incredible ideas into
+                Hello again, my creative students! 🌟 This is rox, and today
+                we're going to dive into an exciting topic that shows just how
+                possible it is for you to turn your incredible ideas into
                 reality. Let's talk about raising money from venture capitalists
                 using SAFE documents with the help of organizations like Y
                 Combinator. 🚀💰
@@ -3579,7 +3578,7 @@ exports.app = functions
           impact: 100,
           action: `summarize`,
           icon: `📚`,
-          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
+          request: `rox, can you please summarize the basics of ${ultimateEffeciencyJutsu(
             `Lesson 4 Building Apps`
           )}?`,
           response: (
@@ -3648,7 +3647,7 @@ exports.app = functions
           impact: 100,
           action: `ask`,
           icon: `🔮`,
-          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
+          request: `rox, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
             `Lesson 4 Building Apps`
           )} with one sentence answers?`,
           response: (
@@ -3718,7 +3717,7 @@ exports.app = functions
           impact: 100,
           action: `guide`,
           icon: `🤝`,
-          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
+          request: `rox, can you please create a study guide for ${ultimateEffeciencyJutsu(
             `Lesson 4 Building Apps`
           )}?`,
           response: (
@@ -3861,7 +3860,7 @@ exports.app = functions
           impact: 100,
           action: `demonstrate`,
           icon: `🎨`,
-          request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
+          request: `rox, can you please show me an example of ${ultimateEffeciencyJutsu(
             `Lesson 4 Building Apps`
           )} in javascript?`,
           response: `
@@ -3996,7 +3995,7 @@ app.listen(8000, () => console.log('Server running on port 8000'));
           impact: 100,
           action: `define`, // may not need
           icon: `🧿`, // may not need
-          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
+          request: `rox, can you please define ${ultimateEffeciencyJutsu(
             `Lesson 4 Building Apps`
           )} in exactly one sentence?`,
           response:
@@ -4009,7 +4008,7 @@ app.listen(8000, () => console.log('Server running on port 8000'));
           impact: 100,
           action: `quiz`,
           icon: `🧪`,
-          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
+          request: `rox, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
             `Lesson 4 Building Apps`
           )}?`,
           response: (
@@ -4547,7 +4546,7 @@ export default OpenAIComponent;`,
           impact: 1000,
           action: `generate`,
           icon: `►`, //`✍️`
-          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
+          request: `rox, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
             `Lesson 5 Computer Science`
           )}?`,
           response: `null`,
@@ -4559,7 +4558,7 @@ export default OpenAIComponent;`,
           impact: 100,
           action: `inspire`,
           icon: `⚡`,
-          request: `ms. roxana, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
+          request: `rox, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
             `Lesson 5 Computer Science`
           )}?`,
           response: (
@@ -4583,7 +4582,7 @@ export default OpenAIComponent;`,
           impact: 100,
           action: `summarize`,
           icon: `📚`,
-          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
+          request: `rox, can you please summarize the basics of ${ultimateEffeciencyJutsu(
             `Lesson 5 Computer Science`
           )}?`,
           response: (
@@ -4630,7 +4629,7 @@ export default OpenAIComponent;`,
           impact: 100,
           action: `ask`,
           icon: `🔮`,
-          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
+          request: `rox, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
             `Lesson 5 Computer Science`
           )} with one sentence answers?`,
           response: (
@@ -4695,7 +4694,7 @@ export default OpenAIComponent;`,
           impact: 100,
           action: `guide`,
           icon: `🤝`,
-          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
+          request: `rox, can you please create a study guide for ${ultimateEffeciencyJutsu(
             `Lesson 5 Computer Science`
           )}?`,
           response: (
@@ -4857,7 +4856,7 @@ export default OpenAIComponent;`,
           impact: 100,
           action: `demonstrate`,
           icon: `🎨`,
-          request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
+          request: `rox, can you please show me an example of ${ultimateEffeciencyJutsu(
             `Lesson 5 Computer Science`
           )} in javascript?`,
           response: `
@@ -4930,7 +4929,7 @@ if (result !== null) {
           impact: 100,
           action: `define`, // may not need
           icon: `🧿`, // may not need
-          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
+          request: `rox, can you please define ${ultimateEffeciencyJutsu(
             `Lesson 5 Computer Science`
           )} in exactly one sentence?`,
           response:
@@ -4943,7 +4942,7 @@ if (result !== null) {
           impact: 100,
           action: `quiz`,
           icon: `🧪`,
-          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
+          request: `rox, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
             `Lesson 5 Computer Science`
           )}?`,
           response: (

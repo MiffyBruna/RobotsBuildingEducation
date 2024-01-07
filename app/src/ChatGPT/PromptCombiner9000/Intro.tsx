@@ -32,8 +32,8 @@ export const Intro = ({
         <div>{patreonObject?.prompts?.welcome?.response}</div>
       ) : (
         <div>
-          I'm Ms. Roxana, built with various robots made by Apple, Tiktok, and
-          OpenAI. I help Sheilfer build RO.B.E 😊
+          I'm rox, built with various robots made by Apple, Tiktok, and OpenAI.
+          I help Sheilfer build RO.B.E 😊
           <br />
           <br />
           Want to help me build Robots Building Education? Please read more in
