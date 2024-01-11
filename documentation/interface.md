@@ -3,11 +3,10 @@
 The following object describes the user interface defined as a variable.
 This variable is processed on by functions in order to render the appropriate data.
 
-
 ## Interfaces
 
-
 ### Path Interface
+
 ```tsx
 //concept
 interface Path {
@@ -21,8 +20,8 @@ interface Path {
 //concept
 interface Collection {
   [...Collection]: {
-    Modules
-  }
+    Modules;
+  };
 }
 ```
 
@@ -38,7 +37,6 @@ interface Module {
 }
 ```
 
-
 ### Prompt Interface
 
 ```tsx
@@ -48,8 +46,8 @@ interface Prompt {
 }
 ```
 
-
 ## Example
+
 Can there be improvements to this?
 Yeah, probably.
 
@@ -68,7 +66,7 @@ let ui = {
           impact: 100,
           action: `inspire`,
           icon: `⚡`,
-          request: `ms. roxana, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
+          request: `rox, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
             `Learn Coding`
           )}?`,
           response: (
