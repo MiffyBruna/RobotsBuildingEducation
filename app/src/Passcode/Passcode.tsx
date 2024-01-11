@@ -121,6 +121,7 @@ export const Passcode = ({ handleZeroKnowledgePassword, patreonObject }) => {
           use Bitcoin!
           <br />
           <br />
+          <br />
           <a
             style={{
               color: "gold",
@@ -134,6 +135,8 @@ export const Passcode = ({ handleZeroKnowledgePassword, patreonObject }) => {
           </a>
           <br />
           <br />
+          {/* <br />
+          <br />
           <a
             style={{
               color: "gold",
@@ -144,8 +147,8 @@ export const Passcode = ({ handleZeroKnowledgePassword, patreonObject }) => {
             target="_blank"
           >
             📬 Learn more @ Patreon
-          </a>
-          <br />
+          </a> */}
+          {/* <br />
           <br />
           <a
             style={{
@@ -157,7 +160,7 @@ export const Passcode = ({ handleZeroKnowledgePassword, patreonObject }) => {
             target="_blank"
           >
             ♪ Watch the playlist for free @ Tiktok
-          </a>
+          </a> */}
         </p>
         {/* <p
           style={{

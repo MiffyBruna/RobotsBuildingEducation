@@ -53,7 +53,7 @@ export const Header = ({
   return (
     <div style={{ color: prettyColorPalette.softYellowGlow }}>
       <img width="175px" src={robe_logo} style={{ marginTop: "24px" }} />
-      <div
+      {/* <div
         style={{
           display: "flex",
           justifyContent: "center",
@@ -94,7 +94,7 @@ export const Header = ({
             </Form.Switch>
           </Form>
         </div>
-      </div>
+      </div> */}
       <br />
       <LearnMore languageMode={languageMode} />
       {localStorage.getItem("patreonPasscode") ===
