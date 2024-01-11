@@ -205,7 +205,7 @@ export const LearnMore = ({ languageMode }) => {
               <br />
               <div
                 style={{
-                  ...textBlock(japaneseThemePalette.TokyoTwilight, 0),
+                  ...textBlock(japaneseThemePalette.KyotoPurple, 0),
                 }}
               >
                 <h3 style={{ maxWidth: "100%", width: 700 }}>
@@ -240,7 +240,7 @@ export const LearnMore = ({ languageMode }) => {
               <br />
               <div
                 style={{
-                  ...textBlock(japaneseThemePalette.TokyoTwilight, 0),
+                  ...textBlock(japaneseThemePalette.FujiSanBlue, 0),
                 }}
               >
                 <h3 style={{ maxWidth: "100%", width: 700 }}>
@@ -306,7 +306,7 @@ export const LearnMore = ({ languageMode }) => {
               <br />
               <div
                 style={{
-                  ...textBlock(japaneseThemePalette.TokyoTwilight, 0, 12),
+                  ...textBlock(japaneseThemePalette.KyotoPurple, 0),
                 }}
               >
                 <h3 style={{ maxWidth: "100%", width: 700 }}>
@@ -334,7 +334,7 @@ export const LearnMore = ({ languageMode }) => {
               <br />
               <div
                 style={{
-                  ...textBlock(japaneseThemePalette.TokyoTwilight, 0, 12),
+                  ...textBlock(japaneseThemePalette.FujiSanBlue, 0, 12),
                 }}
               >
                 <h3 style={{ maxWidth: "100%", width: 700 }}>
@@ -386,7 +386,7 @@ export const LearnMore = ({ languageMode }) => {
               <br />
               <div
                 style={{
-                  ...textBlock(japaneseThemePalette.TokyoTwilight, 0, 12),
+                  ...textBlock(japaneseThemePalette.KyotoPurple, 0),
                 }}
               >
                 <h3 style={{ maxWidth: "100%", width: 700 }}>
@@ -406,7 +406,7 @@ export const LearnMore = ({ languageMode }) => {
               <br />
               <div
                 style={{
-                  ...textBlock(japaneseThemePalette.TokyoTwilight, 0, 12),
+                  ...textBlock(japaneseThemePalette.FujiSanBlue, 0, 12),
                 }}
               >
                 <h3 style={{ maxWidth: "100%", width: 700 }}>
