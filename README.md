@@ -4,7 +4,7 @@ This document helps people set up this application on their device. It also serv
 
 ## Contact
 
-- Please join this Discord community for more casual & information conversation about this app: [Discord](https://discord.gg/9kguaaDRmt)
+- Please join this Discord community for more casual & information conversation about this app: [Discord](https://discord.com/invite/robotsbuildingeducation)
 
 - Subscribe or support more content on Patreon: [Robots Building Education](https://patreon.com/robotsbuildingeducation)
 
