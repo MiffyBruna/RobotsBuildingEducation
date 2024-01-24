@@ -1,5 +1,7 @@
 import { useState } from "react";
+// import { pwaInstallHandler } from "pwa-install-handler";
 import { Button, Modal } from "react-bootstrap";
+import { usePWAInstall } from "react-use-pwa-install";
 
 import { logEvent } from "firebase/analytics";
 import { analytics } from "../../database/firebaseResources";
@@ -8,10 +10,24 @@ import { DiscordButton } from "../../common/ui/DiscordButton/DiscordButton";
 import { japaneseThemePalette, textBlock } from "../../styles/lazyStyles";
 
 let data = {};
-export const LearnMore = ({ languageMode }) => {
+export const LearnMore = ({ languageMode, canInstallPwa }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const install = usePWAInstall();
+  // console.log("install", install);
   return (
     <>
+      {/* {canInstallPwa ? <><Button
+      variant="dark"
+      style={{
+        color: "white",
+        textShadow: "0px 0px 4px black",
+      }}
+      onClick={install}
+    >
+      Install app
+    </Button>      &nbsp; &nbsp; &nbsp; &nbsp;</>: null} */}
+
       <Button
         variant="dark"
         style={{
@@ -28,7 +44,6 @@ export const LearnMore = ({ languageMode }) => {
       >
         {languageMode.buttons["9"]}
       </Button>
-
       {/* <Button
         variant="danger"
         onClick={() => {
@@ -39,7 +54,6 @@ export const LearnMore = ({ languageMode }) => {
       </Button> */}
       <br />
       <br />
-
       <Modal
         centered
         show={isModalOpen}

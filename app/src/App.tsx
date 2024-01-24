@@ -36,12 +36,13 @@ import { LectureHeader } from "./LectureHeader/LectureHeader";
 import { ChatGptWrapper } from "./ChatGPT/ChatGptWrapper";
 import { ProofOfWorkWrapper } from "./ProofOfWork/ProofOfWorkWrapper";
 import { words } from "./common/words/words";
+import { InstallPWA } from "./InstallPWA";
 
 logEvent(analytics, "page_view", {
   page_location: "https://learn-robotsbuildingeducation.firebaseapp.com/",
 });
 
-function App() {
+let App = ({ canInstallPwa }) => {
   let zap = useZap(1, "Robots Building Education Zap");
   // handles passcode, google sign in and registered user info
   const { authStateReference } = useAuthState();
@@ -196,6 +197,15 @@ function App() {
   useEffect(() => {
     // connectDID();
 
+    // if ("serviceWorker" in navigator) {
+    //   navigator.serviceWorker
+    //     .register("/service-worker.js")
+    //     .then(() => console.log("Service Worker registered successfully."))
+    //     .catch((error) =>
+    //       console.log("Service Worker registration failed:", error)
+    //     );
+    // }
+
     const storedPasscode = localStorage.getItem("patreonPasscode");
 
     authStateReference.setIsZeroKnowledgeUser(
@@ -313,10 +323,12 @@ function App() {
           maxWidth: "100%",
         }}
       >
+        {/* <InstallPWA /> */}
         <Header
           languageMode={languageMode}
           setLanguageMode={setLanguageMode}
           handleZeroKnowledgePassword={handleZeroKnowledgePassword}
+          canInstallPwa={canInstallPwa}
         />
 
         {checkSignInStates({ authStateReference }) ? <AuthDisplay /> : null}
@@ -373,6 +385,6 @@ function App() {
       ) : null}
     </div>
   );
-}
+};
 
 export default App;

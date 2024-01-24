@@ -15,6 +15,7 @@ export const Header = ({
   languageMode,
   setLanguageMode,
   handleZeroKnowledgePassword,
+  canInstallPwa,
 }) => {
   // State for Language mode switch
   const [isSpanishMode, setIsSpanishMode] = useState(false);
@@ -96,7 +97,7 @@ export const Header = ({
         </div>
       </div> */}
       <br />
-      <LearnMore languageMode={languageMode} />
+      <LearnMore languageMode={languageMode} canInstallPwa={canInstallPwa} />
       {localStorage.getItem("patreonPasscode") ===
       import.meta.env.VITE_PATREON_PASSCODE ? (
         <Button

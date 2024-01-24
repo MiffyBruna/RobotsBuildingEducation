@@ -429,7 +429,7 @@ export const ImpactWallet = ({
 
               <h6>last updated {globalReserveObject?.last_updated}</h6>
               <div></div>
-              <Portfolio />
+              {/* <Portfolio /> */}
             </div>
           </div>
         </Modal.Body>

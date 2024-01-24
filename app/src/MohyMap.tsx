@@ -5,6 +5,39 @@ import { japaneseThemePalette, textBlock } from "./styles/lazyStyles";
 import { useZap } from "./App.hooks";
 import { RoxanaLoadingAnimation, postInstructions } from "./common/uiSchema";
 
+// StyledTree.js
+import styled from "styled-components";
+
+export const TreeNode = styled.div`
+  position: relative;
+  margin-left: 20px;
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -20px;
+    border-top: 2px solid #0099ff;
+    width: 20px;
+    height: 0;
+  }
+`;
+
+export const TreeNodeButton = styled.button`
+  display: inline-block;
+  margin-top: 5px;
+  cursor: pointer;
+  background-color: #004466;
+  border: 1px solid #00ff99;
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: white;
+
+  &:hover {
+    background-color: #002244;
+  }
+`;
+
 let mapImage = {
   // parent nodes
   "Linked Lists": {
@@ -760,19 +793,12 @@ const NodeComponent = ({ node, onNodeSelect, isSelected }) => {
   const isLeafNode = !node.children || Object.keys(node.children).length === 0;
 
   return (
-    <div style={{}}>
-      <button
-        onClick={() => onNodeSelect(node, isLeafNode)}
-        style={{
-          marginTop: 12,
-          backgroundColor: isSelected ? "#add8e6" : "#f0f0f0",
-          cursor: "pointer",
-        }}
-      >
+    <TreeNode>
+      <TreeNodeButton onClick={() => onNodeSelect(node, isLeafNode)}>
         {node.name}
-      </button>
+      </TreeNodeButton>
       {isSelected && node.children && (
-        <div>
+        <div style={{ marginLeft: "20px" }}>
           {Object.keys(node.children).map((childKey) => (
             <NodeComponent
               key={childKey}
@@ -783,9 +809,39 @@ const NodeComponent = ({ node, onNodeSelect, isSelected }) => {
           ))}
         </div>
       )}
-    </div>
+    </TreeNode>
   );
 };
+// const NodeComponent = ({ node, onNodeSelect, isSelected }) => {
+//   const isLeafNode = !node.children || Object.keys(node.children).length === 0;
+
+//   return (
+//     <div style={{}}>
+//       <button
+//         onClick={() => onNodeSelect(node, isLeafNode)}
+//         style={{
+//           marginTop: 12,
+//           backgroundColor: isSelected ? "#add8e6" : "#f0f0f0",
+//           cursor: "pointer",
+//         }}
+//       >
+//         {node.name}
+//       </button>
+//       {isSelected && node.children && (
+//         <div>
+//           {Object.keys(node.children).map((childKey) => (
+//             <NodeComponent
+//               key={childKey}
+//               node={{ name: childKey, ...node.children[childKey] }}
+//               onNodeSelect={onNodeSelect}
+//               isSelected={false}
+//             />
+//           ))}
+//         </div>
+//       )}
+//     </div>
+//   );
+// };
 
 const StackTile = ({ name }) => {
   return (
