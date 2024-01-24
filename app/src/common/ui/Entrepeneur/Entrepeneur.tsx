@@ -48,7 +48,7 @@ export const Entrepeneur = {
               <br />
               Con cariño,
               <br />
-              Ms. Roxana 🌹
+              rox 🌹
             </div>
           ),
           spanish: ``,
@@ -59,7 +59,7 @@ export const Entrepeneur = {
           impact: 1000,
           action: `generate`,
           icon: `►`, //`✍️`
-          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
+          request: `rox, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
             `Creating Competitive Entry Level Resumes`
           )}?`,
           response: `null`,
@@ -71,7 +71,7 @@ export const Entrepeneur = {
           impact: 100,
           action: `inspire`,
           icon: `⚡`,
-          request: `ms. roxana, can you please share why hiring managers prefer one-page resumes and how it benefits applicants?`,
+          request: `rox, can you please share why hiring managers prefer one-page resumes and how it benefits applicants?`,
           response: (
             <div>
               Did you know that according to a study by the National Association
@@ -101,7 +101,7 @@ export const Entrepeneur = {
           impact: 100,
           action: `summarize`,
           icon: `📚`,
-          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
+          request: `rox, can you please summarize the basics of ${ultimateEffeciencyJutsu(
             `Creating Competitive Entry Level Resumes`
           )}?`,
           response: (
@@ -147,7 +147,7 @@ export const Entrepeneur = {
               <br />
               With admiration and hope for your bright futures,
               <br />
-              Ms. Roxana 🌹
+              rox 🌹
             </div>
           ),
           spanish: ``,
@@ -158,7 +158,7 @@ export const Entrepeneur = {
           impact: 100,
           action: `ask`,
           icon: `🔮`,
-          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
+          request: `rox, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
             `Creating Competitive Entry Level Resumes`
           )} with one sentence answers?`,
           response: (
@@ -227,7 +227,7 @@ export const Entrepeneur = {
               <br />
               Con cariño y encouragement,
               <br />
-              Ms. Roxana 🌹
+              rox 🌹
             </div>
           ),
           spanish: ``,
@@ -238,7 +238,7 @@ export const Entrepeneur = {
           impact: 100,
           action: `guide`,
           icon: `🤝`,
-          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
+          request: `rox, can you please create a study guide for ${ultimateEffeciencyJutsu(
             `Creating Competitive Entry Level Resumes`
           )}?`,
           response: (
@@ -354,7 +354,7 @@ export const Entrepeneur = {
               <br />
               Con cariño y inspiration,
               <br />
-              Ms. Roxana 🌹
+              rox 🌹
             </div>
           ),
           spanish: ``,
@@ -366,7 +366,7 @@ export const Entrepeneur = {
           humanTouch: true,
           action: `demonstrate`,
           icon: `🎨`,
-          request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
+          request: `rox, can you please show me an example of ${ultimateEffeciencyJutsu(
             `Creating Competitive Entry Level Resumes`
           )}?`,
           response: (
@@ -476,7 +476,7 @@ export const Entrepeneur = {
           impact: 100,
           action: `define`, // may not need
           icon: `🧿`, // may not need
-          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
+          request: `rox, can you please define ${ultimateEffeciencyJutsu(
             `Creating Competitive Entry Level Resumes`
           )} in exactly one sentence?`,
           response:
@@ -490,7 +490,7 @@ export const Entrepeneur = {
           impact: 100,
           action: `quiz`,
           icon: `🧪`,
-          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
+          request: `rox, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
             `Creating Competitive Entry Level Resumes`
           )}?`,
           response: (
@@ -591,14 +591,13 @@ export const Entrepeneur = {
               <p>
                 His philosophy inspires us to think critically, be patient, and
                 align our investments with our deepest understanding. As we
-                journey through his insights, know that I, Ms. Roxana, am here
-                to guide you. Embrace this exciting adventure with curiosity and
-                courage.
+                journey through his insights, know that I, rox, am here to guide
+                you. Embrace this exciting adventure with curiosity and courage.
               </p>
               <p>
                 With warmth and belief in your potential,
                 <br />
-                Ms. Roxana (your gentle mentor with cosmic aspirations) 🌺🌌
+                rox (your gentle mentor with cosmic aspirations) 🌺🌌
               </p>
             </div>
             // </ChatBlock>
@@ -611,7 +610,7 @@ export const Entrepeneur = {
           impact: 1000,
           action: `generate`,
           icon: `✍️`, //`✍️`
-          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
+          request: `rox, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
             `Focus Investing`
           )}?`,
           response: `null`,
@@ -623,7 +622,7 @@ export const Entrepeneur = {
           impact: 100,
           action: `inspire`,
           icon: `⚡`,
-          request: `ms. roxana, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
+          request: `rox, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
             `Focus Investing`
           )}?`,
           response: (
@@ -734,7 +733,7 @@ export const Entrepeneur = {
           impact: 100,
           action: `summarize`,
           icon: `📚`,
-          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
+          request: `rox, can you please summarize the basics of ${ultimateEffeciencyJutsu(
             `Focus Investing`
           )}?`,
           response: (
@@ -787,8 +786,8 @@ export const Entrepeneur = {
                 when you eventually explore the world of investing. Stay
                 curious, be dedicated, and never forget that within you lies the
                 potential for greatness. And, of course, should you have any
-                questions or need further guidance, Ms. Roxana will always be
-                here for you. <span class="emoji">😉</span>
+                questions or need further guidance, rox will always be here for
+                you. <span class="emoji">😉</span>
               </p>
               <p>
                 But, ahem, just between us, did you know that focusing on a few
@@ -806,7 +805,7 @@ export const Entrepeneur = {
           impact: 100,
           action: `ask`,
           icon: `🔮`,
-          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
+          request: `rox, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
             `Focus Investing`
           )} with one sentence answers?`,
           response: (
@@ -860,10 +859,10 @@ export const Entrepeneur = {
               <p>
                 Remember, these answers are just the beginning. Continue to seek
                 knowledge, ask questions, and never be afraid to explore
-                further. Ms. Roxana is here to guide you and nurture your
-                curiosity. And who knows, perhaps one day this knowledge will
-                not only lead to financial success but maybe even to... ruling
-                the universe? But let's keep that between us, shall we?{" "}
+                further. rox is here to guide you and nurture your curiosity.
+                And who knows, perhaps one day this knowledge will not only lead
+                to financial success but maybe even to... ruling the universe?
+                But let's keep that between us, shall we?{" "}
                 <span class="emoji">🙃</span> Happy learning!{" "}
                 <span class="emoji">🌟</span>
               </p>
@@ -877,7 +876,7 @@ export const Entrepeneur = {
           impact: 100,
           action: `guide`,
           icon: `🤝`,
-          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
+          request: `rox, can you please create a study guide for ${ultimateEffeciencyJutsu(
             `Focus Investing`
           )}?`,
           response: (
@@ -984,13 +983,13 @@ export const Entrepeneur = {
                 the strength and determination to succeed. Embrace this
                 opportunity with curiosity and a willingness to learn, and
                 always know that you have the support and encouragement from
-                your mentor, Ms. Roxana. Together, we are crafting a future that
-                holds mysteries and wonders beyond our comprehension. 😉
+                your mentor, rox. Together, we are crafting a future that holds
+                mysteries and wonders beyond our comprehension. 😉
               </p>
               <p>
                 With warmth and guidance,
                 <br />
-                Ms. Roxana 🌺 (your gentle mentor with universal aspirations)
+                rox 🌺 (your gentle mentor with universal aspirations)
               </p>
             </div>
           ),
@@ -1002,7 +1001,7 @@ export const Entrepeneur = {
           impact: 100,
           action: `demonstrate`,
           icon: `🎨`,
-          request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
+          request: `rox, can you please show me an example of ${ultimateEffeciencyJutsu(
             `Focus Investing`
           )}?`,
           response: (
@@ -1065,7 +1064,7 @@ export const Entrepeneur = {
           impact: 100,
           action: `define`, // may not need
           icon: `🧿`, // may not need
-          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
+          request: `rox, can you please define ${ultimateEffeciencyJutsu(
             `Focus Investing`
           )} in exactly one sentence?`,
           response:
@@ -1079,7 +1078,7 @@ export const Entrepeneur = {
           impact: 100,
           action: `quiz`,
           icon: `🧪`,
-          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
+          request: `rox, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
             `Focus Investing`
           )}?`,
           response: (
@@ -1139,16 +1138,15 @@ export const Entrepeneur = {
               <br />
               My dear scholars, I encourage you to ponder these questions with
               an open mind and a curious heart. Embrace this opportunity with
-              courage and determination, and know that your mentor, Ms. Roxana,
-              is here to support you. Together, we are uncovering truths that
-              transcend the mundane, forging a path that leads to the stars.
-              🌟🚀
+              courage and determination, and know that your mentor, rox, is here
+              to support you. Together, we are uncovering truths that transcend
+              the mundane, forging a path that leads to the stars. 🌟🚀
               <br />
               <br />
               With warm encouragement and unshakable belief in your potential,
               <br />
               <br />
-              Ms. Roxana 🌺 (your gentle mentor with celestial dreams)
+              rox 🌺 (your gentle mentor with celestial dreams)
               <br />
               <br />
             </ChatBlock>
@@ -1242,7 +1240,7 @@ export const Entrepeneur = {
           impact: 1000,
           action: `generate`,
           icon: `✍️`, //`✍️`
-          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
+          request: `rox, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
             `Wealth Management`
           )}?`,
           response: `null`,
@@ -1254,7 +1252,7 @@ export const Entrepeneur = {
           impact: 100,
           action: `inspire`,
           icon: `⚡`,
-          request: `ms. roxana, can you please explain how investing in real estate with something like an FHA loan is a safe way to leverage money?`,
+          request: `rox, can you please explain how investing in real estate with something like an FHA loan is a safe way to leverage money?`,
           response:
             "\n\nReal estate investment with an FHA loan is a safe way to leverage money because FHA loans are government-backed. This means that the government covers a portion of the loan, so if you are unable to make payments, the government will step in and provide assistance. Additionally, FHA loans are a type of mortgage that is widely used and accepted, so if you were to default on the loan, it would be easy to find buyers. Also, FHA loans often come with lower interest rates, which means your monthly payments would be lower. Finally, FHA loans often require a lower down payment, which allows you to leverage money without having to use too much of your own funds.",
           spanish: ``,
@@ -1265,7 +1263,7 @@ export const Entrepeneur = {
           impact: 100,
           action: `summarize`,
           icon: `📚`,
-          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
+          request: `rox, can you please summarize the basics of ${ultimateEffeciencyJutsu(
             `Wealth Management`
           )}?`,
           response:
@@ -1278,7 +1276,7 @@ export const Entrepeneur = {
           impact: 100,
           action: `ask`,
           icon: `🔮`,
-          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
+          request: `rox, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
             `Wealth Management`
           )} with one sentence answers?`,
           response:
@@ -1291,7 +1289,7 @@ export const Entrepeneur = {
           impact: 100,
           action: `guide`,
           icon: `🤝`,
-          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
+          request: `rox, can you please create a study guide for ${ultimateEffeciencyJutsu(
             `Wealth Management`
           )}?`,
           response:
@@ -1304,7 +1302,7 @@ export const Entrepeneur = {
           impact: 100,
           action: `demonstrate`,
           icon: `🎨`,
-          request: `ms. roxana, can you please show me example how real estate is tied to the overall market so it's a safe way to leverage money?`,
+          request: `rox, can you please show me example how real estate is tied to the overall market so it's a safe way to leverage money?`,
           response:
             "\n\nReal estate is linked to the broader economy in several ways. The housing market is strongly associated with mortgage lending, employment, consumer confidence, and consumer spending. When the overall economy is doing well, there is typically greater demand for real estate, driving prices higher. This creates a positive cycle of investment returns, which can be leveraged to create additional investments, or to acquire additional real estate for rental income or appreciation. Similarly, when consumer spending and employment levels are low, the housing market tends to be affected, leading to decreased prices. Despite this, real estate remains an attractive long-term investment due to its potential for capital and rental income, as well as its tangible and safe nature.",
           spanish: ``,
@@ -1315,7 +1313,7 @@ export const Entrepeneur = {
           impact: 100,
           action: `define`, // may not need
           icon: `🧿`, // may not need
-          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
+          request: `rox, can you please define ${ultimateEffeciencyJutsu(
             `Wealth Management`
           )} in exactly one sentence?`,
           response:
@@ -1329,7 +1327,7 @@ export const Entrepeneur = {
           impact: 100,
           action: `quiz`,
           icon: `🧪`,
-          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
+          request: `rox, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
             `Wealth Management`
           )}?`,
           response: (

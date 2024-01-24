@@ -18,7 +18,7 @@ export const ChatFrame = ({
         fullscreen
       >
         <Modal.Header style={{ backgroundColor: "black", color: "white" }}>
-          <Modal.Title>Ms. Roxana</Modal.Title>
+          <Modal.Title>rox</Modal.Title>
         </Modal.Header>
         <Modal.Body style={{ backgroundColor: "black", color: "white" }}>
           <iframe

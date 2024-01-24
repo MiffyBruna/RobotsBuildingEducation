@@ -30,7 +30,7 @@ export const Creator = {
           impact: 1000,
           action: `generate`,
           icon: `►`, //`✍️`
-          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
+          request: `rox, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
             `Philosophy`
           )}?`,
           response: `null`,
@@ -43,7 +43,7 @@ export const Creator = {
           impact: 100,
           action: `inspire`,
           icon: `⚡`,
-          request: `ms. roxana, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
+          request: `rox, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
             `Philosophy`
           )}?`,
           response: (
@@ -109,7 +109,7 @@ export const Creator = {
           impact: 100,
           action: `summarize`,
           icon: `📚`,
-          request: `ms. roxana, can you please summarize Professor Ruha Benjamin's work with the intersection of ${ultimateEffeciencyJutsu(
+          request: `rox, can you please summarize Professor Ruha Benjamin's work with the intersection of ${ultimateEffeciencyJutsu(
             `Philosophy`
           )}?`,
           response: (
@@ -190,7 +190,7 @@ export const Creator = {
           impact: 100,
           action: `ask`,
           icon: `🔮`,
-          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
+          request: `rox, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
             `Philosophy`
           )} with one sentence answers?`,
           response: (
@@ -274,7 +274,7 @@ export const Creator = {
           impact: 100,
           action: `guide`,
           icon: `🤝`,
-          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
+          request: `rox, can you please create a study guide for ${ultimateEffeciencyJutsu(
             `Philosophy`
           )}?`,
           response: (
@@ -436,7 +436,7 @@ export const Creator = {
           impact: 100,
           action: `demonstrate`,
           icon: `🎨`,
-          request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
+          request: `rox, can you please show me an example of ${ultimateEffeciencyJutsu(
             `Philosophy`
           )}`,
           response: (
@@ -534,7 +534,7 @@ export const Creator = {
           impact: 100,
           action: `define`, // may not need
           icon: `🧿`, // may not need
-          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
+          request: `rox, can you please define ${ultimateEffeciencyJutsu(
             `Philosophy`
           )} in exactly one sentence?`,
           response: (
@@ -554,7 +554,7 @@ export const Creator = {
           impact: 100,
           action: `quiz`,
           icon: `🧪`,
-          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
+          request: `rox, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
             `Philosophy`
           )} without any answers?`,
           response: (
@@ -633,7 +633,7 @@ export const Creator = {
           impact: 1000,
           action: `generate`,
           icon: `►`, //`✍️`
-          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
+          request: `rox, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
             `Human-Computer Interaction`
           )}?`,
           response: `null`,
@@ -648,7 +648,7 @@ export const Creator = {
           impact: 100,
           action: `inspire`,
           icon: `⚡`,
-          request: `ms. roxana, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
+          request: `rox, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
             `Human-Computer Interaction`
           )}?`,
           response: (
@@ -705,7 +705,7 @@ export const Creator = {
           impact: 100,
           action: `summarize`,
           icon: `📚`,
-          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
+          request: `rox, can you please summarize the basics of ${ultimateEffeciencyJutsu(
             `Human-Computer Interaction`
           )}?`,
           response: (
@@ -774,7 +774,7 @@ export const Creator = {
           impact: 100,
           action: `ask`,
           icon: `🔮`,
-          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
+          request: `rox, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
             `Human-Computer Interaction`
           )} with one sentence answers?`,
           response: (
@@ -848,7 +848,7 @@ export const Creator = {
           impact: 100,
           action: `guide`,
           icon: `🤝`,
-          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
+          request: `rox, can you please create a study guide for ${ultimateEffeciencyJutsu(
             `Human-Computer Interaction`
           )}?`,
           response: (
@@ -949,7 +949,7 @@ export const Creator = {
           impact: 100,
           action: `demonstrate`,
           icon: `🎨`,
-          request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
+          request: `rox, can you please show me an example of ${ultimateEffeciencyJutsu(
             `Human-Computer Interaction`
           )}?`,
           response: (
@@ -1013,7 +1013,7 @@ export const Creator = {
           impact: 100,
           action: `define`, // may not need
           icon: `🧿`, // may not need
-          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
+          request: `rox, can you please define ${ultimateEffeciencyJutsu(
             `Human-Computer Interaction`
           )} in exactly one sentence?`,
           response: (
@@ -1032,7 +1032,7 @@ export const Creator = {
           impact: 100,
           action: `quiz`,
           icon: `🧪`,
-          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
+          request: `rox, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
             `Human-Computer Interaction`
           )} without any answers?`,
           response: (
@@ -1200,7 +1200,7 @@ export const Creator = {
           impact: 1000,
           action: `generate`,
           icon: `►`, //`✍️`
-          request: `ms. roxana, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
+          request: `rox, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
             `The Psychology Of Self-esteem`
           )}?`,
           response: `null`,
@@ -1215,7 +1215,7 @@ export const Creator = {
           impact: 100,
           action: `inspire`,
           icon: `⚡`,
-          request: `ms. roxana, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
+          request: `rox, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
             `The Psychology Of Self-esteem`
           )}?`,
           response: (
@@ -1286,7 +1286,7 @@ export const Creator = {
           impact: 100,
           action: `summarize`,
           icon: `📚`,
-          request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
+          request: `rox, can you please summarize the basics of ${ultimateEffeciencyJutsu(
             `The Psychology Of Self-esteem`
           )}?`,
           response: (
@@ -1355,7 +1355,7 @@ export const Creator = {
           impact: 100,
           action: `ask`,
           icon: `🔮`,
-          request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
+          request: `rox, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
             `The Psychology Of Self-esteem`
           )} with one sentence answers?`,
           response: (
@@ -1401,7 +1401,7 @@ export const Creator = {
           impact: 100,
           action: `guide`,
           icon: `🤝`,
-          request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
+          request: `rox, can you please create a study guide for ${ultimateEffeciencyJutsu(
             `The Psychology Of Self-esteem`
           )}?`,
           response: (
@@ -1469,7 +1469,7 @@ export const Creator = {
           impact: 100,
           action: `demonstrate`,
           icon: `🎨`,
-          request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
+          request: `rox, can you please show me an example of ${ultimateEffeciencyJutsu(
             `The Psychology Of Self-esteem`
           )}?`,
           response: (
@@ -1555,7 +1555,7 @@ export const Creator = {
           impact: 100,
           action: `define`, // may not need
           icon: `🧿`, // may not need
-          request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
+          request: `rox, can you please define ${ultimateEffeciencyJutsu(
             `The Psychology Of Self-esteem`
           )} in exactly one sentence?`,
           response: (
@@ -1573,7 +1573,7 @@ export const Creator = {
           impact: 100,
           action: `quiz`,
           icon: `🧪`,
-          request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
+          request: `rox, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
             `The Psychology Of Self-esteem`
           )} without any answers?`,
           response: (
@@ -1666,7 +1666,7 @@ export const Creator = {
       //       impact: 1000,
       //       action: `generate`,
       //       icon: `►`, //`✍️`
-      //       request: `ms. roxana, can you please show me how to ${ultimateEffeciencyJutsu(
+      //       request: `rox, can you please show me how to ${ultimateEffeciencyJutsu(
       //         `Memes`
       //       )}?`,
       //       response: `null`,
@@ -1678,7 +1678,7 @@ export const Creator = {
       //       impact: 100,
       //       action: `inspire`,
       //       icon: `⚡`,
-      //       request: `ms. roxana, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
+      //       request: `rox, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
       //         `Memes`
       //       )}?`,
       //       response: <div />,
@@ -1690,7 +1690,7 @@ export const Creator = {
       //       impact: 100,
       //       action: `summarize`,
       //       icon: `📚`,
-      //       request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
+      //       request: `rox, can you please summarize the basics of ${ultimateEffeciencyJutsu(
       //         `Memes`
       //       )}?`,
       //       response: <div />,
@@ -1702,7 +1702,7 @@ export const Creator = {
       //       impact: 100,
       //       action: `ask`,
       //       icon: `🔮`,
-      //       request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
+      //       request: `rox, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
       //         `Memes`
       //       )} with one sentence answers?`,
       //       response: <div />,
@@ -1714,7 +1714,7 @@ export const Creator = {
       //       impact: 100,
       //       action: `guide`,
       //       icon: `🤝`,
-      //       request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
+      //       request: `rox, can you please create a study guide for ${ultimateEffeciencyJutsu(
       //         `Memes`
       //       )}?`,
       //       response: <div />,
@@ -1726,7 +1726,7 @@ export const Creator = {
       //       impact: 100,
       //       action: `demonstrate`,
       //       icon: `🎨`,
-      //       request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
+      //       request: `rox, can you please show me an example of ${ultimateEffeciencyJutsu(
       //         `Memes`
       //       )}?`,
       //       response: <div />,
@@ -1738,7 +1738,7 @@ export const Creator = {
       //       impact: 100,
       //       action: `define`, // may not need
       //       icon: `🧿`, // may not need
-      //       request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
+      //       request: `rox, can you please define ${ultimateEffeciencyJutsu(
       //         `Memes`
       //       )} in exactly one sentence?`,
       //       response: <div />,
@@ -1750,7 +1750,7 @@ export const Creator = {
       //       impact: 100,
       //       action: `quiz`,
       //       icon: `🧪`,
-      //       request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
+      //       request: `rox, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
       //         `Memes`
       //       )} without any answers?`,
       //       response: <div />,
@@ -1773,7 +1773,7 @@ export const Creator = {
     // Custom: {
     //   documentID: ``,
     //   // backgroundImgSrc:
-    //   //   "https://res.cloudinary.com/sheilfer/image/upload/v1695548485/Module_Buttons_10_u50oik.gif",
+    //   //   "https://rp es.cloudinary.com/sheilfer/image/upload/v1695548485/Module_Buttons_10_u50oik.gif",
     //   filler: ``,
     //   new: false,
     //   highValue: false,
@@ -1811,7 +1811,7 @@ export const Creator = {
     //       impact: 100,
     //       action: `inspire`,
     //       icon: `⚡`,
-    //       request: `ms. roxana, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
+    //       request: `rox, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
     //         `The Psychology Of Self-esteem`
     //       )}?`,
     //       response: (
@@ -1882,7 +1882,7 @@ export const Creator = {
     //       impact: 100,
     //       action: `summarize`,
     //       icon: `📚`,
-    //       request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
+    //       request: `rox, can you please summarize the basics of ${ultimateEffeciencyJutsu(
     //         `The Psychology Of Self-esteem`
     //       )}?`,
     //       response: (
@@ -1951,7 +1951,7 @@ export const Creator = {
     //       impact: 100,
     //       action: `ask`,
     //       icon: `🔮`,
-    //       request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
+    //       request: `rox, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
     //         `The Psychology Of Self-esteem`
     //       )} with one sentence answers?`,
     //       response: (
@@ -1997,7 +1997,7 @@ export const Creator = {
     //       impact: 100,
     //       action: `guide`,
     //       icon: `🤝`,
-    //       request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
+    //       request: `rox, can you please create a study guide for ${ultimateEffeciencyJutsu(
     //         `The Psychology Of Self-esteem`
     //       )}?`,
     //       response: (
@@ -2065,7 +2065,7 @@ export const Creator = {
     //       impact: 100,
     //       action: `demonstrate`,
     //       icon: `🎨`,
-    //       request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
+    //       request: `rox, can you please show me an example of ${ultimateEffeciencyJutsu(
     //         `The Psychology Of Self-esteem`
     //       )}?`,
     //       response: (
@@ -2151,7 +2151,7 @@ export const Creator = {
     //       impact: 100,
     //       action: `define`, // may not need
     //       icon: `🧿`, // may not need
-    //       request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
+    //       request: `rox, can you please define ${ultimateEffeciencyJutsu(
     //         `The Psychology Of Self-esteem`
     //       )} in exactly one sentence?`,
     //       response: (
@@ -2169,7 +2169,7 @@ export const Creator = {
     //       impact: 100,
     //       action: `quiz`,
     //       icon: `🧪`,
-    //       request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
+    //       request: `rox, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
     //         `The Psychology Of Self-esteem`
     //       )} without any answers?`,
     //       response: (
@@ -2262,7 +2262,7 @@ export const Creator = {
     //   //       impact: 1000,
     //   //       action: `generate`,
     //   //       icon: `►`, //`✍️`
-    //   //       request: `ms. roxana, can you please show me how to ${ultimateEffeciencyJutsu(
+    //   //       request: `rox, can you please show me how to ${ultimateEffeciencyJutsu(
     //   //         `Memes`
     //   //       )}?`,
     //   //       response: `null`,
@@ -2274,7 +2274,7 @@ export const Creator = {
     //   //       impact: 100,
     //   //       action: `inspire`,
     //   //       icon: `⚡`,
-    //   //       request: `ms. roxana, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
+    //   //       request: `rox, can you please share an inspiring story about ${ultimateEffeciencyJutsu(
     //   //         `Memes`
     //   //       )}?`,
     //   //       response: <div />,
@@ -2286,7 +2286,7 @@ export const Creator = {
     //   //       impact: 100,
     //   //       action: `summarize`,
     //   //       icon: `📚`,
-    //   //       request: `ms. roxana, can you please summarize the basics of ${ultimateEffeciencyJutsu(
+    //   //       request: `rox, can you please summarize the basics of ${ultimateEffeciencyJutsu(
     //   //         `Memes`
     //   //       )}?`,
     //   //       response: <div />,
@@ -2298,7 +2298,7 @@ export const Creator = {
     //   //       impact: 100,
     //   //       action: `ask`,
     //   //       icon: `🔮`,
-    //   //       request: `ms. roxana, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
+    //   //       request: `rox, can you please show me three frequently asked beginner questions about ${ultimateEffeciencyJutsu(
     //   //         `Memes`
     //   //       )} with one sentence answers?`,
     //   //       response: <div />,
@@ -2310,7 +2310,7 @@ export const Creator = {
     //   //       impact: 100,
     //   //       action: `guide`,
     //   //       icon: `🤝`,
-    //   //       request: `ms. roxana, can you please create a study guide for ${ultimateEffeciencyJutsu(
+    //   //       request: `rox, can you please create a study guide for ${ultimateEffeciencyJutsu(
     //   //         `Memes`
     //   //       )}?`,
     //   //       response: <div />,
@@ -2322,7 +2322,7 @@ export const Creator = {
     //   //       impact: 100,
     //   //       action: `demonstrate`,
     //   //       icon: `🎨`,
-    //   //       request: `ms. roxana, can you please show me an example of ${ultimateEffeciencyJutsu(
+    //   //       request: `rox, can you please show me an example of ${ultimateEffeciencyJutsu(
     //   //         `Memes`
     //   //       )}?`,
     //   //       response: <div />,
@@ -2334,7 +2334,7 @@ export const Creator = {
     //   //       impact: 100,
     //   //       action: `define`, // may not need
     //   //       icon: `🧿`, // may not need
-    //   //       request: `ms. roxana, can you please define ${ultimateEffeciencyJutsu(
+    //   //       request: `rox, can you please define ${ultimateEffeciencyJutsu(
     //   //         `Memes`
     //   //       )} in exactly one sentence?`,
     //   //       response: <div />,
@@ -2346,7 +2346,7 @@ export const Creator = {
     //   //       impact: 100,
     //   //       action: `quiz`,
     //   //       icon: `🧪`,
-    //   //       request: `ms. roxana, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
+    //   //       request: `rox, can you please write a 3 question quiz for beginners that's challenging about ${ultimateEffeciencyJutsu(
     //   //         `Memes`
     //   //       )} without any answers?`,
     //   //       response: <div />,

@@ -11,15 +11,26 @@ export const DiscordButton = () => (
   <div
     style={{
       display: "flex",
-      justifyContent: "space-evenly",
+      // justifyContent: "space-evenly",
+      flexDirection: "column",
+      alignItems: "center",
 
-      padding: 12,
       backgroundColor: "rgba(0,0,0,0.8)",
       // border: "1px solid red",
       minWidth: 375,
       maxWidth: "100%",
     }}
   >
+    <h1>Connect</h1>
+    <iframe
+      src="https://discord.com/widget?id=115318178929704963&theme=dark"
+      width="375"
+      height="300"
+      allowtransparency="true"
+      frameborder="0"
+      sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+    ></iframe>
+    <br />
     <a
       onClick={() =>
         logEvent(analytics, "select_promotion", {
@@ -29,30 +40,37 @@ export const DiscordButton = () => (
           promotion_name: "advertising_launch",
         })
       }
-      href="https://www.patreon.com/RobotsBuildingEducation"
+      href="https://www.patreon.com/RobotsBuildingEducation/about"
       target={"_blank"}
       style={{
         // border: "1px solid white",
         color: "white",
+        boxShadow: "0px 0px 11px 0px rgba(255,38,74,0.75)",
+        borderRadius: 12,
         // padding: 24,
         // backgroundColor: "#141518",
 
         // color: "white",
         // borderRadius: "6px",
+        maxWidth: 600,
+        width: "100%",
       }}
     >
-      <Button variant="light">
+      <img
+        src="https://res.cloudinary.com/dtkeyccga/image/upload/v1704759921/Patreon_tiers_9_odravd.png"
+        style={{ borderRadius: 12 }}
+      />
+      {/* <Button variant="light">
         <img
           style={{ borderRadius: "6px" }}
           width="32px"
           height="32px"
           src={patreonLogos}
         />
-      </Button>
-      <br />
-      Subscribe
+      </Button> */}
+      &nbsp;&nbsp;<div style={{ padding: 5 }}>Subscribe </div>
     </a>
-    <a
+    {/* <a
       style={{ marginRight: 48 }}
       onClick={() =>
         logEvent(analytics, "select_promotion", {
@@ -71,22 +89,20 @@ export const DiscordButton = () => (
       </Button>
       <br />
       Network
-    </a>
-    <br />
-    <br />
-    <a
-      style={{ marginRight: 48 }}
+    </a> */}
+
+    {/* <a
+      style={{ marginRight: 48, color: "white" }}
       onClick={() =>
         logEvent(analytics, "select_promotion", {
-          creative_name: `https://discord.gg/9kguaaDRmt`,
+          creative_name: `https://discord.gg/robotsbuildingeducation`,
           creative_slot: `Discord Slot`,
           promotion_id: `Robots Building Education Discord`,
           promotion_name: "advertising_launch",
         })
       }
-      href={"https://discord.gg/9kguaaDRmt"}
+      href={"https://discord.gg/robotsbuildingeducation"}
       target={"_blank"}
-      style={{ color: "white" }}
     >
       <Button variant="light">
         <div
@@ -107,10 +123,11 @@ export const DiscordButton = () => (
       </Button>
       <br />
       Contact
-    </a>
+    </a> */}
+
     <br />
-    <br />
-    <a
+
+    {/* <a
       onClick={() =>
         logEvent(analytics, "select_promotion", {
           creative_name: `https://chat.openai.com/g/g-09h5uQiFC-ms-roxana`,
@@ -149,6 +166,6 @@ export const DiscordButton = () => (
       </Button>
       <br />
       OpenAI
-    </a>
+    </a> */}
   </div>
 );

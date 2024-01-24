@@ -15,6 +15,7 @@ export const Header = ({
   languageMode,
   setLanguageMode,
   handleZeroKnowledgePassword,
+  canInstallPwa,
 }) => {
   // State for Language mode switch
   const [isSpanishMode, setIsSpanishMode] = useState(false);
@@ -53,7 +54,7 @@ export const Header = ({
   return (
     <div style={{ color: prettyColorPalette.softYellowGlow }}>
       <img width="175px" src={robe_logo} style={{ marginTop: "24px" }} />
-      <div
+      {/* <div
         style={{
           display: "flex",
           justifyContent: "center",
@@ -94,9 +95,9 @@ export const Header = ({
             </Form.Switch>
           </Form>
         </div>
-      </div>
+      </div> */}
       <br />
-      <LearnMore languageMode={languageMode} />
+      <LearnMore languageMode={languageMode} canInstallPwa={canInstallPwa} />
       {localStorage.getItem("patreonPasscode") ===
       import.meta.env.VITE_PATREON_PASSCODE ? (
         <Button

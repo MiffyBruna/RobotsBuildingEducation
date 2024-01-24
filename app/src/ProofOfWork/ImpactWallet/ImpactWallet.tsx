@@ -96,8 +96,8 @@ const renderCheckboxes = (profileData) => {
   if (checkboxes.length < 1) {
     return (
       <div>
-        Ms. Roxana doesn't see any proof of work yet. Have you not studied
-        yet?😠 <br />
+        rox doesn't see any proof of work yet. Have you not studied yet?😠{" "}
+        <br />
       </div>
     );
   }
@@ -307,15 +307,6 @@ export const ImpactWallet = ({
               <BitcoinManager
                 handleZeroKnowledgePassword={handleZeroKnowledgePassword}
               />
-
-              <div>
-                <h1>The Reserve</h1>
-                <h3>invested {globalReserveObject?.invested || "N/A"}</h3>
-
-                <h6>last updated {globalReserveObject?.last_updated}</h6>
-                <div></div>
-                <Portfolio />
-              </div>
             </div>
             <br />
             <h4>Your Decentralized Transcript</h4>
@@ -431,6 +422,15 @@ export const ImpactWallet = ({
             </p>
 
             <br />
+
+            <div>
+              <h1>The Reserve</h1>
+              <h3>invested {globalReserveObject?.invested || "N/A"}</h3>
+
+              <h6>last updated {globalReserveObject?.last_updated}</h6>
+              <div></div>
+              {/* <Portfolio /> */}
+            </div>
           </div>
         </Modal.Body>
         <Modal.Footer style={{ backgroundColor: "black", color: "white" }}>

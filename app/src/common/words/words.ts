@@ -119,7 +119,7 @@ export let words = {
       // conversation grader
       "56": "Grade",
       "57": "Add to conversation",
-      "58":"Ask Ms. Roxana for assistance on your quiz! Grade your conversation and see how you can improve =)",
+      "58":"Ask rox for assistance on your quiz! Grade your conversation and see how you can improve =)",
 
       //switches
       "59": "Zen Garden",
@@ -211,7 +211,7 @@ export let words = {
       "55": "generar perspectiva",
       "56": "Calificar",
       "57": "Añadir a la conversación",
-      "58": "Pide asistencia a Ms. Roxana para tu cuestionario! Califica tu conversación y descubre cómo puedes mejorar =)",
+      "58": "Pide asistencia a rox para tu cuestionario! Califica tu conversación y descubre cómo puedes mejorar =)",
 
       "59": "Jardín zen",
       "60": "Espíritu Santo",
