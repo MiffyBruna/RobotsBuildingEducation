@@ -4,16 +4,17 @@ import { isEmpty } from "lodash";
 import { Button, Modal } from "react-bootstrap";
 
 export const ChatFrame = ({
-  isChatFrameOpen,
-  setIsChatFrameOpen,
+  isBossModeOpen,
+  setIsBossModeOpen,
   userStateReference,
   globalStateReference,
+  zap,
 }) => {
   return (
     <>
       <Modal
         centered
-        show={isChatFrameOpen}
+        show={isBossModeOpen}
         style={{ backgroundColor: "black" }}
         fullscreen
       >
@@ -21,14 +22,10 @@ export const ChatFrame = ({
           <Modal.Title>rox</Modal.Title>
         </Modal.Header>
         <Modal.Body style={{ backgroundColor: "black", color: "white" }}>
-          <iframe
-            src="https://chat.openai.com/g/g-09h5uQiFC-ms-roxana"
-            title="Rox"
-            style={{ border: "1px solid red", width: "100%", height: "100%" }}
-          ></iframe>
+          hello world
         </Modal.Body>
-        <Modal.Footer>
-          <Button variant="dark" onClick={() => setIsChatFrameOpen(false)}>
+        <Modal.Footer style={{ backgroundColor: "black" }}>
+          <Button variant="dark" onClick={() => setIsBossModeOpen(false)}>
             Back to app
           </Button>
         </Modal.Footer>

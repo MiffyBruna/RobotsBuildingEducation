@@ -1,11 +1,19 @@
 import { Button } from "react-bootstrap";
 import { logEvent } from "firebase/analytics";
 import { analytics } from "../database/firebaseResources";
+import styled, { keyframes } from "styled-components";
 import { ui } from "../common/uiSchema";
 import ChatGPT from "../ChatGPT/ChatGPT";
 
 import { WalletAuth } from "../WalletAuth";
-import { japaneseThemePalette, textBlock } from "../styles/lazyStyles";
+import {
+  FadeInComponent,
+  PanLeftComponent,
+  PanRightComponent,
+  RiseUpAnimation,
+  japaneseThemePalette,
+  textBlock,
+} from "../styles/lazyStyles";
 
 // Styles
 const whiteTextColor = { color: "white" };
@@ -53,11 +61,13 @@ export const Passcode = ({ handleZeroKnowledgePassword, patreonObject }) => {
       </div>
       <br /> */}
       {/* <br /> */}
-      <h2>Enter Passcode</h2>
-      <input
-        onChange={(event) => handleZeroKnowledgePassword(event, false, false)}
-        type="password"
-      />
+      <PanLeftComponent>
+        <h2>Enter Passcode</h2>
+        <input
+          onChange={(event) => handleZeroKnowledgePassword(event, false, false)}
+          type="password"
+        />
+      </PanLeftComponent>
       <br />
       <br />
       <div
@@ -68,47 +78,58 @@ export const Passcode = ({ handleZeroKnowledgePassword, patreonObject }) => {
           justifyContent: "center",
         }}
       >
-        <a
-          onClick={logPromotionEvent}
-          target={"_blank"}
-          href="https://www.patreon.com/posts/syllabus-getting-86153437?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=postshare_creator&utm_content=join_link"
-          style={whiteTextColor}
-        >
-          <Button variant="dark" style={buttonStyle}>
-            &nbsp; Get Passcode
-          </Button>{" "}
-        </a>
+        <PanRightComponent>
+          <a
+            onClick={logPromotionEvent}
+            target={"_blank"}
+            href="https://www.patreon.com/posts/syllabus-getting-86153437?utm_medium=clipboard_copy&utm_source=copyLink&utm_campaign=postshare_creator&utm_content=join_link"
+            style={whiteTextColor}
+          >
+            <Button variant="dark" style={buttonStyle}>
+              &nbsp; Get Passcode
+            </Button>{" "}
+          </a>
+        </PanRightComponent>
         <br />
-        &nbsp; &nbsp;or &nbsp; &nbsp;
+        <FadeInComponent>&nbsp; &nbsp;or &nbsp; &nbsp;</FadeInComponent>
         <br />
         <br />
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-          }}
-        >
-          <WalletAuth
-            handleZeroKnowledgePassword={handleZeroKnowledgePassword}
-          />
-        </div>
+        <PanLeftComponent>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+            }}
+          >
+            <WalletAuth
+              handleZeroKnowledgePassword={handleZeroKnowledgePassword}
+            />
+          </div>
+        </PanLeftComponent>
       </div>
       <br />
       <br />
 
       <div>
-        <p
+        <RiseUpAnimation
           style={{
             ...textBlock(
               japaneseThemePalette.PowerPurple,
               0,
               12,
               "white",
-              "10px 10px 5px 0px rgba(0,0,0,0.75)"
+              "10px 10px 5px 0px rgba(0,0,0,0.75)",
+              32
             ),
             textAlign: "left",
+            borderTopLeftRadius: 50,
+            borderTopRightRadius: 50,
+            borderBottomRightRadius: 0,
+            borderBottomLeftRadius: 0,
+            margin: 0,
           }}
         >
+          <h3>Connecting with wallet</h3>
           Robots Building Education 4.0 is in an experimental phase. Most users
           that I target will not have the ability to log in until they
           understand how Bitcoin works more. It's my goal to reduce friction and
@@ -131,7 +152,7 @@ export const Passcode = ({ handleZeroKnowledgePassword, patreonObject }) => {
             href="https://robotsbuildingeducation.my.canva.site/access"
             target="_blank"
           >
-            🎨 How to login guide @ Canva
+            ⚡ Using Bitcoin's lightning network
           </a>
           <br />
           <br />
@@ -161,7 +182,7 @@ export const Passcode = ({ handleZeroKnowledgePassword, patreonObject }) => {
           >
             ♪ Watch the playlist for free @ Tiktok
           </a> */}
-        </p>
+        </RiseUpAnimation>
         {/* <p
           style={{
             ...textBlock(

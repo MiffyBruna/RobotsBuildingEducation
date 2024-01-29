@@ -37,6 +37,7 @@ import { ChatGptWrapper } from "./ChatGPT/ChatGptWrapper";
 import { ProofOfWorkWrapper } from "./ProofOfWork/ProofOfWorkWrapper";
 import { words } from "./common/words/words";
 import { InstallPWA } from "./InstallPWA";
+import { RiseUpAnimation } from "./styles/lazyStyles";
 
 logEvent(analytics, "page_view", {
   page_location: "https://learn-robotsbuildingeducation.firebaseapp.com/",
@@ -235,7 +236,18 @@ let App = ({ canInstallPwa }) => {
   }, []);
 
   if (typeof authStateReference.isSignedIn == "string") {
-    return <RoxanaLoadingAnimation />;
+    return (
+      <div
+        style={{
+          height: "100%",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <RoxanaLoadingAnimation />
+      </div>
+    );
   }
 
   const handleScheduler = async (scheduleEvent) => {

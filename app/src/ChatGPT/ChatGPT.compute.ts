@@ -31,7 +31,7 @@ export let computeResponseList = (patreonObject, promptType) => {
       {
         response: patreonObject?.prompts["patreon"]?.response,
         type: "patreon",
-        icon: "►✍️",
+        icon: "►",
       },
       {
         response: patreonObject?.prompts["inspire"]?.response,

@@ -2,6 +2,7 @@ import { logEvent } from "firebase/analytics";
 import { isEmpty } from "lodash";
 import { analytics } from "../../database/firebaseResources";
 import { RoxanaLoadingAnimation } from "../../common/uiSchema";
+import { RiseUpAnimation } from "../../styles/lazyStyles";
 
 // Function to handle the Patreon click event for analytics
 const handlePatreonClick = (moduleName) => {
@@ -87,7 +88,7 @@ export const Intro = ({
 
   // Render the main component
   return (
-    <div
+    <RiseUpAnimation
       style={{
         backgroundColor: loadingMessage ? "black" : "#2C2C2E",
         color: "white",
@@ -107,15 +108,15 @@ export const Intro = ({
           <RoxanaLoadingAnimation />
         ) : isResponseActive ? (
           <h2>
-            {promptSelection === "patreon" && "Discover ►✍️⚡🎨"}
-            {promptSelection === "guide" && "Guide 🧿📚🔮🗓🧪"}
-            {promptSelection === "shop" && "Shop 🛍️"}
-            {promptSelection === "practice" && "Practice 🥋"}
+            {promptSelection === "patreon" && "discover ►⚡🎨"}
+            {promptSelection === "guide" && "guide 🧿📚🔮🗓🧪"}
+            {promptSelection === "shop" && "shop 🛍️"}
+            {promptSelection === "practice" && "practice 🥋"}
           </h2>
         ) : (
           <RoxanaIntroText />
         )}
       </div>
-    </div>
+    </RiseUpAnimation>
   );
 };

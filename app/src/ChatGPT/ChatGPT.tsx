@@ -11,6 +11,11 @@ import {
   computeTotalImpactFromPrompt,
 } from "./ChatGPT.compute";
 import { Intro } from "./PromptCombiner9000/Intro";
+import {
+  FadeInComponent,
+  PanLeftComponent,
+  PanRightComponent,
+} from "../styles/lazyStyles";
 
 const logAnalyticsEvent = (item_list_id, item_id, item_name) => {
   logEvent(analytics, "select_item", {
@@ -131,20 +136,27 @@ const ChatGPT = ({
     <div
       onSubmit={handleSubmit}
       style={{ transition: "0.3s all ease-in-out", color: "white" }}
+      key={loadingMessage}
     >
-      <PromptMessage
-        promptMessage={promptMessage}
-        patreonObject={patreonObject}
-      />
+      <FadeInComponent>
+        <PromptMessage
+          promptMessage={promptMessage}
+          patreonObject={patreonObject}
+          chatGptResponseList={chatGptResponseList}
+          loadingMessage={loadingMessage}
+        />
+      </FadeInComponent>
       <br />
-      <Intro
-        shouldRenderIntro={shouldRenderIntro}
-        moduleName={moduleName}
-        patreonObject={patreonObject}
-        loadingMessage={loadingMessage}
-        isResponseActive={isResponseActive}
-        promptSelection={promptSelection}
-      />
+      <PanLeftComponent>
+        <Intro
+          shouldRenderIntro={shouldRenderIntro}
+          moduleName={moduleName}
+          patreonObject={patreonObject}
+          loadingMessage={loadingMessage}
+          isResponseActive={isResponseActive}
+          promptSelection={promptSelection}
+        />
+      </PanLeftComponent>
       {chatGptResponseList?.map((response, index) => (
         <PromptCombiner9000
           key={index}
@@ -158,8 +170,10 @@ const ChatGPT = ({
           globalStateReference={globalStateReference}
           handleZap={handleZap}
           zap={zap}
+          index={index}
         />
       ))}
+
       <Prompts
         loadingMessage={loadingMessage}
         patreonObject={patreonObject}

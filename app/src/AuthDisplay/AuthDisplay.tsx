@@ -6,6 +6,7 @@ import {
   uiConfig,
   analytics,
 } from "../database/firebaseResources";
+import { FadeInComponent } from "../styles/lazyStyles";
 
 // Define constants for styling
 const containerStyle = {
@@ -29,15 +30,17 @@ const handleOnClick = () => {
 // AuthDisplay Component
 export const AuthDisplay = () => {
   return (
-    <div style={containerStyle} onClick={handleOnClick}>
-      <br />
-      Access all features:
-      <AuthComponent
-        id="firebaseui-auth-container"
-        uiConfig={uiConfig}
-        firebaseAuth={auth}
-        style={authComponentStyle}
-      />
-    </div>
+    <FadeInComponent>
+      <div style={containerStyle} onClick={handleOnClick}>
+        <br />
+        Access all features:
+        <AuthComponent
+          id="firebaseui-auth-container"
+          uiConfig={uiConfig}
+          firebaseAuth={auth}
+          style={authComponentStyle}
+        />
+      </div>
+    </FadeInComponent>
   );
 };

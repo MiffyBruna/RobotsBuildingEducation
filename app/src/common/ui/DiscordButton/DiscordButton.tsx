@@ -58,7 +58,7 @@ export const DiscordButton = () => (
     >
       <img
         src="https://res.cloudinary.com/dtkeyccga/image/upload/v1704759921/Patreon_tiers_9_odravd.png"
-        style={{ borderRadius: 12 }}
+        style={{ borderRadius: 12, width: "100%" }}
       />
       {/* <Button variant="light">
         <img

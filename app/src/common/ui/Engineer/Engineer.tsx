@@ -17,6 +17,7 @@ import { CodeBlock } from "../Displays/CodeBlock/CodeBlock";
 import { CuteGradient } from "../Displays/CuteGradient/CuteGradient";
 import { Chat } from "../ChatBlock/ConversationGrader/Chat/Chat";
 import { RobotDialogue } from "../RobotDialogue/RobotDialogue";
+import { Typewriter } from "../Typewriter/Typewriter";
 
 export const Engineer = {
   "Coding Crash Course Version 3": {
@@ -43,6 +44,7 @@ export const Engineer = {
         // should we add impact to selecting a course? adding it to "welcome" would achieve this.
         welcome: {
           response: (
+            // <Typewriter speed={10}>
             <div>
               Dear Innovators &amp; Bright Minds 🌟,
               <br />

@@ -60,6 +60,8 @@ export const updateGlobalCounters = async (globalImpactDocRef, globalReserveDocR
       getDoc(globalReserveDocRef),
     ]);
   
+    globalStateReference.setGlobalLeaderName(globalImpactRes.data().discord);
+    globalStateReference.setGlobalLevelCounter(globalImpactRes.data().level);
     globalStateReference.setGlobalImpactCounter(globalImpactRes.data().total);
     globalStateReference.setGlobalScholarshipCounter(globalReserveRes.data().scholarships);
     globalStateReference.setGobalReserveObject(globalReserveRes.data());
@@ -131,3 +133,43 @@ export const updateImpact = async (
   } else {
   }
 };
+
+export const updateLevel = async (
+  level,
+  discordTag,
+  userStateReference,
+  globalStateReference,
+) => {
+
+  const {databaseUserDocument, userDocumentReference, setDatabaseUserDocument} = userStateReference;
+  const { globalImpactCounter,globalDocumentReference, setGlobalLevelCounter, setGlobalLeaderName} = globalStateReference;
+ 
+  if (!isEmpty(databaseUserDocument) || !isEmpty(userDocumentReference)) {
+
+
+    await updateDoc(userDocumentReference, {
+      level: level+1,
+    });
+
+
+    if(level+1 >= globalStateReference?.globalLevelCounter){
+      await updateDoc(globalDocumentReference, {
+        level: level+1,
+        discord: discordTag
+      });
+
+      setGlobalLevelCounter(level+1);
+      setGlobalLeaderName(discordTag)
+    }
+    
+
+    setDatabaseUserDocument((prevDoc) => ({
+      ...prevDoc,
+      level: level+1,
+    }));
+
+    // setGlobalImpactCounter((prevCounter) => prevCounter + impact);
+  } else {
+  }
+};
+
