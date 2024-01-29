@@ -48,6 +48,8 @@ export const useUserDocument = () => {
 export const useGlobalStates = () => {
   const [globalDocumentReference, setGlobalDocumentReference] = useState({});
   const [globalImpactCounter, setGlobalImpactCounter] = useState(0);
+  const [globalLevelCounter, setGlobalLevelCounter] = useState(0);
+  const [globalLeaderName, setGlobalLeaderName] = useState("RO.B.E");
   const [globalScholarshipCounter, setGlobalScholarshipCounter] = useState(0);
   const [globalReserveObject, setGobalReserveObject] = useState({});
 
@@ -60,6 +62,10 @@ export const useGlobalStates = () => {
     setGlobalScholarshipCounter,
     globalReserveObject,
     setGobalReserveObject,
+    globalLevelCounter,
+    setGlobalLevelCounter,
+    globalLeaderName,
+    setGlobalLeaderName,
   };
 
   return { globalStateReference };

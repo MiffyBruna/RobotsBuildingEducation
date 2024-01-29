@@ -7,7 +7,14 @@ import { logEvent } from "firebase/analytics";
 import { analytics } from "../../database/firebaseResources";
 import { DiscordButton } from "../../common/ui/DiscordButton/DiscordButton";
 
-import { japaneseThemePalette, textBlock } from "../../styles/lazyStyles";
+import {
+  FadeInComponent,
+  RiseDownAnimation,
+  RiseUpAnimation,
+  japaneseThemePalette,
+  textBlock,
+} from "../../styles/lazyStyles";
+import FAQSection from "./FAQs/FAQs";
 
 let data = {};
 export const LearnMore = ({ languageMode, canInstallPwa }) => {
@@ -28,22 +35,24 @@ export const LearnMore = ({ languageMode, canInstallPwa }) => {
       Install app
     </Button>      &nbsp; &nbsp; &nbsp; &nbsp;</>: null} */}
 
-      <Button
-        variant="dark"
-        style={{
-          color: "white",
-          textShadow: "0px 0px 4px black",
-        }}
-        onClick={() => {
-          logEvent(analytics, "select_content", {
-            content_type: "button",
-            item_id: "About",
-          });
-          setIsModalOpen(true);
-        }}
-      >
-        {languageMode.buttons["9"]}
-      </Button>
+      <FadeInComponent>
+        <Button
+          variant="dark"
+          style={{
+            color: "white",
+            textShadow: "0px 0px 4px black",
+          }}
+          onClick={() => {
+            logEvent(analytics, "select_content", {
+              content_type: "button",
+              item_id: "About",
+            });
+            setIsModalOpen(true);
+          }}
+        >
+          {languageMode.buttons["9"]}
+        </Button>
+      </FadeInComponent>
       {/* <Button
         variant="danger"
         onClick={() => {
@@ -79,8 +88,7 @@ export const LearnMore = ({ languageMode, canInstallPwa }) => {
             width: "100%",
           }}
         >
-          <DiscordButton />
-          <div
+          {/* <div
             style={{ maxWidth: 700, width: "100%", backgroundColor: "black" }}
           >
             <div style={{ maxWidth: "100%", width: 700 }}>
@@ -433,13 +441,11 @@ export const LearnMore = ({ languageMode, canInstallPwa }) => {
                 </p>
               </div>
             </div>
+
             <br />
             <br />
-            This FAQ list will grow over time. But for now, I hope this helps.
-            Have fun and hope to see you around! 😊
-            <br />
-            <br />
-            {/* <div style={{ maxWidth: "100%", width: 700 }}>
+            </div> */}
+          {/* <div style={{ maxWidth: "100%", width: 700 }}>
             <h1>Content</h1>
             <br />
             <br />
@@ -526,7 +532,14 @@ export const LearnMore = ({ languageMode, canInstallPwa }) => {
               </p>
             </div>
           </div> */}
-          </div>
+          <FAQSection />
+          <br />
+          <br />
+          This FAQ list will grow over time. But for now, I hope this helps.
+          Have fun and hope to see you around! 😊
+          <br />
+          <br />
+          <DiscordButton />
         </Modal.Body>
         <Modal.Footer style={{ backgroundColor: "black", color: "white" }}>
           <Button variant="dark" onClick={() => setIsModalOpen(false)}>

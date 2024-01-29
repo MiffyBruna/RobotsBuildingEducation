@@ -82,9 +82,9 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <RouterProvider router={router} />
 );
 
-if ("serviceWorker" in navigator) {
-  console.log("registering");
-  navigator.serviceWorker.register("service-worker.js");
+// if ("serviceWorker" in navigator) {
+//   console.log("registering");
+//   navigator.serviceWorker.register("service-worker.js");
 
-  console.log("navigator", navigator.serviceWorker);
-}
+//   console.log("navigator", navigator.serviceWorker);
+// }

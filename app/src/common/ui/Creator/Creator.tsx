@@ -558,7 +558,8 @@ export const Creator = {
             `Philosophy`
           )} without any answers?`,
           response: (
-            <ChatBlock type={"quiz"}>
+            // <ChatBlock type={"quiz"}>
+            <div>
               What does philosophy have to do with computer science?
               <br />
               <br />
@@ -591,7 +592,8 @@ export const Creator = {
               that promotes racial justice?
               <br />
               <br />
-            </ChatBlock>
+            </div>
+            // {/* </ChatBlock> */}
           ),
           spanish: ``,
           tooltip: ``,
@@ -1036,7 +1038,8 @@ export const Creator = {
             `Human-Computer Interaction`
           )} without any answers?`,
           response: (
-            <ChatBlock type={"quiz"}>
+            // <ChatBlock type={"quiz"}>
+            <div>
               Question 1
               <br />
               <br />
@@ -1073,7 +1076,8 @@ export const Creator = {
               How can the principles of human-computer interaction be adapted to
               accommodate the diverse ways in which different cultures express
               themselves digitally?
-            </ChatBlock>
+            </div>
+            // {/* </ChatBlock> */}
           ),
           spanish: ``,
           tooltip: ``,

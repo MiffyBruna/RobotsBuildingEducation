@@ -9,6 +9,7 @@ const videoStyle = {
   width: "100%",
   borderRadius: "30px",
   boxShadow: "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
+  // border: "1px solid green",
 };
 
 // Style object for the Markdown content
@@ -20,11 +21,12 @@ const markdownStyle = {
 const renderVideo = (patreonObject, isAutoPlay, videoRef) => (
   <>
     <video
-      poster="https://res.cloudinary.com/dtkeyccga/image/upload/v1696725598/Untitled_design_3_r5rq6o.png"
+      poster="https://res.cloudinary.com/dtkeyccga/image/upload/v1706481474/Untitled_Desktop_Wallpaper_qrpmgm.png"
       style={videoStyle}
       controls
       autoPlay={isAutoPlay}
       ref={videoRef}
+      playsInline
     >
       <source src={patreonObject.fileSource} type="video/mp4" />
       <source src={patreonObject.fileSource} type="video/mov" />

@@ -1,8 +1,13 @@
 import { useState, useEffect } from "react";
 import { LearnMore } from "./LearnMore/LearnMore";
 import robe_logo from "../common/media/images/robe_logo.png";
-import { prettyColorPalette } from "../styles/lazyStyles";
-import { Button, Form } from "react-bootstrap";
+import {
+  FadeInComponent,
+  RiseDownAnimation,
+  RiseUpAnimation,
+  prettyColorPalette,
+} from "../styles/lazyStyles";
+import { Button, Fade, Form } from "react-bootstrap";
 import { words } from "../common/words/words";
 import toast from "react-hot-toast";
 import {
@@ -10,6 +15,7 @@ import {
   Modal,
   launchModal,
 } from "@getalby/bitcoin-connect-react";
+import styled, { keyframes } from "styled-components";
 
 export const Header = ({
   languageMode,
@@ -53,7 +59,9 @@ export const Header = ({
   }, [isHolyGhostModeActive, languageMode]);
   return (
     <div style={{ color: prettyColorPalette.softYellowGlow }}>
-      <img width="175px" src={robe_logo} style={{ marginTop: "24px" }} />
+      <FadeInComponent>
+        <img width="175px" src={robe_logo} style={{ marginTop: "24px" }} />
+      </FadeInComponent>
       {/* <div
         style={{
           display: "flex",
@@ -100,15 +108,17 @@ export const Header = ({
       <LearnMore languageMode={languageMode} canInstallPwa={canInstallPwa} />
       {localStorage.getItem("patreonPasscode") ===
       import.meta.env.VITE_PATREON_PASSCODE ? (
-        <Button
-          variant={"dark"}
-          onClick={() => {
-            localStorage.clear();
-            handleZeroKnowledgePassword(null, true, false);
-          }}
-        >
-          Log out
-        </Button>
+        <FadeInComponent>
+          <Button
+            variant={"dark"}
+            onClick={() => {
+              localStorage.clear();
+              handleZeroKnowledgePassword(null, true, false);
+            }}
+          >
+            Log out
+          </Button>
+        </FadeInComponent>
       ) : null}
       <div
         style={{

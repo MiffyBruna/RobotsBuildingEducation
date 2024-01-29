@@ -1,13 +1,30 @@
 import { useState } from "react";
+import styled, { keyframes } from "styled-components";
 import { Button, Modal } from "react-bootstrap";
 import { isEmpty } from "lodash";
 import ReactJson from "react-json-view";
 import { logEvent } from "firebase/analytics";
 import { analytics } from "../../database/firebaseResources";
-import { StyledPromptButton } from "../../styles/lazyStyles";
+import { RiseUpAnimation, StyledPromptButton } from "../../styles/lazyStyles";
 import { computeTotalImpactFromPrompt } from "../ChatGPT.compute";
 import { useZap } from "../../App.hooks";
 
+const delayedAnimation = keyframes`
+from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+`;
+const AnimatedPrompt = styled.div`
+  animation: ${delayedAnimation} 0.5s ease-out;
+  animation-delay: ${(props) => props.index * 0.15}s; /* Delay based on index */
+  opacity: 0; /* Start with opacity 0 to make the animation visible */
+  animation-fill-mode: forwards; /* Keep the element visible after the animation */
+`;
 // Reusable Button Component
 const PromptButton = ({
   patreonObject,
@@ -20,6 +37,9 @@ const PromptButton = ({
   handleZap,
   zap,
 }) => {
+  console.log("action", action);
+  console.log("type", type);
+  let actionVar = action === "generate" ? "discover" : action;
   if (
     localStorage.getItem("patreonPasscode") ===
     import.meta.env.VITE_BITCOIN_PASSCODE
@@ -46,7 +66,7 @@ const PromptButton = ({
         }}
       >
         <a style={{ color: "white" }}>
-          {icon} &nbsp;{action || type}
+          {icon} &nbsp;{actionVar || type}
         </a>
       </StyledPromptButton>
     );
@@ -62,7 +82,7 @@ const PromptButton = ({
       }}
     >
       <a style={{ color: "white" }}>
-        {icon} &nbsp;{action || type}
+        {icon} &nbsp;{actionVar || type}
       </a>
     </StyledPromptButton>
   );
@@ -106,22 +126,24 @@ export const Prompts = ({
         flexDirection: "column",
       }}
     >
-      {promptTypes.map((type) => {
+      {promptTypes.map((type, index) => {
         const prompt = patreonObject.prompts[type];
         if (!prompt) return null;
         return (
-          <PromptButton
-            patreonObject={patreonObject}
-            key={type}
-            icon={prompt?.icon}
-            action={prompt?.action}
-            type={type}
-            loading={!!loadingMessage}
-            prompt={prompt}
-            onClick={(e) => !loadingMessage && handleSubmit(e, prompt, type)}
-            handleZap={handleZap}
-            zap={zap}
-          />
+          <AnimatedPrompt index={index}>
+            <PromptButton
+              patreonObject={patreonObject}
+              key={type}
+              icon={prompt?.icon}
+              action={prompt?.action}
+              type={type}
+              loading={!!loadingMessage}
+              prompt={prompt}
+              onClick={(e) => !loadingMessage && handleSubmit(e, prompt, type)}
+              handleZap={handleZap}
+              zap={zap}
+            />
+          </AnimatedPrompt>
         );
       })}
 

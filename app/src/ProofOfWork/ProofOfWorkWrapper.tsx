@@ -1,4 +1,5 @@
 import { auth } from "../database/firebaseResources";
+import { RiseDownAnimation, RiseUpAnimation } from "../styles/lazyStyles";
 import { ProofOfWork } from "./ProofOfWork";
 
 // Define the style for the container
@@ -57,7 +58,7 @@ export const ProofOfWorkWrapper = ({
   const { isDemo } = uiStateReference;
 
   return (
-    <div style={containerStyle}>
+    <RiseUpAnimation style={containerStyle}>
       <ProofOfWork
         userAuthObject={userAuthObject}
         displayName={auth?.currentUser?.displayName}
@@ -78,6 +79,6 @@ export const ProofOfWorkWrapper = ({
         handleZeroKnowledgePassword={handleZeroKnowledgePassword}
         zap={zap}
       />
-    </div>
+    </RiseUpAnimation>
   );
 };

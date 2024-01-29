@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ImpactWallet } from "./ImpactWallet/ImpactWallet";
+import { RiseUpAnimation } from "../styles/lazyStyles";
 
 export const ProofOfWork = ({
   globalScholarshipCounter,
@@ -31,6 +32,7 @@ export const ProofOfWork = ({
   const [isCofounderOpen, setIsCofounderOpen] = useState(false);
 
   const [isChatFrameOpen, setIsChatFrameOpen] = useState(false);
+  const [isBossModeOpen, setIsBossModeOpen] = useState(false);
 
   if (isDemo) {
     return null;
@@ -81,6 +83,8 @@ export const ProofOfWork = ({
         globalStateReference={globalStateReference}
         isChatFrameOpen={isChatFrameOpen}
         setIsChatFrameOpen={setIsChatFrameOpen}
+        isBossModeOpen={isBossModeOpen}
+        setIsBossModeOpen={setIsBossModeOpen}
         zap={zap}
       />
     </div>

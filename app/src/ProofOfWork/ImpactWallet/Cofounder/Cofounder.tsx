@@ -752,20 +752,35 @@ export const Cofounder = ({
                 <LiveError />
               </LiveProvider>
 
-              <Editor
-                value={cofounder}
-                // onValueChange={handleChange}
-                highlight={(input) => highlight(input, languages.js)}
-                padding={10}
+              <div
                 style={{
-                  fontFamily: '"Fira code", "Fira Mono", monospace',
-                  fontSize: 12,
+                  color: "#696969",
+                  backgroundColor: "#faf3e0",
                   width: "100%",
-                  // border: "1px solid black",
-                  borderRadius: 7,
+                  padding: 20,
+                  wordBreak: "break-word",
+                  display: "flex",
+                  flexDirection: "column",
+                  borderRadius: 15,
                 }}
-                disabled
-              />
+              >
+                <pre>
+                  <Editor
+                    value={cofounder}
+                    // onValueChange={handleChange}
+                    highlight={(input) => highlight(input, languages.js)}
+                    padding={10}
+                    style={{
+                      fontFamily: '"Fira code", "Fira Mono", monospace',
+                      fontSize: 12,
+                      width: "100%",
+                      // border: "1px solid black",
+                      borderRadius: 7,
+                    }}
+                    disabled
+                  />
+                </pre>
+              </div>
             </div>
           ) : null}
         </Modal.Body>

@@ -1,4 +1,5 @@
 import isEmpty from "lodash/isEmpty";
+import { RiseUpAnimation } from "../styles/lazyStyles";
 
 // Define styles
 const headerStyle = {
@@ -17,9 +18,11 @@ export const LectureHeader = ({ uiStateReference }) => {
   return (
     <>
       <br />
-      <h2 style={headerStyle}>
-        {uiStateReference.patreonObject?.header || ""}
-      </h2>
+      <RiseUpAnimation>
+        <h2 style={headerStyle}>
+          {uiStateReference.patreonObject?.header || ""}
+        </h2>
+      </RiseUpAnimation>
       <br />
     </>
   );

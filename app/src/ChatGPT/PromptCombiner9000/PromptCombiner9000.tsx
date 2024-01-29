@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { a11yDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
 import { isEmpty } from "lodash";
@@ -13,7 +13,24 @@ import { highlight, languages } from "prismjs/components/prism-core";
 import "prismjs/components/prism-clike";
 import "prismjs/components/prism-javascript";
 import "prismjs/themes/prism.css";
+import { PanLeftComponent, PanRightComponent } from "../../styles/lazyStyles";
 
+const delayedAnimation = keyframes`
+from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+`;
+const StyledAnimatedPromptCombiner = styled.div`
+  animation: ${delayedAnimation} 0.25s ease-out;
+  animation-delay: ${(props) => props.index * 0.2}s; /* Delay based on index */
+  opacity: 0; /* Start with opacity 0 to make the animation visible */
+  animation-fill-mode: forwards; /* Keep the element visible after the animation */
+`;
 const Wrapper = styled.div`
   text-align: left;
 `;
@@ -84,20 +101,35 @@ const renderContent = (
     case "demonstrate":
       if (patreonObject?.hasCode) {
         return (
-          <Editor
-            value={response}
-            // onValueChange={handleChange}
-            highlight={(input) => highlight(input, languages.js)}
-            padding={10}
+          <div
             style={{
-              fontFamily: '"Fira code", "Fira Mono", monospace',
-              fontSize: 12,
+              color: "#696969",
+              backgroundColor: "#faf3e0",
               width: "100%",
-              // border: "1px solid black",
-              borderRadius: 7,
+              padding: 20,
+              wordBreak: "break-word",
+              display: "flex",
+              flexDirection: "column",
+              borderRadius: 15,
             }}
-            disabled
-          />
+          >
+            <pre>
+              <Editor
+                value={response}
+                // onValueChange={handleChange}
+                highlight={(input) => highlight(input, languages.js)}
+                padding={10}
+                style={{
+                  fontFamily: '"Fira code", "Fira Mono", monospace',
+                  fontSize: 12,
+                  width: "100%",
+                  // border: "1px solid black",
+                  borderRadius: 7,
+                }}
+                disabled
+              />
+            </pre>
+          </div>
         );
       } else {
         return <div>{response}</div>;
@@ -120,6 +152,7 @@ export const PromptCombiner9000 = ({
   globalStateReference,
   handleZap,
   zap,
+  index,
 }) => {
   const [promptVisibility, setPromptVisibility] = useState("flex");
   if (isEmpty(patreonObject)) {
@@ -157,34 +190,38 @@ export const PromptCombiner9000 = ({
           //       : "1px solid white",
           // }}
         >
-          <StyledPromptHeaderButton variant="dark">
-            {type === "patreon" ? "generate" : type} {icon}
-          </StyledPromptHeaderButton>
+          <PanLeftComponent>
+            <StyledPromptHeaderButton variant="dark">
+              {type === "patreon" ? "discover" : type} {icon}
+            </StyledPromptHeaderButton>
+          </PanLeftComponent>
         </Heading>
       )}
 
-      <MessageContainer
-        loading={loadingMessage}
-        id={key + type}
-        style={{
-          display: promptVisibility,
-        }}
-      >
-        <FlexBox>
-          {loadingMessage.length < 1 &&
-            response &&
-            renderContent(
-              type,
-              response,
-              patreonObject,
-              handleScheduler,
-              userStateReference,
-              globalStateReference,
-              handleZap,
-              zap
-            )}
-        </FlexBox>
-      </MessageContainer>
+      <StyledAnimatedPromptCombiner index={index}>
+        <MessageContainer
+          loading={loadingMessage}
+          id={key + type}
+          style={{
+            display: promptVisibility,
+          }}
+        >
+          <FlexBox>
+            {loadingMessage.length < 1 &&
+              response &&
+              renderContent(
+                type,
+                response,
+                patreonObject,
+                handleScheduler,
+                userStateReference,
+                globalStateReference,
+                handleZap,
+                zap
+              )}
+          </FlexBox>
+        </MessageContainer>
+      </StyledAnimatedPromptCombiner>
     </Wrapper>
   );
 };

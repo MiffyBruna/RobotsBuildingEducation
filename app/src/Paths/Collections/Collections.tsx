@@ -1,3 +1,4 @@
+import styled, { keyframes } from "styled-components";
 import { ui } from "../../common/uiSchema";
 import {
   StyledCollectionContainer,
@@ -5,6 +6,22 @@ import {
 } from "../../styles/lazyStyles";
 import { Module } from "./Module/Module";
 
+const delayedAnimation = keyframes`
+from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+`;
+const StyledAnimatedModule = styled.div`
+  animation: ${delayedAnimation} 0.15s ease-out;
+  animation-delay: ${(props) => props.index * 0.06}s; /* Delay based on index */
+  opacity: 0; /* Start with opacity 0 to make the animation visible */
+  animation-fill-mode: forwards; /* Keep the element visible after the animation */
+`;
 export const Collections = ({
   handleModuleSelection,
   currentPath,
@@ -42,13 +59,15 @@ export const Collections = ({
             )}
           </h3> */}
           <StyledCollectionContainer>
-            {modules.map((module) => (
-              <Module
-                path={currentPath}
-                collection={collection}
-                module={module}
-                handleModuleSelection={handleModuleSelection}
-              />
+            {modules.map((module, index) => (
+              <StyledAnimatedModule index={index} key={module}>
+                <Module
+                  path={currentPath}
+                  collection={collection}
+                  module={module}
+                  handleModuleSelection={handleModuleSelection}
+                />
+              </StyledAnimatedModule>
             ))}
           </StyledCollectionContainer>
         </div>

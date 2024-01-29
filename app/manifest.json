@@ -1,0 +1,27 @@
+{
+	"name": "RO.₿.E",
+	"short_name": "RO.₿.E",
+	"start_url": ".",
+	"display": "standalone",
+	"theme_color": "#000000",
+	"background_color": "#ffffff",
+	"description": "PWA install handler package for RO.₿.E.",
+	"icons": [
+		{
+			"src": "https://res.cloudinary.com/dtkeyccga/image/upload/v1705709776/roxanaKind-e340c4ef_ebf7nn.png",
+			"sizes": "192x192",
+			"type": "image/png",
+			"purpose": "any"
+		},{
+			"src": "https://res.cloudinary.com/dtkeyccga/image/upload/v1705709776/roxanaKind-e340c4ef_ebf7nn.png",
+			"sizes": "256x256",
+			"type": "image/png",
+			"purpose": "any"
+		},{
+			"src": "https://res.cloudinary.com/dtkeyccga/image/upload/v1705709776/roxanaKind-e340c4ef_ebf7nn.png",
+			"sizes": "512x512",
+			"type": "image/png",
+			"purpose": "any"
+		}
+	]
+}

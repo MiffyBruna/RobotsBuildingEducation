@@ -1,7 +1,70 @@
 import styled, { keyframes } from "styled-components";
 import { isEmpty } from "lodash";
 import { Link } from "react-router-dom";
+const riseAnimation = keyframes`
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+`;
 
+export const RiseUpAnimation = styled.div`
+  animation: ${riseAnimation} 0.38s ease-in-out;
+`;
+
+const riseDownAnimation = keyframes`
+  from {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+`;
+export const RiseDownAnimation = styled.div`
+  animation: ${riseDownAnimation} 0.38s ease-in-out;
+`;
+
+const fadeInAnimation = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
+export const FadeInComponent = styled.div`
+  animation: ${fadeInAnimation} 0.45s ease-in;
+`;
+const panRight = keyframes`
+  from {
+    transform: translateX(60px);
+  }
+  to {
+    transform: translateX(0); // Adjust as needed
+  }
+`;
+
+const panLeft = keyframes`
+  from {
+    transform: translateX(-60px);
+  }
+  to {
+    transform: translateX(0); // Adjust as needed
+  }
+`;
+export const PanRightComponent = styled.div`
+  animation: ${panRight} 0.25s ease;
+`;
+
+export const PanLeftComponent = styled.div`
+  animation: ${panLeft} 0.25s ease;
+`;
 export const sineWave = keyframes`
 0%, 100% {
   border-radius: 25% 75% 25% 75%;
@@ -398,12 +461,13 @@ export let textBlock = (
   shadowSize = 4,
   borderRadius = 4,
   color = "white",
-  boxShadow = "0px 0px 0px 0px rgba(0,0,0, 1);"
+  boxShadow = "0px 0px 0px 0px rgba(0,0,0, 1);",
+  padding = 16
 ) => {
   return {
     backgroundColor: backgroundColor,
     borderRadius: borderRadius,
-    padding: 16,
+    padding: padding,
     textShadow: `${shadowSize}px ${shadowSize}px ${shadowSize || 10}px black`,
     color: color,
     boxShadow: boxShadow,

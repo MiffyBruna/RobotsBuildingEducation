@@ -27,6 +27,7 @@ import { BitcoinManager } from "./BitcoinManager/BitcoinManager";
 import { getAuth, signOut } from "firebase/auth";
 import { ChatFrame } from "./ChatFrame/ChatFrame";
 import { Portfolio } from "./Portfolio/Portfolio";
+import { BossMode } from "./BossMode/BossMode";
 
 const renderTranscriptAwards = (profileData) => {
   if (isEmpty(profileData)) {
@@ -136,6 +137,8 @@ export const ImpactWallet = ({
   userStateReference,
   globalStateReference,
   zap,
+  isBossModeOpen,
+  setIsBossModeOpen,
 }) => {
   let [databaseUserDocumentCopy, setDatabaseUserDocumentCopy] = useState({});
 
@@ -175,6 +178,23 @@ export const ImpactWallet = ({
             onClick={() => {
               logEvent(analytics, "select_content", {
                 content_type: "button",
+                item_id: "Boss Mode",
+              });
+              setIsBossModeOpen(true);
+            }}
+            variant="secondary"
+            // disabled
+          >
+            💎
+          </Button>
+        ) : null}
+        &nbsp; &nbsp;
+        {!isDemo ? (
+          <Button
+            style={{ textShadow: "2px 2px 12px black" }}
+            onClick={() => {
+              logEvent(analytics, "select_content", {
+                content_type: "button",
                 item_id: "Cofounder",
               });
               setIsCofounderOpen(true);
@@ -186,28 +206,32 @@ export const ImpactWallet = ({
         ) : null}
         &nbsp; &nbsp;
         {!isDemo ? (
-          <Button
-            style={{ textShadow: "2px 2px 12px black" }}
-            onClick={() => {
-              logEvent(analytics, "select_content", {
-                content_type: "button",
-                item_id: "Scheduler",
-              });
-              // setIsChatFrameOpen(true);
-            }}
-            variant="secondary"
+          <a
+            href="https://chat.openai.com/g/g-09h5uQiFC-ms-roxana"
+            target="_blank"
           >
-            <a
-              href="https://chat.openai.com/g/g-09h5uQiFC-ms-roxana"
-              target="_blank"
+            <Button
+              style={{ textShadow: "2px 2px 12px black" }}
+              onClick={() => {
+                logEvent(analytics, "select_content", {
+                  content_type: "button",
+                  item_id: "Scheduler",
+                });
+                // setIsChatFrameOpen(true);
+              }}
+              variant="secondary"
             >
               <img
                 src={roxanaChat}
                 width="16"
-                style={{ borderRadius: "50%", boxShadow: "2px 2px 12px black" }}
+                style={{
+                  borderRadius: "50%",
+                  boxShadow: "2px 2px 12px black",
+                  marginBottom: 1,
+                }}
               />
-            </a>
-          </Button>
+            </Button>
+          </a>
         ) : null}
         &nbsp; &nbsp;
         {!isDemo ? (
@@ -302,13 +326,11 @@ export const ImpactWallet = ({
               width: "100%",
             }}
           >
-            <div>
-              {/* <AlbyButton onConnect={() => alert("Connected!")}></AlbyButton> */}
-              <BitcoinManager
+            {/* <AlbyButton onConnect={() => alert("Connected!")}></AlbyButton> */}
+            {/* <BitcoinManager
                 handleZeroKnowledgePassword={handleZeroKnowledgePassword}
-              />
-            </div>
-            <br />
+              /> */}
+
             <h4>Your Decentralized Transcript</h4>
             <div
               style={{
@@ -463,6 +485,14 @@ export const ImpactWallet = ({
       <Cofounder
         isCofounderOpen={isCofounderOpen}
         setIsCofounderOpen={setIsCofounderOpen}
+        userStateReference={userStateReference}
+        globalStateReference={globalStateReference}
+        zap={zap}
+      />
+
+      <BossMode
+        isBossModeOpen={isBossModeOpen}
+        setIsBossModeOpen={setIsBossModeOpen}
         userStateReference={userStateReference}
         globalStateReference={globalStateReference}
         zap={zap}

@@ -21,7 +21,12 @@ const mainContainerStyle = {
   justifyContent: "flex-end",
 };
 
-export const PromptMessage = ({ promptMessage, patreonObject }) => {
+export const PromptMessage = ({
+  promptMessage,
+  patreonObject,
+  chatGptResponseList,
+  loadingMessage,
+}) => {
   // Check if patreonObject exists
   if (isEmpty(patreonObject)) return null;
 
@@ -29,6 +34,10 @@ export const PromptMessage = ({ promptMessage, patreonObject }) => {
   let displayMessage = promptMessage;
   if (!promptMessage) {
     displayMessage = "let's learn!";
+  }
+
+  if (chatGptResponseList?.length > 0 && !loadingMessage) {
+    displayMessage = "thank you rox!";
   }
 
   return (
