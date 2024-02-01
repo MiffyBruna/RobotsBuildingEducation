@@ -11,13 +11,14 @@ import backendScaling from "../../media/images/backendScaling.png";
 import prisonersDilemma from "../../media/images/prisonersDilemma.png";
 import grokking from "../../media/images/grokking.png";
 
-import { japaneseThemePalette, textBlock } from "../../../styles/lazyStyles";
-import { ChatBlock } from "../ChatBlock/ChatBlock";
+import { ChatBlock } from "../Displays/ChatBlock/ChatBlock";
 import { CodeBlock } from "../Displays/CodeBlock/CodeBlock";
 import { CuteGradient } from "../Displays/CuteGradient/CuteGradient";
-import { Chat } from "../ChatBlock/ConversationGrader/Chat/Chat";
-import { RobotDialogue } from "../RobotDialogue/RobotDialogue";
-import { Typewriter } from "../Typewriter/Typewriter";
+import { Chat } from "../Displays/ChatBlock/ConversationGrader/Chat/Chat";
+import { RobotDialogue } from "../Displays/RobotDialogue/RobotDialogue";
+import { Typewriter } from "../Displays/Typewriter/Typewriter";
+import { RevealButton } from "../Displays/RevealButton/RevealButton";
+import { japaneseThemePalette, textBlock } from "../../../styles/lazyStyles";
 
 export const Engineer = {
   "Coding Crash Course Version 3": {
@@ -39,7 +40,7 @@ export const Engineer = {
       button: `Learning Mindset & Perspective`, // may not need - `name`
       header: `Learning Mindset & Perspective`,
       fileSource:
-        "https://res.cloudinary.com/sheilfer/video/upload/v1693469705/ROBE_INTRO_COMPRESSED_t3r8vt_qxmuvn.mov", // may not need
+        "https://res.cloudinary.com/sheilfer/video/upload/v1706616470/a42be5b4391e4f0fbe49401a972cac1b_1_e5ri2s.mov", // may not need
       prompts: {
         // should we add impact to selecting a course? adding it to "welcome" would achieve this.
         welcome: {
@@ -82,6 +83,25 @@ export const Engineer = {
           response: `null`,
           spanish: ``,
           tooltip: ``,
+          summaryContent: (
+            <div>
+              Hola, learners! Feeling a bit nervous about diving into coding and
+              business building? No worries, that's perfectly normal. It's just
+              a sign you're ready to grow and challenge yourself. Forget the
+              myths – programming isn't just for math wizards. It's for anyone
+              willing to learn and create. Remember, computer science isn't just
+              about code; it's about solving real-world problems in any field,
+              from art to climate tech. So, take a deep breath, and let's start
+              this journey of learning and impact together. You're more capable
+              than you think. Vamos!🚀💻🌟
+              <br />
+              <br />
+              Would you like to know more about breaking into coding, the
+              versatility of computer science in different fields, or how to
+              stay motivated while learning new tech skills? Let's explore!
+              🤔🌐💡"
+            </div>
+          ),
         },
         inspire: {
           completed: false,
@@ -137,7 +157,7 @@ export const Engineer = {
           response: (
             <div>
               <h2>
-                Let's delve into the dynamic relationship between computer
+                Let's read into the dynamic relationship between computer
                 science, its interdisciplinary applications, and human-computer
                 interaction (HCI).
               </h2>
@@ -540,23 +560,8 @@ exports.app = functions.https.onRequest(app);
                   you on the subject.
                 </div>
                 <br />
-                <div
-                  style={{
-                    ...textBlock(
-                      japaneseThemePalette.ProsperityEmeraldGreen,
-                      0,
-                      12,
-                      "white",
-                      "0px 0px 5px 0px rgba(0,0,0,0.75)"
-                    ),
-                    width: "fit-content",
-                    marginTop: 4,
-                  }}
-                >
-                  Shopify Affiliate Commission: 7%
-                </div>
                 <br />
-                <a href="https://collabs.shop/hwzghy" target="_blank">
+                <div>
                   <img
                     style={{
                       // border: "1px solid cyan",
@@ -567,7 +572,7 @@ exports.app = functions.https.onRequest(app);
                     }}
                     src={ctci}
                   />
-                </a>
+                </div>
                 <br />
                 <br />
                 <br />
@@ -586,23 +591,9 @@ exports.app = functions.https.onRequest(app);
                   you can challenge yourself and fail faster. Some of the best
                   learning you'll experience is when the tasks are too hard.
                 </div>
-                <div
-                  style={{
-                    ...textBlock(
-                      japaneseThemePalette.ProsperityEmeraldGreen,
-                      0,
-                      12,
-                      "white",
-                      "0px 0px 5px 0px rgba(0,0,0,0.75)"
-                    ),
-                    width: "fit-content",
-                    marginTop: 4,
-                  }}
-                >
-                  Shopify Affiliate Commission: 7%
-                </div>
+
                 <br />
-                <a href="https://collabs.shop/hwzghy" target="_blank">
+                <div>
                   <img
                     style={{
                       // border: "1px solid cyan",
@@ -613,7 +604,7 @@ exports.app = functions.https.onRequest(app);
                     }}
                     src={grokking}
                   />
-                </a>
+                </div>
               </div>
             </div>
           ),
@@ -679,6 +670,29 @@ exports.app = functions.https.onRequest(app);
           response: `null`,
           spanish: ``,
           tooltip: ``,
+          summaryContent: (
+            <div>
+              In this engaging coding tutorial, we're embracing the challenge of
+              learning to code, starting with the more complex topics like
+              creating objects with code. We explore how coding models the
+              digital world through data and logic, using classes and functions
+              to define and manage information. A hands-on approach with
+              examples like coding a Robot class or a Tweet component helps
+              demystify coding concepts. Emphasis is placed on understanding
+              coding as an organization of information, not just mathematics,
+              and exploring both synchronous and asynchronous functions. We also
+              learn looping with practical examples, highlighting the importance
+              of documentation in programming. The lesson reinforces the idea
+              that coding is about converting data into logic, a fundamental
+              truth of computer science. 🚀💻🧠
+              <br />
+              <br />
+              Ready to dive deeper into the world of object-oriented
+              programming, explore the intricacies of function types, or get
+              hands-on with coding exercises? Let's continue this exciting
+              journey! 🌐🔍👨‍💻
+            </div>
+          ),
         },
         inspire: {
           completed: false,
@@ -1274,64 +1288,50 @@ print(rihanna.perform("at the Grammy Awards"))
           spanish: ``,
           tooltip: ``,
         },
-        shop: {
-          completed: false,
-          impact: 100,
-          action: `shop`,
-          icon: `🛍️`,
-          request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
-          response: (
-            <div>
-              <div
-                style={{
-                  ...textBlock(
-                    japaneseThemePalette.PowerPurple,
-                    0,
-                    12,
-                    "white",
-                    "0px 0px 5px 0px rgba(0,0,0,0.75)"
-                  ),
-                }}
-              >
-                Automate the Boring Stuff is a successful beginner's guidebook
-                to have when learning common skills like Python. These are
-                skills you can reference when working with data throughout the
-                beginning stages of your career.
-              </div>
-              <div
-                style={{
-                  ...textBlock(
-                    japaneseThemePalette.ProsperityEmeraldGreen,
-                    0,
-                    12,
-                    "white",
-                    "0px 0px 5px 0px rgba(0,0,0,0.75)"
-                  ),
-                  width: "fit-content",
-                  marginTop: 4,
-                }}
-              >
-                Shopify Affiliate Commission: 7%
-              </div>
-              <br />
+        // shop: {
+        //   completed: false,
+        //   impact: 100,
+        //   action: `shop`,
+        //   icon: `🛍️`,
+        //   request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
+        //   response: (
+        //     <div>
+        //       <div
+        //         style={{
+        //           ...textBlock(
+        //             japaneseThemePalette.PowerPurple,
+        //             0,
+        //             12,
+        //             "white",
+        //             "0px 0px 5px 0px rgba(0,0,0,0.75)"
+        //           ),
+        //         }}
+        //       >
+        //         Automate the Boring Stuff is a successful beginner's guidebook
+        //         to have when learning common skills like Python. These are
+        //         skills you can reference when working with data throughout the
+        //         beginning stages of your career.
+        //       </div>
 
-              <a href="https://collabs.shop/pkyf0g" target="_blank">
-                <img
-                  style={{
-                    // border: "1px solid cyan",
-                    borderRadius: 12,
-                    // boxShadow: "1px 1px 3px 2px rgba(0,255,140,1)",
-                    boxShadow:
-                      "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
-                  }}
-                  src={automateTheBoring}
-                />
-              </a>
-            </div>
-          ),
-          spanish: ``,
-          tooltip: ``,
-        },
+        //       <br />
+
+        //       <div href="https://collabs.shop/pkyf0g" target="_blank">
+        //         <img
+        //           style={{
+        //             // border: "1px solid cyan",
+        //             borderRadius: 12,
+        //             // boxShadow: "1px 1px 3px 2px rgba(0,255,140,1)",
+        //             boxShadow:
+        //               "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
+        //           }}
+        //           src={automateTheBoring}
+        //         />
+        //       </div>
+        //     </div>
+        //   ),
+        //   spanish: ``,
+        //   tooltip: ``,
+        // },
         practice: {
           completed: false,
           impact: 750,
@@ -1742,6 +1742,29 @@ throw new Error(
           response: `null`,
           spanish: ``,
           tooltip: ``,
+          summaryContent: (
+            <div>
+              In Lesson 2, we discover frontend development using React,
+              focusing on event-driven programming. We review concepts like
+              components, state, and hooks. A Tweet component example
+              illustrates React's approach to building user interfaces. We
+              explore component properties, states, and the logic behind
+              updates, emphasizing the data flow in React. The lesson
+              underscores the value of learning React for modern web
+              development, providing insights into how programming languages
+              evolve and their impact on software development. By breaking down
+              the components of a React application, the lesson aims to
+              introduce frontend development and empower learners to experiment
+              and understand the underlying mechanics of web applications.
+              🚀💻🖥️
+              <br />
+              <br />
+              Interested in further exploring the intricacies of React
+              components, understanding the modern web development landscape, or
+              diving into the practical aspects of creating user interfaces?
+              Let's dive deeper! 🌐🔍👨‍💻
+            </div>
+          ),
         },
         inspire: {
           completed: false,
@@ -2196,65 +2219,51 @@ export default LoginForm;
           spanish: ``,
           tooltip: ``,
         },
-        shop: {
-          completed: false,
-          impact: 100,
-          action: `shop`,
-          icon: `🛍️`,
-          request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
-          response: (
-            <div>
-              <div
-                style={{
-                  ...textBlock(
-                    japaneseThemePalette.PowerPurple,
-                    0,
-                    12,
-                    "white",
-                    "0px 0px 5px 0px rgba(0,0,0,0.75)"
-                  ),
-                }}
-              >
-                This book by Duckett is a frontend classic that provides visual
-                illustrations of HTML and CSS concepts. Despite the modern
-                approach to explaining frontend here, it's still important to
-                know the fundamentals of the software is responsible for the
-                look and feel of modern applications.
-              </div>
-              <div
-                style={{
-                  ...textBlock(
-                    japaneseThemePalette.ProsperityEmeraldGreen,
-                    0,
-                    12,
-                    "white",
-                    "0px 0px 5px 0px rgba(0,0,0,0.75)"
-                  ),
-                  width: "fit-content",
-                  marginTop: 4,
-                }}
-              >
-                Shopify Affiliate Commission: 7%
-              </div>
-              <br />
+        // shop: {
+        //   completed: false,
+        //   impact: 100,
+        //   action: `shop`,
+        //   icon: `🛍️`,
+        //   request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
+        //   response: (
+        //     <div>
+        //       <div
+        //         style={{
+        //           ...textBlock(
+        //             japaneseThemePalette.PowerPurple,
+        //             0,
+        //             12,
+        //             "white",
+        //             "0px 0px 5px 0px rgba(0,0,0,0.75)"
+        //           ),
+        //         }}
+        //       >
+        //         This book by Duckett is a frontend classic that provides visual
+        //         illustrations of HTML and CSS concepts. Despite the modern
+        //         approach to explaining frontend here, it's still important to
+        //         know the fundamentals of the software is responsible for the
+        //         look and feel of modern applications.
+        //       </div>
 
-              <a href="https://collabs.shop/kkwfvu" target="_blank">
-                <img
-                  style={{
-                    // border: "1px solid cyan",
-                    borderRadius: 12,
-                    // boxShadow: "1px 1px 3px 2px rgba(0,255,140,1)",
-                    boxShadow:
-                      "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
-                  }}
-                  src={duckett}
-                />
-              </a>
-            </div>
-          ),
-          spanish: ``,
-          tooltip: ``,
-        },
+        //       <br />
+
+        //       <div href="https://collabs.shop/kkwfvu" target="_blank">
+        //         <img
+        //           style={{
+        //             // border: "1px solid cyan",
+        //             borderRadius: 12,
+        //             // boxShadow: "1px 1px 3px 2px rgba(0,255,140,1)",
+        //             boxShadow:
+        //               "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
+        //           }}
+        //           src={duckett}
+        //         />
+        //       </div>
+        //     </div>
+        //   ),
+        //   spanish: ``,
+        //   tooltip: ``,
+        // },
         practice: {
           completed: false,
           impact: 750,
@@ -2557,6 +2566,26 @@ return <div style={gradientStyle}>
           response: `null`,
           spanish: ``,
           tooltip: ``,
+          summaryContent: (
+            <div>
+              This lesson introduces backend software engineering, starting with
+              operating systems, which are the heart of computing. We explore
+              how operating systems function like a restaurant kitchen, managing
+              various tasks to deliver a final product. The lesson then dives
+              into the command line interface, a critical tool for backend
+              development. We look at databases, focusing on data organization
+              and management. The creation of user experiences is highlighted,
+              showing how user accounts facilitate interactions within software.
+              The lesson aims to make backend concepts more approachable,
+              encouraging exploration and creativity in software development.
+              🚀💡👩‍💻
+              <br />
+              <br />
+              Eager to learn more about operating systems, database management,
+              or the intricacies of user experience in software development?
+              Let's explore these areas further! 🌐🔍👨‍💻
+            </div>
+          ),
         },
         inspire: {
           completed: false,
@@ -3047,64 +3076,50 @@ if __name__ == '__main__':
           spanish: ``,
           tooltip: ``,
         },
-        shop: {
-          completed: false,
-          impact: 100,
-          action: `shop`,
-          icon: `🛍️`,
-          request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
-          response: (
-            <div>
-              <div
-                style={{
-                  ...textBlock(
-                    japaneseThemePalette.PowerPurple,
-                    0,
-                    12,
-                    "white",
-                    "0px 0px 5px 0px rgba(0,0,0,0.75)"
-                  ),
-                }}
-              >
-                This book will introduce you to some industry level standards to
-                building large scale technology. Some of the problems
-                encountered here may not be witnessed for years into your
-                career.
-              </div>
-              <div
-                style={{
-                  ...textBlock(
-                    japaneseThemePalette.ProsperityEmeraldGreen,
-                    0,
-                    12,
-                    "white",
-                    "0px 0px 5px 0px rgba(0,0,0,0.75)"
-                  ),
-                  width: "fit-content",
-                  marginTop: 4,
-                }}
-              >
-                Shopify Affiliate Commission: 7%
-              </div>
-              <br />
+        // shop: {
+        //   completed: false,
+        //   impact: 100,
+        //   action: `shop`,
+        //   icon: `🛍️`,
+        //   request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
+        //   response: (
+        //     <div>
+        //       <div
+        //         style={{
+        //           ...textBlock(
+        //             japaneseThemePalette.PowerPurple,
+        //             0,
+        //             12,
+        //             "white",
+        //             "0px 0px 5px 0px rgba(0,0,0,0.75)"
+        //           ),
+        //         }}
+        //       >
+        //         This book will introduce you to some industry level standards to
+        //         building large scale technology. Some of the problems
+        //         encountered here may not be witnessed for years into your
+        //         career.
+        //       </div>
 
-              <a href="https://collabs.shop/iu3ion" target="_blank">
-                <img
-                  style={{
-                    // border: "1px solid cyan",
-                    borderRadius: 12,
-                    // boxShadow: "1px 1px 3px 2px rgba(0,255,140,1)",
-                    boxShadow:
-                      "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
-                  }}
-                  src={backendScaling}
-                />
-              </a>
-            </div>
-          ),
-          spanish: ``,
-          tooltip: ``,
-        },
+        //       <br />
+
+        //       <div href="https://collabs.shop/iu3ion" target="_blank">
+        //         <img
+        //           style={{
+        //             // border: "1px solid cyan",
+        //             borderRadius: 12,
+        //             // boxShadow: "1px 1px 3px 2px rgba(0,255,140,1)",
+        //             boxShadow:
+        //               "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
+        //           }}
+        //           src={backendScaling}
+        //         />
+        //       </div>
+        //     </div>
+        //   ),
+        //   spanish: ``,
+        //   tooltip: ``,
+        // },
         practice: {
           completed: false,
           impact: 750,
@@ -3481,6 +3496,25 @@ exports.app = functions
           response: `null`,
           spanish: ``,
           tooltip: ``,
+          summaryContent: (
+            <div>
+              In this session, we've taken a big leap in our coding journey! We
+              started by setting up our development environment with tools like
+              VSCode and Node.js. Next, we dived into creating a project
+              directory and getting our React project up and running. But it's
+              not just about the frontend; we also explored setting up our
+              database with Firebase, giving us the power to manage user data
+              and authenticate users seamlessly. The lesson is like building a
+              bridge between your creative ideas and the real digital world.
+              We're not just learning to code; we're learning to bring our
+              visions to life! 🌉💻🚀
+              <br />
+              <br />
+              Ready to explore more about user authentication, database
+              management, or expand your project with additional features? Let's
+              keep this momentum going! 🌟👩‍💻🔍
+            </div>
+          ),
         },
         inspire: {
           completed: false,
@@ -4054,113 +4088,85 @@ app.listen(8000, () => console.log('Server running on port 8000'));
           spanish: ``,
           tooltip: ``,
         },
-        shop: {
-          completed: false,
-          impact: 100,
-          action: `shop`,
-          icon: `🛍️`,
-          request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
-          response: (
-            <div>
-              <div>
-                <div
-                  style={{
-                    ...textBlock(
-                      japaneseThemePalette.PowerPurple,
-                      0,
-                      12,
-                      "white",
-                      "0px 0px 5px 0px rgba(0,0,0,0.75)"
-                    ),
-                  }}
-                >
-                  Power law finance is a concept that will help you understand
-                  how the startup industry thinks and works. The internet is a
-                  powerful tool that can take businesses to exponential heights,
-                  and this observes how these platforms are successfully built.
-                </div>
-                <div
-                  style={{
-                    ...textBlock(
-                      japaneseThemePalette.ProsperityEmeraldGreen,
-                      0,
-                      12,
-                      "white",
-                      "0px 0px 5px 0px rgba(0,0,0,0.75)"
-                    ),
-                    width: "fit-content",
-                    marginTop: 4,
-                  }}
-                >
-                  Shopify Affiliate Commission: 7%
-                </div>
-                <br />
+        // shop: {
+        //   completed: false,
+        //   impact: 100,
+        //   action: `shop`,
+        //   icon: `🛍️`,
+        //   request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
+        //   response: (
+        //     <div>
+        //       <div>
+        //         <div
+        //           style={{
+        //             ...textBlock(
+        //               japaneseThemePalette.PowerPurple,
+        //               0,
+        //               12,
+        //               "white",
+        //               "0px 0px 5px 0px rgba(0,0,0,0.75)"
+        //             ),
+        //           }}
+        //         >
+        //           Power law finance is a concept that will help you understand
+        //           how the startup industry thinks and works. The internet is a
+        //           powerful tool that can take businesses to exponential heights,
+        //           and this observes how these platforms are successfully built.
+        //         </div>
 
-                <a href="https://collabs.shop/2kdqmy" target="_blank">
-                  <img
-                    style={{
-                      // border: "1px solid cyan",
-                      borderRadius: 12,
-                      // boxShadow: "1px 1px 3px 2px rgba(0,255,140,1)",
-                      boxShadow:
-                        "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
-                    }}
-                    src={powerLawFinance}
-                  />
-                </a>
-              </div>
-              <br />
-              <br />
-              <div>
-                <div
-                  style={{
-                    ...textBlock(
-                      japaneseThemePalette.PowerPurple,
-                      0,
-                      12,
-                      "white",
-                      "0px 0px 5px 0px rgba(0,0,0,0.75)"
-                    ),
-                  }}
-                >
-                  This book discusses how the chess board moves when large firms
-                  have to compete with rapidly growing startups.
-                </div>
-                <div
-                  style={{
-                    ...textBlock(
-                      japaneseThemePalette.ProsperityEmeraldGreen,
-                      0,
-                      12,
-                      "white",
-                      "0px 0px 5px 0px rgba(0,0,0,0.75)"
-                    ),
-                    width: "fit-content",
-                    marginTop: 4,
-                  }}
-                >
-                  Shopify Affiliate Commission: 7%
-                </div>
-                <br />
+        //         <br />
 
-                <a href="https://collabs.shop/dldeb6" target="_blank">
-                  <img
-                    style={{
-                      // border: "1px solid cyan",
-                      borderRadius: 12,
-                      // boxShadow: "1px 1px 3px 2px rgba(0,255,140,1)",
-                      boxShadow:
-                        "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
-                    }}
-                    src={innovatorsDilemma}
-                  />
-                </a>
-              </div>
-            </div>
-          ),
-          spanish: ``,
-          tooltip: ``,
-        },
+        //         <div href="https://collabs.shop/2kdqmy" target="_blank">
+        //           <img
+        //             style={{
+        //               // border: "1px solid cyan",
+        //               borderRadius: 12,
+        //               // boxShadow: "1px 1px 3px 2px rgba(0,255,140,1)",
+        //               boxShadow:
+        //                 "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
+        //             }}
+        //             src={powerLawFinance}
+        //           />
+        //         </div>
+        //       </div>
+        //       <br />
+        //       <br />
+        //       <div>
+        //         <div
+        //           style={{
+        //             ...textBlock(
+        //               japaneseThemePalette.PowerPurple,
+        //               0,
+        //               12,
+        //               "white",
+        //               "0px 0px 5px 0px rgba(0,0,0,0.75)"
+        //             ),
+        //           }}
+        //         >
+        //           This book discusses how the chess board moves when large firms
+        //           have to compete with rapidly growing startups.
+        //         </div>
+
+        //         <br />
+
+        //         <div href="https://collabs.shop/dldeb6" target="_blank">
+        //           <img
+        //             style={{
+        //               // border: "1px solid cyan",
+        //               borderRadius: 12,
+        //               // boxShadow: "1px 1px 3px 2px rgba(0,255,140,1)",
+        //               boxShadow:
+        //                 "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
+        //             }}
+        //             src={innovatorsDilemma}
+        //           />
+        //         </div>
+        //       </div>
+        //     </div>
+        //   ),
+        //   spanish: ``,
+        //   tooltip: ``,
+        // },
         practice: {
           completed: false,
           impact: 750,
@@ -4554,6 +4560,20 @@ export default OpenAIComponent;`,
           response: `null`,
           spanish: ``,
           tooltip: ``,
+          summaryContent: (
+            <div>
+              This lesson tackles the often intimidating topics of data
+              structures and algorithms in computer science. It begins by
+              addressing the common perception that these subjects are barriers
+              for many learners. The lesson then explores the basics of
+              programming languages, how computers interpret code, and the
+              underlying mechanics of machine code translation. Key concepts
+              like linked lists, trees, and algorithms are introduced and
+              explained in simple terms. The lesson emphasizes the importance of
+              practice and understanding foundational concepts like linked lists
+              to build towards more complex structures and algorithms. 🚀🧠💻
+            </div>
+          ),
         },
         inspire: {
           completed: false,
@@ -4995,64 +5015,50 @@ if (result !== null) {
           spanish: ``,
           tooltip: ``,
         },
-        shop: {
-          completed: false,
-          impact: 100,
-          action: `shop`,
-          icon: `🛍️`,
-          request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
-          response: (
-            <div>
-              <div
-                style={{
-                  ...textBlock(
-                    japaneseThemePalette.PowerPurple,
-                    0,
-                    12,
-                    "white",
-                    "0px 0px 5px 0px rgba(0,0,0,0.75)"
-                  ),
-                }}
-              >
-                This book introduces you to the history of modern game theory,
-                which has had enormous consequences in computing history. The
-                quality of your decisions will have to improve when your skills
-                and income improve.
-              </div>
-              <div
-                style={{
-                  ...textBlock(
-                    japaneseThemePalette.ProsperityEmeraldGreen,
-                    0,
-                    12,
-                    "white",
-                    "0px 0px 5px 0px rgba(0,0,0,0.75)"
-                  ),
-                  width: "fit-content",
-                  marginTop: 4,
-                }}
-              >
-                Shopify Affiliate Commission: 7%
-              </div>
-              <br />
+        // shop: {
+        //   completed: false,
+        //   impact: 100,
+        //   action: `shop`,
+        //   icon: `🛍️`,
+        //   request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
+        //   response: (
+        //     <div>
+        //       <div
+        //         style={{
+        //           ...textBlock(
+        //             japaneseThemePalette.PowerPurple,
+        //             0,
+        //             12,
+        //             "white",
+        //             "0px 0px 5px 0px rgba(0,0,0,0.75)"
+        //           ),
+        //         }}
+        //       >
+        //         This book introduces you to the history of modern game theory,
+        //         which has had enormous consequences in computing history. The
+        //         quality of your decisions will have to improve when your skills
+        //         and income improve.
+        //       </div>
 
-              <a href="https://collabs.shop/iu3ion" target="_blank">
-                <img
-                  style={{
-                    // border: "1px solid cyan",
-                    borderRadius: 12,
-                    // boxShadow: "1px 1px 3px 2px rgba(0,255,140,1)",
-                    boxShadow:
-                      "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
-                  }}
-                  src={prisonersDilemma}
-                />
-              </a>
-            </div>
-          ),
-          spanish: ``,
-          tooltip: ``,
-        },
+        //       <br />
+
+        //       <div href="https://collabs.shop/iu3ion" target="_blank">
+        //         <img
+        //           style={{
+        //             // border: "1px solid cyan",
+        //             borderRadius: 12,
+        //             // boxShadow: "1px 1px 3px 2px rgba(0,255,140,1)",
+        //             boxShadow:
+        //               "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
+        //           }}
+        //           src={prisonersDilemma}
+        //         />
+        //       </div>
+        //     </div>
+        //   ),
+        //   spanish: ``,
+        //   tooltip: ``,
+        // },
         practice: {
           completed: false,
           impact: 750,

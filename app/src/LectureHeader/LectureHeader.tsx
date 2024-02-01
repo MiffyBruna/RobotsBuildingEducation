@@ -5,6 +5,7 @@ import { RiseUpAnimation } from "../styles/lazyStyles";
 const headerStyle = {
   color: "white",
   marginTop: 6,
+  fontFamily: "Bungee",
 };
 
 export const LectureHeader = ({ uiStateReference }) => {

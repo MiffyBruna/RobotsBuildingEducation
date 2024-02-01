@@ -4,6 +4,7 @@ import { updateDoc } from "firebase/firestore";
 import { database } from "./database/firebaseResources";
 import { getGlobalImpact } from "./common/uiSchema";
 import { decentralizedEducationTranscript } from "./App.constants";
+import { japaneseThemePalette } from "./styles/lazyStyles";
 
 export const sortEmotionsByDate = (usersEmotionsFromDB) => {
     let insertTestDate = usersEmotionsFromDB;
@@ -173,3 +174,18 @@ export const updateLevel = async (
   }
 };
 
+
+
+export let getRandomColor = () => {
+  const keys = Object.keys(japaneseThemePalette);
+  const randomIndex = Math.floor(Math.random() * keys.length);
+  const randomKey = keys[randomIndex];
+  const color = japaneseThemePalette[randomKey];
+
+  // Handle empty or undefined color values
+  if (!color || color === "") {
+    return getRandomColor(); // Recursively call the function until a valid color is found
+  }
+
+  return color;
+};

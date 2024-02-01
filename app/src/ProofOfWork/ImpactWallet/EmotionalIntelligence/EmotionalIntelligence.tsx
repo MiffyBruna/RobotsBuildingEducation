@@ -156,19 +156,36 @@ export const EmotionalIntelligence = ({
 
   return (
     <>
-      <Modal centered show={isEmotionalIntelligenceOpen} fullscreen>
-        <Modal.Header style={EmotionalIntelligenceStyles.Header}>
-          <Modal.Title>Emotional Intelligence</Modal.Title>
+      <Modal
+        centered
+        show={isEmotionalIntelligenceOpen}
+        fullscreen
+        keyboard
+        onHide={() => setIsEmotionalIntelligenceOpen(false)}
+      >
+        <Modal.Header
+          style={EmotionalIntelligenceStyles.Header}
+          closeVariant="white"
+          closeButton
+        >
+          <Modal.Title style={{ fontFamily: "Bungee" }}>
+            Emotional Intelligence
+          </Modal.Title>
         </Modal.Header>
         <Modal.Body style={EmotionalIntelligenceStyles.Body}>
           <h1 style={EmotionalIntelligenceStyles.Banner}>
-            <div style={EmotionalIntelligenceStyles.BannerBackground}>
+            <div
+              style={EmotionalIntelligenceStyles.BannerBackground}
+              style={{ fontFamily: "Bungee" }}
+            >
               🌌&nbsp;how do you feel today?
             </div>
           </h1>
 
           <div style={EmotionalIntelligenceStyles.EnergyLevelContainer}>
-            <h3 style={{ textAlign: "center" }}>High Energy</h3>
+            <h3 style={{ textAlign: "center", fontFamily: "Bungee" }}>
+              High Energy
+            </h3>
             <div style={EmotionalIntelligenceStyles.RowWrapCenter}>
               {highEnergyFeelings.map((item) => (
                 <EmotionButton
@@ -183,7 +200,9 @@ export const EmotionalIntelligence = ({
               ))}
             </div>
             <br />
-            <h3 style={{ textAlign: "center" }}>Low Energy</h3>
+            <h3 style={{ textAlign: "center", fontFamily: "Bungee" }}>
+              Low Energy
+            </h3>
             <div style={EmotionalIntelligenceStyles.RowWrapCenter}>
               {lowEnergyFeelings.map((item) => (
                 <EmotionButton
@@ -201,8 +220,18 @@ export const EmotionalIntelligence = ({
 
           {!isEmpty(usersEmotionsFromDB) ? (
             <>
-              <h1 style={EmotionalIntelligenceStyles.Banner}>
-                <div style={EmotionalIntelligenceStyles.BannerBackground}>
+              <h1
+                style={{
+                  ...EmotionalIntelligenceStyles.Banner,
+                  fontFamily: "Bungee",
+                }}
+              >
+                <div
+                  style={{
+                    ...EmotionalIntelligenceStyles.BannerBackground,
+                    fontFamily: "Bungee",
+                  }}
+                >
                   the journey &nbsp;
                   <Button variant="light" onClick={reviewJourney}>
                     💌
@@ -232,32 +261,37 @@ export const EmotionalIntelligence = ({
               ) : null}
 
               <div style={EmotionalIntelligenceStyles.JourneyContainer}>
-                {Object.keys(usersEmotionsFromDB)?.map((item) => (
-                  <div>
-                    <br />
-                    <h3
-                      style={{
-                        textAlign: "center",
-                        width: "100vw",
-                      }}
-                    >
-                      {item}
-                    </h3>
-                    {usersEmotionsFromDB[item]
-                      .map((emotion) => (
-                        <EmotionButton
-                          color={emotion?.color}
-                          colorHover={emotion.colorHover}
-                          onClick={() => handleEmotionSelection(emotion, false)}
-                        >
-                          {emotion?.label}
-                          <br />
-                          {emotion?.emoji}
-                        </EmotionButton>
-                      ))
-                      .reverse()}
-                  </div>
-                ))}
+                {Object.keys(usersEmotionsFromDB)?.map((itemDate) => {
+                  return (
+                    <div>
+                      <br />
+                      <h3
+                        style={{
+                          textAlign: "center",
+                          width: "100vw",
+                          fontFamily: "Bungee",
+                        }}
+                      >
+                        {itemDate}
+                      </h3>
+                      {usersEmotionsFromDB[itemDate]
+                        .map((emotion) => (
+                          <EmotionButton
+                            color={emotion?.color}
+                            colorHover={emotion.colorHover}
+                            onClick={() =>
+                              handleEmotionSelection(emotion, false)
+                            }
+                          >
+                            {emotion?.label}
+                            <br />
+                            {emotion?.emoji}
+                          </EmotionButton>
+                        ))
+                        .reverse()}
+                    </div>
+                  );
+                })}
               </div>
             </>
           ) : null}
@@ -272,12 +306,18 @@ export const EmotionalIntelligence = ({
         </Modal.Footer>
       </Modal>
 
-      <Modal show={isEmotionModalOpen} centered>
+      <Modal
+        show={isEmotionModalOpen}
+        centered
+        keyboard
+        onHide={() => setIsEmotionModalOpen(false)}
+      >
         <Modal.Header
-          closeButton
           style={EmotionalIntelligenceStyles.EmotionHeader}
+          closeVariant="white"
+          closeButton
         >
-          <Modal.Title>
+          <Modal.Title style={{ fontFamily: "Bungee" }}>
             <img
               src={shouldRenderSaveButton ? roxanaFocusing : roxanaKind}
               width={50}

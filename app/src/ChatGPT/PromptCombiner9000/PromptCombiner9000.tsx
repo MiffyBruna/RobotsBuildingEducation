@@ -19,16 +19,19 @@ const delayedAnimation = keyframes`
 from {
     transform: translateY(100px);
     opacity: 0;
+    visibility: hidden;
   }
   to {
     transform: translateY(0);
     opacity: 1;
+    visibility: visible;
   }
 `;
 const StyledAnimatedPromptCombiner = styled.div`
   animation: ${delayedAnimation} 0.25s ease-out;
   animation-delay: ${(props) => props.index * 0.2}s; /* Delay based on index */
   opacity: 0; /* Start with opacity 0 to make the animation visible */
+  visibility: hidden;
   animation-fill-mode: forwards; /* Keep the element visible after the animation */
 `;
 const Wrapper = styled.div`
@@ -135,6 +138,15 @@ const renderContent = (
         return <div>{response}</div>;
       }
       break;
+    case "shop":
+      return (
+        <div>
+          Shopify links don't work rn but the books are good to know about 😔
+          <br />
+          <br />
+          {response}
+        </div>
+      );
     default:
       return <div>{response}</div>;
   }

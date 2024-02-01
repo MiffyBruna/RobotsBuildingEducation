@@ -62,7 +62,7 @@ export const Passcode = ({ handleZeroKnowledgePassword, patreonObject }) => {
       <br /> */}
       {/* <br /> */}
       <PanLeftComponent>
-        <h2>Enter Passcode</h2>
+        <h2 style={{ fontFamily: "Bungee" }}>Enter Passcode</h2>
         <input
           onChange={(event) => handleZeroKnowledgePassword(event, false, false)}
           type="password"
@@ -92,7 +92,6 @@ export const Passcode = ({ handleZeroKnowledgePassword, patreonObject }) => {
         </PanRightComponent>
         <br />
         <FadeInComponent>&nbsp; &nbsp;or &nbsp; &nbsp;</FadeInComponent>
-        <br />
         <br />
         <PanLeftComponent>
           <div
@@ -129,7 +128,7 @@ export const Passcode = ({ handleZeroKnowledgePassword, patreonObject }) => {
             margin: 0,
           }}
         >
-          <h3>Connecting with wallet</h3>
+          <h3 style={{ fontFamily: "Bungee" }}>Connecting with wallet</h3>
           Robots Building Education 4.0 is in an experimental phase. Most users
           that I target will not have the ability to log in until they
           understand how Bitcoin works more. It's my goal to reduce friction and

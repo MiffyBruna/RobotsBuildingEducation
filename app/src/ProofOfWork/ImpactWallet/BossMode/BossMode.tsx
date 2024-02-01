@@ -34,7 +34,7 @@ const RewardScreen = ({ isAnswerCorrect }) => {
   if (isAnswerCorrect === "false") {
     return (
       <div style={{ textShadow: "1px 1px 5px black" }}>
-        <h1>You failed! 😨</h1>
+        <h1 style={{ fontFamily: "Bungee" }}>You failed! 😨</h1>
         <p>Come back in 2 hours to try again!</p>
 
         <p>
@@ -53,7 +53,7 @@ const RewardScreen = ({ isAnswerCorrect }) => {
   } else {
     return (
       <div style={{ textShadow: "1px 1px 5px black" }}>
-        <h1>Great job! 🌟</h1>
+        <h1 style={{ fontFamily: "Bungee" }}>Great job! 🌟</h1>
         <p>Come back in 2 hours for your next challenge!</p>
 
         <p>
@@ -1599,9 +1599,17 @@ export const BossMode = ({
         show={isBossModeOpen}
         style={{ backgroundColor: "black" }}
         fullscreen
+        keyboard
+        onHide={() => setIsBossModeOpen(false)}
       >
-        <Modal.Header style={{ backgroundColor: "black", color: "white" }}>
-          <Modal.Title>rox the ai boss</Modal.Title>
+        <Modal.Header
+          style={{ backgroundColor: "black", color: "white" }}
+          closeVariant="white"
+          closeButton
+        >
+          <Modal.Title style={{ fontFamily: "Bungee" }}>
+            rox the ai boss
+          </Modal.Title>
         </Modal.Header>
         <Modal.Body
           style={{
@@ -1610,9 +1618,8 @@ export const BossMode = ({
           }}
         >
           <div style={{ textShadow: "1px 1px 5px black" }}>
-            <h2>The leader</h2>
             <h4>
-              {globalStateReference?.globalLeaderName} - Level:{" "}
+              Highest level: {globalStateReference?.globalLeaderName} - Level:{" "}
               {globalStateReference?.globalLevelCounter}
             </h4>
             <div>

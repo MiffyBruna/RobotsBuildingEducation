@@ -3,6 +3,7 @@ import MarkdownRenderer from "./MarkdownRenderer/MarkdownRenderer";
 
 import { updateImpact } from "../../App.compute";
 import { useZap } from "../../App.hooks";
+import { RevealButton } from "../../common/ui/Displays/RevealButton/RevealButton";
 
 // Style object for the video element
 const videoStyle = {
@@ -31,6 +32,9 @@ const renderVideo = (patreonObject, isAutoPlay, videoRef) => (
       <source src={patreonObject.fileSource} type="video/mp4" />
       <source src={patreonObject.fileSource} type="video/mov" />
     </video>
+    {patreonObject.prompts?.patreon?.summaryContent && (
+      <RevealButton content={patreonObject.prompts?.patreon?.summaryContent} />
+    )}
     {patreonObject?.prompts?.patreon?.additionalContent && (
       <MarkdownRenderer
         file={patreonObject?.prompts?.patreon?.additionalContent}

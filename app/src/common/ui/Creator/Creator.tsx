@@ -1,4 +1,4 @@
-import { ChatBlock } from "../ChatBlock/ChatBlock";
+import { ChatBlock } from "../Displays/ChatBlock/ChatBlock";
 import designOfEverydayThings from "../../media/images/designOfEverydayThings.png";
 import { ultimateEffeciencyJutsu } from "../ui";
 import { japaneseThemePalette, textBlock } from "../../../styles/lazyStyles";
@@ -25,6 +25,22 @@ export const Creator = {
         "https://res.cloudinary.com/sheilfer/video/upload/v1697492158/IMG_9002_sfq8dw.mov", // may not need
 
       prompts: {
+        welcome: {
+          response: (
+            <div>
+              Welcome, brilliant minds! 🌟 Today, we embark on an enlightening
+              journey through the realms of Critical Race Theory, Machine
+              Learning Algorithms, and Macroeconomics. Together, we'll explore
+              the intersections of technology, society, and economy, uncovering
+              insights that challenge our perspectives and expand our horizons.
+              Ready to dive into this intellectual adventure with curiosity and
+              courage? Let's unravel the complexities of our world and build
+              bridges to a future where knowledge empowers us all. 🚀💡
+            </div>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
         patreon: {
           completed: false,
           impact: 1000,
@@ -598,16 +614,16 @@ export const Creator = {
           spanish: ``,
           tooltip: ``,
         },
-        shop: {
-          completed: false,
-          impact: 100,
-          action: `shop`,
-          icon: `🛍️`,
-          request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
-          response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
-          spanish: ``,
-          tooltip: ``,
-        },
+        // shop: {
+        //   completed: false,
+        //   impact: 100,
+        //   action: `shop`,
+        //   icon: `🛍️`,
+        //   request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
+        //   response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
+        //   spanish: ``,
+        //   tooltip: ``,
+        // },
       },
     },
     "Interactions & Design": {
@@ -630,6 +646,23 @@ export const Creator = {
         "https://res.cloudinary.com/sheilfer/video/upload/v1697403810/IMG_8966_gt4s4s.mov", // may not need
 
       prompts: {
+        welcome: {
+          response: (
+            <div>
+              Fellow visionaries! 🌈 Today, we're setting sail into the vibrant
+              seas of Human-Computer Interaction, Entrepreneurship, and Design.
+              It's a thrilling expedition where creativity meets innovation,
+              guiding us through the art of making technology more human, dreams
+              more tangible, and designs more impactful. Are you ready to spark
+              change, weave connections, and envision a world where every
+              interaction and creation tells a story? Let's embark on this
+              journey together, crafting futures where technology dances
+              gracefully with human ambition. 🌐💼🎨
+            </div>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
         patreon: {
           completed: false,
           impact: 1000,
@@ -643,6 +676,22 @@ export const Creator = {
           tooltip: ``,
           additionalContent: await import(
             "../../markdowns/humanComputerInteraction.md?raw"
+          ),
+          summaryContent: (
+            <div>
+              UI/UX, or Interaction Design, is a multifaceted field blending
+              human-computer interaction, psychology, and technology. It
+              involves deep user research through surveys, polls, and interviews
+              to enhance product design beyond just aesthetics. This field
+              addresses complex challenges like improving user experiences in
+              diverse settings, from restaurants to digital platforms. It also
+              emphasizes accessibility, considering users with different needs,
+              which can lead to universally beneficial designs. Recognizing its
+              multidisciplinary nature, it's crucial in various fields, from
+              engineering to teaching. Design in this context is about engaging
+              users, understanding their needs, and constantly evolving through
+              research and feedback. 🎨💻🔍
+            </div>
           ),
         },
         inspire: {
@@ -888,7 +937,7 @@ export const Creator = {
 
               <h2>Step 3: Advanced HCI Studies</h2>
               <p>
-                After getting the basics, delve into more advanced HCI topics
+                After getting the basics, look into more advanced HCI topics
                 like interactive system design, user experience research, and
                 information visualization.
               </p>
@@ -1082,64 +1131,50 @@ export const Creator = {
           spanish: ``,
           tooltip: ``,
         },
-        shop: {
-          completed: false,
-          impact: 100,
-          action: `shop`,
-          icon: `🛍️`,
-          request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
-          response: (
-            <div>
-              <div
-                style={{
-                  ...textBlock(
-                    japaneseThemePalette.PowerPurple,
-                    0,
-                    12,
-                    "white",
-                    "0px 0px 5px 0px rgba(0,0,0,0.75)"
-                  ),
-                }}
-              >
-                Don Norman is considered influential in the formation of the
-                UI/UX industry and leads the organization at nngroup.com. This
-                book is an introduction that teaches you how to approach the
-                subject of design.
-              </div>
-              <div
-                style={{
-                  ...textBlock(
-                    japaneseThemePalette.ProsperityEmeraldGreen,
-                    0,
-                    12,
-                    "white",
-                    "0px 0px 5px 0px rgba(0,0,0,0.75)"
-                  ),
-                  width: "fit-content",
-                  marginTop: 4,
-                }}
-              >
-                Shopify Affiliate Commission: 7%
-              </div>
-              <br />
+        // shop: {
+        //   completed: false,
+        //   impact: 100,
+        //   action: `shop`,
+        //   icon: `🛍️`,
+        //   request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
+        //   response: (
+        //     <div>
+        //       <div
+        //         style={{
+        //           ...textBlock(
+        //             japaneseThemePalette.PowerPurple,
+        //             0,
+        //             12,
+        //             "white",
+        //             "0px 0px 5px 0px rgba(0,0,0,0.75)"
+        //           ),
+        //         }}
+        //       >
+        //         Don Norman is considered influential in the formation of the
+        //         UI/UX industry and leads the organization at nngroup.com. This
+        //         book is an introduction that teaches you how to approach the
+        //         subject of design.
+        //       </div>
 
-              <a href="https://collabs.shop/8fs19k" target="_blank">
-                <img
-                  style={{
-                    // border: "1px solid cyan",
-                    borderRadius: 12,
-                    // boxShadow: "1px 1px 3px 2px rgba(0,255,140,1)",
-                    boxShadow:
-                      "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
-                  }}
-                  src={designOfEverydayThings}
-                />
-              </a>
-            </div>
-          ),
-          spanish: ``,
-          tooltip: ``,
-        },
+        //       <br />
+
+        //       <div>
+        //         <img
+        //           style={{
+        //             // border: "1px solid cyan",
+        //             borderRadius: 12,
+        //             // boxShadow: "1px 1px 3px 2px rgba(0,255,140,1)",
+        //             boxShadow:
+        //               "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
+        //           }}
+        //           src={designOfEverydayThings}
+        //         />
+        //       </div>
+        //     </div>
+        //   ),
+        //   spanish: ``,
+        //   tooltip: ``,
+        // },
       },
     },
     "The Psychology Of Self-esteem": {
@@ -1159,7 +1194,7 @@ export const Creator = {
       button: `The Psychology Of Self-esteem`, // may not need - `name`
       header: `The Psychology Of Self-esteem`,
       fileSource:
-        "https://res.cloudinary.com/dtkeyccga/video/upload/v1695379551/kw8utz8affjpot9acemp.mov", // may not need
+        "https://res.cloudinary.com/sheilfer/video/upload/v1706607491/Snaptik.app_7307805149592833326_xs7eky.mp4", // may not need
       prompts: {
         welcome: {
           response: (
@@ -1183,8 +1218,8 @@ export const Creator = {
               become more confident and resilient individuals. 🌱
               <br />
               <br />
-              As we delve into the subject, we'll also reflect on how society
-              and culture play roles in shaping our self-esteem, and how we can
+              As we dive into the subject, we'll also reflect on how society and
+              culture play roles in shaping our self-esteem, and how we can
               transcend those limitations to embrace our true selves.😁
               <br />
               <br />
@@ -1210,8 +1245,17 @@ export const Creator = {
           response: `null`,
           spanish: ``,
           tooltip: ``,
-          additionalContent: await import(
-            "../../markdowns/selfEsteemAddendum.md?raw"
+          summaryContent: (
+            <div>
+              Exploring the nuances of psychology, we look into self-esteem's
+              significance and the complexities of self-acceptance amidst
+              societal pressures. It's a journey through understanding emotions,
+              cultural influences, and the impact of competitiveness,
+              emphasizing positive self-talk as a tool for mental resilience.
+              This introspective approach fosters personal growth, balancing
+              deep reflection with avoiding rigid structures in our development.
+              🌱💡✨
+            </div>
           ),
         },
         inspire: {

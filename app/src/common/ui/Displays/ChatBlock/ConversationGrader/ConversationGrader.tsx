@@ -1,7 +1,7 @@
 import { Button, Form } from "react-bootstrap";
 import { logEvent } from "firebase/analytics";
-import { analytics } from "../../../../database/firebaseResources";
-import { ui } from "../../../uiSchema";
+import { analytics } from "../../../../../database/firebaseResources";
+import { ui } from "../../../../uiSchema";
 import { useState } from "react";
 import { Chat } from "./Chat/Chat";
 

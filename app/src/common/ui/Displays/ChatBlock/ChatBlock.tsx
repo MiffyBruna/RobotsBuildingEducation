@@ -1,13 +1,16 @@
+// This component is discontinued but contains software around a chat interface.
+// This software may be repurposed for future features.
+
 import { useEffect, useState } from "react";
-import { japaneseThemePalette, textBlock } from "../../../styles/lazyStyles";
+import { japaneseThemePalette, textBlock } from "../../../../styles/lazyStyles";
 import { Button, Modal } from "react-bootstrap";
 import { ConversationGrader } from "./ConversationGrader/ConversationGrader";
 import {
   customInstructions,
   gatherConversationContext,
 } from "./ChatBlock.compute";
-import { postInstructions } from "../../uiSchema";
-import { EmotionalIntelligenceStyles } from "../../../ProofOfWork/ImpactWallet/EmotionalIntelligence/EmotionalIntelligence.styles";
+import { postInstructions } from "../../../uiSchema";
+import { EmotionalIntelligenceStyles } from "../../../../ProofOfWork/ImpactWallet/EmotionalIntelligence/EmotionalIntelligence.styles";
 
 export let ChatBlock = ({ children, type = "quiz" }) => {
   const [isConversationContextWindowOpen, setIsConversationContextWindowOpen] =
@@ -154,6 +157,7 @@ export let ChatBlock = ({ children, type = "quiz" }) => {
   //       show={isModalOpen}
   //       // show={true}
   //       onHide={() => setIsModalOpen(false)}
+  //       keyboard={true}
   //     >
   //       <Modal.Header
   //         closeButton
@@ -237,7 +241,7 @@ export let ChatBlock = ({ children, type = "quiz" }) => {
   //         </Button>
   //       </Modal.Footer>
   //     </Modal>
-  //     <Modal show={isConversationContextWindowOpen} centered>
+  //     <Modal show={isConversationContextWindowOpen} centered keyboard onHide={() => setIsModalOpen(false)}>
   //       <Modal.Header
   //         closeButton
   //         style={EmotionalIntelligenceStyles.EmotionHeader}

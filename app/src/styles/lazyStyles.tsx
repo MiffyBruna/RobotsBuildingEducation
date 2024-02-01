@@ -1,6 +1,7 @@
 import styled, { keyframes } from "styled-components";
 import { isEmpty } from "lodash";
 import { Link } from "react-router-dom";
+import { getRandomColor } from "../App.compute";
 const riseAnimation = keyframes`
   from {
     transform: translateY(100px);
@@ -159,7 +160,9 @@ export const StyledModule = styled.button`
     transform: scale(1.1);
 
     background: ${(props) => {
-      return props.patreonObject.isModuleDisabled ? "#48464A" : "#f5befa";
+      return props.patreonObject.isModuleDisabled
+        ? "#48464A"
+        : getRandomColor();
     }};
 
     animation: ${sineWave} 3s infinite ease-in-out;
@@ -169,6 +172,7 @@ export const StyledModule = styled.button`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  font-family: "Bungee";
 `;
 
 export const ComingSoonModule = styled.button`
@@ -293,31 +297,28 @@ export const StyledLink = styled(Link)`
   }
 
   background: ${(props) => {
-    const isActive = props.active;
-    const isSelectedPath = props.pathSelectionAnimationData.path === props.path;
-    const currentPath = props.path;
-
-    let backgroundColor = "";
-
-    if (isActive && isSelectedPath) {
-      backgroundColor = "#FF64FF"; // Original color for selected path
-    } else if (isActive && !isSelectedPath) {
-      backgroundColor = "#b271d1"; // Original color for non-selected path
-    }
-
-    // Adjust color based on path
-    if (currentPath === "Engineer") {
-      // Colors remain the same
-    } else if (currentPath === "Creator") {
-      backgroundColor = backgroundColor === "#FF64FF" ? "#6495ff" : "#6495ff"; // Blue versions
-    } else if (currentPath === "Entrepeneur") {
-      backgroundColor = backgroundColor === "#FF64FF" ? "#ffb264" : "#ffb264"; // Golden versions
-    }
-
-    return backgroundColor;
+    // const isActive = props.active;
+    // const isSelectedPath = props.pathSelectionAnimationData.path === props.path;
+    // const currentPath = props.path;
+    // let backgroundColor = "";
+    // if (isActive && isSelectedPath) {
+    //   backgroundColor = "#FF64FF"; // Original color for selected path
+    // } else if (isActive && !isSelectedPath) {
+    //   backgroundColor = "#b271d1"; // Original color for non-selected path
+    // }
+    // // Adjust color based on path
+    // if (currentPath === "Engineer") {
+    //   // Colors remain the same
+    // } else if (currentPath === "Creator") {
+    //   backgroundColor = backgroundColor === "#FF64FF" ? "#6495ff" : "#6495ff"; // Blue versions
+    // } else if (currentPath === "Entrepeneur") {
+    //   backgroundColor = backgroundColor === "#FF64FF" ? "#ffb264" : "#ffb264"; // Golden versions
+    // }
+    // return backgroundColor;
   }};
 
-  border: 2px solid hotpink;
+  // border: 2px solid hotpink;
+  border: 2px solid #e216b4;
 
   width: 125px;
 
@@ -336,7 +337,8 @@ export const StyledLink = styled(Link)`
 
   box-shadow: ${(props) => {
     return props.pathSelectionAnimationData.path === props.path
-      ? "1px 1px 17px 6px rgba(255,100,255,1);"
+      ? // ? "1px 1px 17px 6px rgba(255,100,255,1);"
+        "1px 1px 17px 6px #4C00EA"
       : "";
   }};
 
@@ -349,6 +351,7 @@ export const StyledLink = styled(Link)`
       ? "scale(0.95)"
       : "";
   }};
+  font-family: "Bungee";
 `;
 //
 
@@ -390,7 +393,11 @@ export const StyledPath = styled.button`
 
 export const StyledPromptButton = styled.button`
   background-color: ${(props) => {
-    return props.loadingMessage ? "#48484A" : "black";
+    return props.loadingMessage
+      ? "#48484A"
+      : props.disabled
+      ? "rgba(225, 229, 230, .12)"
+      : "black";
   }};
 
   cursor: ${(props) => {
@@ -435,7 +442,7 @@ export const kanyeColorPalette = {};
 
 // zen garden palette
 export let japaneseThemePalette = {
-  CherryBlossomPink: "#FFB7C5", // Cherry Blossom
+  // CherryBlossomPink: "#FFB7C5", // Cherry Blossom
   KyotoPurple: "#663399", // Sweet Potato Purple
   FujiSanBlue: "#6f97d3", // Mount Fuji Blue
   TokyoTwilight: "#706fd3", // Twilight in Tokyo
@@ -449,10 +456,9 @@ export let japaneseThemePalette = {
   StrongRed: "#DC143C", // Japanese Flag Red
   StrongBlue: "#00008B", // Indigo Blue Textile
   DarkMetallicSilver: "#5A5A5A", // Darkened Steel Samurai Sword
-  Lavender: "rgba(220,205,255, 1)",
+  // Lavender: "rgba(220,205,255, 1)",
   PowerPurple: "rgba(102, 3, 252, 1)",
   PowerPink: "#f7059d",
-  iphoneBlue: "",
 };
 
 // opinionated

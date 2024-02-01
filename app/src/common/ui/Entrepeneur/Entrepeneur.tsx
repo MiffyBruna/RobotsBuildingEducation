@@ -1,4 +1,6 @@
-import { ChatBlock } from "../ChatBlock/ChatBlock";
+//i did not spell Entrepreneur correctly.
+
+import { ChatBlock } from "../Displays/ChatBlock/ChatBlock";
 import poorCharlie from "../../media/images/poorCharlie.png";
 import { ultimateEffeciencyJutsu } from "../ui";
 import { japaneseThemePalette, textBlock } from "../../../styles/lazyStyles";
@@ -65,6 +67,22 @@ export const Entrepeneur = {
           response: `null`,
           spanish: ``,
           tooltip: ``,
+          summaryContent: (
+            <div>
+              Crafting a compelling resume is akin to designing a user
+              interface; it's about communicating your value effectively and
+              engagingly. Key aspects include optimizing your LinkedIn for
+              visibility, ensuring your resume makes a strong impression
+              quickly, and providing a meaningful context for your career
+              journey. Adhering to a structured format, such as precise spacing
+              and font usage, plays a crucial role. Education should be concise
+              yet impactful, and skills need to be categorized thoughtfully.
+              Emphasizing real-world experience and volunteer work can
+              significantly enhance your profile. Ultimately, a resume is your
+              narrative, a document that speaks volumes about your potential.
+              📝🌟💼
+            </div>
+          ),
         },
         inspire: {
           completed: false,
@@ -571,11 +589,13 @@ export const Entrepeneur = {
       needsImprovement: false,
       isModuleDisabled: false,
       tooltip: ``,
-      sourceType: `markdown`, // may not need
+      sourceType: `video`, // may not need
       button: `Focus Investing`, // may not need - `name`
       header: `Focus Investing`,
       credential: "Introduction to Finance",
-      fileSource: await import("../../markdowns/focusInvesting.md?raw"), // may not need
+      fileSource:
+        "https://res.cloudinary.com/dtkeyccga/video/upload/v1706592608/0118_uxgh72.mov",
+      // fileSource: await import("../../markdowns/focusInvesting.md?raw"), // may not need
       prompts: {
         welcome: {
           response: (
@@ -609,13 +629,16 @@ export const Entrepeneur = {
           completed: false,
           impact: 1000,
           action: `generate`,
-          icon: `✍️`, //`✍️`
+          icon: `►`, //`✍️`
           request: `rox, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
             `Focus Investing`
           )}?`,
           response: `null`,
           spanish: ``,
           tooltip: ``,
+          additionalContent: await import(
+            "../../markdowns/focusInvesting.md?raw"
+          ),
         },
         inspire: {
           completed: false,
@@ -1154,67 +1177,53 @@ export const Entrepeneur = {
           spanish: ``,
           tooltip: ``,
         },
-        shop: {
-          completed: false,
-          impact: 100,
-          action: `shop`,
-          icon: `🛍️`,
-          request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
-          response: (
-            <div>
-              <div
-                style={{
-                  ...textBlock(
-                    japaneseThemePalette.PowerPurple,
-                    0,
-                    12,
-                    "white",
-                    "0px 0px 5px 0px rgba(0,0,0,0.75)"
-                  ),
-                }}
-              >
-                From 1733 to 1758, Ben Franklin dispensed useful and timeless
-                advice through Poor Richard's Almanack. Among the virtues
-                extolled were thrift, duty, hard work, and simplicity.
-                Subsequently, two centuries went by during which Ben's thoughts
-                on these subjects were regarded as the last word. Then Charlie
-                Munger stepped forth. – Warren Buffett From the Foreword to Poor
-                Charlie's Almanack
-              </div>
-              <div
-                style={{
-                  ...textBlock(
-                    japaneseThemePalette.ProsperityEmeraldGreen,
-                    0,
-                    12,
-                    "white",
-                    "0px 0px 5px 0px rgba(0,0,0,0.75)"
-                  ),
-                  width: "fit-content",
-                  marginTop: 4,
-                }}
-              >
-                Shopify Affiliate Commission: 7%
-              </div>
-              <br />
+        // shop: {
+        //   completed: false,
+        //   impact: 100,
+        //   action: `shop`,
+        //   icon: `🛍️`,
+        //   request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
+        //   response: (
+        //     <div>
+        //       <div
+        //         style={{
+        //           ...textBlock(
+        //             japaneseThemePalette.PowerPurple,
+        //             0,
+        //             12,
+        //             "white",
+        //             "0px 0px 5px 0px rgba(0,0,0,0.75)"
+        //           ),
+        //         }}
+        //       >
+        //         From 1733 to 1758, Ben Franklin dispensed useful and timeless
+        //         advice through Poor Richard's Almanack. Among the virtues
+        //         extolled were thrift, duty, hard work, and simplicity.
+        //         Subsequently, two centuries went by during which Ben's thoughts
+        //         on these subjects were regarded as the last word. Then Charlie
+        //         Munger stepped forth. – Warren Buffett From the Foreword to Poor
+        //         Charlie's Almanack
+        //       </div>
 
-              <a href="https://collabs.shop/zs1bwk" target="_blank">
-                <img
-                  style={{
-                    // border: "1px solid cyan",
-                    borderRadius: 12,
-                    // boxShadow: "1px 1px 3px 2px rgba(0,255,140,1)",
-                    boxShadow:
-                      "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
-                  }}
-                  src={poorCharlie}
-                />
-              </a>
-            </div>
-          ),
-          spanish: ``,
-          tooltip: ``,
-        },
+        //       <br />
+
+        //       <div href="https://collabs.shop/zs1bwk" target="_blank">
+        //         <img
+        //           style={{
+        //             // border: "1px solid cyan",
+        //             borderRadius: 12,
+        //             // boxShadow: "1px 1px 3px 2px rgba(0,255,140,1)",
+        //             boxShadow:
+        //               "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
+        //           }}
+        //           src={poorCharlie}
+        //         />
+        //       </div>
+        //     </div>
+        //   ),
+        //   spanish: ``,
+        //   tooltip: ``,
+        // },
       },
     },
 

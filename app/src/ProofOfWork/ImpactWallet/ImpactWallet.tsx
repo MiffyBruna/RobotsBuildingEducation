@@ -7,7 +7,7 @@ import cashAppCard from "../../common/media/images/cashAppCard.jpeg";
 import roxanaChat from "../../common/media/images/roxanaChat.png";
 import { logEvent } from "firebase/analytics";
 import { analytics, database } from "../../database/firebaseResources";
-import { DiscordButton } from "../../common/ui/DiscordButton/DiscordButton";
+import { DiscordButton } from "../../common/ui/Displays/DiscordButton/DiscordButton";
 import { doc, getDoc } from "firebase/firestore";
 import { Link, useParams } from "react-router-dom";
 import { EmotionalIntelligence } from "./EmotionalIntelligence/EmotionalIntelligence";
@@ -296,17 +296,23 @@ export const ImpactWallet = ({
       </div>
 
       {/* need to conditionall render this */}
-      <Modal centered show={isImpactWalletOpen} fullscreen>
+      <Modal
+        centered
+        show={isImpactWalletOpen}
+        fullscreen
+        onHide={() => setIsImpactWalletOpen(false)}
+        keyboard
+      >
         <Modal.Header
+          closeVariant="white"
           closeButton
           style={{ backgroundColor: "black", color: "white" }}
         >
-          <Modal.Title>
+          <Modal.Title style={{ fontFamily: "Bungee" }}>
             Proof of Work @{params?.profileID || userAuthObject?.uid}
           </Modal.Title>
         </Modal.Header>
         <Modal.Body
-          onHide={() => setIsImpactWalletOpen(false)}
           style={{
             padding: 0,
             backgroundColor: "black",
@@ -331,7 +337,9 @@ export const ImpactWallet = ({
                 handleZeroKnowledgePassword={handleZeroKnowledgePassword}
               /> */}
 
-            <h4>Your Decentralized Transcript</h4>
+            <h4 style={{ fontFamily: "Bungee" }}>
+              Your Decentralized Transcript
+            </h4>
             <div
               style={{
                 borderRadius: "12px",
@@ -349,7 +357,7 @@ export const ImpactWallet = ({
               </Form>
             </div>
             <br />
-            <h4>Transcript Awards</h4>
+            <h4 style={{ fontFamily: "Bungee" }}>Transcript Awards</h4>
 
             <div
               style={{
@@ -364,7 +372,9 @@ export const ImpactWallet = ({
             </div>
             <br />
 
-            <h4>Scholarships Created: {globalScholarshipCounter}</h4>
+            <h4 style={{ fontFamily: "Bungee" }}>
+              Scholarships Created: {globalScholarshipCounter}
+            </h4>
             <p>
               Work Done By You
               <br />
@@ -417,7 +427,7 @@ export const ImpactWallet = ({
               <hr />
             </p>
             <br />
-            <h4> The Proof of Work System</h4>
+            <h4 style={{ fontFamily: "Bungee" }}> The Proof of Work System</h4>
             <p
               style={{
                 maxWidth: 700,
@@ -446,8 +456,8 @@ export const ImpactWallet = ({
             <br />
 
             <div>
-              <h1>The Reserve</h1>
-              <h3>invested {globalReserveObject?.invested || "N/A"}</h3>
+              <h4 style={{ fontFamily: "Bungee" }}>The Reserve</h4>
+              <h6>invested {globalReserveObject?.invested || "N/A"}</h6>
 
               <h6>last updated {globalReserveObject?.last_updated}</h6>
               <div></div>
@@ -474,13 +484,13 @@ export const ImpactWallet = ({
         globalStateReference={globalStateReference}
         zap={zap}
       />
-
+      {/* 
       <Scheduler
         isSchedulerOpen={isSchedulerOpen}
         setIsSchedulerOpen={setIsSchedulerOpen}
         userStateReference={userStateReference}
         zap={zap}
-      />
+      /> */}
 
       <Cofounder
         isCofounderOpen={isCofounderOpen}

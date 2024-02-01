@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { RoxanaLoadingAnimation } from "../../../../uiSchema";
+import { RoxanaLoadingAnimation } from "../../../../../uiSchema";
 
 export const Chat = ({ conversation, gradeResult }) => {
   const requestStyle = {

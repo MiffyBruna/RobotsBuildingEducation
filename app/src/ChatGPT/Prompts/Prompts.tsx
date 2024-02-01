@@ -167,6 +167,7 @@ export const Prompts = ({
         fullscreen
         show={isModalOpen}
         onHide={() => setIsModalOpen(false)}
+        keyboard={true}
       >
         <Modal.Header
           closeButton

@@ -3,7 +3,7 @@ import { logEvent } from "firebase/analytics";
 import React from "react";
 import { Button } from "react-bootstrap";
 import ReactDOM from "react-dom";
-import { analytics } from "../../../database/firebaseResources";
+import { analytics } from "../../../../database/firebaseResources";
 import linkedInLogo from "../../../common/media/images/linkedInLogo.png";
 import patreonLogos from "../../../common/media/images/patreonLogos.png";
 
@@ -21,7 +21,7 @@ export const DiscordButton = () => (
       maxWidth: "100%",
     }}
   >
-    <h1>Connect</h1>
+    <h1 style={{ fontFamily: "Bungee" }}>Connect</h1>
     <iframe
       src="https://discord.com/widget?id=115318178929704963&theme=dark"
       width="375"
@@ -68,7 +68,7 @@ export const DiscordButton = () => (
           src={patreonLogos}
         />
       </Button> */}
-      &nbsp;&nbsp;<div style={{ padding: 5 }}>Subscribe </div>
+      &nbsp;&nbsp;<div style={{ padding: 5 }}>Get subscriber passcode</div>
     </a>
     {/* <a
       style={{ marginRight: 48 }}

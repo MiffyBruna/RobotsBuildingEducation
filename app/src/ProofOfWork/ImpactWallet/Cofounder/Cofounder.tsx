@@ -203,7 +203,9 @@ const ScriptDisplayComponent = ({ scriptData }) => {
 const ScriptSection = ({ sectionData }) => {
   return (
     <Section>
-      <ScriptHeader>{sectionData.header}</ScriptHeader>
+      <ScriptHeader style={{ fontFamily: "Bungee" }}>
+        {sectionData.header}
+      </ScriptHeader>
       <ScriptLines>
         {sectionData.script_lines.map((line, idx) => (
           <p key={idx}>{line}</p>
@@ -562,9 +564,19 @@ export const Cofounder = ({
   // console.log("map", mapping);
   return (
     <>
-      <Modal centered show={isCofounderOpen} fullscreen>
-        <Modal.Header style={{ backgroundColor: "black", color: "white" }}>
-          <Modal.Title>Co-founder</Modal.Title>
+      <Modal
+        centered
+        show={isCofounderOpen}
+        fullscreen
+        keyboard
+        onHide={() => setIsCofounderOpen(false)}
+      >
+        <Modal.Header
+          style={{ backgroundColor: "black", color: "white" }}
+          closeVariant="white"
+          closeButton
+        >
+          <Modal.Title style={{ fontFamily: "Bungee" }}>Co-founder</Modal.Title>
         </Modal.Header>
 
         <Modal.Body
@@ -711,7 +723,7 @@ export const Cofounder = ({
                 {codeBreakdown ? (
                   <Container>
                     <Header>
-                      <h1>Code Explorer</h1>
+                      <h1 style={{ fontFamily: "Bungee" }}>Code Explorer</h1>
                       <p>Discover how the code works, step by step!</p>
                     </Header>
 
@@ -748,7 +760,7 @@ export const Cofounder = ({
                   </Container>
                 ) : null}
                 <br />
-                <h2>Code Editor</h2>
+                <h2 style={{ fontFamily: "Bungee" }}>Code Editor</h2>
                 <LiveError />
               </LiveProvider>
 

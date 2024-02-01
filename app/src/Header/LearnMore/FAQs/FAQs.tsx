@@ -35,6 +35,7 @@ const FAQItem = ({ question, answer, index }) => {
           onClick={() => setOpen(!open)}
           aria-controls="example-collapse-text"
           aria-expanded={open}
+          variant="dark"
         >
           <h4>{question}</h4>
         </Button>
@@ -62,9 +63,9 @@ const FAQSection = () => {
             ...textBlock(japaneseThemePalette.TokyoTwilight, 0),
           }}
         >
-          The foundation of Robots Building Education is an AI-driven mentoring
-          and tutoring environment that sets up individuals for success. Modern
-          and important skills are taught here to support people's goals in
+          The foundation of Robots Building Education is an AI-enhanced
+          cofounder environment that sets up individuals for success. Modern and
+          important skills are taught here to support people's goals in
           advancing their education, changing their careers, or starting a
           business.
           <br />
@@ -94,7 +95,7 @@ const FAQSection = () => {
             <b>
               If you want to support the early stages of RO.B.E or learn more
               about what I teach, please continue to explore. Visit the Patreon
-              to subscribe and get a shareable passcode to enter the app.
+              and subscribe to get the passcode.
             </b>
           </p>
         </p>
@@ -411,7 +412,7 @@ const FAQSection = () => {
 
   return (
     <div style={{ maxWidth: 700, width: "100%", backgroundColor: "black" }}>
-      <h1>Frequently Asked Questions</h1>
+      <h1 style={{ fontFamily: "Bungee" }}>FAQs</h1>
       {faqs.map((faq, index) => (
         <FAQItem
           index={index}

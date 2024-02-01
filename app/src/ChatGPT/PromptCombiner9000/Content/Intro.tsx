@@ -1,8 +1,8 @@
 import { logEvent } from "firebase/analytics";
 import { isEmpty } from "lodash";
-import { analytics } from "../../database/firebaseResources";
-import { RoxanaLoadingAnimation } from "../../common/uiSchema";
-import { RiseUpAnimation } from "../../styles/lazyStyles";
+import { analytics } from "../../../database/firebaseResources";
+import { RoxanaLoadingAnimation } from "../../../common/uiSchema";
+import { RiseUpAnimation } from "../../../styles/lazyStyles";
 
 // Function to handle the Patreon click event for analytics
 const handlePatreonClick = (moduleName) => {
@@ -107,11 +107,11 @@ export const Intro = ({
         {loadingMessage ? (
           <RoxanaLoadingAnimation />
         ) : isResponseActive ? (
-          <h2>
-            {promptSelection === "patreon" && "discover ►⚡🎨"}
-            {promptSelection === "guide" && "guide 🧿📚🔮🗓🧪"}
-            {promptSelection === "shop" && "shop 🛍️"}
-            {promptSelection === "practice" && "practice 🥋"}
+          <h2 style={{ fontFamily: "Bungee" }}>
+            {promptSelection === "patreon" && "Discover ►⚡🎨"}
+            {promptSelection === "guide" && "Guide 🧿📚🔮🗓🧪"}
+            {promptSelection === "shop" && "Shop 🛍️"}
+            {promptSelection === "practice" && "Practice 🥋"}
           </h2>
         ) : (
           <RoxanaIntroText />
