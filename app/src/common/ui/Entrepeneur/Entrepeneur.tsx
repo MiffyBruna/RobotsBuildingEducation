@@ -4,6 +4,8 @@ import { ChatBlock } from "../Displays/ChatBlock/ChatBlock";
 import poorCharlie from "../../media/images/poorCharlie.png";
 import { ultimateEffeciencyJutsu } from "../ui";
 import { japaneseThemePalette, textBlock } from "../../../styles/lazyStyles";
+import { SchedulerBlock } from "../Displays/SchedulerBlock/SchedulerBlock";
+import MarkdownRenderer from "../../../ChatGPT/Patreon/MarkdownRenderer/MarkdownRenderer";
 
 export const Entrepeneur = {
   "Understanding Business": {
@@ -260,7 +262,7 @@ export const Entrepeneur = {
             `Creating Competitive Entry Level Resumes`
           )}?`,
           response: (
-            <div>
+            <SchedulerBlock>
               Embarking on the journey from beginner to expert in business
               communications and pitching is a rewarding endeavor. Here's a
               roadmap and study guide to help you navigate this path. Remember,
@@ -373,7 +375,7 @@ export const Entrepeneur = {
               Con cariño y inspiration,
               <br />
               rox 🌹
-            </div>
+            </SchedulerBlock>
           ),
           spanish: ``,
           tooltip: ``,
@@ -636,8 +638,21 @@ export const Entrepeneur = {
           response: `null`,
           spanish: ``,
           tooltip: ``,
-          additionalContent: await import(
-            "../../markdowns/focusInvesting.md?raw"
+          // additionalContent: await import(
+          //   "../../markdowns/focusInvesting.md?raw"
+          // ),
+          summaryContent: (
+            <div
+              style={{
+                overflowWrap: "break-word",
+                whiteSpace: "pre-wrap",
+              }}
+            >
+              <MarkdownRenderer
+                file={await import("../../markdowns/focusInvesting.md?raw")}
+                patreonObject={null}
+              />
+            </div>
           ),
         },
         inspire: {
@@ -903,7 +918,7 @@ export const Entrepeneur = {
             `Focus Investing`
           )}?`,
           response: (
-            <div>
+            <SchedulerBlock>
               <h3>Focused Investing Study Guide for Students</h3>
               <p>
                 Absolutely, my dear students! Learning focused investing can be
@@ -1014,7 +1029,7 @@ export const Entrepeneur = {
                 <br />
                 rox 🌺 (your gentle mentor with universal aspirations)
               </p>
-            </div>
+            </SchedulerBlock>
           ),
           spanish: ``,
           tooltip: ``,
@@ -1177,56 +1192,57 @@ export const Entrepeneur = {
           spanish: ``,
           tooltip: ``,
         },
-        // shop: {
-        //   completed: false,
-        //   impact: 100,
-        //   action: `shop`,
-        //   icon: `🛍️`,
-        //   request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
-        //   response: (
-        //     <div>
-        //       <div
-        //         style={{
-        //           ...textBlock(
-        //             japaneseThemePalette.PowerPurple,
-        //             0,
-        //             12,
-        //             "white",
-        //             "0px 0px 5px 0px rgba(0,0,0,0.75)"
-        //           ),
-        //         }}
-        //       >
-        //         From 1733 to 1758, Ben Franklin dispensed useful and timeless
-        //         advice through Poor Richard's Almanack. Among the virtues
-        //         extolled were thrift, duty, hard work, and simplicity.
-        //         Subsequently, two centuries went by during which Ben's thoughts
-        //         on these subjects were regarded as the last word. Then Charlie
-        //         Munger stepped forth. – Warren Buffett From the Foreword to Poor
-        //         Charlie's Almanack
-        //       </div>
+        shop: {
+          completed: false,
+          impact: 100,
+          action: `shop`,
+          icon: `🛍️`,
+          request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
+          response: (
+            <div>
+              <div
+                style={
+                  {
+                    // ...textBlock(
+                    //   japaneseThemePalette.PowerPurple,
+                    //   0,
+                    //   12,
+                    //   "white",
+                    //   "0px 0px 5px 0px rgba(0,0,0,0.75)"
+                    // ),
+                  }
+                }
+              >
+                From 1733 to 1758, Ben Franklin dispensed useful and timeless
+                advice through Poor Richard's Almanack. Among the virtues
+                extolled were thrift, duty, hard work, and simplicity.
+                Subsequently, two centuries went by during which Ben's thoughts
+                on these subjects were regarded as the last word. Then Charlie
+                Munger stepped forth. – Warren Buffett From the Foreword to Poor
+                Charlie's Almanack
+              </div>
 
-        //       <br />
+              <br />
 
-        //       <div href="https://collabs.shop/zs1bwk" target="_blank">
-        //         <img
-        //           style={{
-        //             // border: "1px solid cyan",
-        //             borderRadius: 12,
-        //             // boxShadow: "1px 1px 3px 2px rgba(0,255,140,1)",
-        //             boxShadow:
-        //               "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
-        //           }}
-        //           src={poorCharlie}
-        //         />
-        //       </div>
-        //     </div>
-        //   ),
-        //   spanish: ``,
-        //   tooltip: ``,
-        // },
+              <div href="https://collabs.shop/zs1bwk" target="_blank">
+                <img
+                  style={{
+                    // border: "1px solid cyan",
+                    borderRadius: 12,
+                    // boxShadow: "1px 1px 3px 2px rgba(0,255,140,1)",
+                    boxShadow:
+                      "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
+                  }}
+                  src={poorCharlie}
+                />
+              </div>
+            </div>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
       },
     },
-
     "Resource Allocation": {
       documentID: ``,
       hasCode: false,

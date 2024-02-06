@@ -2,6 +2,17 @@ import styled, { keyframes } from "styled-components";
 import { isEmpty } from "lodash";
 import { Link } from "react-router-dom";
 import { getRandomColor } from "../App.compute";
+
+const popAnimation = keyframes`
+0%, 50%, 100% { transform: scale(1); }
+10%, 30%, 60%, 80% { transform: scale(1.1); }
+
+`;
+
+export const PopAnimation = styled.div`
+  animation: ${popAnimation} 0.9s ease-in-out forwards;
+`;
+
 const riseAnimation = keyframes`
   from {
     transform: translateY(100px);
@@ -14,7 +25,9 @@ const riseAnimation = keyframes`
 `;
 
 export const RiseUpAnimation = styled.div`
-  animation: ${riseAnimation} 0.38s ease-in-out;
+  animation: ${riseAnimation} ${(props) => {
+  return props.speed ? props.speed + "s" : "0.38s";
+}}; ease-in-out;
 `;
 
 const riseDownAnimation = keyframes`
@@ -39,9 +52,13 @@ const fadeInAnimation = keyframes`
     opacity: 1;
   }
 `;
+
 export const FadeInComponent = styled.div`
-  animation: ${fadeInAnimation} 0.45s ease-in;
+  animation: ${fadeInAnimation} ${(props) => {
+  return props.speed ? props.speed + "s" : "0.45s";
+}}; ease-in;
 `;
+
 const panRight = keyframes`
   from {
     transform: translateX(60px);
@@ -195,7 +212,7 @@ export const ComingSoonModule = styled.button`
   border: 5px dashed
     ${(props) => {
       return props.patreonObject.isModuleDisabled
-        ? japaneseThemePalette.SakuraMochiPink
+        ? japaneseThemePalette.GoldenAccent
         : props.patreonObject.rare
         ? "#DA830D"
         : props.patreonObject.highValue
@@ -320,14 +337,14 @@ export const StyledLink = styled(Link)`
   // border: 2px solid hotpink;
   border: 2px solid #e216b4;
 
-  width: 125px;
+  width: 115px;
 
-  height: 125px;
+  height: 115px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px;
-  margin: 12px;
+  padding: 8px;
+  margin: 8px;
 
   color: white;
   transition: 0.15s all ease-in-out;
@@ -446,7 +463,7 @@ export let japaneseThemePalette = {
   KyotoPurple: "#663399", // Sweet Potato Purple
   FujiSanBlue: "#6f97d3", // Mount Fuji Blue
   TokyoTwilight: "#706fd3", // Twilight in Tokyo
-  SakuraMochiPink: "#FF92A9", // Sakura Mochi
+  // SakuraMochiPink: "#FF92A9", // Sakura Mochi
   WisteriaPurple: "#89729E", // Wisteria Flower
   GoldenAccent: "#bf8902", // Gold in Japanese Art
   WoodenArchitectureBrown: "#d3a86f", // Japanese Wood Architecture
@@ -459,6 +476,7 @@ export let japaneseThemePalette = {
   // Lavender: "rgba(220,205,255, 1)",
   PowerPurple: "rgba(102, 3, 252, 1)",
   PowerPink: "#f7059d",
+  OrangeGold: "#FFD68B",
 };
 
 // opinionated

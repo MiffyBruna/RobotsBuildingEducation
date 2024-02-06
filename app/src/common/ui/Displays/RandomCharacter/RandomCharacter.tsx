@@ -14,6 +14,10 @@ import character11 from "../../../media/images/characters/11.png";
 import character12 from "../../../media/images/characters/12.png";
 import character13 from "../../../media/images/characters/13.png";
 import character14 from "../../../media/images/characters/14.png";
+import {
+  FadeInComponent,
+  RiseUpAnimation,
+} from "../../../../styles/lazyStyles";
 
 const characterImages = [
   character1,
@@ -32,7 +36,29 @@ const characterImages = [
   character14,
 ];
 
-const RandomCharacter = () => {
+const characterImagesMap = {
+  "1": character1,
+  "2": character2,
+  "3": character3,
+  "4": character4,
+  "5": character5,
+  "6": character6,
+  "7": character7,
+  "8": character8,
+  "9": character9,
+  "10": character10,
+  "11": character11,
+  "12": character12,
+  "13": character13,
+  "14": character14,
+};
+
+const RandomCharacter = ({
+  notSoRandomCharacter = null,
+  width = "50px",
+  speed = 1.33,
+  borderRadius = null,
+}) => {
   const [image, setImage] = useState("");
 
   useEffect(() => {
@@ -42,7 +68,20 @@ const RandomCharacter = () => {
     setImage(randomImage);
   }, []);
 
-  return <img src={image} alt="Random Character" width="50px" />;
+  return notSoRandomCharacter ? (
+    <FadeInComponent speed={speed}>
+      <img
+        src={characterImagesMap[notSoRandomCharacter]}
+        alt={`Character ${notSoRandomCharacter}`}
+        width={width}
+        style={{ borderRadius: borderRadius }}
+      />
+    </FadeInComponent>
+  ) : (
+    <FadeInComponent speed={speed}>
+      <img src={image} alt="Random Character" width={width} />{" "}
+    </FadeInComponent>
+  );
 };
 
 export default RandomCharacter;

@@ -28,7 +28,7 @@ export const Intro = ({
 
   // Roxana's intro text logic
   const RoxanaIntroText = () => (
-    <div>
+    <div style={{ padding: 20 }}>
       {!isEmpty(patreonObject?.prompts?.welcome) ? (
         <div>{patreonObject?.prompts?.welcome?.response}</div>
       ) : (
@@ -98,9 +98,9 @@ export const Intro = ({
         padding: 20,
         maxWidth: "70.5%",
 
-        borderTopLeftRadius: 30,
-        borderTopRightRadius: 30,
-        borderBottomRightRadius: 30,
+        borderTopLeftRadius: 50,
+        borderTopRightRadius: 50,
+        borderBottomRightRadius: 50,
       }}
     >
       <div style={{ display: "flex" }}>

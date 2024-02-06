@@ -7,12 +7,12 @@ const messageContainerStyle = {
   display: "flex",
   flexDirection: "column",
   textAlign: "left",
-  padding: 20,
+  padding: 25,
   maxWidth: "70.5%",
   minWidth: "fit-content",
-  borderTopLeftRadius: 30,
-  borderTopRightRadius: 30,
-  borderBottomLeftRadius: 30,
+  borderTopLeftRadius: 50,
+  borderTopRightRadius: 50,
+  borderBottomLeftRadius: 50,
 };
 
 // Define styles for the main container

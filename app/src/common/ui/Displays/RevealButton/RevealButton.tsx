@@ -31,7 +31,7 @@ const SummaryItem = ({ question, answer, index }) => {
   return (
     <div style={{ marginBottom: "10px" }}>
       <div index={index}>
-        <Button
+        {/* <Button
           style={{ padding: 25, width: "100%", marginTop: 12 }}
           onClick={() => setOpen(!open)}
           aria-controls="example-collapse-text"
@@ -39,7 +39,24 @@ const SummaryItem = ({ question, answer, index }) => {
           variant="dark"
         >
           <h4>{question}</h4>
-        </Button>
+        </Button> */}
+        <button
+          aria-controls="example-collapse-text"
+          aria-expanded={open}
+          onClick={() => setOpen(!open)}
+          style={{
+            // backgroundColor: japaneseThemePalette.StrongBlue,
+            ...textBlock("#E116C4", 1, 8, "white", null, 25),
+
+            // backgroundColor: "#63FEA2",
+            // color: "white",
+            // padding: 25,
+            width: "100%",
+            marginTop: 12,
+          }}
+        >
+          <h4>{question}</h4>
+        </button>
       </div>
       <Collapse in={open}>
         <div id="example-collapse-text">
@@ -55,7 +72,7 @@ const SummaryItem = ({ question, answer, index }) => {
 export const RevealButton = ({ content }) => {
   const data = [
     {
-      question: "⚡ Summary",
+      question: "🍚 Extra",
       answer: (
         <p
           style={{

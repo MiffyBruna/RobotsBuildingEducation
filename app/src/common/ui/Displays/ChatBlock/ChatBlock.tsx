@@ -10,8 +10,127 @@ import {
   gatherConversationContext,
 } from "./ChatBlock.compute";
 import { postInstructions } from "../../../uiSchema";
-import { EmotionalIntelligenceStyles } from "../../../../ProofOfWork/ImpactWallet/EmotionalIntelligence/EmotionalIntelligence.styles";
 
+export const EmotionalIntelligenceStyles = {
+  Header: {
+    backgroundColor: "black",
+    color: "white",
+  },
+  Body: {
+    backgroundColor: "black",
+    color: "white",
+  },
+
+  Banner: {
+    textAlign: "center",
+    display: "flex",
+    justifyContent: "center",
+  },
+
+  BannerBackground: {
+    // backgroundColor: "rgba(220, 208, 255, 1)",
+    borderBottom: "1px solid skyblue",
+    textShadow: "0px 0px 25px black",
+    padding: 24,
+    borderRadius: 24,
+    marginTop: 48,
+  },
+
+  EnergyLevelContainer: {
+    paddingTop: 24,
+    PaddingBottom: 24,
+    paddingRight: 24,
+  },
+
+  RowWrapCenter: {
+    display: "flex",
+    textAlign: "center",
+    justifyContent: "center",
+    flexWrap: "wrap",
+  },
+
+  RowJustifyCenter: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+
+  JourneyContainer: {
+    display: "flex",
+    textAlign: "center",
+    justifyContent: "center",
+    flexWrap: "wrap",
+    marginTop: 12,
+  },
+
+  Footer: {
+    backgroundColor: "black",
+    color: "white",
+  },
+
+  EmotionHeader: {
+    backgroundColor: "black",
+    color: "white",
+    borderBottom: "0px solid transparent",
+    borderRight: "5px solid lavender",
+    borderLeft: "5px solid lavender",
+    borderTop: "5px solid lavender",
+  },
+
+  EmotionBody: {
+    backgroundColor: "black",
+    color: "white",
+    borderRight: "5px solid lavender",
+    borderLeft: "5px solid lavender",
+    height: 625,
+  },
+
+  EmotionFooter: {
+    backgroundColor: "black",
+    color: "white",
+    borderTop: "1px solid transparent",
+    borderRight: "5px solid lavender",
+    borderLeft: "5px solid lavender",
+    borderBottom: "5px solid lavender",
+  },
+
+  EmotionNote: { width: 300, height: 125, margin: 5 },
+
+  GenerateInsightButton: {
+    width: "100%",
+    marginTop: 6,
+    paddingTop: 12,
+    paddingBottom: 12,
+  },
+
+  TextAlignCenter: { textAlign: "center" },
+
+  AiResponseContainer: {
+    display: "flex",
+    justifyContent: "center",
+    padding: 20,
+    textShadow: "1px 1px 5px black",
+    height: 425,
+    overflow: "scroll",
+  },
+  SummarizerResponseContainer: {
+    display: "flex",
+    justifyContent: "center",
+    padding: 20,
+    textShadow: "1px 1px 5px black",
+    minHeight: 350,
+    overflow: "scroll",
+  },
+
+  AiResponseMessage: {
+    backgroundColor: "#2C2C2E",
+    height: "fit-content",
+    padding: 15,
+    borderTopLeftRadius: 30,
+    borderTopRightRadius: 30,
+    borderBottomRightRadius: 30,
+  },
+};
 export let ChatBlock = ({ children, type = "quiz" }) => {
   const [isConversationContextWindowOpen, setIsConversationContextWindowOpen] =
     useState(false);
@@ -24,9 +143,7 @@ export let ChatBlock = ({ children, type = "quiz" }) => {
   const [gradeResult, setGradeResult] = useState("");
   const [isGrading, setIsGrading] = useState(false);
 
-  let [boxShadow, setBoxShadow] = useState(
-    "10px 10px 5px 0px rgba(0,0,0,0.75)"
-  );
+  let [boxShadow, setBoxShadow] = useState("6px 6px 5px 0px rgba(0,0,0,0.75)");
 
   let messageContext = gatherConversationContext(children);
 
@@ -121,147 +238,163 @@ export let ChatBlock = ({ children, type = "quiz" }) => {
     }
   }, [gradeResult]);
 
-  return <div>{children}</div>;
-  // return (
-  //   <div
-  //     style={{
-  //       ...textBlock(
-  //         japaneseThemePalette.PowerPurple,
-  //         0,
-  //         12,
-  //         "white",
-  //         "10px 10px 5px 0px rgba(0,0,0,0.75)"
-  //       ),
-  //     }}
-  //   >
-  //     <button
-  //       onMouseEnter={() => {
-  //         setBoxShadow(`10px 10px 5px 0px ${japaneseThemePalette.PowerPurple}`);
-  //       }}
-  //       onMouseLeave={() => {
-  //         setBoxShadow("10px 10px 5px 0px rgba(0,0,0,0.75)");
-  //       }}
-  //       style={{
-  //         boxShadow: boxShadow,
-  //         backgroundColor: japaneseThemePalette.PowerPink,
-  //       }}
-  //       onClick={() => {
-  //         setIsModalOpen(true);
-  //       }}
-  //     >
-  //       ❤️
-  //     </button>
-  //     <Modal
-  //       centered
-  //       fullscreen={false}
-  //       show={isModalOpen}
-  //       // show={true}
-  //       onHide={() => setIsModalOpen(false)}
-  //       keyboard={true}
-  //     >
-  //       <Modal.Header
-  //         closeButton
-  //         style={{
-  //           backgroundColor: "black",
-  //           color: "white",
-  //           display: "flex",
-  //           justifyContent: "space-between",
-  //           width: "100%",
-  //           borderTop: "5px solid lavender",
-  //           borderLeft: "5px solid lavender",
-  //           borderRight: "5px solid lavender",
-  //         }}
-  //       >
-  //         <Modal.Title>Conversation Grader</Modal.Title>
-  //         &nbsp;&nbsp; &nbsp;
-  //         <Button
-  //           variant="primary"
-  //           onClick={() => handleConversation(true)}
-  //           disabled={isGrading || isAiResponseLoading}
-  //         >
-  //           Grade
-  //         </Button>
-  //       </Modal.Header>
-  //       <Modal.Body
-  //         //   onHide={() => setIsModalOpen(false)}
-  //         style={{
-  //           padding: 0,
-  //           backgroundColor: "black",
-  //           color: "white",
-  //           padding: 24,
-  //           borderLeft: "5px solid lavender",
-  //           borderRight: "5px solid lavender",
-  //         }}
-  //       >
-  //         <div
-  //           style={{
-  //             border: "3px solid pink",
-  //             cursor: "pointer",
+  // return <div>{children}</div>;
+  return (
+    <div
+      style={{
+        ...textBlock(
+          japaneseThemePalette.PowerPurple,
+          0,
+          12,
+          "white",
+          "4px 4px 5px 0px rgba(0,0,0,0.75)"
+        ),
+      }}
+    >
+      <button
+        onMouseEnter={() => {
+          setBoxShadow(`6px 6px 5px 0px ${japaneseThemePalette.PowerPurple}`);
+        }}
+        onMouseLeave={() => {
+          setBoxShadow("6px 6px 5px 0px rgba(0,0,0,0.75)");
+        }}
+        style={{
+          boxShadow: boxShadow,
+          backgroundColor: "#FFD68B",
+        }}
+        onClick={() => {
+          setIsModalOpen(true);
+        }}
+      >
+        ⭐
+      </button>
+      <Modal
+        centered
+        fullscreen={false}
+        show={isModalOpen}
+        // show={true}
+        onHide={() => setIsModalOpen(false)}
+        keyboard={true}
+      >
+        <Modal.Header
+          closeButton
+          closeVariant="white"
+          style={{
+            backgroundColor: "black",
+            color: "white",
+            display: "flex",
+            justifyContent: "space-between",
+            width: "100%",
+            borderTop: "5px solid lavender",
+            borderLeft: "5px solid lavender",
+            borderRight: "5px solid lavender",
+          }}
+        >
+          <Modal.Title style={{ fontFamily: "Bungee" }}>
+            Conversation Grader
+          </Modal.Title>
+          &nbsp;&nbsp; &nbsp;
+          <Button
+            variant="primary"
+            onClick={() => handleConversation(true)}
+            disabled={isGrading || isAiResponseLoading}
+          >
+            Grade
+          </Button>
+        </Modal.Header>
+        <Modal.Body
+          //   onHide={() => setIsModalOpen(false)}
+          style={{
+            padding: 0,
+            backgroundColor: "black",
+            color: "white",
+            padding: 24,
+            borderLeft: "5px solid lavender",
+            borderRight: "5px solid lavender",
+          }}
+        >
+          <div
+            style={{
+              border: "3px solid pink",
+              cursor: "pointer",
 
-  //             ...textBlock(japaneseThemePalette.FujiSanBlue, 0, 12),
-  //             boxShadow: " -4px -5px 0px 0px rgba(9,0,255,1)",
-  //           }}
-  //           onClick={() => setIsConversationContextWindowOpen(true)}
-  //         >
-  //           View quiz
-  //         </div>
-  //         <ConversationGrader
-  //           type={type}
-  //           instructions={instructions}
-  //           conversationInput={conversationInput}
-  //           setConversationInput={setConversationInput}
-  //           conversation={conversation}
-  //           gradeResult={gradeResult}
-  //         />
-  //       </Modal.Body>
-  //       <Modal.Footer
-  //         style={{
-  //           backgroundColor: "black",
-  //           borderBottom: "5px solid lavender",
-  //           borderLeft: "5px solid lavender",
-  //           borderRight: "5px solid lavender",
-  //         }}
-  //       >
-  //         <Button
-  //           variant="dark"
-  //           onClick={() => {
-  //             setIsModalOpen(false);
-  //           }}
-  //           disabled={isGrading || isAiResponseLoading}
-  //         >
-  //           Exit
-  //         </Button>
+              ...textBlock(japaneseThemePalette.FujiSanBlue, 0, 12),
+              boxShadow: " -4px -5px 0px 0px rgba(9,0,255,1)",
+            }}
+            onClick={() => setIsConversationContextWindowOpen(true)}
+          >
+            View quiz
+          </div>
+          <ConversationGrader
+            type={type}
+            instructions={instructions}
+            conversationInput={conversationInput}
+            setConversationInput={setConversationInput}
+            conversation={conversation}
+            gradeResult={gradeResult}
+          />
+        </Modal.Body>
+        <Modal.Footer
+          style={{
+            backgroundColor: "black",
+            borderBottom: "5px solid lavender",
+            borderLeft: "5px solid lavender",
+            borderRight: "5px solid lavender",
+          }}
+        >
+          <Button
+            variant="dark"
+            onClick={() => {
+              setIsModalOpen(false);
+            }}
+            disabled={isGrading || isAiResponseLoading}
+          >
+            Exit
+          </Button>
 
-  //         <Button
-  //           variant="dark"
-  //           onClick={() => handleConversation(false)}
-  //           disabled={isGrading || isAiResponseLoading}
-  //         >
-  //           Add to conversation
-  //         </Button>
-  //       </Modal.Footer>
-  //     </Modal>
-  //     <Modal show={isConversationContextWindowOpen} centered keyboard onHide={() => setIsModalOpen(false)}>
-  //       <Modal.Header
-  //         closeButton
-  //         style={EmotionalIntelligenceStyles.EmotionHeader}
-  //       >
-  //         <Modal.Title>ConversationGrader4444</Modal.Title>
-  //       </Modal.Header>
-  //       <Modal.Body style={EmotionalIntelligenceStyles.EmotionBody}>
-  //         {children}
-  //       </Modal.Body>
-  //       <Modal.Footer style={EmotionalIntelligenceStyles.EmotionFooter}>
-  //         <Button
-  //           variant="dark"
-  //           onClick={() => setIsConversationContextWindowOpen(false)}
-  //         >
-  //           Exit
-  //         </Button>
-  //       </Modal.Footer>
-  //     </Modal>
-  //     <br /> <br />
-  //     {children}
-  //   </div>
-  // );
+          <Button
+            variant="dark"
+            onClick={() => handleConversation(false)}
+            disabled={isGrading || isAiResponseLoading}
+          >
+            Add to conversation
+          </Button>
+        </Modal.Footer>
+      </Modal>
+      <Modal
+        show={isConversationContextWindowOpen}
+        centered
+        keyboard
+        onHide={() => setIsConversationContextWindowOpen(false)}
+      >
+        <Modal.Header
+          closeButton
+          closeVariant="white"
+          style={EmotionalIntelligenceStyles.EmotionHeader}
+        >
+          <Modal.Title style={{ fontFamily: "Bungee" }}>
+            ConversationGrader4444
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body
+          style={{
+            ...EmotionalIntelligenceStyles.EmotionBody,
+            overflow: "scroll",
+          }}
+        >
+          {children}
+        </Modal.Body>
+        <Modal.Footer style={EmotionalIntelligenceStyles.EmotionFooter}>
+          <Button
+            variant="dark"
+            onClick={() => setIsConversationContextWindowOpen(false)}
+          >
+            Exit
+          </Button>
+        </Modal.Footer>
+      </Modal>
+      <br /> <br />
+      {children}
+    </div>
+  );
 };

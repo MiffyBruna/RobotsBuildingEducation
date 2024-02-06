@@ -2,6 +2,11 @@ import { ChatBlock } from "../Displays/ChatBlock/ChatBlock";
 import designOfEverydayThings from "../../media/images/designOfEverydayThings.png";
 import { ultimateEffeciencyJutsu } from "../ui";
 import { japaneseThemePalette, textBlock } from "../../../styles/lazyStyles";
+import { SchedulerBlock } from "../Displays/SchedulerBlock/SchedulerBlock";
+import MarkdownRenderer from "../../../ChatGPT/Patreon/MarkdownRenderer/MarkdownRenderer";
+import inspire06 from "../../media/images/prompts/inspire06.jpg";
+import inspire07 from "../../media/images/prompts/inspire07.jpg";
+import inspire08 from "../../media/images/prompts/inspire08.png";
 
 export const Creator = {
   Communications: {
@@ -52,9 +57,24 @@ export const Creator = {
           response: `null`,
           spanish: ``,
           tooltip: ``,
-          additionalContent: await import("../../markdowns/philosophy.md?raw"),
+          // additionalContent: await import("../../markdowns/philosophy.md?raw"),
+          summaryContent: (
+            <div
+              style={{
+                overflowWrap: "break-word",
+                whiteSpace: "pre-wrap",
+              }}
+            >
+              <MarkdownRenderer
+                file={await import("../../markdowns/philosophy.md?raw")}
+                patreonObject={null}
+              />
+            </div>
+          ),
         },
         inspire: {
+          headerImageSrc: inspire06,
+          wikiLink: "https://en.wikipedia.org/wiki/Abraham_Lincoln",
           completed: false,
           impact: 100,
           action: `inspire`,
@@ -294,7 +314,7 @@ export const Creator = {
             `Philosophy`
           )}?`,
           response: (
-            <div>
+            <SchedulerBlock>
               <ol>
                 <li>
                   <b>"Enrique's Journey" by Sonia Nazario:</b>
@@ -442,7 +462,7 @@ export const Creator = {
                   </div>
                 </li>
               </ol>
-            </div>
+            </SchedulerBlock>
           ),
           spanish: ``,
           tooltip: ``,
@@ -574,8 +594,7 @@ export const Creator = {
             `Philosophy`
           )} without any answers?`,
           response: (
-            // <ChatBlock type={"quiz"}>
-            <div>
+            <ChatBlock type={"quiz"}>
               What does philosophy have to do with computer science?
               <br />
               <br />
@@ -608,22 +627,21 @@ export const Creator = {
               that promotes racial justice?
               <br />
               <br />
-            </div>
-            // {/* </ChatBlock> */}
+            </ChatBlock>
           ),
           spanish: ``,
           tooltip: ``,
         },
-        // shop: {
-        //   completed: false,
-        //   impact: 100,
-        //   action: `shop`,
-        //   icon: `🛍️`,
-        //   request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
-        //   response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
-        //   spanish: ``,
-        //   tooltip: ``,
-        // },
+        shop: {
+          completed: false,
+          impact: 100,
+          action: `shop`,
+          icon: `🛍️`,
+          request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
+          response: `This shopping slot is not being utilized yet. Please contact me in Patreon to qualify.`,
+          spanish: ``,
+          tooltip: ``,
+        },
       },
     },
     "Interactions & Design": {
@@ -653,11 +671,13 @@ export const Creator = {
               seas of Human-Computer Interaction, Entrepreneurship, and Design.
               It's a thrilling expedition where creativity meets innovation,
               guiding us through the art of making technology more human, dreams
-              more tangible, and designs more impactful. Are you ready to spark
-              change, weave connections, and envision a world where every
-              interaction and creation tells a story? Let's embark on this
-              journey together, crafting futures where technology dances
-              gracefully with human ambition. 🌐💼🎨
+              more tangible, and designs more impactful.
+              <br />
+              <br />
+              Are you ready to spark change, weave connections, and envision a
+              world where every interaction and creation tells a story? Let's
+              embark on this journey together, crafting futures where technology
+              dances gracefully with human ambition. 🌐💼🎨
             </div>
           ),
           spanish: ``,
@@ -674,27 +694,32 @@ export const Creator = {
           response: `null`,
           spanish: ``,
           tooltip: ``,
-          additionalContent: await import(
-            "../../markdowns/humanComputerInteraction.md?raw"
-          ),
+          // additionalContent: await import(
+          //   "../../markdowns/humanComputerInteraction.md?raw"
+          // ),
+
           summaryContent: (
-            <div>
-              UI/UX, or Interaction Design, is a multifaceted field blending
-              human-computer interaction, psychology, and technology. It
-              involves deep user research through surveys, polls, and interviews
-              to enhance product design beyond just aesthetics. This field
-              addresses complex challenges like improving user experiences in
-              diverse settings, from restaurants to digital platforms. It also
-              emphasizes accessibility, considering users with different needs,
-              which can lead to universally beneficial designs. Recognizing its
-              multidisciplinary nature, it's crucial in various fields, from
-              engineering to teaching. Design in this context is about engaging
-              users, understanding their needs, and constantly evolving through
-              research and feedback. 🎨💻🔍
+            <div
+              style={{
+                overflowWrap: "break-word",
+                whiteSpace: "pre-wrap",
+              }}
+            >
+              <MarkdownRenderer
+                file={
+                  await import(
+                    "../../markdowns/humanComputerInteraction.md?raw"
+                  )
+                }
+                patreonObject={null}
+              />
             </div>
           ),
         },
         inspire: {
+          headerImageSrc: inspire07,
+          wikiLink:
+            "https://en.wikipedia.org/wiki/The_Design_of_Everyday_Things",
           completed: false,
           impact: 100,
           action: `inspire`,
@@ -903,7 +928,7 @@ export const Creator = {
             `Human-Computer Interaction`
           )}?`,
           response: (
-            <div>
+            <SchedulerBlock>
               <h3>Human-Computer Interaction (HCI) Study Guide and Roadmap</h3>
 
               <h2>Step 1: Foundations</h2>
@@ -990,7 +1015,7 @@ export const Creator = {
                 further education, such as a master's degree in HCI or a related
                 field.
               </p>
-            </div>
+            </SchedulerBlock>
           ),
           spanish: ``,
           tooltip: ``,
@@ -1087,8 +1112,7 @@ export const Creator = {
             `Human-Computer Interaction`
           )} without any answers?`,
           response: (
-            // <ChatBlock type={"quiz"}>
-            <div>
+            <ChatBlock type={"quiz"}>
               Question 1
               <br />
               <br />
@@ -1125,56 +1149,57 @@ export const Creator = {
               How can the principles of human-computer interaction be adapted to
               accommodate the diverse ways in which different cultures express
               themselves digitally?
-            </div>
-            // {/* </ChatBlock> */}
+            </ChatBlock>
           ),
           spanish: ``,
           tooltip: ``,
         },
-        // shop: {
-        //   completed: false,
-        //   impact: 100,
-        //   action: `shop`,
-        //   icon: `🛍️`,
-        //   request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
-        //   response: (
-        //     <div>
-        //       <div
-        //         style={{
-        //           ...textBlock(
-        //             japaneseThemePalette.PowerPurple,
-        //             0,
-        //             12,
-        //             "white",
-        //             "0px 0px 5px 0px rgba(0,0,0,0.75)"
-        //           ),
-        //         }}
-        //       >
-        //         Don Norman is considered influential in the formation of the
-        //         UI/UX industry and leads the organization at nngroup.com. This
-        //         book is an introduction that teaches you how to approach the
-        //         subject of design.
-        //       </div>
+        shop: {
+          completed: false,
+          impact: 100,
+          action: `shop`,
+          icon: `🛍️`,
+          request: `Alright bro, show me what you got. I wanna shop and support this network more.`,
+          response: (
+            <div>
+              <div
+                style={
+                  {
+                    // ...textBlock(
+                    //   japaneseThemePalette.PowerPurple,
+                    //   0,
+                    //   12,
+                    //   "white",
+                    //   "0px 0px 5px 0px rgba(0,0,0,0.75)"
+                    // ),
+                  }
+                }
+              >
+                Don Norman is considered influential in the formation of the
+                UI/UX industry and leads the organization at nngroup.com. This
+                book is an introduction that teaches you how to approach the
+                subject of design.
+              </div>
 
-        //       <br />
+              <br />
 
-        //       <div>
-        //         <img
-        //           style={{
-        //             // border: "1px solid cyan",
-        //             borderRadius: 12,
-        //             // boxShadow: "1px 1px 3px 2px rgba(0,255,140,1)",
-        //             boxShadow:
-        //               "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
-        //           }}
-        //           src={designOfEverydayThings}
-        //         />
-        //       </div>
-        //     </div>
-        //   ),
-        //   spanish: ``,
-        //   tooltip: ``,
-        // },
+              <div>
+                <img
+                  style={{
+                    // border: "1px solid cyan",
+                    borderRadius: 12,
+                    // boxShadow: "1px 1px 3px 2px rgba(0,255,140,1)",
+                    boxShadow:
+                      "0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)",
+                  }}
+                  src={designOfEverydayThings}
+                />
+              </div>
+            </div>
+          ),
+          spanish: ``,
+          tooltip: ``,
+        },
       },
     },
     "The Psychology Of Self-esteem": {
@@ -1259,6 +1284,8 @@ export const Creator = {
           ),
         },
         inspire: {
+          headerImageSrc: inspire08,
+          wikiLink: "https://en.wikipedia.org/wiki/Maya_Angelou",
           completed: false,
           impact: 100,
           action: `inspire`,
@@ -1268,62 +1295,42 @@ export const Creator = {
           )}?`,
           response: (
             <div>
-              <h3>The Life of J.K. Rowling 📚</h3>
-              <p>
-                Joanne Rowling was born in Yate, England, in 1965. She always
-                dreamed of being a writer but faced numerous obstacles along the
-                way. After graduating from the University of Exeter, she worked
-                in various jobs, including as a researcher and a bilingual
-                secretary, but she was not content.
-              </p>
-
-              <h4>Early Struggles and Low Points 🌧️</h4>
-              <p>
-                Rowling moved to Portugal to teach English, where she married
-                and had a daughter. The marriage ended in divorce, and Rowling
-                returned to the UK as a single mother living on state benefits.
-                She was clinically depressed and considered herself a failure.
-                This was a low point in her life, where her self-esteem was
-                severely tested.
-              </p>
-
-              <h4>The Birth of Harry Potter ⚡</h4>
-              <p>
-                During a train journey, the idea for "Harry Potter" popped into
-                her head. Even though she was struggling, Rowling believed in
-                her story. She spent years crafting the first book, facing
-                numerous rejections from publishers. Her self-esteem was
-                bolstered by her belief in her work and her desire to prove
-                herself.
-              </p>
-
-              <h4>Impact on Society 🌍</h4>
-              <p>
-                Once published, "Harry Potter" became a cultural phenomenon. It
-                didn't just entertain; it encouraged a whole generation to read
-                and explore themes of friendship, courage, and the importance of
-                choices. The books have been translated into numerous languages,
-                and the films have grossed billions worldwide.
-              </p>
-
-              <h4>The Ripple Effect 🌊</h4>
-              <p>
-                Rowling's journey from a struggling single mother to one of the
-                most successful authors in history has made her a symbol of
-                resilience and the power of self-belief. Her story has inspired
-                countless individuals to overcome their challenges, boosting
-                their own self-esteem and making meaningful contributions to
-                society.
-              </p>
-
-              <h4>Final Thoughts 🌟🌈</h4>
-              <p>
-                So, my bright students, J.K. Rowling's life shows us that no
-                matter how difficult your circumstances may be, your self-esteem
-                and belief in your own abilities can help you rise above them.
-                What do you think you could achieve if you truly believed in
-                yourselves?
-              </p>
+              Maya Angelou's life story is a testament to the resilience of the
+              human spirit and the transformative power of words and courage.
+              Born Marguerite Annie Johnson in 1928 in St. Louis, Missouri,
+              Angelou faced numerous challenges from a young age, including
+              racial discrimination, poverty, and a traumatic event that led her
+              to become mute for nearly five years. However, this period of
+              silence became a time of deep learning and reflection for Angelou.
+              She developed an insatiable appetite for literature, absorbing the
+              works of authors such as William Shakespeare, Langston Hughes, and
+              W.E.B. Du Bois, which would later influence her own writing.
+              <br />
+              <br />
+              Angelou's journey from silence to voice was not just about finding
+              her own voice but also about lifting others with her words. Her
+              first autobiography, "I Know Why the Caged Bird Sings," broke new
+              ground as it vividly recounted her early years with an honesty and
+              strength that resonated with readers worldwide. This book not only
+              made her a literary star but also a symbol of strength,
+              resilience, and the ability to overcome adversity.
+              <br />
+              <br />
+              Angelou's contributions went beyond literature; she was a dancer,
+              actress, director, and civil rights activist who worked with
+              Martin Luther King Jr. and Malcolm X. Throughout her life, Angelou
+              inspired many with her wisdom, grace, and unwavering commitment to
+              justice and human rights. Her words, both spoken and written,
+              continue to inspire and influence people around the world,
+              reminding us of the power of storytelling, the importance of
+              history, and the strength found in diversity.
+              <br />
+              <br />
+              Angelou's legacy is a beacon of hope and resilience, teaching us
+              that no matter the obstacles, one can rise and inspire change
+              through courage, determination, and the power of words. Her life
+              story encourages us to embrace our histories, speak our truths,
+              and strive for a better, more inclusive world.
             </div>
           ),
           spanish: ``,
@@ -1453,7 +1460,7 @@ export const Creator = {
             `The Psychology Of Self-esteem`
           )}?`,
           response: (
-            <div>
+            <SchedulerBlock>
               <h4>
                 Roadmap to Becoming a Professional Psychologist in Self-Esteem
                 🌟
@@ -1507,7 +1514,7 @@ export const Creator = {
                 Specialize in self-esteem issues, build a client base, and make
                 a meaningful impact.
               </p>
-            </div>
+            </SchedulerBlock>
           ),
           spanish: ``,
           tooltip: ``,

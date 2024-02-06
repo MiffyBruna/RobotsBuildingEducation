@@ -149,7 +149,11 @@ const Patreon = ({
     return renderMarkdown(patreonObject, handleScheduler);
   };
 
-  return <div key={patreonObject.button}>{determineFileView()}</div>;
+  return (
+    <div style={{ padding: 20 }} key={patreonObject.button}>
+      {determineFileView()}
+    </div>
+  );
 };
 
 export default Patreon;

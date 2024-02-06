@@ -1,23 +1,23 @@
 import React, { useState, useEffect } from "react";
 
+export const processChildren = (children) => {
+  // Flatten the children and split text nodes into words, preserving JSX elements
+  let elements = [];
+  React.Children.forEach(children, (child) => {
+    if (typeof child === "string") {
+      elements.push(
+        ...child.split(" ").map((word) => ({ type: "word", value: word }))
+      );
+    } else {
+      elements.push({ type: "jsx", value: child });
+    }
+  });
+  return elements;
+};
+
 export const Typewriter = ({ speed, children }) => {
   const [displayedContent, setDisplayedContent] = useState([]);
   const [index, setIndex] = useState(0);
-
-  const processChildren = (children) => {
-    // Flatten the children and split text nodes into words, preserving JSX elements
-    let elements = [];
-    React.Children.forEach(children, (child) => {
-      if (typeof child === "string") {
-        elements.push(
-          ...child.split(" ").map((word) => ({ type: "word", value: word }))
-        );
-      } else {
-        elements.push({ type: "jsx", value: child });
-      }
-    });
-    return elements;
-  };
 
   const childrenArray = processChildren(children);
 
