@@ -9,8 +9,12 @@ const containerStyle = {
   alignItems: "center",
   position: "sticky",
   bottom: 0,
-  width: "100%",
+  width: "min-width",
   backgroundColor: "rgba(28,28,30,0.75)",
+  // border: "1px solid red",
+  zIndex: 1000000,
+  boxShadow: "0px 0px 6px 0px rgba(0,0,0,0.75)",
+  border: "1px solid orange",
 };
 
 // Calculate the compute percentage

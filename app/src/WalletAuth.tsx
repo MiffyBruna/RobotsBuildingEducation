@@ -51,11 +51,11 @@ export const WalletAuth = ({ handleZeroKnowledgePassword }) => {
   return (
     <>
       <Toaster />
-
+      {/* 
       <DisableButton variant="primary" disabled={true}>
         Connect Wallet (disabled)
-      </DisableButton>
-      {/* <Button
+      </DisableButton> */}
+      <Button
         // disabled={true}
         appName="Robots Building Education"
         onConnect={() => {
@@ -63,7 +63,7 @@ export const WalletAuth = ({ handleZeroKnowledgePassword }) => {
           toast("Connected!");
           handleZeroKnowledgePassword(null, null, true);
         }}
-      /> */}
+      />
     </>
   );
 };

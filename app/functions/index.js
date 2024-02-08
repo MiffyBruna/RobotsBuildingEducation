@@ -13,8 +13,8 @@ const openai = new OpenAI({
 
 // const client = new Client({ intents: [
 //   GatewayIntentBits.Guilds,
-//   GatewayIntentBits.GuildMembers, 
-//   GatewayIntentBits.GuildMessages, 
+//   GatewayIntentBits.GuildMembers,
+//   GatewayIntentBits.GuildMessages,
 //   GatewayIntentBits.DirectMessages,
 //   GatewayIntentBits.MessageContent
 // ] });
@@ -30,27 +30,23 @@ app.use(cors());
 app.use(express.json());
 app.use(bodyParser.json());
 
-
-
-
-
 app.post("/prompt", async (req, res) => {
   try {
     const prompt = req.body.prompt;
     let constructor = {
       model: "gpt-4-0125-preview",
       messages: [{ role: "user", content: prompt }],
-    }
+    };
 
-    if(req?.body?.isJsonMode){
+    if (req?.body?.isJsonMode) {
       constructor.response_format = { type: "json_object" };
       constructor.messages = [
         {
           role: "system",
           content: "You are a helpful assistant designed to output JSON.",
         },
-        { role: "user", content: prompt }
-      ]
+        { role: "user", content: prompt },
+      ];
     }
 
     const completion = await openai.chat.completions.create(constructor);
@@ -59,7 +55,6 @@ app.post("/prompt", async (req, res) => {
       bot: completion.choices[0].message,
     });
   } catch (error) {
-
     res.status(500).send({ error });
   }
 });
@@ -71,18 +66,20 @@ app.post("/create-image", async (req, res) => {
 
     // Set up the request data for DALL-E
     const imageRequest = {
-      model: "dall-e-3",
-      prompt: imagePrompt,
+      model: "dall-e-2",
+      // prompt: imagePrompt,
+      prompt: "an image of a happy but evil genius robot named rox......",
       n: 1, // Number of images to generate
-      size: "512x512" // Image resolution
+      size: "256x256", // Image resolution
     };
 
     // Request DALL-E to create the image
-    const imageResponse = await openai.images.generate(imageRequest);
+    // const imageResponse = await openai.images.generate(imageRequest);
+    const imageResponse = await openai.createImage(imageRequest);
 
     // Send the generated image or image URL in the response
     res.status(200).send({
-      imageUrl: imageResponse.data // Assuming the response contains the URL of the generated image
+      imageUrl: imageResponse.data, // Assuming the response contains the URL of the generated image
     });
   } catch (error) {
     // Handle errors
@@ -90,9 +87,8 @@ app.post("/create-image", async (req, res) => {
   }
 });
 
-
 // app.post('/setTimer', (req, res) => {
-  
+
 //   const userId = req.body.userId; // Get Discord User ID from the request
 //   // Set a timer for 12 hours and then remind the user
 
@@ -103,7 +99,7 @@ app.post("/create-image", async (req, res) => {
 //   })
 //   // }, 12 * 60 * 60 * 1000); // 12 hours in milliseconds
 
-//   res.send('Timer set!'); 
+//   res.send('Timer set!');
 // });
 
 // app.post('/setTimer', (req, res) => {

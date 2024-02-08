@@ -129,10 +129,15 @@ export const Passcode = ({ handleZeroKnowledgePassword, patreonObject }) => {
           }}
         >
           <h3 style={{ fontFamily: "Bungee" }}>Connecting with wallet</h3>
-          Robots Building Education 4.0 is in an experimental phase. Most users
-          that I target will not have the ability to log in until they
-          understand how Bitcoin works more. It's my goal to reduce friction and
-          improve the user experience.
+          Robots Building Education 4.0 is in an experimental phase. The
+          intention is to redistribute micropayments to schools in need by tying
+          Bitcoin to learning events. If you use the app's robots, you're
+          helping schools improve.
+          <br />
+          <br />
+          Most users that I target will not have the ability to log in until
+          they understand how Bitcoin works more. It's my goal to reduce
+          friction and improve the user experience.
           <br />
           <br />
           If you need further help, please remember that most of the material in

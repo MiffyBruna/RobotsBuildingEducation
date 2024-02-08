@@ -56,8 +56,9 @@ export const ProofOfWork = ({
       Need to refactor this. 
       Impact wallet should only be the modal
       EmotionalIntelligence is not a child of Impact Wallet. */}
-      <div style={{ marginBottom: 6 }}>👾 {displayName}</div>
+
       <ImpactWallet
+        displayName={displayName}
         handlePathSelection={handlePathSelection}
         databaseUserDocument={databaseUserDocument}
         computePercentage={computePercentage}

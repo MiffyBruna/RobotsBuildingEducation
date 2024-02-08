@@ -23,6 +23,7 @@ import { RobotDialogue } from "../Displays/RobotDialogue/RobotDialogue";
 
 import RandomCharacter from "../Displays/RandomCharacter/RandomCharacter";
 import { SchedulerBlock } from "../Displays/SchedulerBlock/SchedulerBlock";
+import { ArtBlock } from "../Displays/ArtBlock/ArtBlock";
 
 export const Engineer = {
   "Coding Crash Course Version 3": {
@@ -125,6 +126,7 @@ export const Engineer = {
             `Learn Coding`
           )}?`,
           response: (
+            // <ArtBlock>
             <div>
               Meet Kismet, a robot developed by Cynthia Breazeal at the MIT
               Media Lab back in the late 1990s 🤖. Kismet wasn't just any robot;

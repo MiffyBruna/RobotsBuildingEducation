@@ -46,7 +46,14 @@ const SummaryItem = ({ question, answer, index }) => {
           onClick={() => setOpen(!open)}
           style={{
             // backgroundColor: japaneseThemePalette.StrongBlue,
-            ...textBlock("#E116C4", 1, 8, "white", null, 25),
+            ...textBlock(
+              japaneseThemePalette?.WisteriaPurple,
+              1,
+              8,
+              "white",
+              null,
+              25
+            ),
 
             // backgroundColor: "#63FEA2",
             // color: "white",
@@ -78,7 +85,7 @@ export const RevealButton = ({ content }) => {
           style={{
             maxWidth: "100%",
             // width: 700 /* Add your text block styles here */,
-            ...textBlock(getRandomColor(), 0),
+            ...textBlock(japaneseThemePalette?.KyotoPurple, 0),
           }}
         >
           {content}

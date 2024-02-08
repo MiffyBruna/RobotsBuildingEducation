@@ -492,7 +492,7 @@ export let textBlock = (
     backgroundColor: backgroundColor,
     borderRadius: borderRadius,
     padding: padding,
-    textShadow: `${shadowSize}px ${shadowSize}px ${shadowSize || 10}px black`,
+    textShadow: `${shadowSize}px ${shadowSize}px ${shadowSize || 6}px black`,
     color: color,
     boxShadow: boxShadow,
   };

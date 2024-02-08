@@ -45,6 +45,8 @@ logEvent(analytics, "page_view", {
 
 let App = ({ canInstallPwa }) => {
   let zap = useZap(1, "Robots Building Education Zap");
+
+  const [loading, setLoading] = useState(true);
   // handles passcode, google sign in and registered user info
   const { authStateReference } = useAuthState();
 
@@ -207,6 +209,10 @@ let App = ({ canInstallPwa }) => {
     //     );
     // }
 
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000); // 2000 milliseconds = 2 seconds
+
     const storedPasscode = localStorage.getItem("patreonPasscode");
 
     authStateReference.setIsZeroKnowledgeUser(
@@ -235,7 +241,7 @@ let App = ({ canInstallPwa }) => {
     });
   }, []);
 
-  if (typeof authStateReference.isSignedIn == "string") {
+  if (loading || typeof authStateReference.isSignedIn == "string") {
     return (
       <div
         style={{
@@ -245,7 +251,9 @@ let App = ({ canInstallPwa }) => {
           justifyContent: "center",
         }}
       >
-        <RoxanaLoadingAnimation />
+        <RiseUpAnimation>
+          <RoxanaLoadingAnimation />
+        </RiseUpAnimation>
       </div>
     );
   }

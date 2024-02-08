@@ -107,6 +107,7 @@ const renderCheckboxes = (profileData) => {
 };
 
 export const ImpactWallet = ({
+  displayName,
   isChatFrameOpen,
   setIsChatFrameOpen,
   globalScholarshipCounter,
@@ -171,7 +172,21 @@ export const ImpactWallet = ({
 
   return (
     <>
-      <div>
+      <div style={{ padding: 6 }}>
+        <span style={{ fontSize: "66%" }}>
+          <b style={{ fontFamily: "Bungee" }}>
+            {displayName
+              .split(" ")
+              .map((name) => name[0].toUpperCase())
+              .join("")}
+          </b>
+          {/* 👾 -&nbsp;
+          {databaseUserDocumentCopy?.impact / 1000 ||
+            databaseUserDocument?.impact / 1000 ||
+            0}{" "} */}{" "}
+          &nbsp;
+        </span>
+        &nbsp;
         {!isDemo ? (
           <Button
             style={{ textShadow: "2px 2px 12px black" }}
@@ -279,8 +294,7 @@ export const ImpactWallet = ({
             </StarsContainer>
           </Button>
         </Link>
-        &nbsp; &nbsp; &nbsp;{" "}
-        {databaseUserDocumentCopy?.impact || databaseUserDocument?.impact || 0}{" "}
+        {/* &nbsp; &nbsp; &nbsp;{" "} */}
         <div>
           <ProgressBar
             style={{
@@ -288,6 +302,8 @@ export const ImpactWallet = ({
               borderRadius: "0px",
               margin: 6,
               height: 6,
+              borderRadius: 4,
+              backgroundColor: "pink",
             }}
             variant="success"
             now={Math.floor(computePercentage * 100)}
