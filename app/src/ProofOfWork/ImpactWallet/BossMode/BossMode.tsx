@@ -6,7 +6,7 @@ import styled from "styled-components";
 import { MultipleChoiceQuestion } from "./Templates/MultipleChoiceQuestion/MultipleChoiceQuestion";
 import { TextInputQuestion } from "./Templates/TextInputQuestion/TextInputQuestion";
 import { getDoc, updateDoc } from "firebase/firestore";
-import { updateLevel } from "../../../App.compute";
+import { updateImpact, updateLevel } from "../../../App.compute";
 import { OutputQuestion } from "./Templates/OutputQuestion/OutputQuestion";
 import { japaneseThemePalette } from "../../../styles/lazyStyles";
 import { SelectionQuestion } from "./Templates/SelectionQuestion/SelectionQuestion";
@@ -1426,6 +1426,7 @@ export const BossMode = ({
   userStateReference,
   globalStateReference,
   zap,
+  handleZap,
 }) => {
   //   console.log("user state reference", userStateReference);
 
@@ -1545,6 +1546,18 @@ export const BossMode = ({
       localStorage.setItem("isAnswerCorrect", "false");
     }
 
+    if (
+      localStorage.getItem("patreonPasscode") ===
+      import.meta.env.VITE_BITCOIN_PASSCODE
+    ) {
+      zap().then((lightningResponse) => {
+        if (lightningResponse?.preimage) {
+          updateImpact(1, userStateReference, globalStateReference);
+        }
+      });
+    }
+
+    handleZap("ai");
     setGameActive(true);
     const now = new Date();
     localStorage.setItem("lastCorrectAnswerTime", now);
@@ -1678,11 +1691,11 @@ export const BossMode = ({
             />
           )}
         </Modal.Body>
-        <Modal.Footer style={{ backgroundColor: "black" }}>
+        {/* <Modal.Footer style={{ backgroundColor: "black" }}>
           <Button variant="dark" onClick={() => setIsBossModeOpen(false)}>
             Back to app
           </Button>
-        </Modal.Footer>
+        </Modal.Footer> */}
       </Modal>
     </>
   );

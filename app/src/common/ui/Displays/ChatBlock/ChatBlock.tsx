@@ -10,6 +10,7 @@ import {
   gatherConversationContext,
 } from "./ChatBlock.compute";
 import { postInstructions } from "../../../uiSchema";
+import { useZapAnimation } from "../../../../App.hooks";
 
 export const EmotionalIntelligenceStyles = {
   Header: {
@@ -82,7 +83,7 @@ export const EmotionalIntelligenceStyles = {
     color: "white",
     borderRight: "5px solid lavender",
     borderLeft: "5px solid lavender",
-    height: 625,
+    height: 500,
   },
 
   EmotionFooter: {
@@ -132,6 +133,7 @@ export const EmotionalIntelligenceStyles = {
   },
 };
 export let ChatBlock = ({ children, type = "quiz" }) => {
+  const zapAnimation = useZapAnimation();
   const [isConversationContextWindowOpen, setIsConversationContextWindowOpen] =
     useState(false);
   const [conversationInput, setConversationInput] = useState("");
@@ -152,6 +154,8 @@ export let ChatBlock = ({ children, type = "quiz" }) => {
   let handleConversation = async (grade = false) => {
     let convoData = "";
     let prompt = "";
+
+    zapAnimation();
     if (!grade) {
       setConversation([
         ...conversation,
@@ -275,6 +279,7 @@ export let ChatBlock = ({ children, type = "quiz" }) => {
         // show={true}
         onHide={() => setIsModalOpen(false)}
         keyboard={true}
+        style={{ zIndex: 1000000 }}
       >
         <Modal.Header
           closeButton
@@ -320,6 +325,7 @@ export let ChatBlock = ({ children, type = "quiz" }) => {
 
               ...textBlock(japaneseThemePalette.FujiSanBlue, 0, 12),
               boxShadow: " -4px -5px 0px 0px rgba(9,0,255,1)",
+              padding: 6,
             }}
             onClick={() => setIsConversationContextWindowOpen(true)}
           >
@@ -342,7 +348,7 @@ export let ChatBlock = ({ children, type = "quiz" }) => {
             borderRight: "5px solid lavender",
           }}
         >
-          <Button
+          {/* <Button
             variant="dark"
             onClick={() => {
               setIsModalOpen(false);
@@ -350,7 +356,7 @@ export let ChatBlock = ({ children, type = "quiz" }) => {
             disabled={isGrading || isAiResponseLoading}
           >
             Exit
-          </Button>
+          </Button> */}
 
           <Button
             variant="dark"
@@ -366,6 +372,7 @@ export let ChatBlock = ({ children, type = "quiz" }) => {
         centered
         keyboard
         onHide={() => setIsConversationContextWindowOpen(false)}
+        style={{ zIndex: 100000000 }}
       >
         <Modal.Header
           closeButton

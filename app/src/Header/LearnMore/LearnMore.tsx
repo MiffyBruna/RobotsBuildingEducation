@@ -100,11 +100,11 @@ export const LearnMore = ({ languageMode, canInstallPwa }) => {
           <br />
           <DiscordButton />
         </Modal.Body>
-        <Modal.Footer style={{ backgroundColor: "black", color: "white" }}>
+        {/* <Modal.Footer style={{ backgroundColor: "black", color: "white" }}>
           <Button variant="dark" onClick={() => setIsModalOpen(false)}>
             Back to app
           </Button>
-        </Modal.Footer>
+        </Modal.Footer> */}
       </Modal>
     </>
   );

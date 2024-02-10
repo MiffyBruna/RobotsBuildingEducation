@@ -226,6 +226,7 @@ export const Cofounder = ({
   userStateReference,
   globalStateReference,
   zap,
+  handleZap,
 }) => {
   const [formData, setFormData] = useState({
     creationDescription: "",
@@ -323,6 +324,7 @@ export const Cofounder = ({
 
       //   let outcome = result.schedule;
       let outcome = data?.bot?.content;
+      handleZap("ai");
       setCofounder(outcome);
     }
     setIsCofounderLoading(false);
@@ -366,6 +368,7 @@ export const Cofounder = ({
       let result = JSON.parse(data?.bot?.content);
 
       let outcome = result.result;
+      handleZap("ai");
       setCodeBreakdown(outcome);
     }
     setIsCodeBreakdownLoading(false);
@@ -406,6 +409,7 @@ export const Cofounder = ({
       let data = await response.json();
       let result = JSON.parse(data?.bot?.content);
 
+      handleZap("ai");
       let outcome = result.result.script;
       setContentScript(outcome);
     }
@@ -485,6 +489,7 @@ export const Cofounder = ({
       //   let result = JSON.parse(data?.bot?.content);
 
       //   let outcome = result.schedule;
+      handleZap("ai");
       let outcome = data?.bot?.content;
       setBusinessWriting(outcome);
     }
@@ -529,6 +534,7 @@ export const Cofounder = ({
       });
 
     if (response) {
+      handleZap("ai");
       let data = await response.json();
       let result = JSON.parse(data?.bot?.content);
       let outcome = result.schedule;
@@ -796,11 +802,11 @@ export const Cofounder = ({
             </div>
           ) : null}
         </Modal.Body>
-        <Modal.Footer style={{ backgroundColor: "black", color: "white" }}>
+        {/* <Modal.Footer style={{ backgroundColor: "black", color: "white" }}>
           <Button variant="dark" onClick={() => setIsCofounderOpen(false)}>
             Back to app
           </Button>
-        </Modal.Footer>
+        </Modal.Footer> */}
       </Modal>
     </>
   );

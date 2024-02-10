@@ -37,8 +37,6 @@ const PromptButton = ({
   handleZap,
   zap,
 }) => {
-  console.log("action", action);
-  console.log("type", type);
   let actionVar = action === "generate" ? "discover" : action;
   if (
     localStorage.getItem("patreonPasscode") ===
@@ -78,6 +76,7 @@ const PromptButton = ({
       borderHighlight={"#48484a"}
       style={{ display: loading ? "none" : "flex" }}
       onClick={(e) => {
+        handleZap("lecture");
         onClick(e, prompt, type);
       }}
     >

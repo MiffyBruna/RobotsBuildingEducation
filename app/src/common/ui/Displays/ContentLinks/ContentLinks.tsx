@@ -68,11 +68,11 @@ export const ContentLinks = ({ patreonObject, type }) => {
             />
           </RiseUpAnimation>
         </Modal.Body>
-        <Modal.Footer style={{ backgroundColor: "black" }}>
+        {/* <Modal.Footer style={{ backgroundColor: "black" }}>
           <Button variant="dark" onClick={() => setIsWikiOpen(false)}>
             Back to app
           </Button>
-        </Modal.Footer>
+        </Modal.Footer> */}
       </Modal>
 
       <br />

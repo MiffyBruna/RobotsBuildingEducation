@@ -104,8 +104,8 @@ export const SunsetCanvas = () => {
     const canvas = canvasRef.current;
     const context = canvas.getContext("2d");
 
-    canvas.width = 375;
-    canvas.height = 375;
+    canvas.width = 300;
+    canvas.height = 300;
 
     animate(context);
 

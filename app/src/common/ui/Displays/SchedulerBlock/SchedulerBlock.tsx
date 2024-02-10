@@ -6,6 +6,9 @@ import styled from "styled-components";
 import { japaneseThemePalette, textBlock } from "../../../../styles/lazyStyles";
 import { RoxanaLoadingAnimation, postInstructions } from "../../../uiSchema";
 import { customInstructions } from "./SchedulerBlock.compute";
+import { useStore } from "../../../../Store";
+
+import { useZapAnimation } from "../../../../App.hooks";
 // import { customInstructions } from "./SchedulerBlock.compute";
 
 export const EmotionalIntelligenceStyles = {
@@ -23,7 +26,8 @@ export const EmotionalIntelligenceStyles = {
     color: "white",
     borderRight: "5px solid lavender",
     borderLeft: "5px solid lavender",
-    height: 625,
+    borderBottom: "5px solid lavender",
+    height: 500,
   },
 
   EmotionFooter: {
@@ -65,6 +69,8 @@ const Time = styled.p`
 const Explanation = styled.p``;
 
 export const SchedulerBlock = ({ children }) => {
+  const zapAnimation = useZapAnimation();
+
   const [isModalOpen, setIsModalOpen] = useState(false);
   let [boxShadow, setBoxShadow] = useState("6px 6px 5px 0px rgba(0,0,0,0.75)");
   const [formState, setFormState] = useState({
@@ -92,8 +98,10 @@ export const SchedulerBlock = ({ children }) => {
     //     // This is where you'd dynamically generate or fetch the data based on the form input
     //   ],
     // });
+
     setIsLoading(true);
     e.preventDefault();
+    zapAnimation();
     // Here you would normally submit the form data and fetch the API response
     // For this example, we're just setting it directly
 
@@ -257,6 +265,7 @@ export const SchedulerBlock = ({ children }) => {
         centered
         keyboard
         onHide={() => setIsModalOpen(false)}
+        style={{ zIndex: 1000000 }}
       >
         <Modal.Header
           closeButton
@@ -330,11 +339,11 @@ export const SchedulerBlock = ({ children }) => {
             </div>
           )}
         </Modal.Body>
-        <Modal.Footer style={EmotionalIntelligenceStyles.EmotionFooter}>
+        {/* <Modal.Footer style={EmotionalIntelligenceStyles.EmotionFooter}>
           <Button variant="dark" onClick={() => setIsModalOpen(false)}>
             Exit
           </Button>
-        </Modal.Footer>
+        </Modal.Footer> */}
       </Modal>
     </div>
   );

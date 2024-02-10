@@ -3681,7 +3681,8 @@ exports.app = functions
       prompts: {
         welcome: {
           response: (
-            <ChatBlock type={"quiz"}>
+            // <ChatBlock type={"quiz"}>
+            <div>
               Hello my brave students! 🌟
               <br /> <br />
               Welcome to your incredible journey as future startup founders and
@@ -3710,7 +3711,7 @@ exports.app = functions
                 width="100"
                 // borderRadius={"50%"}
               />
-            </ChatBlock>
+            </div>
           ),
           spanish: ``,
           tooltip: ``,

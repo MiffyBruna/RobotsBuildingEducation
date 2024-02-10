@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import isEmpty from "lodash/isEmpty";
-import { Button, Form, Modal, ProgressBar } from "react-bootstrap";
+import Lottie from "react-lottie";
+import { Button, Fade, Form, Modal, ProgressBar } from "react-bootstrap";
+import zap_animation from "../../common/anims/zap_animation.json";
+import star_animation from "../../common/anims/star_animation.json";
 import { getGlobalImpact } from "../../common/uiSchema";
 import sheilferBitcoin from "../../common/media/images/sheilferBitcoin.jpeg";
 import cashAppCard from "../../common/media/images/cashAppCard.jpeg";
@@ -11,7 +14,13 @@ import { DiscordButton } from "../../common/ui/Displays/DiscordButton/DiscordBut
 import { doc, getDoc } from "firebase/firestore";
 import { Link, useParams } from "react-router-dom";
 import { EmotionalIntelligence } from "./EmotionalIntelligence/EmotionalIntelligence";
-import { japaneseThemePalette, textBlock } from "../../styles/lazyStyles";
+import {
+  FadeInComponent,
+  PopAnimation,
+  RiseUpAnimation,
+  japaneseThemePalette,
+  textBlock,
+} from "../../styles/lazyStyles";
 
 import { Scheduler } from "./Scheduler/Scheduler";
 import { decentralizedEducationTranscript } from "../../App.constants";
@@ -140,6 +149,7 @@ export const ImpactWallet = ({
   zap,
   isBossModeOpen,
   setIsBossModeOpen,
+  handleZap,
 }) => {
   let [databaseUserDocumentCopy, setDatabaseUserDocumentCopy] = useState({});
 
@@ -170,130 +180,173 @@ export const ImpactWallet = ({
               ></iframe> 
   */
 
+  console.log("showZap", showZap);
   return (
     <>
       <div style={{ padding: 6 }}>
-        <span style={{ fontSize: "66%" }}>
-          <b style={{ fontFamily: "Bungee" }}>
-            {displayName
-              .split(" ")
-              .map((name) => name[0].toUpperCase())
-              .join("")}
-          </b>
-          {/* 👾 -&nbsp;
-          {databaseUserDocumentCopy?.impact / 1000 ||
-            databaseUserDocument?.impact / 1000 ||
-            0}{" "} */}{" "}
-          &nbsp;
-        </span>
-        &nbsp;
-        {!isDemo ? (
-          <Button
-            style={{ textShadow: "2px 2px 12px black" }}
-            onClick={() => {
-              logEvent(analytics, "select_content", {
-                content_type: "button",
-                item_id: "Boss Mode",
-              });
-              setIsBossModeOpen(true);
-            }}
-            variant="secondary"
-            // disabled
-          >
-            💎
-          </Button>
-        ) : null}
-        &nbsp; &nbsp;
-        {!isDemo ? (
-          <Button
-            style={{ textShadow: "2px 2px 12px black" }}
-            onClick={() => {
-              logEvent(analytics, "select_content", {
-                content_type: "button",
-                item_id: "Cofounder",
-              });
-              setIsCofounderOpen(true);
-            }}
-            variant="secondary"
-          >
-            🌀
-          </Button>
-        ) : null}
-        &nbsp; &nbsp;
-        {!isDemo ? (
-          <a
-            href="https://chat.openai.com/g/g-09h5uQiFC-ms-roxana"
-            target="_blank"
-          >
-            <Button
-              style={{ textShadow: "2px 2px 12px black" }}
-              onClick={() => {
-                logEvent(analytics, "select_content", {
-                  content_type: "button",
-                  item_id: "Scheduler",
-                });
-                // setIsChatFrameOpen(true);
-              }}
-              variant="secondary"
-            >
-              <img
-                src={roxanaChat}
-                width="16"
+        {showZap || showStars ? (
+          <div style={{ height: 38 }}>
+            {/* <FadeInComponent speed={2}> */}
+            {/* <PopAnimation> */}
+            {/* <span
                 style={{
-                  borderRadius: "50%",
-                  boxShadow: "2px 2px 12px black",
-                  marginBottom: 1,
+                  textShadow: "1px 1px 4px gold",
                 }}
+              >
+                {showStars ? "✨" : showZap ? "⚡" : null}
+              </span> */}
+            <FadeInComponent speed={1.5}>
+              <Lottie
+                options={{
+                  loop: true,
+                  autoplay: true,
+                  animationData: showZap ? zap_animation : star_animation, // Your animation data goes here
+                  // rendererSettings: {
+                  //   // preserveAspectRatio: "xMidYMid slice", // Adjust as needed
+                  // },
+                }}
+                width={showZap ? 40 : 55}
+                height={showZap ? 40 : 55}
               />
-            </Button>
-          </a>
-        ) : null}
-        &nbsp; &nbsp;
-        {!isDemo ? (
-          <Button
-            style={{ textShadow: "2px 2px 12px black" }}
-            onClick={() => {
-              logEvent(analytics, "select_content", {
-                content_type: "button",
-                item_id: "Therapy Session",
-              });
-              setIsEmotionalIntelligenceOpen(true);
-            }}
-            variant="secondary"
-          >
-            🫶🏽
-          </Button>
-        ) : null}
-        &nbsp; &nbsp;
-        <Link to={`/profile/${params?.profileID || userAuthObject?.uid}`}>
-          <Button
-            style={{ textShadow: "2px 2px 12px black" }}
-            onClick={() => {
-              logEvent(analytics, "select_content", {
-                content_type: "button",
-                item_id: "Proof of Work",
-              });
-              setIsImpactWalletOpen(true);
-            }}
-            variant="secondary"
-          >
-            🏦
-            <StarsContainer className={showStars ? "animate" : ""}>
-              {[...Array(10)].map((_, index) => (
+            </FadeInComponent>
+            {/* @ts-ignore */}
+            {/* </PopAnimation> */}
+            {/* </FadeInComponent> */}
+          </div>
+        ) : (
+          /* <StarsContainer
+              id="star-container"
+              className={showStars ? "animate" : ""}
+            >
+              {[...Array(25)].map((_, index) => (
                 <Star className="star" key={index}>
                   ✨
                 </Star>
               ))}
             </StarsContainer>
-            <StarsContainer className={showZap ? "animate" : ""}>
-              {[...Array(10)].map((_, index) => (
+            <StarsContainer
+              id="zap-container"
+              className={showZap ? "animate" : ""}
+            >
+              {[...Array(25)].map((_, index) => (
                 <Star className="zap" key={index}>
                   ⚡
                 </Star>
               ))}
-            </StarsContainer>
-          </Button>
-        </Link>
+            </StarsContainer> */
+
+          <FadeInComponent>
+            {" "}
+            <span style={{ fontSize: "66%" }}>
+              <b style={{ fontFamily: "Bungee" }}>
+                {displayName
+                  .split(" ")
+                  .map((name) => name[0].toUpperCase())
+                  .join("")}
+              </b>
+              {/* 👾 -&nbsp;
+          {databaseUserDocumentCopy?.impact / 1000 ||
+            databaseUserDocument?.impact / 1000 ||
+            0}{" "} */}{" "}
+              &nbsp;
+            </span>
+            &nbsp;
+            {!isDemo ? (
+              <Button
+                style={{ textShadow: "2px 2px 12px black" }}
+                onClick={() => {
+                  logEvent(analytics, "select_content", {
+                    content_type: "button",
+                    item_id: "Boss Mode",
+                  });
+                  setIsBossModeOpen(true);
+                }}
+                variant="secondary"
+                // disabled
+              >
+                💎
+              </Button>
+            ) : null}
+            &nbsp; &nbsp;
+            {!isDemo ? (
+              <Button
+                style={{ textShadow: "2px 2px 12px black" }}
+                onClick={() => {
+                  logEvent(analytics, "select_content", {
+                    content_type: "button",
+                    item_id: "Cofounder",
+                  });
+                  setIsCofounderOpen(true);
+                }}
+                variant="secondary"
+              >
+                🌀
+              </Button>
+            ) : null}
+            &nbsp; &nbsp;
+            {!isDemo ? (
+              <a
+                href="https://chat.openai.com/g/g-09h5uQiFC-ms-roxana"
+                target="_blank"
+              >
+                <Button
+                  style={{ textShadow: "2px 2px 12px black" }}
+                  onClick={() => {
+                    logEvent(analytics, "select_content", {
+                      content_type: "button",
+                      item_id: "Scheduler",
+                    });
+                    // setIsChatFrameOpen(true);
+                  }}
+                  variant="secondary"
+                >
+                  <img
+                    src={roxanaChat}
+                    width="16"
+                    style={{
+                      borderRadius: "50%",
+                      boxShadow: "2px 2px 12px black",
+                      marginBottom: 1,
+                    }}
+                  />
+                </Button>
+              </a>
+            ) : null}
+            &nbsp; &nbsp;
+            {!isDemo ? (
+              <Button
+                style={{ textShadow: "2px 2px 12px black" }}
+                onClick={() => {
+                  logEvent(analytics, "select_content", {
+                    content_type: "button",
+                    item_id: "Therapy Session",
+                  });
+                  setIsEmotionalIntelligenceOpen(true);
+                }}
+                variant="secondary"
+              >
+                🫶🏽
+              </Button>
+            ) : null}
+            &nbsp; &nbsp;
+            <Link to={`/profile/${params?.profileID || userAuthObject?.uid}`}>
+              <Button
+                style={{ textShadow: "2px 2px 12px black" }}
+                onClick={() => {
+                  logEvent(analytics, "select_content", {
+                    content_type: "button",
+                    item_id: "Proof of Work",
+                  });
+                  setIsImpactWalletOpen(true);
+                }}
+                variant="secondary"
+              >
+                🏦
+              </Button>
+            </Link>
+          </FadeInComponent>
+        )}
+
         {/* &nbsp; &nbsp; &nbsp;{" "} */}
         <div>
           <ProgressBar
@@ -481,13 +534,13 @@ export const ImpactWallet = ({
             </div>
           </div>
         </Modal.Body>
-        <Modal.Footer style={{ backgroundColor: "black", color: "white" }}>
+        {/* <Modal.Footer style={{ backgroundColor: "black", color: "white" }}>
           <Link to={`/`}>
             <Button variant="dark" onClick={() => setIsImpactWalletOpen(false)}>
               Back to app
             </Button>
           </Link>
-        </Modal.Footer>
+        </Modal.Footer> */}
       </Modal>
 
       <EmotionalIntelligence
@@ -499,6 +552,7 @@ export const ImpactWallet = ({
         userStateReference={userStateReference}
         globalStateReference={globalStateReference}
         zap={zap}
+        handleZap={handleZap}
       />
       {/* 
       <Scheduler
@@ -514,6 +568,7 @@ export const ImpactWallet = ({
         userStateReference={userStateReference}
         globalStateReference={globalStateReference}
         zap={zap}
+        handleZap={handleZap}
       />
 
       <BossMode
@@ -522,6 +577,7 @@ export const ImpactWallet = ({
         userStateReference={userStateReference}
         globalStateReference={globalStateReference}
         zap={zap}
+        handleZap={handleZap}
       />
 
       {/* <ChatFrame

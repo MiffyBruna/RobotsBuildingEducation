@@ -5,6 +5,7 @@ import { database } from "./database/firebaseResources";
 import { getGlobalImpact } from "./common/uiSchema";
 import { decentralizedEducationTranscript } from "./App.constants";
 import { japaneseThemePalette } from "./styles/lazyStyles";
+import { useStore } from "./Store";
 
 export const sortEmotionsByDate = (usersEmotionsFromDB) => {
   let insertTestDate = usersEmotionsFromDB;

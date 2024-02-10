@@ -23,6 +23,7 @@ import {
   useUIStates,
   useUserDocument,
   useZap,
+  useZapAnimation,
 } from "./App.hooks";
 import {
   checkActiveUserStates,
@@ -38,12 +39,19 @@ import { ProofOfWorkWrapper } from "./ProofOfWork/ProofOfWorkWrapper";
 import { words } from "./common/words/words";
 import { InstallPWA } from "./InstallPWA";
 import { RiseUpAnimation } from "./styles/lazyStyles";
+import { useStore } from "./Store";
 
 logEvent(analytics, "page_view", {
   page_location: "https://learn-robotsbuildingeducation.firebaseapp.com/",
 });
 
 let App = ({ canInstallPwa }) => {
+  const showStars = useStore((state) => state.showStars);
+  const showZap = useStore((state) => state.showZap);
+  const setShowStars = useStore((state) => state.setShowStars);
+  const setShowZap = useStore((state) => state.setShowZap);
+  const handleZap = useZapAnimation();
+
   let zap = useZap(1, "Robots Building Education Zap");
 
   const [loading, setLoading] = useState(true);
@@ -61,8 +69,8 @@ let App = ({ canInstallPwa }) => {
 
   // handles language switching
   let [languageMode, setLanguageMode] = useState(words["English"]);
-  const [showStars, setShowStars] = useState(false);
-  const [showZap, setShowZap] = useState(false);
+  // const [showStars, setShowStars] = useState(false);
+  // const [showZap, setShowZap] = useState(false);
 
   /**
    *
@@ -279,52 +287,64 @@ let App = ({ canInstallPwa }) => {
 
     setShowStars(true);
 
-    // Randomize animation properties for each star
-    document.querySelectorAll(".star").forEach((star) => {
-      const scale = Math.random() * 1.5; // Random scale
-      const x = Math.random() * 200 - 100; // Random x-position
-      const y = Math.random() * 200 - 100; // Random y-position
-      const duration = Math.random() * 1 + 0.5; // Random duration
+    // // Randomize animation properties for each star
+    // document.querySelectorAll(".star").forEach((star) => {
+    //   const scale = Math.random() * 10; // Random scale
+    //   const x = Math.random() * 200 - 100; // Random x-position
+    //   const y = Math.random() * 200 - 100; // Random y-position
+    //   const duration = Math.random() * 1 + 0.5; // Random duration
 
-      star.style.opacity = 1;
-      star.style.transform = `scale(${scale}) translate(${x}px, ${y}px)`;
-      star.style.transition = `transform ${duration}s ease-in-out, opacity ${duration}s ease-in-out`;
+    //   // star.style.textShadow = "25px 25px 25px gold";
+    //   star.style.opacity = 1;
+    //   star.style.transform = `scale(${scale}) translate(${x}px, ${y}px)`;
+    //   star.style.transition = `transform ${duration}s ease-in-out, opacity ${duration}s ease-in-out`;
 
-      // Reset the star after the animation
-      setTimeout(() => {
-        star.style.opacity = 0;
-        star.style.transform = "none";
-      }, duration * 1000);
-    });
-
-    // Reset the whole animation after some time
-    setTimeout(() => setShowStars(false), 3000);
-  };
-
-  const handleZap = async (zapEvent) => {
-    setShowZap(true);
-
-    // Randomize animation properties for each star
-    document.querySelectorAll(".zap").forEach((star) => {
-      const scale = Math.random() * 1.5; // Random scale
-      const x = Math.random() * 200 - 100; // Random x-position
-      const y = Math.random() * 200 - 100; // Random y-position
-      const duration = Math.random() * 1 + 0.5; // Random duration
-
-      star.style.opacity = 1;
-      star.style.transform = `scale(${scale}) translate(${x}px, ${y}px)`;
-      star.style.transition = `transform ${duration}s ease-in-out, opacity ${duration}s ease-in-out`;
-
-      // Reset the star after the animation
-      setTimeout(() => {
-        star.style.opacity = 0;
-        star.style.transform = "none";
-      }, duration * 1000);
-    });
+    //   // Reset the star after the animation
+    //   setTimeout(() => {
+    //     star.style.opacity = 0;
+    //     star.style.transform = "none";
+    //   }, duration * 1000);
+    // });
 
     // Reset the whole animation after some time
-    setTimeout(() => setShowZap(false), 3000);
+    setTimeout(() => setShowStars(false), 2000);
   };
+
+  // const handleZap = async () => {
+  //   // document.getElementById("zap-container").style.display = "block";
+  //   setShowZap(true);
+  //   // setTimeout(() => {
+  //   //   console.log("do nothing");
+  //   //   // star.style.opacity = 0;
+  //   //   // star.style.transform = "none";
+  //   // }, 2 * 1000);
+
+  //   // Randomize animation properties for each star
+  //   // document.querySelectorAll(".zap").forEach((star) => {
+  //   //   const scale = Math.random() * 1.5; // Random scale
+  //   //   const x = Math.random() * 200 - 100; // Random x-position
+  //   //   const y = Math.random() * 200 - 100; // Random y-position
+  //   //   const duration = Math.random() * 1 + 0.5; // Random duration
+
+  //   //   // star.style.textShadow = "25px 25px 25px gold";
+
+  //   //   star.style.opacity = 1;
+  //   //   star.style.transform = `scale(${scale}) translate(${x}px, ${y}px)`;
+  //   //   star.style.transition = `transform ${duration}s ease-in-out, opacity ${duration}s ease-in-out`;
+
+  //   //   // Reset the star after the animation
+  //   //   setTimeout(() => {
+  //   //     star.style.opacity = 0;
+  //   //     star.style.transform = "none";
+  //   //   }, duration * 1000);
+  //   // });
+
+  //   // Reset the whole animation after some time
+  //   setTimeout(() => {
+  //     // document.getElementById("zap-container").style.display = "none";
+  //     setShowZap(false);
+  //   }, 2000);
+  // };
 
   return (
     <div
@@ -401,6 +421,7 @@ let App = ({ canInstallPwa }) => {
           showZap={showZap}
           handleZeroKnowledgePassword={handleZeroKnowledgePassword}
           zap={zap}
+          handleZap={handleZap}
         />
       ) : null}
     </div>

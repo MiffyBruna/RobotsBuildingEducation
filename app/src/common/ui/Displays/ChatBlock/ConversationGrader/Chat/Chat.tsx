@@ -52,7 +52,7 @@ export const Chat = ({ conversation, gradeResult }) => {
     padding: "15px",
     backgroundColor: "black",
     overflowY: "scroll",
-    height: 400,
+    height: 300,
   };
   const bottomRef = useRef(null);
 

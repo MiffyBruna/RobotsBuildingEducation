@@ -3,6 +3,7 @@ import React from "react";
 import { LightningAddress } from "@getalby/lightning-tools";
 import { Button, Modal, launchModal } from "@getalby/bitcoin-connect-react";
 import toast, { Toaster } from "react-hot-toast";
+import { useStore } from "./Store";
 
 export const useAuthState = () => {
   const [isSignedIn, setIsSignedIn] = useState("start");
@@ -172,4 +173,47 @@ export const useZap = (
 
   // console.log("invoice result", invoice);
   return createZap;
+};
+
+export const useZapAnimation = () => {
+  const setShowZap = useStore((state) => state.setShowZap);
+
+  let animation = () => {
+    setShowZap(true);
+    setTimeout(() => {
+      // document.getElementById("zap-container").style.display = "none";
+      setShowZap(false);
+    }, 2000);
+  };
+  // document.getElementById("zap-container").style.display = "block";
+
+  // setTimeout(() => {
+  //   console.log("do nothing");
+  //   // star.style.opacity = 0;
+  //   // star.style.transform = "none";
+  // }, 2 * 1000);
+
+  // Randomize animation properties for each star
+  // document.querySelectorAll(".zap").forEach((star) => {
+  //   const scale = Math.random() * 1.5; // Random scale
+  //   const x = Math.random() * 200 - 100; // Random x-position
+  //   const y = Math.random() * 200 - 100; // Random y-position
+  //   const duration = Math.random() * 1 + 0.5; // Random duration
+
+  //   // star.style.textShadow = "25px 25px 25px gold";
+
+  //   star.style.opacity = 1;
+  //   star.style.transform = `scale(${scale}) translate(${x}px, ${y}px)`;
+  //   star.style.transition = `transform ${duration}s ease-in-out, opacity ${duration}s ease-in-out`;
+
+  //   // Reset the star after the animation
+  //   setTimeout(() => {
+  //     star.style.opacity = 0;
+  //     star.style.transform = "none";
+  //   }, duration * 1000);
+  // });
+
+  // Reset the whole animation after some time
+
+  return animation;
 };

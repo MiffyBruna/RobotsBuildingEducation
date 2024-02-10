@@ -4,13 +4,18 @@ import { Link } from "react-router-dom";
 import { getRandomColor } from "../App.compute";
 
 const popAnimation = keyframes`
-0%, 50%, 100% { transform: scale(1); }
-10%, 30%, 60%, 80% { transform: scale(1.1); }
+0%, 100% { transform: scale(1); }
+10%, 30% { transform: scale(1.5); }
+20% { transform: scale(0.85); }
+40%, 60% { transform: scale(1.4); }
+50% { transform: scale(0.9); }
+70%, 90% { transform: scale(1.3); }
+80% { transform: scale(0.95); }
 
 `;
 
 export const PopAnimation = styled.div`
-  animation: ${popAnimation} 0.9s ease-in-out forwards;
+  animation: ${popAnimation} 2s ease-in-out infinite;
 `;
 
 const riseAnimation = keyframes`
@@ -485,7 +490,7 @@ export let textBlock = (
   shadowSize = 4,
   borderRadius = 4,
   color = "white",
-  boxShadow = "0px 0px 0px 0px rgba(0,0,0, 1);",
+  boxShadow = "0px 0px 0px 0px rgba(0,0,0, 1)",
   padding = 16
 ) => {
   return {

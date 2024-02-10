@@ -38,6 +38,7 @@ export const EmotionalIntelligence = ({
   userStateReference,
   globalStateReference,
   zap,
+  handleZap,
 }) => {
   const [isEmotionModalOpen, setIsEmotionModalOpen] = useState(false);
   const [selectedEmotion, setSelectedEmotion] = useState("");
@@ -82,9 +83,6 @@ export const EmotionalIntelligence = ({
         ) {
           zap().then((lightningResponse) => {
             if (lightningResponse?.preimage) {
-              console.log("running zap");
-              console.log("userStateReference", userStateReference);
-              console.log("globalStateReference", globalStateReference);
               updateImpact(1, userStateReference, globalStateReference);
             }
           });
@@ -96,12 +94,11 @@ export const EmotionalIntelligence = ({
         setIsAiResponseLoading(false);
       });
 
-    console.log("response", response);
     if (response) {
       let data = await response.json();
-
       setIsAiResponseLoading(false);
       setChatGptResponse(data?.bot?.content || "");
+      handleZap("ai");
     }
   };
 
@@ -149,6 +146,7 @@ export const EmotionalIntelligence = ({
     if (response) {
       let data = await response.json();
 
+      handleZap("ai");
       setIsSummarizerLoading(false);
       setSummarizerResponse(data?.bot?.content || "");
     }
@@ -296,21 +294,28 @@ export const EmotionalIntelligence = ({
             </>
           ) : null}
         </Modal.Body>
-        <Modal.Footer style={EmotionalIntelligenceStyles.Footer}>
+        {/* <Modal.Footer style={EmotionalIntelligenceStyles.Footer}>
           <Button
             variant="dark"
             onClick={() => setIsEmotionalIntelligenceOpen(false)}
           >
             Back to app
           </Button>
-        </Modal.Footer>
+        </Modal.Footer> */}
       </Modal>
 
       <Modal
         show={isEmotionModalOpen}
         centered
         keyboard
-        onHide={() => setIsEmotionModalOpen(false)}
+        onHide={() => {
+          setIsEmotionModalOpen(false);
+          setIsEmotionModalOpen(false);
+          setChatGptResponse("");
+          setShouldRenderSaveButton(false);
+          setEmotionNote("");
+        }}
+        style={{ zIndex: 1000000 }}
       >
         <Modal.Header
           style={EmotionalIntelligenceStyles.EmotionHeader}
@@ -422,7 +427,7 @@ export const EmotionalIntelligence = ({
           ) : null}
         </Modal.Body>
         <Modal.Footer style={EmotionalIntelligenceStyles.EmotionFooter}>
-          <Button
+          {/* <Button
             variant="dark"
             onClick={() => {
               setIsEmotionModalOpen(false);
@@ -432,7 +437,7 @@ export const EmotionalIntelligence = ({
             }}
           >
             Exit
-          </Button>
+          </Button> */}
 
           {shouldRenderSaveButton ? (
             <Button variant="dark" onClick={saveEmotionData}>
