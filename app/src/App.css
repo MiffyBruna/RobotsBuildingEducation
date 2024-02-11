@@ -1,3 +1,14 @@
+html {
+  overflow: hidden;
+  height: 100%;
+}
+
+body {
+  overflow: auto;
+  height: 100%;
+  overscroll-behavior: none;
+}
+
 #root {
   max-width: 1280px;
   width: 100%;
@@ -8,7 +19,7 @@
   background-color: black;
   color: white;
 
-  min-height: 100vh;
+  min-height: 100dvh;
 }
 
 .logo {
@@ -46,7 +57,6 @@
   color: #888;
 }
 
-
 .modal-header {
   border-bottom: 1px solid black;
 }
@@ -56,15 +66,14 @@
 }
 
 .firebaseui-idp-button {
-  background-color: black!important;
+  background-color: black !important;
   transition: 0.23s all ease-in-out;
-
 }
 .firebaseui-idp-button:hover {
   transform: scale(1.05);
-    box-shadow: 0px 0px 25px 0px rgba(60,60,60,1);
-  }
+  box-shadow: 0px 0px 25px 0px rgba(60, 60, 60, 1);
+}
 
-.firebaseui-idp-text{
-  color: white!important;
+.firebaseui-idp-text {
+  color: white !important;
 }

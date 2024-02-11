@@ -1,7 +1,11 @@
-import { ChatBlock } from "../ChatBlock/ChatBlock";
+//i did not spell Entrepreneur correctly.
+
+import { ChatBlock } from "../Displays/ChatBlock/ChatBlock";
 import poorCharlie from "../../media/images/poorCharlie.png";
 import { ultimateEffeciencyJutsu } from "../ui";
 import { japaneseThemePalette, textBlock } from "../../../styles/lazyStyles";
+import { SchedulerBlock } from "../Displays/SchedulerBlock/SchedulerBlock";
+import MarkdownRenderer from "../../../ChatGPT/Patreon/MarkdownRenderer/MarkdownRenderer";
 
 export const Entrepeneur = {
   "Understanding Business": {
@@ -65,6 +69,22 @@ export const Entrepeneur = {
           response: `null`,
           spanish: ``,
           tooltip: ``,
+          summaryContent: (
+            <div>
+              Crafting a compelling resume is akin to designing a user
+              interface; it's about communicating your value effectively and
+              engagingly. Key aspects include optimizing your LinkedIn for
+              visibility, ensuring your resume makes a strong impression
+              quickly, and providing a meaningful context for your career
+              journey. Adhering to a structured format, such as precise spacing
+              and font usage, plays a crucial role. Education should be concise
+              yet impactful, and skills need to be categorized thoughtfully.
+              Emphasizing real-world experience and volunteer work can
+              significantly enhance your profile. Ultimately, a resume is your
+              narrative, a document that speaks volumes about your potential.
+              📝🌟💼
+            </div>
+          ),
         },
         inspire: {
           completed: false,
@@ -242,7 +262,7 @@ export const Entrepeneur = {
             `Creating Competitive Entry Level Resumes`
           )}?`,
           response: (
-            <div>
+            <SchedulerBlock>
               Embarking on the journey from beginner to expert in business
               communications and pitching is a rewarding endeavor. Here's a
               roadmap and study guide to help you navigate this path. Remember,
@@ -355,7 +375,7 @@ export const Entrepeneur = {
               Con cariño y inspiration,
               <br />
               rox 🌹
-            </div>
+            </SchedulerBlock>
           ),
           spanish: ``,
           tooltip: ``,
@@ -571,11 +591,13 @@ export const Entrepeneur = {
       needsImprovement: false,
       isModuleDisabled: false,
       tooltip: ``,
-      sourceType: `markdown`, // may not need
+      sourceType: `video`, // may not need
       button: `Focus Investing`, // may not need - `name`
       header: `Focus Investing`,
       credential: "Introduction to Finance",
-      fileSource: await import("../../markdowns/focusInvesting.md?raw"), // may not need
+      fileSource:
+        "https://res.cloudinary.com/dtkeyccga/video/upload/v1706592608/0118_uxgh72.mov",
+      // fileSource: await import("../../markdowns/focusInvesting.md?raw"), // may not need
       prompts: {
         welcome: {
           response: (
@@ -609,13 +631,29 @@ export const Entrepeneur = {
           completed: false,
           impact: 1000,
           action: `generate`,
-          icon: `✍️`, //`✍️`
+          icon: `►`, //`✍️`
           request: `rox, can you please generate material to introduce me to ${ultimateEffeciencyJutsu(
             `Focus Investing`
           )}?`,
           response: `null`,
           spanish: ``,
           tooltip: ``,
+          // additionalContent: await import(
+          //   "../../markdowns/focusInvesting.md?raw"
+          // ),
+          summaryContent: (
+            <div
+              style={{
+                overflowWrap: "break-word",
+                whiteSpace: "pre-wrap",
+              }}
+            >
+              <MarkdownRenderer
+                file={await import("../../markdowns/focusInvesting.md?raw")}
+                patreonObject={null}
+              />
+            </div>
+          ),
         },
         inspire: {
           completed: false,
@@ -880,7 +918,7 @@ export const Entrepeneur = {
             `Focus Investing`
           )}?`,
           response: (
-            <div>
+            <SchedulerBlock>
               <h3>Focused Investing Study Guide for Students</h3>
               <p>
                 Absolutely, my dear students! Learning focused investing can be
@@ -991,7 +1029,7 @@ export const Entrepeneur = {
                 <br />
                 rox 🌺 (your gentle mentor with universal aspirations)
               </p>
-            </div>
+            </SchedulerBlock>
           ),
           spanish: ``,
           tooltip: ``,
@@ -1163,15 +1201,17 @@ export const Entrepeneur = {
           response: (
             <div>
               <div
-                style={{
-                  ...textBlock(
-                    japaneseThemePalette.PowerPurple,
-                    0,
-                    12,
-                    "white",
-                    "0px 0px 5px 0px rgba(0,0,0,0.75)"
-                  ),
-                }}
+                style={
+                  {
+                    // ...textBlock(
+                    //   japaneseThemePalette.PowerPurple,
+                    //   0,
+                    //   12,
+                    //   "white",
+                    //   "0px 0px 5px 0px rgba(0,0,0,0.75)"
+                    // ),
+                  }
+                }
               >
                 From 1733 to 1758, Ben Franklin dispensed useful and timeless
                 advice through Poor Richard's Almanack. Among the virtues
@@ -1181,24 +1221,10 @@ export const Entrepeneur = {
                 Munger stepped forth. – Warren Buffett From the Foreword to Poor
                 Charlie's Almanack
               </div>
-              <div
-                style={{
-                  ...textBlock(
-                    japaneseThemePalette.ProsperityEmeraldGreen,
-                    0,
-                    12,
-                    "white",
-                    "0px 0px 5px 0px rgba(0,0,0,0.75)"
-                  ),
-                  width: "fit-content",
-                  marginTop: 4,
-                }}
-              >
-                Shopify Affiliate Commission: 7%
-              </div>
+
               <br />
 
-              <a href="https://collabs.shop/zs1bwk" target="_blank">
+              <div href="https://collabs.shop/zs1bwk" target="_blank">
                 <img
                   style={{
                     // border: "1px solid cyan",
@@ -1209,7 +1235,7 @@ export const Entrepeneur = {
                   }}
                   src={poorCharlie}
                 />
-              </a>
+              </div>
             </div>
           ),
           spanish: ``,
@@ -1217,7 +1243,6 @@ export const Entrepeneur = {
         },
       },
     },
-
     "Resource Allocation": {
       documentID: ``,
       hasCode: false,

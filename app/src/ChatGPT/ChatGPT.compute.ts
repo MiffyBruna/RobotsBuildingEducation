@@ -15,8 +15,7 @@ export let computeTotalImpactFromPrompt = (patreonObject, promptType) => {
       patreonObject?.prompts["quiz"]?.impact;
   } else if (promptType === "shop") {
     impact = patreonObject?.prompts["shop"]?.impact;
-  }
-  else if (promptType === "practice") {
+  } else if (promptType === "practice") {
     impact = patreonObject?.prompts["practice"]?.impact;
   }
 
@@ -57,9 +56,9 @@ export let computeResponseList = (patreonObject, promptType) => {
         icon: "🧪",
       },
       {
-        response: patreonObject?.prompts["ask"]?.response,
-        type: "ask",
-        icon: "🔮",
+        response: patreonObject?.prompts["guide"]?.response,
+        type: "study guide",
+        icon: "🗓️",
       },
       {
         response: patreonObject?.prompts["summarize"]?.response,
@@ -67,9 +66,9 @@ export let computeResponseList = (patreonObject, promptType) => {
         icon: "📚",
       },
       {
-        response: patreonObject?.prompts["guide"]?.response,
-        type: "study guide",
-        icon: "🗓️",
+        response: patreonObject?.prompts["ask"]?.response,
+        type: "ask",
+        icon: "🔮",
       },
 
       ...(patreonObject?.prompts?.["furtherReading"]?.response
@@ -90,8 +89,7 @@ export let computeResponseList = (patreonObject, promptType) => {
         icon: "🥋",
       },
     ];
-  }
-  else if (promptType === "shop") {
+  } else if (promptType === "shop") {
     list = [
       {
         response: patreonObject?.prompts["shop"]?.response,

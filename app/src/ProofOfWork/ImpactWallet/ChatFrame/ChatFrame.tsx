@@ -12,13 +12,16 @@ export const ChatFrame = ({
 }) => {
   return (
     <>
-      <Modal
+      <div>hello</div>
+      {/* <Modal
         centered
         show={isBossModeOpen}
         style={{ backgroundColor: "black" }}
         fullscreen
+        keyboard
+        onHide={() => setIsBossModeOpen(false)}
       >
-        <Modal.Header style={{ backgroundColor: "black", color: "white" }}>
+        <Modal.Header style={{ backgroundColor: "black", color: "white" }} closeVariant="white" closeButton>
           <Modal.Title>rox</Modal.Title>
         </Modal.Header>
         <Modal.Body style={{ backgroundColor: "black", color: "white" }}>
@@ -29,7 +32,7 @@ export const ChatFrame = ({
             Back to app
           </Button>
         </Modal.Footer>
-      </Modal>
+      </Modal> */}
     </>
   );
 };

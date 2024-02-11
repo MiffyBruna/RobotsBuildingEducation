@@ -1,7 +1,5 @@
 import { ultimateEffeciencyJutsu } from "../ui";
 
-// import compSciLib from "../../media/images/compSciLib.jpeg";
-// import metaphysicalMuse from "../../media/images/metaphysicalMuse.jpeg";
 import ctci from "../../media/images/ctci.png";
 import automateTheBoring from "../../media/images/automateTheBoring.png";
 import duckett from "../../media/images/duckett.png";
@@ -10,14 +8,22 @@ import innovatorsDilemma from "../../media/images/innovatorsDilemma.png";
 import backendScaling from "../../media/images/backendScaling.png";
 import prisonersDilemma from "../../media/images/prisonersDilemma.png";
 import grokking from "../../media/images/grokking.png";
+import inspire00 from "../../media/images/prompts/inspire00.jpg";
+import inspire01 from "../../media/images/prompts/inspire01.png";
+import inspire02 from "../../media/images/prompts/inspire02.png";
+import inspire03 from "../../media/images/prompts/inspire03.png";
+import inspire04 from "../../media/images/prompts/inspire04.png";
+import inspire05 from "../../media/images/prompts/inspire05.png";
 
-import { japaneseThemePalette, textBlock } from "../../../styles/lazyStyles";
-import { ChatBlock } from "../ChatBlock/ChatBlock";
+import { ChatBlock } from "../Displays/ChatBlock/ChatBlock";
 import { CodeBlock } from "../Displays/CodeBlock/CodeBlock";
 import { CuteGradient } from "../Displays/CuteGradient/CuteGradient";
-import { Chat } from "../ChatBlock/ConversationGrader/Chat/Chat";
-import { RobotDialogue } from "../RobotDialogue/RobotDialogue";
-import { Typewriter } from "../Typewriter/Typewriter";
+
+import { RobotDialogue } from "../Displays/RobotDialogue/RobotDialogue";
+
+import RandomCharacter from "../Displays/RandomCharacter/RandomCharacter";
+import { SchedulerBlock } from "../Displays/SchedulerBlock/SchedulerBlock";
+import { ArtBlock } from "../Displays/ArtBlock/ArtBlock";
 
 export const Engineer = {
   "Coding Crash Course Version 3": {
@@ -39,7 +45,7 @@ export const Engineer = {
       button: `Learning Mindset & Perspective`, // may not need - `name`
       header: `Learning Mindset & Perspective`,
       fileSource:
-        "https://res.cloudinary.com/sheilfer/video/upload/v1693469705/ROBE_INTRO_COMPRESSED_t3r8vt_qxmuvn.mov", // may not need
+        "https://res.cloudinary.com/sheilfer/video/upload/v1706616470/a42be5b4391e4f0fbe49401a972cac1b_1_e5ri2s.mov", // may not need
       prompts: {
         // should we add impact to selecting a course? adding it to "welcome" would achieve this.
         welcome: {
@@ -66,6 +72,13 @@ export const Engineer = {
               Yours in exploration ❤️,
               <br />
               rox
+              <br />
+              <br />
+              <RandomCharacter
+                notSoRandomCharacter={"14"}
+                width="100"
+                borderRadius={"50%"}
+              />
             </div>
           ),
           spanish: ``,
@@ -82,8 +95,29 @@ export const Engineer = {
           response: `null`,
           spanish: ``,
           tooltip: ``,
+          summaryContent: (
+            <div>
+              Hola, learners! Feeling a bit nervous about diving into coding and
+              business building? No worries, that's perfectly normal. It's just
+              a sign you're ready to grow and challenge yourself. Forget the
+              myths – programming isn't just for math wizards. It's for anyone
+              willing to learn and create. Remember, computer science isn't just
+              about code; it's about solving real-world problems in any field,
+              from art to climate tech. So, take a deep breath, and let's start
+              this journey of learning and impact together. You're more capable
+              than you think. Vamos!🚀💻🌟
+              <br />
+              <br />
+              Would you like to know more about breaking into coding, the
+              versatility of computer science in different fields, or how to
+              stay motivated while learning new tech skills? Let's explore!
+              🤔🌐💡"
+            </div>
+          ),
         },
         inspire: {
+          headerImageSrc: inspire00,
+          wikiLink: "https://en.wikipedia.org/wiki/Cynthia_Breazeal",
           completed: false,
           impact: 100,
           action: `inspire`,
@@ -92,6 +126,7 @@ export const Engineer = {
             `Learn Coding`
           )}?`,
           response: (
+            // <ArtBlock>
             <div>
               Meet Kismet, a robot developed by Cynthia Breazeal at the MIT
               Media Lab back in the late 1990s 🤖. Kismet wasn't just any robot;
@@ -137,7 +172,7 @@ export const Engineer = {
           response: (
             <div>
               <h2>
-                Let's delve into the dynamic relationship between computer
+                Let's read into the dynamic relationship between computer
                 science, its interdisciplinary applications, and human-computer
                 interaction (HCI).
               </h2>
@@ -268,7 +303,7 @@ export const Engineer = {
             `Learn Coding`
           )}?`,
           response: (
-            <div>
+            <SchedulerBlock>
               <h3>
                 Let's break down this process into five stages, taking you from
                 the basics to professional expertise in intersectional research,
@@ -399,7 +434,7 @@ export const Engineer = {
               step. Keep going, stay curious, and embrace the journey. Every
               expert was once a beginner, and you have the capacity to reach
               your goals. 😊👩‍💻🌟
-            </div>
+            </SchedulerBlock>
           ),
           spanish: ``,
           tooltip: ``,
@@ -459,6 +494,48 @@ exports.app = functions.https.onRequest(app);
           `,
           spanish: ``,
           tooltip: ``,
+          codeBreakdown: [
+            {
+              code: "const functions = require('firebase-functions');",
+              explanation:
+                "Imagine we're summoning our minions 🧙‍♂️. 'firebase-functions' are our loyal followers, ready to carry out our bidding in the cloud. 🌩",
+            },
+            {
+              code: "const express = require('express');",
+              explanation:
+                "This line is like opening portals 🌀 between worlds. 'Express' helps us create pathways for our data to travel across the internet. 🌐",
+            },
+            {
+              code: "const { Configuration, OpenAIApi } = require('openai');",
+              explanation:
+                "Here, we're crafting a powerful artifact 🔮. By importing 'Configuration' and 'OpenAIApi', we're preparing to harness the almighty power of OpenAI. ⚡",
+            },
+            {
+              code: "const configuration = new Configuration({ apiKey: OPENAI_API_KEY });",
+              explanation:
+                "With this spell, we conjure a connection to OpenAI, using a secret key as our incantation. 🗝✨",
+            },
+            {
+              code: "const openai = new OpenAIApi(configuration);",
+              explanation:
+                "And now, we awaken our crystal ball—the OpenAIApi—ready to reveal the secrets of the universe (or at least, the answers to our users' queries). 🌌🔮",
+            },
+            {
+              code: "const app = express();",
+              explanation:
+                "Here, we're building our fortress, a stronghold where our app will live and defend against the chaos of the internet. 🏰💻",
+            },
+            {
+              code: `app.post("/task", async (request, response) => { ... });`,
+              explanation:
+                "This is where the magic happens. We're setting up a ritual to communicate with the digital spirits, asking them to carry messages to and from OpenAI. 📜🔥",
+            },
+            {
+              code: "exports.app = functions.https.onRequest(app);",
+              explanation:
+                "Finally, we're opening the gates of our fortress to the world, allowing anyone to summon our powers through the web. 🌍🚪",
+            },
+          ],
         },
         define: {
           completed: false,
@@ -525,38 +602,26 @@ exports.app = functions.https.onRequest(app);
             <div>
               <div>
                 <div
-                  style={{
-                    ...textBlock(
-                      japaneseThemePalette.PowerPurple,
-                      0,
-                      12,
-                      "white",
-                      "0px 0px 5px 0px rgba(0,0,0,0.75)"
-                    ),
-                  }}
+                  style={
+                    {
+                      // border: "1px solid green",
+                      // ...textBlock(
+                      //   japaneseThemePalette.PowerPurple,
+                      //   0,
+                      //   12,
+                      //   "white",
+                      //   "0px 0px 5px 0px rgba(0,0,0,0.75)"
+                      // ),
+                    }
+                  }
                 >
                   Cracking The Coding Interview is recognized as "the bible" for
                   interview preparation. It's an introductory text that refresh
                   you on the subject.
                 </div>
                 <br />
-                <div
-                  style={{
-                    ...textBlock(
-                      japaneseThemePalette.ProsperityEmeraldGreen,
-                      0,
-                      12,
-                      "white",
-                      "0px 0px 5px 0px rgba(0,0,0,0.75)"
-                    ),
-                    width: "fit-content",
-                    marginTop: 4,
-                  }}
-                >
-                  Shopify Affiliate Commission: 7%
-                </div>
                 <br />
-                <a href="https://collabs.shop/hwzghy" target="_blank">
+                <div>
                   <img
                     style={{
                       // border: "1px solid cyan",
@@ -567,42 +632,26 @@ exports.app = functions.https.onRequest(app);
                     }}
                     src={ctci}
                   />
-                </a>
+                </div>
                 <br />
                 <br />
                 <br />
                 <div
-                  style={{
-                    ...textBlock(
-                      japaneseThemePalette.PowerPurple,
-                      0,
-                      12,
-                      "white",
-                      "0px 0px 5px 0px rgba(0,0,0,0.75)"
-                    ),
-                  }}
+                // style={textBlock(
+                //   japaneseThemePalette.PowerPurple,
+                //   0,
+                //   12,
+                //   "white",
+                //   "0px 0px 5px 0px rgba(0,0,0,0.75)"
+                // )}
                 >
                   I recommend getting these books as soon as possible so that
                   you can challenge yourself and fail faster. Some of the best
                   learning you'll experience is when the tasks are too hard.
                 </div>
-                <div
-                  style={{
-                    ...textBlock(
-                      japaneseThemePalette.ProsperityEmeraldGreen,
-                      0,
-                      12,
-                      "white",
-                      "0px 0px 5px 0px rgba(0,0,0,0.75)"
-                    ),
-                    width: "fit-content",
-                    marginTop: 4,
-                  }}
-                >
-                  Shopify Affiliate Commission: 7%
-                </div>
+
                 <br />
-                <a href="https://collabs.shop/hwzghy" target="_blank">
+                <div>
                   <img
                     style={{
                       // border: "1px solid cyan",
@@ -613,7 +662,7 @@ exports.app = functions.https.onRequest(app);
                     }}
                     src={grokking}
                   />
-                </a>
+                </div>
               </div>
             </div>
           ),
@@ -663,6 +712,7 @@ exports.app = functions.https.onRequest(app);
               With all my warmth and support,
               <br />
               rox 🌟
+              <RandomCharacter notSoRandomCharacter={"10"} width="100" />
             </div>
           ),
           spanish: ``,
@@ -679,8 +729,33 @@ exports.app = functions.https.onRequest(app);
           response: `null`,
           spanish: ``,
           tooltip: ``,
+          summaryContent: (
+            <div>
+              In this engaging coding tutorial, we're embracing the challenge of
+              learning to code, starting with the more complex topics like
+              creating objects with code. We explore how coding models the
+              digital world through data and logic, using classes and functions
+              to define and manage information. A hands-on approach with
+              examples like coding a Robot class or a Tweet component helps
+              demystify coding concepts. Emphasis is placed on understanding
+              coding as an organization of information, not just mathematics,
+              and exploring both synchronous and asynchronous functions. We also
+              learn looping with practical examples, highlighting the importance
+              of documentation in programming. The lesson reinforces the idea
+              that coding is about converting data into logic, a fundamental
+              truth of computer science. 🚀💻🧠
+              <br />
+              <br />
+              Ready to dive deeper into the world of object-oriented
+              programming, explore the intricacies of function types, or get
+              hands-on with coding exercises? Let's continue this exciting
+              journey! 🌐🔍👨‍💻
+            </div>
+          ),
         },
         inspire: {
+          headerImageSrc: inspire01,
+          wikiLink: "https://en.wikipedia.org/wiki/Object-oriented_programming",
           completed: false,
           impact: 100,
           action: `inspire`,
@@ -1032,7 +1107,7 @@ juan.study();  // Outputs: Juan is studying.
             `Lesson 1 Coding Fundamentals`
           )}?`,
           response: (
-            <div>
+            <SchedulerBlock>
               Dear students! 😊 Here is a roadmap to help you navigate your
               journey from beginner to pro in Object-Oriented Programming (OOP):{" "}
               <br />
@@ -1160,7 +1235,7 @@ juan.study();  // Outputs: Juan is studying.
               yourself, keep your curiosity alive, and celebrate every victory,
               no matter how small. You're doing an amazing job! 💪🌟
               <br /> <br />
-            </div>
+            </SchedulerBlock>
           ),
           spanish: ``,
           tooltip: ``,
@@ -1207,6 +1282,49 @@ print(rihanna.perform("at the Grammy Awards"))
           `,
           spanish: ``,
           tooltip: ``,
+
+          codeBreakdown: [
+            {
+              code: "class Rihanna:",
+              explanation:
+                "We're crafting a blueprint for a superstar. This class is like the DNA of Rihanna, defining her essence. 🧬✨",
+            },
+            {
+              code: "__init__(self, name, profession, nationality):",
+              explanation:
+                "Our constructor is the magical spell that brings Rihanna to life, setting her name, profession, and nationality. 🎤🌍",
+            },
+            {
+              code: "self.name = name",
+              explanation:
+                "Here, we're giving Rihanna her identity, a name that echoes across stages worldwide. 📛",
+            },
+            {
+              code: "def sing(self, song):",
+              explanation:
+                "A method allowing Rihanna to enchant the world with her voice. When she sings, the universe listens. 🎶",
+            },
+            {
+              code: "def perform(self, performance):",
+              explanation:
+                "This is where Rihanna shines, captivating hearts with her performances, from stages to the stars. 🌟",
+            },
+            {
+              code: 'rihanna = Rihanna("Rihanna", "Singer", "Barbadian")',
+              explanation:
+                "Summoning Rihanna into existence, with her name, profession, and nationality. Here, the legend is born. 🔮",
+            },
+            {
+              code: 'print(rihanna.sing("Love On The Brain"))',
+              explanation:
+                "Rihanna performs her hit, sharing her art with the world. It's a spellbinding moment. 🎵",
+            },
+            {
+              code: 'print(rihanna.perform("at the Grammy Awards"))',
+              explanation:
+                "Showcasing Rihanna's stellar performance, a testament to her talent and charisma on the grand stage. 🏆",
+            },
+          ],
         },
         define: {
           completed: false,
@@ -1283,39 +1401,27 @@ print(rihanna.perform("at the Grammy Awards"))
           response: (
             <div>
               <div
-                style={{
-                  ...textBlock(
-                    japaneseThemePalette.PowerPurple,
-                    0,
-                    12,
-                    "white",
-                    "0px 0px 5px 0px rgba(0,0,0,0.75)"
-                  ),
-                }}
+                style={
+                  {
+                    // ...textBlock(
+                    //   japaneseThemePalette.PowerPurple,
+                    //   0,
+                    //   12,
+                    //   "white",
+                    //   "0px 0px 5px 0px rgba(0,0,0,0.75)"
+                    // ),
+                  }
+                }
               >
                 Automate the Boring Stuff is a successful beginner's guidebook
                 to have when learning common skills like Python. These are
                 skills you can reference when working with data throughout the
                 beginning stages of your career.
               </div>
-              <div
-                style={{
-                  ...textBlock(
-                    japaneseThemePalette.ProsperityEmeraldGreen,
-                    0,
-                    12,
-                    "white",
-                    "0px 0px 5px 0px rgba(0,0,0,0.75)"
-                  ),
-                  width: "fit-content",
-                  marginTop: 4,
-                }}
-              >
-                Shopify Affiliate Commission: 7%
-              </div>
+
               <br />
 
-              <a href="https://collabs.shop/pkyf0g" target="_blank">
+              <div href="https://collabs.shop/pkyf0g" target="_blank">
                 <img
                   style={{
                     // border: "1px solid cyan",
@@ -1326,7 +1432,7 @@ print(rihanna.perform("at the Grammy Awards"))
                   }}
                   src={automateTheBoring}
                 />
-              </a>
+              </div>
             </div>
           ),
           spanish: ``,
@@ -1726,6 +1832,13 @@ throw new Error(
               empowered to create digital experiences that are truly
               extraordinary. So, get ready, let your creativity bloom, and let
               your brilliance light up the world! 🌼🌟
+              <br />
+              <br />
+              <RandomCharacter
+                notSoRandomCharacter={"2"}
+                width="150"
+                // borderRadius={"50%"}
+              />
             </div>
           ),
           spanish: ``,
@@ -1742,8 +1855,34 @@ throw new Error(
           response: `null`,
           spanish: ``,
           tooltip: ``,
+          summaryContent: (
+            <div>
+              In Lesson 2, we discover frontend development using React,
+              focusing on event-driven programming. We review concepts like
+              components, state, and hooks. A Tweet component example
+              illustrates React's approach to building user interfaces. We
+              explore component properties, states, and the logic behind
+              updates, emphasizing the data flow in React. The lesson
+              underscores the value of learning React for modern web
+              development, providing insights into how programming languages
+              evolve and their impact on software development. By breaking down
+              the components of a React application, the lesson aims to
+              introduce frontend development and empower learners to experiment
+              and understand the underlying mechanics of web applications.
+              🚀💻🖥️
+              <br />
+              <br />
+              Interested in further exploring the intricacies of React
+              components, understanding the modern web development landscape, or
+              diving into the practical aspects of creating user interfaces?
+              Let's dive deeper! 🌐🔍👨‍💻
+            </div>
+          ),
         },
         inspire: {
+          headerImageSrc: inspire02,
+          wikiLink:
+            "https://en.wikipedia.org/wiki/Human%E2%80%93computer_interaction",
           completed: false,
           impact: 100,
           action: `inspire`,
@@ -1916,7 +2055,7 @@ throw new Error(
             `Lesson 1 Coding Fundamentals`
           )}?`,
           response: (
-            <div>
+            <SchedulerBlock>
               Hola, brilliant stars of the future! 🌟 I'm here to guide you on
               your journey to become professional frontend software engineers.
               Remember, every single one of you can shine brightly in the world
@@ -2037,7 +2176,7 @@ throw new Error(
               help and support each other on this journey. Your future as tech
               wizards is bright and promising. Let's embrace this adventure
               together! 🚀
-            </div>
+            </SchedulerBlock>
           ),
           spanish: ``,
           tooltip: ``,
@@ -2120,6 +2259,48 @@ export default LoginForm;
           `,
           spanish: ``,
           tooltip: ``,
+          codeBreakdown: [
+            {
+              code: "import firebase from 'firebase/app'; import 'firebase/auth';",
+              explanation:
+                "First, we summon the Firebase spirits into our realm, ensuring we have the power to authenticate users. 🔥🔒",
+            },
+            {
+              code: "const [email, setEmail] = useState('');",
+              explanation:
+                "Here, we prepare a mystical container to hold the user's email, ready to morph with every keystroke. 📧✨",
+            },
+            {
+              code: "const [password, setPassword] = useState('');",
+              explanation:
+                "A similar charm is cast for the password, safeguarding the secret keys to our digital kingdom. 🔑💫",
+            },
+            {
+              code: "const handleChange = (event) => { ... };",
+              explanation:
+                "This incantation captures every change, weaving the user's input into our spell with precision. ✍️🌬",
+            },
+            {
+              code: "const handleSubmit = async (event) => { ... };",
+              explanation:
+                "With this powerful ritual, we attempt to open the gates of access, calling upon Firebase to authenticate the user. 🚪🌟",
+            },
+            {
+              code: "await firebase.auth().signInWithEmailAndPassword(email, password);",
+              explanation:
+                "Here, we directly commune with Firebase, using the sacred email and password as our offering. 📬🔥",
+            },
+            {
+              code: "{error && <p>{error}</p>}",
+              explanation:
+                "Should our spell encounter turbulence, this charm reveals the nature of our misstep to the user. 🚫💬",
+            },
+            {
+              code: "<button type='submit'>Log in</button>",
+              explanation:
+                "Finally, we present the user with a portal, inviting them to step through once the incantations are complete. 🚪➡️🌈",
+            },
+          ],
         },
         define: {
           completed: false,
@@ -2205,15 +2386,17 @@ export default LoginForm;
           response: (
             <div>
               <div
-                style={{
-                  ...textBlock(
-                    japaneseThemePalette.PowerPurple,
-                    0,
-                    12,
-                    "white",
-                    "0px 0px 5px 0px rgba(0,0,0,0.75)"
-                  ),
-                }}
+                style={
+                  {
+                    // ...textBlock(
+                    //   japaneseThemePalette.PowerPurple,
+                    //   0,
+                    //   12,
+                    //   "white",
+                    //   "0px 0px 5px 0px rgba(0,0,0,0.75)"
+                    // ),
+                  }
+                }
               >
                 This book by Duckett is a frontend classic that provides visual
                 illustrations of HTML and CSS concepts. Despite the modern
@@ -2221,24 +2404,10 @@ export default LoginForm;
                 know the fundamentals of the software is responsible for the
                 look and feel of modern applications.
               </div>
-              <div
-                style={{
-                  ...textBlock(
-                    japaneseThemePalette.ProsperityEmeraldGreen,
-                    0,
-                    12,
-                    "white",
-                    "0px 0px 5px 0px rgba(0,0,0,0.75)"
-                  ),
-                  width: "fit-content",
-                  marginTop: 4,
-                }}
-              >
-                Shopify Affiliate Commission: 7%
-              </div>
+
               <br />
 
-              <a href="https://collabs.shop/kkwfvu" target="_blank">
+              <div href="https://collabs.shop/kkwfvu" target="_blank">
                 <img
                   style={{
                     // border: "1px solid cyan",
@@ -2249,7 +2418,7 @@ export default LoginForm;
                   }}
                   src={duckett}
                 />
-              </a>
+              </div>
             </div>
           ),
           spanish: ``,
@@ -2541,6 +2710,14 @@ return <div style={gradientStyle}>
               question is a step forward, and every mistake, a lesson learned.
               Si se puede! Let's dive into the wonderful world of technology
               together. 🚀💖🌈
+              <br />
+              <br />
+              <br />
+              <RandomCharacter
+                notSoRandomCharacter={"11"}
+                width="100"
+                // borderRadius={"50%"}
+              />
             </div>
           ),
           spanish: ``,
@@ -2557,8 +2734,30 @@ return <div style={gradientStyle}>
           response: `null`,
           spanish: ``,
           tooltip: ``,
+          summaryContent: (
+            <div>
+              This lesson introduces backend software engineering, starting with
+              operating systems, which are the heart of computing. We explore
+              how operating systems function like a restaurant kitchen, managing
+              various tasks to deliver a final product. The lesson then dives
+              into the command line interface, a critical tool for backend
+              development. We look at databases, focusing on data organization
+              and management. The creation of user experiences is highlighted,
+              showing how user accounts facilitate interactions within software.
+              The lesson aims to make backend concepts more approachable,
+              encouraging exploration and creativity in software development.
+              🚀💡👩‍💻
+              <br />
+              <br />
+              Eager to learn more about operating systems, database management,
+              or the intricacies of user experience in software development?
+              Let's explore these areas further! 🌐🔍👨‍💻
+            </div>
+          ),
         },
         inspire: {
+          headerImageSrc: inspire03,
+          wikiLink: "https://en.wikipedia.org/wiki/Serverless_computing",
           completed: false,
           impact: 100,
           action: `inspire`,
@@ -2779,7 +2978,7 @@ return <div style={gradientStyle}>
             `Lesson 3 Understanding Backend Engineering`
           )}?`,
           response: (
-            <div>
+            <SchedulerBlock>
               Dear students! 😊 Here's a roadmap to guide your journey from
               beginner to professional in backend engineering, cloud computing,
               and big data. Remember, everyone's path may look a bit different,
@@ -2905,7 +3104,7 @@ return <div style={gradientStyle}>
                   world together. 🚀💖🌈
                 </div>
               </ol>
-            </div>
+            </SchedulerBlock>
           ),
           spanish: ``,
           tooltip: ``,
@@ -2980,6 +3179,58 @@ if __name__ == '__main__':
           `,
           spanish: ``,
           tooltip: ``,
+          codeBreakdown: [
+            {
+              code: "from flask import Flask, jsonify, request",
+              explanation:
+                "Here we gather our mystical Flask ingredients, preparing to brew a spellbinding API potion. 🍵✨",
+            },
+            {
+              code: "app = Flask(__name__)",
+              explanation:
+                "With this incantation, we summon our Flask application into being, a vessel for our RESTful spells. 📜🔮",
+            },
+            {
+              code: "tasks = [...] # In-memory list of tasks",
+              explanation:
+                "We conjure a magical list to hold our tasks, a temporary scroll where our quests are inscribed. 📜✏️",
+            },
+            {
+              code: "@app.route('/tasks', methods=['GET'])",
+              explanation:
+                "Creating a gateway to view all tasks, like opening a book to reveal its secrets. 🚪📖",
+            },
+            {
+              code: "def get_tasks():",
+              explanation:
+                "This spell reveals the list of tasks, sharing their tales with any who ask. 🔍📚",
+            },
+            {
+              code: "@app.route('/tasks/<int:task_id>', methods=['GET'])",
+              explanation:
+                "A narrower path, this enchantment finds the story of a single task by its unique sigil. 🔎🔖",
+            },
+            {
+              code: "def create_task():",
+              explanation:
+                "Here, we weave a new task into existence, adding its story to our growing collection. 🌱➕",
+            },
+            {
+              code: "@app.route('/tasks/<int:task_id>', methods=['PUT'])",
+              explanation:
+                "An incantation to transform a task, changing its essence or completing its journey. 🔄✨",
+            },
+            {
+              code: "@app.route('/tasks/<int:task_id>', methods=['DELETE'])",
+              explanation:
+                "With a whisper, we erase a task from our scroll, its mission fulfilled or forgotten. 🍃💨",
+            },
+            {
+              code: "if __name__ == '__main__':",
+              explanation:
+                "Finally, we anchor our spellbook to the mortal realm, ready to share its magic with the world. 🌍🔮",
+            },
+          ],
         },
         define: {
           completed: false,
@@ -3056,39 +3307,27 @@ if __name__ == '__main__':
           response: (
             <div>
               <div
-                style={{
-                  ...textBlock(
-                    japaneseThemePalette.PowerPurple,
-                    0,
-                    12,
-                    "white",
-                    "0px 0px 5px 0px rgba(0,0,0,0.75)"
-                  ),
-                }}
+                style={
+                  {
+                    // ...textBlock(
+                    //   japaneseThemePalette.PowerPurple,
+                    //   0,
+                    //   12,
+                    //   "white",
+                    //   "0px 0px 5px 0px rgba(0,0,0,0.75)"
+                    // ),
+                  }
+                }
               >
                 This book will introduce you to some industry level standards to
                 building large scale technology. Some of the problems
                 encountered here may not be witnessed for years into your
                 career.
               </div>
-              <div
-                style={{
-                  ...textBlock(
-                    japaneseThemePalette.ProsperityEmeraldGreen,
-                    0,
-                    12,
-                    "white",
-                    "0px 0px 5px 0px rgba(0,0,0,0.75)"
-                  ),
-                  width: "fit-content",
-                  marginTop: 4,
-                }}
-              >
-                Shopify Affiliate Commission: 7%
-              </div>
+
               <br />
 
-              <a href="https://collabs.shop/iu3ion" target="_blank">
+              <div href="https://collabs.shop/iu3ion" target="_blank">
                 <img
                   style={{
                     // border: "1px solid cyan",
@@ -3099,7 +3338,7 @@ if __name__ == '__main__':
                   }}
                   src={backendScaling}
                 />
-              </a>
+              </div>
             </div>
           ),
           spanish: ``,
@@ -3442,6 +3681,7 @@ exports.app = functions
       prompts: {
         welcome: {
           response: (
+            // <ChatBlock type={"quiz"}>
             <div>
               Hello my brave students! 🌟
               <br /> <br />
@@ -3464,8 +3704,14 @@ exports.app = functions
               yourselves and each other. Your ideas, energy, and passion are
               ready to make a mark in the world. So, buckle up, my dear
               students, and let your brilliance illuminate the path ahead! 🎉💖
+              <br />
+              <br />
+              <RandomCharacter
+                notSoRandomCharacter={"9"}
+                width="100"
+                // borderRadius={"50%"}
+              />
             </div>
-            // </ChatBlock>
           ),
           spanish: ``,
           tooltip: ``,
@@ -3481,8 +3727,29 @@ exports.app = functions
           response: `null`,
           spanish: ``,
           tooltip: ``,
+          summaryContent: (
+            <div>
+              In this session, we've taken a big leap in our coding journey! We
+              started by setting up our development environment with tools like
+              VSCode and Node.js. Next, we dived into creating a project
+              directory and getting our React project up and running. But it's
+              not just about the frontend; we also explored setting up our
+              database with Firebase, giving us the power to manage user data
+              and authenticate users seamlessly. The lesson is like building a
+              bridge between your creative ideas and the real digital world.
+              We're not just learning to code; we're learning to bring our
+              visions to life! 🌉💻🚀
+              <br />
+              <br />
+              Ready to explore more about user authentication, database
+              management, or expand your project with additional features? Let's
+              keep this momentum going! 🌟👩‍💻🔍
+            </div>
+          ),
         },
         inspire: {
+          headerImageSrc: inspire04,
+          wikiLink: "https://en.wikipedia.org/wiki/Y_Combinator",
           completed: false,
           impact: 100,
           action: `inspire`,
@@ -3723,7 +3990,7 @@ exports.app = functions
             `Lesson 4 Building Apps`
           )}?`,
           response: (
-            <div>
+            <SchedulerBlock>
               MY DEDICATED!!! STUDENTS! 💫 Let's map out this exciting journey
               from learning to code, to building an app with a Backend as a
               Service (BaaS), and then raising money to fund your startup. Are
@@ -3852,7 +4119,7 @@ exports.app = functions
                 achieve anything. Let's take these steps together, and turn your
                 brilliant ideas into reality! 🌟💖
               </div>
-            </div>
+            </SchedulerBlock>
           ),
           spanish: ``,
           tooltip: ``,
@@ -3875,19 +4142,14 @@ Backend: Attach the payment method to the customer.
 Backend: Create a subscription for the customer with the appropriate pricing plan.
 As previously mentioned, the sensitive operations (steps 2-4) should be performed on the backend to ensure security. Here's a simplified example of how you could do this:
 */
-______________________________________
 
------
 /* The Frontend */
 /*
 First, you'll need to set up Stripe.js on your frontend and use it to collect card details. 
 The CardElement component provides a form where users can enter their card details.
 
 
-
 */
-
------
 
 import React from 'react';
 import { loadStripe } from '@stripe/stripe-js';
@@ -3945,8 +4207,6 @@ function App() {
 
 export default App;
 
------
-
 /* The Backend */
 /*
 This is a very simplified example. 
@@ -3956,7 +4216,6 @@ want to secure your endpoints and ensure only authenticated
 users can create subscriptions.
 */
 
------
 const express = require('express');
 const stripe = require('stripe')('your-secret-key');
 const app = express();
@@ -3991,6 +4250,43 @@ app.listen(8000, () => console.log('Server running on port 8000'));
           `,
           spanish: ``,
           tooltip: ``,
+          codeBreakdown: [
+            {
+              code: "import { loadStripe } from '@stripe/stripe-js';",
+              explanation:
+                "First, we're summoning the Stripe.js magic by loading it with our publishable key. This is like the first step in our digital spellbook. 📜✨",
+            },
+            {
+              code: "const stripePromise = loadStripe('your-publishable-key');",
+              explanation:
+                "Here we're creating a promise that will awaken the Stripe powers once it's ready, ensuring our payment gateway is primed. 🔮",
+            },
+            {
+              code: "function CheckoutForm() { ... }",
+              explanation:
+                "In this mystical form, we gather the essential card details from our adventurers, preparing to embark on the subscription quest. 🗺️🔑",
+            },
+            {
+              code: "const { error, paymentMethod } = await stripe.createPaymentMethod({ type: 'card', card: cardElement });",
+              explanation:
+                "With a flick of our wand, we attempt to create a new payment method, channeling the card details through Stripe's arcane algorithms. 🪄💳",
+            },
+            {
+              code: "fetch('http://localhost:8000/create-subscription', { ... });",
+              explanation:
+                "Should our spell succeed, we send the payment method's ID to our hidden lair (the backend), where the real magic happens. 🕸️🌐",
+            },
+            {
+              code: "const customer = await stripe.customers.create({ ... });",
+              explanation:
+                "Deep in our backend cauldron, we either summon a new customer to our realm or reconnect with an old friend, binding the payment method to their soul. 👤💫",
+            },
+            {
+              code: "const subscription = await stripe.subscriptions.create({ ... });",
+              explanation:
+                "With everything in place, we conjure the subscription, weaving the customer's fate with our service for the cycles to come. 🔄✨",
+            },
+          ],
         },
         define: {
           completed: false,
@@ -4064,39 +4360,27 @@ app.listen(8000, () => console.log('Server running on port 8000'));
             <div>
               <div>
                 <div
-                  style={{
-                    ...textBlock(
-                      japaneseThemePalette.PowerPurple,
-                      0,
-                      12,
-                      "white",
-                      "0px 0px 5px 0px rgba(0,0,0,0.75)"
-                    ),
-                  }}
+                  style={
+                    {
+                      // ...textBlock(
+                      //   japaneseThemePalette.PowerPurple,
+                      //   0,
+                      //   12,
+                      //   "white",
+                      //   "0px 0px 5px 0px rgba(0,0,0,0.75)"
+                      // ),
+                    }
+                  }
                 >
                   Power law finance is a concept that will help you understand
                   how the startup industry thinks and works. The internet is a
                   powerful tool that can take businesses to exponential heights,
                   and this observes how these platforms are successfully built.
                 </div>
-                <div
-                  style={{
-                    ...textBlock(
-                      japaneseThemePalette.ProsperityEmeraldGreen,
-                      0,
-                      12,
-                      "white",
-                      "0px 0px 5px 0px rgba(0,0,0,0.75)"
-                    ),
-                    width: "fit-content",
-                    marginTop: 4,
-                  }}
-                >
-                  Shopify Affiliate Commission: 7%
-                </div>
+
                 <br />
 
-                <a href="https://collabs.shop/2kdqmy" target="_blank">
+                <div href="https://collabs.shop/2kdqmy" target="_blank">
                   <img
                     style={{
                       // border: "1px solid cyan",
@@ -4107,43 +4391,31 @@ app.listen(8000, () => console.log('Server running on port 8000'));
                     }}
                     src={powerLawFinance}
                   />
-                </a>
+                </div>
               </div>
               <br />
               <br />
               <div>
                 <div
-                  style={{
-                    ...textBlock(
-                      japaneseThemePalette.PowerPurple,
-                      0,
-                      12,
-                      "white",
-                      "0px 0px 5px 0px rgba(0,0,0,0.75)"
-                    ),
-                  }}
+                  style={
+                    {
+                      // ...textBlock(
+                      //   japaneseThemePalette.PowerPurple,
+                      //   0,
+                      //   12,
+                      //   "white",
+                      //   "0px 0px 5px 0px rgba(0,0,0,0.75)"
+                      // ),
+                    }
+                  }
                 >
                   This book discusses how the chess board moves when large firms
                   have to compete with rapidly growing startups.
                 </div>
-                <div
-                  style={{
-                    ...textBlock(
-                      japaneseThemePalette.ProsperityEmeraldGreen,
-                      0,
-                      12,
-                      "white",
-                      "0px 0px 5px 0px rgba(0,0,0,0.75)"
-                    ),
-                    width: "fit-content",
-                    marginTop: 4,
-                  }}
-                >
-                  Shopify Affiliate Commission: 7%
-                </div>
+
                 <br />
 
-                <a href="https://collabs.shop/dldeb6" target="_blank">
+                <div href="https://collabs.shop/dldeb6" target="_blank">
                   <img
                     style={{
                       // border: "1px solid cyan",
@@ -4154,7 +4426,7 @@ app.listen(8000, () => console.log('Server running on port 8000'));
                     }}
                     src={innovatorsDilemma}
                   />
-                </a>
+                </div>
               </div>
             </div>
           ),
@@ -4538,6 +4810,13 @@ export default OpenAIComponent;`,
               learning not just from the course material, but from each other's
               unique perspectives and experiences. 🌈 Ready to code your dreams
               into reality? Let's do this! 💻🚀
+              <br />
+              <br />
+              <RandomCharacter
+                notSoRandomCharacter={"8"}
+                width="100"
+                // borderRadius={"50%"}
+              />
             </div>
           ),
           spanish: ``,
@@ -4554,8 +4833,24 @@ export default OpenAIComponent;`,
           response: `null`,
           spanish: ``,
           tooltip: ``,
+          summaryContent: (
+            <div>
+              This lesson tackles the often intimidating topics of data
+              structures and algorithms in computer science. It begins by
+              addressing the common perception that these subjects are barriers
+              for many learners. The lesson then explores the basics of
+              programming languages, how computers interpret code, and the
+              underlying mechanics of machine code translation. Key concepts
+              like linked lists, trees, and algorithms are introduced and
+              explained in simple terms. The lesson emphasizes the importance of
+              practice and understanding foundational concepts like linked lists
+              to build towards more complex structures and algorithms. 🚀🧠💻
+            </div>
+          ),
         },
         inspire: {
+          headerImageSrc: inspire05,
+          wikiLink: "https://en.wikipedia.org/wiki/John_von_Neumann",
           completed: false,
           impact: 100,
           action: `inspire`,
@@ -4700,7 +4995,7 @@ export default OpenAIComponent;`,
             `Lesson 5 Computer Science`
           )}?`,
           response: (
-            <div>
+            <SchedulerBlock>
               <h1>
                 In-Depth Roadmap & Study Guide for Mastering Data Structures and
                 Algorithms
@@ -4848,7 +5143,7 @@ export default OpenAIComponent;`,
                   interviews and behavioral questions.
                 </li>
               </ul>
-            </div>
+            </SchedulerBlock>
           ),
           spanish: ``,
           tooltip: ``,
@@ -4925,6 +5220,38 @@ if (result !== null) {
           `,
           spanish: ``,
           tooltip: ``,
+          codeBreakdown: [
+            {
+              code: "class Node { ... }",
+              explanation:
+                "In the heart of our magical forest, we define a Node, each bearing the essence of the tree itself, ready to connect with others. 🌿",
+            },
+            {
+              code: "function search(root, key) { ... }",
+              explanation:
+                "With a seeker’s spirit, we embark on a quest, delving into the depths of the tree to uncover hidden treasures or discover new paths. 🔍",
+            },
+            {
+              code: "const root = new Node(15);",
+              explanation:
+                "Our journey begins by planting the first seed, the root of our tree, from which all paths will emerge and grow. 🌱",
+            },
+            {
+              code: "root.left = new Node(10); root.right = new Node(20);",
+              explanation:
+                "As our tree sprouts, we nurture it, guiding its growth to the left and right, embracing the diversity of its branches. 🌲",
+            },
+            {
+              code: "const result = search(root, 17);",
+              explanation:
+                "Our quest leads us on a search for the number 17, a journey through nodes, guided by the wisdom of the tree. 🗺️",
+            },
+            {
+              code: "console.log('Value found!');",
+              explanation:
+                "At journey’s end, we find what we seek, a moment of discovery that lights up our forest with joy. 🎉",
+            },
+          ],
         },
         define: {
           completed: false,
@@ -5004,39 +5331,27 @@ if (result !== null) {
           response: (
             <div>
               <div
-                style={{
-                  ...textBlock(
-                    japaneseThemePalette.PowerPurple,
-                    0,
-                    12,
-                    "white",
-                    "0px 0px 5px 0px rgba(0,0,0,0.75)"
-                  ),
-                }}
+                style={
+                  {
+                    // ...textBlock(
+                    //   japaneseThemePalette.PowerPurple,
+                    //   0,
+                    //   12,
+                    //   "white",
+                    //   "0px 0px 5px 0px rgba(0,0,0,0.75)"
+                    // ),
+                  }
+                }
               >
                 This book introduces you to the history of modern game theory,
                 which has had enormous consequences in computing history. The
                 quality of your decisions will have to improve when your skills
                 and income improve.
               </div>
-              <div
-                style={{
-                  ...textBlock(
-                    japaneseThemePalette.ProsperityEmeraldGreen,
-                    0,
-                    12,
-                    "white",
-                    "0px 0px 5px 0px rgba(0,0,0,0.75)"
-                  ),
-                  width: "fit-content",
-                  marginTop: 4,
-                }}
-              >
-                Shopify Affiliate Commission: 7%
-              </div>
+
               <br />
 
-              <a href="https://collabs.shop/iu3ion" target="_blank">
+              <div href="https://collabs.shop/iu3ion" target="_blank">
                 <img
                   style={{
                     // border: "1px solid cyan",
@@ -5047,7 +5362,7 @@ if (result !== null) {
                   }}
                   src={prisonersDilemma}
                 />
-              </a>
+              </div>
             </div>
           ),
           spanish: ``,

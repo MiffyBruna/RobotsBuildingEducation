@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { updateDoc } from "firebase/firestore";
 import { isEmpty } from "lodash";
 import { PromptMessage } from "./PromptMessage/PromptMessage";
@@ -10,7 +10,7 @@ import {
   computeResponseList,
   computeTotalImpactFromPrompt,
 } from "./ChatGPT.compute";
-import { Intro } from "./PromptCombiner9000/Intro";
+import { Intro } from "./PromptCombiner9000/Content/Intro";
 import {
   FadeInComponent,
   PanLeftComponent,
@@ -60,6 +60,14 @@ const ChatGPT = ({
     setPromptMessage("");
     setChatGptResponseList([]);
   }, [patreonObject]);
+
+  const topRef = useRef(null);
+
+  useEffect(() => {
+    if (topRef.current) {
+      topRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [loadingMessage]);
 
   const handlePromptSelection = (promptType) => {
     const itemListId = `RO.B.E_prompt|${promptType}|${moduleName}|${currentPath}`;
@@ -138,6 +146,7 @@ const ChatGPT = ({
       style={{ transition: "0.3s all ease-in-out", color: "white" }}
       key={loadingMessage}
     >
+      <div ref={topRef}></div>
       <FadeInComponent>
         <PromptMessage
           promptMessage={promptMessage}
@@ -157,6 +166,7 @@ const ChatGPT = ({
           promptSelection={promptSelection}
         />
       </PanLeftComponent>
+
       {chatGptResponseList?.map((response, index) => (
         <PromptCombiner9000
           key={index}

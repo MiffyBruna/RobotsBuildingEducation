@@ -847,7 +847,7 @@ const StackTile = ({ name }) => {
   return (
     <div
       style={{
-        backgroundColor: japaneseThemePalette.SakuraMochiPink,
+        // backgroundColor: japaneseThemePalette.SakuraMochiPink,
         color: "white",
         padding: "10px",
         margin: "5px",

@@ -224,7 +224,7 @@ This is a great example of what not to do:
 
 ## Influence & Expression
 
-<img width="100%" src="https://res.cloudinary.com/eduprojectsil/image/upload/v1676193809/1_lqmbjj.jpg" />
+<!-- <img width="100%" src="https://res.cloudinary.com/eduprojectsil/image/upload/v1676193809/1_lqmbjj.jpg" /> -->
 
 So before beginning, let’s quickly go through my experience on the subject. I’ve been using internet forums for about 20 years. The first one I really participated in was called GameFAQs.
 

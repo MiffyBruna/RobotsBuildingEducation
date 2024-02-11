@@ -6,7 +6,7 @@ import styled from "styled-components";
 import { MultipleChoiceQuestion } from "./Templates/MultipleChoiceQuestion/MultipleChoiceQuestion";
 import { TextInputQuestion } from "./Templates/TextInputQuestion/TextInputQuestion";
 import { getDoc, updateDoc } from "firebase/firestore";
-import { updateLevel } from "../../../App.compute";
+import { updateImpact, updateLevel } from "../../../App.compute";
 import { OutputQuestion } from "./Templates/OutputQuestion/OutputQuestion";
 import { japaneseThemePalette } from "../../../styles/lazyStyles";
 import { SelectionQuestion } from "./Templates/SelectionQuestion/SelectionQuestion";
@@ -34,7 +34,7 @@ const RewardScreen = ({ isAnswerCorrect }) => {
   if (isAnswerCorrect === "false") {
     return (
       <div style={{ textShadow: "1px 1px 5px black" }}>
-        <h1>You failed! 😨</h1>
+        <h1 style={{ fontFamily: "Bungee" }}>You failed! 😨</h1>
         <p>Come back in 2 hours to try again!</p>
 
         <p>
@@ -53,7 +53,7 @@ const RewardScreen = ({ isAnswerCorrect }) => {
   } else {
     return (
       <div style={{ textShadow: "1px 1px 5px black" }}>
-        <h1>Great job! 🌟</h1>
+        <h1 style={{ fontFamily: "Bungee" }}>Great job! 🌟</h1>
         <p>Come back in 2 hours for your next challenge!</p>
 
         <p>
@@ -1426,6 +1426,7 @@ export const BossMode = ({
   userStateReference,
   globalStateReference,
   zap,
+  handleZap,
 }) => {
   //   console.log("user state reference", userStateReference);
 
@@ -1545,6 +1546,18 @@ export const BossMode = ({
       localStorage.setItem("isAnswerCorrect", "false");
     }
 
+    if (
+      localStorage.getItem("patreonPasscode") ===
+      import.meta.env.VITE_BITCOIN_PASSCODE
+    ) {
+      zap().then((lightningResponse) => {
+        if (lightningResponse?.preimage) {
+          updateImpact(1, userStateReference, globalStateReference);
+        }
+      });
+    }
+
+    handleZap("ai");
     setGameActive(true);
     const now = new Date();
     localStorage.setItem("lastCorrectAnswerTime", now);
@@ -1599,9 +1612,17 @@ export const BossMode = ({
         show={isBossModeOpen}
         style={{ backgroundColor: "black" }}
         fullscreen
+        keyboard
+        onHide={() => setIsBossModeOpen(false)}
       >
-        <Modal.Header style={{ backgroundColor: "black", color: "white" }}>
-          <Modal.Title>rox the ai boss</Modal.Title>
+        <Modal.Header
+          style={{ backgroundColor: "black", color: "white" }}
+          closeVariant="white"
+          closeButton
+        >
+          <Modal.Title style={{ fontFamily: "Bungee" }}>
+            rox the ai boss
+          </Modal.Title>
         </Modal.Header>
         <Modal.Body
           style={{
@@ -1610,9 +1631,8 @@ export const BossMode = ({
           }}
         >
           <div style={{ textShadow: "1px 1px 5px black" }}>
-            <h2>The leader</h2>
             <h4>
-              {globalStateReference?.globalLeaderName} - Level:{" "}
+              Highest level: {globalStateReference?.globalLeaderName} - Level:{" "}
               {globalStateReference?.globalLevelCounter}
             </h4>
             <div>
@@ -1671,11 +1691,11 @@ export const BossMode = ({
             />
           )}
         </Modal.Body>
-        <Modal.Footer style={{ backgroundColor: "black" }}>
+        {/* <Modal.Footer style={{ backgroundColor: "black" }}>
           <Button variant="dark" onClick={() => setIsBossModeOpen(false)}>
             Back to app
           </Button>
-        </Modal.Footer>
+        </Modal.Footer> */}
       </Modal>
     </>
   );

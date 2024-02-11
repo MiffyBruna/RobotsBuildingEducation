@@ -5,6 +5,7 @@ import { Button, Modal, launchModal } from "@getalby/bitcoin-connect-react";
 import toast, { Toaster } from "react-hot-toast";
 
 export const WalletAuth = ({ handleZeroKnowledgePassword }) => {
+  // console.log("doc", document.getElementsByClassName("mt-12"));
   // const [invoice, setInvoice] = React.useState<string | undefined>(undefined);
   // const [preimage, setPreimage] = React.useState<string | undefined>(undefined);
 
@@ -48,22 +49,27 @@ export const WalletAuth = ({ handleZeroKnowledgePassword }) => {
   // }
 
   // console.log("window webln", window?.webln);
-  return (
-    <>
-      <Toaster />
 
+  return (
+    <div>
+      <div>
+        <Toaster />
+      </div>
+      {/* 
       <DisableButton variant="primary" disabled={true}>
         Connect Wallet (disabled)
-      </DisableButton>
-      {/* <Button
-        // disabled={true}
-        appName="Robots Building Education"
-        onConnect={() => {
-          localStorage.setItem("patreonPasscode", "bitcoin");
-          toast("Connected!");
-          handleZeroKnowledgePassword(null, null, true);
-        }}
-      /> */}
-    </>
+      </DisableButton> */}
+      <div onClick={() => console.log("HELLO")}>
+        <Button
+          // disabled={true}
+          appName="Robots Building Education"
+          onConnect={() => {
+            localStorage.setItem("patreonPasscode", "bitcoin");
+            toast("Connected!");
+            handleZeroKnowledgePassword(null, null, true);
+          }}
+        />
+      </div>
+    </div>
   );
 };

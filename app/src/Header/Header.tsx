@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { LearnMore } from "./LearnMore/LearnMore";
-import robe_logo from "../common/media/images/robe_logo.png";
+// import robe_logo from "../common/media/images/robe_logo.png";
+import animatedLogo from "../common/media/images/animatedLogo.gif";
 import {
   FadeInComponent,
   RiseDownAnimation,
@@ -60,7 +61,7 @@ export const Header = ({
   return (
     <div style={{ color: prettyColorPalette.softYellowGlow }}>
       <FadeInComponent>
-        <img width="175px" src={robe_logo} style={{ marginTop: "24px" }} />
+        <img width="175px" src={animatedLogo} style={{ marginTop: "24px" }} />
       </FadeInComponent>
       {/* <div
         style={{
@@ -104,8 +105,8 @@ export const Header = ({
           </Form>
         </div>
       </div> */}
-      <br />
       <LearnMore languageMode={languageMode} canInstallPwa={canInstallPwa} />
+      <br />
       {localStorage.getItem("patreonPasscode") ===
       import.meta.env.VITE_PATREON_PASSCODE ? (
         <FadeInComponent>

@@ -203,7 +203,9 @@ const ScriptDisplayComponent = ({ scriptData }) => {
 const ScriptSection = ({ sectionData }) => {
   return (
     <Section>
-      <ScriptHeader>{sectionData.header}</ScriptHeader>
+      <ScriptHeader style={{ fontFamily: "Bungee" }}>
+        {sectionData.header}
+      </ScriptHeader>
       <ScriptLines>
         {sectionData.script_lines.map((line, idx) => (
           <p key={idx}>{line}</p>
@@ -224,6 +226,7 @@ export const Cofounder = ({
   userStateReference,
   globalStateReference,
   zap,
+  handleZap,
 }) => {
   const [formData, setFormData] = useState({
     creationDescription: "",
@@ -321,6 +324,7 @@ export const Cofounder = ({
 
       //   let outcome = result.schedule;
       let outcome = data?.bot?.content;
+      handleZap("ai");
       setCofounder(outcome);
     }
     setIsCofounderLoading(false);
@@ -364,6 +368,7 @@ export const Cofounder = ({
       let result = JSON.parse(data?.bot?.content);
 
       let outcome = result.result;
+      handleZap("ai");
       setCodeBreakdown(outcome);
     }
     setIsCodeBreakdownLoading(false);
@@ -404,6 +409,7 @@ export const Cofounder = ({
       let data = await response.json();
       let result = JSON.parse(data?.bot?.content);
 
+      handleZap("ai");
       let outcome = result.result.script;
       setContentScript(outcome);
     }
@@ -483,6 +489,7 @@ export const Cofounder = ({
       //   let result = JSON.parse(data?.bot?.content);
 
       //   let outcome = result.schedule;
+      handleZap("ai");
       let outcome = data?.bot?.content;
       setBusinessWriting(outcome);
     }
@@ -527,6 +534,7 @@ export const Cofounder = ({
       });
 
     if (response) {
+      handleZap("ai");
       let data = await response.json();
       let result = JSON.parse(data?.bot?.content);
       let outcome = result.schedule;
@@ -562,9 +570,19 @@ export const Cofounder = ({
   // console.log("map", mapping);
   return (
     <>
-      <Modal centered show={isCofounderOpen} fullscreen>
-        <Modal.Header style={{ backgroundColor: "black", color: "white" }}>
-          <Modal.Title>Co-founder</Modal.Title>
+      <Modal
+        centered
+        show={isCofounderOpen}
+        fullscreen
+        keyboard
+        onHide={() => setIsCofounderOpen(false)}
+      >
+        <Modal.Header
+          style={{ backgroundColor: "black", color: "white" }}
+          closeVariant="white"
+          closeButton
+        >
+          <Modal.Title style={{ fontFamily: "Bungee" }}>Co-founder</Modal.Title>
         </Modal.Header>
 
         <Modal.Body
@@ -711,7 +729,7 @@ export const Cofounder = ({
                 {codeBreakdown ? (
                   <Container>
                     <Header>
-                      <h1>Code Explorer</h1>
+                      <h1 style={{ fontFamily: "Bungee" }}>Code Explorer</h1>
                       <p>Discover how the code works, step by step!</p>
                     </Header>
 
@@ -748,7 +766,7 @@ export const Cofounder = ({
                   </Container>
                 ) : null}
                 <br />
-                <h2>Code Editor</h2>
+                <h2 style={{ fontFamily: "Bungee" }}>Code Editor</h2>
                 <LiveError />
               </LiveProvider>
 
@@ -784,11 +802,11 @@ export const Cofounder = ({
             </div>
           ) : null}
         </Modal.Body>
-        <Modal.Footer style={{ backgroundColor: "black", color: "white" }}>
+        {/* <Modal.Footer style={{ backgroundColor: "black", color: "white" }}>
           <Button variant="dark" onClick={() => setIsCofounderOpen(false)}>
             Back to app
           </Button>
-        </Modal.Footer>
+        </Modal.Footer> */}
       </Modal>
     </>
   );

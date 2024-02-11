@@ -4,7 +4,7 @@ import { highlight, languages } from "prismjs/components/prism-core";
 import "prismjs/components/prism-clike";
 import "prismjs/components/prism-javascript";
 import "prismjs/themes/prism.css";
-import RandomCharacter from "../../common/ui/RandomCharacter/RandomCharacter";
+import RandomCharacter from "../../common/ui/Displays/RandomCharacter/RandomCharacter";
 
 import styled from "styled-components";
 
@@ -84,7 +84,7 @@ const CodeEditor = ({ patreonObject }) => {
         wordBreak: "break-word",
         display: "flex",
         flexDirection: "column",
-        borderRadius: 15,
+        borderRadius: 30,
       }}
     >
       {stepMap
@@ -96,7 +96,7 @@ const CodeEditor = ({ patreonObject }) => {
             <div style={{ padding: "10px 10px 0px 10px" }}>
               {" "}
               {step.knowledge}
-              <RandomCharacter />
+              <RandomCharacter speed={0.44} />
             </div>
 
             <pre
@@ -108,7 +108,7 @@ const CodeEditor = ({ patreonObject }) => {
                 //       : "rgba(215,137,215, 0.7)"
                 //     : "#faf3e0",
                 padding: 0,
-                borderRadius: 7,
+                borderRadius: 30,
                 border:
                   index === currentStep
                     ? isValid

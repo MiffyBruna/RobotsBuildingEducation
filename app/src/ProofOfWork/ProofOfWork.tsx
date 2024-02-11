@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { ImpactWallet } from "./ImpactWallet/ImpactWallet";
-import { RiseUpAnimation } from "../styles/lazyStyles";
+import { RiseUpAnimation, japaneseThemePalette } from "../styles/lazyStyles";
 
 export const ProofOfWork = ({
   globalScholarshipCounter,
@@ -22,6 +22,7 @@ export const ProofOfWork = ({
   showZap,
   handleZeroKnowledgePassword,
   zap,
+  handleZap,
 }) => {
   const [isImpactWalletOpen, setIsImpactWalletOpen] = useState(false);
   const [isEmotionalIntelligenceOpen, setIsEmotionalIntelligenceOpen] =
@@ -44,20 +45,23 @@ export const ProofOfWork = ({
         border: "1px solid #1C1C1E",
 
         padding: 6,
-        backgroundColor: "#1C1C1E",
+        backgroundColor: showStars || showZap ? "black" : "#1C1C1E",
+        // backgroundColor: "#",
 
         maxWidth: "600px",
         minWidth: "300px",
         textAlign: "center",
         width: "100%",
+        borderRadius: 12,
       }}
     >
       {/* 
       Need to refactor this. 
       Impact wallet should only be the modal
       EmotionalIntelligence is not a child of Impact Wallet. */}
-      <div style={{ marginBottom: 6 }}>👾 {displayName}</div>
+
       <ImpactWallet
+        displayName={displayName}
         handlePathSelection={handlePathSelection}
         databaseUserDocument={databaseUserDocument}
         computePercentage={computePercentage}
@@ -86,6 +90,7 @@ export const ProofOfWork = ({
         isBossModeOpen={isBossModeOpen}
         setIsBossModeOpen={setIsBossModeOpen}
         zap={zap}
+        handleZap={handleZap}
       />
     </div>
   );

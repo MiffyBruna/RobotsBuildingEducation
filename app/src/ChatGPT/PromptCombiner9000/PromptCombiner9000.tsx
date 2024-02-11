@@ -14,21 +14,26 @@ import "prismjs/components/prism-clike";
 import "prismjs/components/prism-javascript";
 import "prismjs/themes/prism.css";
 import { PanLeftComponent, PanRightComponent } from "../../styles/lazyStyles";
+import { ContentLinks } from "../../common/ui/Displays/ContentLinks/ContentLinks";
+import { CodeDemo } from "./Content/CodeDemo";
 
 const delayedAnimation = keyframes`
 from {
     transform: translateY(100px);
     opacity: 0;
+    visibility: hidden;
   }
   to {
     transform: translateY(0);
     opacity: 1;
+    visibility: visible;
   }
 `;
 const StyledAnimatedPromptCombiner = styled.div`
   animation: ${delayedAnimation} 0.25s ease-out;
   animation-delay: ${(props) => props.index * 0.2}s; /* Delay based on index */
   opacity: 0; /* Start with opacity 0 to make the animation visible */
+  visibility: hidden;
   animation-fill-mode: forwards; /* Keep the element visible after the animation */
 `;
 const Wrapper = styled.div`
@@ -48,7 +53,7 @@ const MessageContainer = styled.div`
   min-width: 350px;
   // max-width: 600px;
   max-width: 70.5%;
-  border-radius: 30px;
+  border-radius: 50px;
   margin: 24px 0 12px 0;
 `;
 
@@ -100,43 +105,32 @@ const renderContent = (
       return <CodeEditor patreonObject={patreonObject} />;
     case "demonstrate":
       if (patreonObject?.hasCode) {
-        return (
-          <div
-            style={{
-              color: "#696969",
-              backgroundColor: "#faf3e0",
-              width: "100%",
-              padding: 20,
-              wordBreak: "break-word",
-              display: "flex",
-              flexDirection: "column",
-              borderRadius: 15,
-            }}
-          >
-            <pre>
-              <Editor
-                value={response}
-                // onValueChange={handleChange}
-                highlight={(input) => highlight(input, languages.js)}
-                padding={10}
-                style={{
-                  fontFamily: '"Fira code", "Fira Mono", monospace',
-                  fontSize: 12,
-                  width: "100%",
-                  // border: "1px solid black",
-                  borderRadius: 7,
-                }}
-                disabled
-              />
-            </pre>
-          </div>
-        );
+        return <CodeDemo response={response} patreonObject={patreonObject} />;
       } else {
-        return <div>{response}</div>;
+        return <div style={{ padding: 20 }}>{response}</div>;
       }
       break;
+    case "shop":
+      return (
+        <div style={{ padding: 20 }}>
+          <code style={{ fontSize: 12 }}>
+            Shopify links don't work rn but the books are good to know about 😔
+          </code>
+          <br />
+          <br />
+          {response}
+        </div>
+      );
     default:
-      return <div>{response}</div>;
+      return (
+        <div style={{ padding: 20 }}>
+          {patreonObject?.prompts?.[type]?.headerImageSrc ? (
+            <ContentLinks patreonObject={patreonObject} type={type} />
+          ) : null}
+
+          {response}
+        </div>
+      );
   }
 };
 

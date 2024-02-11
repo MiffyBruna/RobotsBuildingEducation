@@ -57,6 +57,7 @@ So let's dive in shall we? What do I invest in and why?
 In the spirit of the tradition, we're going to briefly cover my investments. In the future, there may be a better time and place to dive into all of these concepts more closely but for now, this should all take quite some time to really internalize. Before starting I want the reader to illustrate to remember an idea. Investing your money as an adult is essentially the equivalent of a child learning how to swim. Any fool can examine a deep body of water and understand that their is some inherent risk in trying to learn how to swim but the task is ultimately not that big of a deal. The same goes for investing. You typically just need some experience and guidance. I think a lot of people like to believe that investing is like jumping into a sea filled with sharks. It can be that if you want it to be but it's obviously a nonsensical thing to do to put yourself in that kind of situation. In fact, you could give someone like me $500,000,000 and I would likely be able to allocate that money and sleep soundly at night knowing that the market isn't going to suddenly vanquish any of it.
 
 One of the wisdoms I follow, not listed above, is one provided by Munger and Buffet. They suggest not to directly invest in things outside of your circle of competence.
+
 This piece of wisdom took me a while to understand, which lead me to the advice I provided earlier about really taking the time to understand what you know vs. what you think you know.
 
 So I invest in social media, financial technology and education technology. I believe those industries have non-trivial growth trajectories ahead of them and I believe that I can understand these investments better than the typical investor. Despite having a background in computer science, I don't expand into seemingly common sense investments like semiconductor chips or AI - but that simply points to the practice of investing in what you truly know. I don't truly spend too much time working on AI or pouring over modern advancements so I don't extend myself in those directions!
@@ -64,15 +65,17 @@ So I invest in social media, financial technology and education technology. I be
 When it comes to these industries, I generally invest in assets that are offered at fair or good prices. This is another wisdom not listed about investing in wonderful companies at fair prices, rather than fair companies at wonderful prices. But what is wonderful? In my opinion, it's some combination of having deep market penetration, a profoundly good reputation and excellent product marketing.
 
 These are great American companies like Costco, Apple, Disney and the sort. We may recognize the value of the brands, but why is it that we recognize these brands so much?
+
+<!--
 So when it comes to applying these concepts, I've ultimately boiled it down to primarily 5 investments. And if you're wondering, yes I've done deep reading on every company, their financials, their history, their leaders and the overarching stories:
 
 1. Pinterest
 2. Block
 3. Duolingo
 4. Berkshire Hathaway
-5. Apple
+5. Apple -->
 
-# Pinterest & Social Media
+<!-- # Pinterest & Social Media
 
 ## Understanding incentives
 
@@ -132,9 +135,9 @@ It is my view that Pinterest will find good ways to manage that problem and user
 
 <img width="100%" alt="image" src="https://github.com/RobotsBuildingEducation/Educate/assets/65219666/35080d40-fe49-4a78-83b2-9e3c79442649">
 
-In short, there’s a lot of potential and promise behind Pinterest’s current market value and the total addressable market surrounding retail, advertising and payments. The history and path ahead appears well-poised for success. Its current valuation appears to reflect that of a wonderful company at a fair price. The position of the business is fundamentally sound and simple to understand. The moat it maintains relative to its titan-sized competitors is visible. I believe it’s a strong acquisition target if not a company that successfully multiplies its growth and presence as a reliable American brand. Pinterest can be a reasonable way to invest in social media, similar to buying a nice piece of real estate in the internet society. Either way, it's a good starting point to learn more about the investing in the industry.
+In short, there’s a lot of potential and promise behind Pinterest’s current market value and the total addressable market surrounding retail, advertising and payments. The history and path ahead appears well-poised for success. Its current valuation appears to reflect that of a wonderful company at a fair price. The position of the business is fundamentally sound and simple to understand. The moat it maintains relative to its titan-sized competitors is visible. I believe it’s a strong acquisition target if not a company that successfully multiplies its growth and presence as a reliable American brand. Pinterest can be a reasonable way to invest in social media, similar to buying a nice piece of real estate in the internet society. Either way, it's a good starting point to learn more about the investing in the industry. -->
 
-# Block & Financial Technology
+<!-- # Block & Financial Technology
 
 <img width="100%" alt="image" src="https://github.com/RobotsBuildingEducation/Educate/assets/65219666/c649c73f-ca8f-4f52-80ff-950b41a9bf72">
 
@@ -145,7 +148,7 @@ Block is an organization that is responsible for Square, Cash App, TIDAL, TBD an
 ## My History With Bitcoin
 
 <img width="100%" alt="image" src="https://github.com/RobotsBuildingEducation/Educate/assets/65219666/fe2c8f13-5330-445c-a86c-009ccdec7a1d">
- 
+
 The year was 2015 in Chicago and I was a computer science student in an operating systems course. I was working  in a screw manufacturer with machines and robotics. My friend had come over to consume some cannabis and we began a regular conversation over graphics cards available in the market.
 
 We had this conversation because it would often be the case that I was gaming online with old computer hardware and this would limit my experiences. This time was a little different. AMD had released some modern cards at an affordable price. We talked about how gaming was getting ubiquitous worldwide and how it made sense to improve access. Little did we know that we would see these products experience regular shortages in the future.
@@ -161,7 +164,7 @@ However, this required an unaccountable relationship of trust and security. It l
 What had convinced me to adopt a long-term view was the understanding that the network depended on a collection of miners that had a strong relationship with energy and heat. I thought it was a beautifully done process. It was clear to me that there was a future where these machines would upgrade or transform. Needless to say, I found the Proof-of-Work approach fascinating in its potential, but it was also easy to view a lot of technology that way. We really didn't know what was going to happen.
 
 <img width="100%" alt="image" src="https://github.com/RobotsBuildingEducation/Educate/assets/65219666/a938a369-2e42-4057-a3a3-1293dc477740">
- 
+
 One has to remember that I’m an individual that essentially aged alongside the commercial internet and folks like us are eager and driven to see changes in a number of sectors. We are hopeful for the future and the outcomes created by these solutions. Bitcoin is something that sits brightly between intersections of energy policy, robotics, social networks or even cannabis policy.
 
 That was all for some time. That was my introduction to the markets. Being a gamer and a computer science student gave me an edge in the consumer tech market. I was still this individual without much to work with so my best move was to watch and learn. Bitcoin and its associated markets were still very volatile and it wasn’t really a winning bet for me at the time regardless of what transpired in the markets. I didn’t know enough. I did know that it would be unwise to discount or discredit the invention. I still had time.
@@ -205,7 +208,7 @@ I believe that’s what Jack, the founder of Block and Twitter, means by Bitcoin
 The United States had recently exited the world war as a global power and went through an era of reforming global geopolitics under its influence. A lot of recent American history can be understood under that context. Oversimplifying, there were two global powers after the world war and they had competing economic policies. One can assume that the greater system would likely result in the greater or more productive military over a period of time. There’s a number of ways to opine or produce a narrative around history. Either way, the American military was more influential. Society changed in unique ways.
 
 <img width="100%" alt="image" src="https://github.com/RobotsBuildingEducation/Educate/assets/65219666/838a2873-9644-4bd4-84a0-0e21b1127de8">
- 
+
 This influence relationship applied domestically and internationally. It was a time of expressing power over supply chains. In the US, it meant containment through drug war. It also suggested a reworking of monetary standards away from gold and toward dollar-based trust. These implementations were almost immediately after the Civil Rights Act, invoking a new era of control.
 
 <img width="100%" alt="image" src="https://github.com/RobotsBuildingEducation/Educate/assets/65219666/743756b6-0fb2-4af4-9a93-5bda50d09e2b">
@@ -368,4 +371,4 @@ Well truthfully, there isn't much to touch on when it comes to incumbents like B
 
 You may have noticed that I didn't dive much into the financial reporting of these companies. That's because financial reporting is backtracked data. It's the outcome of the understanding and the execution of the business. So it's about keeping up appropriately, but I don't believe in using financial reporting to convince people of a good investment. That part is obvious, you ought to not take too much stake into something with poor or risky financials unless it's you driving the business, but that's a whole other conversation we'll have another day.
 
-As always, you can expect the depth, the details and the quality of this content to improve over time. I believe this is a good faith attempt at getting the most important thoughts on this matter in a clear way and the challenge with this content was thematically always picking out the right parts. Please do take your own time to understand this and apply it to things in and outside of stocks, since it has been multiple and continuous years of effort to consolidate it to this point! I look forward to improving this essay as things change over time :)
+As always, you can expect the depth, the details and the quality of this content to improve over time. I believe this is a good faith attempt at getting the most important thoughts on this matter in a clear way and the challenge with this content was thematically always picking out the right parts. Please do take your own time to understand this and apply it to things in and outside of stocks, since it has been multiple and continuous years of effort to consolidate it to this point! I look forward to improving this essay as things change over time :) -->

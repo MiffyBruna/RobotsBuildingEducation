@@ -1,6 +1,23 @@
 import styled, { keyframes } from "styled-components";
 import { isEmpty } from "lodash";
 import { Link } from "react-router-dom";
+import { getRandomColor } from "../App.compute";
+
+const popAnimation = keyframes`
+0%, 100% { transform: scale(1); }
+10%, 30% { transform: scale(1.5); }
+20% { transform: scale(0.85); }
+40%, 60% { transform: scale(1.4); }
+50% { transform: scale(0.9); }
+70%, 90% { transform: scale(1.3); }
+80% { transform: scale(0.95); }
+
+`;
+
+export const PopAnimation = styled.div`
+  animation: ${popAnimation} 2s ease-in-out infinite;
+`;
+
 const riseAnimation = keyframes`
   from {
     transform: translateY(100px);
@@ -13,7 +30,9 @@ const riseAnimation = keyframes`
 `;
 
 export const RiseUpAnimation = styled.div`
-  animation: ${riseAnimation} 0.38s ease-in-out;
+  animation: ${riseAnimation} ${(props) => {
+  return props.speed ? props.speed + "s" : "0.38s";
+}}; ease-in-out;
 `;
 
 const riseDownAnimation = keyframes`
@@ -38,9 +57,13 @@ const fadeInAnimation = keyframes`
     opacity: 1;
   }
 `;
+
 export const FadeInComponent = styled.div`
-  animation: ${fadeInAnimation} 0.45s ease-in;
+  animation: ${fadeInAnimation} ${(props) => {
+  return props.speed ? props.speed + "s" : "0.45s";
+}}; ease-in;
 `;
+
 const panRight = keyframes`
   from {
     transform: translateX(60px);
@@ -159,7 +182,9 @@ export const StyledModule = styled.button`
     transform: scale(1.1);
 
     background: ${(props) => {
-      return props.patreonObject.isModuleDisabled ? "#48464A" : "#f5befa";
+      return props.patreonObject.isModuleDisabled
+        ? "#48464A"
+        : getRandomColor();
     }};
 
     animation: ${sineWave} 3s infinite ease-in-out;
@@ -169,6 +194,7 @@ export const StyledModule = styled.button`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  font-family: "Bungee";
 `;
 
 export const ComingSoonModule = styled.button`
@@ -191,7 +217,7 @@ export const ComingSoonModule = styled.button`
   border: 5px dashed
     ${(props) => {
       return props.patreonObject.isModuleDisabled
-        ? japaneseThemePalette.SakuraMochiPink
+        ? japaneseThemePalette.GoldenAccent
         : props.patreonObject.rare
         ? "#DA830D"
         : props.patreonObject.highValue
@@ -293,40 +319,37 @@ export const StyledLink = styled(Link)`
   }
 
   background: ${(props) => {
-    const isActive = props.active;
-    const isSelectedPath = props.pathSelectionAnimationData.path === props.path;
-    const currentPath = props.path;
-
-    let backgroundColor = "";
-
-    if (isActive && isSelectedPath) {
-      backgroundColor = "#FF64FF"; // Original color for selected path
-    } else if (isActive && !isSelectedPath) {
-      backgroundColor = "#b271d1"; // Original color for non-selected path
-    }
-
-    // Adjust color based on path
-    if (currentPath === "Engineer") {
-      // Colors remain the same
-    } else if (currentPath === "Creator") {
-      backgroundColor = backgroundColor === "#FF64FF" ? "#6495ff" : "#6495ff"; // Blue versions
-    } else if (currentPath === "Entrepeneur") {
-      backgroundColor = backgroundColor === "#FF64FF" ? "#ffb264" : "#ffb264"; // Golden versions
-    }
-
-    return backgroundColor;
+    // const isActive = props.active;
+    // const isSelectedPath = props.pathSelectionAnimationData.path === props.path;
+    // const currentPath = props.path;
+    // let backgroundColor = "";
+    // if (isActive && isSelectedPath) {
+    //   backgroundColor = "#FF64FF"; // Original color for selected path
+    // } else if (isActive && !isSelectedPath) {
+    //   backgroundColor = "#b271d1"; // Original color for non-selected path
+    // }
+    // // Adjust color based on path
+    // if (currentPath === "Engineer") {
+    //   // Colors remain the same
+    // } else if (currentPath === "Creator") {
+    //   backgroundColor = backgroundColor === "#FF64FF" ? "#6495ff" : "#6495ff"; // Blue versions
+    // } else if (currentPath === "Entrepeneur") {
+    //   backgroundColor = backgroundColor === "#FF64FF" ? "#ffb264" : "#ffb264"; // Golden versions
+    // }
+    // return backgroundColor;
   }};
 
-  border: 2px solid hotpink;
+  // border: 2px solid hotpink;
+  border: 2px solid #e216b4;
 
-  width: 125px;
+  width: 115px;
 
-  height: 125px;
+  height: 115px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px;
-  margin: 12px;
+  padding: 8px;
+  margin: 8px;
 
   color: white;
   transition: 0.15s all ease-in-out;
@@ -336,7 +359,8 @@ export const StyledLink = styled(Link)`
 
   box-shadow: ${(props) => {
     return props.pathSelectionAnimationData.path === props.path
-      ? "1px 1px 17px 6px rgba(255,100,255,1);"
+      ? // ? "1px 1px 17px 6px rgba(255,100,255,1);"
+        "1px 1px 17px 6px #4C00EA"
       : "";
   }};
 
@@ -349,6 +373,7 @@ export const StyledLink = styled(Link)`
       ? "scale(0.95)"
       : "";
   }};
+  font-family: "Bungee";
 `;
 //
 
@@ -390,7 +415,11 @@ export const StyledPath = styled.button`
 
 export const StyledPromptButton = styled.button`
   background-color: ${(props) => {
-    return props.loadingMessage ? "#48484A" : "black";
+    return props.loadingMessage
+      ? "#48484A"
+      : props.disabled
+      ? "rgba(225, 229, 230, .12)"
+      : "black";
   }};
 
   cursor: ${(props) => {
@@ -435,11 +464,11 @@ export const kanyeColorPalette = {};
 
 // zen garden palette
 export let japaneseThemePalette = {
-  CherryBlossomPink: "#FFB7C5", // Cherry Blossom
+  // CherryBlossomPink: "#FFB7C5", // Cherry Blossom
   KyotoPurple: "#663399", // Sweet Potato Purple
   FujiSanBlue: "#6f97d3", // Mount Fuji Blue
   TokyoTwilight: "#706fd3", // Twilight in Tokyo
-  SakuraMochiPink: "#FF92A9", // Sakura Mochi
+  // SakuraMochiPink: "#FF92A9", // Sakura Mochi
   WisteriaPurple: "#89729E", // Wisteria Flower
   GoldenAccent: "#bf8902", // Gold in Japanese Art
   WoodenArchitectureBrown: "#d3a86f", // Japanese Wood Architecture
@@ -449,10 +478,10 @@ export let japaneseThemePalette = {
   StrongRed: "#DC143C", // Japanese Flag Red
   StrongBlue: "#00008B", // Indigo Blue Textile
   DarkMetallicSilver: "#5A5A5A", // Darkened Steel Samurai Sword
-  Lavender: "rgba(220,205,255, 1)",
+  // Lavender: "rgba(220,205,255, 1)",
   PowerPurple: "rgba(102, 3, 252, 1)",
   PowerPink: "#f7059d",
-  iphoneBlue: "",
+  OrangeGold: "#FFD68B",
 };
 
 // opinionated
@@ -461,14 +490,14 @@ export let textBlock = (
   shadowSize = 4,
   borderRadius = 4,
   color = "white",
-  boxShadow = "0px 0px 0px 0px rgba(0,0,0, 1);",
+  boxShadow = "0px 0px 0px 0px rgba(0,0,0, 1)",
   padding = 16
 ) => {
   return {
     backgroundColor: backgroundColor,
     borderRadius: borderRadius,
     padding: padding,
-    textShadow: `${shadowSize}px ${shadowSize}px ${shadowSize || 10}px black`,
+    textShadow: `${shadowSize}px ${shadowSize}px ${shadowSize || 6}px black`,
     color: color,
     boxShadow: boxShadow,
   };

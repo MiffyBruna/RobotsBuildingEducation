@@ -21,6 +21,8 @@ export const firebaseConfig = {
 
 export const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
+
+// console.log("xyz", auth.useDeviceLanguage());
 export const database = getFirestore(app);
 export const analytics = getAnalytics(app);
 
