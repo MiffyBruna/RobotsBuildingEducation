@@ -4,6 +4,8 @@ When setting up a React and Firebase project using Vite, many of the foundationa
 
 This automation streamlines the setup process, ensuring consistent and error-free configurations. It allows developers to focus more on writing unique application code rather than on boilerplate setup, facilitating a smoother development experience and ensuring projects are structured according to best practices right from the start.
 
+### Files
+
 🚀 `.firebaserc`
 This file links your project to Firebase, specifying project aliases for different environments. It's like having keys to several doors, each leading to a different version of your digital world.
 
