@@ -164,6 +164,7 @@ export const useZap = (
       console.error(error);
     }
   };
+
   useEffect(() => {
     // mountInvoice();
     if (invoice) {
@@ -174,7 +175,9 @@ export const useZap = (
   // console.log("invoice result", invoice);
   return createZap;
 };
-
+let chooseWallet = () => {
+  return "ok";
+};
 export const useZapAnimation = () => {
   const setShowZap = useStore((state) => state.setShowZap);
 
