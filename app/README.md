@@ -59,3 +59,17 @@ Tailors TypeScript settings for Node.js environments, optimizing your backend or
 
 🚀 `vite.config.ts`
 The configuration file for Vite, your build tool, optimizing your development experience with fast rebuilds and a wealth of features to streamline your workflow.
+
+⚠️ Not Listed (in .gitignore): `.env`
+Add variables like
+A .env file in Vite stores settings that change based on where your app runs, like a your computer or a live server. It's used to keep data hidden from the code.
+
+```
+// define in .env
+VITE_API_KEY=askZO2scnLD3Qsd0De
+```
+
+```js
+//use in your app
+console.log(import.meta.env.VITE_API_KEY);
+```

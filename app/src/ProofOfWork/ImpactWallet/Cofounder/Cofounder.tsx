@@ -23,7 +23,7 @@ import {
   aiDescription,
   aiPlaceholderDescription,
   executiveAssistantKnowledge,
-} from "./Cofounder.data";
+} from "./Cofounder.constants";
 import { useZap } from "../../../App.hooks";
 import { updateImpact } from "../../../App.compute";
 const Container = styled.div`

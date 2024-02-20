@@ -153,7 +153,7 @@ export const Passcode = ({ handleZeroKnowledgePassword, patreonObject }) => {
               margin: 24,
               textDecoration: "underline",
             }}
-            href="https://robotsbuildingeducation.my.canva.site/access"
+            href="https://old-fashionedintelligence.info/access"
             target="_blank"
           >
             ⚡ Using Bitcoin's lightning network

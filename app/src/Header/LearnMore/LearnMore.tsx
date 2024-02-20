@@ -19,6 +19,7 @@ import FAQSection from "./FAQs/FAQs";
 let data = {};
 export const LearnMore = ({ languageMode, canInstallPwa }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isNewsModalOpen, setIsNewsModalOpen] = useState(false);
 
   const install = usePWAInstall();
   // console.log("install", install);
@@ -55,6 +56,31 @@ export const LearnMore = ({ languageMode, canInstallPwa }) => {
         >
           {languageMode.buttons["9"]}
         </Button>
+      </FadeInComponent>
+      <br />
+      <FadeInComponent>
+        <a
+          style={{ color: "white" }}
+          href={"https://old-fashionedintelligence.info/news"}
+          target={"_blank"}
+        >
+          <Button
+            variant="dark"
+            style={{
+              color: "white",
+              textShadow: "0px 0px 4px black",
+            }}
+            onClick={() => {
+              logEvent(analytics, "select_content", {
+                content_type: "button",
+                item_id: "Old-Fashioned Intelligence",
+              });
+              // setIsModalOpen(true);
+            }}
+          >
+            📰 o-fi.info
+          </Button>
+        </a>
       </FadeInComponent>
       {/* <Button
         variant="danger"
