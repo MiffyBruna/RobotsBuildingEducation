@@ -1,4 +1,4 @@
-import { creatorImageKnowledge, creatorKnowledge } from "./Cofounder.data";
+import { creatorImageKnowledge, creatorKnowledge } from "./Cofounder.constants";
 
 export const customInstructions = (instructions, process) => {
   let context = ``;

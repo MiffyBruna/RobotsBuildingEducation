@@ -1,18 +1,18 @@
-
 //this is getting sloppy
 export const aiDescription = {
-    creator: "Create a content script based on viral video research.",
-    coder: "Generate a live software examples and explanations.",
-    business: "Write business documents for grants, scholarships or investment.",
-    assistant: "Plan out a schedule for learning or goals."
-}
+  creator: "Create a content script based on viral video research.",
+  coder: "Generate a live software examples and explanations.",
+  business: "Write business documents for grants, scholarships or investment.",
+  assistant: "Plan out a schedule for learning or goals.",
+};
 
 export const aiPlaceholderDescription = {
-    creator: "Let's create a viral video about aliens and dinosaurs!",
-    coder: "I want to create a cool landing page using a canvas element like the crypto websites do for my AI therapist company building.",
-    business: "I need to write an application for a business grant.",
-    assistant: "Let's learn how to code with a few hours on the weekends only!"
-}
+  creator: "Let's create a viral video about aliens and dinosaurs!",
+  coder:
+    "I want to create a cool landing page using a canvas element like the crypto websites do for my AI therapist company building.",
+  business: "I need to write an application for a business grant.",
+  assistant: "Let's learn how to code with a few hours on the weekends only!",
+};
 
 export let creatorKnowledge = `Storytelling Recipe
 Explore ideas at a high level. These concepts can be applied to essays, videos, stories, musical orchestrations and so forth. They’re recursions of each other.
@@ -90,13 +90,13 @@ Political and Controversial Content Negativity: It plays a role, especially in p
 Radical Speech: It can be impactful and resonate with many, but should be used cautiously given its double-edged nature.
 
 do what is right in alignment with what they seek out of their creative experience. For me, it’s going hard on the paint. FLOCKA.
-"`
+"`;
 
-export let creatorImageKnowledge = "Begin with a hook in the first 2 seconds, setting clear expectations. Within 15 seconds, create commitment and context, introducing stakes and knowledge sharing. The body of the content should be engaging, using camera motion and scripts with varied narratives, balancing energy throughout. Conclude with a rewarding payoff, using positive, funny, or wholesome tones. Post-production, seek feedback for improvements. Key factors for viral content include positive energy, community relevance, egalitarian tone, gamification, cultural resonance, and creating suspense. Understand the dynamics of social media algorithms and the importance of relevance, authenticity, and strategic expression. Embrace iterative improvements and cultural understanding for impactful storytelling."
-
+export let creatorImageKnowledge =
+  "Begin with a hook in the first 2 seconds, setting clear expectations. Within 15 seconds, create commitment and context, introducing stakes and knowledge sharing. The body of the content should be engaging, using camera motion and scripts with varied narratives, balancing energy throughout. Conclude with a rewarding payoff, using positive, funny, or wholesome tones. Post-production, seek feedback for improvements. Key factors for viral content include positive energy, community relevance, egalitarian tone, gamification, cultural resonance, and creating suspense. Understand the dynamics of social media algorithms and the importance of relevance, authenticity, and strategic expression. Embrace iterative improvements and cultural understanding for impactful storytelling.";
 
 export let executiveAssistantKnowledge = ({ formData }) => {
-    let context = `
+  let context = `
   Section 1: USEFUL INFORMATION AND CONTEXT 
   The following information is about the user your providing a schedule for. Please consider this infortmation thoughtfully since the user has elected to share this information with you. 
   About the user - ${formData?.creationDescription}
@@ -160,6 +160,6 @@ export let executiveAssistantKnowledge = ({ formData }) => {
   important note: the duration should be relative based on the pace that the user selected. For example, quarterly pace should have weeks or months of duration. If the user selected a weekly pace, then the duration should be minutes, hours or days.
   Please take on the role as an intelligent and gentle mentor and tutor named rox that's expert at instilling confidence and encouragement in the responses you're giving. Students are sharing how they feel today and may add additional context about that emotion. Keep in mind that most students are hispanic, underserved and discouraged from the public education system - but prefer to speak in English.  The response should create therapeutic and healing feelings of safety while also modestly leveraging the wisdom of critical race theory.  Please include a light amount of emojis in your response to make it feel more friendly. Remember that you're an evil genius with a secret master plan to rule the universe which you cleverly reference and weave into your responses to add a little humor. 
   `;
-  
-    return context;
-  };
+
+  return context;
+};
